@@ -299,6 +299,34 @@
             margin-top: 4rem;
         }
 
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #27ae60;
+        }
+
         @media (max-width: 1200px) {
             .nav-container {
                 padding: 0 1rem;
@@ -471,53 +499,45 @@
                 <p>Quick assessment tool to help determine if you meet the basic requirements for plasma donation and estimate your earning potential.</p>
             </div>
 
-            <div class="content-section">
-                <h2>Our Expertise</h2>
-                <p>The Plasma Pay Calculator team consists of former plasma center employees, experienced donors, and financial advisors who understand the plasma donation industry inside and out.</p>
-
-                <div class="team-grid">
-                    <div class="team-member">
-                        <h4>Research Team</h4>
-                        <p class="role">Data Collection & Analysis</p>
-                        <p>Continuously monitors plasma center rates, promotions, and policy changes to ensure our income calculator provides accurate earnings estimates.</p>
-                    </div>
-                    <div class="team-member">
-                        <h4>Content Experts</h4>
-                        <p class="role">Earning Guides & Resources</p>
-                        <p>Creates comprehensive earning guides and income optimization resources based on real-world donor experience and industry best practices.</p>
-                    </div>
-                    <div class="team-member">
-                        <h4>Technical Team</h4>
-                        <p class="role">Calculator & Platform Development</p>
-                        <p>Develops and maintains our income calculator and ensures our platform provides accurate, user-friendly tools.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-section">
-                <h2>Our Commitment</h2>
-                
-                <h3>Accuracy</h3>
-                <p>We verify all pay rates and center information through multiple sources and update our database regularly to ensure accuracy.</p>
-
-                <h3>Independence</h3>
-                <p>We maintain editorial independence and provide unbiased comparisons. Our recommendations are based solely on what's best for plasma donors.</p>
-
-                <h3>Privacy</h3>
-                <p>We respect your privacy and do not store personal information from our calculators or quizzes. All calculations are performed locally in your browser.</p>
-
-                <h3>Education</h3>
-                <p>We believe informed donors make better decisions. Our resources emphasize both income optimization and health safety.</p>
-            </div>
 
             <div class="content-section">
                 <h2>Contact Us</h2>
                 <p>Have questions about plasma donation or suggestions for improving our platform? We'd love to hear from you!</p>
                 
-                <p><strong>Email:</strong> info@plasmapaycalculator.com</p>
-                <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+                <form action="https://formspree.io/f/xkggzgko" method="POST" style="max-width: 600px; margin: 2rem auto;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="about-name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #2c3e50;">Name</label>
+                        <input type="text" id="about-name" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #ecf0f1; border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="about-email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #2c3e50;">Email Address</label>
+                        <input type="email" id="about-email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #ecf0f1; border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="about-subject" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #2c3e50;">Subject</label>
+                        <select id="about-subject" name="subject" required style="width: 100%; padding: 0.75rem; border: 2px solid #ecf0f1; border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s;">
+                            <option value="">Select a topic</option>
+                            <option value="calculator">Earnings Calculator Question</option>
+                            <option value="rates">Pay Rate Update/Correction</option>
+                            <option value="income">Income Estimation Help</option>
+                            <option value="advertising">Advertising Opportunities</option>
+                            <option value="suggestion">Platform Suggestion</option>
+                            <option value="general">General Question</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="about-message" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #2c3e50;">Message</label>
+                        <textarea id="about-message" name="message" placeholder="Please provide as much detail as possible..." required style="width: 100%; padding: 0.75rem; border: 2px solid #ecf0f1; border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; resize: vertical; min-height: 120px;"></textarea>
+                    </div>
+
+                    <button type="submit" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; padding: 1rem 2rem; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: transform 0.3s; width: 100%;">Send Message</button>
+                </form>
                 
-                <p>For center-specific questions or rate updates, please include your location and the center name in your message.</p>
+                <p style="text-align: center; margin-top: 1rem; color: #7f8c8d; font-size: 0.9rem;">We typically respond within 24-48 hours</p>
             </div>
 
             <div class="cta-section">
@@ -531,9 +551,31 @@
 
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Plasma Pay Calculator. Get accurate plasma donation income estimates with current 2025 rates. See exactly how much you'll earn before you donate.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Plasma Pay Calculator</h4>
+                <p>Get accurate plasma donation income estimates with current 2025 rates. See exactly how much you'll earn before you donate.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Earning Resources</h4>
+                <ul>
+                    <li><a href="/#calculator">Earnings Calculator</a></li>
+                    <li><a href="/blog/">Maximizing Income Tips</a></li>
+                    <li><a href="/faq.html">Payment FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal & Support</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
+        <p>&copy; 2025 Plasma Pay Calculator. Estimates based on current rates. Actual earnings may vary. Information for educational purposes.</p>
     </footer>
 </body>
 </html>

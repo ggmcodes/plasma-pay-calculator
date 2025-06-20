@@ -304,6 +304,34 @@
             margin-top: 4rem;
         }
 
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #27ae60;
+        }
+
         @media (max-width: 1200px) {
             .nav-container {
                 padding: 0 1rem;
@@ -770,14 +798,31 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Plasma Pay Calculator. Get accurate plasma donation income estimates with current 2025 rates. See exactly how much you'll earn before you donate.</p>
-            <div style="margin-top: 1rem;">
-                <a href="/#calculator" style="color: #27ae60; margin: 0 1rem;">Earnings Calculator</a>
-                <a href="/blog/" style="color: #27ae60; margin: 0 1rem;">Maximizing Income Tips</a>
-                <a href="/faq.html" style="color: #27ae60; margin: 0 1rem;">Payment FAQ</a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Plasma Pay Calculator</h4>
+                <p>Get accurate plasma donation income estimates with current 2025 rates. See exactly how much you'll earn before you donate.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Earning Resources</h4>
+                <ul>
+                    <li><a href="/#calculator">Earnings Calculator</a></li>
+                    <li><a href="/blog/">Maximizing Income Tips</a></li>
+                    <li><a href="/faq.html">Payment FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal & Support</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
             </div>
         </div>
+        <p>&copy; 2025 Plasma Pay Calculator. Estimates based on current rates. Actual earnings may vary. Information for educational purposes.</p>
     </footer>
 
     <script>
