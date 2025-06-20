@@ -504,7 +504,9 @@
                 <h2>Contact Us</h2>
                 <p>Have questions about plasma donation or suggestions for improving our platform? We'd love to hear from you!</p>
                 
-                <form action="https://formspree.io/f/xkggzgko" method="POST" style="max-width: 600px; margin: 2rem auto;">
+                <form name="about-contact" method="POST" data-netlify="true" action="/about.html?sent=true" style="max-width: 600px; margin: 2rem auto;">
+                    <input type="hidden" name="form-name" value="about-contact">
+                    
                     <div style="margin-bottom: 1.5rem;">
                         <label for="about-name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #2c3e50;">Name</label>
                         <input type="text" id="about-name" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #ecf0f1; border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s;">
