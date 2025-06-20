@@ -118,15 +118,15 @@ function nextQuestion(currentQ, eligible) {
 function showEligible() {
     document.getElementById('q5').style.display = 'none';
     document.getElementById('quiz-result').innerHTML = `
-        <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border: 2px solid #4caf50;">
-            <h3 style="color: #2e7d32; margin-bottom: 10px;">✅ Great News - You Can Donate!</h3>
+        <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border: 2px solid #27ae60;">
+            <h3 style="color: #155724; margin-bottom: 10px;">✅ Great News - You Can Donate!</h3>
             <p style="margin-bottom: 15px;">You meet the basic requirements. Bring these documents to your first visit:</p>
             <ul style="text-align: left; margin: 0 auto; max-width: 300px;">
                 <li>Valid photo ID</li>
                 <li>Proof of address (utility bill, bank statement)</li>
                 <li>Social Security card</li>
             </ul>
-            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #4caf50; color: white; border: none; border-radius: 6px; cursor: pointer;">Take Quiz Again</button>
+            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer;">Take Quiz Again</button>
         </div>
     `;
     document.getElementById('quiz-result').style.display = 'block';
@@ -135,11 +135,11 @@ function showEligible() {
 function showNotEligible(reason) {
     document.querySelectorAll('.quiz-question').forEach(q => q.style.display = 'none');
     document.getElementById('quiz-result').innerHTML = `
-        <div style="background: #ffebee; padding: 20px; border-radius: 8px; border: 2px solid #f44336;">
-            <h3 style="color: #c62828; margin-bottom: 10px;">❌ Sorry, You Can't Donate Right Now</h3>
+        <div style="background: #f8d7da; padding: 20px; border-radius: 8px; border: 2px solid #e74c3c;">
+            <h3 style="color: #721c24; margin-bottom: 10px;">❌ Sorry, You Can't Donate Right Now</h3>
             <p style="margin-bottom: 15px;">${reason}</p>
             <p>Check back later or look into other ways to make quick money.</p>
-            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer;">Take Quiz Again</button>
+            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #e74c3c; color: white; border: none; border-radius: 6px; cursor: pointer;">Take Quiz Again</button>
         </div>
     `;
     document.getElementById('quiz-result').style.display = 'block';
@@ -148,11 +148,11 @@ function showNotEligible(reason) {
 function showMaybe(message) {
     document.querySelectorAll('.quiz-question').forEach(q => q.style.display = 'none');
     document.getElementById('quiz-result').innerHTML = `
-        <div style="background: #fff3cd; padding: 20px; border-radius: 8px; border: 2px solid #ff9800;">
-            <h3 style="color: #e65100; margin-bottom: 10px;">⚠️ You Might Be Eligible</h3>
+        <div style="background: #fff3cd; padding: 20px; border-radius: 8px; border: 2px solid #f39c12;">
+            <h3 style="color: #856404; margin-bottom: 10px;">⚠️ You Might Be Eligible</h3>
             <p style="margin-bottom: 15px;">${message}</p>
             <p>Contact your local center to check - they can give specific guidance.</p>
-            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #ff9800; color: white; border: none; border-radius: 6px; cursor: pointer;">Take Quiz Again</button>
+            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #f39c12; color: white; border: none; border-radius: 6px; cursor: pointer;">Take Quiz Again</button>
         </div>
     `;
     document.getElementById('quiz-result').style.display = 'block';
@@ -164,3 +164,20 @@ function resetQuiz() {
     document.querySelectorAll('.quiz-question').forEach(q => q.style.display = 'none');
     document.getElementById('q1').style.display = 'block';
 }
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Register Service Worker for PWA functionality
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .then(reg => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker registration failed'));
+    }
+    
+    // Prevent pull-to-refresh on mobile for better UX
+    document.body.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+});

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLHXQ3JR31"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PLHXQ3JR31');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sunset Study Club - Your peaceful space for focused study sessions with Pomodoro timer and curated study essentials">
+    <meta name="theme-color" content="#2d2d2d">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <title>Sunset Study Club - Peaceful Focus Sessions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(45, 45, 45, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(180deg, #e67e22 0%, #f39c12 100%);
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e67e22;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        /* Timer Section */
+        .timer-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin: 40px auto;
+            max-width: 500px;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .timer-container {
+            text-align: center;
+            color: #333;
+        }
+
+        .sun-circle {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(180deg, #e67e22 0%, #f39c12 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .timer-display {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            color: #2d2d2d;
+        }
+
+        .time-options {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .time-option {
+            padding: 8px 16px;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            border: none;
+        }
+
+        .time-option:hover {
+            background-color: #e0e0e0;
+        }
+
+        .time-option.active {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .timer-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .start-btn {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .start-btn:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        .pause-btn, .reset-btn {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .pause-btn:hover, .reset-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background-color: #f0f0f0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e67e22 0%, #f39c12 100%);
+            width: 100%;
+            transition: width 1s linear;
+        }
+
+        .session-info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        /* Product Showcases */
+        .products-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-category {
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            color: #2d2d2d;
+            margin-bottom: 15px;
+        }
+
+        .category-description {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .product-list {
+            list-style: none;
+        }
+
+        .product-item {
+            margin-bottom: 10px;
+        }
+
+        .product-link {
+            color: #e67e22;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .product-link:hover {
+            color: #d35400;
+            text-decoration: underline;
+        }
+
+        /* YouTube Section */
+        .youtube-section {
+            background: #f5f5f5;
+            padding: 80px 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: #ddd;
+            position: relative;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            color: #2d2d2d;
+            margin-bottom: 10px;
+        }
+
+        .video-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #d35400;
+            transform: translateY(-3px);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: white;
+            color: #2d2d2d;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: white;
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: 
+                0 4px 6px -1px rgba(241, 108, 41, 0.05),
+                0 2px 4px -1px rgba(241, 108, 41, 0.02),
+                0 0 0 1px rgba(241, 108, 41, 0.05);
+            margin: 40px 0;
+        }
+
+        .newsletter-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            color: #222222;
+            font-weight: 600;
+        }
+
+        .newsletter-section p {
+            font-size: 1.1rem;
+            color: #7A6E5D;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-btn {
+            background: linear-gradient(135deg, #F16C29 0%, #FDBD2C 100%);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(241, 108, 41, 0.2);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(241, 108, 41, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .timer-display {
+                font-size: 3rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"></div>
+                Sunset Study Club
+            </a>
+            <ul class="nav-links">
+                <li><a href="#timer">Timer</a></li>
+                <li><a href="#essentials">Study Essentials</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Sunset Study Club</h1>
+        <p class="hero-subtitle">
+            A soft, focused space to think, reflect, and get things done.<br>
+            No pressure — just peaceful productivity with ambient sounds and mindful studying.
+        </p>
+    </section>
+
+    <!-- Timer Section -->
+    <section id="timer" class="timer-section">
+        <div class="timer-container">
+            <div class="sun-circle"></div>
+            <h2 style="color: #2d2d2d; margin-bottom: 20px; font-weight: 300;">Pomodoro Timer</h2>
+            
+            <div class="time-options">
+                <button class="time-option" onclick="setTimer(5)">5 min</button>
+                <button class="time-option" onclick="setTimer(10)">10 min</button>
+                <button class="time-option active" onclick="setTimer(25)">25 min</button>
+                <button class="time-option" onclick="setTimer(45)">45 min</button>
+                <button class="time-option" onclick="setTimer(60)">60 min</button>
+            </div>
+            
+            <div class="timer-display" id="timerDisplay">25:00</div>
+            
+            <div class="controls">
+                <button class="timer-btn start-btn" id="startBtn" onclick="startTimer()">Start</button>
+                <button class="timer-btn pause-btn" id="pauseBtn" onclick="pauseTimer()" style="display: none;">Pause</button>
+                <button class="timer-btn reset-btn" onclick="resetTimer()">Reset</button>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            
+            <div class="session-info" id="sessionInfo">
+                Ready to focus in your peaceful space
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Essentials Section -->
+    <section id="essentials" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Curated Study Essentials</h2>
+            <p class="section-subtitle">The same tools I use in my peaceful study sessions</p>
+            
+            <div class="product-grid">
+                <div class="product-category">
+                    <div class="category-icon">📝</div>
+                    <h3 class="category-title">Writing Tools</h3>
+                    <p class="category-description">Mindful writing starts with the right tools</p>
+                    <ul class="product-list">
+                        <li class="product-item"><a href="https://amzn.to/4czTGJw" class="product-link">Premium Pen</a></li>
+                        <li class="product-item"><a href="https://amzn.to/4lIkueS" class="product-link">Quality Notebook</a></li>
+                        <li class="product-item"><a href="https://amzn.to/42tRDlu" class="product-link">Protective Cover</a></li>
+                        <li class="product-item"><a href="https://amzn.to/3RdeGMr" class="product-link">Soft Highlighter</a></li>
+                    </ul>
+                </div>
+
+                <div class="product-category">
+                    <div class="category-icon">⏰</div>
+                    <h3 class="category-title">Focus Tools</h3>
+                    <p class="category-description">Physical timers for deeper focus</p>
+                    <ul class="product-list">
+                        <li class="product-item"><a href="https://amzn.to/42yh7OQ" class="product-link">Pomodoro Timer</a></li>
+                        <li class="product-item"><a href="https://amzn.to/4ijLK0j" class="product-link">Sand Timer</a></li>
+                    </ul>
+                </div>
+
+                <div class="product-category">
+                    <div class="category-icon">🖥️</div>
+                    <h3 class="category-title">Desk Setup</h3>
+                    <p class="category-description">Create your peaceful workspace</p>
+                    <ul class="product-list">
+                        <li class="product-item"><a href="https://amzn.to/43SsCCW" class="product-link">Desk Mat</a></li>
+                        <li class="product-item"><a href="https://amzn.to/43SsCCW" class="product-link">Quiet Keyboard</a></li>
+                        <li class="product-item"><a href="https://amzn.to/43QHoKw" class="product-link">Smooth Mouse</a></li>
+                    </ul>
+                </div>
+
+                <div class="product-category">
+                    <div class="category-icon">📚</div>
+                    <h3 class="category-title">Reading Corner</h3>
+                    <p class="category-description">Books that inspire productivity</p>
+                    <ul class="product-list">
+                        <li class="product-item"><a href="https://amzn.to/42uPTIK" class="product-link">Feel Good Productivity</a></li>
+                    </ul>
+                </div>
+
+                <div class="product-category">
+                    <div class="category-icon">🎵</div>
+                    <h3 class="category-title">Audio Setup</h3>
+                    <p class="category-description">The gear behind the ambient music</p>
+                    <ul class="product-list">
+                        <li class="product-item"><a href="https://amzn.to/4lAgrkJ" class="product-link">Solid Body Guitar</a></li>
+                        <li class="product-item"><a href="https://amzn.to/4lJa1jm" class="product-link">Hollow Body Guitar</a></li>
+                        <li class="product-item"><a href="https://amzn.to/4ju1izG" class="product-link">Reverb Pedal</a></li>
+                        <li class="product-item"><a href="https://amzn.to/4ingIVe" class="product-link">Studio Headphones</a></li>
+                    </ul>
+                </div>
+
+                <div class="product-category">
+                    <div class="category-icon">☕</div>
+                    <h3 class="category-title">Fuel Station</h3>
+                    <p class="category-description">Mindful drinks for focused sessions</p>
+                    <ul class="product-list">
+                        <li class="product-item"><a href="https://amzn.to/4ihk7VD" class="product-link">Jasmine Green Tea</a></li>
+                        <li class="product-item"><a href="https://amzn.to/4jxGMOAa" class="product-link">Quality Coffee</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Videos Section -->
+    <section id="videos" class="youtube-section">
+        <div class="container">
+            <h2 class="section-title">Latest Study Sessions</h2>
+            <p class="section-subtitle">Peaceful Pomodoro sessions with ambient guitar and soft ASMR</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail"></div>
+                    <div class="video-info">
+                        <h3 class="video-title">Ambient Guitar Study Session</h3>
+                        <p class="video-description">Soft ambient guitar with light ASMR textures for focused work</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail"></div>
+                    <div class="video-info">
+                        <h3 class="video-title">Journaling & Reflection</h3>
+                        <p class="video-description">Peaceful space for writing and thinking</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail"></div>
+                    <div class="video-info">
+                        <h3 class="video-title">Deep Focus Session</h3>
+                        <p class="video-description">Extended Pomodoro blocks for deep work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Stay Updated with Study Tips</h2>
+            <p>Get weekly productivity insights, study techniques, and focus strategies delivered to your inbox.</p>
+            <div class="newsletter-buttons">
+                <a href="https://www.youtube.com/@SunsetStudyClub" class="newsletter-btn" target="_blank">
+                    🎥 Subscribe to Videos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Join the Study Club</h2>
+            <p class="cta-description">
+                Subscribe for peaceful study sessions, ambient music, and mindful productivity content
+            </p>
+            <a href="#" class="cta-button">Subscribe on YouTube</a>
+            <a href="#timer" class="cta-button secondary">Start Studying Now</a>
+        </div>
+    </section>
+
+    <!-- Timer JavaScript -->
+    <script src="timer.js"></script>
+</body>
+</html>

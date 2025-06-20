@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLHXQ3JR31"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PLHXQ3JR31');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Study Timer - Icon Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .icon-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #d35400;
+        }
+
+        .instructions {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .screenshot-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        /* Newsletter Section */
+        .newsletter-section {
+            background: white;
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: 
+                0 4px 6px -1px rgba(241, 108, 41, 0.05),
+                0 2px 4px -1px rgba(241, 108, 41, 0.02),
+                0 0 0 1px rgba(241, 108, 41, 0.05);
+            margin: 40px 0;
+        }
+
+        .newsletter-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            color: #222222;
+            font-weight: 600;
+        }
+
+        .newsletter-section p {
+            font-size: 1.1rem;
+            color: #7A6E5D;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-btn {
+            background: linear-gradient(135deg, #F16C29 0%, #FDBD2C 100%);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(241, 108, 41, 0.2);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(241, 108, 41, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h2>PWA Icons for Sunset Study Timer</h2>
+
+    <div class="icon-container">
+        <h3>App Icons</h3>
+        <div>
+            <canvas id="icon192" width="192" height="192"></canvas>
+            <canvas id="icon512" width="512" height="512"></canvas>
+        </div>
+        <div>
+            <button onclick="downloadIcon(192)">Download icon-192.png</button>
+            <button onclick="downloadIcon(512)">Download icon-512.png</button>
+        </div>
+    </div>
+
+    <div class="screenshot-container">
+        <h3>App Screenshot Preview</h3>
+        <canvas id="screenshot" width="390" height="844"></canvas>
+        <div>
+            <button onclick="downloadScreenshot()">Download screenshot.png</button>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h3>📱 How to Use These Icons:</h3>
+        <ol>
+            <li>Click the download buttons above to save each image</li>
+            <li>Upload all files to your web server:
+                <ul>
+                    <li>index.html (your timer)</li>
+                    <li>manifest.json</li>
+                    <li>sw.js</li>
+                    <li>icon-192.png</li>
+                    <li>icon-512.png</li>
+                    <li>screenshot.png (optional)</li>
+                </ul>
+            </li>
+            <li>Your PWA is ready! Visit on mobile and "Add to Home Screen"</li>
+        </ol>
+    </div>
+
+    <script>
+        // Function to draw the sunset circle logo
+        function drawSunsetLogo(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const radius = size * 0.4;
+
+            // Background
+            ctx.fillStyle = '#2d2d2d';
+            ctx.fillRect(0, 0, size, size);
+
+            // Draw sunset circle (top half orange, bottom half yellow)
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.closePath();
+
+            // Create gradient for smooth transition
+            ctx.save();
+            ctx.clip();
+
+            // Top half - orange
+            ctx.fillStyle = '#e67e22';
+            ctx.fillRect(centerX - radius, centerY - radius, radius * 2, radius);
+
+            // Bottom half - yellow
+            ctx.fillStyle = '#f39c12';
+            ctx.fillRect(centerX - radius, centerY, radius * 2, radius);
+
+            ctx.restore();
+        }
+
+        // Function to draw screenshot
+        function drawScreenshot() {
+            const canvas = document.getElementById('screenshot');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#333333';
+            ctx.fillRect(0, 0, 390, 844);
+
+            // Timer container
+            ctx.fillStyle = '#2d2d2d';
+            ctx.fillRect(45, 200, 300, 400);
+
+            // Draw sunset logo
+            const centerX = 195;
+            const centerY = 300;
+            const radius = 60;
+
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.closePath();
+
+            ctx.save();
+            ctx.clip();
+
+            // Top half - orange
+            ctx.fillStyle = '#e67e22';
+            ctx.fillRect(centerX - radius, centerY - radius, radius * 2, radius);
+
+            // Bottom half - yellow
+            ctx.fillStyle = '#f39c12';
+            ctx.fillRect(centerX - radius, centerY, radius * 2, radius);
+
+            ctx.restore();
+
+            // Title
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Sunset Study Club', 195, 400);
+
+            // Timer display
+            ctx.font = 'bold 48px Courier New';
+            ctx.fillText('25:00', 195, 480);
+
+            // Start button
+            ctx.fillStyle = '#e67e22';
+            ctx.fillRect(120, 520, 150, 50);
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 20px Arial';
+            ctx.fillText('START', 195, 553);
+        }
+
+        // Draw all icons on load
+        drawSunsetLogo(document.getElementById('icon192'), 192);
+        drawSunsetLogo(document.getElementById('icon512'), 512);
+        drawScreenshot();
+
+        // Download functions
+        function downloadIcon(size) {
+            const canvas = document.getElementById(`icon${size}`);
+            const link = document.createElement('a');
+            link.download = `icon-${size}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        function downloadScreenshot() {
+            const canvas = document.getElementById('screenshot');
+            const link = document.createElement('a');
+            link.download = 'screenshot.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+    
+    <!-- Newsletter Section -->
+    <div class="newsletter-section">
+        <h2>Stay Updated with Study Tips</h2>
+        <p>Get weekly productivity insights, study techniques, and focus strategies delivered to your inbox.</p>
+        <div class="newsletter-buttons">
+            <a href="https://www.youtube.com/@SunsetStudyClub" class="newsletter-btn" target="_blank">
+                🎥 Subscribe to Videos
+            </a>
+        </div>
+    </div>
+</body>
+</html>

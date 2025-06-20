@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLHXQ3JR31"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PLHXQ3JR31');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Sunset Study Club - Learn about our peaceful approach to productivity and mindful studying">
+    <meta name="theme-color" content="#F16C29">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>About - Sunset Study Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #222222;
+            background-color: #F9EDD9;
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(249, 237, 217, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(241, 108, 41, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #222222;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .logo:hover {
+            transform: translateY(-1px);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(180deg, #F16C29 0%, #F16C29 50%, #FDBD2C 50%, #FDBD2C 100%);
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(241, 108, 41, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #222222;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            padding: 8px 16px;
+            border-radius: 24px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #F16C29;
+            background-color: rgba(241, 108, 41, 0.05);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #222222;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(249, 237, 217, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(241, 108, 41, 0.1);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu-links {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .mobile-menu-links li {
+            margin-bottom: 16px;
+        }
+
+        .mobile-menu-links a {
+            color: #222222;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            display: block;
+            transition: all 0.2s ease;
+        }
+
+        .mobile-menu-links a:hover {
+            color: #F16C29;
+            background-color: rgba(241, 108, 41, 0.05);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 100px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 80px 40px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #222222;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: #7A6E5D;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 32px;
+            padding: 60px;
+            margin-bottom: 60px;
+            box-shadow: 
+                0 4px 6px -1px rgba(241, 108, 41, 0.05),
+                0 2px 4px -1px rgba(241, 108, 41, 0.02),
+                0 0 0 1px rgba(241, 108, 41, 0.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #222222;
+            margin-bottom: 24px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            color: #222222;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .highlight-text {
+            color: #F16C29;
+            font-weight: 500;
+        }
+
+
+        .cta-section {
+            background: linear-gradient(135deg, #F16C29 0%, #FDBD2C 100%);
+            color: white;
+            padding: 60px;
+            text-align: center;
+            border-radius: 32px;
+            margin-top: 80px;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 36px;
+            background-color: white;
+            color: #F16C29;
+            text-decoration: none;
+            border-radius: 32px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: white;
+            color: #F16C29;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: white;
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: 
+                0 4px 6px -1px rgba(241, 108, 41, 0.05),
+                0 2px 4px -1px rgba(241, 108, 41, 0.02),
+                0 0 0 1px rgba(241, 108, 41, 0.05);
+            margin: 40px 0;
+        }
+
+        .newsletter-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            color: #222222;
+            font-weight: 600;
+        }
+
+        .newsletter-section p {
+            font-size: 1.1rem;
+            color: #7A6E5D;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-btn {
+            background: linear-gradient(135deg, #F16C29 0%, #FDBD2C 100%);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(241, 108, 41, 0.2);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(241, 108, 41, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .main-content {
+                padding: 60px 20px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .content-section {
+                padding: 40px 24px;
+                margin-bottom: 40px;
+            }
+
+
+            .cta-section {
+                padding: 60px 24px;
+                margin-top: 60px;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                Sunset Study Club
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#timer">Timer</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="index.html#essentials">Study Essentials</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-menu-links">
+                <li><a href="index.html#timer" onclick="toggleMobileMenu()">Timer</a></li>
+                <li><a href="blog/" onclick="toggleMobileMenu()">Blog</a></li>
+                <li><a href="index.html#essentials" onclick="toggleMobileMenu()">Study Essentials</a></li>
+                <li><a href="index.html#videos" onclick="toggleMobileMenu()">Videos</a></li>
+                <li><a href="about.html" onclick="toggleMobileMenu()">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">About Sunset Study Club</h1>
+            <p class="hero-subtitle">
+                We're reading. We're writing. We're showing up. Creating a soft, focused space for mindful productivity.
+            </p>
+        </section>
+
+        <!-- Story Section -->
+        <section class="content-section">
+            <h2 class="section-title">Our Story</h2>
+            <p class="content-text">
+                Sunset Study Club began with a simple belief: <span class="highlight-text">productivity doesn't have to be stressful</span>. 
+                In a world of hustle culture and constant notifications, we create peaceful spaces where deep work can flourish.
+            </p>
+            <p class="content-text">
+                Through ambient guitar music, soft ASMR textures, and mindful study sessions, we've built a community 
+                that values <span class="highlight-text">presence over pressure</span>. Every video, every tool recommendation, 
+                every moment of our content is designed to help you show up consistently without burning out.
+            </p>
+            <p class="content-text">
+                Whether you're journaling, reading, planning, or diving into focused work, our sessions provide the 
+                gentle structure and calming atmosphere you need to do your best thinking.
+            </p>
+        </section>
+
+
+        <!-- What You'll Find Section -->
+        <section class="content-section">
+            <h2 class="section-title">What You'll Find Here</h2>
+            <p class="content-text">
+                <strong>Study Sessions:</strong> Extended Pomodoro blocks with ambient guitar, gentle ASMR, and peaceful visuals. 
+                Perfect for reading, writing, coding, or any focused work.
+            </p>
+            <p class="content-text">
+                <strong>Mindful Tools:</strong> Carefully chosen study essentials that enhance your practice. From quality pens 
+                to meditation timers, every recommendation supports mindful productivity.
+            </p>
+            <p class="content-text">
+                <strong>Community:</strong> A growing group of people who believe in <span class="highlight-text">showing up consistently</span> 
+                rather than burning out. We're here to support each other's learning journey.
+            </p>
+            <p class="content-text">
+                <strong>Original Music:</strong> All ambient guitar tracks are composed and recorded specifically for our study sessions. 
+                Each piece is designed to enhance focus without becoming distracting.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="content-text">
+                We'd love to hear from you! Whether you have questions about our study sessions, suggestions for improvement, 
+                or just want to share your peaceful productivity journey.
+            </p>
+            <p class="content-text">
+                <strong>General Inquiries:</strong> Feel free to reach out through our social media channels or leave a 
+                comment on our YouTube videos. We read and respond to every message.
+            </p>
+            <p class="content-text">
+                <strong>YouTube:</strong> <a href="https://www.youtube.com/@SunsetStudyClub" class="highlight-text" target="_blank">
+                @SunsetStudyClub</a> - The best way to connect with us directly
+            </p>
+            <p class="content-text">
+                <strong>Business Inquiries:</strong> For partnerships, collaborations, or business-related questions, 
+                please include "Business Inquiry" in your message subject when contacting us through YouTube.
+            </p>
+            <p class="content-text">
+                <strong>Technical Issues:</strong> If you're experiencing problems with our website or timer, 
+                please describe the issue and include your device and browser information.
+            </p>
+            <p class="content-text">
+                We typically respond within 24-48 hours. Thank you for being part of our peaceful productivity community!
+            </p>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <h2>Stay Updated with Study Tips</h2>
+            <p>Get weekly productivity insights, study techniques, and focus strategies delivered to your inbox.</p>
+            <div class="newsletter-buttons">
+                <a href="https://www.youtube.com/@SunsetStudyClub" class="newsletter-btn" target="_blank">
+                    🎥 Subscribe to Videos
+                </a>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2 class="cta-title">Start Your Practice</h2>
+            <p class="cta-description">
+                Join thousands who have discovered the power of peaceful productivity
+            </p>
+            <a href="https://www.youtube.com/@SunsetStudyClub" class="cta-button" target="_blank">Subscribe on YouTube</a>
+            <a href="index.html#timer" class="cta-button secondary">Try the Timer</a>
+        </section>
+    </main>
+    
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer style="background: white; border-top: 1px solid rgba(241, 108, 41, 0.1); padding: 40px 0; text-align: center; margin-top: 80px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
+            <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 20px; flex-wrap: wrap;">
+                <a href="about.html" style="color: #7A6E5D; text-decoration: none; font-size: 14px; transition: color 0.2s ease;" onmouseover="this.style.color='#F16C29'" onmouseout="this.style.color='#7A6E5D'">About</a>
+                <a href="privacy.html" style="color: #7A6E5D; text-decoration: none; font-size: 14px; transition: color 0.2s ease;" onmouseover="this.style.color='#F16C29'" onmouseout="this.style.color='#7A6E5D'">Privacy Policy</a>
+                <a href="index.html#timer" style="color: #7A6E5D; text-decoration: none; font-size: 14px; transition: color 0.2s ease;" onmouseover="this.style.color='#F16C29'" onmouseout="this.style.color='#7A6E5D'">Timer</a>
+                <a href="https://www.youtube.com/@SunsetStudyClub" target="_blank" style="color: #7A6E5D; text-decoration: none; font-size: 14px; transition: color 0.2s ease;" onmouseover="this.style.color='#F16C29'" onmouseout="this.style.color='#7A6E5D'">YouTube</a>
+            </div>
+            <p style="color: #7A6E5D; font-size: 14px; margin: 0;">
+                © 2025 Sunset Study Club. Peaceful productivity for mindful learners.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

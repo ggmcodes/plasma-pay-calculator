@@ -3,27 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plasma Donation Centers Directory 2025 - Find Centers Near You</title>
+    <title>Plasma Donation Centers Directory 2025 | Find Centers Near You</title>
     <meta name="description" content="Complete directory of plasma donation centers by state. Find CSL Plasma, BioLife, and other centers with addresses and phone numbers.">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://plasmapaycalculator.com/centers.html">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <h1><a href="/">Plasma Pay Calculator</a></h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="/">Calculator</a></li>
-                    <li><a href="/centers.html" class="active">Centers Directory</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-icon"></div>
+                Plasma Pay Calculator
+            </a>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/centers.html" class="active">Centers</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/#quiz">Eligibility</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-menu-links">
+                <li><a href="/#calculator" onclick="toggleMobileMenu()">Calculator</a></li>
+                <li><a href="/centers.html" onclick="toggleMobileMenu()">Centers</a></li>
+                <li><a href="/blog/" onclick="toggleMobileMenu()">Blog</a></li>
+                <li><a href="/#quiz" onclick="toggleMobileMenu()">Eligibility</a></li>
+                <li><a href="/about.html" onclick="toggleMobileMenu()">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Main Content -->
     <main>
@@ -387,5 +400,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

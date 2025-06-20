@@ -1,0 +1,30 @@
+{
+  "name": "Plasma Pay Calculator",
+  "short_name": "Plasma Pay",
+  "description": "Calculate your plasma donation income with center rates and tax info",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fffe",
+  "theme_color": "#27ae60",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["finance", "health", "utilities"],
+  "screenshots": [
+    {
+      "src": "screenshot.png",
+      "sizes": "1170x2532",
+      "type": "image/png"
+    }
+  ]
+}
