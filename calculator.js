@@ -50,7 +50,7 @@ function getWeightMultiplier(weight) {
 // Main calculation function
 function calculateEarnings() {
     // Get form values
-    const donorType = document.getElementById('donor-type').value;
+    const donorType = document.getElementById('donorType').value;
     const weight = parseInt(document.getElementById('weight').value);
     const miles = parseFloat(document.getElementById('miles').value);
     const center = document.getElementById('center').value || 'average';
@@ -94,13 +94,13 @@ function calculateEarnings() {
     const monthlyTax = monthlyGross * 0.20;
     
     // Update display
-    document.getElementById('weekly-net').textContent = Math.round(weeklyNet);
-    document.getElementById('monthly-net').textContent = Math.round(monthlyNet);
-    document.getElementById('tax-monthly').textContent = Math.round(monthlyTax);
-    document.getElementById('gross-monthly').textContent = Math.round(monthlyGross);
-    document.getElementById('gas-monthly').textContent = Math.round(monthlyGas);
-    document.getElementById('total-miles').textContent = Math.round(monthlyMiles);
-    document.getElementById('final-monthly').textContent = Math.round(monthlyNet);
+    document.getElementById('weeklyNet').textContent = Math.round(weeklyNet);
+    document.getElementById('monthlyNet').textContent = Math.round(monthlyNet);
+    document.getElementById('taxMonthly').textContent = Math.round(monthlyTax);
+    document.getElementById('grossMonthly').textContent = Math.round(monthlyGross);
+    document.getElementById('gasMonthly').textContent = Math.round(monthlyGas);
+    document.getElementById('totalMiles').textContent = Math.round(monthlyMiles);
+    document.getElementById('finalMonthly').textContent = Math.round(monthlyNet);
     
     // Show results section
     document.getElementById('results').classList.add('show');
