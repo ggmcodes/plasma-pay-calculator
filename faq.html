@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Plasma Pay Calculator</title>
+    <meta name="description" content="Get answers to common questions about plasma donation income, requirements, safety, and our calculator. Learn about plasma donation earnings and center comparisons.">
+    <meta name="keywords" content="plasma donation FAQ, plasma income questions, plasma donation requirements, plasma center questions, plasma calculator help">
+    <meta name="theme-color" content="#27ae60">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="canonical" href="https://plasmapaycalculator.com/faq.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f8f5 100%);
+            min-height: 100vh;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: "💵";
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.1);
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .category-card:hover {
+            border-color: #27ae60;
+        }
+
+        .category-card h3 {
+            color: #27ae60;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .faq-section h2 {
+            color: #27ae60;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #ecf0f1;
+            border-radius: 15px;
+            transition: box-shadow 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.1);
+        }
+
+        .faq-question {
+            color: #27ae60;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: #27ae60;
+        }
+
+        .faq-question.expanded::after {
+            content: "-";
+        }
+
+        .faq-answer {
+            color: #7f8c8d;
+            line-height: 1.7;
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .faq-answer.expanded {
+            display: block;
+        }
+
+        .faq-answer ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .search-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 1rem;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #27ae60;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .faq-section {
+                padding: 2rem;
+            }
+
+            .faq-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">Plasma Pay Calculator</a>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/centers.html">Centers</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/faq.html" class="active">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1>Frequently Asked Questions</h1>
+                <p>Get answers to common questions about plasma donation income, requirements, and our calculator.</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search FAQ..." onkeyup="searchFAQ()">
+            </div>
+
+            <div class="faq-categories">
+                <div class="category-card">
+                    <h3>💰 Income & Earnings</h3>
+                    <p>Questions about plasma donation pay rates, bonuses, and earning potential</p>
+                </div>
+                <div class="category-card">
+                    <h3>📋 Requirements</h3>
+                    <p>Eligibility, age, weight, and health requirements for plasma donation</p>
+                </div>
+                <div class="category-card">
+                    <h3>🏥 Safety & Health</h3>
+                    <p>Safety concerns, health impacts, and donation frequency questions</p>
+                </div>
+                <div class="category-card">
+                    <h3>🧮 Calculator Help</h3>
+                    <p>How to use our calculator and understanding the results</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>💰 Income & Earnings Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Is plasma donation income taxable?</div>
+                    <div class="faq-answer">
+                        <p>Yes, plasma donation income is considered taxable income by the IRS. You will receive a 1099-MISC form if you earn $600 or more per year from a plasma center. We recommend:</p>
+                        <ul>
+                            <li>Setting aside 20-25% of your earnings for taxes</li>
+                            <li>Keeping records of all donations and payments</li>
+                            <li>Tracking mileage and expenses for potential deductions</li>
+                            <li>Consulting a tax professional for specific advice</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How accurate is this calculator?</div>
+                    <div class="faq-answer">
+                        <p>Our calculator provides estimates based on current rates from plasma centers across the United States. However, actual earnings may vary due to:</p>
+                        <ul>
+                            <li>Individual eligibility factors</li>
+                            <li>Center-specific policies and promotions</li>
+                            <li>Location-based rate differences</li>
+                            <li>Weight and health requirements</li>
+                            <li>Frequency of donations and bonus cycles</li>
+                        </ul>
+                        <p>We update our rates weekly, but always verify current rates by calling the plasma center directly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Why do payments vary by center?</div>
+                    <div class="faq-answer">
+                        <p>Plasma center payments vary based on several factors:</p>
+                        <ul>
+                            <li><strong>Local Competition:</strong> Areas with multiple centers often pay more</li>
+                            <li><strong>Demand:</strong> Centers in high-demand areas may offer higher rates</li>
+                            <li><strong>Operating Costs:</strong> Rent, staffing, and other costs affect pricing</li>
+                            <li><strong>Corporate Policies:</strong> Different companies have different pay structures</li>
+                            <li><strong>Donor Supply:</strong> Areas with fewer donors may offer higher incentives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">What are new donor bonuses?</div>
+                    <div class="faq-answer">
+                        <p>New donor bonuses are special promotional rates offered to first-time donors, typically for their first 4-8 donations. These can range from $800-1200 total. Benefits include:</p>
+                        <ul>
+                            <li>Higher pay rates for initial visits</li>
+                            <li>Completion bonuses for finishing all visits</li>
+                            <li>Referral bonuses for bringing friends</li>
+                        </ul>
+                        <p>Bonus amounts and terms vary by center and change frequently, so call ahead to confirm current offers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>📋 Requirements & Eligibility</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How often can I donate plasma?</div>
+                    <div class="faq-answer">
+                        <p>FDA regulations allow plasma donation up to twice per week with at least 48 hours between donations. This means:</p>
+                        <ul>
+                            <li>Maximum 2 donations per 7-day period</li>
+                            <li>Minimum 48 hours between donations</li>
+                            <li>Most donors can complete 8-9 donations per month</li>
+                            <li>Centers track your donation history electronically</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">What are the basic requirements for plasma donation?</div>
+                    <div class="faq-answer">
+                        <p>Basic requirements include:</p>
+                        <ul>
+                            <li><strong>Age:</strong> 18-65 years old (some centers up to 69)</li>
+                            <li><strong>Weight:</strong> Minimum 110 pounds</li>
+                            <li><strong>Health:</strong> Good general health, pass medical screening</li>
+                            <li><strong>Documents:</strong> Valid photo ID, proof of address, Social Security verification</li>
+                            <li><strong>Lifestyle:</strong> No recent tattoos/piercings (12 months), no certain medications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Does weight affect how much I earn?</div>
+                    <div class="faq-answer">
+                        <p>Yes! Heavier donors can safely give more plasma and typically earn more money:</p>
+                        <ul>
+                            <li><strong>110-149 lbs:</strong> Standard rate (100% of base pay)</li>
+                            <li><strong>150-174 lbs:</strong> Medium rate (110% of base pay)</li>
+                            <li><strong>175+ lbs:</strong> High rate (120% of base pay)</li>
+                        </ul>
+                        <p>This can mean an extra $40-80 per month for heavier donors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>🏥 Safety & Health</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Is donating plasma safe?</div>
+                    <div class="faq-answer">
+                        <p>Yes, plasma donation is generally safe when done at FDA-regulated centers. Safety measures include:</p>
+                        <ul>
+                            <li>Sterile, single-use equipment for each donation</li>
+                            <li>Comprehensive health screening before each donation</li>
+                            <li>Trained medical staff overseeing the process</li>
+                            <li>Regular monitoring during donation</li>
+                            <li>Strict cleanliness and safety protocols</li>
+                        </ul>
+                        <p>Your body replaces the donated plasma within 24-48 hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">What should I do before donating?</div>
+                    <div class="faq-answer">
+                        <p>To prepare for donation:</p>
+                        <ul>
+                            <li><strong>Hydrate:</strong> Drink 16-20 oz of water 2 hours before</li>
+                            <li><strong>Eat:</strong> Have a protein-rich meal 2-3 hours prior</li>
+                            <li><strong>Sleep:</strong> Get adequate rest the night before</li>
+                            <li><strong>Avoid:</strong> Alcohol, fatty foods, and excessive caffeine</li>
+                            <li><strong>Bring:</strong> ID, proof of address, and entertainment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Are there side effects?</div>
+                    <div class="faq-answer">
+                        <p>Most people experience minimal side effects. Common, temporary effects may include:</p>
+                        <ul>
+                            <li>Mild fatigue or dizziness</li>
+                            <li>Bruising at the needle site</li>
+                            <li>Temporary lowered energy levels</li>
+                        </ul>
+                        <p>Serious side effects are rare. Always inform staff immediately if you feel unwell during or after donation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>🧮 Calculator & Website Help</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How do I report errors or update rates?</div>
+                    <div class="faq-answer">
+                        <p>We appreciate your help keeping our information accurate! To report errors:</p>
+                        <ul>
+                            <li>Email us at rates@plasmapaycalculator.com</li>
+                            <li>Include the center name and location</li>
+                            <li>Provide the correct information</li>
+                            <li>Include any supporting documentation if available</li>
+                        </ul>
+                        <p>We review all submissions and update our database weekly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Do you store my personal information?</div>
+                    <div class="faq-answer">
+                        <p>No! Our calculator processes all information locally in your browser. We do not collect, store, or transmit:</p>
+                        <ul>
+                            <li>Your weight or personal details</li>
+                            <li>Calculation results</li>
+                            <li>Quiz responses</li>
+                            <li>Location information</li>
+                        </ul>
+                        <p>Your privacy is important to us. See our Privacy Policy for more details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Can you help me choose the best center?</div>
+                    <div class="faq-answer">
+                        <p>We provide information and comparisons to help you make an informed decision. Consider these factors:</p>
+                        <ul>
+                            <li><strong>Pay rates:</strong> Compare regular and new donor rates</li>
+                            <li><strong>Location:</strong> Travel time and convenience</li>
+                            <li><strong>Promotions:</strong> Current bonuses and special offers</li>
+                            <li><strong>Reviews:</strong> Other donors' experiences</li>
+                            <li><strong>Hours:</strong> Schedule compatibility</li>
+                        </ul>
+                        <p>Use our center comparison tools and call centers directly for the most current information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Plasma Pay Calculator. Information for educational purposes. Always consult with medical professionals and plasma centers for current requirements and rates.</p>
+            <div style="margin-top: 1rem;">
+                <a href="/about.html" style="color: #27ae60; margin: 0 1rem;">About</a>
+                <a href="/privacy.html" style="color: #27ae60; margin: 0 1rem;">Privacy Policy</a>
+                <a href="/terms.html" style="color: #27ae60; margin: 0 1rem;">Terms of Service</a>
+                <a href="/contact.html" style="color: #27ae60; margin: 0 1rem;">Contact</a>
+                <a href="/faq.html" style="color: #27ae60; margin: 0 1rem;">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isExpanded = answer.classList.contains('expanded');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-answer.expanded').forEach(item => {
+                item.classList.remove('expanded');
+            });
+            document.querySelectorAll('.faq-question.expanded').forEach(item => {
+                item.classList.remove('expanded');
+            });
+            
+            // Toggle current item
+            if (!isExpanded) {
+                answer.classList.add('expanded');
+                element.classList.add('expanded');
+            }
+        }
+
+        function searchFAQ() {
+            const searchTerm = document.querySelector('.search-input').value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm === '' ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
