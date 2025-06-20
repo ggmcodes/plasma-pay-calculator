@@ -65,7 +65,7 @@
         }
 
         .logo::before {
-            content: "💧";
+            content: "💵";
             font-size: 1.8rem;
         }
 
@@ -404,12 +404,38 @@
             <!-- Header -->
             <div class="header">
                 <h1>Plasma Donation Income Calculator 2025</h1>
+                <div style="margin: 1rem 0; color: #27ae60; font-weight: 500;">
+                    ✓ Updated for 2025 rates ✓ Based on 50+ plasma centers
+                </div>
                 <p>Calculate your potential earnings from plasma donation. Get accurate income estimates based on your weight, location, and chosen plasma center.</p>
+                
+                <!-- Quick Quiz CTA -->
+                <div style="margin-top: 2rem;">
+                    <a href="#quiz" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        Can I Donate? Take 30-Second Quiz →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Earnings Preview -->
+            <div style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; padding: 2rem; border-radius: 20px; margin-bottom: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">💰 Typical Monthly Earnings:</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                    <div>
+                        <div style="font-size: 1.8rem; font-weight: 700;">$800-1200</div>
+                        <div style="opacity: 0.9;">New Donors (first month)</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.8rem; font-weight: 700;">$280-480</div>
+                        <div style="opacity: 0.9;">Returning Donors/month</div>
+                    </div>
+                </div>
+                <div style="opacity: 0.9; font-size: 0.95rem;">• Paid 2x per week via debit card</div>
             </div>
 
             <!-- Calculator -->
             <div id="calculator" class="calculator">
-                <h2>🩸 Calculate Your Plasma Income</h2>
+                <h2>💵 Calculate Your Plasma Income</h2>
                 <form id="calculatorForm">
                     <div class="form-grid">
                         <div class="form-group">
@@ -419,6 +445,9 @@
                                 <option value="new">New Donor (first 4 weeks)</option>
                                 <option value="returning">Returning Donor</option>
                             </select>
+                            <div style="font-size: 0.85rem; color: #27ae60; margin-top: 0.25rem; font-weight: 500;">
+                                New donors earn $800-1200 first month!
+                            </div>
                         </div>
                         
                         <div class="form-group">
@@ -437,6 +466,9 @@
                                 <option value="kedplasma">KedPlasma</option>
                                 <option value="other">Other Center</option>
                             </select>
+                            <div style="font-size: 0.85rem; color: #7f8c8d; margin-top: 0.25rem;">
+                                Rates vary by location & current promotions
+                            </div>
                         </div>
                         
                         <div class="form-group">
@@ -446,6 +478,10 @@
                     </div>
                     
                     <button type="submit" class="calculate-btn">Calculate My Income 💰</button>
+                    
+                    <div style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d; font-style: italic;">
+                        *Estimates based on average rates. Actual pay varies. Save 20% for taxes!
+                    </div>
                 </form>
             </div>
 
@@ -481,6 +517,14 @@
                         <span>💰 Net Monthly Income:</span>
                         <span>$<span id="finalMonthly">0</span></span>
                     </div>
+                </div>
+                
+                <!-- CTA after results -->
+                <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ecf0f1;">
+                    <h4 style="color: #27ae60; margin-bottom: 1rem;">Ready to start earning?</h4>
+                    <a href="/centers.html" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        Find Centers Near You →
+                    </a>
                 </div>
             </div>
 
