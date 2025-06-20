@@ -81,15 +81,15 @@
             scroll-behavior: smooth;
         }
 
-        /* Navigation - Exact copy from main site */
+        /* Navigation */
         nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
             position: fixed;
-            top: 0;
             width: 100%;
-            background: rgba(248, 255, 254, 0.95);
-            backdrop-filter: blur(20px);
+            top: 0;
             z-index: 1000;
-            padding: 20px 0;
             border-bottom: 1px solid rgba(39, 174, 96, 0.1);
         }
 
@@ -99,65 +99,88 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 40px;
+            padding: 0 2rem;
         }
 
         .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 12px;
-            color: #222222;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 20px;
-            transition: transform 0.2s ease;
-        }
-
-        .logo:hover {
-            transform: translateY(-1px);
+            gap: 0.8rem;
         }
 
         .logo-icon {
             width: 36px;
             height: 36px;
-            background: linear-gradient(180deg, #27ae60 0%, #27ae60 50%, #3498db 50%, #3498db 100%);
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+        }
+
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 1rem;
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
             list-style: none;
+            gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
-            color: #222222;
             text-decoration: none;
+            color: #2c3e50;
             font-weight: 500;
-            transition: all 0.2s ease;
-            padding: 8px 16px;
-            border-radius: 24px;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
         }
 
-        .nav-links a:hover {
-            color: #27ae60;
-            background-color: rgba(39, 174, 96, 0.05);
-        }
-
+        .nav-links a:hover,
         .nav-links a.active {
             color: #27ae60;
-            background-color: rgba(39, 174, 96, 0.1);
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
         }
 
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            color: #222222;
+            color: #2c3e50;
             font-size: 24px;
             cursor: pointer;
-            padding: 8px;
         }
 
         .mobile-menu {
@@ -489,31 +512,27 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="../" class="logo">
-                <div class="logo-icon"></div>
-                Plasma Pay Calculator
-            </a>
+            <div style="display: flex; align-items: center;">
+                <a href="../" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="../#calculator">Calculator</a></li>
-                <li><a href="../blog/" class="active">Blog</a></li>
-                <li><a href="../centers.html">Centers</a></li>
-                <li><a href="../#quiz">Eligibility</a></li>
+                <li><a href="../centers.html">Find Centers</a></li>
+                <li><a href="../blog/" class="active">Tips & Guides</a></li>
+                <li><a href="../about.html">About</a></li>
                 <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../#calculator" class="cta-btn">Calculate Earnings</a></li>
             </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <ul class="mobile-menu-links">
-                <li><a href="../#calculator" onclick="toggleMobileMenu()">Calculator</a></li>
-                <li><a href="../blog/" onclick="toggleMobileMenu()">Blog</a></li>
-                <li><a href="../centers.html" onclick="toggleMobileMenu()">Centers</a></li>
-                <li><a href="../#quiz" onclick="toggleMobileMenu()">Eligibility</a></li>
-                <li><a href="../about.html" onclick="toggleMobileMenu()">About</a></li>
-            </ul>
+            <button class="mobile-menu-btn">☰</button>
         </div>
     </nav>
+
+    <!-- Ad Header -->
+    <div style="width: 728px; height: 90px; background: #f8f9fa; border: 1px dashed #dee2e6; margin: 1rem auto; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 0.9rem;">Advertisement Space (728x90)</div>
 
     <!-- Blog Header -->
     <section class="blog-header">

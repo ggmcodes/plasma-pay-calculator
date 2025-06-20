@@ -47,31 +47,51 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: #27ae60;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
         }
 
-        .logo::before {
-            content: "💵";
-            font-size: 1.8rem;
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+        }
+
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 1rem;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
             color: #2c3e50;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all 0.3s;
             padding: 0.5rem 1rem;
             border-radius: 8px;
         }
@@ -80,6 +100,22 @@
         .nav-links a.active {
             color: #27ae60;
             background: rgba(39, 174, 96, 0.1);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
         }
 
         main {
@@ -262,15 +298,26 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo">Plasma Pay Calculator</a>
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="/#calculator">Calculator</a></li>
-                <li><a href="/centers.html">Centers</a></li>
-                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/centers.html">Find Centers</a></li>
+                <li><a href="/blog/">Tips & Guides</a></li>
+                <li><a href="/about.html">About</a></li>
                 <li><a href="/faq.html" class="active">FAQ</a></li>
+                <li><a href="/#calculator" class="cta-btn">Calculate Earnings</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Ad Header -->
+    <div style="width: 728px; height: 90px; background: #f8f9fa; border: 1px dashed #dee2e6; margin: 1rem auto; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 0.9rem;">Advertisement Space (728x90)</div>
 
     <main>
         <div class="container">
