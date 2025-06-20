@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma Pay Calculator - Calculate Your Plasma Donation Income 2025</title>
+    <meta name="description" content="Calculate how much money you can make donating plasma in 2025. Free calculator with current rates from CSL Plasma, BioLife, and other centers.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://plasmapaycalculator.com/">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="/">Plasma Pay Calculator</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">Calculator</a></li>
+                    <li><a href="/centers.html">Centers Directory</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Calculate Your Plasma Donation Income</h1>
+                <p class="hero-subtitle">Find out how much you can earn donating plasma in 2025 with our accurate calculator</p>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-container">
+                    <h2>Plasma Donation Income Calculator</h2>
+                    <form id="plasma-calculator" class="calculator-form">
+                        <div class="form-group">
+                            <label for="donor-type">Are you a new or returning donor?</label>
+                            <select id="donor-type" required>
+                                <option value="">Select donor type</option>
+                                <option value="new">New Donor (first 4 weeks)</option>
+                                <option value="returning">Returning Donor</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weight">Your weight (lbs)</label>
+                            <input type="number" id="weight" min="110" max="400" value="150" required>
+                            <small>Minimum 110 lbs required to donate</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="miles">Miles to plasma center (one way)</label>
+                            <input type="number" id="miles" min="0" max="100" step="0.1" value="5" required>
+                            <small>Used to calculate gas costs</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="center">Plasma Center (Optional)</label>
+                            <select id="center">
+                                <option value="average">Average Rates</option>
+                                <option value="csl">CSL Plasma</option>
+                                <option value="biolife">BioLife Plasma</option>
+                                <option value="octapharma">Octapharma Plasma</option>
+                                <option value="grifols">Grifols Biomat USA</option>
+                                <option value="kedplasma">KedPlasma</option>
+                                <option value="immunotek">ImmunoTek Bio Centers</option>
+                                <option value="gcam">GCAM Plasma</option>
+                                <option value="other">Other Center</option>
+                            </select>
+                        </div>
+
+                        <button type="button" onclick="calculateEarnings()" class="calculate-btn">
+                            Calculate My Earnings
+                        </button>
+                    </form>
+
+                    <!-- Results Section -->
+                    <div id="results" class="results-container">
+                        <h3>Your Plasma Donation Income</h3>
+                        
+                        <div class="earnings-summary">
+                            <div class="earning-item weekly">
+                                <h4>Weekly Net Income</h4>
+                                <div class="amount">$<span id="weekly-net">0</span></div>
+                            </div>
+                            <div class="earning-item monthly">
+                                <h4>Monthly Net Income</h4>
+                                <div class="amount">$<span id="monthly-net">0</span></div>
+                            </div>
+                        </div>
+
+                        <div class="breakdown">
+                            <h4>Monthly Breakdown</h4>
+                            <div class="breakdown-item">
+                                <span>Gross Earnings:</span>
+                                <span>$<span id="gross-monthly">0</span></span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Gas Costs (<span id="total-miles">0</span> miles):</span>
+                                <span>-$<span id="gas-monthly">0</span></span>
+                            </div>
+                            <div class="breakdown-item total">
+                                <span>Net Income:</span>
+                                <span>$<span id="final-monthly">0</span></span>
+                            </div>
+                        </div>
+
+                        <div class="tax-info">
+                            <h4>Important Tax Information</h4>
+                            <p>Estimated taxes (20%): <strong>$<span id="tax-monthly">0</span>/month</strong></p>
+                            <p class="tax-note">⚠️ Plasma income is taxable. Set aside 20-25% for taxes. You'll receive a 1099 if you earn over $600/year.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AdSense Placeholder -->
+                <div class="ad-space">AdSense Ad Here - 728x90</div>
+
+                <!-- Eligibility Quiz -->
+                <div class="quiz-container">
+                    <h2>Can I Donate Plasma? Quick Eligibility Check</h2>
+                    <p>Answer these 5 questions to see if you're eligible to donate plasma:</p>
+
+                    <div id="q1" class="quiz-question">
+                        <h3>Question 1: Are you at least 18 years old?</h3>
+                        <button onclick="nextQuestion(1, true)">Yes, I'm 18+</button>
+                        <button onclick="showNotEligible('You must be at least 18 years old to donate plasma.')">No, I'm under 18</button>
+                    </div>
+
+                    <div id="q2" class="quiz-question" style="display: none;">
+                        <h3>Question 2: Do you weigh at least 110 pounds?</h3>
+                        <button onclick="nextQuestion(2, true)">Yes, 110+ lbs</button>
+                        <button onclick="showNotEligible('You must weigh at least 110 pounds to safely donate plasma.')">No, under 110 lbs</button>
+                    </div>
+
+                    <div id="q3" class="quiz-question" style="display: none;">
+                        <h3>Question 3: Have you gotten any tattoos or piercings in the last 4 months?</h3>
+                        <button onclick="showMaybe('You may need to wait 4 months after tattoos/piercings. Some centers accept professionally done tattoos after 3 months.')">Yes, recently</button>
+                        <button onclick="nextQuestion(3, true)">No recent tattoos/piercings</button>
+                    </div>
+
+                    <div id="q4" class="quiz-question" style="display: none;">
+                        <h3>Question 4: Do you have valid photo ID and proof of address?</h3>
+                        <button onclick="nextQuestion(4, true)">Yes, I have both</button>
+                        <button onclick="showNotEligible('You need valid photo ID and proof of address (utility bill, bank statement) to donate.')">No, missing documents</button>
+                    </div>
+
+                    <div id="q5" class="quiz-question" style="display: none;">
+                        <h3>Question 5: Are you currently healthy with no cold, flu, or infections?</h3>
+                        <button onclick="showEligible()">Yes, I'm healthy</button>
+                        <button onclick="showNotEligible('You must be healthy to donate. Wait until you recover from any illness.')">No, I'm sick</button>
+                    </div>
+
+                    <div id="quiz-result" class="quiz-result" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🏥 Find Centers Near You</h3>
+                        <p>Browse our directory of plasma donation centers with current rates and contact information.</p>
+                        <a href="/centers.html" class="btn">View Centers Directory</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>📚 Learn More</h3>
+                        <p>Read our guides on plasma donation requirements, tips, and maximizing your earnings.</p>
+                        <a href="/blog/" class="btn">Read Our Blog</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>💰 Maximize Earnings</h3>
+                        <p>New donors can earn $400-600 in their first month with promotional rates.</p>
+                        <a href="/blog/maximize-plasma-earnings/" class="btn">Learn How</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Plasma Pay Calculator</h4>
+                    <p>Calculate your potential plasma donation income with current 2025 rates.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Calculator</a></li>
+                        <li><a href="/centers.html">Centers Directory</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/terms/">Terms of Service</a></li>
+                        <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
+                <p class="disclaimer">This calculator provides estimates only. Actual earnings may vary by location and center.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
