@@ -41,17 +41,18 @@ const paymentRates = {
 };
 
 // Weight multipliers
-function getWeightMultiplier(weight) {
-    if (weight < 150) return 1.0;
-    if (weight < 175) return 1.1;
-    return 1.2;
+function getWeightMultiplier(weightRange) {
+    if (weightRange === '110-149') return 1.0;
+    if (weightRange === '150-174') return 1.1;
+    if (weightRange === '175+') return 1.2;
+    return 1.0; // default
 }
 
 // Main calculation function
 function calculateEarnings() {
     // Get form values
     const donorType = document.getElementById('donorType').value;
-    const weight = parseInt(document.getElementById('weight').value);
+    const weightRange = document.getElementById('weight').value;
     const miles = parseFloat(document.getElementById('miles').value);
     const center = document.getElementById('center').value || 'average';
     
@@ -61,9 +62,14 @@ function calculateEarnings() {
         return;
     }
     
+    if (!weightRange) {
+        alert('Please select your weight range');
+        return;
+    }
+    
     // Get rates for selected center
     const rates = paymentRates[center];
-    const weightMult = getWeightMultiplier(weight);
+    const weightMult = getWeightMultiplier(weightRange);
     
     let monthlyGross = 0;
     let weeklyAvg = 0;
