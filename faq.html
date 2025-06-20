@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions | Plasma Pay Calculator</title>
-    <meta name="description" content="Get answers to common questions about plasma donation income, payment timing, calculation accuracy, and earning optimization. Learn how much you'll earn donating plasma.">
-    <meta name="keywords" content="plasma donation FAQ, plasma income questions, plasma payment FAQ, plasma earnings calculator help, how much plasma pays">
+    <title>Plasma Donation FAQ: How Much Money Can You Make? | Plasma Pay Calculator</title>
+    <meta name="description" content="Complete FAQ about plasma donation income, payment rates, earnings optimization, and maximizing your money from donating plasma. Get answers to all your plasma pay questions.">
+    <meta name="keywords" content="plasma donation FAQ, how much does plasma pay, plasma income questions, plasma payment rates, plasma earnings calculator, CSL plasma pay, BioLife plasma earnings, plasma donation money">
     <meta name="theme-color" content="#27ae60">
     
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="canonical" href="https://plasmapaycalculator.com/faq.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Plasma Donation FAQ: How Much Money Can You Make?">
+    <meta property="og:description" content="Complete FAQ about plasma donation income and earnings optimization. Get answers to all your plasma pay questions.">
+    <meta property="og:url" content="https://plasmapaycalculator.com/faq.html">
+    <meta property="og:type" content="website">
     
     <style>
         * {
@@ -60,21 +66,21 @@
             width: 32px;
             height: 32px;
             background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            border-radius: 8px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 700;
-            font-size: 14px;
-            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
         }
 
         .trust-badge {
             background: rgba(39, 174, 96, 0.1);
             color: #27ae60;
             padding: 0.2rem 0.6rem;
-            border-radius: 20px;
+            border-radius: 12px;
             font-size: 0.7rem;
             font-weight: 500;
             margin-left: 0.8rem;
@@ -94,7 +100,7 @@
             font-weight: 500;
             transition: all 0.3s;
             padding: 0.4rem 0.8rem;
-            border-radius: 8px;
+            border-radius: 6px;
             font-size: 0.9rem;
             white-space: nowrap;
         }
@@ -109,11 +115,11 @@
             background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
             color: white;
             padding: 0.5rem 1rem;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: 600;
             text-decoration: none;
             transition: transform 0.3s;
-            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
             font-size: 0.85rem;
             white-space: nowrap;
         }
@@ -156,29 +162,36 @@
             margin: 0 auto;
         }
 
-        .faq-categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .earnings-preview {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
             margin-bottom: 3rem;
-        }
-
-        .category-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.1);
-            border: 2px solid transparent;
-            transition: border-color 0.3s;
         }
 
-        .category-card:hover {
-            border-color: #27ae60;
+        .earnings-preview h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
         }
 
-        .category-card h3 {
-            color: #27ae60;
+        .earnings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .earnings-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .earnings-card .amount {
+            font-size: 1.8rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
@@ -250,27 +263,28 @@
             margin-bottom: 0.5rem;
         }
 
-        .search-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
-            margin-bottom: 3rem;
+        .faq-answer strong {
+            color: #27ae60;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
             text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
         }
 
-        .search-input {
-            width: 100%;
-            max-width: 400px;
-            padding: 1rem;
-            border: 2px solid #ecf0f1;
-            border-radius: 10px;
-            font-size: 1rem;
+        .cta-section h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
         }
 
-        .search-input:focus {
-            outline: none;
-            border-color: #27ae60;
+        .cta-section p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
         footer {
@@ -324,7 +338,7 @@
                 padding: 2rem;
             }
 
-            .faq-categories {
+            .earnings-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -343,248 +357,404 @@
             <ul class="nav-links">
                 <li><a href="/#calculator">Calculator</a></li>
                 <li><a href="/blog/">Earning Tips</a></li>
-                <li><a href="/about.html">About</a></li>
                 <li><a href="/faq.html" class="active">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
                 <li><a href="/#calculator" class="cta-btn">Calculate My Earnings</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Ad Header -->
-    <div style="width: 728px; height: 90px; background: #f8f9fa; border: 1px dashed #dee2e6; margin: 1rem auto; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 0.9rem;">Advertisement Space (728x90)</div>
-
     <main>
         <div class="container">
             <div class="page-header">
-                <h1>Frequently Asked Questions</h1>
-                <p>Get answers to common questions about plasma donation earnings, payment timing, and maximizing your income.</p>
+                <h1>Plasma Donation Income FAQ</h1>
+                <p>Get answers to all your questions about how much money you can make donating plasma, payment timing, and maximizing your earnings.</p>
             </div>
 
-            <div class="search-box">
-                <input type="text" class="search-input" placeholder="Search FAQ..." onkeyup="searchFAQ()">
-            </div>
-
-            <div class="faq-categories">
-                <div class="category-card">
-                    <h3>💰 Income & Earnings</h3>
-                    <p>Questions about plasma donation pay rates, bonuses, and maximizing your earnings</p>
+            <div class="earnings-preview">
+                <h2>💰 Quick Earnings Overview</h2>
+                <div class="earnings-grid">
+                    <div class="earnings-card">
+                        <div class="amount">$800-1200</div>
+                        <div>First Month (New Donor)</div>
+                    </div>
+                    <div class="earnings-card">
+                        <div class="amount">$300-600</div>
+                        <div>Monthly (Regular Donor)</div>
+                    </div>
+                    <div class="earnings-card">
+                        <div class="amount">$45-120</div>
+                        <div>Per Donation</div>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <h3>📋 Payment & Timing</h3>
-                    <p>When you get paid, payment methods, and bonus cycles</p>
-                </div>
-                <div class="category-card">
-                    <h3>🧮 Calculator Accuracy</h3>
-                    <p>How accurate our estimates are and what affects your actual earnings</p>
-                </div>
-                <div class="category-card">
-                    <h3>📈 Earning Optimization</h3>
-                    <p>Tips to maximize your income and choose the best donation schedule</p>
-                </div>
+                <p>Actual earnings vary by weight, center, and location. Use our calculator for personalized estimates!</p>
             </div>
 
             <div class="faq-section">
-                <h2>💰 Income & Earnings Questions</h2>
+                <h2>💰 How Much Money Can You Make?</h2>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">Is plasma donation income taxable?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">How much money do you get for donating plasma?</div>
                     <div class="faq-answer">
-                        <p>Yes, plasma donation income is considered taxable income by the IRS. You will receive a 1099-MISC form if you earn $600 or more per year from a plasma center. We recommend:</p>
+                        <p>Plasma donation payments vary significantly by location, center, and your weight:</p>
                         <ul>
-                            <li>Setting aside 20-25% of your earnings for taxes</li>
-                            <li>Keeping records of all donations and payments</li>
-                            <li>Tracking mileage and expenses for potential deductions</li>
-                            <li>Consulting a tax professional for specific advice</li>
+                            <li><strong>Regular Donors:</strong> $45-80 per donation, $300-600 monthly</li>
+                            <li><strong>New Donors:</strong> $800-1,200 first month with bonuses</li>
+                            <li><strong>Weight Categories:</strong> Heavier donors (175+ lbs) earn 20% more</li>
+                            <li><strong>Premium Centers:</strong> CSL Plasma and BioLife often pay highest rates</li>
+                            <li><strong>Promotional Periods:</strong> Special bonuses can add $200-400 monthly</li>
                         </ul>
+                        <p>Use our calculator to see your exact earning potential based on your weight and local centers.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">How accurate is this calculator?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">How much does CSL Plasma pay?</div>
                     <div class="faq-answer">
-                        <p>Our calculator provides estimates based on current rates from plasma centers across the United States. However, actual earnings may vary due to:</p>
+                        <p>CSL Plasma is one of the highest-paying plasma centers:</p>
                         <ul>
-                            <li>Individual eligibility factors</li>
-                            <li>Center-specific policies and promotions</li>
-                            <li>Location-based rate differences</li>
-                            <li>Weight and health requirements</li>
-                            <li>Frequency of donations and bonus cycles</li>
+                            <li><strong>Regular Rate:</strong> $50-90 per donation (varies by weight and location)</li>
+                            <li><strong>New Donor Bonus:</strong> Up to $1,000 first month</li>
+                            <li><strong>Monthly Potential:</strong> $400-720 for regular donors</li>
+                            <li><strong>Weight Bonus:</strong> Extra $10-20 per donation for 175+ lb donors</li>
+                            <li><strong>Referral Bonus:</strong> $50-200 for bringing new donors</li>
                         </ul>
-                        <p>We update our rates weekly, but always verify current rates by calling the plasma center directly.</p>
+                        <p>CSL rates vary by city - urban areas typically pay more. Call your local center for current rates.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">When do I get paid for plasma donation?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">How much does BioLife pay for plasma?</div>
                     <div class="faq-answer">
-                        <p>Payment timing varies by center but typically:</p>
+                        <p>BioLife Plasma Services offers competitive compensation:</p>
                         <ul>
-                            <li><strong>Same Day:</strong> Most centers pay immediately after donation via prepaid debit card</li>
-                            <li><strong>Bonuses:</strong> New donor bonuses may be split across multiple visits</li>
-                            <li><strong>Promotions:</strong> Special promotional payments usually paid within 24-48 hours</li>
-                            <li><strong>Payment Methods:</strong> Prepaid debit cards, direct deposit, or cash depending on center</li>
+                            <li><strong>Base Pay:</strong> $40-85 per donation</li>
+                            <li><strong>New Donor Program:</strong> $900+ completion bonus first month</li>
+                            <li><strong>Monthly Earnings:</strong> $320-680 for regular donors</li>
+                            <li><strong>Loyalty Bonuses:</strong> Additional payments for consistent donors</li>
+                            <li><strong>Special Promotions:</strong> Frequent bonus periods throughout the year</li>
                         </ul>
+                        <p>BioLife often runs promotions that can increase monthly earnings by $100-300.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">How can I maximize my plasma donation earnings?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">What's the highest paying plasma center?</div>
                     <div class="faq-answer">
-                        <p>To maximize your plasma donation income:</p>
+                        <p>The highest-paying plasma centers typically include:</p>
                         <ul>
-                            <li><strong>Weight Advantage:</strong> Heavier donors (175+ lbs) can earn 20% more per donation</li>
-                            <li><strong>Bonus Timing:</strong> Take advantage of new donor bonuses and promotional periods</li>
-                            <li><strong>Consistent Schedule:</strong> Donate twice weekly to maximize monthly earnings</li>
-                            <li><strong>Center Shopping:</strong> Compare rates between nearby centers</li>
-                            <li><strong>Referral Programs:</strong> Earn extra for bringing new donors</li>
+                            <li><strong>CSL Plasma:</strong> Generally highest base rates ($50-90/donation)</li>
+                            <li><strong>Octapharma Plasma:</strong> Excellent new donor bonuses ($800-1,100)</li>
+                            <li><strong>BioLife:</strong> Strong loyalty programs and frequent promotions</li>
+                            <li><strong>Grifols Biomat:</strong> Competitive rates in many markets</li>
+                            <li><strong>Independent Centers:</strong> Sometimes pay premium rates in competitive markets</li>
                         </ul>
-                        <p>Our calculator helps you estimate your maximum earning potential based on these factors.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-section">
-                <h2>💰 Payment & Timing Questions</h2>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">What affects my actual earnings vs calculator estimates?</div>
-                    <div class="faq-answer">
-                        <p>Several factors can cause your actual earnings to differ from our calculator estimates:</p>
-                        <ul>
-                            <li><strong>Promotional Changes:</strong> Centers frequently update bonus amounts</li>
-                            <li><strong>Individual Eligibility:</strong> Medical screening may affect donation frequency</li>
-                            <li><strong>Seasonal Variations:</strong> Some centers offer higher rates during certain periods</li>
-                            <li><strong>Location Differences:</strong> Pay rates can vary even within the same chain</li>
-                            <li><strong>New Policies:</strong> Centers may change their pay structures</li>
-                        </ul>
-                        <p>We update our rates weekly to maintain accuracy, but always verify current rates with the center.</p>
+                        <p>Payment varies significantly by location. Use our calculator to compare earnings at centers near you.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">Why do some centers pay more than others?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">How much can you make donating plasma twice a week?</div>
                     <div class="faq-answer">
-                        <p>Plasma center payments vary based on several factors:</p>
+                        <p>Donating twice weekly (the FDA maximum) maximizes your earnings:</p>
                         <ul>
-                            <li><strong>Local Competition:</strong> Areas with multiple centers often pay more</li>
-                            <li><strong>Donor Demand:</strong> Centers in high-demand areas may offer higher rates</li>
-                            <li><strong>Operating Costs:</strong> Rent, staffing, and other costs affect pricing</li>
-                            <li><strong>Corporate Policies:</strong> Different companies have different pay structures</li>
-                            <li><strong>Donor Supply:</strong> Areas with fewer donors may offer higher incentives</li>
+                            <li><strong>Regular Donors:</strong> $360-640 monthly (8 donations)</li>
+                            <li><strong>New Donors:</strong> $800-1,200 first month with bonuses</li>
+                            <li><strong>Heavy Weight (175+ lbs):</strong> $432-768 monthly (20% bonus)</li>
+                            <li><strong>With Promotions:</strong> $500-900 monthly during bonus periods</li>
+                            <li><strong>Annual Potential:</strong> $4,320-7,680 per year</li>
                         </ul>
-                        <p>Use our calculator to compare estimated earnings at different centers in your area.</p>
+                        <p>Consistency is key - missing donations significantly reduces monthly totals.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">How much extra do heavier donors earn?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Does weight affect how much you get paid for plasma?</div>
                     <div class="faq-answer">
-                        <p>Weight significantly affects your earning potential because heavier donors can safely give more plasma:</p>
+                        <p>Yes, weight significantly affects plasma donation earnings:</p>
                         <ul>
                             <li><strong>110-149 lbs:</strong> Standard rate (100% of base pay)</li>
                             <li><strong>150-174 lbs:</strong> Medium rate (110% of base pay)</li>
                             <li><strong>175+ lbs:</strong> High rate (120% of base pay)</li>
+                            <li><strong>Monthly Difference:</strong> Heavy donors earn $60-120 more per month</li>
+                            <li><strong>Annual Impact:</strong> $720-1,440 extra per year for 175+ lb donors</li>
                         </ul>
-                        <p>This can mean an extra $40-80 per month for heavier donors. Our calculator automatically factors in weight-based pay differences to show your exact earning potential.</p>
+                        <p>Weight categories are based on how much plasma you can safely donate. Our calculator factors in your exact weight for accurate earnings.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-section">
-                <h2>🧮 Calculator & Earning Resources</h2>
+                <h2>⏰ Payment Timing & Methods</h2>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">How accurate are your earning calculations?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">When do you get paid for plasma donation?</div>
+                    <div class="faq-answer">
+                        <p>Payment timing varies by center but is typically immediate:</p>
+                        <ul>
+                            <li><strong>Same Day:</strong> Most centers pay immediately after donation</li>
+                            <li><strong>Prepaid Debit Card:</strong> Money loaded instantly, usable right away</li>
+                            <li><strong>New Donor Bonuses:</strong> May be paid across multiple visits</li>
+                            <li><strong>Promotional Bonuses:</strong> Usually within 24-48 hours</li>
+                            <li><strong>Direct Deposit:</strong> Available at some locations (1-2 business days)</li>
+                        </ul>
+                        <p>You can use your earnings immediately at most centers with their prepaid debit cards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How do plasma centers pay you?</div>
+                    <div class="faq-answer">
+                        <p>Plasma centers use several payment methods:</p>
+                        <ul>
+                            <li><strong>Prepaid Debit Cards:</strong> Most common, money loaded after each donation</li>
+                            <li><strong>Direct Deposit:</strong> Available at some centers, takes 1-2 days</li>
+                            <li><strong>PayPal:</strong> Offered by select centers</li>
+                            <li><strong>Cash:</strong> Rare, mostly smaller independent centers</li>
+                            <li><strong>Mobile Apps:</strong> Some centers have digital payment platforms</li>
+                        </ul>
+                        <p>Prepaid debit cards are preferred by most donors as they provide immediate access to earnings.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How long does it take to get new donor bonuses?</div>
+                    <div class="faq-answer">
+                        <p>New donor bonus timing varies by center structure:</p>
+                        <ul>
+                            <li><strong>Progressive Bonuses:</strong> Increasing amounts each visit (immediate)</li>
+                            <li><strong>Completion Bonuses:</strong> Paid after finishing program (6-8 donations)</li>
+                            <li><strong>Split Bonuses:</strong> Part immediate, part after completion</li>
+                            <li><strong>Timeline:</strong> Most programs completed within 30-45 days</li>
+                            <li><strong>Requirements:</strong> Must complete all donations within specified timeframe</li>
+                        </ul>
+                        <p>Missing even one donation can forfeit completion bonuses worth $200-500.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Is plasma donation income taxable?</div>
+                    <div class="faq-answer">
+                        <p>Yes, plasma donation income is fully taxable:</p>
+                        <ul>
+                            <li><strong>1099-MISC Forms:</strong> Issued for $600+ annually per center</li>
+                            <li><strong>Tax Rate:</strong> Taxed as self-employment income</li>
+                            <li><strong>Withholding:</strong> Set aside 20-25% for taxes</li>
+                            <li><strong>Deductions:</strong> Mileage and expenses may be deductible</li>
+                            <li><strong>Quarterly Payments:</strong> May be required for high earners</li>
+                        </ul>
+                        <p>Track all donations and expenses for tax purposes. See our tax guide for detailed strategies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>📈 Maximizing Your Plasma Income</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How can I make more money donating plasma?</div>
+                    <div class="faq-answer">
+                        <p>Strategies to maximize your plasma donation earnings:</p>
+                        <ul>
+                            <li><strong>Choose High-Paying Centers:</strong> Research and compare rates in your area</li>
+                            <li><strong>Maximize New Donor Bonuses:</strong> Complete all requirements for full bonuses</li>
+                            <li><strong>Donate Consistently:</strong> Twice weekly schedule maximizes monthly income</li>
+                            <li><strong>Weight Optimization:</strong> Heavier donors earn significantly more</li>
+                            <li><strong>Take Advantage of Promotions:</strong> Special bonuses can add $100-400 monthly</li>
+                            <li><strong>Referral Programs:</strong> Earn $50-200 for bringing new donors</li>
+                            <li><strong>Multiple Centers:</strong> Where allowed, alternate for different bonuses</li>
+                        </ul>
+                        <p>Our earning tips guide provides detailed strategies for income optimization.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">What's the best plasma donation schedule for money?</div>
+                    <div class="faq-answer">
+                        <p>The optimal schedule for maximum earnings:</p>
+                        <ul>
+                            <li><strong>Frequency:</strong> Twice per week (FDA maximum)</li>
+                            <li><strong>Spacing:</strong> Exactly 48 hours between donations</li>
+                            <li><strong>Weekly Pattern:</strong> Monday/Friday or Tuesday/Saturday work well</li>
+                            <li><strong>Consistency:</strong> Regular schedule maintains bonus eligibility</li>
+                            <li><strong>Promotional Timing:</strong> Plan around bonus periods</li>
+                            <li><strong>Monthly Planning:</strong> Aim for 8 donations per month maximum</li>
+                        </ul>
+                        <p>Missing even one donation significantly reduces monthly earnings and may affect bonus programs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How accurate is this plasma pay calculator?</div>
                     <div class="faq-answer">
                         <p>Our calculator provides highly accurate estimates based on:</p>
                         <ul>
                             <li><strong>Current Rates:</strong> Updated weekly from official center sources</li>
-                            <li><strong>Weight Categories:</strong> Precise calculation based on plasma volume limits</li>
+                            <li><strong>Weight Categories:</strong> Precise calculation based on FDA plasma volume limits</li>
                             <li><strong>Bonus Programs:</strong> Includes new donor bonuses and promotional rates</li>
-                            <li><strong>Frequency Limits:</strong> Accounts for FDA donation frequency regulations</li>
-                            <li><strong>Regional Variations:</strong> Considers location-based rate differences</li>
+                            <li><strong>Regional Variations:</strong> Accounts for location-based rate differences</li>
+                            <li><strong>Historical Data:</strong> Based on thousands of user-reported earnings</li>
                         </ul>
-                        <p>While estimates are very accurate, always verify current rates directly with centers as promotions change frequently.</p>
+                        <p>While highly accurate, always verify current rates with centers as promotions change frequently.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">What's the best way to choose a plasma center?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Which plasma center pays the most money?</div>
                     <div class="faq-answer">
-                        <p>When choosing a plasma center, consider these earning factors:</p>
+                        <p>Top-paying plasma centers by earnings potential:</p>
                         <ul>
-                            <li><strong>Pay Rates:</strong> Use our calculator to compare earnings at different centers</li>
-                            <li><strong>New Donor Bonuses:</strong> Look for centers offering the highest first-time bonuses</li>
-                            <li><strong>Promotional Frequency:</strong> Some centers run more frequent earning promotions</li>
-                            <li><strong>Convenience:</strong> Factor travel time and costs into your total earnings</li>
-                            <li><strong>Payment Method:</strong> Consider whether you prefer immediate payment or direct deposit</li>
+                            <li><strong>CSL Plasma:</strong> Highest base rates in most markets ($50-90/donation)</li>
+                            <li><strong>Octapharma Plasma:</strong> Excellent new donor programs ($800-1,100 first month)</li>
+                            <li><strong>BioLife Plasma:</strong> Strong loyalty bonuses and frequent promotions</li>
+                            <li><strong>Grifols Biomat:</strong> Competitive rates with good consistency</li>
+                            <li><strong>KedPlasma:</strong> Growing network with attractive new donor bonuses</li>
                         </ul>
-                        <p>Our resources help you compare all these factors to maximize your plasma donation income.</p>
+                        <p>Payment varies significantly by location. Use our calculator to compare all centers in your area.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">How often should I recalculate my earnings?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">How much do first-time plasma donors make?</div>
                     <div class="faq-answer">
-                        <p>We recommend recalculating your earnings:</p>
+                        <p>First-time donors can earn significantly more through bonus programs:</p>
                         <ul>
-                            <li><strong>Monthly:</strong> To account for any promotional changes or rate updates</li>
-                            <li><strong>When Switching Centers:</strong> To compare earning potential at different locations</li>
-                            <li><strong>After Weight Changes:</strong> Weight affects your pay rate significantly</li>
-                            <li><strong>For Special Promotions:</strong> Centers often run limited-time bonus programs</li>
-                            <li><strong>At Year Start:</strong> Annual rate adjustments are common in January</li>
+                            <li><strong>First Visit:</strong> $50-100 (varies by center and weight)</li>
+                            <li><strong>First Month Total:</strong> $800-1,200 with completion bonuses</li>
+                            <li><strong>Progressive Bonuses:</strong> Increasing amounts each visit</li>
+                            <li><strong>Completion Requirements:</strong> Usually 6-8 donations in 30-45 days</li>
+                            <li><strong>Center Comparison:</strong> Bonus amounts vary significantly between centers</li>
                         </ul>
-                        <p>Our calculator is always updated with the latest rates, so frequent recalculation ensures you're maximizing your earnings.</p>
+                        <p>New donor bonuses are the best opportunity to maximize earnings. Research centers before choosing.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-section">
-                <h2>📈 Earning Optimization Tips</h2>
+                <h2>🏥 Health, Safety & Eligibility</h2>
                 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">What's the best donation schedule for maximum earnings?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Who can donate plasma for money?</div>
                     <div class="faq-answer">
-                        <p>To maximize your plasma donation earnings:</p>
+                        <p>Basic eligibility requirements for paid plasma donation:</p>
                         <ul>
-                            <li><strong>Twice Weekly:</strong> Donate the maximum allowed (2x per week) for highest monthly income</li>
-                            <li><strong>48-Hour Spacing:</strong> Wait exactly 48 hours between donations for optimal scheduling</li>
-                            <li><strong>Consistency:</strong> Regular donors often receive loyalty bonuses and promotions</li>
-                            <li><strong>Bonus Timing:</strong> Plan around promotional periods for extra earnings</li>
-                            <li><strong>Multiple Centers:</strong> Some donors alternate between centers (where allowed) for different bonuses</li>
+                            <li><strong>Age:</strong> 18-65 years old (some centers 18-69)</li>
+                            <li><strong>Weight:</strong> Minimum 110 lbs (50 kg)</li>
+                            <li><strong>Health:</strong> Pass medical screening and physical exam</li>
+                            <li><strong>Identification:</strong> Valid photo ID and proof of address</li>
+                            <li><strong>Social Security:</strong> Must provide SSN for tax reporting</li>
+                            <li><strong>Residency:</strong> Local address requirements vary by state</li>
                         </ul>
-                        <p>Our earning tips section provides detailed strategies for income optimization.</p>
+                        <p>Additional health and lifestyle factors may affect eligibility. Each center conducts individual screening.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">How can I track my actual vs estimated earnings?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">How often can you donate plasma for money?</div>
                     <div class="faq-answer">
-                        <p>To track how your actual earnings compare to our estimates:</p>
+                        <p>FDA regulations limit plasma donation frequency:</p>
                         <ul>
-                            <li><strong>Monthly Comparison:</strong> Compare your total monthly earnings to our calculator predictions</li>
-                            <li><strong>Donation Records:</strong> Keep track of each payment received vs what was estimated</li>
-                            <li><strong>Bonus Tracking:</strong> Monitor whether promotional bonuses match our calculations</li>
-                            <li><strong>Rate Changes:</strong> Note when centers change their pay rates</li>
-                            <li><strong>Feedback:</strong> Email us rate updates to help improve our accuracy</li>
+                            <li><strong>Maximum:</strong> Twice per week (2 donations in 7-day period)</li>
+                            <li><strong>Minimum Wait:</strong> 48 hours between donations</li>
+                            <li><strong>Monthly Limit:</strong> 8 donations maximum</li>
+                            <li><strong>Rolling Calendar:</strong> Week calculated from any 7-day period</li>
+                            <li><strong>Health Monitoring:</strong> Centers track donation history</li>
                         </ul>
-                        <p>This helps you optimize your earning strategy and helps us maintain accurate estimates.</p>
+                        <p>Exceeding these limits is not allowed and would affect your earning potential and health.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">What earning mistakes should I avoid?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">What disqualifies you from donating plasma?</div>
                     <div class="faq-answer">
-                        <p>Common mistakes that reduce plasma donation earnings:</p>
+                        <p>Common disqualifying factors that affect earning ability:</p>
                         <ul>
-                            <li><strong>Irregular Schedule:</strong> Missing donations reduces monthly totals and bonus eligibility</li>
-                            <li><strong>Not Comparing Rates:</strong> Failing to check if nearby centers pay more</li>
-                            <li><strong>Ignoring Weight Impact:</strong> Not understanding how weight affects pay rates</li>
-                            <li><strong>Missing Promotions:</strong> Not taking advantage of bonus periods and special offers</li>
-                            <li><strong>Poor Preparation:</strong> Being deferred due to low protein or hydration affects earnings</li>
+                            <li><strong>Weight:</strong> Under 110 lbs permanently disqualifies</li>
+                            <li><strong>Medical Conditions:</strong> Certain chronic illnesses or medications</li>
+                            <li><strong>Recent Tattoos/Piercings:</strong> 12-month waiting period</li>
+                            <li><strong>Travel History:</strong> Recent travel to certain countries</li>
+                            <li><strong>Low Iron:</strong> Temporary deferral until levels improve</li>
+                            <li><strong>Blood Pressure:</strong> Must be within acceptable ranges</li>
                         </ul>
-                        <p>Our earning guides help you avoid these common pitfalls and maximize your income.</p>
+                        <p>Many disqualifications are temporary. Contact centers about specific conditions and re-eligibility timing.</p>
                     </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How do I prepare to maximize my plasma earnings?</div>
+                    <div class="faq-answer">
+                        <p>Preparation tips to ensure successful donations and maximum earnings:</p>
+                        <ul>
+                            <li><strong>Hydration:</strong> Drink 64+ oz water 24 hours before donation</li>
+                            <li><strong>Nutrition:</strong> Eat iron-rich foods and high-protein meals</li>
+                            <li><strong>Sleep:</strong> Get 7+ hours sleep before donation</li>
+                            <li><strong>Documentation:</strong> Bring valid ID and proof of address</li>
+                            <li><strong>Avoid Alcohol:</strong> No alcohol 24 hours before donation</li>
+                            <li><strong>Supplements:</strong> Consider iron supplements if levels are low</li>
+                        </ul>
+                        <p>Poor preparation can lead to deferrals that cost you $45-70 in lost earnings per visit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>💳 Calculator & Earning Tools</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How does the plasma pay calculator work?</div>
+                    <div class="faq-answer">
+                        <p>Our calculator estimates your earnings using several factors:</p>
+                        <ul>
+                            <li><strong>Weight Category:</strong> Determines your pay tier (110-149, 150-174, 175+ lbs)</li>
+                            <li><strong>Center Selection:</strong> Uses current rates from your chosen center</li>
+                            <li><strong>Donation Frequency:</strong> Calculates based on FDA-allowed schedule</li>
+                            <li><strong>Bonus Programs:</strong> Includes new donor bonuses and promotions</li>
+                            <li><strong>Location Factors:</strong> Adjusts for regional rate variations</li>
+                            <li><strong>Tax Estimates:</strong> Shows net income after tax withholding</li>
+                        </ul>
+                        <p>Results show weekly, monthly, and annual earning potential with current rates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Why do plasma payment rates change?</div>
+                    <div class="faq-answer">
+                        <p>Several factors cause plasma payment rates to fluctuate:</p>
+                        <ul>
+                            <li><strong>Supply and Demand:</strong> Plasma shortage increases rates</li>
+                            <li><strong>Competition:</strong> Centers compete for donors with higher payments</li>
+                            <li><strong>Seasonal Patterns:</strong> Rates often increase in summer and around holidays</li>
+                            <li><strong>Corporate Policies:</strong> Company-wide rate adjustments</li>
+                            <li><strong>Local Market Conditions:</strong> Economic factors in specific areas</li>
+                            <li><strong>Promotional Cycles:</strong> Limited-time bonus programs</li>
+                        </ul>
+                        <p>We update our calculator weekly to reflect current market rates and bonuses.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">Should I compare plasma centers before donating?</div>
+                    <div class="faq-answer">
+                        <p>Yes, comparing centers can significantly increase your earnings:</p>
+                        <ul>
+                            <li><strong>Rate Differences:</strong> Centers in the same area can vary by $20-40 per donation</li>
+                            <li><strong>Bonus Programs:</strong> New donor bonuses range from $600-1,200</li>
+                            <li><strong>Promotional Frequency:</strong> Some centers offer more frequent bonuses</li>
+                            <li><strong>Payment Methods:</strong> Different options for accessing your money</li>
+                            <li><strong>Convenience Factors:</strong> Hours, wait times, and location</li>
+                            <li><strong>Annual Impact:</strong> Choosing the best center can mean $500-1,500 more per year</li>
+                        </ul>
+                        <p>Use our calculator to compare estimated annual earnings at all centers in your area.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Ready to Calculate Your Plasma Earnings?</h2>
+                <p>See exactly how much money you can make donating plasma with our free calculator!</p>
+                <div style="margin-top: 2rem;">
+                    <a href="/#calculator" class="cta-btn" style="background: white; color: #3498db; margin-right: 1rem;">Calculate My Earnings 💰</a>
+                    <a href="/blog/" class="cta-btn" style="background: rgba(255,255,255,0.2);">Read Earning Tips →</a>
                 </div>
             </div>
         </div>
@@ -619,22 +789,6 @@
                 answer.classList.add('expanded');
                 element.classList.add('expanded');
             }
-        }
-
-        function searchFAQ() {
-            const searchTerm = document.querySelector('.search-input').value.toLowerCase();
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question').textContent.toLowerCase();
-                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
-                
-                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = searchTerm === '' ? 'block' : 'none';
-                }
-            });
         }
     </script>
 </body>
