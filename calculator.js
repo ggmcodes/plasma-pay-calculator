@@ -85,11 +85,11 @@ function calculateEarnings() {
         monthlyGross = weeklyAvg * 4.33;
     }
     
-    // Gas calculation (IRS 2025 rate: $0.70/mile)
+    // Gas calculation (27 MPG at $3.00/gallon = $0.111/mile)
     const milesPerDonation = miles * 2; // round trip
     const donationsPerMonth = 8; // 2x per week for 4 weeks
     const monthlyMiles = milesPerDonation * donationsPerMonth;
-    const monthlyGas = monthlyMiles * 0.70;
+    const monthlyGas = monthlyMiles * 0.111;
     const weeklyGas = monthlyGas / 4;
     
     // Net calculations
