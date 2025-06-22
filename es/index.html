@@ -394,6 +394,145 @@
             margin-bottom: 1rem;
         }
 
+        /* Calculator Styles */
+        .calculator {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .calculator h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #27ae60;
+        }
+
+        .calculate-btn {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+        }
+
+        .results {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
+            margin-bottom: 3rem;
+            display: none;
+        }
+
+        .results h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .result-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .breakdown {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .breakdown h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .breakdown-item.total {
+            font-weight: 700;
+            color: #27ae60;
+            border-top: 2px solid #27ae60;
+            margin-top: 1rem;
+            padding-top: 1rem;
+        }
+
         /* Quiz Styles */
         .quiz-question {
             display: none;
@@ -562,97 +701,129 @@
                 </div>
             </div>
 
-            <!-- Calculator Section -->
-            <div id="calculadora" class="calculator-section">
-                <h2>🧮 Calculadora de Ingresos por Plasma</h2>
-                <div class="form-grid">
+            <!-- Earnings Preview -->
+            <div style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; padding: 2rem; border-radius: 20px; margin-bottom: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem; font-size: 1.6rem;">💰 Cuánto Podrías Ganar:</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
                     <div>
+                        <div style="font-size: 2rem; font-weight: 700;">$800-1200</div>
+                        <div style="opacity: 0.9; font-weight: 500;">Tu Primer Mes</div>
+                        <div style="opacity: 0.8; font-size: 0.9rem;">Bonos de nuevo donante</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; font-weight: 700;">$280-480</div>
+                        <div style="opacity: 0.9; font-weight: 500;">Cada Mes Después</div>
+                        <div style="opacity: 0.8; font-size: 0.9rem;">Tarifas regulares de donación</div>
+                    </div>
+                </div>
+                <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; font-size: 0.95rem;">
+                    <strong>💳 Te pagan al instante:</strong> El dinero va directo a tu tarjeta de débito después de cada donación
+                </div>
+            </div>
+
+            <!-- Calculator -->
+            <div id="calculadora" class="calculator">
+                <h2>💵 Calcula Tus Ganancias Exactas</h2>
+                <form id="calculatorForm">
+                    <div class="form-grid">
                         <div class="form-group">
-                            <label for="peso">Tu Peso (libras):</label>
-                            <input type="number" id="peso" min="110" max="400" placeholder="Ej: 150">
-                            <small style="color: #666;">Peso mínimo: 110 libras (50 kg)</small>
+                            <label for="donorType">Estado del Donante</label>
+                            <select id="donorType" required>
+                                <option value="">Selecciona estado del donante</option>
+                                <option value="new">Nuevo Donante (primeras 4 semanas)</option>
+                                <option value="returning">Donante Regular</option>
+                            </select>
+                            <div style="font-size: 0.85rem; color: #27ae60; margin-top: 0.25rem; font-weight: 500;">
+                                ¡Los nuevos donantes ganan $800-1200 el primer mes!
+                            </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="centro">Centro de Plasma:</label>
-                            <select id="centro">
-                                <option value="">Selecciona tu centro</option>
+                            <label for="weight">Tu Peso (libras)</label>
+                            <select id="weight" required>
+                                <option value="">Selecciona tu rango de peso</option>
+                                <option value="110-149">110-149 lbs (Tarifa Base)</option>
+                                <option value="150-174">150-174 lbs (+10% Pago)</option>
+                                <option value="175+">175+ lbs (+20% Pago)</option>
+                            </select>
+                            <div style="font-size: 0.85rem; color: #27ae60; margin-top: 0.25rem; font-weight: 500;">
+                                ¡Mayor peso = mayor pago por donación!
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="center">Centro de Plasma</label>
+                            <select id="center">
+                                <option value="average">Promedio (todos los centros)</option>
                                 <option value="csl">CSL Plasma</option>
                                 <option value="biolife">BioLife Plasma Services</option>
                                 <option value="octapharma">Octapharma Plasma</option>
-                                <option value="grifols">Grifols Plasma</option>
-                                <option value="kedplasma">KEDPLASMA</option>
-                                <option value="b-positive">B Positive Plasma</option>
-                                <option value="inter-blood">Interstate Blood Bank</option>
+                                <option value="grifols">Grifols Biomat USA</option>
+                                <option value="kedplasma">KedPlasma</option>
+                                <option value="other">Otro Centro</option>
                             </select>
+                            <div style="font-size: 0.85rem; color: #7f8c8d; margin-top: 0.25rem;">
+                                Las tarifas varían por ubicación y promociones actuales
+                            </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="estado">Tu Estado:</label>
-                            <select id="estado">
-                                <option value="">Selecciona tu estado</option>
-                                <option value="AL">Alabama</option>
-                                <option value="AZ">Arizona</option>
-                                <option value="AR">Arkansas</option>
-                                <option value="CA">California</option>
-                                <option value="CO">Colorado</option>
-                                <option value="FL">Florida</option>
-                                <option value="GA">Georgia</option>
-                                <option value="IL">Illinois</option>
-                                <option value="IN">Indiana</option>
-                                <option value="IA">Iowa</option>
-                                <option value="KS">Kansas</option>
-                                <option value="KY">Kentucky</option>
-                                <option value="LA">Louisiana</option>
-                                <option value="MI">Michigan</option>
-                                <option value="MN">Minnesota</option>
-                                <option value="MS">Mississippi</option>
-                                <option value="MO">Missouri</option>
-                                <option value="NE">Nebraska</option>
-                                <option value="NV">Nevada</option>
-                                <option value="NM">Nuevo México</option>
-                                <option value="NC">Carolina del Norte</option>
-                                <option value="OH">Ohio</option>
-                                <option value="OK">Oklahoma</option>
-                                <option value="OR">Oregon</option>
-                                <option value="PA">Pennsylvania</option>
-                                <option value="SC">Carolina del Sur</option>
-                                <option value="TN">Tennessee</option>
-                                <option value="TX">Texas</option>
-                                <option value="UT">Utah</option>
-                                <option value="VA">Virginia</option>
-                                <option value="WA">Washington</option>
-                                <option value="WV">Virginia Occidental</option>
-                                <option value="WI">Wisconsin</option>
-                            </select>
+                            <label for="miles">Distancia al Centro (millas)</label>
+                            <input type="number" id="miles" min="0" max="100" step="0.1" placeholder="5.0" value="5">
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="frecuencia">Frecuencia de Donación:</label>
-                            <select id="frecuencia">
-                                <option value="1">1 vez por semana</option>
-                                <option value="2" selected>2 veces por semana (máximo)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="experiencia">Experiencia como Donante:</label>
-                            <select id="experiencia">
-                                <option value="nuevo">Nuevo donante (primeros 30 días)</option>
-                                <option value="regular" selected>Donante regular</option>
-                                <option value="retornando">Donante que regresa (6+ meses sin donar)</option>
-                            </select>
-                        </div>
-                        
-                        <button class="calculate-btn" onclick="calculateEarnings()">
-                            💰 Calcular Mis Ganancias
-                        </button>
                     </div>
                     
-                    <div class="result-section" id="resultados">
-                        <h3 style="color: #27ae60; margin-bottom: 1rem;">Tus Ganancias Estimadas:</h3>
-                        <div id="resultado-contenido"></div>
+                    <button type="submit" class="calculate-btn">Calcular Mis Ingresos 💰</button>
+                    
+                    <div style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d; font-style: italic;">
+                        *Estimaciones basadas en tarifas promedio. El pago real varía. ¡Ahorra 20% para impuestos!
                     </div>
+                </form>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="results">
+                <h3>Tus Ganancias Estimadas</h3>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value">$<span id="weeklyNet">0</span></div>
+                        <div class="result-label">Por Semana (Neto)</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">$<span id="monthlyNet">0</span></div>
+                        <div class="result-label">Por Mes (Neto)</div>
+                    </div>
+                </div>
+                
+                <div class="breakdown">
+                    <h4>💡 Desglose de Ingresos</h4>
+                    <div class="breakdown-item">
+                        <span>Ingresos Mensuales Brutos:</span>
+                        <span>$<span id="grossMonthly">0</span></span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Costos de Gasolina (<span id="totalMiles">0</span> millas):</span>
+                        <span>-$<span id="gasMonthly">0</span></span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Est. Retención de Impuestos (20%):</span>
+                        <span>-$<span id="taxMonthly">0</span></span>
+                    </div>
+                    <div class="breakdown-item total">
+                        <span>💰 Ingresos Mensuales Netos:</span>
+                        <span>$<span id="finalMonthly">0</span></span>
+                    </div>
+                </div>
+                
+                <!-- CTA after results -->
+                <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ecf0f1;">
+                    <h4 style="color: #27ae60; margin-bottom: 1rem;">¿Listo para comenzar a ganar tanto?</h4>
+                    <div style="background: rgba(39, 174, 96, 0.1); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                        <p style="margin: 0; color: #27ae60; font-weight: 500;">💡 Consejo Pro: ¡Los nuevos donantes pueden ganar hasta $1,200 en su primer mes con programas de bonos!</p>
+                    </div>
+                    <a href="blog/" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        Aprende Cómo Maximizar Ganancias →
+                    </a>
                 </div>
             </div>
 
@@ -723,7 +894,7 @@
                         <p>Ganancias específicas para centros de plasma en Florida</p>
                     </a>
                     
-                    <a href="https://californiaplasmapaycalculator.com/es/" class="state-card">
+                    <a href="https://californiaplasmacalculator.com/es/" class="state-card">
                         <div class="state-flag">☀️</div>
                         <h3>California</h3>
                         <p>Calculadora para centros de plasma en California con consideraciones de costo de vida</p>
@@ -874,6 +1045,81 @@
             document.getElementById('resultados').scrollIntoView({ behavior: 'smooth' });
         }
 
+        // Calculator functionality
+        function calculateEarnings() {
+            const donorType = document.getElementById('donorType').value;
+            const weight = document.getElementById('weight').value;
+            const center = document.getElementById('center').value;
+            const miles = parseFloat(document.getElementById('miles').value) || 5;
+
+            if (!donorType || !weight) {
+                alert('Por favor completa todos los campos requeridos.');
+                return;
+            }
+
+            // Base rates by center
+            const centerRates = {
+                'average': { min: 25, max: 45 },
+                'csl': { min: 30, max: 50 },
+                'biolife': { min: 25, max: 45 },
+                'octapharma': { min: 20, max: 40 },
+                'grifols': { min: 20, max: 35 },
+                'kedplasma': { min: 25, max: 40 },
+                'other': { min: 20, max: 40 }
+            };
+
+            // Weight multipliers
+            const weightMultipliers = {
+                '110-149': 1.0,
+                '150-174': 1.1,
+                '175+': 1.2
+            };
+
+            // Donor type multipliers
+            const donorMultipliers = {
+                'new': 2.0,  // New donor bonuses
+                'returning': 1.0
+            };
+
+            const baseRate = centerRates[center];
+            const weightMult = weightMultipliers[weight];
+            const donorMult = donorMultipliers[donorType];
+
+            // Calculate earnings
+            const minPerDonation = Math.round(baseRate.min * weightMult * donorMult);
+            const maxPerDonation = Math.round(baseRate.max * weightMult * donorMult);
+            const avgPerDonation = Math.round((minPerDonation + maxPerDonation) / 2);
+
+            // Weekly and monthly calculations (2 donations per week)
+            const weeklyGross = avgPerDonation * 2;
+            const monthlyGross = weeklyGross * 4;
+
+            // Gas costs calculation (round trip, twice per week)
+            const gasCostPerMile = 0.15;
+            const weeklyMiles = miles * 2 * 2; // round trip, twice per week
+            const monthlyGas = weeklyMiles * 4 * gasCostPerMile;
+
+            // Tax withholding (20%)
+            const monthlyTax = monthlyGross * 0.20;
+
+            // Net calculations
+            const monthlyNet = monthlyGross - monthlyGas - monthlyTax;
+            const weeklyNet = monthlyNet / 4;
+
+            // Update display
+            document.getElementById('weeklyNet').textContent = Math.round(weeklyNet);
+            document.getElementById('monthlyNet').textContent = Math.round(monthlyNet);
+            document.getElementById('grossMonthly').textContent = monthlyGross;
+            document.getElementById('gasMonthly').textContent = Math.round(monthlyGas);
+            document.getElementById('taxMonthly').textContent = Math.round(monthlyTax);
+            document.getElementById('finalMonthly').textContent = Math.round(monthlyNet);
+            document.getElementById('totalMiles').textContent = Math.round(weeklyMiles * 4);
+
+            // Show results
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
         // Quiz functionality
         function nextQuestion(currentQ, isCorrect) {
             if (!isCorrect) {
@@ -946,6 +1192,12 @@
                 }
             }
         }
+
+        // Form submission
+        document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            calculateEarnings();
+        });
     </script>
 </body>
 </html>
