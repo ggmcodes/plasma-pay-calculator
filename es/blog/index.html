@@ -216,31 +216,105 @@
             margin-right: auto;
         }
 
-        .preview-topics {
+        .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            margin-bottom: 3rem;
         }
 
-        .topic-card {
-            background: rgba(39, 174, 96, 0.05);
-            padding: 2rem;
+        .blog-card {
+            background: white;
             border-radius: 15px;
-            border-left: 4px solid #27ae60;
-            text-align: left;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .topic-card h3 {
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(39, 174, 96, 0.15);
+        }
+
+        .blog-card-content {
+            padding: 2rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: rgba(39, 174, 96, 0.1);
             color: #27ae60;
-            font-size: 1.3rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
             margin-bottom: 1rem;
         }
 
-        .topic-card p {
+        .blog-card h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .blog-card p {
             color: #7f8c8d;
-            font-size: 1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #2ecc71;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 0.5rem;
+            transition: margin-left 0.3s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 0.8rem;
+        }
+
+        .coming-soon {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
+
+        .coming-soon h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
         }
 
         .subscribe-section {
@@ -394,42 +468,56 @@
                 <p>Estrategias probadas para maximizar tus ingresos donando plasma</p>
             </div>
 
-            <div class="coming-soon-section">
-                <div class="coming-soon-icon">🚀</div>
-                <h2>Próximamente</h2>
-                <p>Estamos preparando contenido exclusivo con los mejores consejos y estrategias para maximizar tus ingresos donando plasma. Pronto tendrás acceso a guías detalladas y tips de expertos.</p>
-
-                <div class="preview-topics">
-                    <div class="topic-card">
-                        <h3>💰 Maximizar Ingresos</h3>
-                        <p>Estrategias para ganar más dinero con cada donación, incluyendo consejos sobre centros, horarios y programas de bonificación.</p>
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <!-- Ultimate Guide -->
+                <article class="blog-card">
+                    <div class="blog-card-content">
+                        <span class="blog-category">Guía Completa</span>
+                        <h3>Guía Completa de Donación de Plasma 2025</h3>
+                        <div class="blog-meta">
+                            <span>📅 10 mar 2025</span>
+                            <span>⏱️ 15 min de lectura</span>
+                        </div>
+                        <p>Todo lo que necesitas saber para dominar la donación de plasma. Desde requisitos hasta estrategias de maximización de ingresos.</p>
+                        <a href="guia-completa-donacion-plasma.html" class="read-more">Leer Guía Completa</a>
                     </div>
+                </article>
 
-                    <div class="topic-card">
-                        <h3>📍 Mejores Centros</h3>
-                        <p>Guías detalladas sobre qué centros pagan mejor, cómo encontrar ofertas especiales y comparar tarifas locales.</p>
+                <!-- $1000 Post -->
+                <article class="blog-card">
+                    <div class="blog-card-content">
+                        <span class="blog-category">Análisis de Ingresos</span>
+                        <h3>¿Puedes Ganar $1000 al Mes Donando Plasma?</h3>
+                        <div class="blog-meta">
+                            <span>📅 1 ene 2025</span>
+                            <span>⏱️ 8 min de lectura</span>
+                        </div>
+                        <p>Análisis matemático real de si es posible ganar $1000+ mensuales donando plasma, con ejemplos específicos y estrategias comprobadas.</p>
+                        <a href="ganar-1000-donando-plasma.html" class="read-more">Ver Análisis</a>
                     </div>
+                </article>
 
-                    <div class="topic-card">
-                        <h3>⏰ Optimizar Tiempo</h3>
-                        <p>Cómo planificar tus donaciones para maximizar ingresos mensuales y aprovechar al máximo tu tiempo.</p>
+                <!-- Requirements Post -->
+                <article class="blog-card">
+                    <div class="blog-card-content">
+                        <span class="blog-category">Requisitos</span>
+                        <h3>Requisitos para Donación de Plasma 2025</h3>
+                        <div class="blog-meta">
+                            <span>📅 8 ago 2025</span>
+                            <span>⏱️ 8 min de lectura</span>
+                        </div>
+                        <p>Lista completa de requisitos de elegibilidad para donación de plasma incluyendo documentos, condiciones de salud y preparación.</p>
+                        <a href="requisitos-donacion-plasma.html" class="read-more">Ver Requisitos</a>
                     </div>
+                </article>
+            </div>
 
-                    <div class="topic-card">
-                        <h3>🩺 Preparación Óptima</h3>
-                        <p>Tips para prepararte antes de donar y asegurar donaciones exitosas que maximicen tus ganancias.</p>
-                    </div>
-
-                    <div class="topic-card">
-                        <h3>🎯 Programas de Bonos</h3>
-                        <p>Cómo aprovechar programas de bonificación, promociones especiales y ofertas de nuevos donantes.</p>
-                    </div>
-
-                    <div class="topic-card">
-                        <h3>📊 Seguimiento de Ingresos</h3>
-                        <p>Herramientas y técnicas para rastrear tus ganancias y optimizar tu estrategia de donación.</p>
-                    </div>
-                </div>
+            <!-- Coming Soon Section -->
+            <div class="coming-soon">
+                <h2>Más Consejos Próximamente</h2>
+                <p>Estamos trabajando en más contenido para ayudarte a maximizar tus ganancias por donación de plasma.</p>
+                <a href="/es/#calculator" class="cta-btn" style="background: white; color: #3498db;">Calcular Mis Ganancias</a>
             </div>
 
             <div class="subscribe-section">
