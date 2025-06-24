@@ -484,6 +484,34 @@
             margin: 0 auto;
         }
 
+        /* Find Center Button */
+        .find-center-btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .find-center-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+        }
+
+        .find-center-btn.large {
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             .mobile-menu-btn {
@@ -556,7 +584,7 @@
                 <li><a href="../blog/" class="active">Earning Tips</a></li>
                 <li><a href="../faq.html">FAQ</a></li>
                 <li><a href="../about.html">About</a></li>
-                <li><a href="../#calculator" class="cta-btn">Calculate My Earnings</a></li>
+                <li><a href="https://bestplasmacenters.com" target="_blank" class="find-center-btn">🏥 FIND A CENTER</a></li>
             </ul>
             <button class="mobile-menu-btn">☰</button>
         </div>
@@ -859,8 +887,8 @@
             <h2>Stay Updated with Plasma Earning Tips</h2>
             <p>Get the latest pay rates, bonus promotions, and income optimization strategies to maximize your plasma donation earnings.</p>
             <div class="newsletter-buttons">
-                <a href="/#calculator" class="newsletter-btn">
-                    💰 Calculate Your Earnings
+                <a href="https://bestplasmacenters.com" target="_blank" class="newsletter-btn">
+                    🏥 FIND A CENTER
                 </a>
                 <a href="/blog/maximize-plasma-earnings.html" class="newsletter-btn">
                     📈 View Earning Strategies
