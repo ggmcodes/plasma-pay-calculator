@@ -557,6 +557,34 @@
             transform: translateY(-1px);
         }
 
+        /* Calculate Button */
+        .calculate-btn {
+            display: block;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+            cursor: pointer;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(39, 174, 96, 0.4);
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+        }
+
+        .calculate-btn:active {
+            transform: translateY(-1px);
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
             .nav-links {
@@ -582,6 +610,11 @@
             }
 
             .find-center-btn {
+                font-size: 1.1rem;
+                padding: 1.2rem 1.5rem;
+            }
+
+            .calculate-btn {
                 font-size: 1.1rem;
                 padding: 1.2rem 1.5rem;
             }
@@ -682,7 +715,7 @@
                         </div>
                     </div>
                     
-                    <a href="https://bestplasmacenters.com" class="find-center-btn" target="_blank">🏥 FIND A CENTER</a>
+                    <button type="submit" class="calculate-btn">Calculate My Income 💰</button>
                     
                     <div style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d; font-style: italic;">
                         *Estimates based on average rates. Actual pay varies. Save 20% for taxes!
