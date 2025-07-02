@@ -719,6 +719,7 @@
                                 <option value="">Select donor status</option>
                                 <option value="new">New Donor (first 4 weeks)</option>
                                 <option value="returning">Returning Donor</option>
+                                <option value="lapsed">Lapsed Donor (6+ months away)</option>
                             </select>
                             <div style="font-size: 0.85rem; color: #27ae60; margin-top: 0.25rem; font-weight: 500;">
                                 New donors earn $800-1200 first month!
@@ -731,7 +732,8 @@
                                 <option value="">Select your weight range</option>
                                 <option value="110-149">110-149 lbs (Base Rate)</option>
                                 <option value="150-174">150-174 lbs (+10% Pay)</option>
-                                <option value="175+">175+ lbs (+20% Pay)</option>
+                                <option value="175-200">175-200 lbs (+20% Pay)</option>
+                                <option value="200+">200+ lbs (+25% Pay)</option>
                             </select>
                             <div style="font-size: 0.85rem; color: #27ae60; margin-top: 0.25rem; font-weight: 500;">
                                 Higher weight = higher pay per donation!
@@ -747,6 +749,8 @@
                                 <option value="octapharma">Octapharma Plasma</option>
                                 <option value="grifols">Grifols Biomat USA</option>
                                 <option value="kedplasma">KedPlasma</option>
+                                <option value="bpl">B Positive Plasma</option>
+                                <option value="interstate">Interstate Blood Bank</option>
                                 <option value="other">Other Center</option>
                             </select>
                             <div style="font-size: 0.85rem; color: #7f8c8d; margin-top: 0.25rem;">
@@ -755,8 +759,77 @@
                         </div>
                         
                         <div class="form-group">
+                            <label for="state">Your State</label>
+                            <select id="state" required>
+                                <option value="">Select your state</option>
+                                <option value="CA">California (+15% rates)</option>
+                                <option value="NY">New York (+12% rates)</option>
+                                <option value="TX">Texas (+8% rates)</option>
+                                <option value="FL">Florida (+5% rates)</option>
+                                <option value="IL">Illinois (+10% rates)</option>
+                                <option value="PA">Pennsylvania (+7% rates)</option>
+                                <option value="OH">Ohio (base rates)</option>
+                                <option value="GA">Georgia (+3% rates)</option>
+                                <option value="NC">North Carolina (+2% rates)</option>
+                                <option value="MI">Michigan (+5% rates)</option>
+                                <option value="other">Other State (base rates)</option>
+                            </select>
+                            <div style="font-size: 0.85rem; color: #3498db; margin-top: 0.25rem;">
+                                Higher cost-of-living = higher pay!
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="frequency">Donation Frequency</label>
+                            <select id="frequency" required>
+                                <option value="">Select frequency</option>
+                                <option value="2">Twice per week (max allowed)</option>
+                                <option value="1.5">3 times every 2 weeks</option>
+                                <option value="1">Once per week</option>
+                                <option value="0.5">Twice per month</option>
+                                <option value="0.25">Once per month</option>
+                            </select>
+                            <div style="font-size: 0.85rem; color: #e74c3c; margin-top: 0.25rem;">
+                                More donations = more income!
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
                             <label for="miles">Distance to Center (miles)</label>
                             <input type="number" id="miles" min="0" max="100" step="0.1" placeholder="5.0" value="5">
+                            <div style="font-size: 0.85rem; color: #7f8c8d; margin-top: 0.25rem;">
+                                We'll calculate your gas costs
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mpg">Your Car's MPG</label>
+                            <input type="number" id="mpg" min="10" max="60" step="1" placeholder="25" value="25">
+                            <div style="font-size: 0.85rem; color: #7f8c8d; margin-top: 0.25rem;">
+                                For accurate gas cost calculation
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gasPrice">Local Gas Price ($/gal)</label>
+                            <input type="number" id="gasPrice" min="2" max="6" step="0.01" placeholder="3.50" value="3.50">
+                            <div style="font-size: 0.85rem; color: #7f8c8d; margin-top: 0.25rem;">
+                                Current price in your area
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="referrals">Monthly Referrals</label>
+                            <select id="referrals">
+                                <option value="0">No referrals</option>
+                                <option value="1">1 referral (+$50-100)</option>
+                                <option value="2">2 referrals (+$100-200)</option>
+                                <option value="3">3 referrals (+$150-300)</option>
+                                <option value="4">4+ referrals (+$200-400)</option>
+                            </select>
+                            <div style="font-size: 0.85rem; color: #f39c12; margin-top: 0.25rem;">
+                                Earn bonuses for bringing friends!
+                            </div>
                         </div>
                     </div>
                     
@@ -770,7 +843,7 @@
 
             <!-- Results -->
             <div id="results" class="results">
-                <h3>Your Estimated Earnings</h3>
+                <h3>🤑 Your Personalized Earnings Report</h3>
                 <div class="results-grid">
                     <div class="result-card">
                         <div class="result-value">$<span id="weeklyNet">0</span></div>
@@ -780,13 +853,37 @@
                         <div class="result-value">$<span id="monthlyNet">0</span></div>
                         <div class="result-label">Per Month (Net)</div>
                     </div>
+                    <div class="result-card">
+                        <div class="result-value">$<span id="yearlyNet">0</span></div>
+                        <div class="result-label">Per Year (Net)</div>
+                    </div>
                 </div>
                 
                 <div class="breakdown">
-                    <h4>💡 Income Breakdown</h4>
+                    <h4>💡 Detailed Income Breakdown</h4>
                     <div class="breakdown-item">
-                        <span>Monthly Gross Income:</span>
+                        <span>Base Donation Rate:</span>
+                        <span>$<span id="baseRate">0</span>/donation</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Weight Bonus:</span>
+                        <span>+<span id="weightBonus">0</span>%</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>State Adjustment:</span>
+                        <span>+<span id="stateBonus">0</span>%</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Monthly Donations:</span>
+                        <span><span id="monthlyDonations">0</span> visits</span>
+                    </div>
+                    <div class="breakdown-item" style="border-top: 1px solid #ecf0f1; padding-top: 0.5rem;">
+                        <span>Gross Monthly Income:</span>
                         <span>$<span id="grossMonthly">0</span></span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Referral Bonuses:</span>
+                        <span>+$<span id="referralBonus">0</span></span>
                     </div>
                     <div class="breakdown-item">
                         <span>Gas Costs (<span id="totalMiles">0</span> miles):</span>
@@ -800,6 +897,11 @@
                         <span>💰 Net Monthly Income:</span>
                         <span>$<span id="finalMonthly">0</span></span>
                     </div>
+                </div>
+                
+                <div style="background: #fffacd; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; border: 2px solid #ffd700;">
+                    <h4 style="color: #b8860b; margin-bottom: 0.5rem;">⚡ Earning Potential Analysis</h4>
+                    <p style="margin: 0; color: #856404;" id="earningAnalysis">Based on your inputs, you could be earning more than 87% of plasma donors!</p>
                 </div>
                 
                 <!-- CTA after results -->
