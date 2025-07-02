@@ -190,10 +190,23 @@ function calculateEarnings() {
 }
 
 // Quiz functions
-function nextQuestion(currentQ, eligible) {
-    document.getElementById('q' + currentQ).style.display = 'none';
-    if (currentQ < 5) {
-        document.getElementById('q' + (currentQ + 1)).style.display = 'block';
+let quizAnswers = {};
+
+function nextQuestion(currentQ, answer) {
+    // Store answer
+    quizAnswers[currentQ] = answer;
+    
+    // Hide current question
+    document.getElementById('q' + currentQ).classList.remove('active');
+    
+    // Handle special cases
+    if (answer === false || answer === 'ineligible') {
+        return; // Stop progression if ineligible
+    }
+    
+    // Show next question
+    if (currentQ < 12) {
+        document.getElementById('q' + (currentQ + 1)).classList.add('active');
     }
 }
 
@@ -215,36 +228,131 @@ function showEligible() {
 }
 
 function showNotEligible(reason) {
-    document.querySelectorAll('.quiz-question').forEach(q => q.style.display = 'none');
-    document.getElementById('quiz-result').innerHTML = `
-        <div style="background: #f8d7da; padding: 20px; border-radius: 8px; border: 2px solid #e74c3c;">
-            <h3 style="color: #721c24; margin-bottom: 10px;">❌ Sorry, You Can't Donate Right Now</h3>
-            <p style="margin-bottom: 15px;">${reason}</p>
-            <p>Check back later or look into other ways to make quick money.</p>
-            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #e74c3c; color: white; border: none; border-radius: 6px; cursor: pointer;">Take Quiz Again</button>
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    document.getElementById('quizResult').innerHTML = `
+        <div style="background: #f8d7da; padding: 2rem; border-radius: 15px; border: 2px solid #e74c3c; margin-top: 2rem;">
+            <h3 style="color: #721c24; margin-bottom: 1rem; text-align: center;">❌ Not Eligible at This Time</h3>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <p style="margin-bottom: 0; font-size: 1.1rem;">${reason}</p>
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem;">💡 Alternative Income Options</h4>
+                <ul style="margin: 0; padding-left: 1.5rem;">
+                    <li>Food delivery driving (DoorDash, UberEats)</li>
+                    <li>Online surveys and user testing</li>
+                    <li>Freelance gig work (Fiverr, Upwork)</li>
+                    <li>Selling items online (Facebook Marketplace, eBay)</li>
+                    <li>Task-based work (TaskRabbit, Handy)</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center;">
+                <button onclick="resetQuiz()" style="padding: 1rem 2rem; background: #e74c3c; color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; cursor: pointer;">
+                    Retake Quiz
+                </button>
+            </div>
         </div>
     `;
-    document.getElementById('quiz-result').style.display = 'block';
+    document.getElementById('quizResult').scrollIntoView({ behavior: 'smooth' });
 }
 
 function showMaybe(message) {
-    document.querySelectorAll('.quiz-question').forEach(q => q.style.display = 'none');
-    document.getElementById('quiz-result').innerHTML = `
-        <div style="background: #fff3cd; padding: 20px; border-radius: 8px; border: 2px solid #f39c12;">
-            <h3 style="color: #856404; margin-bottom: 10px;">⚠️ You Might Be Eligible</h3>
-            <p style="margin-bottom: 15px;">${message}</p>
-            <p>Contact your local center to check - they can give specific guidance.</p>
-            <button onclick="resetQuiz()" style="margin-top: 15px; padding: 10px 20px; background: #f39c12; color: white; border: none; border-radius: 6px; cursor: pointer;">Take Quiz Again</button>
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    document.getElementById('quizResult').innerHTML = `
+        <div style="background: #fff3cd; padding: 2rem; border-radius: 15px; border: 2px solid #f39c12; margin-top: 2rem;">
+            <h3 style="color: #856404; margin-bottom: 1rem; text-align: center;">⚠️ Possibly Eligible - Verification Needed</h3>
+            
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <p style="margin-bottom: 0; font-size: 1.1rem;">${message}</p>
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem;">📞 Next Steps</h4>
+                <ol style="margin: 0; padding-left: 1.5rem;">
+                    <li><strong>Call ahead:</strong> Contact your local center to verify eligibility</li>
+                    <li><strong>Be honest:</strong> Disclose your specific situation when calling</li>
+                    <li><strong>Get it in writing:</strong> Ask for email confirmation if approved</li>
+                    <li><strong>Bring all documents:</strong> Even if unsure, bring everything</li>
+                </ol>
+            </div>
+            
+            <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h4 style="color: #155724; margin-bottom: 1rem;">💰 If Approved, You Could Earn:</h4>
+                <p style="margin: 0;"><strong>First Month:</strong> $900-$1,200 with bonuses</p>
+                <p style="margin: 0;"><strong>Monthly After:</strong> $500-$700 regular income</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://bestplasmacenters.com" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; margin-right: 1rem;">
+                    Find Centers to Call
+                </a>
+                <button onclick="resetQuiz()" style="padding: 1rem 2rem; background: #3498db; color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; cursor: pointer;">
+                    Retake Quiz
+                </button>
+            </div>
         </div>
     `;
-    document.getElementById('quiz-result').style.display = 'block';
+    document.getElementById('quizResult').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showEligibleComprehensive() {
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    
+    // Calculate potential earnings based on answers
+    let monthlyEarnings = 600; // base
+    if (quizAnswers[2] === 'bonus10') monthlyEarnings += 60;
+    if (quizAnswers[2] === 'bonus20') monthlyEarnings += 120;
+    
+    document.getElementById('quizResult').innerHTML = `
+        <div style="background: #d5f4e6; padding: 2rem; border-radius: 15px; border: 2px solid #27ae60; margin-top: 2rem;">
+            <h3 style="color: #155724; margin-bottom: 1rem; text-align: center;">🎉 CONGRATULATIONS - You're Eligible to Donate!</h3>
+            
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h4 style="color: #27ae60; margin-bottom: 1rem;">💰 Your Earning Potential</h4>
+                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>First Month:</strong> $900-$1,200 (with new donor bonuses)</p>
+                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>Monthly After:</strong> $${monthlyEarnings}-$${monthlyEarnings + 200}</p>
+                <p style="font-size: 1.2rem; color: #27ae60;"><strong>Yearly Total:</strong> $${(monthlyEarnings * 12).toLocaleString()}-$${((monthlyEarnings + 200) * 12).toLocaleString()}</p>
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem;">📋 Required Documents for First Visit</h4>
+                <ul style="margin: 0; padding-left: 1.5rem;">
+                    <li>Valid Photo ID (driver's license or state ID)</li>
+                    <li>Social Security Card (physical card required)</li>
+                    <li>Proof of Address (utility bill, bank statement, or lease from last 30 days)</li>
+                </ul>
+            </div>
+            
+            <div style="background: #fff3cd; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h4 style="color: #856404; margin-bottom: 1rem;">⚡ Pro Tips to Maximize First Visit Success</h4>
+                <ul style="margin: 0; padding-left: 1.5rem;">
+                    <li><strong>Hydrate:</strong> Drink 64+ oz water starting day before</li>
+                    <li><strong>Eat Protein:</strong> Have 50g+ protein within 4 hours of donation</li>
+                    <li><strong>Sleep Well:</strong> Get 7+ hours sleep night before</li>
+                    <li><strong>Avoid Alcohol:</strong> No alcohol 24 hours before donation</li>
+                    <li><strong>Bring Snacks:</strong> First visit takes 2-4 hours</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://bestplasmacenters.com" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; margin-right: 1rem;">
+                    🏥 Find Your Nearest Center
+                </a>
+                <button onclick="resetQuiz()" style="padding: 1rem 2rem; background: #3498db; color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; cursor: pointer;">
+                    Retake Quiz
+                </button>
+            </div>
+        </div>
+    `;
+    document.getElementById('quizResult').scrollIntoView({ behavior: 'smooth' });
 }
 
 function resetQuiz() {
-    document.getElementById('quiz-result').style.display = 'none';
-    document.getElementById('quiz-result').innerHTML = '';
-    document.querySelectorAll('.quiz-question').forEach(q => q.style.display = 'none');
-    document.getElementById('q1').style.display = 'block';
+    quizAnswers = {};
+    document.getElementById('quizResult').innerHTML = '';
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    document.getElementById('q1').classList.add('active');
 }
 
 // Initialize when page loads

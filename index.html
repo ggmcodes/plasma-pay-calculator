@@ -964,51 +964,129 @@
 
             <!-- Eligibility Quiz -->
             <div id="quiz" class="quiz-section">
-                <h3>🔍 Can I Start Earning from Plasma Donation?</h3>
-                <p style="text-align: center; color: #7f8c8d; margin-bottom: 2rem;">Quick eligibility check - see if you qualify to start earning money from plasma donation</p>
+                <h3>🩸 Complete Plasma Donation Eligibility Check</h3>
+                <p style="text-align: center; color: #7f8c8d; margin-bottom: 2rem;">Take this comprehensive screening to see if you can start earning $500-$1,200/month from plasma donation</p>
+                
+                <div style="background: #e8f5e9; padding: 1rem; border-radius: 10px; margin-bottom: 2rem; text-align: center;">
+                    <span style="color: #155724; font-weight: 600;">⏱️ Time: 2 minutes</span> | 
+                    <span style="color: #155724; font-weight: 600;">📋 Questions: 12</span> | 
+                    <span style="color: #155724; font-weight: 600;">🎯 Accuracy: FDA Standards</span>
+                </div>
                 
                 <div id="q1" class="quiz-question active">
-                    <h4>How old are you?</h4>
+                    <h4>1. What's your age?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="nextQuestion(1, false)">Under 18</button>
+                        <button class="quiz-btn" onclick="showNotEligible('You must be at least 18 years old to donate plasma. Come back when you turn 18!')">Under 18</button>
                         <button class="quiz-btn" onclick="nextQuestion(1, true)">18-65 years old</button>
-                        <button class="quiz-btn" onclick="nextQuestion(1, false)">Over 65</button>
+                        <button class="quiz-btn" onclick="nextQuestion(1, 'maybe')">66-69 years old</button>
+                        <button class="quiz-btn" onclick="showNotEligible('Most centers have an age limit of 69. Some may accept up to 70 with doctor approval.')">70+ years old</button>
                     </div>
                 </div>
 
                 <div id="q2" class="quiz-question">
-                    <h4>How much do you weigh?</h4>
+                    <h4>2. What's your current weight?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="showNotEligible('You must weigh at least 110 lbs to donate plasma.')">Under 110 lbs</button>
-                        <button class="quiz-btn" onclick="nextQuestion(2, true)">110+ lbs</button>
+                        <button class="quiz-btn" onclick="showNotEligible('You must weigh at least 110 lbs (50 kg) to safely donate plasma.')">Under 110 lbs</button>
+                        <button class="quiz-btn" onclick="nextQuestion(2, true)">110-149 lbs</button>
+                        <button class="quiz-btn" onclick="nextQuestion(2, 'bonus10')">150-174 lbs (+10% pay)</button>
+                        <button class="quiz-btn" onclick="nextQuestion(2, 'bonus20')">175+ lbs (+20% pay)</button>
                     </div>
                 </div>
 
                 <div id="q3" class="quiz-question">
-                    <h4>Are you in good general health?</h4>
+                    <h4>3. Do you currently have any of these conditions?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="nextQuestion(3, true)">Yes, I feel healthy</button>
-                        <button class="quiz-btn" onclick="showMaybe('Some health conditions may affect eligibility. Contact your local center to discuss.')">I have some health issues</button>
+                        <button class="quiz-btn" onclick="nextQuestion(3, true)">None of these</button>
+                        <button class="quiz-btn" onclick="showNotEligible('Active infections disqualify donation. Wait until fully recovered.')">Cold, flu, or fever</button>
+                        <button class="quiz-btn" onclick="showMaybe('Controlled diabetes may be acceptable. Check with your local center.')">Diabetes</button>
+                        <button class="quiz-btn" onclick="showNotEligible('Heart conditions typically disqualify donation for safety reasons.')">Heart disease</button>
                     </div>
                 </div>
 
                 <div id="q4" class="quiz-question">
-                    <h4>Have you donated plasma in the last 7 days?</h4>
+                    <h4>4. Have you had any tattoos or piercings in the last 4 months?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="showNotEligible('You must wait at least 48 hours between donations.')">Yes, within 2 days</button>
-                        <button class="quiz-btn" onclick="nextQuestion(4, true)">No, it has been 2+ days</button>
+                        <button class="quiz-btn" onclick="nextQuestion(4, true)">No tattoos/piercings</button>
+                        <button class="quiz-btn" onclick="showMaybe('Professional tattoos/piercings from licensed shops may be OK. Street/home tattoos require 12-month wait.')">Yes, at licensed shop</button>
+                        <button class="quiz-btn" onclick="showNotEligible('Non-professional tattoos/piercings require a 12-month waiting period.')">Yes, non-professional</button>
                     </div>
                 </div>
 
                 <div id="q5" class="quiz-question">
-                    <h4>Do you have valid photo ID and proof of address?</h4>
+                    <h4>5. Are you currently taking any medications?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="showEligible()">Yes, I have both</button>
-                        <button class="quiz-btn" onclick="showMaybe('You will need valid photo ID and proof of address (utility bill, bank statement) to donate.')">No, I need to get these</button>
+                        <button class="quiz-btn" onclick="nextQuestion(5, true)">No medications</button>
+                        <button class="quiz-btn" onclick="nextQuestion(5, true)">Basic OTC meds only</button>
+                        <button class="quiz-btn" onclick="showMaybe('Most prescription meds are OK, but antibiotics require waiting until course is complete.')">Prescription medications</button>
+                        <button class="quiz-btn" onclick="showNotEligible('Blood thinners disqualify donation due to bleeding risk.')">Blood thinners</button>
                     </div>
                 </div>
 
-                
+                <div id="q6" class="quiz-question">
+                    <h4>6. Have you ever had hepatitis, HIV, or used IV drugs?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextQuestion(6, true)">No, never</button>
+                        <button class="quiz-btn" onclick="showNotEligible('These conditions permanently disqualify donation to ensure plasma safety.')">Yes to any</button>
+                    </div>
+                </div>
+
+                <div id="q7" class="quiz-question">
+                    <h4>7. Are you pregnant or have you given birth in the last 6 months?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextQuestion(7, true)">Not applicable/No</button>
+                        <button class="quiz-btn" onclick="showNotEligible('Must wait 6 months after giving birth to donate.')">Currently pregnant</button>
+                        <button class="quiz-btn" onclick="showNotEligible('Must wait 6 months after delivery before donating.')">Gave birth recently</button>
+                    </div>
+                </div>
+
+                <div id="q8" class="quiz-question">
+                    <h4>8. Have you traveled outside the US/Canada in the last 3 years?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextQuestion(8, true)">No international travel</button>
+                        <button class="quiz-btn" onclick="nextQuestion(8, true)">Western Europe/Australia only</button>
+                        <button class="quiz-btn" onclick="showMaybe('Travel to malaria-risk areas may require 1-3 year wait. Check with center.')">Tropical/developing countries</button>
+                    </div>
+                </div>
+
+                <div id="q9" class="quiz-question">
+                    <h4>9. Do you have visible track marks or injection sites?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextQuestion(9, true)">No injection marks</button>
+                        <button class="quiz-btn" onclick="nextQuestion(9, true)">Medical injections only</button>
+                        <button class="quiz-btn" onclick="showNotEligible('Visible injection sites will result in deferral. Centers check arms thoroughly.')">Yes, visible marks</button>
+                    </div>
+                </div>
+
+                <div id="q10" class="quiz-question">
+                    <h4>10. What's your protein level like? (Diet check)</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextQuestion(10, true)">Eat meat/protein regularly</button>
+                        <button class="quiz-btn" onclick="nextQuestion(10, 'warning')">Vegetarian/light eater</button>
+                        <button class="quiz-btn" onclick="showMaybe('Low protein levels cause deferrals. Eat 50g+ protein before donating.')">Very low protein diet</button>
+                    </div>
+                </div>
+
+                <div id="q11" class="quiz-question">
+                    <h4>11. Do you have these required documents?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextQuestion(11, true)">Have all documents</button>
+                        <button class="quiz-btn" onclick="showMaybe('You MUST have: Photo ID, Social Security card, and proof of address to donate.')">Missing some documents</button>
+                    </div>
+                    <div style="font-size: 0.9rem; color: #7f8c8d; margin-top: 1rem;">
+                        Required: Driver's license/ID, Social Security card, utility bill/bank statement
+                    </div>
+                </div>
+
+                <div id="q12" class="quiz-question">
+                    <h4>12. How's your vein accessibility?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="showEligibleComprehensive()">Good/visible veins</button>
+                        <button class="quiz-btn" onclick="showEligibleComprehensive()">Average veins</button>
+                        <button class="quiz-btn" onclick="showMaybe('Poor veins may lead to deferrals. Hydrate well and do arm exercises before donating.')">Hard to find veins</button>
+                    </div>
+                </div>
+
+                <div id="quizResult"></div>
             </div>
 
             <!-- Essential Products for Plasma Donors -->
