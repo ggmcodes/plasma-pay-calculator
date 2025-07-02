@@ -1,0 +1,7 @@
+# Force HTTPS and remove www
+https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+http://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+
+# Ensure canonical URLs for main pages
+/index.html / 301
