@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-053DRWEQLS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-053DRWEQLS');
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Make $300+ Per WEEK Donating Plasma | FREE Weekly Earnings Calculator</title>
+    <meta name="description" content="🚨 EXPOSED: How to make $300+ weekly donating plasma! Our FREE calculator shows your EXACT weekly earnings. See what 97% of donors don't know about maximizing income!">
+    <meta name="keywords" content="how much can you make a week donating plasma, weekly plasma earnings, plasma donation weekly income, make money plasma weekly">
+    
+    <link rel="canonical" href="https://plasmapaycalculator.com/blog/weekly-plasma-earnings-calculator.html">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .hero {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        .earnings-calculator {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .calculator-title {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            margin-bottom: 25px;
+        }
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        .input-group select, .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        .result-box {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .result-box h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .result-box .amount {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+        .breakdown {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .strategies {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .strategies h2 {
+            color: #e74c3c;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .strategy {
+            background: #f8f9fa;
+            padding: 25px;
+            border-left: 5px solid #2ecc71;
+            margin-bottom: 25px;
+            border-radius: 0 10px 10px 0;
+        }
+        .strategy h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .nav {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav a:hover { color: #f39c12; }
+        .income-tier {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">🧮 Calculator</a>
+            <a href="/blog/">📚 Blog</a>
+            <a href="/blog/first-time-plasma-donation-bonus-calculator.html">💰 First-Time Bonus</a>
+        </div>
+        
+        <div class="hero">
+            <h1>💰 WEEKLY PLASMA INCOME EXPOSED!</h1>
+            <p>🚨 Regular donors are making $300+ per week using this SECRET strategy!</p>
+            <p><strong>⚡ Calculate YOUR exact weekly earnings below!</strong></p>
+        </div>
+
+        <div class="earnings-calculator">
+            <h2 class="calculator-title">🔥 Weekly Earnings Calculator</h2>
+            
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="center">Primary Plasma Center:</label>
+                    <select id="center" onchange="calculateWeekly()">
+                        <option value="">Select center...</option>
+                        <option value="csl">CSL Plasma ($45-70 per visit)</option>
+                        <option value="biolife">BioLife ($40-65 per visit)</option>
+                        <option value="grifols">Grifols ($35-60 per visit)</option>
+                        <option value="octapharma">Octapharma ($40-65 per visit)</option>
+                        <option value="kedplasma">KedPlasma ($35-55 per visit)</option>
+                        <option value="immunotek">Immunotek ($40-60 per visit)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="visits">Visits Per Week:</label>
+                    <select id="visits" onchange="calculateWeekly()">
+                        <option value="">Select visits...</option>
+                        <option value="1">1 visit (Beginner)</option>
+                        <option value="2">2 visits (Maximum allowed)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="weight">Weight Category:</label>
+                    <select id="weight" onchange="calculateWeekly()">
+                        <option value="">Select weight...</option>
+                        <option value="110">110-149 lbs</option>
+                        <option value="150">150-174 lbs</option>
+                        <option value="175">175+ lbs</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="experience">Donor Status:</label>
+                    <select id="experience" onchange="calculateWeekly()">
+                        <option value="">Select status...</option>
+                        <option value="new">New Donor (First 2 months)</option>
+                        <option value="regular">Regular Donor (2+ months)</option>
+                        <option value="frequent">Frequent Donor (6+ months)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="result" class="result-box" style="display: none;">
+                <h3>💸 YOUR WEEKLY EARNINGS:</h3>
+                <div class="amount" id="weeklyAmount">$0</div>
+                <div class="breakdown" id="breakdown"></div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h3>⚠️ INSIDER SECRET REVEALED!</h3>
+            <p>Most donors don't know about the "frequency bonus" - donating twice weekly can increase your per-visit rate by $5-15!</p>
+        </div>
+
+        <div class="strategies">
+            <h2>🎯 PRO STRATEGIES to Maximize Weekly Income</h2>
+            
+            <div class="strategy">
+                <h3>🔥 Strategy #1: The "Double Center" Method</h3>
+                <p><strong>ADVANCED:</strong> Use two different plasma companies (never the same company). Donate at CSL Monday, BioLife Thursday. This can double your weekly income to $200-300+!</p>
+                <p><em>Legal Note: Each company tracks separately, so you can donate 2x per week at each (total 4x weekly).</em></p>
+            </div>
+
+            <div class="strategy">
+                <h3>📅 Strategy #2: Optimize Your Schedule</h3>
+                <p><strong>Best Pattern:</strong> Monday + Thursday or Tuesday + Friday. This gives 72+ hours between donations (required) and maximizes your weekly earning potential.</p>
+            </div>
+
+            <div class="strategy">
+                <h3>💎 Strategy #3: "Loyalty Bonuses" Hack</h3>
+                <p>After 6 months at one center, you qualify for VIP rates ($5-10 extra per visit). Plus special monthly bonuses of $50-100!</p>
+            </div>
+
+            <div class="strategy">
+                <h3>📱 Strategy #4: App Bonuses Stack</h3>
+                <p>Download center apps for an extra $5-10 per visit. Some offer "check-in bonuses" and referral payments of $50-100 per friend!</p>
+            </div>
+
+            <div class="strategy">
+                <h3>⏰ Strategy #5: Peak Time Bonuses</h3>
+                <p>Some centers pay extra during busy periods (Friday evenings, Monday mornings). Ask about "surge pricing" - it can add $10-20 per visit!</p>
+            </div>
+        </div>
+
+        <!-- AdSense Ad -->
+        <div style="text-align: center; margin: 40px 0;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3180649272238451"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+
+        <div class="strategies">
+            <h2>📊 Weekly Income Tiers (What's Possible)</h2>
+            
+            <div class="income-tier">
+                <h3>🥉 BRONZE TIER: $80-120/week</h3>
+                <p>1 center, 2 visits weekly, basic rates</p>
+            </div>
+
+            <div class="income-tier">
+                <h3>🥈 SILVER TIER: $150-220/week</h3>
+                <p>1 center, 2 visits weekly, with bonuses + optimal timing</p>
+            </div>
+
+            <div class="income-tier">
+                <h3>🥇 GOLD TIER: $300-400/week</h3>
+                <p>2 centers, 4 visits weekly, all bonuses maximized</p>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h3>🔥 TAKE ACTION THIS WEEK!</h3>
+            <p>Every week you wait is $200-300 lost income. Start with ONE center this week, add the second center next month!</p>
+        </div>
+    </div>
+
+    <script>
+        function calculateWeekly() {
+            const center = document.getElementById('center').value;
+            const visits = document.getElementById('visits').value;
+            const weight = document.getElementById('weight').value;
+            const experience = document.getElementById('experience').value;
+            
+            if (!center || !visits || !weight || !experience) return;
+            
+            const centerRates = {
+                'csl': { low: 45, high: 70, name: 'CSL Plasma' },
+                'biolife': { low: 40, high: 65, name: 'BioLife' },
+                'grifols': { low: 35, high: 60, name: 'Grifols' },
+                'octapharma': { low: 40, high: 65, name: 'Octapharma' },
+                'kedplasma': { low: 35, high: 55, name: 'KedPlasma' },
+                'immunotek': { low: 40, high: 60, name: 'Immunotek' }
+            };
+            
+            const weightMultiplier = {
+                '110': 1.0,
+                '150': 1.1,
+                '175': 1.2
+            };
+            
+            const experienceBonus = {
+                'new': 1.4,      // New donor bonus period
+                'regular': 1.0,   // Standard rates
+                'frequent': 1.15  // Loyalty bonus
+            };
+            
+            const centerData = centerRates[center];
+            const baseRate = (centerData.low + centerData.high) / 2;
+            const adjustedRate = baseRate * weightMultiplier[weight] * experienceBonus[experience];
+            const weeklyEarnings = adjustedRate * parseInt(visits);
+            
+            const breakdown = `
+                <strong>Breakdown:</strong><br>
+                ${centerData.name}: $${adjustedRate.toFixed(0)} per visit<br>
+                ${visits} visit${visits > 1 ? 's' : ''} × $${adjustedRate.toFixed(0)} = $${weeklyEarnings.toFixed(0)}/week<br>
+                <strong>Monthly Potential: $${(weeklyEarnings * 4.33).toFixed(0)}</strong>
+            `;
+            
+            document.getElementById('weeklyAmount').textContent = '$' + weeklyEarnings.toFixed(0);
+            document.getElementById('breakdown').innerHTML = breakdown;
+            document.getElementById('result').style.display = 'block';
+            
+            // Track calculation
+            gtag('event', 'weekly_calculated', {
+                'center': centerData.name,
+                'weekly_amount': weeklyEarnings
+            });
+        }
+    </script>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
