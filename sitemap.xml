@@ -256,6 +256,50 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- New High-Volume Landing Pages -->
+  <url>
+    <loc>https://plasmapaycalculator.com/how-much-can-you-make-week-donating-plasma.html</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://plasmapaycalculator.com/first-time-plasma-donation-bonus.html</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://plasmapaycalculator.com/octapharma-payment-calculator.html</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://plasmapaycalculator.com/csl-plasma-tax-calculator.html</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://plasmapaycalculator.com/make-1000-month-plasma-donation.html</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- New Blog Posts -->
+  <url>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-blood-money-difference.html</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Spanish Pages -->
   <url>
     <loc>https://plasmapaycalculator.com/es/</loc>

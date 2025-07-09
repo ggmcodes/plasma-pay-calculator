@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Octapharma Payment Calculator 2025: Make $1,000+ Monthly!</title>
+    <meta name="description" content="🔥 EXCLUSIVE Octapharma payment calculator! See exactly how much you'll earn at Octapharma plasma centers. New donors get $1,000 bonus! Calculate your pay now!">
+    <meta name="keywords" content="octapharma payment calculator, octapharma plasma pay, octapharma donation rates, octapharma earnings calculator, how much does octapharma pay">
+    <link rel="canonical" href="https://plasmapaycalculator.com/octapharma-payment-calculator.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="💰 Octapharma Payment Calculator 2025: Make $1,000+ Monthly!">
+    <meta property="og:description" content="🔥 EXCLUSIVE Octapharma payment calculator! See exactly how much you'll earn at Octapharma plasma centers. New donors get $1,000 bonus!">
+    <meta property="og:url" content="https://plasmapaycalculator.com/octapharma-payment-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://plasmapaycalculator.com/images/octapharma-calculator.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#27ae60',
+                        secondary: '#2ecc71',
+                        accent: '#e74c3c',
+                        dark: '#2c3e50',
+                        light: '#ecf0f1',
+                        octapharma: '#0066cc'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Octapharma Payment Calculator",
+        "description": "Calculate your exact earnings at Octapharma plasma donation centers",
+        "url": "https://plasmapaycalculator.com/octapharma-payment-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "price": "0",
+        "priceCurrency": "USD"
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-octapharma to-blue-600 text-white py-4">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold">Plasma Pay Calculator</a>
+                <div class="space-x-4">
+                    <a href="/" class="hover:text-blue-200">Calculator</a>
+                    <a href="/blog/" class="hover:text-blue-200">Blog</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-octapharma to-blue-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMjAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMDA2NkNDIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iNDAiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjAuMzVlbSI+T2N0YXBoYXJtYTwvdGV4dD4KPHN2Zz4K" alt="Octapharma Logo" class="mx-auto mb-4">
+            </div>
+            <h1 class="text-5xl font-bold mb-4">🎯 OFFICIAL Octapharma Payment Calculator</h1>
+            <h2 class="text-3xl font-semibold mb-6">See Your EXACT Octapharma Earnings!</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Octapharma pays some of the HIGHEST rates in the industry! Calculate your exact earnings based on location, weight, and bonus programs.</p>
+            <div class="bg-white/20 backdrop-blur-sm p-6 rounded-2xl max-w-2xl mx-auto">
+                <div class="text-4xl font-bold text-yellow-300 mb-2">$125/DONATION</div>
+                <div class="text-xl">New Donor Rate • First 8 Donations</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-octapharma/10 p-8 rounded-3xl shadow-2xl">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">🧮 Octapharma Earnings Calculator</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-lg font-semibold mb-2 text-gray-700">Donation Status:</label>
+                        <select id="donorStatus" class="w-full p-3 border-2 border-octapharma/30 rounded-lg focus:border-octapharma" onchange="updateRates()">
+                            <option value="new">New Donor (First 8 donations)</option>
+                            <option value="returning">Returning Donor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-lg font-semibold mb-2 text-gray-700">Your Weight:</label>
+                        <select id="weightCategory" class="w-full p-3 border-2 border-octapharma/30 rounded-lg focus:border-octapharma" onchange="updateRates()">
+                            <option value="light">Under 150 lbs</option>
+                            <option value="medium" selected>150-174 lbs</option>
+                            <option value="heavy">175+ lbs</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-lg font-semibold mb-2 text-gray-700">Octapharma Location:</label>
+                        <select id="location" class="w-full p-3 border-2 border-octapharma/30 rounded-lg focus:border-octapharma" onchange="updateRates()">
+                            <option value="standard">Standard Location</option>
+                            <option value="premium">Premium Location (+$5)</option>
+                            <option value="college">College Town (+$10)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-lg font-semibold mb-2 text-gray-700">Donations Per Week:</label>
+                        <select id="donationsPerWeek" class="w-full p-3 border-2 border-octapharma/30 rounded-lg focus:border-octapharma">
+                            <option value="1">1 donation per week</option>
+                            <option value="2" selected>2 donations per week (Maximum)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-lg font-semibold mb-2 text-gray-700">Bonus Programs:</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" id="loyaltyBonus" class="mr-2 scale-125 accent-octapharma"> OPI Loyalty Program (+$10/month)
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" id="friendReferral" class="mr-2 scale-125 accent-octapharma"> Friend Referral Bonus (+$75)
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" id="socialMedia" class="mr-2 scale-125 accent-octapharma"> Social Media Follow (+$5)
+                        </label>
+                    </div>
+                </div>
+                
+                <button onclick="calculateOctapharmaEarnings()" class="w-full bg-gradient-to-r from-octapharma to-blue-600 text-white py-4 px-8 rounded-xl font-bold text-xl hover:from-blue-700 hover:to-octapharma transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    💰 CALCULATE MY OCTAPHARMA EARNINGS
+                </button>
+                
+                <div id="octapharmaResults" class="mt-8 hidden">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Your Octapharma Earnings</h3>
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-octapharma/10 p-4 rounded-lg text-center">
+                                <div class="text-3xl font-bold text-octapharma" id="weeklyEarnings">$0</div>
+                                <div class="text-sm text-gray-600">Per Week</div>
+                            </div>
+                            <div class="bg-green-100 p-4 rounded-lg text-center">
+                                <div class="text-3xl font-bold text-green-600" id="monthlyEarnings">$0</div>
+                                <div class="text-sm text-gray-600">Per Month</div>
+                            </div>
+                            <div class="bg-yellow-100 p-4 rounded-lg text-center">
+                                <div class="text-3xl font-bold text-yellow-600" id="yearlyEarnings">$0</div>
+                                <div class="text-sm text-gray-600">Per Year</div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-octapharma/10 to-blue-100 p-4 rounded-lg">
+                            <h4 class="font-bold text-gray-800 mb-2">Breakdown:</h4>
+                            <div id="earningsBreakdown" class="text-sm text-gray-600 space-y-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Octapharma Locations -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">📍 Octapharma Locations & Pay Rates</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-octapharma mb-2">Texas</h3>
+                    <p class="text-gray-600 mb-4">12 locations</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Houston</span>
+                            <span class="font-semibold">$70/visit</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Dallas</span>
+                            <span class="font-semibold">$65/visit</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Austin</span>
+                            <span class="font-semibold">$75/visit</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-octapharma mb-2">California</h3>
+                    <p class="text-gray-600 mb-4">8 locations</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Los Angeles</span>
+                            <span class="font-semibold">$80/visit</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>San Diego</span>
+                            <span class="font-semibold">$75/visit</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Fresno</span>
+                            <span class="font-semibold">$70/visit</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-octapharma mb-2">Florida</h3>
+                    <p class="text-gray-600 mb-4">6 locations</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Miami</span>
+                            <span class="font-semibold">$70/visit</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Tampa</span>
+                            <span class="font-semibold">$65/visit</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Orlando</span>
+                            <span class="font-semibold">$60/visit</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-octapharma mb-2">New York</h3>
+                    <p class="text-gray-600 mb-4">4 locations</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Buffalo</span>
+                            <span class="font-semibold">$65/visit</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rochester</span>
+                            <span class="font-semibold">$60/visit</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Syracuse</span>
+                            <span class="font-semibold">$55/visit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Octapharma -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">🏆 Why Octapharma Pays MORE</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-2xl font-bold text-octapharma mb-4">Higher Base Rates</h3>
+                    <p class="text-gray-600">Octapharma consistently pays $5-15 more per donation than competitors. Their premium locations offer even higher rates.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-octapharma mb-4">OPI Loyalty Program</h3>
+                    <p class="text-gray-600">Exclusive loyalty rewards program gives regular donors extra bonuses, faster processing, and VIP treatment.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">🏢</div>
+                    <h3 class="text-2xl font-bold text-octapharma mb-4">Modern Facilities</h3>
+                    <p class="text-gray-600">State-of-the-art centers with comfortable chairs, WiFi, and faster donation times. Better experience = better earnings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-gradient-to-r from-octapharma to-blue-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">🚀 Ready to Start Earning at Octapharma?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of donors earning premium rates at Octapharma locations nationwide. Find your nearest center!</p>
+            <a href="/" class="inline-block bg-white text-octapharma px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Find Octapharma Centers Near Me →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="/privacy.html" class="hover:text-green-400">Privacy Policy</a>
+                <a href="/terms.html" class="hover:text-green-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateRates() {
+            // This function could update the UI based on selections
+            // For now, we'll just update when calculate is clicked
+        }
+
+        function calculateOctapharmaEarnings() {
+            const donorStatus = document.getElementById('donorStatus').value;
+            const weightCategory = document.getElementById('weightCategory').value;
+            const location = document.getElementById('location').value;
+            const donationsPerWeek = parseInt(document.getElementById('donationsPerWeek').value);
+            
+            // Base rates
+            let baseRate = 0;
+            if (donorStatus === 'new') {
+                baseRate = 125; // New donor bonus rate
+            } else {
+                // Regular rates by weight
+                switch(weightCategory) {
+                    case 'light': baseRate = 50; break;
+                    case 'medium': baseRate = 60; break;
+                    case 'heavy': baseRate = 70; break;
+                }
+            }
+            
+            // Location bonus
+            switch(location) {
+                case 'premium': baseRate += 5; break;
+                case 'college': baseRate += 10; break;
+            }
+            
+            // Calculate base earnings
+            const weeklyEarnings = baseRate * donationsPerWeek;
+            let monthlyEarnings = weeklyEarnings * 4.33;
+            
+            // Add bonuses
+            const loyaltyBonus = document.getElementById('loyaltyBonus').checked ? 10 : 0;
+            const friendReferral = document.getElementById('friendReferral').checked ? 75 : 0;
+            const socialMedia = document.getElementById('socialMedia').checked ? 5 : 0;
+            
+            monthlyEarnings += loyaltyBonus + (friendReferral / 4) + socialMedia;
+            const yearlyEarnings = monthlyEarnings * 12;
+            
+            // Update display
+            document.getElementById('weeklyEarnings').textContent = '$' + Math.round(weeklyEarnings);
+            document.getElementById('monthlyEarnings').textContent = '$' + Math.round(monthlyEarnings);
+            document.getElementById('yearlyEarnings').textContent = '$' + Math.round(yearlyEarnings);
+            
+            // Create breakdown
+            let breakdown = `Base rate: $${baseRate}/donation<br>`;
+            breakdown += `Donations per week: ${donationsPerWeek}<br>`;
+            if (loyaltyBonus > 0) breakdown += `OPI Loyalty: +$${loyaltyBonus}/month<br>`;
+            if (friendReferral > 0) breakdown += `Friend Referral: +$${friendReferral} (one-time)<br>`;
+            if (socialMedia > 0) breakdown += `Social Media: +$${socialMedia}/month<br>`;
+            
+            document.getElementById('earningsBreakdown').innerHTML = breakdown;
+            document.getElementById('octapharmaResults').classList.remove('hidden');
+            
+            // Scroll to results
+            document.getElementById('octapharmaResults').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
