@@ -4,253 +4,253 @@
   
   <!-- Main Pages -->
   <url>
-    <loc>https://plasmapay.org/</loc>
+    <loc>https://plasmapaycalculator.com/</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/states.html</loc>
+    <loc>https://plasmapaycalculator.com/states.html</loc>
     <lastmod>2025-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/about.html</loc>
+    <loc>https://plasmapaycalculator.com/about.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/about.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/about.html" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/faq.html</loc>
+    <loc>https://plasmapaycalculator.com/faq.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/faq.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/faq.html" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/contact.html</loc>
+    <loc>https://plasmapaycalculator.com/contact.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/contact.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/contact.html" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/privacy.html</loc>
+    <loc>https://plasmapaycalculator.com/privacy.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/privacy.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/privacy.html" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/terms.html</loc>
+    <loc>https://plasmapaycalculator.com/terms.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/terms.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/terms.html" />
   </url>
 
   <!-- Blog Pages -->
   <url>
-    <loc>https://plasmapay.org/blog/</loc>
+    <loc>https://plasmapaycalculator.com/blog/</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/blog/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/blog/" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/maximize-plasma-earnings.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/maximize-plasma-earnings.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/first-time-plasma-donation.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/first-time-plasma-donation.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/ultimate-plasma-donation-guide.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/ultimate-plasma-donation-guide.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/can-you-make-1000-month-donating-plasma.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/can-you-make-1000-month-donating-plasma.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-taxes.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-taxes.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-requirements.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-requirements.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-health-tips.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-health-tips.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-schedule.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-schedule.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-center-comparison.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-center-comparison.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/how-to-increase-vein-size-plasma-donation.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/how-to-increase-vein-size-plasma-donation.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/do-plasma-centers-report-social-security.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/do-plasma-centers-report-social-security.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/does-irs-track-plasma-donations.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/does-irs-track-plasma-donations.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/do-you-get-1099-plasma-donation.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/do-you-get-1099-plasma-donation.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/first-time-plasma-donation-bonus-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/first-time-plasma-donation-bonus-calculator.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/weekly-plasma-earnings-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/weekly-plasma-earnings-calculator.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/csl-plasma-tax-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/csl-plasma-tax-calculator.html</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-side-hustle-college-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-side-hustle-college-calculator.html</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-vs-blood-donation-money-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-vs-blood-donation-money-calculator.html</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/octapharma-vs-competitors-payment-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/octapharma-vs-competitors-payment-calculator.html</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-schedule-money-maximizer.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-schedule-money-maximizer.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-scam-detector-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-scam-detector-calculator.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-health-benefits-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-health-benefits-calculator.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-eligibility-quiz-viral.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-eligibility-quiz-viral.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/ab-plasma-donation-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/ab-plasma-donation-calculator.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/ab-plasma-secret-income-revealed.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/ab-plasma-secret-income-revealed.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/highest-paying-plasma-centers-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/highest-paying-plasma-centers-2025.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -258,70 +258,70 @@
 
   <!-- New High-Volume Landing Pages -->
   <url>
-    <loc>https://plasmapay.org/how-much-can-you-make-week-donating-plasma.html</loc>
+    <loc>https://plasmapaycalculator.com/how-much-can-you-make-week-donating-plasma.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/first-time-plasma-donation-bonus.html</loc>
+    <loc>https://plasmapaycalculator.com/first-time-plasma-donation-bonus.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/octapharma-payment-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/octapharma-payment-calculator.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/csl-plasma-tax-calculator.html</loc>
+    <loc>https://plasmapaycalculator.com/csl-plasma-tax-calculator.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/make-1000-month-plasma-donation.html</loc>
+    <loc>https://plasmapaycalculator.com/make-1000-month-plasma-donation.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/make-money-online-plasma-donation.html</loc>
+    <loc>https://plasmapaycalculator.com/make-money-online-plasma-donation.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/best-side-hustle-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/best-side-hustle-2025.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/how-much-money-can-you-make-donating-plasma.html</loc>
+    <loc>https://plasmapaycalculator.com/how-much-money-can-you-make-donating-plasma.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/plasma-donation-pay-rates-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/plasma-donation-pay-rates-2025.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/plasma-donation-requirements-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/plasma-donation-requirements-2025.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -329,7 +329,7 @@
 
   <!-- New Blog Posts -->
   <url>
-    <loc>https://plasmapay.org/blog/plasma-donation-blood-money-difference.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-donation-blood-money-difference.html</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -337,92 +337,92 @@
 
   <!-- Spanish Pages -->
   <url>
-    <loc>https://plasmapay.org/es/</loc>
+    <loc>https://plasmapaycalculator.com/es/</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/about.html</loc>
+    <loc>https://plasmapaycalculator.com/es/about.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/about.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/about.html" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/faq.html</loc>
+    <loc>https://plasmapaycalculator.com/es/faq.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/faq.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/faq.html" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/contact.html</loc>
+    <loc>https://plasmapaycalculator.com/es/contact.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/contact.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/contact.html" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/privacy.html</loc>
+    <loc>https://plasmapaycalculator.com/es/privacy.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/privacy.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/privacy.html" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/terms.html</loc>
+    <loc>https://plasmapaycalculator.com/es/terms.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/terms.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/terms.html" />
   </url>
 
   <!-- Spanish Blog Pages -->
   <url>
-    <loc>https://plasmapay.org/es/blog/</loc>
+    <loc>https://plasmapaycalculator.com/es/blog/</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapay.org/es/blog/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapay.org/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/blog/" />
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/blog/guia-completa-donacion-plasma.html</loc>
+    <loc>https://plasmapaycalculator.com/es/blog/guia-completa-donacion-plasma.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/blog/ganar-1000-donando-plasma.html</loc>
+    <loc>https://plasmapaycalculator.com/es/blog/ganar-1000-donando-plasma.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/blog/requisitos-donacion-plasma.html</loc>
+    <loc>https://plasmapaycalculator.com/es/blog/requisitos-donacion-plasma.html</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/es/blog/cuanto-pagan-por-donar-plasma.html</loc>
+    <loc>https://plasmapaycalculator.com/es/blog/cuanto-pagan-por-donar-plasma.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -430,28 +430,28 @@
   
   <!-- JOB LOSS & EMERGENCY INCOME CONTENT -->
   <url>
-    <loc>https://plasmapay.org/blog/lost-job-plasma-donation-survival-guide.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/lost-job-plasma-donation-survival-guide.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/emergency-money-plasma-donation-broke.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/emergency-money-plasma-donation-broke.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/unemployed-plasma-donation-income-bridge.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/unemployed-plasma-donation-income-bridge.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/laid-off-plasma-donation-emergency-income.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/laid-off-plasma-donation-emergency-income.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -459,21 +459,21 @@
   
   <!-- SIDE HUSTLE & EASY MONEY CONTENT -->
   <url>
-    <loc>https://plasmapay.org/blog/best-side-hustles-unemployed-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/best-side-hustles-unemployed-2025.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/easy-money-no-experience-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/easy-money-no-experience-2025.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/quick-money-today.html</loc>
+    <loc>https://plasmapaycalculator.com/quick-money-today.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -481,21 +481,21 @@
   
   <!-- DESPERATE MONEY CONTENT ---->
   <url>
-    <loc>https://plasmapay.org/blog/broke-need-money-desperately-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/broke-need-money-desperately-2025.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/cant-pay-bills-plasma-salvation-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/cant-pay-bills-plasma-salvation-2025.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/need-money-now-emergency-plasma-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/need-money-now-emergency-plasma-2025.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -503,14 +503,14 @@
   
   <!-- VIRAL COMPARISON CONTENT ---->
   <url>
-    <loc>https://plasmapay.org/blog/15-ways-make-money-2025-viral-ranking.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/15-ways-make-money-2025-viral-ranking.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/plasma-vs-everything-2025-shocking-comparison.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/plasma-vs-everything-2025-shocking-comparison.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -518,14 +518,14 @@
   
   <!-- CLICKBAIT CONTENT THAT DELIVERS ---->
   <url>
-    <loc>https://plasmapay.org/blog/one-weird-trick-400-month-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/one-weird-trick-400-month-2025.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://plasmapay.org/blog/shocking-discovery-33-hour-secret-2025.html</loc>
+    <loc>https://plasmapaycalculator.com/blog/shocking-discovery-33-hour-secret-2025.html</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
