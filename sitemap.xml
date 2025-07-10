@@ -515,5 +515,20 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- CLICKBAIT CONTENT THAT DELIVERS ---->
+  <url>
+    <loc>https://plasmapaycalculator.com/blog/one-weird-trick-400-month-2025.html</loc>
+    <lastmod>2025-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://plasmapaycalculator.com/blog/shocking-discovery-33-hour-secret-2025.html</loc>
+    <lastmod>2025-07-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
 </urlset>
