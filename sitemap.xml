@@ -500,5 +500,20 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- VIRAL COMPARISON CONTENT ---->
+  <url>
+    <loc>https://plasmapaycalculator.com/blog/15-ways-make-money-2025-viral-ranking.html</loc>
+    <lastmod>2025-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://plasmapaycalculator.com/blog/plasma-vs-everything-2025-shocking-comparison.html</loc>
+    <lastmod>2025-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
 </urlset>
