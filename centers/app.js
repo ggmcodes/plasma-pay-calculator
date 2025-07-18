@@ -1,4 +1,4 @@
-// Plasma Pay Calculator - Centers Directory Application
+// BestPlasmaCenters Frontend Application
 class PlasmaApp {
     constructor() {
         this.centers = [];
@@ -174,8 +174,8 @@ class PlasmaApp {
         
         // Try to load full JSON database first
         try {
-            console.log('📦 Fetching centers.json...');
-            const response = await fetch('./centers.json');
+            console.log('📦 Fetching /data/centers.json...');
+            const response = await fetch('/data/centers.json');
             console.log('📦 Response status:', response.status, response.statusText);
             
             if (response.ok) {
@@ -3092,17 +3092,13 @@ class PlasmaApp {
 
     showError(message) {
         const container = document.getElementById('centers-container');
-        if (container) {
-            container.innerHTML = `
-                <div class="error-message">
-                    <h3>Oops! Something went wrong</h3>
-                    <p>${message}</p>
-                    <button onclick="window.plasmaApp.loadInitialCenters()" class="retry-btn">Try Again</button>
-                </div>
-            `;
-        } else {
-            console.error('Centers container not found:', message);
-        }
+        container.innerHTML = `
+            <div class="error-message">
+                <h3>Oops! Something went wrong</h3>
+                <p>${message}</p>
+                <button onclick="location.reload()" class="retry-btn">Try Again</button>
+            </div>
+        `;
     }
 
     setupZipAutocomplete() {
@@ -3380,20 +3376,10 @@ class PlasmaApp {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 DOM loaded, initializing PlasmaApp...');
     try {
-        // Check if required elements exist
-        const requiredElements = ['location-search', 'search-btn', 'geolocation-btn', 'centers-container'];
-        const missingElements = requiredElements.filter(id => !document.getElementById(id));
-        
-        if (missingElements.length > 0) {
-            console.error('❌ Missing required elements:', missingElements);
-            return;
-        }
-        
         window.plasmaApp = new PlasmaApp();
         console.log('✅ PlasmaApp initialized successfully');
     } catch (error) {
         console.error('❌ PlasmaApp initialization failed:', error);
-        // Don't reload, just log the error
     }
 });
 
