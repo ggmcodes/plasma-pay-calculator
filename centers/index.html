@@ -245,13 +245,46 @@
         </aside>
 
         <main class="results-section">
-
-        
-
-        
-            <!-- Combined Filters Dropdown -->
-            <!-- PERFORMANCE OPTIMIZATION: Removed unnecessary nested div wrapper -->
-            <div class="filters-dropdown" id="filters-dropdown" style="display: none;">
+            <!-- Static Centers Listing -->
+            <div class="centers-grid">
+                <h2>🏥 Find Plasma Centers Near You</h2>
+                <p>Search our database of 2,500+ plasma centers nationwide. Find locations, rates, and contact information.</p>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Enter your city or ZIP code" id="location-search">
+                    <button onclick="alert('Search functionality temporarily disabled. Please check back soon!')">🔍 Search</button>
+                </div>
+                
+                <div class="featured-centers">
+                    <h3>Featured Centers</h3>
+                    <div class="center-card">
+                        <h4>CSL Plasma</h4>
+                        <p>📍 Multiple locations nationwide</p>
+                        <p>💰 $50-$100 per donation</p>
+                        <p>🎁 New donor bonus: Up to $1,000</p>
+                        <a href="https://www.cslplasma.com" target="_blank">Visit Website</a>
+                    </div>
+                    
+                    <div class="center-card">
+                        <h4>BioLife Plasma</h4>
+                        <p>📍 Multiple locations nationwide</p>
+                        <p>💰 $45-$90 per donation</p>
+                        <p>🎁 New donor bonus: Up to $900</p>
+                        <a href="https://www.biolifeplasma.com" target="_blank">Visit Website</a>
+                    </div>
+                    
+                    <div class="center-card">
+                        <h4>Grifols</h4>
+                        <p>📍 Multiple locations nationwide</p>
+                        <p>💰 $40-$85 per donation</p>
+                        <p>🎁 New donor bonus: Up to $800</p>
+                        <a href="https://www.grifolsplasma.com" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Temporarily hide complex filters -->
+            <div class="filters-dropdown" id="filters-dropdown" style="display: none !important;">
                 <div class="filters-header">
                     <h3>Filters & Sort</h3>
                     <button class="clear-filters-btn" id="clear-filters">✕</button>
@@ -1590,7 +1623,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script defer src="app.js"></script>
+    <!-- <script defer src="app.js"></script> -->
     
     <!-- PERFORMANCE OPTIMIZATION: Minified inline JavaScript for critical functionality -->
     <script>
