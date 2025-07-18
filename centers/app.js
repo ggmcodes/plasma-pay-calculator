@@ -174,8 +174,8 @@ class PlasmaApp {
         
         // Try to load full JSON database first
         try {
-            console.log('📦 Fetching /data/centers.json...');
-            const response = await fetch('/data/centers.json');
+            console.log('📦 Fetching centers.json...');
+            const response = await fetch('./centers.json');
             console.log('📦 Response status:', response.status, response.statusText);
             
             if (response.ok) {
