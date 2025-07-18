@@ -245,14 +245,126 @@
         </aside>
 
         <main class="results-section">
-            <!-- Results will be populated by JavaScript -->
-            <div id="centers-container"></div>
-            
-            <!-- Load More Button Container -->
-            <div id="load-more-container" style="text-align: center; margin: 2rem 0;">
-                <button id="load-more-btn" style="display: none; padding: 1rem 2rem; background: #FFB81C; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
-                    Load More Centers
-                </button>
+            <!-- Static Centers Directory -->
+            <div id="centers-container" style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: #FFB81C; margin-bottom: 1rem; font-size: 2.5rem;">🏥 Plasma Centers Directory</h2>
+                    <p style="color: #666; font-size: 1.2rem;">Find plasma donation centers nationwide. Search our database of 2,500+ locations.</p>
+                </div>
+                
+                <!-- Search Notice -->
+                <div style="background: #e8f4f8; border: 2px solid #3498db; border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; text-align: center;">
+                    <h3 style="color: #3498db; margin-bottom: 0.5rem;">🔍 Search Functionality</h3>
+                    <p style="color: #2c3e50; margin: 0;">Interactive search is currently being optimized. Use the direct links below to visit official center websites.</p>
+                </div>
+                
+                <!-- Major Center Cards -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    
+                    <!-- CSL Plasma -->
+                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-left: 4px solid #FFB81C;">
+                        <h3 style="color: #003262; margin-bottom: 1rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                            🏥 CSL Plasma
+                        </h3>
+                        <div style="margin-bottom: 1rem;">
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>📍 Locations:</strong> 300+ centers nationwide</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>💰 Pay Rate:</strong> $50-$100 per donation</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>🎁 New Donor Bonus:</strong> Up to $1,000 first month</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>⭐ Rating:</strong> 4.2/5 stars</p>
+                        </div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://www.cslplasma.com/find-a-center" target="_blank" style="background: #FFB81C; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">Find CSL Centers</a>
+                            <a href="/calculators/california/" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">📊 Calculator</a>
+                        </div>
+                    </div>
+                    
+                    <!-- BioLife Plasma -->
+                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-left: 4px solid #FFB81C;">
+                        <h3 style="color: #003262; margin-bottom: 1rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                            🏥 BioLife Plasma
+                        </h3>
+                        <div style="margin-bottom: 1rem;">
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>📍 Locations:</strong> 200+ centers nationwide</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>💰 Pay Rate:</strong> $45-$90 per donation</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>🎁 New Donor Bonus:</strong> Up to $900 first month</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>⭐ Rating:</strong> 4.1/5 stars</p>
+                        </div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://www.biolifeplasma.com/center-locator" target="_blank" style="background: #FFB81C; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">Find BioLife Centers</a>
+                            <a href="/calculators/texas/" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">📊 Calculator</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Grifols -->
+                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-left: 4px solid #FFB81C;">
+                        <h3 style="color: #003262; margin-bottom: 1rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                            🏥 Grifols Plasma
+                        </h3>
+                        <div style="margin-bottom: 1rem;">
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>📍 Locations:</strong> 150+ centers nationwide</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>💰 Pay Rate:</strong> $40-$85 per donation</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>🎁 New Donor Bonus:</strong> Up to $800 first month</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>⭐ Rating:</strong> 4.0/5 stars</p>
+                        </div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://www.grifolsplasma.com/en/plasma-donation-centers" target="_blank" style="background: #FFB81C; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">Find Grifols Centers</a>
+                            <a href="/calculators/florida/" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">📊 Calculator</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Octapharma -->
+                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-left: 4px solid #FFB81C;">
+                        <h3 style="color: #003262; margin-bottom: 1rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                            🏥 Octapharma Plasma
+                        </h3>
+                        <div style="margin-bottom: 1rem;">
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>📍 Locations:</strong> 100+ centers nationwide</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>💰 Pay Rate:</strong> $50-$95 per donation</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>🎁 New Donor Bonus:</strong> Up to $1,200 first month</p>
+                            <p style="margin: 0.5rem 0; color: #666;"><strong>⭐ Rating:</strong> 4.3/5 stars</p>
+                        </div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://www.octapharmadonor.com/donor/locations" target="_blank" style="background: #FFB81C; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">Find Octapharma Centers</a>
+                            <a href="/calculators/new-york/" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">📊 Calculator</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- State-by-State Section -->
+                <div style="background: #f8f9fa; border-radius: 12px; padding: 2rem; margin-bottom: 3rem;">
+                    <h3 style="color: #003262; margin-bottom: 1.5rem; font-size: 2rem; text-align: center;">📍 Find Centers by State</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <a href="/calculators/california/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🌴 California</a>
+                        <a href="/calculators/texas/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🤠 Texas</a>
+                        <a href="/calculators/florida/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🏖️ Florida</a>
+                        <a href="/calculators/new-york/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🗽 New York</a>
+                        <a href="/calculators/illinois/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🏙️ Illinois</a>
+                        <a href="/calculators/ohio/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🌽 Ohio</a>
+                        <a href="/states.html" style="display: block; background: #FFB81C; padding: 1rem; border-radius: 8px; text-decoration: none; color: white; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 All 50 States</a>
+                    </div>
+                </div>
+                
+                <!-- How to Find Centers -->
+                <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h3 style="color: #003262; margin-bottom: 1.5rem; font-size: 2rem; text-align: center;">🔍 How to Find the Best Plasma Centers</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                            <h4 style="color: #FFB81C; margin-bottom: 0.5rem;">Compare Pay Rates</h4>
+                            <p style="color: #666; margin: 0;">Use our calculators to compare earnings between different centers and locations.</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
+                            <h4 style="color: #FFB81C; margin-bottom: 0.5rem;">Check Distance</h4>
+                            <p style="color: #666; margin: 0;">Find centers within a reasonable distance from your home or work.</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">⭐</div>
+                            <h4 style="color: #FFB81C; margin-bottom: 0.5rem;">Read Reviews</h4>
+                            <p style="color: #666; margin: 0;">Check ratings and reviews from other donors to find the best experience.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- Combined Filters Dropdown -->
@@ -1595,7 +1707,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script defer src="app.js"></script>
+    <!-- <script defer src="app.js"></script> -->
     
     <!-- PERFORMANCE OPTIMIZATION: Minified inline JavaScript for critical functionality -->
     <script>
