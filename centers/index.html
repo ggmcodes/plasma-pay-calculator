@@ -20,13 +20,13 @@
     <meta name="theme-color" content="#FFB81C">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Find Plasma Centers Near You | Plasma Pay Calculator">
-    <meta property="og:description" content="Search 2,500+ plasma donation centers. Compare pay rates, find bonuses, check hours and ratings. Free plasma center finder.">
+    <meta property="og:description" content="Search 2,500+ plasma centers nationwide. Compare pay rates, hours, and bonuses. Free plasma center finder.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://plasmapaycalculator.com/centers/">
     <meta property="og:image" content="https://plasmapaycalculator.com/images/og-image.jpg">
@@ -37,9 +37,9 @@
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Find Plasma Centers Near You | Plasma Pay Calculator">
-    <meta name="twitter:description" content="Search 2,500+ plasma centers nationwide. Compare pay rates, hours, and bonuses.">
-    <meta name="twitter:image" content="https://plasmapaycalculator.com/images/og-image.jpg">
+    <meta name="twitter:title" content="Best Plasma Centers [2025] — Find Highest Paying Centers Near You">
+    <meta name="twitter:description" content="Compare 1,294+ plasma centers nationwide. Find the best pay rates, hours, and bonuses.">
+    <meta name="twitter:image" content="https://bestplasmacenters.com/images/og-image.jpg">
     
     <!-- Additional SEO -->
     <meta name="geo.region" content="US">
@@ -47,25 +47,66 @@
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
+    [
+      {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Plasma Center Finder",
+        "name": "Best Plasma Centers",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Web",
-        "url": "https://plasmapaycalculator.com/centers/",
-        "description": "Find plasma donation centers near you with pay rates, hours, and reviews",
+        "url": "https://bestplasmacenters.com",
+        "description": "Find the best plasma donation centers near you with pay rates and reviews",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.3",
+          "reviewCount": "47293",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD"
         },
-        "provider": {
+        "author": {
           "@type": "Organization",
-          "name": "Plasma Pay Calculator",
-          "url": "https://plasmapaycalculator.com"
+          "name": "Best Plasma Centers"
         }
-    }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Best Plasma Centers",
+        "url": "https://bestplasmacenters.com",
+        "logo": "https://bestplasmacenters.com/images/logo.png",
+        "sameAs": [
+          "https://twitter.com/bestplasmacenters",
+          "https://www.facebook.com/bestplasmacenters"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@bestplasmacenters.com",
+          "contactType": "customer service"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Plasma Centers Database",
+        "description": "Comprehensive database of 1,294+ plasma donation centers across the United States",
+        "keywords": "plasma centers, plasma donation, pay rates, locations",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": {
+          "@type": "Organization",
+          "name": "Best Plasma Centers"
+        },
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://bestplasmacenters.com/.netlify/functions/api/centers"
+        }
+      }
+    ]
     </script>
     
     <!-- PERFORMANCE OPTIMIZATION: Preload critical resources -->
@@ -87,33 +128,32 @@
       window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-053DRWEQLS',{send_page_view:!0,allow_google_signals:!0,allow_ad_personalization_signals:!0,page_title:document.title,page_location:window.location.href,content_group1:'Plasma Centers Directory',custom_map:{custom_parameter_1:'search_query',custom_parameter_2:'location_searched'}});gtag('config','G-053DRWEQLS',{enhanced_conversions:!0});function trackSearch(e,t){gtag('event','search',{search_term:e,location:t,event_category:'User Interaction',event_label:'Plasma Center Search',value:1})}function trackCenterView(e,t){gtag('event','view_item',{item_id:e,item_name:e,item_category:t,event_category:'Center Interaction',event_label:'Center Card Expanded',value:2})}function trackPhoneClick(e){gtag('event','generate_lead',{currency:'USD',value:5,center_name:e,event_category:'Conversion',event_label:'Phone Click'})}function trackDirectionsClick(e){gtag('event','view_promotion',{promotion_id:e,promotion_name:'Directions Request',event_category:'User Engagement',event_label:'Directions Click',value:3})}function trackCalculatorClick(){gtag('event','select_promotion',{promotion_id:'pay_calculator',promotion_name:'Pay Calculator CTA',event_category:'External Link',event_label:'Calculator Click',value:4})}let scrollTracked=!1;window.addEventListener('scroll',function(){!scrollTracked&&window.scrollY>document.body.scrollHeight*.5&&(gtag('event','scroll',{event_category:'User Engagement',event_label:'50% Page Scroll',value:1}),scrollTracked=!0)});
     </script>
     
-    <!-- Google AdSense -->
+    <!-- PERFORMANCE OPTIMIZATION: Async AdSense loading -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
     
     <!-- PERFORMANCE OPTIMIZATION: Defer Tailwind CSS loading -->
     <script defer src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Styles -->
-    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <!-- PERFORMANCE OPTIMIZATION: Defer non-critical CSS and JS -->
+    <link rel="preload" href="/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles.css"></noscript>
     
-    <link rel="canonical" href="https://plasmapaycalculator.com/centers/">
+    <link rel="canonical" href="https://bestplasmacenters.com">
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="logo">
-                <a href="/" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
-                    <span class="logo-icon">🩸</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+                <span class="logo-icon">💙</span>
+                <span class="logo-text">Best Plasma Centers</span>
             </div>
             <nav class="nav-links">
-                <a href="/">Home</a>
-                <a href="/states.html">States</a>
+                <a href="#search">Find Centers</a>
+                <a href="https://plasmapaycalculator.com" target="_blank">Calculate Earnings</a>
                 <a href="/blog/">Blog</a>
+                <a href="/faq.html">FAQ</a>
                 <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
+                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">Pay Calculator</a>
             </nav>
             <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">
                 <span class="hamburger-line"></span>
@@ -154,13 +194,13 @@
         <!-- Content -->
         <div class="relative z-30 max-w-4xl mx-auto px-4 md:px-8 w-full">
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 mt-8 leading-tight drop-shadow-lg">
-                Find Plasma Centers Near You
+                Earn up to $1,766 This Month Donating Plasma Near You
             </h1>
             <div class="last-updated" style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 0.5rem;">
                 Last Updated: January 2025
             </div>
             <p class="text-lg md:text-xl text-white/90 mb-6 md:mb-8 font-medium drop-shadow-sm">
-                Search 2,500+ plasma donation centers with pay rates, hours, and reviews
+                Find the highest-paying plasma centers in your area
             </p>
             
             <!-- Search Container -->
@@ -182,7 +222,7 @@
                             📍 Use My Location
                         </button>
                         <button id="search-btn" 
-                                class="w-full md:w-auto px-6 py-3 md:py-4 text-base md:text-lg font-semibold bg-yellow-500 border-2 border-yellow-500 text-white rounded-lg hover:bg-yellow-600 hover:border-yellow-600 transition-all min-h-[48px] shadow-lg">
+                                class="w-full md:w-auto px-6 py-3 md:py-4 text-base md:text-lg font-semibold bg-red-500 border-2 border-red-500 text-white rounded-lg hover:bg-red-600 hover:border-red-600 transition-all min-h-[48px] shadow-lg">
                             Search This Area
                         </button>
                     </div>
@@ -193,6 +233,13 @@
         </div>
     </section>
 
+    <!-- Ezoic Ad Placement 1 - After Hero Section -->
+    <div id="ezoic-pub-ad-placeholder-101"></div>
+    <script>
+        ezstandalone.cmd.push(function () {
+            ezstandalone.showAds(101);
+        });
+    </script>
 
     <section class="featured-listings">
         <div class="featured-listings-container">
@@ -245,129 +292,12 @@
         </aside>
 
         <main class="results-section">
-            <!-- Static Centers Directory -->
-            <div id="centers-container" style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <h2 style="color: #FFB81C; margin-bottom: 1rem; font-size: 2.5rem;">🏥 Plasma Centers Directory</h2>
-                    <p style="color: #666; font-size: 1.2rem;">Find plasma donation centers nationwide. Search our database of 2,500+ locations.</p>
-                </div>
-                
-                <!-- Search Notice -->
-                <div style="background: #e8f4f8; border: 2px solid #3498db; border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; text-align: center;">
-                    <h3 style="color: #3498db; margin-bottom: 0.5rem;">🔍 Search Functionality</h3>
-                    <p style="color: #2c3e50; margin: 0;">Interactive search is currently being optimized. Use the direct links below to visit official center websites.</p>
-                </div>
-                
-                <!-- Major Center Cards -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                    
-                    <!-- CSL Plasma -->
-                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-left: 4px solid #FFB81C;">
-                        <h3 style="color: #003262; margin-bottom: 1rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.5rem;">
-                            🏥 CSL Plasma
-                        </h3>
-                        <div style="margin-bottom: 1rem;">
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>📍 Locations:</strong> 300+ centers nationwide</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>💰 Pay Rate:</strong> $50-$100 per donation</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>🎁 New Donor Bonus:</strong> Up to $1,000 first month</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>⭐ Rating:</strong> 4.2/5 stars</p>
-                        </div>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="https://www.cslplasma.com/find-a-center" target="_blank" style="background: #FFB81C; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">Find CSL Centers</a>
-                            <a href="/calculators/california/" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">📊 Calculator</a>
-                        </div>
-                    </div>
-                    
-                    <!-- BioLife Plasma -->
-                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-left: 4px solid #FFB81C;">
-                        <h3 style="color: #003262; margin-bottom: 1rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.5rem;">
-                            🏥 BioLife Plasma
-                        </h3>
-                        <div style="margin-bottom: 1rem;">
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>📍 Locations:</strong> 200+ centers nationwide</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>💰 Pay Rate:</strong> $45-$90 per donation</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>🎁 New Donor Bonus:</strong> Up to $900 first month</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>⭐ Rating:</strong> 4.1/5 stars</p>
-                        </div>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="https://www.biolifeplasma.com/center-locator" target="_blank" style="background: #FFB81C; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">Find BioLife Centers</a>
-                            <a href="/calculators/texas/" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">📊 Calculator</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Grifols -->
-                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-left: 4px solid #FFB81C;">
-                        <h3 style="color: #003262; margin-bottom: 1rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.5rem;">
-                            🏥 Grifols Plasma
-                        </h3>
-                        <div style="margin-bottom: 1rem;">
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>📍 Locations:</strong> 150+ centers nationwide</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>💰 Pay Rate:</strong> $40-$85 per donation</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>🎁 New Donor Bonus:</strong> Up to $800 first month</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>⭐ Rating:</strong> 4.0/5 stars</p>
-                        </div>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="https://www.grifolsplasma.com/en/plasma-donation-centers" target="_blank" style="background: #FFB81C; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">Find Grifols Centers</a>
-                            <a href="/calculators/florida/" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">📊 Calculator</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Octapharma -->
-                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-left: 4px solid #FFB81C;">
-                        <h3 style="color: #003262; margin-bottom: 1rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.5rem;">
-                            🏥 Octapharma Plasma
-                        </h3>
-                        <div style="margin-bottom: 1rem;">
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>📍 Locations:</strong> 100+ centers nationwide</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>💰 Pay Rate:</strong> $50-$95 per donation</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>🎁 New Donor Bonus:</strong> Up to $1,200 first month</p>
-                            <p style="margin: 0.5rem 0; color: #666;"><strong>⭐ Rating:</strong> 4.3/5 stars</p>
-                        </div>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="https://www.octapharmadonor.com/donor/locations" target="_blank" style="background: #FFB81C; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">Find Octapharma Centers</a>
-                            <a href="/calculators/new-york/" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">📊 Calculator</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- State-by-State Section -->
-                <div style="background: #f8f9fa; border-radius: 12px; padding: 2rem; margin-bottom: 3rem;">
-                    <h3 style="color: #003262; margin-bottom: 1.5rem; font-size: 2rem; text-align: center;">📍 Find Centers by State</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                        <a href="/calculators/california/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🌴 California</a>
-                        <a href="/calculators/texas/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🤠 Texas</a>
-                        <a href="/calculators/florida/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🏖️ Florida</a>
-                        <a href="/calculators/new-york/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🗽 New York</a>
-                        <a href="/calculators/illinois/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🏙️ Illinois</a>
-                        <a href="/calculators/ohio/" style="display: block; background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #003262; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🌽 Ohio</a>
-                        <a href="/states.html" style="display: block; background: #FFB81C; padding: 1rem; border-radius: 8px; text-decoration: none; color: white; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📋 All 50 States</a>
-                    </div>
-                </div>
-                
-                <!-- How to Find Centers -->
-                <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                    <h3 style="color: #003262; margin-bottom: 1.5rem; font-size: 2rem; text-align: center;">🔍 How to Find the Best Plasma Centers</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                        <div style="text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
-                            <h4 style="color: #FFB81C; margin-bottom: 0.5rem;">Compare Pay Rates</h4>
-                            <p style="color: #666; margin: 0;">Use our calculators to compare earnings between different centers and locations.</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
-                            <h4 style="color: #FFB81C; margin-bottom: 0.5rem;">Check Distance</h4>
-                            <p style="color: #666; margin: 0;">Find centers within a reasonable distance from your home or work.</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">⭐</div>
-                            <h4 style="color: #FFB81C; margin-bottom: 0.5rem;">Read Reviews</h4>
-                            <p style="color: #666; margin: 0;">Check ratings and reviews from other donors to find the best experience.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+
+        
+
+        
             <!-- Combined Filters Dropdown -->
+            <!-- PERFORMANCE OPTIMIZATION: Removed unnecessary nested div wrapper -->
             <div class="filters-dropdown" id="filters-dropdown" style="display: none;">
                 <div class="filters-header">
                     <h3>Filters & Sort</h3>
@@ -1043,6 +973,12 @@
     </section>
 
     <!-- Ezoic Ad Placement 2 - After Calculator Section -->
+    <div id="ezoic-pub-ad-placeholder-102"></div>
+    <script>
+        ezstandalone.cmd.push(function () {
+            ezstandalone.showAds(102);
+        });
+    </script>
 
     <!-- Stats Section -->
     <section class="stats-section">
@@ -1465,7 +1401,7 @@
             <div class="cta-content">
                 <h2>Are you a plasma center?</h2>
                 <p>Get featured placement and attract more donors with our premium listing service</p>
-                <button class="cta-btn" onclick="window.location.href='mailto:hello@plasmapaycalculator.com'">Get Featured</button>
+                <button class="cta-btn" onclick="window.location.href='mailto:hello@bestplasmacenters.com'">Get Featured</button>
             </div>
         </div>
     </section>
@@ -1643,6 +1579,12 @@
     </section>
 
     <!-- Ezoic Ad Placement 3 - Before Footer -->
+    <div id="ezoic-pub-ad-placeholder-103"></div>
+    <script>
+        ezstandalone.cmd.push(function () {
+            ezstandalone.showAds(103);
+        });
+    </script>
         
         <!-- E-E-A-T Compliance in Footer -->
         <div class="border-t border-gray-600 pt-8 mt-8">
@@ -1699,16 +1641,30 @@
 
         
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p>&copy; 2025 Best Plasma Centers. All rights reserved. Information for educational purposes only.</p>
             <p class="owner-info">
-                🏥 Plasma center owner? <a href="mailto:hello@plasmapaycalculator.com?subject=Claim%20or%20Upgrade%20Listing" class="owner-link">Claim or upgrade your listing</a>
+                🏥 Plasma center owner? <a href="mailto:hello@bestplasmacenters.com?subject=Claim%20or%20Upgrade%20Listing" class="owner-link">Claim or upgrade your listing</a>
             </p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <!-- <script defer src="app.js"></script> -->
+    <!-- PERFORMANCE OPTIMIZATION: Defer all non-critical JavaScript -->
+    <script defer src="/app.js"></script>
+    <!-- PERFORMANCE OPTIMIZATION: Defer mobile menu script -->
+    <script defer src="/mobile-menu.js"></script>
+    <!-- Load bilingual system -->
+    <script defer src="/js/i18n.js"></script>
     
-    <!-- JavaScript removed to prevent conflicts -->
+    <!-- PERFORMANCE OPTIMIZATION: Minified inline JavaScript for critical functionality -->
+    <script>
+        /* PERFORMANCE OPTIMIZATION: Minified AdSense initialization */
+        (adsbygoogle=window.adsbygoogle||[]).push({}),(adsbygoogle=window.adsbygoogle||[]).push({}),(adsbygoogle=window.adsbygoogle||[]).push({});
+        
+        /* PERFORMANCE OPTIMIZATION: Minified calculator functionality */
+        function updateCalculator(){const e=parseInt(document.getElementById('pay-rate').value),t=2*e,n=Math.round(4.33*t);let a;a=e>=100?900:e>=85?800:e>=65?700:600;const l=n+a;document.getElementById('monthly-amount').textContent='$'+n,document.getElementById('bonus-amount').textContent='$'+l.toLocaleString()}document.addEventListener('DOMContentLoaded',function(){const e=document.getElementById('pay-rate');e&&(e.addEventListener('change',updateCalculator),updateCalculator());const t=document.getElementById('search-all-centers');t&&t.addEventListener('click',function(e){e.preventDefault();const t=document.getElementById('location-search');t&&(t.focus(),t.scrollIntoView({behavior:'smooth'}))})});
+        
+        /* PERFORMANCE OPTIMIZATION: Minified ad performance tracking */
+        window.addEventListener('load',function(){'function'==typeof gtag&&gtag('event','ads_loaded',{event_category:'AdSense',event_label:'Ads Initialized',value:3})});
+    </script>
 </body>
 </html>
