@@ -1651,22 +1651,8 @@
     </footer>
 
     <!-- PERFORMANCE OPTIMIZATION: Defer all non-critical JavaScript -->
-    <script defer src="/app.js"></script>
-    <!-- PERFORMANCE OPTIMIZATION: Defer mobile menu script -->
-    <script defer src="/mobile-menu.js"></script>
-    <!-- Load bilingual system -->
-    <script defer src="/js/i18n.js"></script>
+    <script defer src="app.js"></script>
     
-    <!-- PERFORMANCE OPTIMIZATION: Minified inline JavaScript for critical functionality -->
-    <script>
-        /* PERFORMANCE OPTIMIZATION: Minified AdSense initialization */
-        (adsbygoogle=window.adsbygoogle||[]).push({}),(adsbygoogle=window.adsbygoogle||[]).push({}),(adsbygoogle=window.adsbygoogle||[]).push({});
-        
-        /* PERFORMANCE OPTIMIZATION: Minified calculator functionality */
-        function updateCalculator(){const e=parseInt(document.getElementById('pay-rate').value),t=2*e,n=Math.round(4.33*t);let a;a=e>=100?900:e>=85?800:e>=65?700:600;const l=n+a;document.getElementById('monthly-amount').textContent='$'+n,document.getElementById('bonus-amount').textContent='$'+l.toLocaleString()}document.addEventListener('DOMContentLoaded',function(){const e=document.getElementById('pay-rate');e&&(e.addEventListener('change',updateCalculator),updateCalculator());const t=document.getElementById('search-all-centers');t&&t.addEventListener('click',function(e){e.preventDefault();const t=document.getElementById('location-search');t&&(t.focus(),t.scrollIntoView({behavior:'smooth'}))})});
-        
-        /* PERFORMANCE OPTIMIZATION: Minified ad performance tracking */
-        window.addEventListener('load',function(){'function'==typeof gtag&&gtag('event','ads_loaded',{event_category:'AdSense',event_label:'Ads Initialized',value:3})});
-    </script>
+    <!-- JavaScript cleaned up to prevent conflicts -->
 </body>
 </html>
