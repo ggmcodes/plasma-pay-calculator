@@ -284,7 +284,7 @@ function showMaybe(message) {
             </div>
             
             <div style="text-align: center;">
-                <a href="https://bestplasmacenters.com" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; margin-right: 1rem;">
+                <a href="/centers/" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; margin-right: 1rem;">
                     Find Centers to Call
                 </a>
                 <button onclick="resetQuiz()" style="padding: 1rem 2rem; background: #3498db; color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; cursor: pointer;">
@@ -336,7 +336,7 @@ function showEligibleComprehensive() {
             </div>
             
             <div style="text-align: center;">
-                <a href="https://bestplasmacenters.com" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; margin-right: 1rem;">
+                <a href="/centers/" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; margin-right: 1rem;">
                     🏥 Find Your Nearest Center
                 </a>
                 <button onclick="resetQuiz()" style="padding: 1rem 2rem; background: #3498db; color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 1.1rem; cursor: pointer;">
