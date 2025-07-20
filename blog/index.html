@@ -572,23 +572,33 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div style="display: flex; align-items: center;">
-                <a href="../" class="logo">
-                    <div class="logo-icon">PPC</div>
-                    Plasma Pay Calculator
-                </a>
-                <div class="trust-badge">Updated for 2025</div>
-            </div>
+            <a href="/" class="logo">
+                <div class="logo-icon">PPC</div>
+                <span class="logo-text">Plasma Pay Calculator</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="../#calculator">Calculator</a></li>
-                <li><a href="../blog/" class="active">Earning Tips</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="/centers/" target="_blank" target="_blank" class="find-center-btn">🏥 FIND A CENTER</a></li>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">State Rates</a></li>
+                <li><a href="/health/">Health Info</a></li>
+                <li><a href="/centers/" class="cta-btn">🏥 FIND A CENTER</a></li>
             </ul>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">State Rates</a></li>
+                <li><a href="/health/">Health Info</a></li>
+                <li><a href="/centers/">🏥 Find Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
         </div>
     </nav>
+    <!-- Navigation -->
+    
 
     <!-- Blog Header -->
     <section class="blog-header">
@@ -639,14 +649,307 @@
 
         <!-- Blog Posts Grid -->
         <div class="blog-grid">
-            <!-- Featured Ultimate Guide -->
-            <a href="ultimate-plasma-donation-guide.html" class="blog-card" style="grid-column: span 2; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);">
-                <div class="blog-image" style="background: rgba(255,255,255,0.1); height: 160px;">
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="35" stroke="white" stroke-width="3" fill="rgba(255,255,255,0.1)"/>
-                        <text x="50" y="58" text-anchor="middle" fill="white" font-size="24" font-weight="bold">💰</text>
-                    </svg>
+            <a href="ultimate-plasma-donation-guide.html" class="blog-card" style="grid-column: span 2;" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/ZiQkhI7417A/800x400?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Featured Guide
+                    </div>
                 </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" style="color: white; font-size: 1.8rem; line-height: 1.2;">Ultimate Plasma Donation Guide 2025: How to Earn $1,200+ Monthly</h3>
+                    <p class="blog-excerpt" style="color: rgba(255,255,255,0.9);">The complete guide to maximizing plasma donation income. Learn how to earn $800-1,200 monthly, find the highest-paying opportunities, and optimize your earnings strategy.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" style="background: rgba(255,255,255,0.2); color: white;">Featured Guide</span>
+                        <span class="read-time" style="color: white;">15 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="which-plasma-center-pays-most-money.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/MJPr6nOdppw/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Center Comparison
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Which Plasma Center Pays the Most Money? 2025 Comparison</h3>
+                    <p class="blog-excerpt" >Compare CSL Plasma, BioLife, Octapharma, and Grifols payment rates. Find the highest-paying plasma centers near you.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Center Comparison</span>
+                        <span class="read-time" >12 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="biolife-vs-csl-plasma-comparison.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/L8tWZT4CcVQ/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Center Comparison
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >BioLife vs CSL Plasma: Which Pays More in 2025?</h3>
+                    <p class="blog-excerpt" >Head-to-head comparison of the two largest plasma chains. See which offers better rates, bonuses, and donor experience.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Center Comparison</span>
+                        <span class="read-time" >10 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="csl-plasma-pay-rates-2025.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/5fNmWej4tAA/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Payment Rates
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >CSL Plasma Pay Rates 2025: $70-$120 Per Visit Guide</h3>
+                    <p class="blog-excerpt" >Complete CSL Plasma payment breakdown including new donor bonuses, loyalty rewards, and regional rate differences.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Payment Rates</span>
+                        <span class="read-time" >8 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="first-time-plasma-donation-what-to-expect.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/SJWPKMb9u-k/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Beginner Guide
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >First Time Plasma Donation: Complete Guide & What to Expect</h3>
+                    <p class="blog-excerpt" >Everything you need to know for your first plasma donation. Process, requirements, tips, and what to expect.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Beginner Guide</span>
+                        <span class="read-time" >12 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="highest-paying-plasma-centers-near-me.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/Q_Sei-TqSlc/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Location Guide
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Highest Paying Plasma Centers Near Me: 2025 Location Guide</h3>
+                    <p class="blog-excerpt" >Find the best-paying plasma centers in your area. State-by-state breakdown of top earners and bonus programs.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Location Guide</span>
+                        <span class="read-time" >10 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="plasma-donation-side-effects.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/uJ8LNVCBjFQ/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Health & Safety
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Plasma Donation Side Effects: What to Know & How to Minimize</h3>
+                    <p class="blog-excerpt" >Understand common side effects, prevention tips, and when to seek medical attention for safe plasma donation.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Health & Safety</span>
+                        <span class="read-time" >9 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="plasma-donation-tax-guide-2025.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/KDeab4oW0lY/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Tax & Legal
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Plasma Donation Tax Guide 2025: What You Need to Know</h3>
+                    <p class="blog-excerpt" >Complete tax guide for plasma donors. Learn about 1099s, deductions, and how to report plasma income properly.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Tax & Legal</span>
+                        <span class="read-time" >11 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="best-plasma-centers-texas.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/PHIgYUGQPvU/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        State Guide
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Plasma Pay Calculator in Texas: Houston, Dallas, Austin Guide 2025</h3>
+                    <p class="blog-excerpt" >Complete guide to Texas plasma centers with rates, locations, and insider tips for maximizing earnings.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >State Guide</span>
+                        <span class="read-time" >13 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="how-much-money-can-you-make-donating-plasma-2025.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/Dwheufds-pI/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Earnings Guide
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >How Much Money Can You Make Donating Plasma in 2025?</h3>
+                    <p class="blog-excerpt" >Realistic earnings breakdown: $400-$1,200 monthly potential based on frequency, location, and center choice.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Earnings Guide</span>
+                        <span class="read-time" >10 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="plasma-donation-process-step-by-step.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/hpjSkU2UYSU/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Process Guide
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Plasma Donation Process: Step-by-Step Guide 2025</h3>
+                    <p class="blog-excerpt" >Detailed walkthrough of the plasma donation process from arrival to payment. Know what to expect at each step.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Process Guide</span>
+                        <span class="read-time" >8 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="plasma-donation-tips-beginners.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/Lks7vei-eAg/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Beginner Tips
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Plasma Donation Tips for Beginners: Maximize Your Experience</h3>
+                    <p class="blog-excerpt" >Essential tips for new plasma donors to optimize earnings, comfort, and safety during the donation process.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Beginner Tips</span>
+                        <span class="read-time" >7 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="state-by-state-plasma-donation-laws-regulations-2025.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/yCdPU73kGSc/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Legal Guide
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >State-by-State Plasma Donation Laws & Regulations 2025</h3>
+                    <p class="blog-excerpt" >Complete breakdown of plasma donation regulations across all 50 states including frequency limits and requirements.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Legal Guide</span>
+                        <span class="read-time" >14 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="complete-medical-eligibility-guide-plasma-donation.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/L8tWZT4CcVQ/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Medical Guide
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Complete Medical Eligibility Guide for Plasma Donation</h3>
+                    <p class="blog-excerpt" >Comprehensive guide to medical requirements, disqualifying conditions, and health screening process.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Medical Guide</span>
+                        <span class="read-time" >12 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="plasma-donation-bonuses-promotions.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/3iexvMShGfQ/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Bonuses & Promos
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Plasma Donation Bonuses & Promotions: Maximize Your Earnings</h3>
+                    <p class="blog-excerpt" >Guide to new donor bonuses, loyalty programs, and promotional offers at major plasma centers.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Bonuses & Promos</span>
+                        <span class="read-time" >9 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="how-to-prepare-for-plasma-donation.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/bJjsKbToY34/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Preparation
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >How to Prepare for Plasma Donation: Complete Checklist</h3>
+                    <p class="blog-excerpt" >Essential preparation tips including hydration, nutrition, sleep, and what to bring for optimal donation experience.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Preparation</span>
+                        <span class="read-time" >6 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="understanding-plasma-medical-uses.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/qjnAnF0jIGk/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Medical Impact
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Understanding Plasma Medical Uses: Why Your Donation Matters</h3>
+                    <p class="blog-excerpt" >Learn about the life-saving medical uses of plasma and how your donations help create vital therapies.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Medical Impact</span>
+                        <span class="read-time" >8 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="plasma-donation-weight-requirements.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/Zyx1bK9mqmA/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Requirements
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Plasma Donation Weight Requirements: Complete Guide 2025</h3>
+                    <p class="blog-excerpt" >Weight requirements for plasma donation, how they affect payment, and tips for meeting eligibility criteria.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Requirements</span>
+                        <span class="read-time" >5 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="can-you-donate-plasma-twice-a-week.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/SlyCz11RhfY/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Frequency Guide
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Can You Donate Plasma Twice a Week? Frequency Guidelines</h3>
+                    <p class="blog-excerpt" >FDA guidelines on plasma donation frequency, safety considerations, and how to maximize earnings safely.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Frequency Guide</span>
+                        <span class="read-time" >6 min read</span>
+                    </div>
+                </div>
+            </a>
+            <a href="can-you-donate-plasma-with-tattoos.html" class="blog-card"  >
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/XgOGw4UHx7A/600x300?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; height: 200px; position: relative;">
+                    <div style="position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.7); color: white; padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                        Eligibility
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <h3 class="blog-title" >Can You Donate Plasma with Tattoos? Complete Guidelines</h3>
+                    <p class="blog-excerpt" >Tattoo restrictions for plasma donation, waiting periods, and center-specific policies explained.</p>
+                    <div class="blog-meta">
+                        <span class="blog-category" >Eligibility</span>
+                        <span class="read-time" >5 min read</span>
+                    </div>
+                </div>
+            </a>
+        </div>
                 <div class="blog-card-content">
                     <h3 class="blog-title" style="color: white; font-size: 1.8rem; line-height: 1.2;">Ultimate Plasma Donation Guide 2025: How to Earn $1,200+ Monthly</h3>
                     <p class="blog-excerpt" style="color: rgba(255,255,255,0.9);">The complete guide to maximizing plasma donation income. Learn how to earn $800-1,200 monthly, find the highest-paying opportunities, and optimize your earnings strategy.</p>

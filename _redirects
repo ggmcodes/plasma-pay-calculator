@@ -5,3 +5,27 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 
 # Ensure canonical URLs for main pages
 /index.html / 301
+# URL Structure Canonicalization Redirects
+
+# Force HTTPS and non-www
+http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+http://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+
+# Calculator trailing slash redirects (remove trailing slash)
+/calculators/*/  /calculators/:splat 301
+
+# Blog post .html redirects (remove .html)
+/blog/*.html /blog/:splat 301
+
+# Specific blog post redirects mentioned in GSC
+/blog/plasma-center-comparison.html /blog/plasma-center-comparison 301
+/blog/maximize-plasma-earnings.html /blog/maximize-plasma-earnings 301
+
+# Root page .html redirects
+/plasma-donation-requirements-2025.html /plasma-donation-requirements-2025 301
+/index.html / 301
+
+# Ensure clean URLs for common variations
+/calculators/georgia/ /calculators/georgia 301
+/calculators/california/ /calculators/california 301
