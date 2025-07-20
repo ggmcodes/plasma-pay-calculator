@@ -3223,4 +3223,33 @@
     <priority>0.7</priority>
   </url>
 
+
+  <url>
+    <loc>https://plasmapaycalculator.com/topics/earning-strategies/</loc>
+    <lastmod>2025-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://plasmapaycalculator.com/topics/center-comparisons/</loc>
+    <lastmod>2025-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://plasmapaycalculator.com/topics/requirements-eligibility/</loc>
+    <lastmod>2025-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://plasmapaycalculator.com/topics/tax-legal/</loc>
+    <lastmod>2025-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
