@@ -238,6 +238,87 @@
 
     
     <link rel="canonical" href="https://plasmapaycalculator.com/state/missouri/springfield-mo">
+
+    <!-- Mobile UX Enhancements -->
+    <style>
+        /* Mobile Touch Optimization */
+        @media (max-width: 768px) {
+            /* Larger touch targets */
+            button, .btn, a.btn {
+                min-height: 48px;
+                min-width: 48px;
+                padding: 12px 24px;
+            }
+            
+            /* Better input fields for mobile */
+            input, select, textarea {
+                font-size: 16px !important; /* Prevents zoom on iOS */
+                padding: 16px;
+                border-radius: 8px;
+                touch-action: manipulation;
+            }
+            
+            /* Improved calculator layout */
+            .calculator-container {
+                padding: 20px 16px;
+            }
+            
+            /* Better spacing for mobile */
+            .space-y-6 > * + * {
+                margin-top: 24px;
+            }
+            
+            /* Sticky calculate button */
+            .calculate-button-container {
+                position: sticky;
+                bottom: 20px;
+                z-index: 10;
+                background: white;
+                padding: 16px;
+                border-radius: 16px;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            }
+            
+            /* Smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Prevent horizontal scroll */
+            body {
+                overflow-x: hidden;
+            }
+            
+            /* Better card layout */
+            .grid {
+                gap: 16px !important;
+            }
+            
+            /* Improved readability */
+            p, .text-sm {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            
+            /* Touch feedback */
+            button:active, a:active {
+                transform: scale(0.98);
+                opacity: 0.9;
+            }
+        }
+        
+        /* Accessibility improvements */
+        :focus-visible {
+            outline: 3px solid #27ae60;
+            outline-offset: 2px;
+        }
+        
+        /* Smooth transitions */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->

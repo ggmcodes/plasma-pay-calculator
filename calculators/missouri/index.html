@@ -95,6 +95,87 @@
     </script>
     
     <link rel="canonical" href="https://plasmapaycalculator.com/calculators/missouri">
+
+    <!-- Mobile UX Enhancements -->
+    <style>
+        /* Mobile Touch Optimization */
+        @media (max-width: 768px) {
+            /* Larger touch targets */
+            button, .btn, a.btn {
+                min-height: 48px;
+                min-width: 48px;
+                padding: 12px 24px;
+            }
+            
+            /* Better input fields for mobile */
+            input, select, textarea {
+                font-size: 16px !important; /* Prevents zoom on iOS */
+                padding: 16px;
+                border-radius: 8px;
+                touch-action: manipulation;
+            }
+            
+            /* Improved calculator layout */
+            .calculator-container {
+                padding: 20px 16px;
+            }
+            
+            /* Better spacing for mobile */
+            .space-y-6 > * + * {
+                margin-top: 24px;
+            }
+            
+            /* Sticky calculate button */
+            .calculate-button-container {
+                position: sticky;
+                bottom: 20px;
+                z-index: 10;
+                background: white;
+                padding: 16px;
+                border-radius: 16px;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            }
+            
+            /* Smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Prevent horizontal scroll */
+            body {
+                overflow-x: hidden;
+            }
+            
+            /* Better card layout */
+            .grid {
+                gap: 16px !important;
+            }
+            
+            /* Improved readability */
+            p, .text-sm {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            
+            /* Touch feedback */
+            button:active, a:active {
+                transform: scale(0.98);
+                opacity: 0.9;
+            }
+        }
+        
+        /* Accessibility improvements */
+        :focus-visible {
+            outline: 3px solid #27ae60;
+            outline-offset: 2px;
+        }
+        
+        /* Smooth transitions */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
@@ -187,7 +268,7 @@
                             
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Your Weight (lbs)</label>
-                                <select id="weight" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                <select id="weight" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" class="touch-action-manipulation">
                                     <option value="110">110-149 lbs</option>
                                     <option value="150" selected>150-174 lbs</option>
                                     <option value="175">175+ lbs</option>
@@ -196,7 +277,7 @@
 
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Donation Frequency</label>
-                                <select id="frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                <select id="frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" class="touch-action-manipulation">
                                     <option value="1">1x per week</option>
                                     <option value="2" selected>2x per week (Maximum)</option>
                                 </select>
@@ -204,7 +285,7 @@
 
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Missouri Location</label>
-                                <select id="location" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                <select id="location" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" class="touch-action-manipulation">
                                     <option value="kansas-city">Kansas City</option>
                                     <option value="st-louis">St. Louis</option>
                                     <option value="springfield">Springfield</option>
@@ -216,13 +297,13 @@
 
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Donor Status</label>
-                                <select id="donorStatus" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                <select id="donorStatus" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" class="touch-action-manipulation">
                                     <option value="new">New Donor (First 5 donations)</option>
                                     <option value="returning">Returning Donor</option>
                                 </select>
                             </div>
 
-                            <button onclick="calculateEarnings()" class="w-full bg-primary hover:bg-secondary text-white font-bold py-4 px-6 rounded-lg transition-colors">
+                            <button onclick="calculateEarnings()" class="w-full bg-primary hover:bg-secondary text-white font-bold py-4 px-6 rounded-lg transition-colors" class="touch-action-manipulation">
                                 Calculate My Missouri Earnings
                             </button>
                         </div>

@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+# Prioritize sitemap for better discovery
+Sitemap: https://plasmapaycalculator.com/sitemap.xml
+
+# Specific crawler optimizations
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block unnecessary crawling of certain file types
+User-agent: *
+Disallow: /*.json$
+Disallow: /*.md$
+Disallow: /CNAME
+Disallow: /.git/
+Disallow: /_redirects
+
+# Allow crawling of all important content
+Allow: /calculators/
+Allow: /blog/
+Allow: /centers/
+Allow: /metro/
+Allow: /tools/
+Allow: /topics/
+Allow: /seasonal/
+
+# Crawl delay to be respectful
+Crawl-delay: 1
