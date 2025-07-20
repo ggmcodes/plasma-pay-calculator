@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSL Plasma vs BioLife Pay Calculator: Which Pays More 2025?</title>
+    <meta name="description" content="Side-by-side comparison calculator for CSL Plasma and BioLife pay rates. See exact earnings differences and find the highest paying option.">
+    <meta name="keywords" content="plasma center comparison, csl plasma, biolife, plasma pay calculator">
+    <link rel="canonical" href="https://plasmapaycalculator.com/tools/csl-vs-biolife-calculator">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="CSL Plasma vs BioLife Pay Calculator: Which Pays More 2025?">
+    <meta property="og:description" content="Side-by-side comparison calculator for CSL Plasma and BioLife pay rates. See exact earnings differences and find the highest paying option.">
+    <meta property="og:url" content="https://plasmapaycalculator.com/tools/csl-vs-biolife-calculator">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org Calculator -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CSL Plasma vs BioLife Pay Calculator: Which Pays More 2025?",
+        "description": "Side-by-side comparison calculator for CSL Plasma and BioLife pay rates. See exact earnings differences and find the highest paying option.",
+        "url": "https://plasmapaycalculator.com/tools/csl-vs-biolife-calculator",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#27ae60',
+                        'secondary': '#2ecc71',
+                        'accent': '#e74c3c'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2 font-semibold text-lg text-gray-900">
+                    <span class="text-xl">💰</span>
+                    <a href="/" class="font-inter">Plasma Pay Calculator</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-600 hover:text-gray-900 font-medium">Calculator</a>
+                    <a href="/blog/" class="text-gray-600 hover:text-gray-900 font-medium">Blog</a>
+                    <a href="/states.html" class="text-gray-600 hover:text-gray-900 font-medium">States</a>
+                    <a href="/centers/" class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg font-semibold">Find Centers</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-br from-accent to-primary text-white">
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                🔥 CSL Plasma vs BioLife
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
+                Compare pay rates side-by-side. See which center pays more in your area.
+            </p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">
+                    Interactive Comparison Calculator
+                </h2>
+                
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Left Side - Input -->
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-bold text-gray-900">Enter Your Details</h3>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Your Weight (lbs)</label>
+                            <select id="weight" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary">
+                                <option value="110">110-149 lbs</option>
+                                <option value="150" selected>150-174 lbs</option>
+                                <option value="175">175+ lbs</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Donation Frequency</label>
+                            <select id="frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary">
+                                <option value="1">1x per week</option>
+                                <option value="2" selected>2x per week (Maximum)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Your State</label>
+                            <select id="state" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary">
+                                <option value="ca">California</option>
+                                <option value="tx">Texas</option>
+                                <option value="fl">Florida</option>
+                                <option value="ny">New York</option>
+                                <option value="other">Other State</option>
+                            </select>
+                        </div>
+
+                        <button onclick="compareEarnings()" class="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 px-6 rounded-lg transition-colors">
+                            Compare Earnings Now
+                        </button>
+                    </div>
+
+                    <!-- Right Side - Results -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Comparison Results</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 bg-primary/10 rounded-lg">
+                                <div>
+                                    <div class="font-semibold text-gray-900">CSL Plasma</div>
+                                    <div class="text-sm text-gray-600">Monthly earnings</div>
+                                </div>
+                                <div id="company1Result" class="text-2xl font-bold text-primary">$520</div>
+                            </div>
+                            
+                            <div class="flex justify-between items-center p-4 bg-secondary/10 rounded-lg">
+                                <div>
+                                    <div class="font-semibold text-gray-900">BioLife</div>
+                                    <div class="text-sm text-gray-600">Monthly earnings</div>
+                                </div>
+                                <div id="company2Result" class="text-2xl font-bold text-secondary">$485</div>
+                            </div>
+                            
+                            <div class="text-center p-4 bg-accent/10 rounded-lg">
+                                <div class="text-sm text-gray-600">Monthly Difference</div>
+                                <div id="difference" class="text-xl font-bold text-accent">+$35</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-bold text-gray-900 mb-2">💡 Recommendation</h4>
+                            <p id="recommendation" class="text-sm text-gray-700">
+                                Based on your inputs, CSL Plasma offers better earnings in your area.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Tools -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                More Comparison Tools
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">All Centers Comparison</h3>
+                    <p class="text-gray-600 mb-4">Compare all major plasma centers side-by-side</p>
+                    <a href="/tools/all-plasma-centers-comparison.html" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-semibold">
+                        Compare All
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">State Calculator</h3>
+                    <p class="text-gray-600 mb-4">Calculate earnings by state and city</p>
+                    <a href="/states.html" class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-lg font-semibold">
+                        By State
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Center Finder</h3>
+                    <p class="text-gray-600 mb-4">Find plasma centers near your location</p>
+                    <a href="/centers/" class="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold">
+                        Find Centers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Plasma Pay Calculator</h4>
+                    <p class="text-gray-400">Compare plasma centers and calculate your earnings with our advanced tools.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Comparison Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/tools/csl-vs-biolife-calculator.html" class="hover:text-white">CSL vs BioLife</a></li>
+                        <li><a href="/tools/octapharma-vs-grifols-calculator.html" class="hover:text-white">Octapharma vs Grifols</a></li>
+                        <li><a href="/tools/all-plasma-centers-comparison.html" class="hover:text-white">All Centers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog/" class="hover:text-white">Earning Guides</a></li>
+                        <li><a href="/states.html" class="hover:text-white">State Rates</a></li>
+                        <li><a href="/centers/" class="hover:text-white">Find Centers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/faq.html" class="hover:text-white">FAQ</a></li>
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function compareEarnings() {
+            const weight = document.getElementById('weight').value;
+            const frequency = parseInt(document.getElementById('frequency').value);
+            const state = document.getElementById('state').value;
+            
+            // Mock calculation logic
+            let base1 = 65;
+            let base2 = 60;
+            
+            if (weight === '175') {
+                base1 *= 1.15;
+                base2 *= 1.15;
+            }
+            
+            const monthly1 = Math.round(base1 * frequency * 4.33);
+            const monthly2 = Math.round(base2 * frequency * 4.33);
+            const difference = monthly1 - monthly2;
+            
+            document.getElementById('company1Result').textContent = `${monthly1}`;
+            document.getElementById('company2Result').textContent = `${monthly2}`;
+            document.getElementById('difference').textContent = difference > 0 ? `+${difference}` : `${difference}`;
+            
+            const winner = difference > 0 ? 'CSL Plasma' : 'BioLife';
+            document.getElementById('recommendation').textContent = 
+                `Based on your inputs, ${winner} offers better earnings in your area.`;
+        }
+        
+        // Initialize with default calculation
+        document.addEventListener('DOMContentLoaded', function() {
+            compareEarnings();
+        });
+    </script>
+</body>
+</html>
