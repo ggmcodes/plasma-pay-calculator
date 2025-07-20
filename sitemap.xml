@@ -4,7 +4,7 @@
   <url>
     <loc>https://plasmapaycalculator.com/about.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/about.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/about.html" />
@@ -2899,7 +2899,7 @@
   <url>
     <loc>https://plasmapaycalculator.com/contact.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
@@ -2997,7 +2997,7 @@
   <url>
     <loc>https://plasmapaycalculator.com/faq.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/faq.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/faq.html" />
@@ -3106,7 +3106,7 @@
   <url>
     <loc>https://plasmapaycalculator.com/privacy.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
@@ -3134,7 +3134,7 @@
   <url>
     <loc>https://plasmapaycalculator.com/terms.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
