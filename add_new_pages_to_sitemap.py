@@ -228,6 +228,16 @@ def add_new_pages_to_sitemap():
             'url': 'https://plasmapaycalculator.com/blog/plasma-donation-weight-requirements-bmi-guide-2025.html',
             'priority': '0.9',
             'changefreq': 'monthly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-near-me-locator-guide-2025.html',
+            'priority': '0.9',
+            'changefreq': 'weekly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-frequency-schedule-optimization-2025.html',
+            'priority': '0.8',
+            'changefreq': 'monthly'
         }
     ]
     
