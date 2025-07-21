@@ -1,3 +1,9 @@
+# Redirect from old domain to new domain
+https://bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
+https://www.bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
+http://bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
+http://www.bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
+
 # Force HTTPS and remove www
 https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 http://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
