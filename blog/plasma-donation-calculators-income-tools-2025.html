@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma Donation Calculators & Income Tools - Maximize Your 2025 Earnings</title>
+    <meta name="description" content="Free plasma donation calculators and income tools. Calculate your potential earnings, track donations, and maximize your plasma income with interactive tools.">
+    <meta name="keywords" content="plasma donation calculator, plasma income calculator, donation tracker, plasma earnings tool, CSL calculator, BioLife calculator">
+    
+    <!-- Schema.org markup for better SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Calculator",
+        "name": "Plasma Donation Income Calculator",
+        "description": "Calculate your potential plasma donation earnings with our comprehensive income tools and tracking calculators",
+        "url": "https://plasmapaycalculator.com/blog/plasma-donation-calculators-income-tools-2025.html",
+        "datePublished": "2025-01-21",
+        "dateModified": "2025-01-21",
+        "author": {
+            "@type": "Organization",
+            "name": "Plasma Pay Calculator"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Plasma Pay Calculator",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://plasmapaycalculator.com/logo.png"
+            }
+        }
+    }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            font-size: 2.2em;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .calculator-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .calculator-card h3 {
+            color: white;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+        
+        .input-group {
+            margin: 15px 0;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .calculate-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            margin: 20px 0 10px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .calculate-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .result {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .ad-space {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 30px 0;
+            color: #6c757d;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+        
+        .tool-features {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h4 {
+            color: #2c3e50;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tracker-section {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .tracker-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .tracker-table th, .tracker-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tracker-table th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .add-donation-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+        
+        .tips-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .tip-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../blog/" class="back-link">← Back to Blog</a>
+        
+        <h1>🧮 Plasma Donation Calculators & Income Tools 2025</h1>
+        
+        <p><strong>Maximize your plasma donation earnings with our comprehensive collection of free calculators and tracking tools.</strong> Whether you're a first-time donor or a plasma veteran, these interactive tools will help you optimize your income, track your progress, and make informed decisions about your donation schedule.</p>
+
+        <!-- Ad Space 1 -->
+        <div class="ad-space">
+            <p>Advertisement</p>
+        </div>
+
+        <div class="calculator-grid">
+            <!-- Monthly Income Calculator -->
+            <div class="calculator-card">
+                <h3>💰 Monthly Income Calculator</h3>
+                <div class="input-group">
+                    <label for="monthlyRate">Pay per donation ($):</label>
+                    <input type="number" id="monthlyRate" placeholder="Enter amount (e.g., 50)" min="10" max="200">
+                </div>
+                <div class="input-group">
+                    <label for="monthlyDonations">Donations per month:</label>
+                    <input type="number" id="monthlyDonations" placeholder="Enter number (e.g., 8)" min="1" max="10">
+                </div>
+                <div class="input-group">
+                    <label for="bonusAmount">Monthly bonus ($):</label>
+                    <input type="number" id="bonusAmount" placeholder="Enter bonus amount" min="0" max="500">
+                </div>
+                <button class="calculate-btn" onclick="calculateMonthly()">Calculate Monthly Income</button>
+                <div class="result" id="monthlyResult">Enter your details above</div>
+            </div>
+
+            <!-- Annual Income Projector -->
+            <div class="calculator-card">
+                <h3>📈 Annual Income Projector</h3>
+                <div class="input-group">
+                    <label for="annualRate">Average pay per donation ($):</label>
+                    <input type="number" id="annualRate" placeholder="Enter amount (e.g., 55)" min="10" max="200">
+                </div>
+                <div class="input-group">
+                    <label for="donationsPerWeek">Donations per week:</label>
+                    <select id="donationsPerWeek">
+                        <option value="1">1 donation/week</option>
+                        <option value="2" selected>2 donations/week</option>
+                        <option value="3">3 donations/week (if eligible)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="weeksPerYear">Active weeks per year:</label>
+                    <input type="number" id="weeksPerYear" placeholder="Enter weeks (e.g., 50)" min="1" max="52" value="50">
+                </div>
+                <button class="calculate-btn" onclick="calculateAnnual()">Project Annual Income</button>
+                <div class="result" id="annualResult">Enter your details above</div>
+            </div>
+        </div>
+
+        <!-- Ad Space 2 -->
+        <div class="ad-space">
+            <p>Advertisement</p>
+        </div>
+
+        <div class="tool-features">
+            <h2>🛠️ Advanced Calculator Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>🎯 Center Comparison Tool</h4>
+                    <p>Compare pay rates across different plasma centers in your area to find the highest-paying options.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📊 Bonus Optimizer</h4>
+                    <p>Calculate the best donation schedule to maximize new donor bonuses and loyalty rewards.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>⏰ Time Investment Calculator</h4>
+                    <p>Factor in travel time, wait time, and donation time to calculate your true hourly rate.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>💡 Goal Achievement Planner</h4>
+                    <p>Set income goals and get a customized donation schedule to reach your targets.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculator-grid">
+            <!-- Goal Achievement Calculator -->
+            <div class="calculator-card">
+                <h3>🎯 Goal Achievement Calculator</h3>
+                <div class="input-group">
+                    <label for="goalAmount">Income goal ($):</label>
+                    <input type="number" id="goalAmount" placeholder="Enter target amount (e.g., 1000)" min="100" max="10000">
+                </div>
+                <div class="input-group">
+                    <label for="goalTimeframe">Timeframe:</label>
+                    <select id="goalTimeframe">
+                        <option value="month">Per month</option>
+                        <option value="quarter">Per quarter (3 months)</option>
+                        <option value="year">Per year</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="goalRate">Expected pay per donation ($):</label>
+                    <input type="number" id="goalRate" placeholder="Enter amount (e.g., 60)" min="10" max="200">
+                </div>
+                <button class="calculate-btn" onclick="calculateGoal()">Calculate Required Donations</button>
+                <div class="result" id="goalResult">Enter your goal details above</div>
+            </div>
+
+            <!-- Time Investment Calculator -->
+            <div class="calculator-card">
+                <h3>⏰ True Hourly Rate Calculator</h3>
+                <div class="input-group">
+                    <label for="hourlyPay">Pay per donation ($):</label>
+                    <input type="number" id="hourlyPay" placeholder="Enter amount (e.g., 50)" min="10" max="200">
+                </div>
+                <div class="input-group">
+                    <label for="travelTime">Round-trip travel (minutes):</label>
+                    <input type="number" id="travelTime" placeholder="Enter minutes (e.g., 30)" min="0" max="180">
+                </div>
+                <div class="input-group">
+                    <label for="totalTime">Total center time (minutes):</label>
+                    <input type="number" id="totalTime" placeholder="Screening + donation + wait (e.g., 90)" min="30" max="300">
+                </div>
+                <button class="calculate-btn" onclick="calculateHourlyRate()">Calculate True Hourly Rate</button>
+                <div class="result" id="hourlyResult">Enter your time details above</div>
+            </div>
+        </div>
+
+        <!-- Ad Space 3 -->
+        <div class="ad-space">
+            <p>Advertisement</p>
+        </div>
+
+        <div class="tracker-section">
+            <h2>📝 Donation Tracker & History</h2>
+            <p>Keep track of your plasma donations and monitor your income progress with our interactive tracking tool.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="input-group">
+                    <label for="trackDate">Date:</label>
+                    <input type="date" id="trackDate">
+                </div>
+                <div class="input-group">
+                    <label for="trackCenter">Center:</label>
+                    <input type="text" id="trackCenter" placeholder="Center name">
+                </div>
+                <div class="input-group">
+                    <label for="trackAmount">Amount ($):</label>
+                    <input type="number" id="trackAmount" placeholder="Payment">
+                </div>
+                <div class="input-group">
+                    <label for="trackTime">Duration (min):</label>
+                    <input type="number" id="trackTime" placeholder="Total time">
+                </div>
+            </div>
+            
+            <button class="add-donation-btn" onclick="addDonation()">+ Add Donation</button>
+            
+            <table class="tracker-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Center</th>
+                        <th>Amount</th>
+                        <th>Time</th>
+                        <th>Rate/Hour</th>
+                    </tr>
+                </thead>
+                <tbody id="donationHistory">
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: #666; padding: 30px;">No donations tracked yet. Add your first donation above!</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="background: white; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                <h4>📊 Your Statistics</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #e74c3c;" id="totalDonations">0</div>
+                        <div style="font-size: 12px; color: #666;">Total Donations</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #27ae60;" id="totalEarnings">$0</div>
+                        <div style="font-size: 12px; color: #666;">Total Earnings</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #3498db;" id="avgPayment">$0</div>
+                        <div style="font-size: 12px; color: #666;">Avg Payment</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #9b59b6;" id="avgHourly">$0</div>
+                        <div style="font-size: 12px; color: #666;">Avg $/Hour</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ad Space 4 -->
+        <div class="ad-space">
+            <p>Advertisement</p>
+        </div>
+
+        <div class="tips-section">
+            <h2>💡 Calculator Tips & Strategies</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>📱 Track Everything</h4>
+                    <p>Use our tracker to identify your most profitable centers and optimal donation times.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>🎯 Set Realistic Goals</h4>
+                    <p>Our goal calculator shows what's achievable based on actual center limits and schedules.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>⏰ Factor in Time</h4>
+                    <p>Don't just look at payment - calculate your true hourly rate including travel and wait time.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>🔄 Compare Centers</h4>
+                    <p>Use multiple calculators to compare different centers and find your best earning opportunities.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>📈 Plan for Bonuses</h4>
+                    <p>Factor in new donor bonuses, loyalty rewards, and special promotions in your calculations.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>💰 Maximize Efficiency</h4>
+                    <p>Use our time calculator to identify the most efficient donation schedule for your lifestyle.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>🎯 Maximizing Your Calculator Results</h2>
+        
+        <p>Our plasma donation calculators are designed to give you accurate, real-world projections based on current industry standards and actual donor experiences. Here's how to get the most value from these tools:</p>
+
+        <h3>💡 Advanced Calculation Strategies</h3>
+        
+        <p><strong>Factor in the complete picture:</strong> Don't just calculate basic pay rates. Our tools help you account for travel time, waiting periods, health screening time, and actual donation duration. Many donors are surprised to discover their true hourly rate when all time investments are considered.</p>
+
+        <p><strong>Plan for seasonal variations:</strong> Plasma center demand and compensation often fluctuates throughout the year. Use our annual projector to plan for holiday bonuses, back-to-school promotions, and summer slowdowns that affect earning potential.</p>
+
+        <!-- Ad Space 5 -->
+        <div class="ad-space">
+            <p>Advertisement</p>
+        </div>
+
+        <h3>📊 Center Comparison Analysis</h3>
+        
+        <p><strong>Multi-center strategy:</strong> Use our comparison tools to evaluate multiple plasma centers in your area. Even a $5 difference per donation adds up to over $500 annually for regular donors. Factor in location convenience, wait times, and staff efficiency when making your choice.</p>
+
+        <p><strong>Bonus optimization:</strong> Our calculators help you plan donation schedules to maximize new donor bonuses, referral payments, and loyalty rewards. Some donors earn an extra $200-400 per year just by optimizing their bonus timing.</p>
+
+        <h3>🎯 Goal-Based Income Planning</h3>
+        
+        <p><strong>Realistic target setting:</strong> Our goal achievement calculator uses actual plasma center donation limits and scheduling constraints to show you what's truly achievable. Most donors can realistically earn $200-400 per month, while dedicated donors in high-paying areas might reach $600-800 monthly.</p>
+
+        <p><strong>Emergency income planning:</strong> Use our calculators to determine how quickly you can generate emergency funds through plasma donation. Understanding your earning potential helps you plan for unexpected expenses or income gaps.</p>
+
+        <h3>⚠️ Important Calculation Considerations</h3>
+        
+        <p><strong>Health and eligibility factors:</strong> Our calculators assume regular donation eligibility. Remember that health conditions, medications, travel history, and lifestyle factors can affect your ability to donate consistently. Always factor in potential schedule disruptions.</p>
+
+        <p><strong>Tax implications:</strong> Plasma donation income is typically considered taxable income. Our calculators show gross earnings - remember to set aside approximately 15-25% for taxes depending on your total income level.</p>
+
+        <!-- Ad Space 6 -->
+        <div class="ad-space">
+            <p>Advertisement</p>
+        </div>
+
+        <h2>🔧 Calculator Accuracy & Updates</h2>
+        
+        <p>Our plasma donation calculators are updated regularly to reflect current industry pay rates, bonus structures, and donation guidelines. We source data from major plasma collection companies including CSL Plasma, BioLife, Grifols, and Octapharma to ensure accurate projections.</p>
+
+        <p><strong>Regional variations:</strong> Pay rates vary significantly by location due to local competition, cost of living, and plasma demand. Our calculators allow you to input your specific rates for accurate local projections.</p>
+
+        <p><strong>Market changes:</strong> The plasma industry evolves rapidly, with new centers opening, bonus structures changing, and compensation adjusting based on supply and demand. Check back monthly for updated calculation parameters and new tool features.</p>
+
+        <p>Ready to start maximizing your plasma donation income? Use our calculators above to create your personalized earning strategy, then check out our <a href="csl-plasma-pay-chart-2025-complete-rates-guide.html" style="color: #3498db;">complete pay rate guides</a> and <a href="make-1000-month-plasma-donation-realistic-guide-2025.html" style="color: #3498db;">income optimization strategies</a> for even more earning potential.</p>
+
+        <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+            <h3 style="color: white; margin-top: 0;">🚀 Ready to Maximize Your Plasma Income?</h3>
+            <p style="font-size: 18px; margin-bottom: 25px;">Use our calculators to create your personalized earning strategy and start making serious money from plasma donation!</p>
+            <button onclick="window.scrollTo(0, 0)" style="background: #e74c3c; color: white; border: none; padding: 15px 30px; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer;">Start Calculating Now ↑</button>
+        </div>
+    </div>
+
+    <script>
+        // Monthly Income Calculator
+        function calculateMonthly() {
+            const rate = parseFloat(document.getElementById('monthlyRate').value) || 0;
+            const donations = parseInt(document.getElementById('monthlyDonations').value) || 0;
+            const bonus = parseFloat(document.getElementById('bonusAmount').value) || 0;
+            
+            if (rate <= 0 || donations <= 0) {
+                document.getElementById('monthlyResult').innerHTML = 'Please enter valid amounts';
+                return;
+            }
+            
+            const monthlyIncome = (rate * donations) + bonus;
+            document.getElementById('monthlyResult').innerHTML = 
+                `💰 Monthly Income: <strong>$${monthlyIncome.toFixed(2)}</strong><br>
+                <small>($${rate} × ${donations} donations + $${bonus} bonus)</small>`;
+        }
+
+        // Annual Income Calculator
+        function calculateAnnual() {
+            const rate = parseFloat(document.getElementById('annualRate').value) || 0;
+            const donationsPerWeek = parseInt(document.getElementById('donationsPerWeek').value) || 0;
+            const weeksPerYear = parseInt(document.getElementById('weeksPerYear').value) || 0;
+            
+            if (rate <= 0 || donationsPerWeek <= 0 || weeksPerYear <= 0) {
+                document.getElementById('annualResult').innerHTML = 'Please enter valid amounts';
+                return;
+            }
+            
+            const annualIncome = rate * donationsPerWeek * weeksPerYear;
+            const monthlyAverage = annualIncome / 12;
+            
+            document.getElementById('annualResult').innerHTML = 
+                `📈 Annual Income: <strong>$${annualIncome.toFixed(2)}</strong><br>
+                <small>Monthly average: $${monthlyAverage.toFixed(2)}</small>`;
+        }
+
+        // Goal Achievement Calculator
+        function calculateGoal() {
+            const goal = parseFloat(document.getElementById('goalAmount').value) || 0;
+            const timeframe = document.getElementById('goalTimeframe').value;
+            const rate = parseFloat(document.getElementById('goalRate').value) || 0;
+            
+            if (goal <= 0 || rate <= 0) {
+                document.getElementById('goalResult').innerHTML = 'Please enter valid amounts';
+                return;
+            }
+            
+            let timeMultiplier = 1;
+            let timeText = 'month';
+            
+            if (timeframe === 'quarter') {
+                timeMultiplier = 3;
+                timeText = 'quarter';
+            } else if (timeframe === 'year') {
+                timeMultiplier = 12;
+                timeText = 'year';
+            }
+            
+            const totalNeeded = goal * timeMultiplier;
+            const donationsNeeded = Math.ceil(totalNeeded / rate);
+            const donationsPerMonth = Math.ceil(donationsNeeded / timeMultiplier);
+            
+            document.getElementById('goalResult').innerHTML = 
+                `🎯 To earn $${goal}/${timeText}:<br>
+                <strong>${donationsNeeded} total donations</strong><br>
+                <small>(~${donationsPerMonth} donations/month)</small>`;
+        }
+
+        // Hourly Rate Calculator
+        function calculateHourlyRate() {
+            const pay = parseFloat(document.getElementById('hourlyPay').value) || 0;
+            const travel = parseInt(document.getElementById('travelTime').value) || 0;
+            const center = parseInt(document.getElementById('totalTime').value) || 0;
+            
+            if (pay <= 0 || center <= 0) {
+                document.getElementById('hourlyResult').innerHTML = 'Please enter valid amounts';
+                return;
+            }
+            
+            const totalMinutes = travel + center;
+            const totalHours = totalMinutes / 60;
+            const hourlyRate = pay / totalHours;
+            
+            document.getElementById('hourlyResult').innerHTML = 
+                `⏰ True Hourly Rate: <strong>$${hourlyRate.toFixed(2)}/hour</strong><br>
+                <small>Total time: ${totalMinutes} minutes</small>`;
+        }
+
+        // Donation Tracker
+        let donations = JSON.parse(localStorage.getItem('plasmaTracker') || '[]');
+        
+        function addDonation() {
+            const date = document.getElementById('trackDate').value;
+            const center = document.getElementById('trackCenter').value;
+            const amount = parseFloat(document.getElementById('trackAmount').value);
+            const time = parseInt(document.getElementById('trackTime').value);
+            
+            if (!date || !center || !amount || !time) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            const hourlyRate = (amount / (time / 60)).toFixed(2);
+            
+            const donation = {
+                date,
+                center,
+                amount,
+                time,
+                hourlyRate: parseFloat(hourlyRate)
+            };
+            
+            donations.unshift(donation);
+            localStorage.setItem('plasmaTracker', JSON.stringify(donations));
+            
+            // Clear form
+            document.getElementById('trackDate').value = '';
+            document.getElementById('trackCenter').value = '';
+            document.getElementById('trackAmount').value = '';
+            document.getElementById('trackTime').value = '';
+            
+            updateTrackerDisplay();
+        }
+        
+        function updateTrackerDisplay() {
+            const tbody = document.getElementById('donationHistory');
+            
+            if (donations.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: #666; padding: 30px;">No donations tracked yet. Add your first donation above!</td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = donations.map(d => `
+                <tr>
+                    <td>${new Date(d.date).toLocaleDateString()}</td>
+                    <td>${d.center}</td>
+                    <td>$${d.amount.toFixed(2)}</td>
+                    <td>${d.time} min</td>
+                    <td>$${d.hourlyRate.toFixed(2)}</td>
+                </tr>
+            `).join('');
+            
+            // Update statistics
+            const totalDonations = donations.length;
+            const totalEarnings = donations.reduce((sum, d) => sum + d.amount, 0);
+            const avgPayment = totalEarnings / totalDonations;
+            const avgHourly = donations.reduce((sum, d) => sum + d.hourlyRate, 0) / totalDonations;
+            
+            document.getElementById('totalDonations').textContent = totalDonations;
+            document.getElementById('totalEarnings').textContent = `$${totalEarnings.toFixed(2)}`;
+            document.getElementById('avgPayment').textContent = `$${avgPayment.toFixed(2)}`;
+            document.getElementById('avgHourly').textContent = `$${avgHourly.toFixed(2)}`;
+        }
+        
+        // Initialize tracker display
+        updateTrackerDisplay();
+        
+        // Set today's date as default
+        document.getElementById('trackDate').valueAsDate = new Date();
+    </script>
+</body>
+</html>
