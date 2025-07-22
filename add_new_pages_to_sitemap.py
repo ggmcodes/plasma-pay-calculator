@@ -238,6 +238,41 @@ def add_new_pages_to_sitemap():
             'url': 'https://plasmapaycalculator.com/blog/plasma-donation-frequency-schedule-optimization-2025.html',
             'priority': '0.8',
             'changefreq': 'monthly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-eligibility-requirements-comprehensive-guide-2025.html',
+            'priority': '0.9',
+            'changefreq': 'monthly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-recovery-tips-complete-guide-2025.html',
+            'priority': '0.8',
+            'changefreq': 'monthly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-bonus-maximization-strategies-2025.html',
+            'priority': '0.9',
+            'changefreq': 'weekly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-safety-medical-concerns-2025.html',
+            'priority': '0.9',
+            'changefreq': 'monthly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-first-time-complete-guide-2025.html',
+            'priority': '0.9',
+            'changefreq': 'monthly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-nutrition-diet-optimization-2025.html',
+            'priority': '0.8',
+            'changefreq': 'monthly'
+        },
+        {
+            'url': 'https://plasmapaycalculator.com/blog/plasma-donation-tax-implications-irs-guide-2025.html',
+            'priority': '0.9',
+            'changefreq': 'monthly'
         }
     ]
     
