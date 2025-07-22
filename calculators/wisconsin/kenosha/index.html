@@ -237,8 +237,72 @@
 
     
     <link rel="canonical" href="https://plasmapaycalculator.com/state/wisconsin/kenosha">
+
+    <style>
+    .language-switcher {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border: 1px solid #e2e8f0;
+    }
+    .lang-option {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        text-decoration: none;
+        color: #374151;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border-radius: 7px;
+        min-width: 60px;
+        justify-content: center;
+    }
+    .lang-option:hover {
+        background: #f8fafc;
+        color: #1f2937;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .lang-option .flag {
+        margin-right: 6px;
+        font-size: 16px;
+    }
+    .lang-option .lang-text {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    @media (max-width: 768px) {
+        .language-switcher {
+            top: 10px;
+            right: 10px;
+        }
+        .lang-option {
+            padding: 6px 10px;
+            min-width: 50px;
+        }
+        .lang-option .flag {
+            margin-right: 4px;
+            font-size: 14px;
+        }
+        .lang-option .lang-text {
+            font-size: 11px;
+        }
+    }
+    </style>
 </head>
 <body class="bg-gray-50">
+
+    <div class="language-switcher">
+        <a href="/es/calculators/wisconsin/kenosha/" class="lang-option spanish" title="Español">
+            <span class="flag">🇲🇽</span>
+            <span class="lang-text">ES</span>
+        </a>
+    </div>
+
     <!-- Header -->
     <header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -119,8 +119,72 @@
     </script>
     
     <link rel="canonical" href="https://plasmapaycalculator.com/es/calculators/georgia">
+
+    <style>
+    .language-switcher {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border: 1px solid #e2e8f0;
+    }
+    .lang-option {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        text-decoration: none;
+        color: #374151;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border-radius: 7px;
+        min-width: 60px;
+        justify-content: center;
+    }
+    .lang-option:hover {
+        background: #f8fafc;
+        color: #1f2937;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .lang-option .flag {
+        margin-right: 6px;
+        font-size: 16px;
+    }
+    .lang-option .lang-text {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    @media (max-width: 768px) {
+        .language-switcher {
+            top: 10px;
+            right: 10px;
+        }
+        .lang-option {
+            padding: 6px 10px;
+            min-width: 50px;
+        }
+        .lang-option .flag {
+            margin-right: 4px;
+            font-size: 14px;
+        }
+        .lang-option .lang-text {
+            font-size: 11px;
+        }
+    }
+    </style>
 </head>
 <body class="bg-gray-50">
+
+    <div class="language-switcher">
+        <a href="/calculators/georgia/" class="lang-option english" title="English">
+            <span class="flag">🇺🇸</span>
+            <span class="lang-text">EN</span>
+        </a>
+    </div>
+
     <!-- Header -->
     <header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,7 +198,7 @@
                     <a href="/es/blog/" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Blog</a>
                     <a href="/es/faq.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Preguntas</a>
                     <a href="/es/about.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Acerca de</a>
-                    <a href="/calculators/georgia/" class="text-sm bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md font-medium transition-colors">English</a>
+                    <a href="/es/calculators/georgia/" class="text-sm bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md font-medium transition-colors">English</a>
                 </nav>
                 <button class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100">
                     <span class="sr-only">Abrir menú principal</span>
@@ -407,7 +471,7 @@
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-4">Idioma</h3>
-                    <a href="/calculators/georgia/" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md inline-block">English Version</a>
+                    <a href="/es/calculators/georgia/" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md inline-block">English Version</a>
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
