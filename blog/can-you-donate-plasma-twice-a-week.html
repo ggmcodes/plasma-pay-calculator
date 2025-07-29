@@ -125,7 +125,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -136,33 +233,68 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">💰 Pay Calculator</a>
-            </nav>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     
-    <main class="blog-post">
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
-            <div class="breadcrumb">
+            <div class="flex items-center space-x-2 text-sm text-gray-600 mb-8">
                 <a href="/">Home</a> > <a href="/blog/index.html">Blog</a> > Can You Donate Plasma Twice a Week?
             </div>
             
             <!-- Hero Section -->
-            <article class="post-header">
-                <h1>Can You Donate Plasma Twice a Week? Complete Safety & Earnings Guide 2025</h1>
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Can You Donate Plasma Twice a Week? Complete Safety & Earnings Guide 2025</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/SlyCz11RhfY/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="post-meta">
@@ -173,8 +305,8 @@
                 
                 <!-- Quick Answer Box -->
                 <div class="quick-answer-box">
-                    <h2>🔥 Quick Answer</h2>
-                    <p><strong>YES! You can donate plasma twice per week</strong> with at least 48 hours between donations. This FDA-approved schedule lets you earn <strong>$400-$800 monthly</strong> while staying completely safe.</p>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🔥 Quick Answer</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>YES! You can donate plasma twice per week</strong> with at least 48 hours between donations. This FDA-approved schedule lets you earn <strong>$400-$800 monthly</strong> while staying completely safe.</p>
                     <div class="cta-inline">
                         <a href="/?search=true" class="cta-btn">Find Centers Near Me</a>
                     </div>
@@ -186,10 +318,10 @@
                 
                 <!-- FDA Rules Section -->
                 <section class="content-section">
-                    <h2>📋 Official FDA Rules for Plasma Donation Frequency</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📋 Official FDA Rules for Plasma Donation Frequency</h2>
                     
                     <div class="info-highlight">
-                        <h3>✅ What's Allowed:</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">✅ What's Allowed:</h3>
                         <ul>
                             <li><strong>Maximum 2 donations per week</strong></li>
                             <li><strong>Minimum 48 hours between donations</strong></li>
@@ -199,7 +331,7 @@
                     </div>
                     
                     <div class="warning-box">
-                        <h3>❌ What's NOT Allowed:</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ What's NOT Allowed:</h3>
                         <ul>
                             <li>More than 2 donations in any 7-day period</li>
                             <li>Donating on consecutive days</li>
@@ -208,57 +340,57 @@
                         </ul>
                     </div>
                     
-                    <p>The FDA strictly regulates plasma donation frequency to ensure donor safety. These rules apply to <strong>all plasma centers nationwide</strong> - there are no exceptions.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">The FDA strictly regulates plasma donation frequency to ensure donor safety. These rules apply to <strong>all plasma centers nationwide</strong> - there are no exceptions.</p>
                 </section>
 
                 <!-- Optimal Schedule Section -->
                 <section class="content-section">
-                    <h2>📅 Best Plasma Donation Schedules (Twice Weekly)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📅 Best Plasma Donation Schedules (Twice Weekly)</h2>
                     
                     <div class="schedule-grid">
                         <div class="schedule-card">
-                            <h3>🔥 Most Popular: Tuesday/Friday</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🔥 Most Popular: Tuesday/Friday</h3>
                             <div class="schedule-details">
-                                <p><strong>Donation 1:</strong> Tuesday (any time)</p>
-                                <p><strong>Donation 2:</strong> Friday (any time)</p>
-                                <p><strong>Gap:</strong> 72+ hours between visits</p>
-                                <p><strong>Why it works:</strong> Avoids busy Monday/Saturday crowds, maximizes weekend recovery time</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Donation 1:</strong> Tuesday (any time)</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Donation 2:</strong> Friday (any time)</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Gap:</strong> 72+ hours between visits</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Why it works:</strong> Avoids busy Monday/Saturday crowds, maximizes weekend recovery time</p>
                             </div>
                         </div>
                         
                         <div class="schedule-card">
-                            <h3>💼 Working Professional: Wednesday/Saturday</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💼 Working Professional: Wednesday/Saturday</h3>
                             <div class="schedule-details">
-                                <p><strong>Donation 1:</strong> Wednesday evening</p>
-                                <p><strong>Donation 2:</strong> Saturday morning</p>
-                                <p><strong>Gap:</strong> 72+ hours between visits</p>
-                                <p><strong>Why it works:</strong> Fits around work schedule, weekend availability</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Donation 1:</strong> Wednesday evening</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Donation 2:</strong> Saturday morning</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Gap:</strong> 72+ hours between visits</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Why it works:</strong> Fits around work schedule, weekend availability</p>
                             </div>
                         </div>
                         
                         <div class="schedule-card">
-                            <h3>🎓 Student Schedule: Monday/Thursday</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🎓 Student Schedule: Monday/Thursday</h3>
                             <div class="schedule-details">
-                                <p><strong>Donation 1:</strong> Monday between classes</p>
-                                <p><strong>Donation 2:</strong> Thursday between classes</p>
-                                <p><strong>Gap:</strong> 72+ hours between visits</p>
-                                <p><strong>Why it works:</strong> Consistent weekday schedule, keeps weekends free</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Donation 1:</strong> Monday between classes</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Donation 2:</strong> Thursday between classes</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Gap:</strong> 72+ hours between visits</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Why it works:</strong> Consistent weekday schedule, keeps weekends free</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="pro-tip">
                         <h4>💡 Pro Tip: Stick to Your Schedule</h4>
-                        <p>Centers often offer <strong>loyalty bonuses</strong> for consistent donors. Maintaining the same weekly schedule can earn you extra $10-$25 per month!</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Centers often offer <strong>loyalty bonuses</strong> for consistent donors. Maintaining the same weekly schedule can earn you extra $10-$25 per month!</p>
                     </div>
                 </section>
 
                 <!-- Earnings Section -->
                 <section class="content-section">
-                    <h2>💰 How Much Can You Earn Donating Twice Weekly?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💰 How Much Can You Earn Donating Twice Weekly?</h2>
                     
                     <div class="earnings-calculator">
-                        <h3>📊 Monthly Earnings Calculator (8 Donations)</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📊 Monthly Earnings Calculator (8 Donations)</h3>
                         
                         <div class="earnings-scenarios">
                             <div class="scenario">
@@ -294,24 +426,24 @@
                         
                         <div class="bonus-info">
                             <h4>🎁 Don't Forget New Donor Bonuses!</h4>
-                            <p>First-time donors can add <strong>$600-$1,000</strong> to their first month earnings with completion bonuses.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">First-time donors can add <strong>$600-$1,000</strong> to their first month earnings with completion bonuses.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Safety Section -->
                 <section class="content-section">
-                    <h2>🛡️ Is Donating Plasma Twice Weekly Safe?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛡️ Is Donating Plasma Twice Weekly Safe?</h2>
                     
                     <div class="safety-overview">
                         <div class="safety-point">
-                            <h3>✅ Completely Safe When Done Properly</h3>
-                            <p>The FDA's twice-weekly limit is based on extensive medical research. Your body fully replaces donated plasma within 24-48 hours, making regular donation safe for healthy adults.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">✅ Completely Safe When Done Properly</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">The FDA's twice-weekly limit is based on extensive medical research. Your body fully replaces donated plasma within 24-48 hours, making regular donation safe for healthy adults.</p>
                         </div>
                         
                         <div class="safety-point">
-                            <h3>🩺 Medical Monitoring</h3>
-                            <p>Every donation includes:</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🩺 Medical Monitoring</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Every donation includes:</p>
                             <ul>
                                 <li>Vital signs check (blood pressure, pulse, temperature)</li>
                                 <li>Protein level testing</li>
@@ -321,8 +453,8 @@
                         </div>
                         
                         <div class="safety-point">
-                            <h3>⚠️ When to Take Breaks</h3>
-                            <p>Consider reducing frequency if you experience:</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚠️ When to Take Breaks</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Consider reducing frequency if you experience:</p>
                             <ul>
                                 <li>Persistent fatigue</li>
                                 <li>Slow wound healing</li>
@@ -335,64 +467,64 @@
 
                 <!-- Maximizing Tips Section -->
                 <section class="content-section">
-                    <h2>🚀 Tips to Maximize Your Twice-Weekly Donations</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚀 Tips to Maximize Your Twice-Weekly Donations</h2>
                     
                     <div class="tips-grid">
                         <div class="tip-card">
-                            <h3>💧 Stay Hydrated</h3>
-                            <p>Drink 64+ oz of water daily, especially 2-3 hours before donation. Well-hydrated donors have faster flow rates and shorter donation times.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💧 Stay Hydrated</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Drink 64+ oz of water daily, especially 2-3 hours before donation. Well-hydrated donors have faster flow rates and shorter donation times.</p>
                         </div>
                         
                         <div class="tip-card">
-                            <h3>🥩 Eat Protein-Rich Foods</h3>
-                            <p>Consume 50g+ protein daily. Good sources: lean meats, eggs, beans, nuts. Higher protein levels mean better donation eligibility.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🥩 Eat Protein-Rich Foods</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Consume 50g+ protein daily. Good sources: lean meats, eggs, beans, nuts. Higher protein levels mean better donation eligibility.</p>
                         </div>
                         
                         <div class="tip-card">
-                            <h3>💤 Get Adequate Sleep</h3>
-                            <p>7-8 hours of sleep before donation helps maintain stable vital signs and reduces risk of feeling faint during the process.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💤 Get Adequate Sleep</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">7-8 hours of sleep before donation helps maintain stable vital signs and reduces risk of feeling faint during the process.</p>
                         </div>
                         
                         <div class="tip-card">
-                            <h3>🏃‍♂️ Exercise Regularly</h3>
-                            <p>Light cardio improves circulation and vein accessibility. Avoid intense workouts 24 hours before donation.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🏃‍♂️ Exercise Regularly</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Light cardio improves circulation and vein accessibility. Avoid intense workouts 24 hours before donation.</p>
                         </div>
                         
                         <div class="tip-card">
-                            <h3>🚫 Avoid Alcohol & Drugs</h3>
-                            <p>No alcohol 24 hours before donation. Avoid medications that thin blood or affect protein levels (check with staff).</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🚫 Avoid Alcohol & Drugs</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">No alcohol 24 hours before donation. Avoid medications that thin blood or affect protein levels (check with staff).</p>
                         </div>
                         
                         <div class="tip-card">
-                            <h3>📱 Use Center Apps</h3>
-                            <p>Download your center's app for scheduling, tracking donations, and receiving exclusive bonus notifications.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📱 Use Center Apps</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Download your center's app for scheduling, tracking donations, and receiving exclusive bonus notifications.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Common Myths Section -->
                 <section class="content-section">
-                    <h2>🔍 Busting Common Myths About Twice-Weekly Donation</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🔍 Busting Common Myths About Twice-Weekly Donation</h2>
                     
                     <div class="myths-section">
                         <div class="myth">
-                            <h3>❌ Myth: "Donating twice weekly weakens your immune system"</h3>
-                            <p><strong>✅ Truth:</strong> Plasma donation doesn't affect white blood cells or immune function. Your body replaces plasma proteins within 24-48 hours.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ Myth: "Donating twice weekly weakens your immune system"</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>✅ Truth:</strong> Plasma donation doesn't affect white blood cells or immune function. Your body replaces plasma proteins within 24-48 hours.</p>
                         </div>
                         
                         <div class="myth">
-                            <h3>❌ Myth: "You'll become anemic from frequent donation"</h3>
-                            <p><strong>✅ Truth:</strong> Plasma donation doesn't remove red blood cells. Centers test hematocrit levels to ensure you maintain healthy iron levels.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ Myth: "You'll become anemic from frequent donation"</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>✅ Truth:</strong> Plasma donation doesn't remove red blood cells. Centers test hematocrit levels to ensure you maintain healthy iron levels.</p>
                         </div>
                         
                         <div class="myth">
-                            <h3>❌ Myth: "Your veins will collapse from too much donation"</h3>
-                            <p><strong>✅ Truth:</strong> Properly performed donations don't damage veins. Professional staff use single-use, sterile equipment and rotate injection sites.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ Myth: "Your veins will collapse from too much donation"</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>✅ Truth:</strong> Properly performed donations don't damage veins. Professional staff use single-use, sterile equipment and rotate injection sites.</p>
                         </div>
                         
                         <div class="myth">
-                            <h3>❌ Myth: "Centers don't track donations between locations"</h3>
-                            <p><strong>✅ Truth:</strong> All donations are federally tracked. Attempting to donate at multiple centers more than twice weekly will be caught and prevented.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ Myth: "Centers don't track donations between locations"</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>✅ Truth:</strong> All donations are federally tracked. Attempting to donate at multiple centers more than twice weekly will be caught and prevented.</p>
                         </div>
                     </div>
                 </section>
@@ -404,10 +536,10 @@
 
                 <!-- Call to Action -->
                 <section class="content-section cta-section">
-                    <h2>🚀 Ready to Start Your Twice-Weekly Donation Schedule?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚀 Ready to Start Your Twice-Weekly Donation Schedule?</h2>
                     
                     <div class="final-cta">
-                        <p>Now that you know you can safely donate plasma twice weekly and earn <strong>$400-$800 monthly</strong>, it's time to find the highest-paying centers near you!</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Now that you know you can safely donate plasma twice weekly and earn <strong>$400-$800 monthly</strong>, it's time to find the highest-paying centers near you!</p>
                         
                         <div class="cta-buttons">
                             <a href="/?search=true" class="cta-btn primary">🔍 Find Centers Near Me</a>
@@ -415,7 +547,7 @@
                         </div>
                         
                         <div class="final-tips">
-                            <h3>📝 Your Next Steps:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📝 Your Next Steps:</h3>
                             <ol>
                                 <li><strong>Find a center</strong> with the highest pay rates in your area</li>
                                 <li><strong>Schedule your first appointment</strong> and bring required documents</li>
@@ -428,7 +560,7 @@
 
                 <!-- Related Articles -->
                 <section class="related-articles">
-                    <h3>🔗 Related Articles:</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🔗 Related Articles:</h3>
                     <div class="related-links">
                         <a href="/blog/how-much-money-can-you-make-donating-plasma-2025.html">How Much Money Can You Make Donating Plasma?</a>
                         <a href="/blog/highest-paying-plasma-centers-near-me.html">Highest Paying <a href="/centers/" class="text-green-600 hover:text-green-800 underline">Plasma Centers Near Me</a></a>
@@ -439,7 +571,7 @@
 
                 <!-- Sources & References -->
                 <section class="content-section sources-section">
-                    <h3>📚 Sources & References</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                     <div class="sources-list">
                         <ul>
                             <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood Donor Screening Requirements</a></li>
@@ -455,15 +587,15 @@
 
                 <!-- Author Profile -->
                 <section class="content-section author-profile">
-                    <h3>Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
                     <div class="author-badges">
                         <span class="badge">📊 2,522+ Centers Analyzed</span>
                         <span class="badge">📅 Frequency Expert</span>
                     </div>
-                    <p>Glen has researched FDA plasma donation regulations extensively and analyzed safety data from over 800 plasma centers nationwide. His expertise in donation frequency guidelines and safety scheduling has helped thousands of donors understand safe twice-weekly donation practices while maximizing their earning potential within regulatory limits.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Glen has researched FDA plasma donation regulations extensively and analyzed safety data from over 800 plasma centers nationwide. His expertise in donation frequency guidelines and safety scheduling has helped thousands of donors understand safe twice-weekly donation practices while maximizing their earning potential within regulatory limits.</p>
                     
                     <div class="disclaimer-note">
-                        <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
                     </div>
                     
                     <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
@@ -472,21 +604,21 @@
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer">
-                        <h2>⚠️ Important Medical Disclaimer</h2>
-                        <p><strong>This information is for educational purposes only and should not replace professional medical advice.</strong></p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚠️ Important Medical Disclaimer</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>This information is for educational purposes only and should not replace professional medical advice.</strong></p>
                         <ul>
                             <li>Always consult your healthcare provider before starting plasma donation</li>
                             <li>Medical conditions, medications, and individual health factors may affect donation eligibility</li>
@@ -494,17 +626,17 @@
                             <li>If you experience any adverse effects, stop donating and seek medical attention immediately</li>
                             <li>This content is not affiliated with any specific plasma center or medical organization</li>
                         </ul>
-                        <p><em>Last updated: January 2025. Always verify current FDA regulations and center policies.</em></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><em>Last updated: January 2025. Always verify current FDA regulations and center policies.</em></p>
                     </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, <a href="/health/" class="text-green-600 hover:text-green-800 underline">eligibility requirements</a>, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -528,7 +660,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Donation Frequency</h4>
-                <p>Learn everything about safe plasma donation schedules, FDA rules, and maximizing your earnings with twice-weekly donations.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Learn everything about safe plasma donation schedules, FDA rules, and maximizing your earnings with twice-weekly donations.</p>
             </div>
             <div class="footer-section">
                 <h4>Popular Guides</h4>

@@ -508,7 +508,102 @@
         .footer-section a:hover {
             color: #27ae60;
         }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
 
     <style>
     .language-switcher {
@@ -564,9 +659,159 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <div class="language-switcher">
         <a href="/es/blog/plasma-donation-health-tips.html" class="lang-option spanish" title="Español">
@@ -579,50 +824,64 @@
     <nav>
         <div class="nav-container">
             <div style="display: flex; align-items: center;">
-                <a href="../" class="logo">
+                <a href="/" class="logo">
                     <div class="logo-icon">PPC</div>
-                    <a href="/calculator/" class="text-green-600 hover:text-green-800 underline">Plasma Pay Calculator</a>
+                    Plasma Pay Calculator
                 </a>
-                <div class="trust-badge">California Health Expert</div>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
             <ul class="nav-links">
-                <li><a href="../#calculator">Calculator</a></li>
-                <li><a href="../blog/" class="active">Earning Tips</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../#calculator" class="cta-btn">Calculate My Earnings</a></li>
+                <li><a href="/" class="active">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
             <!-- Article Header -->
             <div class="article-header">
-                <h1>California Plasma Donor Health Guide: Thriving in LA, San Diego, SF & Sacramento</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">California Plasma Donor Health Guide: Thriving in LA, San Diego, SF & Sacramento</h1>
                 <div class="article-meta">
                     <span>📅 Updated: January 18, 2025</span>
                     <span>⏱️ 12 min read</span>
                     <span>🏥 California Health Guide</span>
                 </div>
-                <p>Comprehensive health strategies for California plasma donors. From tech worker nutrition in the Bay Area to entertainment industry wellness in Los Angeles, plus lifestyle tips for San Diego and Sacramento donors.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Comprehensive health strategies for California plasma donors. From tech worker nutrition in the Bay Area to entertainment industry wellness in Los Angeles, plus lifestyle tips for San Diego and Sacramento donors.</p>
             </div>
 
             <!-- California Health Investment Connection -->
             <div class="content-section">
-                <h2>💪 Your Health Investment Strategy for California Plasma Success</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💪 Your Health Investment Strategy for California Plasma Success</h2>
                 
                 <div class="ca-health-spotlight">
-                    <h3>California Health = Maximum Earning Potential</h3>
-                    <p><strong>High-Cost Investment, Higher Returns:</strong> California's expensive supplements and health foods require strategic planning but protect $800-1,200 monthly plasma income<br>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Health = Maximum Earning Potential</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>High-Cost Investment, Higher Returns:</strong> California's expensive supplements and health foods require strategic planning but protect $800-1,200 monthly plasma income<br>
                     <strong>California Advantage:</strong> Premium plasma rates mean health investments pay back faster than other states<br>
                     <strong>ROI Strategy:</strong> Spend $80-120 monthly on health to protect $9,600-14,400 annual plasma income</p>
                 </div>
 
-                <p>California's plasma donation market rewards healthy, consistent donors with some of the nation's highest compensation rates. Whether you're a Google software engineer in Mountain View maximizing your side income, a USC film student in Los Angeles funding your education, or a Navy family in San Diego supplementing military pay, maintaining optimal health is your key to sustained earning success.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California's plasma donation market rewards healthy, consistent donors with some of the nation's highest compensation rates. Whether you're a Google software engineer in Mountain View maximizing your side income, a USC film student in Los Angeles funding your education, or a Navy family in San Diego supplementing military pay, maintaining optimal health is your key to sustained earning success.</p>
 
-                <h3>The California Health Investment Equation</h3>
-                <p>California's higher cost of living affects everything - including the supplements and nutrition needed for optimal plasma donation health. However, the state's premium plasma rates create a compelling investment opportunity:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">The California Health Investment Equation</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California's higher cost of living affects everything - including the supplements and nutrition needed for optimal plasma donation health. However, the state's premium plasma rates create a compelling investment opportunity:</p>
 
                 <ul>
                     <li><strong>Bay Area Reality:</strong> Premium supplements cost 20% more but protect $900+ monthly income</li>
@@ -636,67 +895,67 @@
                     <div class="roi-calculation">Monthly Health Investment: $100</div>
                     <div class="roi-calculation">Protected Monthly Income: $850</div>
                     <div class="roi-calculation">Annual ROI: 850% return on investment</div>
-                    <p>Smart California donors view health expenses as business investments with exceptional returns</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Smart California donors view health expenses as business investments with exceptional returns</p>
                 </div>
             </div>
 
             <!-- California City-Specific Health Strategies -->
             <div class="content-section">
-                <h2>🌴 City-Specific Health Strategies Across California</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🌴 City-Specific Health Strategies Across California</h2>
                 
-                <p>Each major California metro area presents unique health challenges and opportunities for plasma donors. Tailor your approach to your local environment and lifestyle:</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Each major California metro area presents unique health challenges and opportunities for plasma donors. Tailor your approach to your local environment and lifestyle:</p>
 
                 <div class="city-health-grid">
                     <div class="city-health-card">
                         <h4><span class="emoji">🌉</span>San Francisco Bay Area</h4>
-                        <p><strong>Tech Worker Focus:</strong> Combat long coding sessions and high-stress environments</p>
-                        <p><strong>Key Challenges:</strong> Irregular eating from startup culture, excessive caffeine, poor sleep from tech schedules</p>
-                        <p><strong>Solutions:</strong> Meal delivery services (Blue Apron, Factor), premium supplements from Whole Foods, Equinox gym access</p>
-                        <p><strong>Advantage:</strong> High salaries support premium health investments</p>
-                        <p><strong>Local Resources:</strong> UCSF nutrition programs, Stanford wellness research</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Tech Worker Focus:</strong> Combat long coding sessions and high-stress environments</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Challenges:</strong> Irregular eating from startup culture, excessive caffeine, poor sleep from tech schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Solutions:</strong> Meal delivery services (Blue Apron, Factor), premium supplements from Whole Foods, Equinox gym access</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Advantage:</strong> High salaries support premium health investments</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Local Resources:</strong> UCSF nutrition programs, Stanford wellness research</p>
                     </div>
 
                     <div class="city-health-card">
                         <h4><span class="emoji">🎬</span>Los Angeles Area</h4>
-                        <p><strong>Entertainment Industry Focus:</strong> Maintain health during irregular filming schedules</p>
-                        <p><strong>Key Challenges:</strong> Craft services temptation, unpredictable work hours, industry stress</p>
-                        <p><strong>Solutions:</strong> Trader Joe's budget nutrition, LA Fitness chains, meal prep for set days</p>
-                        <p><strong>Advantage:</strong> Health-conscious culture supports plasma donor wellness</p>
-                        <p><strong>Local Resources:</strong> UCLA nutrition programs, Hollywood wellness centers</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Entertainment Industry Focus:</strong> Maintain health during irregular filming schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Challenges:</strong> Craft services temptation, unpredictable work hours, industry stress</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Solutions:</strong> Trader Joe's budget nutrition, LA Fitness chains, meal prep for set days</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Advantage:</strong> Health-conscious culture supports plasma donor wellness</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Local Resources:</strong> UCLA nutrition programs, Hollywood wellness centers</p>
                     </div>
 
                     <div class="city-health-card">
                         <h4><span class="emoji">⚓</span>San Diego Region</h4>
-                        <p><strong>Military/University Focus:</strong> Leverage base resources and student health programs</p>
-                        <p><strong>Key Challenges:</strong> Deployment schedules, student budget constraints, beach lifestyle distractions</p>
-                        <p><strong>Solutions:</strong> Commissary shopping, base gyms, UCSD student health resources</p>
-                        <p><strong>Advantage:</strong> Military fitness culture supports donation health</p>
-                        <p><strong>Local Resources:</strong> Naval Medical Center, UCSD Medical programs</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Military/University Focus:</strong> Leverage base resources and student health programs</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Challenges:</strong> Deployment schedules, student budget constraints, beach lifestyle distractions</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Solutions:</strong> Commissary shopping, base gyms, UCSD student health resources</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Advantage:</strong> Military fitness culture supports donation health</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Local Resources:</strong> Naval Medical Center, UCSD Medical programs</p>
                     </div>
 
                     <div class="city-health-card">
                         <h4><span class="emoji">🏛️</span>Sacramento Area</h4>
-                        <p><strong>Government Worker Focus:</strong> Utilize state employee benefits and stable schedules</p>
-                        <p><strong>Key Challenges:</strong> Desk job sedentary lifestyle, bureaucratic stress, limited lunch options</p>
-                        <p><strong>Solutions:</strong> CalPERS health benefits, state employee gym discounts, downtown meal options</p>
-                        <p><strong>Advantage:</strong> Stable schedules allow consistent health routines</p>
-                        <p><strong>Local Resources:</strong> UC Davis nutrition research, state employee wellness programs</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Government Worker Focus:</strong> Utilize state employee benefits and stable schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Challenges:</strong> Desk job sedentary lifestyle, bureaucratic stress, limited lunch options</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Solutions:</strong> CalPERS health benefits, state employee gym discounts, downtown meal options</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Advantage:</strong> Stable schedules allow consistent health routines</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Local Resources:</strong> UC Davis nutrition research, state employee wellness programs</p>
                     </div>
                 </div>
             </div>
 
             <!-- Tech Worker Specific Health Strategies -->
             <div class="content-section">
-                <h2>💻 Bay Area Tech Worker Plasma Health Protocol</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💻 Bay Area Tech Worker Plasma Health Protocol</h2>
                 
-                <p>Tech workers at Google, Apple, Meta, Tesla, and Netflix face unique health challenges that can impact plasma donation eligibility. Here's your specialized health strategy:</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Tech workers at Google, Apple, Meta, Tesla, and Netflix face unique health challenges that can impact plasma donation eligibility. Here's your specialized health strategy:</p>
 
                 <div class="tech-health-callout">
                     <h4>Combating Tech Worker Health Challenges</h4>
-                    <p>Long coding sessions, high stress, irregular eating, and excessive caffeine consumption are common in Bay Area tech culture. These factors can lead to dehydration, poor nutrition, and elevated blood pressure - all potential barriers to plasma donation. Strategic health management is essential for maintaining your $900+ monthly plasma income.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Long coding sessions, high stress, irregular eating, and excessive caffeine consumption are common in Bay Area tech culture. These factors can lead to dehydration, poor nutrition, and elevated blood pressure - all potential barriers to plasma donation. Strategic health management is essential for maintaining your $900+ monthly plasma income.</p>
                 </div>
 
-                <h3>Pre-Donation Tech Worker Protocol</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Pre-Donation Tech Worker Protocol</h3>
                 <div class="ca-nutrition-table">
                     <table>
                         <thead>
@@ -742,7 +1001,7 @@
                     </table>
                 </div>
 
-                <h3>Tech Campus Nutrition Strategy</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Tech Campus Nutrition Strategy</h3>
                 <ul>
                     <li><strong>Google Campus (Mountain View):</strong> Use micro-kitchens for protein snacks, avoid excessive free food</li>
                     <li><strong>Apple Park (Cupertino):</strong> Take advantage of on-site fitness center before donations</li>
@@ -753,22 +1012,22 @@
 
                 <div class="lifestyle-section">
                     <h4>Tech Worker Recovery Optimization</h4>
-                    <p>High-stress tech environments require enhanced recovery protocols. Use your tech salary advantage to invest in premium recovery tools: sleep tracking devices, premium meal delivery, and ergonomic workspace setups that support plasma donation health.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">High-stress tech environments require enhanced recovery protocols. Use your tech salary advantage to invest in premium recovery tools: sleep tracking devices, premium meal delivery, and ergonomic workspace setups that support plasma donation health.</p>
                 </div>
             </div>
 
             <!-- Entertainment Industry Health Guide -->
             <div class="content-section">
-                <h2>🎭 Los Angeles Entertainment Industry Plasma Health</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎭 Los Angeles Entertainment Industry Plasma Health</h2>
                 
-                <p>Entertainment industry professionals face unique challenges: irregular schedules, craft services temptation, and industry stress. Here's your specialized approach for maintaining plasma donation health while working in Hollywood:</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Entertainment industry professionals face unique challenges: irregular schedules, craft services temptation, and industry stress. Here's your specialized approach for maintaining plasma donation health while working in Hollywood:</p>
 
                 <div class="entertainment-callout">
                     <h4>Hollywood Health Reality Check</h4>
-                    <p>Long filming days, catering-heavy sets, and the feast-or-famine nature of entertainment work create nutrition challenges. However, LA's health-conscious culture and abundant wellness resources make it easier to maintain optimal plasma donation health.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Long filming days, catering-heavy sets, and the feast-or-famine nature of entertainment work create nutrition challenges. However, LA's health-conscious culture and abundant wellness resources make it easier to maintain optimal plasma donation health.</p>
                 </div>
 
-                <h3>Entertainment Industry Nutrition Strategy</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Entertainment Industry Nutrition Strategy</h3>
                 <ul>
                     <li><strong>On-Set Survival:</strong> Pack protein bars and electrolyte drinks for 14-hour filming days</li>
                     <li><strong>Craft Services Navigation:</strong> Focus on grilled options, avoid fried foods and excessive sugar</li>
@@ -777,7 +1036,7 @@
                     <li><strong>Industry Networking:</strong> Use health-focused industry events for maintaining connections and wellness</li>
                 </ul>
 
-                <h3>Studio Area Resources</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Studio Area Resources</h3>
                 <ul>
                     <li><strong>Warner Bros (Burbank):</strong> Trader Joe's nearby for budget-friendly healthy options</li>
                     <li><strong>Universal Studios:</strong> CityWalk has healthier chain options like Panda Express (steamed options)</li>
@@ -786,7 +1045,7 @@
                     <li><strong>Disney (Burbank):</strong> Employee wellness programs and on-site fitness facilities</li>
                 </ul>
 
-                <h3>Irregular Schedule Management</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Irregular Schedule Management</h3>
                 <div class="ca-nutrition-table">
                     <table>
                         <thead>
@@ -829,11 +1088,11 @@
 
             <!-- California-Specific Nutrition Guide -->
             <div class="content-section">
-                <h2>🥗 California-Optimized Plasma Nutrition Protocol</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🥗 California-Optimized Plasma Nutrition Protocol</h2>
                 
-                <p>California's year-round growing season and health-conscious culture provide unique advantages for plasma donor nutrition. Leverage the state's abundant fresh produce and innovative food options:</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California's year-round growing season and health-conscious culture provide unique advantages for plasma donor nutrition. Leverage the state's abundant fresh produce and innovative food options:</p>
 
-                <h3>California Fresh Produce Advantage</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Fresh Produce Advantage</h3>
                 <ul>
                     <li><strong>Iron-Rich Vegetables:</strong> Fresh spinach from Salinas Valley, kale from Central Coast farms</li>
                     <li><strong>Protein Sources:</strong> California avocados for healthy fats, almonds from Central Valley</li>
@@ -841,43 +1100,43 @@
                     <li><strong>Recovery Foods:</strong> Berries from Watsonville, organic eggs from Petaluma</li>
                 </ul>
 
-                <h3>City-Specific Grocery Strategies</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">City-Specific Grocery Strategies</h3>
                 <div class="city-health-grid">
                     <div class="city-health-card">
                         <h4><span class="emoji">🛒</span>Bay Area Shopping</h4>
-                        <p><strong>Premium Options:</strong> Whole Foods, Rainbow Grocery, Berkeley Bowl</p>
-                        <p><strong>Tech Worker Advantage:</strong> High salaries support premium organic options</p>
-                        <p><strong>Specialty Items:</strong> Asian markets for iron-rich vegetables, supplements</p>
-                        <p><strong>Meal Delivery:</strong> Blue Apron, Sunbasket for busy schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Premium Options:</strong> Whole Foods, Rainbow Grocery, Berkeley Bowl</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Tech Worker Advantage:</strong> High salaries support premium organic options</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Specialty Items:</strong> Asian markets for iron-rich vegetables, supplements</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Meal Delivery:</strong> Blue Apron, Sunbasket for busy schedules</p>
                     </div>
 
                     <div class="city-health-card">
                         <h4><span class="emoji">🥑</span>Los Angeles Shopping</h4>
-                        <p><strong>Budget-Friendly:</strong> Trader Joe's, Ralph's, Food 4 Less</p>
-                        <p><strong>Health Focus:</strong> Erewhon, Bristol Farms for premium supplements</p>
-                        <p><strong>Entertainment Industry:</strong> Late-night options near studios</p>
-                        <p><strong>Farmer's Markets:</strong> Santa Monica, Hollywood for fresh produce</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Budget-Friendly:</strong> Trader Joe's, Ralph's, Food 4 Less</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Health Focus:</strong> Erewhon, Bristol Farms for premium supplements</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Entertainment Industry:</strong> Late-night options near studios</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Farmer's Markets:</strong> Santa Monica, Hollywood for fresh produce</p>
                     </div>
 
                     <div class="city-health-card">
                         <h4><span class="emoji">🌮</span>San Diego Shopping</h4>
-                        <p><strong>Military Access:</strong> Commissary for bulk protein and supplements</p>
-                        <p><strong>Student Budget:</strong> Vons, Ralphs for affordable healthy options</p>
-                        <p><strong>Border Advantage:</strong> Fresh produce from Tijuana markets</p>
-                        <p><strong>Beach Lifestyle:</strong> Fresh seafood for protein variety</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Military Access:</strong> Commissary for bulk protein and supplements</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Student Budget:</strong> Vons, Ralphs for affordable healthy options</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Border Advantage:</strong> Fresh produce from Tijuana markets</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Beach Lifestyle:</strong> Fresh seafood for protein variety</p>
                     </div>
 
                     <div class="city-health-card">
                         <h4><span class="emoji">🏛️</span>Sacramento Shopping</h4>
-                        <p><strong>Government Employee:</strong> Raley's, Safeway with state employee discounts</p>
-                        <p><strong>Local Advantage:</strong> Direct access to Central Valley farms</p>
-                        <p><strong>University Access:</strong> UC Davis nutrition research programs</p>
-                        <p><strong>Farmer's Markets:</strong> Year-round options for fresh produce</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Government Employee:</strong> Raley's, Safeway with state employee discounts</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Local Advantage:</strong> Direct access to Central Valley farms</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>University Access:</strong> UC Davis nutrition research programs</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Farmer's Markets:</strong> Year-round options for fresh produce</p>
                     </div>
                 </div>
 
-                <h3>California Supplement Strategy</h3>
-                <p>California's supplement market offers premium options, but smart shopping can control costs while maximizing health benefits:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Supplement Strategy</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California's supplement market offers premium options, but smart shopping can control costs while maximizing health benefits:</p>
 
                 <ul>
                     <li><strong>Costco Strategy:</strong> Bulk purchasing of Kirkland brand supplements saves 40-60%</li>
@@ -888,17 +1147,17 @@
 
                 <div class="ca-warning-box">
                     <h4>⚠️ California-Specific Supplement Cautions</h4>
-                    <p>California's Proposition 65 warnings on supplements can be concerning but are often precautionary. Focus on third-party tested brands and consult with California-licensed healthcare providers familiar with plasma donation requirements.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">California's Proposition 65 warnings on supplements can be concerning but are often precautionary. Focus on third-party tested brands and consult with California-licensed healthcare providers familiar with plasma donation requirements.</p>
                 </div>
             </div>
 
             <!-- California Lifestyle Integration -->
             <div class="content-section">
-                <h2>🌞 Integrating Plasma Health with California Lifestyle</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🌞 Integrating Plasma Health with California Lifestyle</h2>
                 
-                <p>California's active, outdoor lifestyle provides unique opportunities to enhance plasma donation health. Leverage the state's year-round perfect weather and wellness culture:</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California's active, outdoor lifestyle provides unique opportunities to enhance plasma donation health. Leverage the state's year-round perfect weather and wellness culture:</p>
 
-                <h3>Outdoor Exercise Integration</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Outdoor Exercise Integration</h3>
                 <ul>
                     <li><strong>Beach Workouts (San Diego/LA):</strong> Sand running improves circulation for better donations</li>
                     <li><strong>Hiking (Bay Area/LA):</strong> Mountain trails provide cardio that enhances blood flow</li>
@@ -906,7 +1165,7 @@
                     <li><strong>Outdoor Yoga:</strong> Stress reduction supports healthy blood pressure levels</li>
                 </ul>
 
-                <h3>California Wellness Culture Advantages</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Wellness Culture Advantages</h3>
                 <ul>
                     <li><strong>Juice Bars:</strong> Convenient post-donation nutrition and hydration</li>
                     <li><strong>Organic Options:</strong> Widespread availability supports plasma donor nutrition</li>
@@ -916,10 +1175,10 @@
 
                 <div class="lifestyle-section">
                     <h4>Work-Life Balance for Plasma Success</h4>
-                    <p>California's emphasis on work-life balance, from tech company perks to entertainment industry flexibility, creates opportunities for optimal plasma donation health. Use flexible schedules to prioritize nutrition timing, recovery sleep, and stress management.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">California's emphasis on work-life balance, from tech company perks to entertainment industry flexibility, creates opportunities for optimal plasma donation health. Use flexible schedules to prioritize nutrition timing, recovery sleep, and stress management.</p>
                 </div>
 
-                <h3>Seasonal Health Adjustments</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Seasonal Health Adjustments</h3>
                 <ul>
                     <li><strong>Wildfire Season (Summer/Fall):</strong> Increase antioxidants, consider air purifiers, monitor respiratory health</li>
                     <li><strong>Rainy Season (Winter):</strong> Vitamin D supplementation, seasonal depression awareness</li>
@@ -930,11 +1189,11 @@
 
             <!-- California-Specific Recovery and Warning Signs -->
             <div class="content-section">
-                <h2>🚨 California Climate and Lifestyle Warning Signs</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚨 California Climate and Lifestyle Warning Signs</h2>
                 
-                <p>California's unique environmental factors require specific health monitoring for plasma donors:</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California's unique environmental factors require specific health monitoring for plasma donors:</p>
 
-                <h3>California-Specific Health Risks</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California-Specific Health Risks</h3>
                 <ul>
                     <li><strong>Wildfire Smoke Exposure:</strong> Can affect respiratory health and iron absorption</li>
                     <li><strong>Drought Conditions:</strong> May increase stress on municipal water supplies affecting hydration</li>
@@ -943,7 +1202,7 @@
                     <li><strong>Tech/Entertainment Industry Pressure:</strong> High-stress careers impact sleep and nutrition</li>
                 </ul>
 
-                <h3>When to Pause Donations in California</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">When to Pause Donations in California</h3>
                 <div class="ca-warning-box">
                     <h4>⚠️ California Environmental Factors</h4>
                     <ul>
@@ -954,7 +1213,7 @@
                     </ul>
                 </div>
 
-                <h3>California Healthcare Resources for Donors</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Healthcare Resources for Donors</h3>
                 <ul>
                     <li><strong>Kaiser Permanente:</strong> Comprehensive preventive care with multiple locations</li>
                     <li><strong>UCSF Health:</strong> Research-based medicine with plasma donation understanding</li>
@@ -966,11 +1225,11 @@
 
             <!-- Long-term California Success Strategy -->
             <div class="content-section">
-                <h2>📈 Long-term California Plasma Health Investment Strategy</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📈 Long-term California Plasma Health Investment Strategy</h2>
                 
-                <p>Building sustainable health habits in California's unique environment ensures long-term plasma donation success and maximizes your earning potential across the Golden State's premium markets.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Building sustainable health habits in California's unique environment ensures long-term plasma donation success and maximizes your earning potential across the Golden State's premium markets.</p>
 
-                <h3>Annual Health Investment Planning</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Annual Health Investment Planning</h3>
                 <div class="ca-nutrition-table">
                     <table>
                         <thead>
@@ -1010,7 +1269,7 @@
                     </table>
                 </div>
 
-                <h3>California Career Integration</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Career Integration</h3>
                 <ul>
                     <li><strong>Tech Workers:</strong> Use company wellness benefits and meal programs to support plasma health</li>
                     <li><strong>Entertainment Industry:</strong> Leverage guild health insurance and flexible schedules</li>
@@ -1021,14 +1280,14 @@
 
                 <div class="health-roi-box">
                     <h4>Your California Plasma Health Asset Portfolio</h4>
-                    <p>Treat your body as a high-value California asset worth $10,000+ annually. Strategic health investments of 10-15% of plasma earnings ($1,000-1,500/year) protect and enhance this valuable income stream while positioning you for long-term success in California's premium plasma markets.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Treat your body as a high-value California asset worth $10,000+ annually. Strategic health investments of 10-15% of plasma earnings ($1,000-1,500/year) protect and enhance this valuable income stream while positioning you for long-term success in California's premium plasma markets.</p>
                 </div>
             </div>
 
             <!-- CTA Section -->
             <div class="cta-section">
-                <h2>Ready to Optimize Your California Plasma Health Strategy?</h2>
-                <p>Use our calculator to see how consistent, healthy donations can maximize your earnings across California's premium plasma markets!</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Ready to Optimize Your California Plasma Health Strategy?</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Use our calculator to see how consistent, healthy donations can maximize your earnings across California's premium plasma markets!</p>
                 <div style="margin-top: 2rem;">
                     <a href="../#calculator" class="cta-btn" style="background: white; color: #3498db; margin-right: 1rem;">Calculate My California Earnings 💰</a>
                     <a href="../blog/" class="cta-btn" style="background: rgba(255,255,255,0.2);">More California Health Tips →</a>
@@ -1042,7 +1301,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>California Plasma Health Experts</h4>
-                <p>Your trusted guide to maintaining optimal health for plasma donation across Los Angeles, San Diego, San Francisco, and Sacramento. Specialized advice for California's unique lifestyle and environment.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Your trusted guide to maintaining optimal health for plasma donation across Los Angeles, San Diego, San Francisco, and Sacramento. Specialized advice for California's unique lifestyle and environment.</p>
             </div>
             <div class="footer-section">
                 <h4>California Health Resources</h4>
@@ -1063,7 +1322,7 @@
                 </ul>
             </div>
         </div>
-        <p>&copy; 2025 California Plasma Health Calculator. Information for educational purposes. Consult California healthcare providers for medical advice.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 California Plasma Health Calculator. Information for educational purposes. Consult California healthcare providers for medical advice.</p>
     </footer>
 </body>
 </html>

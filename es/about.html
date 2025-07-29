@@ -155,6 +155,57 @@
             background: rgba(39, 174, 96, 0.2);
         }
 
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
         main {
             margin-top: 100px;
             padding: 2rem;
@@ -278,6 +329,10 @@
                 display: none;
             }
 
+            .mobile-menu-btn {
+                display: block;
+            }
+
             .page-header h1 {
                 font-size: 2rem;
             }
@@ -293,6 +348,59 @@
     </style>
 </head>
 <body>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/es/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Calculadora de Pago por Plasma
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/es/calculadoras/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Calculadoras</a>
+                    <a href="/es/centros/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Centros</a>
+                    <a href="/es/salud/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Guía de Salud</a>
+                    <a href="/es/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="es">🇪🇸 Español</option>
+                            <option value="en">🇺🇸 English</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/es/calculadoras/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Calculadoras</a>
+                    <a href="/es/centros/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Centros</a>
+                    <a href="/es/salud/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Guía de Salud</a>
+                    <a href="/es/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="es">🇪🇸 Español</option>
+                            <option value="en">🇺🇸 English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <nav>
         <div class="nav-container">
             <div style="display: flex; align-items: center;">
@@ -308,7 +416,18 @@
                 <li><a href="/es/faq.html">FAQ</a></li>
                 <li><a href="/es/about.html" class="active">Acerca de</a></li>
                 <li><a href="/es/calculators/" target="_blank" class="find-center-btn">🏥 ENCONTRAR UN CENTRO</a></li>
-                <li><a href="/es/about.html" class="language-switcher">English</a></li>
+                <li><a href="../about.html" class="language-switcher">English</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/es/#calculadora">Calculadora</a></li>
+                <li><a href="/es/blog/">Consejos</a></li>
+                <li><a href="/es/faq.html">FAQ</a></li>
+                <li><a href="/es/about.html" class="active">Acerca de</a></li>
+                <li><a href="/es/calculators/" target="_blank">🏥 Encontrar un Centro</a></li>
+                <li><a href="../about.html" class="language-switcher">English</a></li>
             </ul>
         </div>
     </nav>
@@ -410,5 +529,54 @@
             </div>
         </div>
     </main>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+            // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Language switcher functionality
+            const languageSelect = document.getElementById('languageSelect');
+            const mobileLanguageSelect = document.getElementById('mobileLanguageSelect');
+            
+            function handleLanguageChange(selectedLang) {
+                if (selectedLang === 'en') {
+                    const currentPath = window.location.pathname;
+                    let englishPath;
+                    
+                    if (currentPath === '/es/' || currentPath === '/es/index.html') {
+                        englishPath = '/';
+                    } else {
+                        // Remove /es prefix
+                        englishPath = currentPath.replace('/es', '');
+                    }
+                    
+                    window.location.href = englishPath;
+                }
+            }
+            
+            if (languageSelect) {
+                languageSelect.addEventListener('change', function() {
+                    handleLanguageChange(this.value);
+                });
+            }
+            
+            if (mobileLanguageSelect) {
+                mobileLanguageSelect.addEventListener('change', function() {
+                    handleLanguageChange(this.value);
+                });
+            }
+        });
+        </script>
 </body>
 </html>

@@ -474,7 +474,102 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
 
     <style>
     .language-switcher {
@@ -530,9 +625,159 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <div class="language-switcher">
         <a href="/es/blog/plasma-donation-side-effects-red-veins-medical-guide-2025.html" class="lang-option spanish" title="Español">
@@ -549,38 +794,53 @@
                     <div class="logo-icon">PPC</div>
                     Plasma Pay Calculator
                 </a>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
             <ul class="nav-links">
-                <li><a href="/calculators/">Calculator</a></li>
-                <li><a href="/blog/" class="active">Health Guides</a></li>
+                <li><a href="/" class="active">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
                 <li><a href="/faq.html">FAQ</a></li>
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/calculators/" class="cta-btn">Check Safety</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
             <!-- Article Header -->
             <div class="article-header">
-                <h1>Plasma Donation Side Effects: Red Veins, Scarring & Medical Guide</h1>
-                <p>Comprehensive medical guide to plasma donation side effects including vein damage, scarring, fatigue, and long-term health impacts. Expert prevention and treatment advice for donors.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Plasma Donation Side Effects: Red Veins, Scarring & Medical Guide</h1>
+                <p class="text-gray-700 leading-relaxed mb-4">Comprehensive medical guide to plasma donation side effects including vein damage, scarring, fatigue, and long-term health impacts. Expert prevention and treatment advice for donors.</p>
             </div>
 
             <!-- Medical Disclaimer -->
             <div class="medical-disclaimer">
-                <h3>⚕️ Important Medical Disclaimer</h3>
-                <p><strong>This guide is for educational purposes only and does not replace professional medical advice.</strong> If you experience any concerning symptoms related to plasma donation, consult with a healthcare professional immediately. Always discuss your plasma donation plans with your doctor, especially if you have underlying health conditions.</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚕️ Important Medical Disclaimer</h3>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>This guide is for educational purposes only and does not replace professional medical advice.</strong> If you experience any concerning symptoms related to plasma donation, consult with a healthcare professional immediately. Always discuss your plasma donation plans with your doctor, especially if you have underlying health conditions.</p>
             </div>
 
             <!-- Common Side Effects -->
             <div class="content-section">
-                <h2>🩸 Common Plasma Donation Side Effects</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🩸 Common Plasma Donation Side Effects</h2>
                 
                 <div class="highlight-box">
-                    <h3>Side Effect Statistics</h3>
-                    <p><strong>Minor side effects:</strong> 15-25% of donors experience occasionally<br>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Side Effect Statistics</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Minor side effects:</strong> 15-25% of donors experience occasionally<br>
                     <strong>Moderate side effects:</strong> 5-10% of regular donors<br>
                     <strong>Severe side effects:</strong> Less than 1% when proper protocols followed<br>
                     <strong>Most common:</strong> Fatigue, dehydration, vein irritation</p>
@@ -589,60 +849,60 @@
                 <div class="side-effects-grid">
                     <div class="side-effect-card">
                         <h4>🔴 Vein Damage and Red Veins <span class="severity-badge severity-moderate">Moderate</span></h4>
-                        <p><strong>Symptoms:</strong> Red, inflamed veins at injection site, visible scarring, hardened vein segments</p>
-                        <p><strong>Cause:</strong> Repeated needle insertion, poor needle technique, inadequate healing time</p>
-                        <p><strong>Frequency:</strong> 10-15% of regular donors</p>
-                        <p><strong>Timeline:</strong> Develops over 6-12 months of regular donation</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Red, inflamed veins at injection site, visible scarring, hardened vein segments</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Repeated needle insertion, poor needle technique, inadequate healing time</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Frequency:</strong> 10-15% of regular donors</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Timeline:</strong> Develops over 6-12 months of regular donation</p>
                     </div>
 
                     <div class="side-effect-card">
                         <h4>😵 Fatigue and Weakness <span class="severity-badge severity-mild">Mild</span></h4>
-                        <p><strong>Symptoms:</strong> Tiredness lasting 2-24 hours after donation, reduced energy levels</p>
-                        <p><strong>Cause:</strong> Protein and fluid loss, body's recovery process</p>
-                        <p><strong>Frequency:</strong> 20-30% of donors after each donation</p>
-                        <p><strong>Timeline:</strong> Immediately post-donation, usually resolves within 24 hours</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Tiredness lasting 2-24 hours after donation, reduced energy levels</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Protein and fluid loss, body's recovery process</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Frequency:</strong> 20-30% of donors after each donation</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Timeline:</strong> Immediately post-donation, usually resolves within 24 hours</p>
                     </div>
 
                     <div class="side-effect-card">
                         <h4>💧 Dehydration Effects <span class="severity-badge severity-mild">Mild</span></h4>
-                        <p><strong>Symptoms:</strong> Dizziness, headache, dry mouth, reduced urination</p>
-                        <p><strong>Cause:</strong> Plasma volume removal, inadequate pre/post hydration</p>
-                        <p><strong>Frequency:</strong> 15-25% of donors</p>
-                        <p><strong>Timeline:</strong> Within 2-6 hours post-donation</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Dizziness, headache, dry mouth, reduced urination</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Plasma volume removal, inadequate pre/post hydration</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Frequency:</strong> 15-25% of donors</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Timeline:</strong> Within 2-6 hours post-donation</p>
                     </div>
 
                     <div class="side-effect-card">
                         <h4>🤕 Injection Site Reactions <span class="severity-badge severity-moderate">Moderate</span></h4>
-                        <p><strong>Symptoms:</strong> Pain, swelling, bruising, hematoma formation</p>
-                        <p><strong>Cause:</strong> Needle trauma, individual healing response</p>
-                        <p><strong>Frequency:</strong> 8-12% of donation sessions</p>
-                        <p><strong>Timeline:</strong> Immediate to 48 hours post-donation</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Pain, swelling, bruising, hematoma formation</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Needle trauma, individual healing response</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Frequency:</strong> 8-12% of donation sessions</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Timeline:</strong> Immediate to 48 hours post-donation</p>
                     </div>
 
                     <div class="side-effect-card">
                         <h4>🩸 Low Protein Effects <span class="severity-badge severity-moderate">Moderate</span></h4>
-                        <p><strong>Symptoms:</strong> Slower healing, increased infection risk, muscle weakness</p>
-                        <p><strong>Cause:</strong> Repeated protein loss through plasma removal</p>
-                        <p><strong>Frequency:</strong> 5-8% of frequent donors</p>
-                        <p><strong>Timeline:</strong> Develops over months of frequent donation</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Slower healing, increased infection risk, muscle weakness</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Repeated protein loss through plasma removal</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Frequency:</strong> 5-8% of frequent donors</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Timeline:</strong> Develops over months of frequent donation</p>
                     </div>
 
                     <div class="side-effect-card">
                         <h4>🤢 Nausea and Dizziness <span class="severity-badge severity-mild">Mild</span></h4>
-                        <p><strong>Symptoms:</strong> Nausea, lightheadedness, feeling faint</p>
-                        <p><strong>Cause:</strong> Blood pressure changes, anxiety, low blood sugar</p>
-                        <p><strong>Frequency:</strong> 10-15% of donors, especially first-time</p>
-                        <p><strong>Timeline:</strong> During or immediately after donation</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Nausea, lightheadedness, feeling faint</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Blood pressure changes, anxiety, low blood sugar</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Frequency:</strong> 10-15% of donors, especially first-time</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Timeline:</strong> During or immediately after donation</p>
                     </div>
                 </div>
             </div>
 
             <!-- Red Veins Deep Dive -->
             <div class="content-section">
-                <h2>🔍 Red Veins and Vein Damage: Detailed Analysis</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🔍 Red Veins and Vein Damage: Detailed Analysis</h2>
                 
-                <h3>Understanding Vein Damage from Plasma Donation</h3>
-                <p>Red veins and vein damage are among the most concerning long-term side effects of frequent plasma donation. This occurs when repeated needle insertions cause inflammation and scarring of the blood vessel walls.</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Understanding Vein Damage from Plasma Donation</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Red veins and vein damage are among the most concerning long-term side effects of frequent plasma donation. This occurs when repeated needle insertions cause inflammation and scarring of the blood vessel walls.</p>
 
                 <h4>Progressive Stages of Vein Damage</h4>
                 <table class="medical-table">
@@ -682,7 +942,7 @@
                     </tbody>
                 </table>
 
-                <h3>Risk Factors for Vein Damage</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Risk Factors for Vein Damage</h3>
                 <ul>
                     <li><strong>Donation frequency:</strong> 2x per week significantly increases risk</li>
                     <li><strong>Poor needle technique:</strong> Inexperienced staff or difficult vein access</li>
@@ -694,7 +954,7 @@
 
                 <div class="warning-box">
                     <h4>⚠️ When Red Veins Indicate Serious Problems</h4>
-                    <p><strong>Seek immediate medical attention if you experience:</strong></p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Seek immediate medical attention if you experience:</strong></p>
                     <ul>
                         <li>Red streaking extending from injection site toward heart</li>
                         <li>Increasing pain, warmth, or swelling 24+ hours after donation</li>
@@ -707,11 +967,11 @@
 
             <!-- Symptom Assessment Tool -->
             <div class="content-section">
-                <h2>🩺 Side Effect Assessment Tool</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🩺 Side Effect Assessment Tool</h2>
                 
                 <div class="symptom-checker">
                     <h4>Check Your Symptoms</h4>
-                    <p>Select any symptoms you're currently experiencing related to plasma donation:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Select any symptoms you're currently experiencing related to plasma donation:</p>
                     
                     <div class="symptom-list">
                         <div class="symptom-item">
@@ -760,59 +1020,59 @@
                     
                     <div id="assessment-low" class="assessment-result result-low">
                         <h4>✅ Low Risk Assessment</h4>
-                        <p><strong>Your symptoms suggest minimal side effects.</strong> Continue monitoring and maintain good donation practices. Consider the prevention tips below to keep your risk low.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Your symptoms suggest minimal side effects.</strong> Continue monitoring and maintain good donation practices. Consider the prevention tips below to keep your risk low.</p>
                     </div>
                     
                     <div id="assessment-medium" class="assessment-result result-medium">
                         <h4>⚠️ Moderate Risk Assessment</h4>
-                        <p><strong>You're experiencing moderate side effects.</strong> Consider reducing donation frequency or taking a temporary break. If symptoms persist or worsen, consult with center medical staff or your healthcare provider.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>You're experiencing moderate side effects.</strong> Consider reducing donation frequency or taking a temporary break. If symptoms persist or worsen, consult with center medical staff or your healthcare provider.</p>
                     </div>
                     
                     <div id="assessment-high" class="assessment-result result-high">
                         <h4>🚨 High Risk Assessment</h4>
-                        <p><strong>Your symptoms indicate significant side effects that require attention.</strong> Stop donating immediately and consult with a healthcare professional. Some symptoms may indicate complications requiring medical treatment.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Your symptoms indicate significant side effects that require attention.</strong> Stop donating immediately and consult with a healthcare professional. Some symptoms may indicate complications requiring medical treatment.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Prevention Strategies -->
             <div class="content-section">
-                <h2>🛡️ Prevention and Management Strategies</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛡️ Prevention and Management Strategies</h2>
                 
-                <h3>Pre-Donation Prevention</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Pre-Donation Prevention</h3>
                 <div class="prevention-grid">
                     <div class="prevention-tip">
                         <h5>💧 Optimal Hydration</h5>
-                        <p>Drink 80-100 oz water in 24 hours before donation. Well-hydrated veins are more resilient and heal better.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Drink 80-100 oz water in 24 hours before donation. Well-hydrated veins are more resilient and heal better.</p>
                     </div>
                     
                     <div class="prevention-tip">
                         <h5>🥩 Protein Optimization</h5>
-                        <p>Consume 20-30g high-quality protein 2-3 hours before donation to support recovery and minimize protein depletion effects.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Consume 20-30g high-quality protein 2-3 hours before donation to support recovery and minimize protein depletion effects.</p>
                     </div>
                     
                     <div class="prevention-tip">
                         <h5>😴 Adequate Rest</h5>
-                        <p>Ensure 7+ hours sleep before donation. Well-rested bodies handle plasma removal better and recover faster.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Ensure 7+ hours sleep before donation. Well-rested bodies handle plasma removal better and recover faster.</p>
                     </div>
                     
                     <div class="prevention-tip">
                         <h5>🏃 Arm Exercises</h5>
-                        <p>Gentle arm and hand exercises 30 minutes before donation improve blood flow and vein flexibility.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Gentle arm and hand exercises 30 minutes before donation improve blood flow and vein flexibility.</p>
                     </div>
                     
                     <div class="prevention-tip">
                         <h5>🚭 Avoid Vasoconstrictors</h5>
-                        <p>No caffeine, nicotine, or alcohol 2+ hours before donation as they constrict blood vessels and increase trauma risk.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">No caffeine, nicotine, or alcohol 2+ hours before donation as they constrict blood vessels and increase trauma risk.</p>
                     </div>
                     
                     <div class="prevention-tip">
                         <h5>🌡️ Warm Compress</h5>
-                        <p>Apply warm compress to donation arm 10-15 minutes before arrival to dilate veins and ease needle insertion.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Apply warm compress to donation arm 10-15 minutes before arrival to dilate veins and ease needle insertion.</p>
                     </div>
                 </div>
 
-                <h3>During Donation Best Practices</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">During Donation Best Practices</h3>
                 <ul>
                     <li><strong>Communicate with staff:</strong> Report any pain, discomfort, or concerns immediately</li>
                     <li><strong>Proper positioning:</strong> Keep arm straight and still during collection</li>
@@ -821,7 +1081,7 @@
                     <li><strong>Request experienced staff:</strong> Ask for senior phlebotomists if you have difficult veins</li>
                 </ul>
 
-                <h3>Post-Donation Recovery</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Post-Donation Recovery</h3>
                 <div class="success-box">
                     <h4>✅ Critical First 24 Hours</h4>
                     <ul>
@@ -837,9 +1097,9 @@
 
             <!-- Treatment of Side Effects -->
             <div class="content-section">
-                <h2>💊 Treatment and Management of Side Effects</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💊 Treatment and Management of Side Effects</h2>
                 
-                <h3>Immediate Treatment (0-24 hours)</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Immediate Treatment (0-24 hours)</h3>
                 <table class="medical-table">
                     <thead>
                         <tr>
@@ -877,7 +1137,7 @@
                     </tbody>
                 </table>
 
-                <h3>Long-term Management (1+ weeks)</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Long-term Management (1+ weeks)</h3>
                 <h4>For Persistent Vein Issues:</h4>
                 <ul>
                     <li><strong>Rest period:</strong> Stop donating for 4-8 weeks to allow healing</li>
@@ -897,7 +1157,7 @@
 
                 <div class="emergency-box">
                     <h4>🚨 Emergency Warning Signs</h4>
-                    <p><strong>Seek immediate medical attention for:</strong></p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Seek immediate medical attention for:</strong></p>
                     <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
                         <li>Red streaking from injection site toward heart (lymphangitis)</li>
                         <li>Fever with arm symptoms (possible infection)</li>
@@ -912,10 +1172,10 @@
 
             <!-- Long-term Health Considerations -->
             <div class="content-section">
-                <h2>📈 Long-term Health Impact Assessment</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📈 Long-term Health Impact Assessment</h2>
                 
-                <h3>Potential Long-term Effects of Regular Plasma Donation</h3>
-                <p>While plasma donation is generally safe when done according to guidelines, frequent long-term donation can have cumulative effects:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Potential Long-term Effects of Regular Plasma Donation</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">While plasma donation is generally safe when done according to guidelines, frequent long-term donation can have cumulative effects:</p>
 
                 <h4>Documented Long-term Risks:</h4>
                 <ul>
@@ -949,9 +1209,9 @@
 
             <!-- When to Stop Donating -->
             <div class="content-section">
-                <h2>🛑 When to Stop Donating Plasma</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛑 When to Stop Donating Plasma</h2>
                 
-                <h3>Clear Stop Signals</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Clear Stop Signals</h3>
                 <div class="warning-box">
                     <h4>⚠️ Immediate Stop Indicators</h4>
                     <ul>
@@ -964,7 +1224,7 @@
                     </ul>
                 </div>
 
-                <h3>Gradual Reduction Signals</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Gradual Reduction Signals</h3>
                 <ul>
                     <li><strong>Increasing recovery time:</strong> Taking longer to feel normal after donations</li>
                     <li><strong>More frequent deferrals:</strong> Health screenings increasingly failing</li>
@@ -973,7 +1233,7 @@
                     <li><strong>Age considerations:</strong> Natural healing capacity decreases with age</li>
                 </ul>
 
-                <h3>Healthy Exit Strategy</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Healthy Exit Strategy</h3>
                 <ol>
                     <li><strong>Gradual reduction:</strong> Decrease from 2x to 1x weekly, then monthly</li>
                     <li><strong>Health assessment:</strong> Complete medical evaluation during transition</li>
@@ -985,8 +1245,8 @@
 
             <!-- CTA Section -->
             <div class="cta-section">
-                <h2>Monitor Your Plasma Donation Health</h2>
-                <p>Use our health tracking tools and calculators to monitor your donation safety and side effect risk!</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Monitor Your Plasma Donation Health</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Use our health tracking tools and calculators to monitor your donation safety and side effect risk!</p>
                 <div style="margin-top: 2rem;">
                     <a href="/calculators/" class="cta-btn" style="background: white; color: #3498db; margin-right: 1rem;">Health Risk Assessment 🏥</a>
                     <a href="/blog/" class="cta-btn" style="background: rgba(255,255,255,0.2);">More Health Guides →</a>
@@ -997,13 +1257,13 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Plasma Pay Calculator. Health information for educational purposes only. Always consult healthcare professionals for medical advice.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. Health information for educational purposes only. Always consult healthcare professionals for medical advice.</p>
     </footer>
 
     <!-- Medical Disclaimer -->
     <div style="background: #f8f9fa; border: 2px solid #e74c3c; border-radius: 8px; padding: 1.5rem; margin: 2rem auto; max-width: 1200px;">
         <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">⚕️ Medical Disclaimer</h4>
-        <p style="color: #555; margin: 0; font-size: 0.9rem; line-height: 1.6;">
+        <p class="text-gray-700 leading-relaxed mb-4" style="color: #555; margin: 0; font-size: 0.9rem; line-height: 1.6;">
             <strong>Medical Information:</strong> This content is for educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals regarding plasma donation safety, side effects, or any health concerns. Individual medical conditions and circumstances vary significantly. The information provided should not replace professional medical consultation.
         </p>
     </div>

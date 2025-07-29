@@ -125,7 +125,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -136,38 +233,68 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">💰 Pay Calculator</a>
-            </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     
-    <main class="blog-post">
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
-            <div class="breadcrumb">
+            <div class="flex items-center space-x-2 text-sm text-gray-600 mb-8">
                 <a href="/">Home</a> > <a href="/blog/index.html">Blog</a> > Tattoos & Plasma Donation
             </div>
             
             <!-- Hero Section -->
-            <article class="post-header">
-                <h1>Can You Donate Plasma if You Have Tattoos? Complete Rules Guide 2025</h1>
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Can You Donate Plasma if You Have Tattoos? Complete Rules Guide 2025</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/XgOGw4UHx7A/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="post-meta">
@@ -178,8 +305,8 @@
                 
                 <!-- Quick Answer Box -->
                 <div class="quick-answer-box">
-                    <h2>🎨 Quick Answer</h2>
-                    <p><strong>It depends on your state and when you got the tattoo!</strong> Most require waiting 4-12 months, but some states allow immediate donation if done at licensed shops.</p>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎨 Quick Answer</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>It depends on your state and when you got the tattoo!</strong> Most require waiting 4-12 months, but some states allow immediate donation if done at licensed shops.</p>
                     <div class="quick-rules">
                         <div class="rule-item">
                             <span class="rule-icon">⏰</span>
@@ -202,16 +329,16 @@
                 
                 <!-- The Basic Rules -->
                 <section class="content-section">
-                    <h2>📋 The Basic Tattoo & Plasma Donation Rules</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📋 The Basic Tattoo & Plasma Donation Rules</h2>
                     
                     <div class="basic-rules">
                         <div class="rule-explanation">
-                            <h3>🦠 Why Do Tattoo Rules Exist?</h3>
-                            <p>Tattoo and piercing deferral periods exist to prevent the transmission of bloodborne pathogens like Hepatitis B, Hepatitis C, and HIV. The incubation period means these infections might not show up in blood tests immediately after exposure.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🦠 Why Do Tattoo Rules Exist?</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Tattoo and piercing deferral periods exist to prevent the transmission of bloodborne pathogens like Hepatitis B, Hepatitis C, and HIV. The incubation period means these infections might not show up in blood tests immediately after exposure.</p>
                         </div>
                         
                         <div class="general-rules">
-                            <h3>⚖️ FDA General Guidelines</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚖️ FDA General Guidelines</h3>
                             <ul>
                                 <li>🩸 <strong>Safety first:</strong> Rules protect both donors and plasma recipients</li>
                                 <li>📅 <strong>Standard wait:</strong> 4-12 months is typical across most states</li>
@@ -225,43 +352,43 @@
 
                 <!-- State-by-State Rules -->
                 <section class="content-section">
-                    <h2>🗺️ Tattoo Rules by State</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🗺️ Tattoo Rules by State</h2>
                     
                     <div class="state-rules">
                         <div class="state-category immediate">
-                            <h3>✅ States Allowing Immediate Donation (With Proof)</h3>
-                            <p>These states have well-regulated tattoo industries and may allow immediate donation if done at state-licensed facilities:</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">✅ States Allowing Immediate Donation (With Proof)</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">These states have well-regulated tattoo industries and may allow immediate donation if done at state-licensed facilities:</p>
                             <div class="state-grid">
                                 <div class="state-item">
                                     <h4>🌟 California</h4>
-                                    <p>Immediate donation with state-licensed shop documentation</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Immediate donation with state-licensed shop documentation</p>
                                 </div>
                                 <div class="state-item">
                                     <h4>🌟 Texas</h4>
-                                    <p>Licensed facility = no waiting period required</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Licensed facility = no waiting period required</p>
                                 </div>
                                 <div class="state-item">
                                     <h4>🌟 Florida</h4>
-                                    <p>State-regulated shops allow immediate donation</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">State-regulated shops allow immediate donation</p>
                                 </div>
                                 <div class="state-item">
                                     <h4>🌟 New York</h4>
-                                    <p>Licensed parlor documentation accepted</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Licensed parlor documentation accepted</p>
                                 </div>
                                 <div class="state-item">
                                     <h4>🌟 Illinois</h4>
-                                    <p>Regulated facilities with proper documentation</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Regulated facilities with proper documentation</p>
                                 </div>
                                 <div class="state-item">
                                     <h4>🌟 Pennsylvania</h4>
-                                    <p>State-licensed shops eligible for immediate donation</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">State-licensed shops eligible for immediate donation</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="state-category four-month">
-                            <h3>⏰ 4-Month Wait States</h3>
-                            <p>Most common requirement - regardless of where tattoo was done:</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⏰ 4-Month Wait States</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Most common requirement - regardless of where tattoo was done:</p>
                             <div class="state-list">
                                 <div class="state-columns">
                                     <div class="column">
@@ -287,8 +414,8 @@
                         </div>
                         
                         <div class="state-category twelve-month">
-                            <h3>⏳ 12-Month Wait States</h3>
-                            <p>More conservative states with longer waiting periods:</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⏳ 12-Month Wait States</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">More conservative states with longer waiting periods:</p>
                             <div class="conservative-states">
                                 <ul>
                                     <li>Oklahoma (12 months)</li>
@@ -301,18 +428,18 @@
                     </div>
                     
                     <div class="important-note">
-                        <h3>📞 Always Verify Locally</h3>
-                        <p>Rules can change and individual plasma centers may have different policies. <strong>Always call your local center</strong> to confirm current requirements for your specific situation.</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📞 Always Verify Locally</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">Rules can change and individual plasma centers may have different policies. <strong>Always call your local center</strong> to confirm current requirements for your specific situation.</p>
                     </div>
                 </section>
 
                 <!-- Licensed Shop Requirements -->
                 <section class="content-section">
-                    <h2>🏪 Licensed Shop Requirements & Documentation</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏪 Licensed Shop Requirements & Documentation</h2>
                     
                     <div class="licensing-requirements">
                         <div class="what-counts">
-                            <h3>✅ What Counts as a Licensed Shop?</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">✅ What Counts as a Licensed Shop?</h3>
                             <ul>
                                 <li>🆔 <strong>State business license:</strong> Valid state registration</li>
                                 <li>🏥 <strong>Health department approval:</strong> Current health permits</li>
@@ -323,29 +450,29 @@
                         </div>
                         
                         <div class="documentation-needed">
-                            <h3>📄 Documentation You'll Need</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📄 Documentation You'll Need</h3>
                             <div class="doc-grid">
                                 <div class="doc-item">
                                     <h4>🧾 Official Receipt</h4>
-                                    <p>Dated receipt showing date of service, shop name, and license information</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Dated receipt showing date of service, shop name, and license information</p>
                                 </div>
                                 <div class="doc-item">
                                     <h4>📜 Completion Certificate</h4>
-                                    <p>Certificate from shop confirming completion and safety protocols followed</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Certificate from shop confirming completion and safety protocols followed</p>
                                 </div>
                                 <div class="doc-item">
                                     <h4>🆔 Shop License Info</h4>
-                                    <p>Business license number and state registration details</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Business license number and state registration details</p>
                                 </div>
                                 <div class="doc-item">
                                     <h4>📋 Health Department Permit</h4>
-                                    <p>Proof shop is compliant with local health regulations</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Proof shop is compliant with local health regulations</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="red-flags">
-                            <h3>🚩 Red Flags - These DON'T Count</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🚩 Red Flags - These DON'T Count</h3>
                             <ul>
                                 <li>❌ Home/garage tattoos</li>
                                 <li>❌ Unlicensed "scratch" artists</li>
@@ -360,11 +487,11 @@
 
                 <!-- Piercing Rules -->
                 <section class="content-section">
-                    <h2>💎 Body Piercing Rules (Similar to Tattoos)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💎 Body Piercing Rules (Similar to Tattoos)</h2>
                     
                     <div class="piercing-rules">
                         <div class="piercing-types">
-                            <h3>📍 Piercing Wait Times by Type</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📍 Piercing Wait Times by Type</h3>
                             <table class="piercing-table">
                                 <thead>
                                     <tr>
@@ -404,7 +531,7 @@
                         </div>
                         
                         <div class="piercing-exceptions">
-                            <h3>💫 Common Piercing Exceptions</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💫 Common Piercing Exceptions</h3>
                             <ul>
                                 <li>✨ <strong>Professional ear piercing:</strong> Often shorter wait times</li>
                                 <li>✨ <strong>Medical piercings:</strong> Doctor-performed may have different rules</li>
@@ -417,11 +544,11 @@
 
                 <!-- Timeline Examples -->
                 <section class="content-section">
-                    <h2>📅 Real-World Timeline Examples</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📅 Real-World Timeline Examples</h2>
                     
                     <div class="timeline-examples">
                         <div class="example-case">
-                            <h3>Case 1: Licensed Shop in California</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Case 1: Licensed Shop in California</h3>
                             <div class="timeline">
                                 <div class="timeline-step">
                                     <span class="step-date">January 15</span>
@@ -439,7 +566,7 @@
                         </div>
                         
                         <div class="example-case">
-                            <h3>Case 2: Standard 4-Month Wait</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Case 2: Standard 4-Month Wait</h3>
                             <div class="timeline">
                                 <div class="timeline-step">
                                     <span class="step-date">March 1</span>
@@ -457,7 +584,7 @@
                         </div>
                         
                         <div class="example-case">
-                            <h3>Case 3: Unlicensed Tattoo</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Case 3: Unlicensed Tattoo</h3>
                             <div class="timeline">
                                 <div class="timeline-step">
                                     <span class="step-date">June 1</span>
@@ -478,11 +605,11 @@
 
                 <!-- Tips for Tattooed Donors -->
                 <section class="content-section">
-                    <h2>💡 Tips for Tattooed Plasma Donors</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💡 Tips for Tattooed Plasma Donors</h2>
                     
                     <div class="tips-grid">
                         <div class="tip-card">
-                            <h3>📅 Planning Future Tattoos</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 Planning Future Tattoos</h3>
                             <ul>
                                 <li>Research your state's rules first</li>
                                 <li>Choose only licensed, reputable shops</li>
@@ -492,7 +619,7 @@
                         </div>
                         
                         <div class="tip-card">
-                            <h3>📋 Documentation Tips</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📋 Documentation Tips</h3>
                             <ul>
                                 <li>Keep ALL paperwork from tattoo shop</li>
                                 <li>Take photos of licenses/certificates</li>
@@ -502,7 +629,7 @@
                         </div>
                         
                         <div class="tip-card">
-                            <h3>📞 When in Doubt</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📞 When in Doubt</h3>
                             <ul>
                                 <li>Call your plasma center before visiting</li>
                                 <li>Ask about your specific state's rules</li>
@@ -512,7 +639,7 @@
                         </div>
                         
                         <div class="tip-card">
-                            <h3>💰 Maximize Your Earnings</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💰 Maximize Your Earnings</h3>
                             <ul>
                                 <li>Resume donating as soon as eligible</li>
                                 <li>Don't miss out on new donor bonuses</li>
@@ -525,27 +652,27 @@
 
                 <!-- Common Myths -->
                 <section class="content-section">
-                    <h2>🚫 Common Tattoo & Plasma Donation Myths</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚫 Common Tattoo & Plasma Donation Myths</h2>
                     
                     <div class="myths-section">
                         <div class="myth">
-                            <h3>❌ Myth: "Small tattoos have shorter wait times"</h3>
-                            <p><strong>✅ Truth:</strong> Tattoo size doesn't matter. The infection risk is the same whether it's a tiny dot or a full sleeve.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ Myth: "Small tattoos have shorter wait times"</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>✅ Truth:</strong> Tattoo size doesn't matter. The infection risk is the same whether it's a tiny dot or a full sleeve.</p>
                         </div>
                         
                         <div class="myth">
-                            <h3>❌ Myth: "Tattoos from years ago disqualify you forever"</h3>
-                            <p><strong>✅ Truth:</strong> Only recent tattoos (within waiting period) affect eligibility. Old tattoos don't matter.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ Myth: "Tattoos from years ago disqualify you forever"</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>✅ Truth:</strong> Only recent tattoos (within waiting period) affect eligibility. Old tattoos don't matter.</p>
                         </div>
                         
                         <div class="myth">
-                            <h3>❌ Myth: "You can lie about recent tattoos"</h3>
-                            <p><strong>✅ Truth:</strong> Plasma centers check for visible tattoos and ask directly. Lying puts recipients at risk and can get you permanently banned.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ Myth: "You can lie about recent tattoos"</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>✅ Truth:</strong> Plasma centers check for visible tattoos and ask directly. Lying puts recipients at risk and can get you permanently banned.</p>
                         </div>
                         
                         <div class="myth">
-                            <h3>❌ Myth: "All states have the same rules"</h3>
-                            <p><strong>✅ Truth:</strong> Rules vary significantly by state. What's allowed in California might not be allowed in Oklahoma.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">❌ Myth: "All states have the same rules"</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>✅ Truth:</strong> Rules vary significantly by state. What's allowed in California might not be allowed in Oklahoma.</p>
                         </div>
                     </div>
                 </section>
@@ -557,10 +684,10 @@
 
                 <!-- Call to Action -->
                 <section class="content-section cta-section">
-                    <h2>🎨 Ready to Donate with Tattoos?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎨 Ready to Donate with Tattoos?</h2>
                     
                     <div class="final-cta">
-                        <p>Know the rules for your state and situation! Whether you can donate immediately or need to wait, you can still earn <strong>$400-$800 monthly</strong> once you're eligible.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Know the rules for your state and situation! Whether you can donate immediately or need to wait, you can still earn <strong>$400-$800 monthly</strong> once you're eligible.</p>
                         
                         <div class="cta-buttons">
                             <a href="/?search=true" class="cta-btn primary">🔍 Find Centers & Check Rules</a>
@@ -568,7 +695,7 @@
                         </div>
                         
                         <div class="tattoo-checklist">
-                            <h3>🎨 Your Tattoo Eligibility Checklist:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🎨 Your Tattoo Eligibility Checklist:</h3>
                             <ol>
                                 <li>📅 Check when you got your last tattoo</li>
                                 <li>🗺️ Know your state's specific rules</li>
@@ -582,7 +709,7 @@
 
                 <!-- Related Articles -->
                 <section class="related-articles">
-                    <h3>🔗 Related Eligibility Guides:</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🔗 Related Eligibility Guides:</h3>
                     <div class="related-links">
                         <a href="/blog/plasma-donation-weight-requirements.html">Weight Requirements</a>
                         <a href="/blog/how-to-prepare-for-plasma-donation.html">Preparation Guide</a>
@@ -593,7 +720,7 @@
 
                 <!-- Sources & References -->
                 <section class="content-section sources-section">
-                    <h3>📚 Sources & References</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                     <div class="sources-list">
                         <ul>
                             <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood Donor Screening Requirements</a></li>
@@ -609,15 +736,15 @@
 
                 <!-- Author Profile -->
                 <section class="content-section author-profile">
-                    <h3>Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
                     <div class="author-badges">
                         <span class="badge">📊 2,522+ Centers Analyzed</span>
                         <span class="badge">🎨 State Rules Specialist</span>
                     </div>
-                    <p>Glen has extensively researched tattoo and piercing policies across all 50 states and major plasma center chains. His analysis helps donors understand state-specific requirements and navigate eligibility rules for body art.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched tattoo and piercing policies across all 50 states and major plasma center chains. His analysis helps donors understand state-specific requirements and navigate eligibility rules for body art.</p>
                     
                     <div class="disclaimer-note">
-                        <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
                     </div>
                     
                     <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
@@ -626,21 +753,21 @@
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer">
-                        <h2>⚠️ Important Disclaimer</h2>
-                        <p><strong>This information is for educational purposes only and should not replace official center policies.</strong></p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚠️ Important Disclaimer</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>This information is for educational purposes only and should not replace official center policies.</strong></p>
                         <ul>
                             <li><strong>State Variations:</strong> Rules differ by state and individual plasma centers</li>
                             <li><strong>Policy Changes:</strong> Requirements can change - always verify current rules</li>
@@ -648,17 +775,17 @@
                             <li><strong>Individual Assessment:</strong> Each case is evaluated individually</li>
                             <li><strong>Official Sources:</strong> Always confirm requirements with your plasma center</li>
                         </ul>
-                        <p><em>Last updated: January 2025. Rules based on FDA guidelines and state regulations.</em></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><em>Last updated: January 2025. Rules based on FDA guidelines and state regulations.</em></p>
                     </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, eligibility requirements, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -682,7 +809,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -723,7 +850,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
             <p class="owner-info">
                 🏥 Plasma center owner? <a href="mailto:hello@plasmapaycalculator.com?subject=Claim%20or%20Upgrade%20Listing" class="owner-link">Claim or upgrade your listing</a>
             </p>

@@ -315,51 +315,216 @@
                 padding: 2rem;
             }
         }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <div style="display: flex; align-items: center;">
-                <a href="https://plasmapaycalculator.com/" class="logo">
+                <a href="/" class="logo">
                     <div class="logo-icon">PPC</div>
                     Plasma Pay Calculator
                 </a>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
             <ul class="nav-links">
-                <li><a href="https://plasmapaycalculator.com/#calculator">Calculator</a></li>
-                <li><a href="https://plasmapaycalculator.com/blog/" class="active">Earning Tips</a></li>
-                <li><a href="https://plasmapaycalculator.com/faq.html">FAQ</a></li>
-                <li><a href="https://plasmapaycalculator.com/about.html">About</a></li>
-                <li><a href="https://plasmapaycalculator.com/#calculator" class="cta-btn">Calculate My Earnings</a></li>
+                <li><a href="/" class="active">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
             <!-- Article Header -->
             <div class="article-header">
-                <h1>California Plasma Donation Side Effects & Safety: Complete 2025 Guide</h1>
-                <p>Comprehensive safety guide for plasma donation in California, including wildfire preparedness, earthquake safety, and California's enhanced safety protocols.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">California Plasma Donation Side Effects & Safety: Complete 2025 Guide</h1>
+                <p class="text-gray-700 leading-relaxed mb-4">Comprehensive safety guide for plasma donation in California, including wildfire preparedness, earthquake safety, and California's enhanced safety protocols.</p>
             </div>
 
             <!-- California Safety Overview -->
             <div class="content-section">
-                <h2>🛡️ California's Enhanced Safety Standards</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛡️ California's Enhanced Safety Standards</h2>
                 
                 <div class="highlight-box">
-                    <h3>California Safety Leadership</h3>
-                    <p><strong>Stricter safety protocols than federal minimums</strong><br>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Safety Leadership</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Stricter safety protocols than federal minimums</strong><br>
                     <strong>Enhanced environmental safety considerations</strong><br>
                     <strong>Advanced emergency preparedness procedures</strong><br>
                     <strong>Superior medical oversight requirements</strong></p>
                 </div>
 
-                <p>California leads the nation in plasma donation safety standards, implementing protocols that exceed federal FDA requirements. The Golden State's unique environmental challenges—from wildfires to earthquakes—have driven the development of comprehensive safety measures that protect donors in all circumstances.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California leads the nation in plasma donation safety standards, implementing protocols that exceed federal FDA requirements. The Golden State's unique environmental challenges—from wildfires to earthquakes—have driven the development of comprehensive safety measures that protect donors in all circumstances.</p>
 
-                <h3>Why California Has Enhanced Safety Protocols</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Why California Has Enhanced Safety Protocols</h3>
                 <ul>
                     <li><strong>Environmental challenges:</strong> Wildfires, earthquakes, extreme weather events</li>
                     <li><strong>Air quality concerns:</strong> Monitoring during fire season and pollution events</li>
@@ -369,8 +534,8 @@
                     <li><strong>Consumer protection focus:</strong> Strong state emphasis on individual rights</li>
                 </ul>
 
-                <h3>California vs. National Safety Standards</h3>
-                <p>How California exceeds baseline safety requirements:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California vs. National Safety Standards</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">How California exceeds baseline safety requirements:</p>
                 
                 <table class="safety-table">
                     <thead>
@@ -412,10 +577,10 @@
 
             <!-- Common Side Effects -->
             <div class="content-section">
-                <h2>⚠️ Common Plasma Donation Side Effects</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚠️ Common Plasma Donation Side Effects</h2>
                 
-                <h3>Immediate Side Effects (During/After Donation)</h3>
-                <p>Most side effects are mild and temporary:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Immediate Side Effects (During/After Donation)</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Most side effects are mild and temporary:</p>
                 
                 <h4>Physical Side Effects</h4>
                 <ul>
@@ -435,12 +600,12 @@
                     <li><strong>Feeling faint:</strong> Most common in first-time donors</li>
                 </ul>
 
-                <h3>California-Specific Considerations</h3>
-                <p>Environmental factors affecting side effects in California:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California-Specific Considerations</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Environmental factors affecting side effects in California:</p>
                 
                 <div class="california-box">
                     <h4>🌡️ Heat-Related Considerations</h4>
-                    <p>California's warm climate can increase dehydration risk and intensify side effects. Centers provide enhanced cooling and hydration protocols during heat waves.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">California's warm climate can increase dehydration risk and intensify side effects. Centers provide enhanced cooling and hydration protocols during heat waves.</p>
                 </div>
 
                 <h4>Seasonal Side Effect Patterns</h4>
@@ -451,8 +616,8 @@
                     <li><strong>Spring (March-May):</strong> Allergy season affects overall comfort levels</li>
                 </ul>
 
-                <h3>Rare but Serious Side Effects</h3>
-                <p>Uncommon reactions requiring immediate medical attention:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Rare but Serious Side Effects</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Uncommon reactions requiring immediate medical attention:</p>
                 
                 <div class="emergency-box">
                     <h4>🚨 Seek Immediate Help For:</h4>
@@ -479,10 +644,10 @@
 
             <!-- Prevention Strategies -->
             <div class="content-section">
-                <h2>🛡️ California-Specific Prevention Strategies</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛡️ California-Specific Prevention Strategies</h2>
                 
-                <h3>Pre-Donation Preparation</h3>
-                <p>California's climate and lifestyle require specific preparation:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Pre-Donation Preparation</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California's climate and lifestyle require specific preparation:</p>
                 
                 <div class="safety-tip">
                     <h4>💧 California Hydration Protocol</h4>
@@ -512,8 +677,8 @@
                     <li><strong>Meditation practices:</strong> Popular California stress management techniques</li>
                 </ul>
 
-                <h3>Environmental Safety Preparations</h3>
-                <p>California's unique environmental challenges require special preparation:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Environmental Safety Preparations</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California's unique environmental challenges require special preparation:</p>
                 
                 <h4>Wildfire Season Precautions (July-October)</h4>
                 <div class="warning-box">
@@ -543,8 +708,8 @@
                     <li><strong>Cooling strategies:</strong> Light clothing, cool compresses</li>
                 </ul>
 
-                <h3>During Donation Safety</h3>
-                <p>California centers implement enhanced monitoring:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">During Donation Safety</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California centers implement enhanced monitoring:</p>
                 
                 <h4>Enhanced Monitoring Protocols</h4>
                 <ul>
@@ -568,10 +733,10 @@
 
             <!-- Recovery and Aftercare -->
             <div class="content-section">
-                <h2>🔄 Post-Donation Recovery in California</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🔄 Post-Donation Recovery in California</h2>
                 
-                <h3>Immediate Post-Donation Care</h3>
-                <p>California-specific recovery considerations:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Immediate Post-Donation Care</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California-specific recovery considerations:</p>
                 
                 <h4>First 2 Hours After Donation</h4>
                 <div class="safety-tip">
@@ -594,8 +759,8 @@
                     <li><strong>Parking planning:</strong> Minimize walking in extreme heat</li>
                 </ul>
 
-                <h3>24-48 Hour Recovery Period</h3>
-                <p>Extended care for optimal recovery:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">24-48 Hour Recovery Period</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Extended care for optimal recovery:</p>
                 
                 <h4>Hydration Recovery</h4>
                 <ul>
@@ -614,8 +779,8 @@
                     <li><strong>California outdoor activities:</strong> Hiking, beach activities with precautions</li>
                 </ul>
 
-                <h3>Managing California-Specific Recovery Challenges</h3>
-                <p>Address unique environmental factors:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Managing California-Specific Recovery Challenges</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Address unique environmental factors:</p>
                 
                 <h4>Heat Management During Recovery</h4>
                 <div class="california-box">
@@ -637,12 +802,12 @@
                     <li><strong>Mask wearing:</strong> N95 protection when outdoors during fire season</li>
                 </ul>
 
-                <h3>When to Contact California Centers</h3>
-                <p>California centers have enhanced communication protocols:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">When to Contact California Centers</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California centers have enhanced communication protocols:</p>
                 
                 <div class="emergency-box">
                     <h4>📞 California Center Contact Guidelines</h4>
-                    <p><strong>Contact immediately for:</strong></p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Contact immediately for:</strong></p>
                     <ul>
                         <li>Signs of infection (redness, warmth, pus at needle site)</li>
                         <li>Persistent dizziness beyond 4 hours</li>
@@ -650,16 +815,16 @@
                         <li>Allergic reactions (rash, difficulty breathing)</li>
                         <li>Severe arm pain or swelling</li>
                     </ul>
-                    <p><strong>California centers provide 24/7 nurse hotlines for post-donation concerns.</strong></p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>California centers provide 24/7 nurse hotlines for post-donation concerns.</strong></p>
                 </div>
             </div>
 
             <!-- Long-term Safety -->
             <div class="content-section">
-                <h2>📈 Long-term Safety for California Donors</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📈 Long-term Safety for California Donors</h2>
                 
-                <h3>Regular Health Monitoring</h3>
-                <p>California's enhanced monitoring requirements:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Regular Health Monitoring</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California's enhanced monitoring requirements:</p>
                 
                 <h4>California's Enhanced Testing Schedule</h4>
                 <table class="safety-table">
@@ -699,8 +864,8 @@
                     </tbody>
                 </table>
 
-                <h3>Maintaining Optimal Health</h3>
-                <p>California lifestyle factors for long-term donation safety:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Maintaining Optimal Health</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California lifestyle factors for long-term donation safety:</p>
                 
                 <h4>California Nutrition for Donors</h4>
                 <ul>
@@ -720,8 +885,8 @@
                     <li><strong>Seasonal activities:</strong> Adapt exercise to California weather patterns</li>
                 </ul>
 
-                <h3>Environmental Health Considerations</h3>
-                <p>Long-term health in California's unique environment:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Environmental Health Considerations</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Long-term health in California's unique environment:</p>
                 
                 <h4>Air Quality Health Management</h4>
                 <div class="safety-tip">
@@ -743,8 +908,8 @@
                     <li><strong>Seasonal health adjustments:</strong> Adapt routines to environmental changes</li>
                 </ul>
 
-                <h3>California Donor Resources</h3>
-                <p>Enhanced support systems for California donors:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Donor Resources</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Enhanced support systems for California donors:</p>
                 
                 <ul>
                     <li><strong>24/7 medical hotlines:</strong> California centers provide enhanced support</li>
@@ -757,10 +922,10 @@
 
             <!-- Emergency Preparedness -->
             <div class="content-section">
-                <h2>🚨 California Emergency Preparedness for Donors</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚨 California Emergency Preparedness for Donors</h2>
                 
-                <h3>Wildfire Emergency Protocols</h3>
-                <p>Specific procedures for California's fire season:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Wildfire Emergency Protocols</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Specific procedures for California's fire season:</p>
                 
                 <div class="california-box">
                     <h4>🔥 Wildfire Emergency Procedures</h4>
@@ -773,8 +938,8 @@
                     </ul>
                 </div>
 
-                <h3>Earthquake Safety Protocols</h3>
-                <p>Comprehensive earthquake preparedness:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Earthquake Safety Protocols</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Comprehensive earthquake preparedness:</p>
                 
                 <h4>During-Donation Earthquake Procedures</h4>
                 <ul>
@@ -793,8 +958,8 @@
                     <li><strong>Alternative locations:</strong> Backup center operations if needed</li>
                 </ul>
 
-                <h3>Heat Emergency Procedures</h3>
-                <p>Extreme heat event protocols:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Heat Emergency Procedures</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Extreme heat event protocols:</p>
                 
                 <div class="warning-box">
                     <h4>🌡️ Heat Emergency Protocols</h4>
@@ -807,8 +972,8 @@
                     </ul>
                 </div>
 
-                <h3>Emergency Contact Information</h3>
-                <p>Essential contacts for California donors:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Emergency Contact Information</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Essential contacts for California donors:</p>
                 
                 <div class="emergency-box">
                     <h4>📞 California Emergency Resources</h4>
@@ -825,8 +990,8 @@
 
             <!-- CTA Section -->
             <div class="cta-section">
-                <h2>Donate Safely in California</h2>
-                <p>Use our calculator to plan your safe donation schedule, then find a California center with the highest safety standards!</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Donate Safely in California</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Use our calculator to plan your safe donation schedule, then find a California center with the highest safety standards!</p>
                 <div style="margin-top: 2rem;">
                     <a href="https://plasmapaycalculator.com/#calculator" class="cta-btn" style="background: white; color: #3498db; margin-right: 1rem;">Calculate Safe Schedule 🛡️</a>
                     <a href="https://plasmapaycalculator.com/blog/" class="cta-btn" style="background: rgba(255,255,255,0.2);">More Safety Guides →</a>
@@ -837,13 +1002,13 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Plasma Pay Calculator. Safety information for educational purposes. Always follow center medical guidance.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. Safety information for educational purposes. Always follow center medical guidance.</p>
     </footer>
 
     <!-- Medical & Financial Disclaimer -->
     <div style="background: #f8f9fa; border: 2px solid #e74c3c; border-radius: 8px; padding: 1.5rem; margin: 2rem auto; max-width: 1200px;">
         <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">⚠️ Important Medical & Financial Disclaimer</h4>
-        <p style="color: #555; margin: 0; font-size: 0.9rem; line-height: 1.6;">
+        <p class="text-gray-700 leading-relaxed mb-4" style="color: #555; margin: 0; font-size: 0.9rem; line-height: 1.6;">
             <strong>Medical:</strong> This calculator provides estimates only. Plasma donation eligibility and compensation vary by individual health status, location, and center policies. Always consult with medical professionals at plasma centers for personalized advice. Not medical advice.
             <br><br>
             <strong>Financial:</strong> Earnings shown are estimates based on publicly available information and may not reflect actual payments. Rates change frequently. Tax implications vary by jurisdiction. Consult a tax professional regarding income reporting requirements.

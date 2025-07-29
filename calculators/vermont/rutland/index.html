@@ -291,7 +291,102 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
 </head>
 <body class="bg-gray-50">
 
@@ -303,29 +398,55 @@
     </div>
 
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-2 font-semibold text-lg text-gray-900">
-                    <span class="text-xl">🩸</span>
-                    <a href="/" class="font-inter">Plasma Pay Calculator</a>
-                </div>
-                                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="/calculator/" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Calculator</a>
-                    <a href="/blog/" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Blog</a>
-                    <a href="/states.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">States</a>
-                    <a href="/centers/" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Centers</a>
-                    <a href="/health/" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Health</a>
-                    <a href="/faq.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">FAQ</a>
-                </nav>
-                <button class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100">
-                    <span class="sr-only">Open main menu</span>
-                    <div class="w-6 h-6 flex flex-col justify-center items-center">
-                        <span class="block w-5 h-0.5 bg-gray-700"></span>
-                        <span class="block w-5 h-0.5 bg-gray-700 mt-1"></span>
-                        <span class="block w-5 h-0.5 bg-gray-700 mt-1"></span>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
                     </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -333,17 +454,38 @@
     <main>
 
         <!-- Breadcrumb -->
-        <nav class="bg-gray-100 py-3">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center space-x-2 text-sm text-gray-600">
-                    <a href="/" class="hover:text-gray-900">Home</a>
-                    <span>›</span>
-                    <a href="/calculators/vermont/" class="hover:text-gray-900">Vermont</a>
-                    <span>›</span>
-                    <span class="text-gray-900 font-medium">Rutland</span>
-                </div>
+        <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
-        </nav>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+        </div>
+    </nav>
 
         <!-- City Hero Section -->
         <section class="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-br from-amber-500 to-amber-600 text-white">
@@ -781,6 +923,48 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     <!-- Load bilingual system -->
-    <script defer src="/js/i18n.js"></script>
+    <script defer src="/js/i18n.js">        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Language switcher functionality
+            const languageSelect = document.getElementById('languageSelect');
+            const mobileLanguageSelect = document.getElementById('mobileLanguageSelect');
+            
+            function handleLanguageChange(selectedLang) {
+                if (selectedLang === 'es') {
+                    const currentPath = window.location.pathname;
+                    let spanishPath;
+                    
+                    if (currentPath === '/' || currentPath === '/index.html') {
+                        spanishPath = '/es/';
+                    } else {
+                        spanishPath = '/es' + currentPath;
+                    }
+                    
+                    window.location.href = spanishPath;
+                }
+            }
+            
+            if (languageSelect) {
+                languageSelect.addEventListener('change', function() {
+                    handleLanguageChange(this.value);
+                });
+            }
+            
+            if (mobileLanguageSelect) {
+                mobileLanguageSelect.addEventListener('change', function() {
+                    handleLanguageChange(this.value);
+                });
+            }
+        });
+        </script>
 </body>
 </html>

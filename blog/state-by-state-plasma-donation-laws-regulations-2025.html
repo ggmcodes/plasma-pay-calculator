@@ -83,7 +83,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -94,38 +191,68 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html" class="active">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">Pay Calculator</a>
-            </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     
-    <main class="blog-post">
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
-            <div class="breadcrumb">
+            <div class="flex items-center space-x-2 text-sm text-gray-600 mb-8">
                 <a href="/">Home</a> > <a href="/blog/index.html">Blog</a> > State-by-State Plasma Laws 2025
             </div>
             
             <!-- Hero Section -->
-            <article class="post-header">
-                <h1>State-by-State Plasma Donation Laws & Regulations Guide 2025</h1>
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">State-by-State Plasma Donation Laws & Regulations Guide 2025</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/yCdPU73kGSc/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="post-meta">
@@ -136,7 +263,7 @@
                 
                 <!-- Quick Laws Facts -->
                 <div class="quick-answer-box">
-                    <h2>🏛️ Quick Legal Facts</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏛️ Quick Legal Facts</h2>
                     <div class="laws-quick-facts">
                         <div class="fact-item">
                             <span class="fact-number">50</span>
@@ -151,7 +278,7 @@
                             <span class="fact-label">Recent law changes</span>
                         </div>
                     </div>
-                    <p><strong>Bottom line:</strong> State regulations vary dramatically and directly impact where centers operate, how much they pay, and what requirements donors must meet.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Bottom line:</strong> State regulations vary dramatically and directly impact where centers operate, how much they pay, and what requirements donors must meet.</p>
                 </div>
             </article>
 
@@ -168,17 +295,17 @@
                 <section class="content-section">
                     <p class="intro">Have you ever wondered: <strong>Why are there no plasma centers in Vermont or New Hampshire? Why do some states pay twice as much as others?</strong> The answers lie in a complex web of state laws, regulations, and licensing requirements that vary dramatically across the United States.</p>
                     
-                    <p>This comprehensive guide examines plasma donation laws in all 50 states, explaining regulatory differences, recent legal changes, and how state policies impact both donors and plasma centers. Understanding these laws helps donors make informed decisions about where and when to donate.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">This comprehensive guide examines plasma donation laws in all 50 states, explaining regulatory differences, recent legal changes, and how state policies impact both donors and plasma centers. Understanding these laws helps donors make informed decisions about where and when to donate.</p>
                 </section>
 
                 <!-- Federal vs State Oversight -->
                 <section class="content-section">
-                    <h2>🏛️ Federal vs. State Regulatory Framework</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏛️ Federal vs. State Regulatory Framework</h2>
                     
                     <div class="regulatory-framework">
-                        <h3>Federal Oversight (FDA)</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Federal Oversight (FDA)</h3>
                         <div class="framework-section">
-                            <p>The Food and Drug Administration (FDA) provides nationwide standards for plasma collection, but states can impose additional restrictions:</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">The Food and Drug Administration (FDA) provides nationwide standards for plasma collection, but states can impose additional restrictions:</p>
                             
                             <ul>
                                 <li><strong>Good Manufacturing Practices (GMP):</strong> Facility standards and procedures</li>
@@ -189,9 +316,9 @@
                             </ul>
                         </div>
                         
-                        <h3>State Oversight Authority</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">State Oversight Authority</h3>
                         <div class="framework-section">
-                            <p>States retain authority over several key areas that significantly impact plasma center operations:</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">States retain authority over several key areas that significantly impact plasma center operations:</p>
                             
                             <ul>
                                 <li><strong>Business Licensing:</strong> Center establishment and operation permits</li>
@@ -205,13 +332,13 @@
                     
                     <div class="info-box">
                         <h4>Why State Laws Matter</h4>
-                        <p>While federal laws set the baseline, state regulations can make plasma center operations financially viable or impossible. Some states have created regulatory barriers so complex and expensive that no companies choose to operate there.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">While federal laws set the baseline, state regulations can make plasma center operations financially viable or impossible. Some states have created regulatory barriers so complex and expensive that no companies choose to operate there.</p>
                     </div>
                 </section>
 
                 <!-- States with Zero Centers -->
                 <section class="content-section">
-                    <h2>🚫 States with Zero Plasma Centers: Why They Don't Exist</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚫 States with Zero Plasma Centers: Why They Don't Exist</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -220,57 +347,57 @@
                     </div>
                     
                     <div class="zero-centers-analysis">
-                        <h3>The Big Three: States Without Plasma Centers</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">The Big Three: States Without Plasma Centers</h3>
                         
                         <div class="state-analysis">
                             <h4>Vermont</h4>
                             <div class="state-details">
-                                <p><strong>Population:</strong> 645,570 (2023)</p>
-                                <p><strong>Key Barriers:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Population:</strong> 645,570 (2023)</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Barriers:</strong></p>
                                 <ul>
                                     <li><strong>Blood Bank Licensing Requirements:</strong> Extremely complex multi-agency approval process</li>
                                     <li><strong>Health Department Oversight:</strong> Requires extensive documentation and regular inspections</li>
                                     <li><strong>Small Market Size:</strong> Insufficient population density for profitable operations</li>
                                     <li><strong>Zoning Restrictions:</strong> Many municipalities prohibit medical collection facilities</li>
                                 </ul>
-                                <p><strong>Legislative Status:</strong> No active efforts to change regulations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Legislative Status:</strong> No active efforts to change regulations</p>
                             </div>
                         </div>
                         
                         <div class="state-analysis">
                             <h4>New Hampshire</h4>
                             <div class="state-details">
-                                <p><strong>Population:</strong> 1,402,054 (2023)</p>
-                                <p><strong>Key Barriers:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Population:</strong> 1,402,054 (2023)</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Barriers:</strong></p>
                                 <ul>
                                     <li><strong>Medical Facility Licensing:</strong> Strict requirements similar to hospital licensing</li>
                                     <li><strong>Professional Staffing:</strong> Requires on-site physician oversight</li>
                                     <li><strong>Insurance Requirements:</strong> High liability insurance thresholds</li>
                                     <li><strong>Political Climate:</strong> State legislature generally opposes paid donation</li>
                                 </ul>
-                                <p><strong>Legislative Status:</strong> Recent bills to allow plasma centers have failed</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Legislative Status:</strong> Recent bills to allow plasma centers have failed</p>
                             </div>
                         </div>
                         
                         <div class="state-analysis">
                             <h4>Rhode Island</h4>
                             <div class="state-details">
-                                <p><strong>Population:</strong> 1,098,163 (2023)</p>
-                                <p><strong>Key Barriers:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Population:</strong> 1,098,163 (2023)</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Barriers:</strong></p>
                                 <ul>
                                     <li><strong>Blood Collection Moratorium:</strong> Effective ban on new plasma center licenses</li>
                                     <li><strong>Legislative Opposition:</strong> Strong political resistance to paid donation</li>
                                     <li><strong>Public Health Policy:</strong> Emphasis on voluntary blood donation system</li>
                                     <li><strong>Limited Geographic Space:</strong> High real estate costs and zoning challenges</li>
                                 </ul>
-                                <p><strong>Legislative Status:</strong> 2023 bill to allow centers died in committee</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Legislative Status:</strong> 2023 bill to allow centers died in committee</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="economic-impact">
-                        <h3>Economic Impact of Regulatory Barriers</h3>
-                        <p>The absence of plasma centers in these three states represents:</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Economic Impact of Regulatory Barriers</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">The absence of plasma centers in these three states represents:</p>
                         
                         <ul>
                             <li><strong>Lost Income Opportunities:</strong> $15-20 million annually in potential donor payments</li>
@@ -283,19 +410,19 @@
 
                 <!-- Regulatory Categories -->
                 <section class="content-section">
-                    <h2>📊 State Regulatory Categories: From Friendly to Restrictive</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📊 State Regulatory Categories: From Friendly to Restrictive</h2>
                     
-                    <h3>Category 1: Business-Friendly States</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Category 1: Business-Friendly States</h3>
                     <div class="regulatory-category friendly">
                         <div class="category-description">
-                            <p>These states have streamlined regulations that encourage plasma center development while maintaining safety standards.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">These states have streamlined regulations that encourage plasma center development while maintaining safety standards.</p>
                         </div>
                         
                         <div class="states-grid">
                             <div class="state-card">
                                 <h5>Texas</h5>
-                                <p><strong>Centers:</strong> 150+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 150+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Simplified licensing process</li>
                                     <li>Business-friendly zoning laws</li>
@@ -307,8 +434,8 @@
                             
                             <div class="state-card">
                                 <h5>Florida</h5>
-                                <p><strong>Centers:</strong> 80+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 80+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Streamlined health department approval</li>
                                     <li>Favorable corporate tax structure</li>
@@ -320,8 +447,8 @@
                             
                             <div class="state-card">
                                 <h5>Arizona</h5>
-                                <p><strong>Centers:</strong> 35+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 35+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Efficient regulatory framework</li>
                                     <li>Pro-business legislative environment</li>
@@ -333,17 +460,17 @@
                         </div>
                     </div>
                     
-                    <h3>Category 2: Moderate Regulation States</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Category 2: Moderate Regulation States</h3>
                     <div class="regulatory-category moderate">
                         <div class="category-description">
-                            <p>These states have reasonable regulations with some additional requirements beyond federal standards.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">These states have reasonable regulations with some additional requirements beyond federal standards.</p>
                         </div>
                         
                         <div class="states-grid">
                             <div class="state-card">
                                 <h5>California</h5>
-                                <p><strong>Centers:</strong> 60+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 60+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Comprehensive health department oversight</li>
                                     <li>Additional worker protection laws</li>
@@ -355,8 +482,8 @@
                             
                             <div class="state-card">
                                 <h5>Illinois</h5>
-                                <p><strong>Centers:</strong> 45+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 45+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Medical facility licensing required</li>
                                     <li>Professional oversight mandates</li>
@@ -368,8 +495,8 @@
                             
                             <div class="state-card">
                                 <h5>Pennsylvania</h5>
-                                <p><strong>Centers:</strong> 40+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 40+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Recent regulatory modernization (2024)</li>
                                     <li>Balanced safety and business approach</li>
@@ -381,17 +508,17 @@
                         </div>
                     </div>
                     
-                    <h3>Category 3: Restrictive Regulation States</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Category 3: Restrictive Regulation States</h3>
                     <div class="regulatory-category restrictive">
                         <div class="category-description">
-                            <p>These states have complex regulations that make plasma center operations challenging and expensive.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">These states have complex regulations that make plasma center operations challenging and expensive.</p>
                         </div>
                         
                         <div class="states-grid">
                             <div class="state-card">
                                 <h5>New York</h5>
-                                <p><strong>Centers:</strong> 25+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 25+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Complex multi-agency approval process</li>
                                     <li>Stringent facility requirements</li>
@@ -403,8 +530,8 @@
                             
                             <div class="state-card">
                                 <h5>Massachusetts</h5>
-                                <p><strong>Centers:</strong> 15+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 15+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Hospital-level licensing requirements</li>
                                     <li>Physician oversight mandates</li>
@@ -416,8 +543,8 @@
                             
                             <div class="state-card">
                                 <h5>Connecticut</h5>
-                                <p><strong>Centers:</strong> 8+ locations</p>
-                                <p><strong>Key Features:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 8+ locations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Features:</strong></p>
                                 <ul>
                                     <li>Recent legislative restrictions (2023)</li>
                                     <li>Enhanced consumer protection laws</li>
@@ -432,7 +559,7 @@
 
                 <!-- 2025 Legislative Changes -->
                 <section class="content-section">
-                    <h2>🆕 2025 Legislative Changes and Trends</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🆕 2025 Legislative Changes and Trends</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -440,100 +567,100 @@
                              loading="lazy">
                     </div>
                     
-                    <h3>Recent Legislative Activity by State</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Recent Legislative Activity by State</h3>
                     
                     <div class="legislative-updates">
                         <div class="update-item enacted">
                             <h4>✅ Pennsylvania - Regulatory Modernization Act (2024)</h4>
                             <div class="update-details">
-                                <p><strong>Status:</strong> Enacted January 2024</p>
-                                <p><strong>Key Changes:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Status:</strong> Enacted January 2024</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Changes:</strong></p>
                                 <ul>
                                     <li>Streamlined licensing process for plasma centers</li>
                                     <li>Reduced duplicative regulatory requirements</li>
                                     <li>Enhanced donor protection provisions</li>
                                     <li>Simplified interstate plasma transport</li>
                                 </ul>
-                                <p><strong>Impact:</strong> Expected to increase center development by 20-30%</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Impact:</strong> Expected to increase center development by 20-30%</p>
                             </div>
                         </div>
                         
                         <div class="update-item enacted">
                             <h4>✅ Michigan - Plasma Center Expansion Act (2024)</h4>
                             <div class="update-details">
-                                <p><strong>Status:</strong> Enacted June 2024</p>
-                                <p><strong>Key Changes:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Status:</strong> Enacted June 2024</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Changes:</strong></p>
                                 <ul>
                                     <li>Removed geographic restrictions on center placement</li>
                                     <li>Standardized municipal approval process</li>
                                     <li>Enhanced advertising transparency requirements</li>
                                     <li>Increased penalties for regulatory violations</li>
                                 </ul>
-                                <p><strong>Impact:</strong> 5-8 new centers expected by end of 2025</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Impact:</strong> 5-8 new centers expected by end of 2025</p>
                             </div>
                         </div>
                         
                         <div class="update-item pending">
                             <h4>⏳ Connecticut - Consumer Protection Enhancement Bill</h4>
                             <div class="update-details">
-                                <p><strong>Status:</strong> Pending in state legislature</p>
-                                <p><strong>Proposed Changes:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Status:</strong> Pending in state legislature</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Proposed Changes:</strong></p>
                                 <ul>
                                     <li>Mandatory cooling-off periods between donations</li>
                                     <li>Enhanced informed consent requirements</li>
                                     <li>Stricter advertising standards</li>
                                     <li>Municipal approval authority expansion</li>
                                 </ul>
-                                <p><strong>Industry Position:</strong> Strongly opposed by plasma companies</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Position:</strong> Strongly opposed by plasma companies</p>
                             </div>
                         </div>
                         
                         <div class="update-item pending">
                             <h4>⏳ Rhode Island - Plasma Center Authorization Act</h4>
                             <div class="update-details">
-                                <p><strong>Status:</strong> Introduced February 2025</p>
-                                <p><strong>Proposed Changes:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Status:</strong> Introduced February 2025</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Proposed Changes:</strong></p>
                                 <ul>
                                     <li>Would authorize first plasma centers in the state</li>
                                     <li>Strict licensing and oversight requirements</li>
                                     <li>Geographic limitations to specific zones</li>
                                     <li>Enhanced safety and reporting mandates</li>
                                 </ul>
-                                <p><strong>Prospects:</strong> Mixed support, outcome uncertain</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Prospects:</strong> Mixed support, outcome uncertain</p>
                             </div>
                         </div>
                     </div>
                     
-                    <h3>Emerging Regulatory Trends</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Emerging Regulatory Trends</h3>
                     <div class="regulatory-trends">
                         <div class="trend-item">
                             <h4>Enhanced Donor Protection</h4>
-                            <p>States increasingly focus on protecting donors through better informed consent, cooling-off periods, and health monitoring requirements.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">States increasingly focus on protecting donors through better informed consent, cooling-off periods, and health monitoring requirements.</p>
                         </div>
                         
                         <div class="trend-item">
                             <h4>Technology Integration</h4>
-                            <p>New laws require electronic donor databases, automated safety monitoring, and digital consent processes.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">New laws require electronic donor databases, automated safety monitoring, and digital consent processes.</p>
                         </div>
                         
                         <div class="trend-item">
                             <h4>Environmental Compliance</h4>
-                            <p>Growing requirements for medical waste management, energy efficiency, and environmental impact assessments.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Growing requirements for medical waste management, energy efficiency, and environmental impact assessments.</p>
                         </div>
                         
                         <div class="trend-item">
                             <h4>Local Control Expansion</h4>
-                            <p>More states granting municipalities authority to regulate or prohibit plasma centers within their boundaries.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">More states granting municipalities authority to regulate or prohibit plasma centers within their boundaries.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- State-by-State Reference -->
                 <section class="content-section">
-                    <h2>📋 Complete State-by-State Reference Guide</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📋 Complete State-by-State Reference Guide</h2>
                     
                     <div class="state-reference-intro">
-                        <p>This comprehensive reference provides key regulatory information for all 50 states, organized alphabetically for easy navigation.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">This comprehensive reference provides key regulatory information for all 50 states, organized alphabetically for easy navigation.</p>
                         
                         <div class="reference-legend">
                             <div class="legend-item">
@@ -554,409 +681,409 @@
                     <div class="state-reference-grid">
                         <div class="state-ref-card">
                             <h5>Alabama <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 25+</p>
-                            <p><strong>Licensing Agency:</strong> Alabama Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Standard health department approval, facility inspection</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 25+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Alabama Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard health department approval, facility inspection</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Alaska <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 3+</p>
-                            <p><strong>Licensing Agency:</strong> Alaska Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Remote location considerations, enhanced medical staffing</p>
-                            <p><strong>Pay Range:</strong> $60-110</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 3+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Alaska Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Remote location considerations, enhanced medical staffing</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $60-110</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Arizona <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 35+</p>
-                            <p><strong>Licensing Agency:</strong> Arizona Department of Health Services</p>
-                            <p><strong>Key Requirements:</strong> Streamlined licensing, business-friendly environment</p>
-                            <p><strong>Pay Range:</strong> $50-95</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 35+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Arizona Department of Health Services</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Streamlined licensing, business-friendly environment</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-95</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Arkansas <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 15+</p>
-                            <p><strong>Licensing Agency:</strong> Arkansas Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Standard facility licensing, routine inspections</p>
-                            <p><strong>Pay Range:</strong> $45-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 15+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Arkansas Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard facility licensing, routine inspections</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>California <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 60+</p>
-                            <p><strong>Licensing Agency:</strong> California Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Comprehensive oversight, worker protection laws</p>
-                            <p><strong>Pay Range:</strong> $40-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 60+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> California Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Comprehensive oversight, worker protection laws</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $40-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Colorado <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 20+</p>
-                            <p><strong>Licensing Agency:</strong> Colorado Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Environmental compliance, zoning approval</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 20+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Colorado Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Environmental compliance, zoning approval</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Connecticut <span class="status-restrictive">🔴</span></h5>
-                            <p><strong>Centers:</strong> 8+</p>
-                            <p><strong>Licensing Agency:</strong> Connecticut Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Complex approval process, municipal authority</p>
-                            <p><strong>Pay Range:</strong> $45-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 8+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Connecticut Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Complex approval process, municipal authority</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Delaware <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 5+</p>
-                            <p><strong>Licensing Agency:</strong> Delaware Division of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Standard licensing, small state considerations</p>
-                            <p><strong>Pay Range:</strong> $50-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 5+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Delaware Division of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard licensing, small state considerations</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Florida <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 80+</p>
-                            <p><strong>Licensing Agency:</strong> Florida Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Streamlined approval, business-friendly</p>
-                            <p><strong>Pay Range:</strong> $45-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 80+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Florida Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Streamlined approval, business-friendly</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Georgia <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 40+</p>
-                            <p><strong>Licensing Agency:</strong> Georgia Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Standard health department oversight</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 40+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Georgia Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard health department oversight</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Hawaii <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 4+</p>
-                            <p><strong>Licensing Agency:</strong> Hawaii Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Island logistics, enhanced transport requirements</p>
-                            <p><strong>Pay Range:</strong> $55-100</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 4+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Hawaii Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Island logistics, enhanced transport requirements</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $55-100</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Idaho <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 10+</p>
-                            <p><strong>Licensing Agency:</strong> Idaho Department of Health and Welfare</p>
-                            <p><strong>Key Requirements:</strong> Minimal additional state requirements</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 10+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Idaho Department of Health and Welfare</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Minimal additional state requirements</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Illinois <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 45+</p>
-                            <p><strong>Licensing Agency:</strong> Illinois Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Medical facility licensing, professional oversight</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 45+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Illinois Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Medical facility licensing, professional oversight</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Indiana <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 30+</p>
-                            <p><strong>Licensing Agency:</strong> Indiana State Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Business-friendly approach, standard oversight</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 30+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Indiana State Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Business-friendly approach, standard oversight</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Iowa <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 20+</p>
-                            <p><strong>Licensing Agency:</strong> Iowa Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Streamlined licensing, rural considerations</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 20+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Iowa Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Streamlined licensing, rural considerations</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Kansas <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 15+</p>
-                            <p><strong>Licensing Agency:</strong> Kansas Department of Health and Environment</p>
-                            <p><strong>Key Requirements:</strong> Standard facility licensing requirements</p>
-                            <p><strong>Pay Range:</strong> $45-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 15+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Kansas Department of Health and Environment</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard facility licensing requirements</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Kentucky <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 25+</p>
-                            <p><strong>Licensing Agency:</strong> Kentucky Department for Public Health</p>
-                            <p><strong>Key Requirements:</strong> Basic health department approval</p>
-                            <p><strong>Pay Range:</strong> $45-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 25+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Kentucky Department for Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Basic health department approval</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Louisiana <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 20+</p>
-                            <p><strong>Licensing Agency:</strong> Louisiana Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Standard facility oversight</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 20+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Louisiana Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard facility oversight</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Maine <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 6+</p>
-                            <p><strong>Licensing Agency:</strong> Maine Center for Disease Control</p>
-                            <p><strong>Key Requirements:</strong> Enhanced oversight, rural accessibility</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 6+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Maine Center for Disease Control</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Enhanced oversight, rural accessibility</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Maryland <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 18+</p>
-                            <p><strong>Licensing Agency:</strong> Maryland Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Comprehensive regulatory framework</p>
-                            <p><strong>Pay Range:</strong> $50-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 18+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Maryland Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Comprehensive regulatory framework</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Massachusetts <span class="status-restrictive">🔴</span></h5>
-                            <p><strong>Centers:</strong> 15+</p>
-                            <p><strong>Licensing Agency:</strong> Massachusetts Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Hospital-level licensing, physician oversight</p>
-                            <p><strong>Pay Range:</strong> $40-75</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 15+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Massachusetts Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Hospital-level licensing, physician oversight</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $40-75</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Michigan <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 35+</p>
-                            <p><strong>Licensing Agency:</strong> Michigan Department of Health and Human Services</p>
-                            <p><strong>Key Requirements:</strong> Recent regulatory modernization (2024)</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 35+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Michigan Department of Health and Human Services</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Recent regulatory modernization (2024)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Minnesota <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 25+</p>
-                            <p><strong>Licensing Agency:</strong> Minnesota Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Balanced regulatory approach</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 25+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Minnesota Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Balanced regulatory approach</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Mississippi <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 15+</p>
-                            <p><strong>Licensing Agency:</strong> Mississippi Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Standard facility licensing</p>
-                            <p><strong>Pay Range:</strong> $45-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 15+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Mississippi Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard facility licensing</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Missouri <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 30+</p>
-                            <p><strong>Licensing Agency:</strong> Missouri Department of Health and Senior Services</p>
-                            <p><strong>Key Requirements:</strong> Business-friendly environment</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 30+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Missouri Department of Health and Senior Services</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Business-friendly environment</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Montana <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 8+</p>
-                            <p><strong>Licensing Agency:</strong> Montana Department of Public Health</p>
-                            <p><strong>Key Requirements:</strong> Rural state considerations</p>
-                            <p><strong>Pay Range:</strong> $55-95</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 8+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Montana Department of Public Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Rural state considerations</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $55-95</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Nebraska <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 12+</p>
-                            <p><strong>Licensing Agency:</strong> Nebraska Department of Health and Human Services</p>
-                            <p><strong>Key Requirements:</strong> Streamlined approval process</p>
-                            <p><strong>Pay Range:</strong> $50-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 12+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Nebraska Department of Health and Human Services</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Streamlined approval process</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Nevada <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 15+</p>
-                            <p><strong>Licensing Agency:</strong> Nevada Division of Public and Behavioral Health</p>
-                            <p><strong>Key Requirements:</strong> Business-friendly approach</p>
-                            <p><strong>Pay Range:</strong> $50-95</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 15+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Nevada Division of Public and Behavioral Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Business-friendly approach</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-95</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>New Hampshire <span class="status-prohibited">⚫</span></h5>
-                            <p><strong>Centers:</strong> 0</p>
-                            <p><strong>Licensing Agency:</strong> N/A</p>
-                            <p><strong>Key Requirements:</strong> Effectively prohibited by regulations</p>
-                            <p><strong>Pay Range:</strong> N/A</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 0</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> N/A</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Effectively prohibited by regulations</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> N/A</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>New Jersey <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 20+</p>
-                            <p><strong>Licensing Agency:</strong> New Jersey Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Comprehensive oversight requirements</p>
-                            <p><strong>Pay Range:</strong> $45-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 20+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> New Jersey Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Comprehensive oversight requirements</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>New Mexico <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 12+</p>
-                            <p><strong>Licensing Agency:</strong> New Mexico Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Standard facility licensing</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 12+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> New Mexico Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard facility licensing</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>New York <span class="status-restrictive">🔴</span></h5>
-                            <p><strong>Centers:</strong> 25+</p>
-                            <p><strong>Licensing Agency:</strong> New York State Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Complex multi-agency approval</p>
-                            <p><strong>Pay Range:</strong> $35-70</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 25+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> New York State Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Complex multi-agency approval</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $35-70</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>North Carolina <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 35+</p>
-                            <p><strong>Licensing Agency:</strong> North Carolina Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Standard health department oversight</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 35+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> North Carolina Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard health department oversight</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>North Dakota <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 6+</p>
-                            <p><strong>Licensing Agency:</strong> North Dakota Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Rural state accommodations</p>
-                            <p><strong>Pay Range:</strong> $55-95</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 6+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> North Dakota Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Rural state accommodations</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $55-95</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Ohio <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 50+</p>
-                            <p><strong>Licensing Agency:</strong> Ohio Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Balanced regulatory framework</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 50+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Ohio Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Balanced regulatory framework</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Oklahoma <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 20+</p>
-                            <p><strong>Licensing Agency:</strong> Oklahoma State Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Business-friendly approach</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 20+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Oklahoma State Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Business-friendly approach</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Oregon <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 18+</p>
-                            <p><strong>Licensing Agency:</strong> Oregon Health Authority</p>
-                            <p><strong>Key Requirements:</strong> Environmental and safety focus</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 18+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Oregon Health Authority</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Environmental and safety focus</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Pennsylvania <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 40+</p>
-                            <p><strong>Licensing Agency:</strong> Pennsylvania Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Recent modernization (2024)</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 40+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Pennsylvania Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Recent modernization (2024)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Rhode Island <span class="status-prohibited">⚫</span></h5>
-                            <p><strong>Centers:</strong> 0</p>
-                            <p><strong>Licensing Agency:</strong> N/A</p>
-                            <p><strong>Key Requirements:</strong> Effective moratorium on new centers</p>
-                            <p><strong>Pay Range:</strong> N/A</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 0</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> N/A</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Effective moratorium on new centers</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> N/A</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>South Carolina <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 25+</p>
-                            <p><strong>Licensing Agency:</strong> South Carolina Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Standard facility oversight</p>
-                            <p><strong>Pay Range:</strong> $45-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 25+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> South Carolina Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard facility oversight</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>South Dakota <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 6+</p>
-                            <p><strong>Licensing Agency:</strong> South Dakota Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Minimal additional requirements</p>
-                            <p><strong>Pay Range:</strong> $55-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 6+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> South Dakota Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Minimal additional requirements</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $55-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Tennessee <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 30+</p>
-                            <p><strong>Licensing Agency:</strong> Tennessee Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Business-friendly environment</p>
-                            <p><strong>Pay Range:</strong> $45-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 30+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Tennessee Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Business-friendly environment</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Texas <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 150+</p>
-                            <p><strong>Licensing Agency:</strong> Texas Department of State Health Services</p>
-                            <p><strong>Key Requirements:</strong> Streamlined, business-friendly</p>
-                            <p><strong>Pay Range:</strong> $50-100</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 150+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Texas Department of State Health Services</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Streamlined, business-friendly</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-100</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Utah <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 15+</p>
-                            <p><strong>Licensing Agency:</strong> Utah Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Efficient regulatory framework</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 15+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Utah Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Efficient regulatory framework</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Vermont <span class="status-prohibited">⚫</span></h5>
-                            <p><strong>Centers:</strong> 0</p>
-                            <p><strong>Licensing Agency:</strong> N/A</p>
-                            <p><strong>Key Requirements:</strong> Complex regulatory barriers</p>
-                            <p><strong>Pay Range:</strong> N/A</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 0</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> N/A</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Complex regulatory barriers</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> N/A</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Virginia <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 30+</p>
-                            <p><strong>Licensing Agency:</strong> Virginia Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Balanced oversight approach</p>
-                            <p><strong>Pay Range:</strong> $50-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 30+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Virginia Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Balanced oversight approach</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Washington <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 25+</p>
-                            <p><strong>Licensing Agency:</strong> Washington State Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Environmental and worker protections</p>
-                            <p><strong>Pay Range:</strong> $50-90</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 25+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Washington State Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Environmental and worker protections</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-90</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>West Virginia <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 12+</p>
-                            <p><strong>Licensing Agency:</strong> West Virginia Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Standard facility licensing</p>
-                            <p><strong>Pay Range:</strong> $45-80</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 12+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> West Virginia Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Standard facility licensing</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $45-80</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Wisconsin <span class="status-moderate">🟡</span></h5>
-                            <p><strong>Centers:</strong> 25+</p>
-                            <p><strong>Licensing Agency:</strong> Wisconsin Department of Health Services</p>
-                            <p><strong>Key Requirements:</strong> Comprehensive regulatory framework</p>
-                            <p><strong>Pay Range:</strong> $50-85</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 25+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Wisconsin Department of Health Services</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Comprehensive regulatory framework</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $50-85</p>
                         </div>
                         
                         <div class="state-ref-card">
                             <h5>Wyoming <span class="status-friendly">🟢</span></h5>
-                            <p><strong>Centers:</strong> 4+</p>
-                            <p><strong>Licensing Agency:</strong> Wyoming Department of Health</p>
-                            <p><strong>Key Requirements:</strong> Minimal additional requirements</p>
-                            <p><strong>Pay Range:</strong> $55-95</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Centers:</strong> 4+</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Licensing Agency:</strong> Wyoming Department of Health</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Key Requirements:</strong> Minimal additional requirements</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $55-95</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Donor Rights and Protections -->
                 <section class="content-section">
-                    <h2>🛡️ Donor Rights and Legal Protections by State</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛡️ Donor Rights and Legal Protections by State</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -964,7 +1091,7 @@
                              loading="lazy">
                     </div>
                     
-                    <h3>Universal Donor Rights (All States)</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Universal Donor Rights (All States)</h3>
                     <div class="universal-rights">
                         <ul>
                             <li><strong>Informed Consent:</strong> Right to understand all risks and procedures</li>
@@ -976,7 +1103,7 @@
                         </ul>
                     </div>
                     
-                    <h3>Enhanced State Protections</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Enhanced State Protections</h3>
                     <div class="enhanced-protections">
                         <div class="protection-category">
                             <h4>California - Comprehensive Worker & Donor Protections</h4>
@@ -1012,32 +1139,32 @@
 
                 <!-- Interstate Donation -->
                 <section class="content-section">
-                    <h2>🚗 Interstate Plasma Donation: Legal Considerations</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚗 Interstate Plasma Donation: Legal Considerations</h2>
                     
-                    <h3>Crossing State Lines to Donate</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Crossing State Lines to Donate</h3>
                     <div class="interstate-considerations">
                         <div class="consideration-item">
                             <h4>Legal Permissibility</h4>
-                            <p>There are no federal restrictions on donating plasma in multiple states, but individual centers may have policies limiting cross-border donations.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">There are no federal restrictions on donating plasma in multiple states, but individual centers may have policies limiting cross-border donations.</p>
                         </div>
                         
                         <div class="consideration-item">
                             <h4>Tax Implications</h4>
-                            <p>Income earned in different states may require filing tax returns in each state where you donate, depending on state income tax laws and thresholds.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Income earned in different states may require filing tax returns in each state where you donate, depending on state income tax laws and thresholds.</p>
                         </div>
                         
                         <div class="consideration-item">
                             <h4>Medical Records</h4>
-                            <p>Centers in different states may not share medical records, requiring separate eligibility screenings and potentially conflicting donation schedules.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Centers in different states may not share medical records, requiring separate eligibility screenings and potentially conflicting donation schedules.</p>
                         </div>
                         
                         <div class="consideration-item">
                             <h4>Residency Requirements</h4>
-                            <p>Some states or individual centers may require proof of residency or local address for donation eligibility.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Some states or individual centers may require proof of residency or local address for donation eligibility.</p>
                         </div>
                     </div>
                     
-                    <h3>Best Practices for Interstate Donors</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Best Practices for Interstate Donors</h3>
                     <div class="interstate-best-practices">
                         <ul>
                             <li><strong>Inform Both Centers:</strong> Disclose interstate donations to both facilities</li>
@@ -1050,51 +1177,51 @@
 
                 <!-- Future Outlook -->
                 <section class="content-section">
-                    <h2>🔮 Future Outlook: Regulatory Trends and Predictions</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🔮 Future Outlook: Regulatory Trends and Predictions</h2>
                     
-                    <h3>Predicted Regulatory Changes (2025-2030)</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Predicted Regulatory Changes (2025-2030)</h3>
                     <div class="future-predictions">
                         <div class="prediction-item">
                             <h4>Technology Integration Requirements</h4>
-                            <p>States increasingly likely to mandate electronic health records, automated safety monitoring, and digital consent processes.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">States increasingly likely to mandate electronic health records, automated safety monitoring, and digital consent processes.</p>
                         </div>
                         
                         <div class="prediction-item">
                             <h4>Enhanced Donor Protection</h4>
-                            <p>Expect more states to implement cooling-off periods, enhanced informed consent, and stricter advertising regulations.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Expect more states to implement cooling-off periods, enhanced informed consent, and stricter advertising regulations.</p>
                         </div>
                         
                         <div class="prediction-item">
                             <h4>Environmental Compliance</h4>
-                            <p>Growing focus on medical waste management, energy efficiency, and environmental impact assessments.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Growing focus on medical waste management, energy efficiency, and environmental impact assessments.</p>
                         </div>
                         
                         <div class="prediction-item">
                             <h4>Interstate Standardization</h4>
-                            <p>Potential for regional compacts or federal initiatives to standardize regulations across state lines.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Potential for regional compacts or federal initiatives to standardize regulations across state lines.</p>
                         </div>
                     </div>
                     
-                    <h3>States to Watch</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">States to Watch</h3>
                     <div class="states-to-watch">
                         <div class="watch-item">
                             <h4>Rhode Island</h4>
-                            <p>Pending legislation could make it the 48th state to allow plasma centers</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Pending legislation could make it the 48th state to allow plasma centers</p>
                         </div>
                         
                         <div class="watch-item">
                             <h4>New Hampshire</h4>
-                            <p>Growing political pressure to reconsider plasma center restrictions</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Growing political pressure to reconsider plasma center restrictions</p>
                         </div>
                         
                         <div class="watch-item">
                             <h4>Connecticut</h4>
-                            <p>Ongoing legislative battles over enhanced consumer protections</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Ongoing legislative battles over enhanced consumer protections</p>
                         </div>
                         
                         <div class="watch-item">
                             <h4>Vermont</h4>
-                            <p>Potential regulatory review due to neighboring state competition</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Potential regulatory review due to neighboring state competition</p>
                         </div>
                     </div>
                 </section>
@@ -1102,8 +1229,8 @@
                 <!-- Legal Disclaimer -->
                 <section class="content-section disclaimer-section">
                     <div class="legal-disclaimer">
-                        <h2>⚖️ Important Legal Disclaimer</h2>
-                        <p><strong>This information is for educational purposes only and should not be considered legal advice.</strong></p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚖️ Important Legal Disclaimer</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>This information is for educational purposes only and should not be considered legal advice.</strong></p>
                         <ul>
                             <li><strong>Regulatory Changes:</strong> Laws and regulations change frequently and without notice</li>
                             <li><strong>Local Variations:</strong> Municipal and county laws may impose additional requirements</li>
@@ -1112,13 +1239,13 @@
                             <li><strong>Current Information:</strong> Verify all regulatory information directly with relevant state agencies</li>
                             <li><strong>No Legal Advice:</strong> This content does not constitute legal advice or create attorney-client relationships</li>
                         </ul>
-                        <p><em>Last updated: January 2025. Information compiled from publicly available state regulations and legislative records.</em></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><em>Last updated: January 2025. Information compiled from publicly available state regulations and legislative records.</em></p>
                     </div>
                 </section>
 
                 <!-- Sources & References -->
                 <section class="content-section sources-section">
-                    <h3>📚 Sources & References</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                     <div class="sources-list">
                         <ul>
                             <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products" target="_blank" rel="noopener">FDA - Blood and Blood Product Regulations</a></li>
@@ -1134,16 +1261,16 @@
 
                 <!-- Author Profile -->
                 <section class="content-section author-profile">
-                    <h3>Glen Meade, Plasma Donation Researcher & Regulatory Analysis Specialist</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Regulatory Analysis Specialist</h3>
                     <div class="author-badges">
                         <span class="badge">📊 2,522+ Centers Analyzed</span>
                         <span class="badge">🏛️ State Law Expert</span>
                         <span class="badge">📋 Regulatory Compliance Specialist</span>
                     </div>
-                    <p>Glen has extensively researched state-by-state plasma donation regulations and tracked legislative changes affecting the industry. His comprehensive analysis of state laws, licensing requirements, and regulatory differences helps donors and industry professionals understand the complex legal landscape governing plasma collection across the United States.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched state-by-state plasma donation regulations and tracked legislative changes affecting the industry. His comprehensive analysis of state laws, licensing requirements, and regulatory differences helps donors and industry professionals understand the complex legal landscape governing plasma collection across the United States.</p>
                     
                     <div class="disclaimer-note">
-                        <p><strong>Transparency:</strong> Glen is not a licensed attorney. This information is educational only. Always consult your legal advisor or state regulatory agencies for authoritative legal guidance.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a licensed attorney. This information is educational only. Always consult your legal advisor or state regulatory agencies for authoritative legal guidance.</p>
                     </div>
                     
                     <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
@@ -1151,31 +1278,31 @@
 
                 <!-- Related Articles -->
                 <section class="content-section related-articles">
-                    <h3>📚 Master Your Plasma Donation Knowledge</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Master Your Plasma Donation Knowledge</h3>
                     <div class="related-links-grid">
                         <div class="related-link-card">
                             <h4><a href="/blog/plasma-donation-tax-guide-2025.html">Complete Tax Guide 2025</a></h4>
-                            <p>IRS reporting requirements and state tax implications for plasma income.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">IRS reporting requirements and state tax implications for plasma income.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/complete-medical-eligibility-guide-plasma-donation.html">Medical Eligibility Guide</a></h4>
-                            <p>200+ conditions & medications that affect donation eligibility by state.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">200+ conditions & medications that affect donation eligibility by state.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/highest-paying-plasma-centers-near-me.html">Best Paying Centers by State</a></h4>
-                            <p>State-by-state comparison of compensation rates and bonus programs.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">State-by-state comparison of compensation rates and bonus programs.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/best-plasma-centers-texas.html">Texas Centers Guide</a></h4>
-                            <p>Complete guide to plasma centers in Texas - the state with most locations.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Complete guide to plasma centers in Texas - the state with most locations.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/is-plasma-donation-worth-it-financial-analysis.html">Financial Worth Analysis</a></h4>
-                            <p>ROI calculations factoring in state taxes and regional pay differences.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">ROI calculations factoring in state taxes and regional pay differences.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/plasma-donation-side-effects.html">Safety & Legal Compliance</a></h4>
-                            <p>How state regulations protect donor safety and ensure quality standards.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">How state regulations protect donor safety and ensure quality standards.</p>
                         </div>
                     </div>
                 </section>
@@ -1183,26 +1310,26 @@
         </div>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, <a href="/health/" class="text-green-600 hover:text-green-800 underline">eligibility requirements</a>, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -1226,7 +1353,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 3,012+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 3,012+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -1259,7 +1386,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
             <p class="owner-info">
                 🏥 Plasma center owner? <a href="mailto:hello@plasmapaycalculator.com?subject=Claim%20or%20Upgrade%20Listing" class="owner-link">Claim or upgrade your listing</a>
             </p>

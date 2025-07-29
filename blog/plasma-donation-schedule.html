@@ -488,7 +488,102 @@
                 font-size: 0.8rem;
             }
         }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
 
     <style>
     .language-switcher {
@@ -544,9 +639,159 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <div class="language-switcher">
         <a href="/es/blog/plasma-donation-schedule.html" class="lang-option spanish" title="Español">
@@ -559,79 +804,93 @@
     <nav>
         <div class="nav-container">
             <div style="display: flex; align-items: center;">
-                <a href="../" class="logo">
+                <a href="/" class="logo">
                     <div class="logo-icon">PPC</div>
-                    <a href="/calculator/" class="text-green-600 hover:text-green-800 underline">Plasma Pay Calculator</a>
+                    Plasma Pay Calculator
                 </a>
-                <div class="trust-badge">California Guide</div>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
             <ul class="nav-links">
-                <li><a href="../#calculator">Calculator</a></li>
-                <li><a href="../blog/" class="active">CA Earning Tips</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../#calculator" class="cta-btn">Calculate My CA Earnings</a></li>
+                <li><a href="/" class="active">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
             <!-- Article Header -->
             <div class="article-header">
-                <h1>California Plasma Donation Schedule Optimization</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">California Plasma Donation Schedule Optimization</h1>
                 <div class="article-meta">
                     <span>🌴 Published: January 15, 2025</span>
                     <span>⏱️ 12 min read</span>
                     <span>📍 California Cities Focus</span>
                 </div>
-                <p>Master the art of scheduling plasma donations across California's major metropolitan areas. Tailored strategies for Los Angeles entertainment schedules, San Francisco Bay Area tech workers, San Diego military personnel, and Sacramento professionals.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Master the art of scheduling plasma donations across California's major metropolitan areas. Tailored strategies for Los Angeles entertainment schedules, San Francisco Bay Area tech workers, San Diego military personnel, and Sacramento professionals.</p>
             </div>
 
             <!-- California City-Specific Scheduling -->
             <div class="content-section">
-                <h2>🏙️ California Metro Area Scheduling Strategies</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏙️ California Metro Area Scheduling Strategies</h2>
                 
-                <p>California's diverse economy and lifestyle patterns create unique scheduling opportunities across major metropolitan areas. Each city's industry patterns, traffic flows, and cultural rhythms impact optimal donation timing.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California's diverse economy and lifestyle patterns create unique scheduling opportunities across major metropolitan areas. Each city's industry patterns, traffic flows, and cultural rhythms impact optimal donation timing.</p>
 
                 <div class="city-grid">
                     <div class="city-card">
                         <h4>🎬 Los Angeles & Hollywood</h4>
-                        <p><strong>Industry Focus:</strong> Entertainment, Media, Film/TV Production</p>
-                        <p><strong>Optimal Times:</strong> Mid-morning (10 AM - 12 PM) between shoots, weekends during hiatus periods</p>
-                        <p><strong>Traffic Considerations:</strong> Avoid 7-9 AM and 4-7 PM rush hours on major freeways</p>
-                        <p><strong>Best Centers:</strong> Hollywood, Burbank, Santa Monica locations</p>
-                        <p><strong>Special Scheduling:</strong> Pilot season (January-April) requires flexible timing</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Focus:</strong> Entertainment, Media, Film/TV Production</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Optimal Times:</strong> Mid-morning (10 AM - 12 PM) between shoots, weekends during hiatus periods</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Traffic Considerations:</strong> Avoid 7-9 AM and 4-7 PM rush hours on major freeways</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Centers:</strong> Hollywood, Burbank, Santa Monica locations</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Special Scheduling:</strong> Pilot season (January-April) requires flexible timing</p>
                         <div class="earnings-badge">Average: $45-65/visit</div>
                     </div>
 
                     <div class="city-card">
                         <h4>💻 San Francisco Bay Area</h4>
-                        <p><strong>Industry Focus:</strong> Tech (Google, Apple, Meta, Tesla), Startups</p>
-                        <p><strong>Optimal Times:</strong> Early morning (7-9 AM) or late evening (6-8 PM) around tech schedules</p>
-                        <p><strong>Traffic Considerations:</strong> Avoid bridge crossings during rush hours (7-9 AM, 4-6 PM)</p>
-                        <p><strong>Best Centers:</strong> Fremont, San Jose, Redwood City, Oakland</p>
-                        <p><strong>Special Scheduling:</strong> Product launch seasons may require weekend flexibility</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Focus:</strong> Tech (Google, Apple, Meta, Tesla), Startups</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Optimal Times:</strong> Early morning (7-9 AM) or late evening (6-8 PM) around tech schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Traffic Considerations:</strong> Avoid bridge crossings during rush hours (7-9 AM, 4-6 PM)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Centers:</strong> Fremont, San Jose, Redwood City, Oakland</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Special Scheduling:</strong> Product launch seasons may require weekend flexibility</p>
                         <div class="earnings-badge">Average: $50-70/visit</div>
                     </div>
 
                     <div class="city-card">
                         <h4>⚓ San Diego Military Hub</h4>
-                        <p><strong>Industry Focus:</strong> Military, Defense, Biotech, Tourism</p>
-                        <p><strong>Optimal Times:</strong> Late morning (10 AM - 12 PM) or early afternoon (1-3 PM)</p>
-                        <p><strong>Traffic Considerations:</strong> Military base shift changes affect local traffic patterns</p>
-                        <p><strong>Best Centers:</strong> Miramar, Chula Vista, El Cajon, Escondido</p>
-                        <p><strong>Special Scheduling:</strong> Deployment cycles create seasonal demand variations</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Focus:</strong> Military, Defense, Biotech, Tourism</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Optimal Times:</strong> Late morning (10 AM - 12 PM) or early afternoon (1-3 PM)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Traffic Considerations:</strong> Military base shift changes affect local traffic patterns</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Centers:</strong> Miramar, Chula Vista, El Cajon, Escondido</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Special Scheduling:</strong> Deployment cycles create seasonal demand variations</p>
                         <div class="earnings-badge">Average: $40-60/visit</div>
                     </div>
 
                     <div class="city-card">
                         <h4>🏛️ Sacramento Government Hub</h4>
-                        <p><strong>Industry Focus:</strong> Government, Healthcare, Education, Agriculture</p>
-                        <p><strong>Optimal Times:</strong> Lunch breaks (11 AM - 2 PM) or after work (5-7 PM)</p>
-                        <p><strong>Traffic Considerations:</strong> State government schedule affects downtown traffic</p>
-                        <p><strong>Best Centers:</strong> Natomas, Elk Grove, Citrus Heights, Roseville</p>
-                        <p><strong>Special Scheduling:</strong> Legislative session schedules create predictable patterns</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Focus:</strong> Government, Healthcare, Education, Agriculture</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Optimal Times:</strong> Lunch breaks (11 AM - 2 PM) or after work (5-7 PM)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Traffic Considerations:</strong> State government schedule affects downtown traffic</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Centers:</strong> Natomas, Elk Grove, Citrus Heights, Roseville</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Special Scheduling:</strong> Legislative session schedules create predictable patterns</p>
                         <div class="earnings-badge">Average: $42-58/visit</div>
                     </div>
                 </div>
@@ -639,14 +898,14 @@
 
             <!-- Industry-Specific Scheduling -->
             <div class="content-section">
-                <h2>💼 California Industry-Specific Scheduling</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💼 California Industry-Specific Scheduling</h2>
                 
                 <div class="industry-schedule">
                     <h4>🚀 Silicon Valley Tech Workers</h4>
-                    <p><strong>Companies:</strong> Google (Mountain View), Apple (Cupertino), Meta (Menlo Park), Tesla (Palo Alto), Netflix (Los Gatos)</p>
-                    <p><strong>Optimal Schedule:</strong> Early morning donations (6:30-8:00 AM) before commute, or evening donations (7-9 PM) after dinner</p>
-                    <p><strong>Flex Work Considerations:</strong> Many tech companies offer flexible schedules - use this for mid-day donations</p>
-                    <p><strong>Earnings Potential:</strong> $400-600/month with consistent twice-weekly schedule</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Companies:</strong> Google (Mountain View), Apple (Cupertino), Meta (Menlo Park), Tesla (Palo Alto), Netflix (Los Gatos)</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Optimal Schedule:</strong> Early morning donations (6:30-8:00 AM) before commute, or evening donations (7-9 PM) after dinner</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Flex Work Considerations:</strong> Many tech companies offer flexible schedules - use this for mid-day donations</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Earnings Potential:</strong> $400-600/month with consistent twice-weekly schedule</p>
                     <ul>
                         <li>Monday 7 AM: Start week strong before commute</li>
                         <li>Thursday 7 PM: End work week, weekend recovery</li>
@@ -656,10 +915,10 @@
 
                 <div class="industry-schedule">
                     <h4>🎭 Los Angeles Entertainment Industry</h4>
-                    <p><strong>Focus:</strong> Film/TV production, music, theater, streaming content</p>
-                    <p><strong>Optimal Schedule:</strong> Flexible timing around production schedules and auditions</p>
-                    <p><strong>Pilot Season Strategy:</strong> January-April requires maximum flexibility</p>
-                    <p><strong>Earnings Potential:</strong> $350-550/month (varies with production cycles)</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Focus:</strong> Film/TV production, music, theater, streaming content</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Optimal Schedule:</strong> Flexible timing around production schedules and auditions</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Pilot Season Strategy:</strong> January-April requires maximum flexibility</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Earnings Potential:</strong> $350-550/month (varies with production cycles)</p>
                     <ul>
                         <li>Wednesday 10 AM: Mid-week availability</li>
                         <li>Sunday 2 PM: Weekend recovery, prep for Monday shoots</li>
@@ -669,10 +928,10 @@
 
                 <div class="industry-schedule">
                     <h4>🎓 California University Students</h4>
-                    <p><strong>Major Schools:</strong> UCLA, USC, UCSD, UCSF, UC Davis, Stanford, Berkeley</p>
-                    <p><strong>Optimal Schedule:</strong> Between classes, study breaks, weekend maximization</p>
-                    <p><strong>Semester Considerations:</strong> Finals week avoid, summer break intensify</p>
-                    <p><strong>Earnings Potential:</strong> $320-480/month (supplemental to financial aid)</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Major Schools:</strong> UCLA, USC, UCSD, UCSF, UC Davis, Stanford, Berkeley</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Optimal Schedule:</strong> Between classes, study breaks, weekend maximization</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Semester Considerations:</strong> Finals week avoid, summer break intensify</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Earnings Potential:</strong> $320-480/month (supplemental to financial aid)</p>
                     <ul>
                         <li>Tuesday 11 AM: Between morning and afternoon classes</li>
                         <li>Friday 3 PM: End of week, weekend recovery</li>
@@ -682,10 +941,10 @@
 
                 <div class="industry-schedule">
                     <h4>⚕️ California Healthcare Workers</h4>
-                    <p><strong>Focus:</strong> Hospitals, clinics, biotech, research facilities</p>
-                    <p><strong>Optimal Schedule:</strong> Coordinate with shift schedules</p>
-                    <p><strong>Shift Considerations:</strong> Day/night/rotating shifts require flexible approach</p>
-                    <p><strong>Earnings Potential:</strong> $380-580/month with strategic scheduling</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Focus:</strong> Hospitals, clinics, biotech, research facilities</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Optimal Schedule:</strong> Coordinate with shift schedules</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Shift Considerations:</strong> Day/night/rotating shifts require flexible approach</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Earnings Potential:</strong> $380-580/month with strategic scheduling</p>
                     <ul>
                         <li>Day shift: Early morning (6 AM) or evening (8 PM) donations</li>
                         <li>Night shift: Late morning (11 AM) after sleep recovery</li>
@@ -696,46 +955,46 @@
 
             <!-- Weekly Schedule Optimization -->
             <div class="content-section">
-                <h2>📅 California Lifestyle-Optimized Weekly Schedules</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📅 California Lifestyle-Optimized Weekly Schedules</h2>
                 
                 <div class="schedule-comparison">
                     <div class="schedule-option recommended">
                         <h5>🏆 The California Maximizer</h5>
-                        <p><strong>Schedule:</strong> Monday 8 AM / Friday 6 PM</p>
-                        <p><strong>Best For:</strong> Standard California work schedules</p>
-                        <p><strong>Traffic Avoidance:</strong> Before morning rush, after evening rush</p>
-                        <p><strong>Recovery:</strong> 72+ hours between donations</p>
-                        <p><strong>Monthly Earnings:</strong> $360-480</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Schedule:</strong> Monday 8 AM / Friday 6 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best For:</strong> Standard California work schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Traffic Avoidance:</strong> Before morning rush, after evening rush</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Recovery:</strong> 72+ hours between donations</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Monthly Earnings:</strong> $360-480</p>
                         <div class="earnings-badge">Most Popular</div>
                     </div>
 
                     <div class="schedule-option">
                         <h5>🌊 The Coastal Cruiser</h5>
-                        <p><strong>Schedule:</strong> Tuesday 10 AM / Saturday 2 PM</p>
-                        <p><strong>Best For:</strong> Beach community lifestyle, flexible work</p>
-                        <p><strong>Traffic Avoidance:</strong> Mid-morning, weekend afternoon</p>
-                        <p><strong>Bonus Potential:</strong> Weekend promotions common</p>
-                        <p><strong>Monthly Earnings:</strong> $380-520</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Schedule:</strong> Tuesday 10 AM / Saturday 2 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best For:</strong> Beach community lifestyle, flexible work</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Traffic Avoidance:</strong> Mid-morning, weekend afternoon</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Bonus Potential:</strong> Weekend promotions common</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Monthly Earnings:</strong> $380-520</p>
                         <div class="earnings-badge">Bonus Hunter</div>
                     </div>
 
                     <div class="schedule-option">
                         <h5>🎬 The Entertainment Flexible</h5>
-                        <p><strong>Schedule:</strong> Wednesday 11 AM / Sunday 4 PM</p>
-                        <p><strong>Best For:</strong> Entertainment industry, irregular schedules</p>
-                        <p><strong>Flexibility:</strong> Easily adjusted around production schedules</p>
-                        <p><strong>Recovery:</strong> Optimal for physical demands</p>
-                        <p><strong>Monthly Earnings:</strong> $340-460</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Schedule:</strong> Wednesday 11 AM / Sunday 4 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best For:</strong> Entertainment industry, irregular schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Flexibility:</strong> Easily adjusted around production schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Recovery:</strong> Optimal for physical demands</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Monthly Earnings:</strong> $340-460</p>
                         <div class="earnings-badge">Most Flexible</div>
                     </div>
 
                     <div class="schedule-option">
                         <h5>💻 The Tech Optimizer</h5>
-                        <p><strong>Schedule:</strong> Thursday 7 AM / Sunday 7 PM</p>
-                        <p><strong>Best For:</strong> Silicon Valley tech workers</p>
-                        <p><strong>Commute Integration:</strong> Before work, after weekend</p>
-                        <p><strong>WFH Friendly:</strong> Works with remote schedules</p>
-                        <p><strong>Monthly Earnings:</strong> $400-560</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Schedule:</strong> Thursday 7 AM / Sunday 7 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best For:</strong> Silicon Valley tech workers</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Commute Integration:</strong> Before work, after weekend</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>WFH Friendly:</strong> Works with remote schedules</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Monthly Earnings:</strong> $400-560</p>
                         <div class="earnings-badge">Tech Focused</div>
                     </div>
                 </div>
@@ -743,9 +1002,9 @@
 
             <!-- Traffic and Timing Optimization -->
             <div class="content-section">
-                <h2>🚗 California Traffic-Optimized Scheduling</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚗 California Traffic-Optimized Scheduling</h2>
                 
-                <h3>Los Angeles Area Traffic Patterns</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Los Angeles Area Traffic Patterns</h3>
                 <ul>
                     <li><strong>Morning Rush:</strong> 6:30-9:30 AM <span class="traffic-indicator traffic-heavy"></span></li>
                     <li><strong>Mid-Morning:</strong> 10:00 AM-12:00 PM <span class="traffic-indicator traffic-light"></span></li>
@@ -755,7 +1014,7 @@
                     <li><strong>Evening:</strong> 7:00-9:00 PM <span class="traffic-indicator traffic-medium"></span></li>
                 </ul>
 
-                <h3>San Francisco Bay Area Traffic Patterns</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">San Francisco Bay Area Traffic Patterns</h3>
                 <ul>
                     <li><strong>Pre-Commute:</strong> 6:00-7:30 AM <span class="traffic-indicator traffic-light"></span></li>
                     <li><strong>Morning Commute:</strong> 7:30-9:30 AM <span class="traffic-indicator traffic-heavy"></span></li>
@@ -768,7 +1027,7 @@
 
                 <div class="tip-box">
                     <h4>🗺️ California Center Location Strategy</h4>
-                    <p>California's sprawling metro areas mean location matters. Choose centers that are:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">California's sprawling metro areas mean location matters. Choose centers that are:</p>
                     <ul>
                         <li>Against traffic flow for your commute</li>
                         <li>Near major transit hubs (BART, Metro, Coaster)</li>
@@ -780,10 +1039,10 @@
 
             <!-- Seasonal California Considerations -->
             <div class="content-section">
-                <h2>🌞 California Seasonal Scheduling Strategies</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🌞 California Seasonal Scheduling Strategies</h2>
                 
-                <h3>Summer Considerations (June-August)</h3>
-                <p>California summers bring unique scheduling challenges and opportunities:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Summer Considerations (June-August)</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California summers bring unique scheduling challenges and opportunities:</p>
                 <ul>
                     <li><strong>Beach Traffic:</strong> Coastal areas see increased weekend traffic</li>
                     <li><strong>Vacation Schedules:</strong> Many professionals take time off</li>
@@ -792,7 +1051,7 @@
                     <li><strong>Higher Demand:</strong> Increased tourism and activity levels</li>
                 </ul>
 
-                <h3>Winter Considerations (December-February)</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Winter Considerations (December-February)</h3>
                 <ul>
                     <li><strong>Rainy Season:</strong> Plan for traffic delays during storms</li>
                     <li><strong>Holiday Schedules:</strong> Centers may have modified hours</li>
@@ -800,8 +1059,8 @@
                     <li><strong>Year-End Bonuses:</strong> Many centers offer completion incentives</li>
                 </ul>
 
-                <h3>Earthquake Considerations</h3>
-                <p>California's seismic activity requires flexible scheduling backup plans:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Earthquake Considerations</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California's seismic activity requires flexible scheduling backup plans:</p>
                 <ul>
                     <li>Identify multiple nearby centers for alternatives</li>
                     <li>Keep emergency supplies in car for extended trips</li>
@@ -809,16 +1068,16 @@
                 </ul>
 
                 <div class="highlight-box">
-                    <h3>California Bonus Season Calendar</h3>
-                    <p><strong>Peak Earning Periods:</strong> January (New Year promos), July (summer demand), November (holiday prep)</p>
-                    <p><strong>Average Bonus Increase:</strong> 20-40% during promotional periods</p>
-                    <p><strong>Annual Earnings Boost:</strong> $200-400 additional with strategic timing</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Bonus Season Calendar</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Peak Earning Periods:</strong> January (New Year promos), July (summer demand), November (holiday prep)</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Average Bonus Increase:</strong> 20-40% during promotional periods</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Annual Earnings Boost:</strong> $200-400 additional with strategic timing</p>
                 </div>
             </div>
 
             <!-- Sample California Monthly Calendar -->
             <div class="content-section">
-                <h2>📊 California-Optimized Monthly Calendar</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📊 California-Optimized Monthly Calendar</h2>
                 
                 <div class="calendar-view">
                     <div class="calendar-header">January 2025 - California Plasma Schedule (Los Angeles Example)</div>
@@ -869,52 +1128,52 @@
                         
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem;"><strong>California Monthly Total: $485</strong> (8 donations + 1 bonus promotion + traffic optimization savings)</p>
+                <p class="text-gray-700 leading-relaxed mb-4" style="text-align: center; margin-top: 1rem;"><strong>California Monthly Total: $485</strong> (8 donations + 1 bonus promotion + traffic optimization savings)</p>
             </div>
 
             <!-- California Center Hours -->
             <div class="content-section">
-                <h2>🕐 California Plasma Center Operating Hours</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🕐 California Plasma Center Operating Hours</h2>
                 
                 <div class="city-grid">
                     <div class="city-card">
                         <h4>Los Angeles Area Centers</h4>
-                        <p><strong>Typical Hours:</strong> 6:00 AM - 8:00 PM</p>
-                        <p><strong>Weekend Hours:</strong> 7:00 AM - 6:00 PM</p>
-                        <p><strong>Peak Times:</strong> 4:00-7:00 PM (avoid)</p>
-                        <p><strong>Best Times:</strong> 8:00-10:00 AM, 12:00-2:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical Hours:</strong> 6:00 AM - 8:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Weekend Hours:</strong> 7:00 AM - 6:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Peak Times:</strong> 4:00-7:00 PM (avoid)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Times:</strong> 8:00-10:00 AM, 12:00-2:00 PM</p>
                     </div>
 
                     <div class="city-card">
                         <h4>San Francisco Bay Area Centers</h4>
-                        <p><strong>Typical Hours:</strong> 6:30 AM - 7:30 PM</p>
-                        <p><strong>Weekend Hours:</strong> 7:30 AM - 5:30 PM</p>
-                        <p><strong>Peak Times:</strong> 5:00-7:00 PM (avoid)</p>
-                        <p><strong>Best Times:</strong> 7:00-9:00 AM, 1:00-3:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical Hours:</strong> 6:30 AM - 7:30 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Weekend Hours:</strong> 7:30 AM - 5:30 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Peak Times:</strong> 5:00-7:00 PM (avoid)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Times:</strong> 7:00-9:00 AM, 1:00-3:00 PM</p>
                     </div>
 
                     <div class="city-card">
                         <h4>San Diego Area Centers</h4>
-                        <p><strong>Typical Hours:</strong> 6:00 AM - 8:00 PM</p>
-                        <p><strong>Weekend Hours:</strong> 7:00 AM - 6:00 PM</p>
-                        <p><strong>Peak Times:</strong> 11:00 AM-1:00 PM (avoid)</p>
-                        <p><strong>Best Times:</strong> 8:00-10:00 AM, 2:00-4:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical Hours:</strong> 6:00 AM - 8:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Weekend Hours:</strong> 7:00 AM - 6:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Peak Times:</strong> 11:00 AM-1:00 PM (avoid)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Times:</strong> 8:00-10:00 AM, 2:00-4:00 PM</p>
                     </div>
 
                     <div class="city-card">
                         <h4>Sacramento Area Centers</h4>
-                        <p><strong>Typical Hours:</strong> 6:00 AM - 8:00 PM</p>
-                        <p><strong>Weekend Hours:</strong> 7:00 AM - 6:00 PM</p>
-                        <p><strong>Peak Times:</strong> 12:00-2:00 PM (avoid)</p>
-                        <p><strong>Best Times:</strong> 8:00-11:00 AM, 3:00-5:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical Hours:</strong> 6:00 AM - 8:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Weekend Hours:</strong> 7:00 AM - 6:00 PM</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Peak Times:</strong> 12:00-2:00 PM (avoid)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Times:</strong> 8:00-11:00 AM, 3:00-5:00 PM</p>
                     </div>
                 </div>
             </div>
 
             <!-- CTA Section -->
             <div class="cta-section">
-                <h2>Ready to Optimize Your California Donation Schedule?</h2>
-                <p>Use our calculator to plan your schedule based on your California location and lifestyle. Maximize your earnings with data-driven timing strategies!</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Ready to Optimize Your California Donation Schedule?</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Use our calculator to plan your schedule based on your California location and lifestyle. Maximize your earnings with data-driven timing strategies!</p>
                 <div style="margin-top: 2rem;">
                     <a href="../#calculator" class="cta-btn" style="background: white; color: #3498db; margin-right: 1rem;">Calculate My CA Earnings 💰</a>
                     <a href="../blog/" class="cta-btn" style="background: rgba(255,255,255,0.2);">More CA Tips →</a>
@@ -928,7 +1187,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>California Plasma Guide</h4>
-                <p>Your comprehensive resource for maximizing plasma donation earnings across California's major metropolitan areas. Locally focused, data-driven strategies.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Your comprehensive resource for maximizing plasma donation earnings across California's major metropolitan areas. Locally focused, data-driven strategies.</p>
             </div>
             <div class="footer-section">
                 <h4>California Cities</h4>
@@ -958,7 +1217,7 @@
                 </ul>
             </div>
         </div>
-        <p>&copy; 2025 Plasma Pay Calculator. Local expertise for maximum earnings. Information for educational purposes.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. Local expertise for maximum earnings. Information for educational purposes.</p>
     </footer>
 </body>
 </html>

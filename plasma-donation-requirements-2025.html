@@ -138,20 +138,38 @@
     <!-- Header -->
     <header class="bg-gradient-to-r from-primary to-secondary text-white py-4">
         <div class="container mx-auto px-4">
-            <nav class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold">Plasma Pay Calculator</a>
-                <div class="hidden md:flex space-x-4">
-                    <a href="/" class="hover:text-green-200">Calculator</a>
-                    <a href="/how-much-money-can-you-make-donating-plasma.html" class="hover:text-green-200">How Much Money</a>
-                    <a href="/plasma-donation-pay-rates-2025.html" class="hover:text-green-200">Pay Rates</a>
-                    <a href="/first-time-plasma-donation-bonus.html" class="hover:text-green-200">First-Time Bonus</a>
-                    <a href="/make-money-online-plasma-donation.html" class="hover:text-green-200">Make Money Online</a>
-                    <a href="/best-side-hustle-2025.html" class="hover:text-green-200">Side Hustle</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white">☰</button>
-                </div>
-            </nav>
+            <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+        </div>
+    </nav>
             <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
                 <a href="/" class="block py-2 hover:text-green-200">Calculator</a>
                 <a href="/how-much-money-can-you-make-donating-plasma.html" class="block py-2 hover:text-green-200">How Much Money</a>

@@ -125,7 +125,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -136,33 +233,68 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">💰 Pay Calculator</a>
-            </nav>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     
-    <main class="blog-post">
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
-            <div class="breadcrumb">
+            <div class="flex items-center space-x-2 text-sm text-gray-600 mb-8">
                 <a href="/">Home</a> > <a href="/blog/index.html">Blog</a> > Plasma Donation Side Effects
             </div>
             
             <!-- Hero Section -->
-            <article class="post-header">
-                <h1>Plasma Donation Side Effects: Complete Safety Guide 2025</h1>
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Plasma Donation Side Effects: Complete Safety Guide 2025</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/uJ8LNVCBjFQ/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="post-meta">
@@ -173,8 +305,8 @@
                 
                 <!-- Reassuring Quick Answer -->
                 <div class="quick-answer-box reassuring">
-                    <h2>😊 The Reassuring Truth</h2>
-                    <p><strong>95% of plasma donors experience ZERO side effects!</strong> Serious complications are extremely rare (0.1%). Most "side effects" are mild, temporary, and easily preventable with proper preparation.</p>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">😊 The Reassuring Truth</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>95% of plasma donors experience ZERO side effects!</strong> Serious complications are extremely rare (0.1%). Most "side effects" are mild, temporary, and easily preventable with proper preparation.</p>
                     <div class="safety-stats">
                         <div class="stat">
                             <span class="number">40M+</span>
@@ -197,48 +329,48 @@
                 
                 <!-- Most Common (Mild) Side Effects -->
                 <section class="content-section">
-                    <h2>😊 Most Common Side Effects (Mild & Temporary)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">😊 Most Common Side Effects (Mild & Temporary)</h2>
                     
-                    <p>The vast majority of plasma donation side effects are minor and resolve quickly. Here's what you might experience:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">The vast majority of plasma donation side effects are minor and resolve quickly. Here's what you might experience:</p>
                     
                     <div class="side-effects-grid">
                         <div class="side-effect-card mild">
-                            <h3>🩹 Minor Bruising (10% of donors)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🩹 Minor Bruising (10% of donors)</h3>
                             <div class="effect-details">
-                                <p><strong>What it is:</strong> Small bruise at needle insertion site</p>
-                                <p><strong>Duration:</strong> 2-7 days</p>
-                                <p><strong>Prevention:</strong> Don't lift heavy objects with donation arm for 4-6 hours</p>
-                                <p><strong>Treatment:</strong> Ice pack for 10-15 minutes, keep bandage on for 4+ hours</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What it is:</strong> Small bruise at needle insertion site</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Duration:</strong> 2-7 days</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Don't lift heavy objects with donation arm for 4-6 hours</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Treatment:</strong> Ice pack for 10-15 minutes, keep bandage on for 4+ hours</p>
                             </div>
                         </div>
                         
                         <div class="side-effect-card mild">
-                            <h3>😵 Mild Dizziness (5% of donors)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">😵 Mild Dizziness (5% of donors)</h3>
                             <div class="effect-details">
-                                <p><strong>What it is:</strong> Light-headed feeling during or after donation</p>
-                                <p><strong>Duration:</strong> 5-15 minutes</p>
-                                <p><strong>Prevention:</strong> Eat a meal 2-3 hours before, stay hydrated</p>
-                                <p><strong>Treatment:</strong> Sit down, drink fluids, eat a snack</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What it is:</strong> Light-headed feeling during or after donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Duration:</strong> 5-15 minutes</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Eat a meal 2-3 hours before, stay hydrated</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Treatment:</strong> Sit down, drink fluids, eat a snack</p>
                             </div>
                         </div>
                         
                         <div class="side-effect-card mild">
-                            <h3>😴 Temporary Fatigue (8% of donors)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">😴 Temporary Fatigue (8% of donors)</h3>
                             <div class="effect-details">
-                                <p><strong>What it is:</strong> Feeling tired for 1-2 hours after donation</p>
-                                <p><strong>Duration:</strong> 1-3 hours</p>
-                                <p><strong>Prevention:</strong> Get 7-8 hours sleep night before, eat protein-rich meal</p>
-                                <p><strong>Treatment:</strong> Rest, hydrate, avoid strenuous activity</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What it is:</strong> Feeling tired for 1-2 hours after donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Duration:</strong> 1-3 hours</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Get 7-8 hours sleep night before, eat protein-rich meal</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Treatment:</strong> Rest, hydrate, avoid strenuous activity</p>
                             </div>
                         </div>
                         
                         <div class="side-effect-card mild">
-                            <h3>🏃‍♂️ Mild Dehydration (3% of donors)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🏃‍♂️ Mild Dehydration (3% of donors)</h3>
                             <div class="effect-details">
-                                <p><strong>What it is:</strong> Feeling thirsty or dry mouth</p>
-                                <p><strong>Duration:</strong> 30 minutes to 2 hours</p>
-                                <p><strong>Prevention:</strong> Drink 64+ oz water daily, extra 16 oz before donation</p>
-                                <p><strong>Treatment:</strong> Drink electrolyte beverages, avoid caffeine</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What it is:</strong> Feeling thirsty or dry mouth</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Duration:</strong> 30 minutes to 2 hours</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Drink 64+ oz water daily, extra 16 oz before donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Treatment:</strong> Drink electrolyte beverages, avoid caffeine</p>
                             </div>
                         </div>
                     </div>
@@ -246,40 +378,40 @@
 
                 <!-- Rare but Concerning Side Effects -->
                 <section class="content-section">
-                    <h2>⚠️ Rare Side Effects to Watch For (Less Than 1%)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚠️ Rare Side Effects to Watch For (Less Than 1%)</h2>
                     
                     <div class="warning-notice">
-                        <p><strong>Important:</strong> These occur in less than 1% of donations but require immediate attention if they happen.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Important:</strong> These occur in less than 1% of donations but require immediate attention if they happen.</p>
                     </div>
                     
                     <div class="side-effects-rare">
                         <div class="side-effect-card concerning">
-                            <h3>🚨 Nerve Damage (0.02% of donors)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🚨 Nerve Damage (0.02% of donors)</h3>
                             <div class="effect-details">
-                                <p><strong>Symptoms:</strong> Tingling, numbness, shooting pain in donation arm</p>
-                                <p><strong>Cause:</strong> Needle hitting a nerve (extremely rare with trained staff)</p>
-                                <p><strong>Action:</strong> Tell staff immediately, seek medical evaluation</p>
-                                <p><strong>Recovery:</strong> Usually temporary, resolves in days to weeks</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Tingling, numbness, shooting pain in donation arm</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Needle hitting a nerve (extremely rare with trained staff)</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Action:</strong> Tell staff immediately, seek medical evaluation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Recovery:</strong> Usually temporary, resolves in days to weeks</p>
                             </div>
                         </div>
                         
                         <div class="side-effect-card concerning">
-                            <h3>🩸 Arterial Puncture (0.01% of donors)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🩸 Arterial Puncture (0.01% of donors)</h3>
                             <div class="effect-details">
-                                <p><strong>Symptoms:</strong> Bright red blood, swelling, intense pain</p>
-                                <p><strong>Cause:</strong> Needle accidentally hits artery instead of vein</p>
-                                <p><strong>Action:</strong> Staff will stop immediately, apply pressure</p>
-                                <p><strong>Prevention:</strong> Choose centers with experienced staff</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Bright red blood, swelling, intense pain</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Needle accidentally hits artery instead of vein</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Action:</strong> Staff will stop immediately, apply pressure</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Choose centers with experienced staff</p>
                             </div>
                         </div>
                         
                         <div class="side-effect-card concerning">
-                            <h3>🤮 Severe Reactions (0.05% of donors)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🤮 Severe Reactions (0.05% of donors)</h3>
                             <div class="effect-details">
-                                <p><strong>Symptoms:</strong> Severe nausea, vomiting, fainting</p>
-                                <p><strong>Cause:</strong> Individual sensitivity, low blood pressure, dehydration</p>
-                                <p><strong>Action:</strong> Staff trained in emergency response</p>
-                                <p><strong>Prevention:</strong> Follow all pre-donation guidelines</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Symptoms:</strong> Severe nausea, vomiting, fainting</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Cause:</strong> Individual sensitivity, low blood pressure, dehydration</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Action:</strong> Staff trained in emergency response</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Follow all pre-donation guidelines</p>
                             </div>
                         </div>
                     </div>
@@ -287,12 +419,12 @@
 
                 <!-- Prevention Guide -->
                 <section class="content-section">
-                    <h2>🛡️ How to Prevent Side Effects (95% Success Rate)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛡️ How to Prevent Side Effects (95% Success Rate)</h2>
                     
-                    <p>Follow these proven strategies to minimize your risk of any side effects:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Follow these proven strategies to minimize your risk of any side effects:</p>
                     
                     <div class="prevention-timeline">
-                        <h3>📅 Week Before Donation</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 Week Before Donation</h3>
                         <ul>
                             <li>Maintain healthy sleep schedule (7-8 hours nightly)</li>
                             <li>Eat balanced diet with adequate protein (50g+ daily)</li>
@@ -300,7 +432,7 @@
                             <li>Avoid excessive alcohol consumption</li>
                         </ul>
                         
-                        <h3>📅 Day Before Donation</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 Day Before Donation</h3>
                         <ul>
                             <li>No alcohol for 24 hours before donation</li>
                             <li>Get full night's sleep (8+ hours)</li>
@@ -308,7 +440,7 @@
                             <li>Eat iron-rich foods (spinach, lean meat, beans)</li>
                         </ul>
                         
-                        <h3>📅 Day of Donation</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 Day of Donation</h3>
                         <ul>
                             <li>Eat substantial meal 2-3 hours before (avoid fatty foods)</li>
                             <li>Drink 16-20 oz water 1-2 hours before</li>
@@ -316,7 +448,7 @@
                             <li>Wear comfortable clothing with easy arm access</li>
                         </ul>
                         
-                        <h3>📅 During Donation</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 During Donation</h3>
                         <ul>
                             <li>Communicate any discomfort to staff immediately</li>
                             <li>Use squeeze ball or stress ball as directed</li>
@@ -328,11 +460,11 @@
 
                 <!-- After Donation Care -->
                 <section class="content-section">
-                    <h2>🏥 Post-Donation Care (Minimize Any Issues)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏥 Post-Donation Care (Minimize Any Issues)</h2>
                     
                     <div class="post-care-grid">
                         <div class="care-section">
-                            <h3>⏰ First 30 Minutes</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⏰ First 30 Minutes</h3>
                             <ul>
                                 <li>Rest in center's recovery area</li>
                                 <li>Drink provided fluids/snacks</li>
@@ -343,7 +475,7 @@
                         </div>
                         
                         <div class="care-section">
-                            <h3>⏰ First 4-6 Hours</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⏰ First 4-6 Hours</h3>
                             <ul>
                                 <li>Avoid heavy lifting with donation arm</li>
                                 <li>No vigorous exercise or sports</li>
@@ -354,7 +486,7 @@
                         </div>
                         
                         <div class="care-section">
-                            <h3>⏰ First 24 Hours</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⏰ First 24 Hours</h3>
                             <ul>
                                 <li>No alcohol for 24 hours</li>
                                 <li>Eat iron-rich foods</li>
@@ -368,11 +500,11 @@
 
                 <!-- When to Seek Help -->
                 <section class="content-section">
-                    <h2>🚨 When to Seek Medical Attention</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚨 When to Seek Medical Attention</h2>
                     
                     <div class="emergency-guide">
                         <div class="immediate-action">
-                            <h3>🚑 Seek Immediate Medical Care If:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🚑 Seek Immediate Medical Care If:</h3>
                             <ul>
                                 <li>Severe dizziness lasting over 30 minutes</li>
                                 <li>Bleeding from needle site that won't stop after 10 minutes of pressure</li>
@@ -385,7 +517,7 @@
                         </div>
                         
                         <div class="contact-info">
-                            <h3>📞 Who to Contact</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📞 Who to Contact</h3>
                             <ul>
                                 <li><strong>First:</strong> Call the plasma center where you donated</li>
                                 <li><strong>Emergency:</strong> Call 911 for severe reactions</li>
@@ -398,19 +530,19 @@
 
                 <!-- Success Stories -->
                 <section class="content-section">
-                    <h2>😊 Real Donor Experiences (Mostly Positive!)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">😊 Real Donor Experiences (Mostly Positive!)</h2>
                     
                     <div class="testimonials">
                         <div class="testimonial">
-                            <p><strong>Sarah, 24, College Student:</strong> "I've donated 47 times and only had minor bruising twice. The staff is amazing and I've never felt unsafe. Easy $500+ monthly!"</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Sarah, 24, College Student:</strong> "I've donated 47 times and only had minor bruising twice. The staff is amazing and I've never felt unsafe. Easy $500+ monthly!"</p>
                         </div>
                         
                         <div class="testimonial">
-                            <p><strong>Mike, 31, Teacher:</strong> "Been donating for 2 years, zero issues. I follow their hydration guidelines religiously. It's helped pay off my student loans!"</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Mike, 31, Teacher:</strong> "Been donating for 2 years, zero issues. I follow their hydration guidelines religiously. It's helped pay off my student loans!"</p>
                         </div>
                         
                         <div class="testimonial">
-                            <p><strong>Jennifer, 28, Nurse:</strong> "As a healthcare worker, I was initially concerned. But the safety protocols are excellent. I've had zero complications in 60+ donations."</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Jennifer, 28, Nurse:</strong> "As a healthcare worker, I was initially concerned. But the safety protocols are excellent. I've had zero complications in 60+ donations."</p>
                         </div>
                     </div>
                 </section>
@@ -422,10 +554,10 @@
 
                 <!-- Call to Action -->
                 <section class="content-section cta-section">
-                    <h2>💪 Ready to Donate Safely & Earn Money?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💪 Ready to Donate Safely & Earn Money?</h2>
                     
                     <div class="final-cta">
-                        <p>Now that you understand the real (minimal) risks and how to prevent them, you can donate plasma with confidence! <strong>95% of donors have zero issues</strong> and earn <strong>$400-$800 monthly</strong>.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Now that you understand the real (minimal) risks and how to prevent them, you can donate plasma with confidence! <strong>95% of donors have zero issues</strong> and earn <strong>$400-$800 monthly</strong>.</p>
                         
                         <div class="cta-buttons">
                             <a href="/?search=true" class="cta-btn primary">🔍 Find Safe Centers Near Me</a>
@@ -433,7 +565,7 @@
                         </div>
                         
                         <div class="safety-reminder">
-                            <h3>🛡️ Remember:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🛡️ Remember:</h3>
                             <ul>
                                 <li>Choose FDA-regulated centers with trained staff</li>
                                 <li>Follow all pre and post-donation guidelines</li>
@@ -446,7 +578,7 @@
 
                 <!-- Related Articles -->
                 <section class="related-articles">
-                    <h3>🔗 Related Safety & Earnings Guides:</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🔗 Related Safety & Earnings Guides:</h3>
                     <div class="related-links">
                         <a href="/blog/can-you-donate-plasma-twice-a-week.html">Can You Donate Plasma Twice a Week?</a>
                         <a href="/how-much-do-you-get-for-donating-plasma.html">How Much Do You Get for Donating Plasma?</a>
@@ -458,7 +590,7 @@
 
             <!-- Sources & References -->
             <section class="content-section sources-section">
-                <h3>📚 Sources & References</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                 <div class="sources-list">
                     <ul>
                         <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood Donor Screening Requirements</a></li>
@@ -474,16 +606,16 @@
 
             <!-- Author Profile -->
             <section class="content-section author-profile">
-                <h3>Glen Meade, Plasma Donation Researcher & Safety Analyst</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Safety Analyst</h3>
                 <div class="author-badges">
                     <span class="badge">📊 2,522+ Centers Analyzed</span>
                     <span class="badge">🛡️ Safety Data Expert</span>
                     <span class="badge">⚠️ Side Effects Specialist</span>
                 </div>
-                <p>Glen has extensively researched plasma donation safety and side effects, analyzing data from thousands of donation sessions across major plasma center chains. His comprehensive analysis of donor experiences, safety protocols, and side effect patterns helps donors understand risks and maximize their safety during plasma donation.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched plasma donation safety and side effects, analyzing data from thousands of donation sessions across major plasma center chains. His comprehensive analysis of donor experiences, safety protocols, and side effect patterns helps donors understand risks and maximize their safety during plasma donation.</p>
                 
                 <div class="disclaimer-note">
-                    <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
                 </div>
                 
                 <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
@@ -491,21 +623,21 @@
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer">
-                        <h2>⚠️ Important Medical Disclaimer</h2>
-                        <p><strong>This information is for educational purposes only and should not replace professional medical advice.</strong></p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚠️ Important Medical Disclaimer</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>This information is for educational purposes only and should not replace professional medical advice.</strong></p>
                         <ul>
                             <li><strong>Consult Healthcare Providers:</strong> Always speak with your doctor before starting plasma donation, especially if you have medical conditions</li>
                             <li><strong>Individual Variations:</strong> Side effects can vary based on personal health, medications, and other factors</li>
@@ -514,17 +646,17 @@
                             <li><strong>Not Medical Advice:</strong> This content is educational only and not affiliated with medical organizations</li>
                             <li><strong>Current Information:</strong> Medical knowledge evolves - always verify current guidelines with healthcare professionals</li>
                         </ul>
-                        <p><em>Last updated: January 2025. Information based on FDA guidelines and medical literature.</em></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><em>Last updated: January 2025. Information based on FDA guidelines and medical literature.</em></p>
                     </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, eligibility requirements, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -548,7 +680,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Donation Safety</h4>
-                <p>Complete guide to plasma donation side effects, safety protocols, and prevention strategies. 95% of donors experience zero issues.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Complete guide to plasma donation side effects, safety protocols, and prevention strategies. 95% of donors experience zero issues.</p>
             </div>
             <div class="footer-section">
                 <h4>Safety Resources</h4>

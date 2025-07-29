@@ -153,7 +153,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -164,43 +261,67 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">Pay Calculator</a>
-            </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="blog-post-content">
+    <main class="min-h-screen bg-gray-50">
         <!-- Breadcrumbs -->
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
-                <li>BioLife vs CSL Plasma</li>
-            </ol>
-        </nav>
+        
 
         <!-- Article -->
-        <article class="blog-article">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <header class="article-header">
-                <h1>BioLife vs CSL Plasma: Which Pays More? Complete 2025 Comparison</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">BioLife vs CSL Plasma: Which Pays More? Complete 2025 Comparison</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/L8tWZT4CcVQ/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="article-meta">
@@ -215,7 +336,7 @@
 
             <!-- Table of Contents -->
             <div class="table-of-contents">
-                <h3>Table of Contents</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Table of Contents</h3>
                 <ul>
                     <li><a href="#overview">Chain Overview</a></li>
                     <li><a href="#pay-comparison">Pay Rate Comparison</a></li>
@@ -230,15 +351,15 @@
             <!-- Article Content -->
             <div class="article-content">
                 <section id="overview">
-                    <h2>🏢 Chain Overview</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏢 Chain Overview</h2>
                     
                     <div class="comparison-intro">
-                        <p>BioLife and CSL Plasma are the two largest plasma donation center chains in the United States, operating over 500 centers combined. Both offer competitive compensation, but they have different approaches to donor rewards and experiences.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">BioLife and CSL Plasma are the two largest plasma donation center chains in the United States, operating over 500 centers combined. Both offer competitive compensation, but they have different approaches to donor rewards and experiences.</p>
                     </div>
                     
                     <div class="chains-overview">
                         <div class="chain-overview-card">
-                            <h3>💙 BioLife Plasma Services</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💙 BioLife Plasma Services</h3>
                             <ul>
                                 <li><strong>Parent Company:</strong> Takeda Pharmaceutical</li>
                                 <li><strong>Founded:</strong> 2009</li>
@@ -249,7 +370,7 @@
                         </div>
                         
                         <div class="chain-overview-card">
-                            <h3>🧬 CSL Plasma</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🧬 CSL Plasma</h3>
                             <ul>
                                 <li><strong>Parent Company:</strong> CSL Behring (Australia)</li>
                                 <li><strong>Founded:</strong> 2000</li>
@@ -262,9 +383,9 @@
                 </section>
 
                 <section id="pay-comparison">
-                    <h2>💰 Pay Rate Comparison</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💰 Pay Rate Comparison</h2>
                     
-                    <h3>Regular Donation Rates</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Regular Donation Rates</h3>
                     <div class="pay-comparison-table">
                         <div class="comparison-row">
                             <div class="comparison-metric">Weight Category</div>
@@ -312,18 +433,18 @@
                     
                     <div class="winner-box">
                         <h4>🏆 Pay Rate Winner: CSL Plasma</h4>
-                        <p>CSL Plasma consistently offers $5-10 more per donation across all weight categories, with particularly strong rates for donors over 175 lbs.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">CSL Plasma consistently offers $5-10 more per donation across all weight categories, with particularly strong rates for donors over 175 lbs.</p>
                     </div>
                 </section>
 
                 <section id="new-donor-bonuses">
-                    <h2>🎁 New Donor Bonuses</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎁 New Donor Bonuses</h2>
                     
                     <div class="bonus-comparison">
                         <div class="bonus-chain">
-                            <h3>💙 BioLife New Donor Bonuses</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💙 BioLife New Donor Bonuses</h3>
                             <div class="bonus-structure">
-                                <p><strong>Typical Offer:</strong> "Up to $750 in your first month"</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical Offer:</strong> "Up to $750 in your first month"</p>
                                 <ul>
                                     <li><strong>1st donation:</strong> $50-$100</li>
                                     <li><strong>2nd donation:</strong> $75-$125</li>
@@ -337,9 +458,9 @@
                         </div>
                         
                         <div class="bonus-chain">
-                            <h3>🧬 CSL Plasma New Donor Bonuses</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🧬 CSL Plasma New Donor Bonuses</h3>
                             <div class="bonus-structure">
-                                <p><strong>Typical Offer:</strong> "Up to $1,000 for qualified new donors"</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical Offer:</strong> "Up to $1,000 for qualified new donors"</p>
                                 <ul>
                                     <li><strong>1st donation:</strong> $75-$125</li>
                                     <li><strong>2nd donation:</strong> $100-$150</li>
@@ -353,57 +474,57 @@
                         </div>
                     </div>
                     
-                    <h3>Bonus Comparison Factors</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Bonus Comparison Factors</h3>
                     <div class="bonus-factors">
                         <div class="factor">
                             <h4>🎯 Frequency</h4>
-                            <p><strong>CSL:</strong> More aggressive and frequent new donor campaigns</p>
-                            <p><strong>BioLife:</strong> Consistent but more conservative offers</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>CSL:</strong> More aggressive and frequent new donor campaigns</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>BioLife:</strong> Consistent but more conservative offers</p>
                         </div>
                         
                         <div class="factor">
                             <h4>📍 Location Variance</h4>
-                            <p><strong>CSL:</strong> Bonuses vary significantly by market competition</p>
-                            <p><strong>BioLife:</strong> More standardized bonus structure</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>CSL:</strong> Bonuses vary significantly by market competition</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>BioLife:</strong> More standardized bonus structure</p>
                         </div>
                         
                         <div class="factor">
                             <h4>⏰ Requirements</h4>
-                            <p><strong>CSL:</strong> Often requires completion within shorter timeframes</p>
-                            <p><strong>BioLife:</strong> More flexible completion windows</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>CSL:</strong> Often requires completion within shorter timeframes</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>BioLife:</strong> More flexible completion windows</p>
                         </div>
                     </div>
                     
                     <div class="winner-box">
                         <h4>🏆 New Donor Bonus Winner: CSL Plasma</h4>
-                        <p>CSL Plasma typically offers $100-250 more in new donor bonuses, though requirements may be stricter.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">CSL Plasma typically offers $100-250 more in new donor bonuses, though requirements may be stricter.</p>
                     </div>
                 </section>
 
                 <section id="locations">
-                    <h2>📍 Locations and Availability</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📍 Locations and Availability</h2>
                     
                     <div class="location-stats">
                         <div class="location-comparison">
-                            <h3>Geographic Coverage</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Geographic Coverage</h3>
                             <div class="coverage-grid">
                                 <div class="coverage-stat">
                                     <h4>💙 BioLife</h4>
-                                    <p><strong>220+ locations</strong> in 35+ states</p>
-                                    <p>Strong in: Texas, Ohio, Michigan, Indiana</p>
-                                    <p>Focus: College towns and suburban areas</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4"><strong>220+ locations</strong> in 35+ states</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Strong in: Texas, Ohio, Michigan, Indiana</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Focus: College towns and suburban areas</p>
                                 </div>
                                 
                                 <div class="coverage-stat">
                                     <h4>🧬 CSL Plasma</h4>
-                                    <p><strong>300+ locations</strong> in 40+ states</p>
-                                    <p>Strong in: California, Texas, Florida, Illinois</p>
-                                    <p>Focus: Major metropolitan areas</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4"><strong>300+ locations</strong> in 40+ states</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Strong in: California, Texas, Florida, Illinois</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Focus: Major metropolitan areas</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <h3>Accessibility Factors</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Accessibility Factors</h3>
                         <ul>
                             <li><strong>Urban vs Rural:</strong> CSL has better urban coverage, BioLife serves more small cities</li>
                             <li><strong>Parking:</strong> Both chains generally provide adequate free parking</li>
@@ -414,59 +535,59 @@
                     
                     <div class="winner-box">
                         <h4>🏆 Location Winner: CSL Plasma</h4>
-                        <p>CSL Plasma wins with 80+ more locations and broader state coverage, making it more accessible for most donors.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">CSL Plasma wins with 80+ more locations and broader state coverage, making it more accessible for most donors.</p>
                     </div>
                 </section>
 
                 <section id="donor-experience">
-                    <h2>⭐ Donor Experience</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⭐ Donor Experience</h2>
                     
                     <div class="experience-comparison">
                         <div class="experience-aspect">
-                            <h3>🏥 Facility Quality</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🏥 Facility Quality</h3>
                             <div class="aspect-comparison">
-                                <p><strong>BioLife:</strong> Generally newer facilities with modern equipment. Clean, well-maintained centers with comfortable donor areas.</p>
-                                <p><strong>CSL Plasma:</strong> Mixed facility ages, but consistent standards. Some older locations, but regular updates to equipment.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>BioLife:</strong> Generally newer facilities with modern equipment. Clean, well-maintained centers with comfortable donor areas.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>CSL Plasma:</strong> Mixed facility ages, but consistent standards. Some older locations, but regular updates to equipment.</p>
                             </div>
                         </div>
                         
                         <div class="experience-aspect">
-                            <h3>⏱️ Wait Times</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⏱️ Wait Times</h3>
                             <div class="aspect-comparison">
-                                <p><strong>BioLife:</strong> Generally shorter wait times due to better scheduling systems and appointment options.</p>
-                                <p><strong>CSL Plasma:</strong> Can have longer waits during peak times, but high throughput once process starts.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>BioLife:</strong> Generally shorter wait times due to better scheduling systems and appointment options.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>CSL Plasma:</strong> Can have longer waits during peak times, but high throughput once process starts.</p>
                             </div>
                         </div>
                         
                         <div class="experience-aspect">
-                            <h3>👨‍⚕️ Staff Quality</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">👨‍⚕️ Staff Quality</h3>
                             <div class="aspect-comparison">
-                                <p><strong>BioLife:</strong> Well-trained staff, consistent service quality, good customer service training.</p>
-                                <p><strong>CSL Plasma:</strong> Experienced staff, but service quality can vary by location due to high volume.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>BioLife:</strong> Well-trained staff, consistent service quality, good customer service training.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>CSL Plasma:</strong> Experienced staff, but service quality can vary by location due to high volume.</p>
                             </div>
                         </div>
                         
                         <div class="experience-aspect">
-                            <h3>📱 Technology</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📱 Technology</h3>
                             <div class="aspect-comparison">
-                                <p><strong>BioLife:</strong> Modern donor portal, easy appointment scheduling, mobile-friendly systems.</p>
-                                <p><strong>CSL Plasma:</strong> Functional but older systems, basic online features, improving mobile experience.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>BioLife:</strong> Modern donor portal, easy appointment scheduling, mobile-friendly systems.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>CSL Plasma:</strong> Functional but older systems, basic online features, improving mobile experience.</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="winner-box">
                         <h4>🏆 Experience Winner: BioLife</h4>
-                        <p>BioLife edges out CSL with better technology, shorter wait times, and more consistent service quality.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">BioLife edges out CSL with better technology, shorter wait times, and more consistent service quality.</p>
                     </div>
                 </section>
 
                 <section id="pros-cons">
-                    <h2>⚖️ Pros and Cons</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚖️ Pros and Cons</h2>
                     
                     <div class="pros-cons-grid">
                         <div class="pros-cons-card">
-                            <h3>💙 BioLife Pros & Cons</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💙 BioLife Pros & Cons</h3>
                             <div class="pros">
                                 <h4>✅ Pros</h4>
                                 <ul>
@@ -491,7 +612,7 @@
                         </div>
                         
                         <div class="pros-cons-card">
-                            <h3>🧬 CSL Plasma Pros & Cons</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🧬 CSL Plasma Pros & Cons</h3>
                             <div class="pros">
                                 <h4>✅ Pros</h4>
                                 <ul>
@@ -518,11 +639,11 @@
                 </section>
 
                 <section id="verdict">
-                    <h2>🏆 Final Verdict: Which Should You Choose?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏆 Final Verdict: Which Should You Choose?</h2>
                     
                     <div class="verdict-summary">
                         <div class="verdict-card">
-                            <h3>💰 Choose CSL Plasma If:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💰 Choose CSL Plasma If:</h3>
                             <ul>
                                 <li>You prioritize maximum earnings per donation</li>
                                 <li>You weigh 150+ lbs (higher pay tiers)</li>
@@ -537,7 +658,7 @@
                         </div>
                         
                         <div class="verdict-card">
-                            <h3>⭐ Choose BioLife If:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⭐ Choose BioLife If:</h3>
                             <ul>
                                 <li>You value a better overall experience</li>
                                 <li>You prefer shorter wait times</li>
@@ -553,12 +674,12 @@
                     </div>
                     
                     <div class="final-recommendation">
-                        <h3>💡 Our Recommendation</h3>
-                        <p><strong>For Maximum Earnings:</strong> Choose CSL Plasma - the higher pay rates ($5-10 more per donation) and larger bonuses ($100-250 more) make it the clear winner for income maximization.</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💡 Our Recommendation</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>For Maximum Earnings:</strong> Choose CSL Plasma - the higher pay rates ($5-10 more per donation) and larger bonuses ($100-250 more) make it the clear winner for income maximization.</p>
                         
-                        <p><strong>For Best Experience:</strong> Choose BioLife - if earning an extra $10-20 per month isn't critical, BioLife offers a superior donor experience with shorter waits and better technology.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>For Best Experience:</strong> Choose BioLife - if earning an extra $10-20 per month isn't critical, BioLife offers a superior donor experience with shorter waits and better technology.</p>
                         
-                        <p><strong>Location-Dependent:</strong> Your choice may ultimately depend on which chain has a more convenient location in your area. Check both options and consider factors like drive time, parking, and hours of operation.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Location-Dependent:</strong> Your choice may ultimately depend on which chain has a more convenient location in your area. Check both options and consider factors like drive time, parking, and hours of operation.</p>
                     </div>
                 </section>
             </div>
@@ -594,7 +715,7 @@
 
             <!-- Related Articles -->
             <section class="related-articles">
-                <h3>🔗 Related Comparison Guides:</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🔗 Related Comparison Guides:</h3>
                 <div class="related-links">
                     <a href="/blog/which-plasma-center-pays-most-money.html">Which Center Pays Most?</a>
                     <a href="/blog/how-much-money-plasma-donation.html">How Much Can You Make?</a>
@@ -605,7 +726,7 @@
 
             <!-- Sources & References -->
             <section class="content-section sources-section">
-                <h3>📚 Sources & References</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                 <div class="sources-list">
                     <ul>
                         <li><a href="https://www.cslplasma.com/donor-compensation" target="_blank" rel="noopener">CSL Plasma - Official Compensation Information</a></li>
@@ -621,41 +742,41 @@
 
             <!-- Author Profile -->
             <section class="content-section author-profile">
-                <h3>Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
                 <div class="author-badges">
                     <span class="badge">📊 2,522+ Centers Analyzed</span>
                     <span class="badge">🏢 Chain Comparison Expert</span>
                 </div>
-                <p>Glen has conducted extensive comparative analysis of major plasma center chains including CSL Plasma and BioLife. His research covers compensation structures, donor experiences, location availability, and operational differences across the largest plasma collection networks in the United States.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Glen has conducted extensive comparative analysis of major plasma center chains including CSL Plasma and BioLife. His research covers compensation structures, donor experiences, location availability, and operational differences across the largest plasma collection networks in the United States.</p>
                 
                 <div class="disclaimer-note">
-                    <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
                 </div>
                 
                 <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
             </section>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, <a href="/health/" class="text-green-600 hover:text-green-800 underline">eligibility requirements</a>, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -679,7 +800,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -703,7 +824,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
         </div>
     </footer>
 

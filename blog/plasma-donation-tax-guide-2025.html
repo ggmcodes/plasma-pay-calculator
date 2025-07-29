@@ -83,7 +83,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -94,38 +191,68 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html" class="active">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">Pay Calculator</a>
-            </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     
-    <main class="blog-post">
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
-            <div class="breadcrumb">
+            <div class="flex items-center space-x-2 text-sm text-gray-600 mb-8">
                 <a href="/">Home</a> > <a href="/blog/index.html">Blog</a> > Plasma Donation Tax Guide 2025
             </div>
             
             <!-- Hero Section -->
-            <article class="post-header">
-                <h1>Plasma Donation Tax Guide 2025: Complete IRS Reporting & Deductions Handbook</h1>
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Plasma Donation Tax Guide 2025: Complete IRS Reporting & Deductions Handbook</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/KDeab4oW0lY/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="post-meta">
@@ -136,7 +263,7 @@
                 
                 <!-- Quick Tax Facts -->
                 <div class="quick-answer-box">
-                    <h2>💰 Quick Tax Facts</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💰 Quick Tax Facts</h2>
                     <div class="tax-quick-facts">
                         <div class="fact-item">
                             <span class="fact-number">YES</span>
@@ -151,7 +278,7 @@
                             <span class="fact-label">Self-employment tax rate</span>
                         </div>
                     </div>
-                    <p><strong>Bottom line:</strong> Plasma donation income is taxable at federal and state levels. You'll owe self-employment tax plus income tax, but smart deductions can reduce your burden significantly.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Bottom line:</strong> Plasma donation income is taxable at federal and state levels. You'll owe self-employment tax plus income tax, but smart deductions can reduce your burden significantly.</p>
                 </div>
             </article>
 
@@ -168,20 +295,20 @@
                 <section class="content-section">
                     <p class="intro">If you're earning money from plasma donation, you're probably wondering: <strong>Do I have to pay taxes on plasma donation income?</strong> The short answer is yes, and the tax implications are more complex than most donors realize.</p>
                     
-                    <p>This comprehensive guide covers everything you need to know about plasma donation taxes in 2025, including new IRS changes, deduction strategies, and how to avoid costly penalties. Whether you earn $500 or $5,000 annually from plasma donation, this guide will help you navigate the tax requirements legally and efficiently.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">This comprehensive guide covers everything you need to know about plasma donation taxes in 2025, including new IRS changes, deduction strategies, and how to avoid costly penalties. Whether you earn $500 or $5,000 annually from plasma donation, this guide will help you navigate the tax requirements legally and efficiently.</p>
                 </section>
 
                 <!-- Chapter 1: Is Plasma Income Taxable? -->
                 <section class="content-section">
-                    <h2>📋 Chapter 1: Is Plasma Donation Income Taxable?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📋 Chapter 1: Is Plasma Donation Income Taxable?</h2>
                     
                     <div class="warning-box">
-                        <h3>⚠️ Critical Tax Fact</h3>
-                        <p><strong>Yes, all plasma donation income is taxable at both federal and state levels.</strong> The IRS classifies plasma donation payments as self-employment income, not gifts or compensation for blood products.</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚠️ Critical Tax Fact</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Yes, all plasma donation income is taxable at both federal and state levels.</strong> The IRS classifies plasma donation payments as self-employment income, not gifts or compensation for blood products.</p>
                     </div>
                     
-                    <h3>Why Plasma Income is Taxable</h3>
-                    <p>According to IRS Publication 525, plasma donation payments are considered:</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Why Plasma Income is Taxable</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">According to IRS Publication 525, plasma donation payments are considered:</p>
                     
                     <ul>
                         <li><strong>Self-Employment Income:</strong> You're providing a service (plasma) for compensation</li>
@@ -192,13 +319,13 @@
                     
                     <div class="info-box">
                         <h4>Common Misconception</h4>
-                        <p>Many donors think plasma income isn't taxable because it's "helping people" or because no 1099 was received. This is incorrect - all income must be reported regardless of whether you receive tax documents.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Many donors think plasma income isn't taxable because it's "helping people" or because no 1099 was received. This is incorrect - all income must be reported regardless of whether you receive tax documents.</p>
                     </div>
                 </section>
 
                 <!-- Tax Forms and Reporting -->
                 <section class="content-section">
-                    <h2>📄 Chapter 2: Tax Forms and Reporting Requirements</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📄 Chapter 2: Tax Forms and Reporting Requirements</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1554224154-26032fbed8bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -206,8 +333,8 @@
                              loading="lazy">
                     </div>
                     
-                    <h3>1099-NEC: What You'll Receive</h3>
-                    <p>If you earn $600 or more from a single plasma center in a tax year, they're required to send you Form 1099-NEC (Nonemployee Compensation) by January 31st.</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">1099-NEC: What You'll Receive</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">If you earn $600 or more from a single plasma center in a tax year, they're required to send you Form 1099-NEC (Nonemployee Compensation) by January 31st.</p>
                     
                     <div class="tax-form-breakdown">
                         <h4>2025 1099-NEC Thresholds:</h4>
@@ -219,35 +346,35 @@
                         </ul>
                     </div>
                     
-                    <h3>Forms You'll Need to File</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Forms You'll Need to File</h3>
                     
                     <div class="forms-grid">
                         <div class="form-card">
                             <h4>Schedule C (Form 1040)</h4>
-                            <p><strong>Purpose:</strong> Report plasma donation as business income</p>
-                            <p><strong>Line 1:</strong> Total plasma donations received</p>
-                            <p><strong>Expenses:</strong> Deductible costs (travel, medical exams)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Purpose:</strong> Report plasma donation as business income</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Line 1:</strong> Total plasma donations received</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Expenses:</strong> Deductible costs (travel, medical exams)</p>
                         </div>
                         
                         <div class="form-card">
                             <h4>Schedule SE (Form 1040)</h4>
-                            <p><strong>Purpose:</strong> Calculate self-employment tax</p>
-                            <p><strong>Rate:</strong> 15.3% (12.4% Social Security + 2.9% Medicare)</p>
-                            <p><strong>Threshold:</strong> $400+ net earnings triggers requirement</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Purpose:</strong> Calculate self-employment tax</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Rate:</strong> 15.3% (12.4% Social Security + 2.9% Medicare)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Threshold:</strong> $400+ net earnings triggers requirement</p>
                         </div>
                         
                         <div class="form-card">
                             <h4>Form 1040</h4>
-                            <p><strong>Purpose:</strong> Main tax return</p>
-                            <p><strong>Line 3:</strong> Business income from Schedule C</p>
-                            <p><strong>Line 27:</strong> Self-employment tax from Schedule SE</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Purpose:</strong> Main tax return</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Line 3:</strong> Business income from Schedule C</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Line 27:</strong> Self-employment tax from Schedule SE</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- 2025 Tax Changes -->
                 <section class="content-section">
-                    <h2>🆕 Chapter 3: 2025 Tax Year Changes</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🆕 Chapter 3: 2025 Tax Year Changes</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -255,44 +382,44 @@
                              loading="lazy">
                     </div>
                     
-                    <h3>Key Changes Affecting Plasma Donors</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Key Changes Affecting Plasma Donors</h3>
                     
                     <div class="changes-list">
                         <div class="change-item">
                             <h4>1. 1099-K Electronic Payment Threshold</h4>
-                            <p><strong>Old Rule:</strong> $20,000+ and 200+ transactions</p>
-                            <p><strong>2025 Rule:</strong> $600+ total payments (delayed from 2023)</p>
-                            <p><strong>Impact:</strong> Prepaid card payments may trigger additional 1099-K forms</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Old Rule:</strong> $20,000+ and 200+ transactions</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>2025 Rule:</strong> $600+ total payments (delayed from 2023)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Impact:</strong> Prepaid card payments may trigger additional 1099-K forms</p>
                         </div>
                         
                         <div class="change-item">
                             <h4>2. Standard Deduction Increase</h4>
-                            <p><strong>Single:</strong> $14,600 (up from $14,200)</p>
-                            <p><strong>Married Filing Jointly:</strong> $29,200 (up from $28,400)</p>
-                            <p><strong>Impact:</strong> Higher threshold before owing federal income tax</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Single:</strong> $14,600 (up from $14,200)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Married Filing Jointly:</strong> $29,200 (up from $28,400)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Impact:</strong> Higher threshold before owing federal income tax</p>
                         </div>
                         
                         <div class="change-item">
                             <h4>3. Self-Employment Tax Wage Base</h4>
-                            <p><strong>Social Security:</strong> First $168,600 of earnings (up from $160,200)</p>
-                            <p><strong>Medicare:</strong> No wage base limit (continues at 2.9%)</p>
-                            <p><strong>Impact:</strong> Most plasma donors unaffected (earnings below threshold)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Social Security:</strong> First $168,600 of earnings (up from $160,200)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Medicare:</strong> No wage base limit (continues at 2.9%)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Impact:</strong> Most plasma donors unaffected (earnings below threshold)</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Tax Calculations -->
                 <section class="content-section">
-                    <h2>🧮 Chapter 4: How to Calculate Your Tax Liability</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🧮 Chapter 4: How to Calculate Your Tax Liability</h2>
                     
-                    <h3>Step-by-Step Tax Calculation</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Step-by-Step Tax Calculation</h3>
                     
                     <div class="calculation-example">
                         <h4>Example: Sarah's Plasma Donation Taxes</h4>
                         <div class="calc-breakdown">
-                            <p><strong>Annual plasma income:</strong> $3,600</p>
-                            <p><strong>Deductible expenses:</strong> $540 (travel, medical)</p>
-                            <p><strong>Net profit:</strong> $3,060</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Annual plasma income:</strong> $3,600</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Deductible expenses:</strong> $540 (travel, medical)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Net profit:</strong> $3,060</p>
                             
                             <h5>Tax Calculations:</h5>
                             <ul>
@@ -315,9 +442,9 @@
 
                 <!-- Deductions -->
                 <section class="content-section">
-                    <h2>💡 Chapter 5: Deductions That Can Save You Money</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💡 Chapter 5: Deductions That Can Save You Money</h2>
                     
-                    <h3>Legitimate Business Deductions for Plasma Donors</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Legitimate Business Deductions for Plasma Donors</h3>
                     
                     <div class="deductions-grid">
                         <div class="deduction-card">
@@ -367,7 +494,7 @@
                     
                     <div class="warning-box">
                         <h4>⚠️ Deduction Requirements</h4>
-                        <p>All deductions must be:</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">All deductions must be:</p>
                         <ul>
                             <li><strong>Ordinary and necessary</strong> for plasma donation business</li>
                             <li><strong>Well-documented</strong> with receipts and records</li>
@@ -379,7 +506,7 @@
 
                 <!-- Record Keeping -->
                 <section class="content-section">
-                    <h2>📊 Chapter 6: Essential Record-Keeping for Plasma Donors</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📊 Chapter 6: Essential Record-Keeping for Plasma Donors</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1554224154-1696413565d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -387,7 +514,7 @@
                              loading="lazy">
                     </div>
                     
-                    <h3>What Records to Keep</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">What Records to Keep</h3>
                     
                     <div class="records-checklist">
                         <h4>Income Documentation:</h4>
@@ -409,7 +536,7 @@
                         </ul>
                     </div>
                     
-                    <h3>Recommended Tracking Methods</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Recommended Tracking Methods</h3>
                     
                     <div class="tracking-methods">
                         <div class="method-card">
@@ -435,13 +562,13 @@
                     
                     <div class="retention-info">
                         <h4>Record Retention Requirements</h4>
-                        <p><strong>Keep all records for at least 3 years</strong> after filing your tax return. The IRS can audit returns up to 3 years after filing (6 years if income is understated by 25% or more).</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Keep all records for at least 3 years</strong> after filing your tax return. The IRS can audit returns up to 3 years after filing (6 years if income is understated by 25% or more).</p>
                     </div>
                 </section>
 
                 <!-- State Tax Considerations -->
                 <section class="content-section">
-                    <h2>🗺️ Chapter 7: State Tax Considerations</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🗺️ Chapter 7: State Tax Considerations</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1444313431167-e7921088a9d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -449,7 +576,7 @@
                              loading="lazy">
                     </div>
                     
-                    <h3>State Income Tax on Plasma Donations</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">State Income Tax on Plasma Donations</h3>
                     
                     <div class="state-tax-breakdown">
                         <h4>No State Income Tax (9 States):</h4>
@@ -491,8 +618,8 @@
                         </div>
                     </div>
                     
-                    <h3>Multi-State Donation Considerations</h3>
-                    <p>If you donate plasma in multiple states, you may need to file tax returns in each state where you earned income. Generally:</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Multi-State Donation Considerations</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">If you donate plasma in multiple states, you may need to file tax returns in each state where you earned income. Generally:</p>
                     
                     <ul>
                         <li><strong>Resident state:</strong> File return and pay tax on all income</li>
@@ -504,44 +631,44 @@
 
                 <!-- Common Mistakes -->
                 <section class="content-section">
-                    <h2>❌ Chapter 8: Common Tax Mistakes to Avoid</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">❌ Chapter 8: Common Tax Mistakes to Avoid</h2>
                     
-                    <h3>Costly Mistakes That Can Trigger Audits or Penalties</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Costly Mistakes That Can Trigger Audits or Penalties</h3>
                     
                     <div class="mistakes-grid">
                         <div class="mistake-card">
                             <h4>❌ Not Reporting Small Amounts</h4>
                             <div class="mistake-details">
-                                <p><strong>Wrong thinking:</strong> "I only made $300, so I don't need to report it"</p>
-                                <p><strong>Reality:</strong> All income must be reported, regardless of amount</p>
-                                <p><strong>Penalty risk:</strong> 20% accuracy-related penalty plus interest</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Wrong thinking:</strong> "I only made $300, so I don't need to report it"</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Reality:</strong> All income must be reported, regardless of amount</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Penalty risk:</strong> 20% accuracy-related penalty plus interest</p>
                             </div>
                         </div>
                         
                         <div class="mistake-card">
                             <h4>❌ Treating Income as Gifts</h4>
                             <div class="mistake-details">
-                                <p><strong>Wrong thinking:</strong> "It's compensation for helping people, not income"</p>
-                                <p><strong>Reality:</strong> IRS treats all plasma payments as taxable business income</p>
-                                <p><strong>Penalty risk:</strong> Substantial understatement penalties</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Wrong thinking:</strong> "It's compensation for helping people, not income"</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Reality:</strong> IRS treats all plasma payments as taxable business income</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Penalty risk:</strong> Substantial understatement penalties</p>
                             </div>
                         </div>
                         
                         <div class="mistake-card">
                             <h4>❌ Claiming Excessive Deductions</h4>
                             <div class="mistake-details">
-                                <p><strong>Wrong thinking:</strong> "I can deduct all my food as business meals"</p>
-                                <p><strong>Reality:</strong> Only donation-specific expenses qualify</p>
-                                <p><strong>Penalty risk:</strong> Audit and disallowance of all deductions</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Wrong thinking:</strong> "I can deduct all my food as business meals"</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Reality:</strong> Only donation-specific expenses qualify</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Penalty risk:</strong> Audit and disallowance of all deductions</p>
                             </div>
                         </div>
                         
                         <div class="mistake-card">
                             <h4>❌ Poor Record Keeping</h4>
                             <div class="mistake-details">
-                                <p><strong>Wrong thinking:</strong> "I'll remember my expenses at tax time"</p>
-                                <p><strong>Reality:</strong> IRS requires contemporaneous records</p>
-                                <p><strong>Penalty risk:</strong> Complete disallowance of deductions</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Wrong thinking:</strong> "I'll remember my expenses at tax time"</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Reality:</strong> IRS requires contemporaneous records</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Penalty risk:</strong> Complete disallowance of deductions</p>
                             </div>
                         </div>
                     </div>
@@ -549,7 +676,7 @@
 
                 <!-- Penalty Avoidance -->
                 <section class="content-section">
-                    <h2>🛡️ Chapter 9: How to Avoid Penalties and Interest</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛡️ Chapter 9: How to Avoid Penalties and Interest</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1554224154-26032fbed8bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -557,33 +684,33 @@
                              loading="lazy">
                     </div>
                     
-                    <h3>Key Penalty Types and How to Avoid Them</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Key Penalty Types and How to Avoid Them</h3>
                     
                     <div class="penalty-prevention">
                         <div class="penalty-type">
                             <h4>Failure to File Penalty</h4>
-                            <p><strong>Rate:</strong> 5% per month (max 25%)</p>
-                            <p><strong>Prevention:</strong> File by April 15th or request extension</p>
-                            <p><strong>Note:</strong> Extension to file ≠ extension to pay</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Rate:</strong> 5% per month (max 25%)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> File by April 15th or request extension</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Note:</strong> Extension to file ≠ extension to pay</p>
                         </div>
                         
                         <div class="penalty-type">
                             <h4>Failure to Pay Penalty</h4>
-                            <p><strong>Rate:</strong> 0.5% per month (max 25%)</p>
-                            <p><strong>Prevention:</strong> Pay at least 90% of tax owed by April 15th</p>
-                            <p><strong>Note:</strong> Set up installment plan if you can't pay in full</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Rate:</strong> 0.5% per month (max 25%)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Pay at least 90% of tax owed by April 15th</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Note:</strong> Set up installment plan if you can't pay in full</p>
                         </div>
                         
                         <div class="penalty-type">
                             <h4>Estimated Tax Penalty</h4>
-                            <p><strong>Trigger:</strong> Owe $1,000+ and didn't pay 90% of current year or 100% of prior year</p>
-                            <p><strong>Prevention:</strong> Make quarterly estimated payments</p>
-                            <p><strong>Safe harbor:</strong> Pay 110% of prior year if AGI > $150,000</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Trigger:</strong> Owe $1,000+ and didn't pay 90% of current year or 100% of prior year</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Make quarterly estimated payments</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Safe harbor:</strong> Pay 110% of prior year if AGI > $150,000</p>
                         </div>
                     </div>
                     
-                    <h3>Quarterly Estimated Tax Strategy</h3>
-                    <p>If you expect to owe $1,000 or more in taxes from plasma donation, consider making quarterly estimated tax payments:</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Quarterly Estimated Tax Strategy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">If you expect to owe $1,000 or more in taxes from plasma donation, consider making quarterly estimated tax payments:</p>
                     
                     <div class="quarterly-payments">
                         <div class="quarter-schedule">
@@ -611,40 +738,40 @@
 
                 <!-- Tax Software and Professionals -->
                 <section class="content-section">
-                    <h2>🤝 Chapter 10: When to Use Tax Software vs. Hire a Professional</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🤝 Chapter 10: When to Use Tax Software vs. Hire a Professional</h2>
                     
-                    <h3>DIY Tax Software Options</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">DIY Tax Software Options</h3>
                     
                     <div class="software-comparison">
                         <div class="software-option">
                             <h4>TurboTax Self-Employed</h4>
-                            <p><strong>Best for:</strong> Simple plasma donation business</p>
-                            <p><strong>Features:</strong> Schedule C support, mileage tracking, audit defense</p>
-                            <p><strong>Cost:</strong> $120-170</p>
-                            <p><strong>Pros:</strong> User-friendly, comprehensive support</p>
-                            <p><strong>Cons:</strong> Most expensive option</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Best for:</strong> Simple plasma donation business</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Features:</strong> Schedule C support, mileage tracking, audit defense</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Cost:</strong> $120-170</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pros:</strong> User-friendly, comprehensive support</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Cons:</strong> Most expensive option</p>
                         </div>
                         
                         <div class="software-option">
                             <h4>H&R Block Self-Employed</h4>
-                            <p><strong>Best for:</strong> Budget-conscious filers</p>
-                            <p><strong>Features:</strong> Schedule C, SE tax calculation, live help</p>
-                            <p><strong>Cost:</strong> $85-135</p>
-                            <p><strong>Pros:</strong> Good value, in-person support available</p>
-                            <p><strong>Cons:</strong> Less intuitive than TurboTax</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Best for:</strong> Budget-conscious filers</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Features:</strong> Schedule C, SE tax calculation, live help</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Cost:</strong> $85-135</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pros:</strong> Good value, in-person support available</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Cons:</strong> Less intuitive than TurboTax</p>
                         </div>
                         
                         <div class="software-option">
                             <h4>FreeTaxUSA</h4>
-                            <p><strong>Best for:</strong> Budget filers with simple situations</p>
-                            <p><strong>Features:</strong> Free federal filing, low-cost state</p>
-                            <p><strong>Cost:</strong> $0 federal, $14.99 state</p>
-                            <p><strong>Pros:</strong> Very affordable, handles Schedule C</p>
-                            <p><strong>Cons:</strong> Limited support, basic interface</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Best for:</strong> Budget filers with simple situations</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Features:</strong> Free federal filing, low-cost state</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Cost:</strong> $0 federal, $14.99 state</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pros:</strong> Very affordable, handles Schedule C</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Cons:</strong> Limited support, basic interface</p>
                         </div>
                     </div>
                     
-                    <h3>When to Hire a Tax Professional</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">When to Hire a Tax Professional</h3>
                     
                     <div class="professional-guidance">
                         <h4>Consider hiring a CPA or EA if you have:</h4>
@@ -667,7 +794,7 @@
 
                 <!-- 2026 Planning -->
                 <section class="content-section">
-                    <h2>🔮 Chapter 11: Planning Ahead for 2026 and Beyond</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🔮 Chapter 11: Planning Ahead for 2026 and Beyond</h2>
                     
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -675,7 +802,7 @@
                              loading="lazy">
                     </div>
                     
-                    <h3>Tax Strategy for Long-Term Plasma Donors</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Tax Strategy for Long-Term Plasma Donors</h3>
                     
                     <div class="planning-strategies">
                         <div class="strategy-card">
@@ -699,7 +826,7 @@
                         </div>
                     </div>
                     
-                    <h3>Upcoming Tax Law Changes to Watch</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Upcoming Tax Law Changes to Watch</h3>
                     
                     <div class="future-changes">
                         <h4>Potential 2026+ Changes:</h4>
@@ -714,9 +841,9 @@
 
                 <!-- Resources and Tools -->
                 <section class="content-section">
-                    <h2>🛠️ Chapter 12: Essential Tools and Resources</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🛠️ Chapter 12: Essential Tools and Resources</h2>
                     
-                    <h3>Free IRS Resources</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Free IRS Resources</h3>
                     <div class="resources-grid">
                         <div class="resource-card">
                             <h4>IRS Publications</h4>
@@ -739,9 +866,9 @@
                         </div>
                     </div>
                     
-                    <h3>Downloadable Tax Templates</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Downloadable Tax Templates</h3>
                     <div class="templates-section">
-                        <p><strong>Create your own tracking system with these essential records:</strong></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Create your own tracking system with these essential records:</strong></p>
                         
                         <div class="template-list">
                             <h4>Donation Income Log Template:</h4>
@@ -778,48 +905,48 @@
 
                 <!-- Final Recommendations -->
                 <section class="content-section">
-                    <h2>🎯 Final Recommendations</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎯 Final Recommendations</h2>
                     
                     <div class="final-advice">
-                        <h3>Your Tax Action Plan</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Your Tax Action Plan</h3>
                         
                         <div class="action-steps">
                             <div class="step">
                                 <h4>Step 1: Start Tracking Immediately</h4>
-                                <p>Begin detailed record-keeping today. Use apps or manual logs to track every donation and business expense.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Begin detailed record-keeping today. Use apps or manual logs to track every donation and business expense.</p>
                             </div>
                             
                             <div class="step">
                                 <h4>Step 2: Set Aside Tax Money</h4>
-                                <p>Save 25-35% of every plasma payment for taxes. Open a separate savings account specifically for tax obligations.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Save 25-35% of every plasma payment for taxes. Open a separate savings account specifically for tax obligations.</p>
                             </div>
                             
                             <div class="step">
                                 <h4>Step 3: Consider Quarterly Payments</h4>
-                                <p>If you expect to owe $1,000+, make quarterly estimated tax payments to avoid penalties.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">If you expect to owe $1,000+, make quarterly estimated tax payments to avoid penalties.</p>
                             </div>
                             
                             <div class="step">
                                 <h4>Step 4: Maximize Legitimate Deductions</h4>
-                                <p>Track mileage religiously and keep receipts for all donation-related expenses.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Track mileage religiously and keep receipts for all donation-related expenses.</p>
                             </div>
                             
                             <div class="step">
                                 <h4>Step 5: File Correctly and On Time</h4>
-                                <p>Use appropriate tax software or hire a professional. File by April 15th to avoid penalties.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Use appropriate tax software or hire a professional. File by April 15th to avoid penalties.</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="warning-box">
                         <h4>⚠️ Important Disclaimer</h4>
-                        <p>This guide provides general tax information and should not be considered professional tax advice. Tax laws are complex and change frequently. Always consult with a qualified tax professional for your specific situation, especially if you have complex circumstances or earn substantial income from plasma donation.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">This guide provides general tax information and should not be considered professional tax advice. Tax laws are complex and change frequently. Always consult with a qualified tax professional for your specific situation, especially if you have complex circumstances or earn substantial income from plasma donation.</p>
                     </div>
                 </section>
 
                 <!-- Sources & References -->
                 <section class="content-section sources-section">
-                    <h3>📚 Sources & References</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                     <div class="sources-list">
                         <ul>
                             <li><a href="https://www.irs.gov/publications/p525" target="_blank" rel="noopener">IRS Publication 525 - Taxable and Nontaxable Income</a></li>
@@ -835,16 +962,16 @@
 
                 <!-- Author Profile -->
                 <section class="content-section author-profile">
-                    <h3>Glen Meade, Plasma Donation Researcher & Tax Analysis Specialist</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Tax Analysis Specialist</h3>
                     <div class="author-badges">
                         <span class="badge">📊 2,522+ Centers Analyzed</span>
                         <span class="badge">💰 Tax Compliance Expert</span>
                         <span class="badge">📋 IRS Regulations Specialist</span>
                     </div>
-                    <p>Glen has extensively researched the tax implications of plasma donation income and analyzed IRS regulations affecting donors. His comprehensive research helps donors understand their tax obligations and maximize legitimate deductions while remaining compliant with federal and state tax laws.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched the tax implications of plasma donation income and analyzed IRS regulations affecting donors. His comprehensive research helps donors understand their tax obligations and maximize legitimate deductions while remaining compliant with federal and state tax laws.</p>
                     
                     <div class="disclaimer-note">
-                        <p><strong>Transparency:</strong> Glen is not a licensed tax professional or CPA. This information is educational only. Always consult your tax advisor, CPA, or enrolled agent for personalized tax advice.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a licensed tax professional or CPA. This information is educational only. Always consult your tax advisor, CPA, or enrolled agent for personalized tax advice.</p>
                     </div>
                     
                     <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
@@ -852,31 +979,31 @@
 
                 <!-- Related Articles -->
                 <section class="content-section related-articles">
-                    <h3>📚 Essential Reading for Plasma Donors</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Essential Reading for Plasma Donors</h3>
                     <div class="related-links-grid">
                         <div class="related-link-card">
                             <h4><a href="/blog/complete-medical-eligibility-guide-plasma-donation.html">Complete Medical Eligibility Guide</a></h4>
-                            <p>200+ conditions & medications that affect plasma donation. Know before you go!</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">200+ conditions & medications that affect plasma donation. Know before you go!</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/state-by-state-plasma-donation-laws-regulations-2025.html">State Laws & Regulations Guide</a></h4>
-                            <p>Complete legal reference for plasma donation laws across all 50 states.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Complete legal reference for plasma donation laws across all 50 states.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/is-plasma-donation-worth-it-financial-analysis.html">Is Plasma Donation Worth It?</a></h4>
-                            <p>Complete financial analysis including ROI calculations and hidden costs.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Complete financial analysis including ROI calculations and hidden costs.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/highest-paying-plasma-centers-near-me.html">Highest Paying Centers</a></h4>
-                            <p>Find the best compensation rates and bonus opportunities in your area.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Find the best compensation rates and bonus opportunities in your area.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/plasma-donation-side-effects.html">Side Effects Safety Guide</a></h4>
-                            <p>95% have zero issues! Complete safety guide with prevention tips.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">95% have zero issues! Complete safety guide with prevention tips.</p>
                         </div>
                         <div class="related-link-card">
                             <h4><a href="/blog/can-you-donate-plasma-twice-a-week.html">Donation Frequency Guide</a></h4>
-                            <p>Maximize earnings with optimal donation scheduling and safety tips.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Maximize earnings with optimal donation scheduling and safety tips.</p>
                         </div>
                     </div>
                 </section>
@@ -884,26 +1011,26 @@
         </div>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, eligibility requirements, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -927,7 +1054,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 3,012+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 3,012+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -960,7 +1087,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
             <p class="owner-info">
                 🏥 Plasma center owner? <a href="mailto:hello@plasmapaycalculator.com?subject=Claim%20or%20Upgrade%20Listing" class="owner-link">Claim or upgrade your listing</a>
             </p>

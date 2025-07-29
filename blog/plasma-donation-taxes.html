@@ -533,7 +533,102 @@
                 padding: 0.5rem;
             }
         }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
 
     <style>
     .language-switcher {
@@ -589,9 +684,159 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <div class="language-switcher">
         <a href="/es/blog/plasma-donation-taxes.html" class="lang-option spanish" title="Español">
@@ -604,47 +849,61 @@
     <nav>
         <div class="nav-container">
             <div style="display: flex; align-items: center;">
-                <a href="../" class="logo">
+                <a href="/" class="logo">
                     <div class="logo-icon">PPC</div>
-                    <a href="/calculator/" class="text-green-600 hover:text-green-800 underline">Plasma Pay Calculator</a>
+                    Plasma Pay Calculator
                 </a>
-                <div class="trust-badge">California Tax Guide</div>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
             <ul class="nav-links">
-                <li><a href="../#calculator">Calculator</a></li>
-                <li><a href="../blog/" class="active">CA Tax Tips</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../#calculator" class="cta-btn">Calculate CA After-Tax</a></li>
+                <li><a href="/" class="active">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
             <!-- Article Header -->
             <div class="article-header">
-                <h1>California Plasma Donation Tax Strategy Guide</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">California Plasma Donation Tax Strategy Guide</h1>
                 <div class="article-meta">
                     <span>🌴 Published: January 15, 2025</span>
                     <span>⏱️ 15 min read</span>
                     <span>📊 CA Tax Focus</span>
                 </div>
-                <p>Navigate California's complex tax landscape to maximize your plasma donation earnings. Comprehensive strategies for high-income tech workers, entertainment professionals, and students across Los Angeles, San Diego, San Francisco Bay Area, and Sacramento.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Navigate California's complex tax landscape to maximize your plasma donation earnings. Comprehensive strategies for high-income tech workers, entertainment professionals, and students across Los Angeles, San Diego, San Francisco Bay Area, and Sacramento.</p>
             </div>
 
             <!-- California Tax Reality -->
             <div class="content-section">
-                <h2>🏛️ California Tax Reality: Nation's Highest Rates</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏛️ California Tax Reality: Nation's Highest Rates</h2>
                 
                 <div class="ca-tax-warning">
-                    <h3>⚠️ California Tax Burden Alert</h3>
-                    <p>California has the highest state income tax rates in the nation, reaching up to <strong>13.3%</strong> for high earners. Combined with federal taxes, California plasma donors can face total tax rates of <strong>35-50%</strong> on their earnings.</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚠️ California Tax Burden Alert</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">California has the highest state income tax rates in the nation, reaching up to <strong>13.3%</strong> for high earners. Combined with federal taxes, California plasma donors can face total tax rates of <strong>35-50%</strong> on their earnings.</p>
                 </div>
 
-                <p>California's progressive tax structure significantly impacts plasma donation earnings, especially for tech workers and entertainment professionals in Los Angeles, San Francisco, and San Diego who may already be in higher tax brackets.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California's progressive tax structure significantly impacts plasma donation earnings, especially for tech workers and entertainment professionals in Los Angeles, San Francisco, and San Diego who may already be in higher tax brackets.</p>
 
-                <h3>California State Tax Brackets 2025</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California State Tax Brackets 2025</h3>
                 <table class="tax-comparison-table">
                     <thead>
                         <tr>
@@ -686,19 +945,19 @@
                         </tr>
                     </tbody>
                 </table>
-                <p style="font-size: 0.9rem; color: #7f8c8d;">*Excludes self-employment tax (15.3%) and local taxes</p>
+                <p class="text-gray-700 leading-relaxed mb-4" style="font-size: 0.9rem; color: #7f8c8d;">*Excludes self-employment tax (15.3%) and local taxes</p>
             </div>
 
             <!-- City-Specific Tax Considerations -->
             <div class="content-section">
-                <h2>🏙️ California Metro Area Tax Strategies</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏙️ California Metro Area Tax Strategies</h2>
                 
                 <div class="city-tax-grid">
                     <div class="city-tax-card">
                         <h4>🎬 Los Angeles County</h4>
-                        <p><strong>Industry Focus:</strong> Entertainment, Media, Film/TV</p>
-                        <p><strong>Common Income:</strong> $50,000-150,000+ (above-the-line vs below-the-line)</p>
-                        <p><strong>Tax Considerations:</strong></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Focus:</strong> Entertainment, Media, Film/TV</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Common Income:</strong> $50,000-150,000+ (above-the-line vs below-the-line)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Tax Considerations:</strong></p>
                         <ul>
                             <li>Entertainment industry 1099 income common</li>
                             <li>Guild health benefits may offset income</li>
@@ -710,9 +969,9 @@
 
                     <div class="city-tax-card">
                         <h4>💻 San Francisco Bay Area</h4>
-                        <p><strong>Industry Focus:</strong> Tech (Google, Apple, Meta, Tesla, Netflix)</p>
-                        <p><strong>Common Income:</strong> $120,000-300,000+ (high earners)</p>
-                        <p><strong>Tax Considerations:</strong></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Focus:</strong> Tech (Google, Apple, Meta, Tesla, Netflix)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Common Income:</strong> $120,000-300,000+ (high earners)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Tax Considerations:</strong></p>
                         <ul>
                             <li>RSU/stock option income pushes brackets high</li>
                             <li>Commute costs to plasma centers</li>
@@ -724,9 +983,9 @@
 
                     <div class="city-tax-card">
                         <h4>⚓ San Diego County</h4>
-                        <p><strong>Industry Focus:</strong> Military, Defense, Biotech, Tourism</p>
-                        <p><strong>Common Income:</strong> $40,000-90,000 (military + civilian)</p>
-                        <p><strong>Tax Considerations:</strong></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Focus:</strong> Military, Defense, Biotech, Tourism</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Common Income:</strong> $40,000-90,000 (military + civilian)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Tax Considerations:</strong></p>
                         <ul>
                             <li>Military pay exclusions available</li>
                             <li>Biotech workers often higher brackets</li>
@@ -738,9 +997,9 @@
 
                     <div class="city-tax-card">
                         <h4>🏛️ Sacramento Region</h4>
-                        <p><strong>Industry Focus:</strong> Government, Healthcare, Education</p>
-                        <p><strong>Common Income:</strong> $45,000-85,000 (stable govt salaries)</p>
-                        <p><strong>Tax Considerations:</strong></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Industry Focus:</strong> Government, Healthcare, Education</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Common Income:</strong> $45,000-85,000 (stable govt salaries)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Tax Considerations:</strong></p>
                         <ul>
                             <li>State employee retirement contributions</li>
                             <li>Predictable income for tax planning</li>
@@ -754,12 +1013,12 @@
 
             <!-- Industry-Specific Tax Strategies -->
             <div class="content-section">
-                <h2>💼 California Industry-Specific Tax Strategies</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💼 California Industry-Specific Tax Strategies</h2>
                 
                 <div class="industry-tax-section">
                     <h4>🚀 Silicon Valley Tech Workers (Google, Apple, Meta, Tesla)</h4>
-                    <p><strong>High-Income Tax Challenges:</strong> Most Bay Area tech workers earning $150,000+ face California's top tax brackets.</p>
-                    <p><strong>Plasma Income Strategy:</strong></p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>High-Income Tax Challenges:</strong> Most Bay Area tech workers earning $150,000+ face California's top tax brackets.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Plasma Income Strategy:</strong></p>
                     <ul>
                         <li><strong>Maximize deductions:</strong> At 45%+ effective rates, every dollar deducted saves $0.45+ in taxes</li>
                         <li><strong>Mileage gold mine:</strong> Bay Area commutes to centers can generate $1,000+ annual deductions</li>
@@ -767,13 +1026,13 @@
                         <li><strong>Quarterly planning:</strong> RSU vesting may push you into higher brackets - time plasma income accordingly</li>
                         <li><strong>Charitable offset:</strong> Donate plasma earnings to charity for deduction if in top brackets</li>
                     </ul>
-                    <p><strong>Annual Tax Impact:</strong> $6,000 plasma income could cost $2,700+ in taxes, but $1,500 in deductions saves $675</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Annual Tax Impact:</strong> $6,000 plasma income could cost $2,700+ in taxes, but $1,500 in deductions saves $675</p>
                 </div>
 
                 <div class="industry-tax-section">
                     <h4>🎭 Los Angeles Entertainment Industry</h4>
-                    <p><strong>Irregular Income Challenge:</strong> Entertainment workers face fluctuating income that complicates tax planning.</p>
-                    <p><strong>Plasma Income Strategy:</strong></p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Irregular Income Challenge:</strong> Entertainment workers face fluctuating income that complicates tax planning.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Plasma Income Strategy:</strong></p>
                     <ul>
                         <li><strong>Income smoothing:</strong> Plasma provides steady income during unemployment periods</li>
                         <li><strong>Business expense mindset:</strong> Treat plasma as business activity with legitimate deductions</li>
@@ -781,13 +1040,13 @@
                         <li><strong>Health maintenance:</strong> Gym memberships, nutrition for maintaining donation eligibility</li>
                         <li><strong>Pilot season planning:</strong> Increase donations during slow periods, reduce during busy seasons</li>
                     </ul>
-                    <p><strong>Annual Tax Impact:</strong> Lower bracket workers (22-32%) face $1,320-1,920 tax on $6,000 plasma income</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Annual Tax Impact:</strong> Lower bracket workers (22-32%) face $1,320-1,920 tax on $6,000 plasma income</p>
                 </div>
 
                 <div class="industry-tax-section">
                     <h4>🎓 California University Students (UCLA, USC, UCSD, Berkeley, Stanford)</h4>
-                    <p><strong>Student-Specific Advantages:</strong> Lower incomes often mean lower tax brackets and education benefits.</p>
-                    <p><strong>Plasma Income Strategy:</strong></p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Student-Specific Advantages:</strong> Lower incomes often mean lower tax brackets and education benefits.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Plasma Income Strategy:</strong></p>
                     <ul>
                         <li><strong>Standard deduction benefit:</strong> First $14,600 (2025) is tax-free</li>
                         <li><strong>Education credits:</strong> American Opportunity Credit worth up to $2,500</li>
@@ -795,13 +1054,13 @@
                         <li><strong>Work-study coordination:</strong> Balance plasma income with financial aid eligibility</li>
                         <li><strong>Summer maximization:</strong> Increase donations during break when other income is lower</li>
                     </ul>
-                    <p><strong>Annual Tax Impact:</strong> Students often pay only 10-12% effective rate on plasma income</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Annual Tax Impact:</strong> Students often pay only 10-12% effective rate on plasma income</p>
                 </div>
 
                 <div class="industry-tax-section">
                     <h4>⚕️ California Healthcare Workers</h4>
-                    <p><strong>Professional Advantages:</strong> Healthcare background provides unique tax opportunities and understanding.</p>
-                    <p><strong>Plasma Income Strategy:</strong></p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Professional Advantages:</strong> Healthcare background provides unique tax opportunities and understanding.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Plasma Income Strategy:</strong></p>
                     <ul>
                         <li><strong>Professional development:</strong> Medical conferences, continuing education related to plasma</li>
                         <li><strong>Equipment deductions:</strong> Professional-grade health monitoring devices</li>
@@ -809,13 +1068,13 @@
                         <li><strong>Shift work planning:</strong> Coordinate donations and taxes around 12-hour shift schedules</li>
                         <li><strong>Peer networking:</strong> Health worker communities often share tax strategies</li>
                     </ul>
-                    <p><strong>Annual Tax Impact:</strong> Mid-to-high income healthcare workers face 30-42% effective rates</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Annual Tax Impact:</strong> Mid-to-high income healthcare workers face 30-42% effective rates</p>
                 </div>
             </div>
 
             <!-- California-Specific Deductions -->
             <div class="content-section">
-                <h2>🧾 California-Maximized Deduction Strategies</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🧾 California-Maximized Deduction Strategies</h2>
                 
                 <div class="deduction-showcase">
                     <h4>🌴 California Plasma Donor Deductions</h4>
@@ -865,8 +1124,8 @@
                     </div>
                 </div>
 
-                <h3>California Mileage Goldmine</h3>
-                <p>California's sprawling metro areas create significant mileage deduction opportunities:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Mileage Goldmine</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California's sprawling metro areas create significant mileage deduction opportunities:</p>
 
                 <table class="tax-comparison-table">
                     <thead>
@@ -912,27 +1171,27 @@
 
                 <div class="tip-box">
                     <h4>📱 California-Optimized Tracking</h4>
-                    <p>Use GPS-based mileage apps like MileIQ or Everlance that automatically detect California toll roads, bridges, and <a href="/centers/" class="text-green-600 hover:text-green-800 underline">plasma center locations</a>. These apps pay for themselves in the first month through captured deductions.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Use GPS-based mileage apps like MileIQ or Everlance that automatically detect California toll roads, bridges, and <a href="/centers/" class="text-green-600 hover:text-green-800 underline">plasma center locations</a>. These apps pay for themselves in the first month through captured deductions.</p>
                 </div>
             </div>
 
             <!-- Self-Employment Tax in California -->
             <div class="content-section">
-                <h2>📊 California Self-Employment Tax Strategy</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📊 California Self-Employment Tax Strategy</h2>
                 
-                <p>California plasma donors face the standard 15.3% federal self-employment tax, but no additional state self-employment tax. However, the self-employment income adds to your California income tax base.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California plasma donors face the standard 15.3% federal self-employment tax, but no additional state self-employment tax. However, the self-employment income adds to your California income tax base.</p>
 
-                <h3>California SE Tax Calculation</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California SE Tax Calculation</h3>
                 <div class="highlight-box">
-                    <h3>Real California Tax Example</h3>
-                    <p><strong>Bay Area Tech Worker earning $6,000 plasma income:</strong><br>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Real California Tax Example</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Bay Area Tech Worker earning $6,000 plasma income:</strong><br>
                     Federal SE tax: $848 (15.3% minus deduction)<br>
                     Federal income tax: $1,320 (22% bracket)<br>
                     California state tax: $558 (9.3% bracket)<br>
                     <strong>Total tax burden: $2,726 (45.4%)</strong></p>
                 </div>
 
-                <h3>Industry-Specific SE Tax Strategies</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Industry-Specific SE Tax Strategies</h3>
                 
                 <div class="industry-tax-section">
                     <h4>🏢 W-2 Employees (Most Tech/Entertainment Workers)</h4>
@@ -957,43 +1216,43 @@
 
             <!-- California Quarterly Payments -->
             <div class="content-section">
-                <h2>📅 California Quarterly Tax Strategy</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📅 California Quarterly Tax Strategy</h2>
                 
-                <p>California requires quarterly estimated payments for both state and federal taxes when you owe $500+ (state) or $1,000+ (federal) annually.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California requires quarterly estimated payments for both state and federal taxes when you owe $500+ (state) or $1,000+ (federal) annually.</p>
 
-                <h3>2025 California Quarterly Due Dates</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">2025 California Quarterly Due Dates</h3>
                 <div class="quarterly-calendar">
                     <div class="quarter-card ca-due">
                         <h5>Q1 2025</h5>
-                        <p><strong>Period:</strong> Jan 1 - Mar 31</p>
-                        <p><strong>Federal Due:</strong> April 15</p>
-                        <p><strong>CA Due:</strong> April 15</p>
-                        <p><strong>Strategy:</strong> New Year plasma promotions</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Period:</strong> Jan 1 - Mar 31</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Federal Due:</strong> April 15</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>CA Due:</strong> April 15</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Strategy:</strong> New Year plasma promotions</p>
                     </div>
                     <div class="quarter-card ca-due">
                         <h5>Q2 2025</h5>
-                        <p><strong>Period:</strong> Apr 1 - May 31</p>
-                        <p><strong>Federal Due:</strong> June 16</p>
-                        <p><strong>CA Due:</strong> June 16</p>
-                        <p><strong>Strategy:</strong> Spring bonus season</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Period:</strong> Apr 1 - May 31</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Federal Due:</strong> June 16</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>CA Due:</strong> June 16</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Strategy:</strong> Spring bonus season</p>
                     </div>
                     <div class="quarter-card ca-due">
                         <h5>Q3 2025</h5>
-                        <p><strong>Period:</strong> Jun 1 - Aug 31</p>
-                        <p><strong>Federal Due:</strong> Sept 15</p>
-                        <p><strong>CA Due:</strong> Sept 15</p>
-                        <p><strong>Strategy:</strong> Summer maximization</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Period:</strong> Jun 1 - Aug 31</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Federal Due:</strong> Sept 15</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>CA Due:</strong> Sept 15</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Strategy:</strong> Summer maximization</p>
                     </div>
                     <div class="quarter-card ca-due">
                         <h5>Q4 2025</h5>
-                        <p><strong>Period:</strong> Sep 1 - Dec 31</p>
-                        <p><strong>Federal Due:</strong> Jan 15, 2026</p>
-                        <p><strong>CA Due:</strong> Jan 15, 2026</p>
-                        <p><strong>Strategy:</strong> Holiday bonus capture</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Period:</strong> Sep 1 - Dec 31</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Federal Due:</strong> Jan 15, 2026</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>CA Due:</strong> Jan 15, 2026</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Strategy:</strong> Holiday bonus capture</p>
                     </div>
                 </div>
 
-                <h3>California Safe Harbor Rules</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Safe Harbor Rules</h3>
                 <ul>
                     <li><strong>100% rule:</strong> Pay 100% of prior year's total tax (both federal and CA)</li>
                     <li><strong>110% rule:</strong> If prior year AGI >$150,000, pay 110% of prior year tax</li>
@@ -1003,21 +1262,21 @@
 
                 <div class="warning-box">
                     <h4>⚠️ California Penalty Rates</h4>
-                    <p>California underpayment penalties are often higher than federal rates. For 2025, California charges approximately 8% annually on underpayments, while federal rates are typically 7-8%.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">California underpayment penalties are often higher than federal rates. For 2025, California charges approximately 8% annually on underpayments, while federal rates are typically 7-8%.</p>
                 </div>
             </div>
 
             <!-- California Tax Advantages -->
             <div class="content-section">
-                <h2>🎯 Unique California Tax Advantages for Plasma Donors</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎯 Unique California Tax Advantages for Plasma Donors</h2>
                 
                 <div class="ca-advantage-box">
-                    <h3>🌟 California-Specific Benefits</h3>
-                    <p>Despite high tax rates, California offers unique advantages that smart plasma donors can leverage to reduce their overall tax burden.</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🌟 California-Specific Benefits</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Despite high tax rates, California offers unique advantages that smart plasma donors can leverage to reduce their overall tax burden.</p>
                 </div>
 
-                <h3>California Earned Income Tax Credit (CalEITC)</h3>
-                <p>California's state EITC can provide additional refunds for lower-income donors:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Earned Income Tax Credit (CalEITC)</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">California's state EITC can provide additional refunds for lower-income donors:</p>
                 <ul>
                     <li><strong>Income limits:</strong> Up to $30,950 (single), $43,492 (married)</li>
                     <li><strong>Credit amount:</strong> Up to $3,529 for families with children</li>
@@ -1025,24 +1284,24 @@
                     <li><strong>Stacking benefit:</strong> Combines with federal EITC for maximum benefit</li>
                 </ul>
 
-                <h3>California Alternative Minimum Tax (AMT) Opportunities</h3>
-                <p>High-income Californians subject to AMT may find plasma donation business expenses more valuable:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Alternative Minimum Tax (AMT) Opportunities</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">High-income Californians subject to AMT may find plasma donation business expenses more valuable:</p>
                 <ul>
                     <li><strong>AMT deduction limits:</strong> Some personal deductions limited under AMT</li>
                     <li><strong>Business expense advantage:</strong> Plasma business expenses not limited by AMT</li>
                     <li><strong>Equipment depreciation:</strong> Business equipment purchases can reduce AMT</li>
                 </ul>
 
-                <h3>California Disability Insurance (SDI) Considerations</h3>
-                <p>Plasma income subject to California SDI tax (1.1% on wages up to $153,164 in 2025):</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Disability Insurance (SDI) Considerations</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Plasma income subject to California SDI tax (1.1% on wages up to $153,164 in 2025):</p>
                 <ul>
                     <li><strong>SDI benefits:</strong> Plasma income may qualify you for disability benefits</li>
                     <li><strong>Medical leave:</strong> SDI can supplement income if unable to donate due to illness</li>
                     <li><strong>Pregnancy benefits:</strong> Female donors can receive SDI for pregnancy-related time off</li>
                 </ul>
 
-                <h3>California Health Insurance Premium Assistance</h3>
-                <p>Covered California (ACA marketplace) subsidies based on total income including plasma:</p>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Health Insurance Premium Assistance</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Covered California (ACA marketplace) subsidies based on total income including plasma:</p>
                 <ul>
                     <li><strong>Income reporting:</strong> Must report plasma income for subsidy calculations</li>
                     <li><strong>Subsidy cliffs:</strong> Manage income to avoid losing premium assistance</li>
@@ -1052,11 +1311,11 @@
 
             <!-- Record Keeping for California -->
             <div class="content-section">
-                <h2>📁 California-Optimized Record Keeping</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📁 California-Optimized Record Keeping</h2>
                 
-                <p>California's aggressive tax enforcement requires meticulous documentation. The state can audit up to 4 years back and has sophisticated data matching systems.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California's aggressive tax enforcement requires meticulous documentation. The state can audit up to 4 years back and has sophisticated data matching systems.</p>
 
-                <h3>California-Specific Documentation</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California-Specific Documentation</h3>
                 <ul>
                     <li><strong>FTB compliance:</strong> California Franchise Tax Board tracks all 1099 income</li>
                     <li><strong>Multi-state issues:</strong> Document if donating across state lines</li>
@@ -1064,7 +1323,7 @@
                     <li><strong>Sales tax nexus:</strong> Business equipment purchases subject to CA sales tax</li>
                 </ul>
 
-                <h3>Digital Tools for California Compliance</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Digital Tools for California Compliance</h3>
                 <div class="deduction-grid">
                     <div class="deduction-item">
                         <strong>CalFile Integration</strong><br>
@@ -1090,17 +1349,17 @@
 
                 <div class="tip-box">
                     <h4>🏛️ California Audit Defense</h4>
-                    <p>California audits are more common for self-employment income. Maintain separate bank accounts for plasma income, use business credit cards for deductible expenses, and consider audit insurance if earning $10,000+ annually from plasma.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">California audits are more common for self-employment income. Maintain separate bank accounts for plasma income, use business credit cards for deductible expenses, and consider audit insurance if earning $10,000+ annually from plasma.</p>
                 </div>
             </div>
 
             <!-- Tax Professional Services -->
             <div class="content-section">
-                <h2>👩‍💼 California Tax Professional Strategy</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">👩‍💼 California Tax Professional Strategy</h2>
                 
-                <p>California's complex tax code makes professional help valuable for higher-earning plasma donors, especially in high-cost metro areas.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">California's complex tax code makes professional help valuable for higher-earning plasma donors, especially in high-cost metro areas.</p>
 
-                <h3>When California Donors Need Professional Help</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">When California Donors Need Professional Help</h3>
                 <ul>
                     <li><strong>$8,000+ plasma income:</strong> Complex enough to justify professional fees</li>
                     <li><strong>Multi-state situations:</strong> Donating across state lines</li>
@@ -1109,7 +1368,7 @@
                     <li><strong>Audit representation:</strong> California FTB audit protection</li>
                 </ul>
 
-                <h3>California Tax Professional Costs vs. Benefits</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Tax Professional Costs vs. Benefits</h3>
                 <table class="tax-comparison-table">
                     <thead>
                         <tr>
@@ -1147,7 +1406,7 @@
                     </tbody>
                 </table>
 
-                <h3>California Metro Area Specialist Recommendations</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">California Metro Area Specialist Recommendations</h3>
                 <div class="city-tax-grid">
                     <div class="city-tax-card">
                         <h4>📍 Bay Area Specialists</h4>
@@ -1181,8 +1440,8 @@
 
             <!-- CTA Section -->
             <div class="cta-section">
-                <h2>Ready to Optimize Your California Plasma Tax Strategy?</h2>
-                <p>Use our calculator to estimate your after-tax earnings in California's high-tax environment and see how strategic deductions can maximize your take-home pay!</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Ready to Optimize Your California Plasma Tax Strategy?</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Use our calculator to estimate your after-tax earnings in California's high-tax environment and see how strategic deductions can maximize your take-home pay!</p>
                 <div style="margin-top: 2rem;">
                     <a href="../#calculator" class="cta-btn" style="background: white; color: #3498db; margin-right: 1rem;">Calculate CA After-Tax Income 💰</a>
                     <a href="../blog/" class="cta-btn" style="background: rgba(255,255,255,0.2);">More CA Tax Tips →</a>
@@ -1196,7 +1455,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>California Tax Expertise</h4>
-                <p>Specialized guidance for California plasma donors navigating the nation's most complex tax environment. Maximize your earnings across LA, SF, San Diego, and Sacramento.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Specialized guidance for California plasma donors navigating the nation's most complex tax environment. Maximize your earnings across LA, SF, San Diego, and Sacramento.</p>
             </div>
             <div class="footer-section">
                 <h4>California Cities</h4>
@@ -1226,7 +1485,7 @@
                 </ul>
             </div>
         </div>
-        <p>&copy; 2025 California Plasma Tax Calculator. Professional tax advice recommended. Information for educational purposes only.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 California Plasma Tax Calculator. Professional tax advice recommended. Information for educational purposes only.</p>
     </footer>
 </body>
 </html>

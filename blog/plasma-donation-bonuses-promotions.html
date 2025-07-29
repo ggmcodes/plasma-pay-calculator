@@ -153,7 +153,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -164,43 +261,67 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">Pay Calculator</a>
-            </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="blog-post-content">
+    <main class="min-h-screen bg-gray-50">
         <!-- Breadcrumbs -->
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
-                <li>Plasma Donation Bonuses</li>
-            </ol>
-        </nav>
+        
 
         <!-- Article -->
-        <article class="blog-article">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <header class="article-header">
-                <h1>How to Find and Stack Plasma Donation Bonuses in 2025</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How to Find and Stack Plasma Donation Bonuses in 2025</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/3iexvMShGfQ/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="article-meta">
@@ -215,7 +336,7 @@
 
             <!-- Table of Contents -->
             <div class="table-of-contents">
-                <h3>Table of Contents</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Table of Contents</h3>
                 <ul>
                     <li><a href="#bonus-types">Types of Bonuses</a></li>
                     <li><a href="#finding-bonuses">Where to Find Bonuses</a></li>
@@ -230,58 +351,58 @@
             <!-- Article Content -->
             <div class="article-content">
                 <section id="bonus-types">
-                    <h2>🎁 Types of Plasma Donation Bonuses</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎁 Types of Plasma Donation Bonuses</h2>
                     
                     <div class="bonus-types-grid">
                         <div class="bonus-type-card">
-                            <h3>💫 New Donor Bonuses</h3>
-                            <p><strong>Value:</strong> $600-$1,000 first month</p>
-                            <p>The biggest opportunity for maximum earnings. Most centers offer substantial bonuses for first-time donors.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💫 New Donor Bonuses</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Value:</strong> $600-$1,000 first month</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">The biggest opportunity for maximum earnings. Most centers offer substantial bonuses for first-time donors.</p>
                             <div class="bonus-example">
                                 <strong>Example:</strong> CSL Plasma - "$1,000 for qualified new donors"
                             </div>
                         </div>
                         
                         <div class="bonus-type-card">
-                            <h3>👥 Referral Bonuses</h3>
-                            <p><strong>Value:</strong> $25-$100 per referral</p>
-                            <p>Earn bonuses when friends or family members you refer complete their donation requirements.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">👥 Referral Bonuses</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Value:</strong> $25-$100 per referral</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Earn bonuses when friends or family members you refer complete their donation requirements.</p>
                             <div class="bonus-example">
                                 <strong>Example:</strong> BioLife - "$50 for each qualified referral"
                             </div>
                         </div>
                         
                         <div class="bonus-type-card">
-                            <h3>📅 Monthly Completions</h3>
-                            <p><strong>Value:</strong> $50-$150 per month</p>
-                            <p>Extra bonuses for completing a certain number of donations within a calendar month.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 Monthly Completions</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Value:</strong> $50-$150 per month</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Extra bonuses for completing a certain number of donations within a calendar month.</p>
                             <div class="bonus-example">
                                 <strong>Example:</strong> Grifols - "$75 for 8 donations in a month"
                             </div>
                         </div>
                         
                         <div class="bonus-type-card">
-                            <h3>🎯 Return Donor Bonuses</h3>
-                            <p><strong>Value:</strong> $25-$100</p>
-                            <p>Special bonuses to encourage donors who haven't donated recently to return.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🎯 Return Donor Bonuses</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Value:</strong> $25-$100</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Special bonuses to encourage donors who haven't donated recently to return.</p>
                             <div class="bonus-example">
                                 <strong>Example:</strong> Octapharma - "$75 if you haven't donated in 30+ days"
                             </div>
                         </div>
                         
                         <div class="bonus-type-card">
-                            <h3>🎉 Seasonal/Holiday Bonuses</h3>
-                            <p><strong>Value:</strong> $10-$50 per donation</p>
-                            <p>Special promotions during holidays or high-demand periods.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🎉 Seasonal/Holiday Bonuses</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Value:</strong> $10-$50 per donation</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Special promotions during holidays or high-demand periods.</p>
                             <div class="bonus-example">
                                 <strong>Example:</strong> "Extra $25 per donation during Thanksgiving week"
                             </div>
                         </div>
                         
                         <div class="bonus-type-card">
-                            <h3>🏆 Milestone Bonuses</h3>
-                            <p><strong>Value:</strong> $25-$200</p>
-                            <p>Rewards for reaching donation milestones like 25th, 50th, or 100th donation.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🏆 Milestone Bonuses</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Value:</strong> $25-$200</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Rewards for reaching donation milestones like 25th, 50th, or 100th donation.</p>
                             <div class="bonus-example">
                                 <strong>Example:</strong> "$100 bonus on your 50th lifetime donation"
                             </div>
@@ -290,13 +411,13 @@
                 </section>
 
                 <section id="finding-bonuses">
-                    <h2>🔍 Where to Find Current Bonuses</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🔍 Where to Find Current Bonuses</h2>
                     
-                    <h3>Official Sources</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Official Sources</h3>
                     <div class="sources-list">
                         <div class="source-item">
                             <h4>📱 Center Mobile Apps</h4>
-                            <p>Most major chains have apps that show current promotions and allow you to track bonuses.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Most major chains have apps that show current promotions and allow you to track bonuses.</p>
                             <ul>
                                 <li>BioLife Donor App</li>
                                 <li>CSL Plasma App</li>
@@ -307,13 +428,13 @@
                         
                         <div class="source-item">
                             <h4>📧 Email Newsletters</h4>
-                            <p>Sign up for center newsletters to get first access to bonus announcements.</p>
-                            <p><strong>Pro Tip:</strong> Use a dedicated email address to track all plasma center communications.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Sign up for center newsletters to get first access to bonus announcements.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pro Tip:</strong> Use a dedicated email address to track all plasma center communications.</p>
                         </div>
                         
                         <div class="source-item">
                             <h4>📱 Social Media</h4>
-                            <p>Follow center social media accounts for flash promotions and exclusive deals.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Follow center social media accounts for flash promotions and exclusive deals.</p>
                             <ul>
                                 <li>Facebook pages (often location-specific)</li>
                                 <li>Instagram accounts</li>
@@ -323,30 +444,30 @@
                         
                         <div class="source-item">
                             <h4>🏥 In-Center Announcements</h4>
-                            <p>Check bulletin boards and ask staff about current promotions during visits.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Check bulletin boards and ask staff about current promotions during visits.</p>
                         </div>
                     </div>
                     
-                    <h3>Unofficial Sources</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Unofficial Sources</h3>
                     <div class="unofficial-sources">
-                        <p><strong>Donor Forums:</strong> Reddit communities like r/plassing and Facebook groups share current bonus information.</p>
-                        <p><strong>Local Groups:</strong> City-specific Facebook groups often discuss current promotions.</p>
-                        <p><strong>Word of Mouth:</strong> Other donors are often your best source for bonus intel.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Donor Forums:</strong> Reddit communities like r/plassing and Facebook groups share current bonus information.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Local Groups:</strong> City-specific Facebook groups often discuss current promotions.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Word of Mouth:</strong> Other donors are often your best source for bonus intel.</p>
                     </div>
                 </section>
 
                 <section id="new-donor-strategy">
-                    <h2>💫 New Donor Bonus Strategy</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💫 New Donor Bonus Strategy</h2>
                     
                     <div class="new-donor-strategy">
-                        <h3>Maximizing First-Time Bonuses</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Maximizing First-Time Bonuses</h3>
                         <div class="strategy-steps">
                             <div class="strategy-step">
                                 <span class="step-number">1</span>
                                 <div class="step-content">
                                     <h4>Research All Local Centers</h4>
-                                    <p>Don't just go to the closest center. Research all centers within reasonable driving distance and compare their new donor offers.</p>
-                                    <p><strong>Tip:</strong> Call centers directly to ask about current new donor promotions.</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Don't just go to the closest center. Research all centers within reasonable driving distance and compare their new donor offers.</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Tip:</strong> Call centers directly to ask about current new donor promotions.</p>
                                 </div>
                             </div>
                             
@@ -354,8 +475,8 @@
                                 <span class="step-number">2</span>
                                 <div class="step-content">
                                     <h4>Time Your Start Date</h4>
-                                    <p>Start your donation series at the beginning of a promotional period to maximize total earnings.</p>
-                                    <p><strong>Best Times:</strong> Early in the month, start of school year, holiday seasons</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Start your donation series at the beginning of a promotional period to maximize total earnings.</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Times:</strong> Early in the month, start of school year, holiday seasons</p>
                                 </div>
                             </div>
                             
@@ -363,8 +484,8 @@
                                 <span class="step-number">3</span>
                                 <div class="step-content">
                                     <h4>Complete Requirements Quickly</h4>
-                                    <p>New donor bonuses often have strict timeframes. Plan your schedule to complete all required donations within the deadline.</p>
-                                    <p><strong>Typical Deadline:</strong> 30-45 days for full bonus</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">New donor bonuses often have strict timeframes. Plan your schedule to complete all required donations within the deadline.</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical Deadline:</strong> 30-45 days for full bonus</p>
                                 </div>
                             </div>
                             
@@ -372,26 +493,26 @@
                                 <span class="step-number">4</span>
                                 <div class="step-content">
                                     <h4>Track Progress Carefully</h4>
-                                    <p>Keep detailed records of which donations count toward your bonus and when deadlines expire.</p>
+                                    <p class="text-gray-700 leading-relaxed mb-4">Keep detailed records of which donations count toward your bonus and when deadlines expire.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="bonus-comparison-example">
                             <h4>💰 Real Example: Center Shopping</h4>
-                            <p><strong>Center A:</strong> $600 new donor bonus (6 donations in 30 days)</p>
-                            <p><strong>Center B:</strong> $800 new donor bonus (8 donations in 45 days)</p>
-                            <p><strong>Center C:</strong> $1,000 new donor bonus (5 donations in 21 days)</p>
-                            <p><strong>Best Choice:</strong> Center C if you can meet the aggressive timeline, otherwise Center B for flexibility.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Center A:</strong> $600 new donor bonus (6 donations in 30 days)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Center B:</strong> $800 new donor bonus (8 donations in 45 days)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Center C:</strong> $1,000 new donor bonus (5 donations in 21 days)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Choice:</strong> Center C if you can meet the aggressive timeline, otherwise Center B for flexibility.</p>
                         </div>
                     </div>
                 </section>
 
                 <section id="referral-bonuses">
-                    <h2>👥 Maximizing Referral Programs</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">👥 Maximizing Referral Programs</h2>
                     
-                    <h3>How Referral Bonuses Work</h3>
-                    <p>Most centers pay bonuses when someone you refer completes their new donor requirements. Both you and the person you refer typically receive bonuses.</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">How Referral Bonuses Work</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Most centers pay bonuses when someone you refer completes their new donor requirements. Both you and the person you refer typically receive bonuses.</p>
                     
                     <div class="referral-strategies">
                         <div class="referral-strategy">
@@ -427,94 +548,94 @@
                     
                     <div class="referral-earnings-example">
                         <h4>💰 Referral Earnings Example</h4>
-                        <p><strong>Scenario:</strong> You refer 4 people per year who complete their requirements</p>
-                        <p><strong>Your Bonus:</strong> 4 × $50 = $200</p>
-                        <p><strong>Their Bonus:</strong> 4 × $600 = $2,400 (you helped them earn this)</p>
-                        <p><strong>Total Impact:</strong> $2,600 in bonus earnings from your referrals</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Scenario:</strong> You refer 4 people per year who complete their requirements</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Your Bonus:</strong> 4 × $50 = $200</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Their Bonus:</strong> 4 × $600 = $2,400 (you helped them earn this)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Total Impact:</strong> $2,600 in bonus earnings from your referrals</p>
                     </div>
                 </section>
 
                 <section id="monthly-promotions">
-                    <h2>📅 Monthly and Recurring Promotions</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📅 Monthly and Recurring Promotions</h2>
                     
-                    <h3>Common Monthly Bonus Structures</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Common Monthly Bonus Structures</h3>
                     <div class="monthly-bonus-examples">
                         <div class="bonus-structure">
                             <h4>🎯 Completion Bonuses</h4>
-                            <p><strong>Typical Offer:</strong> "$75 for 8 donations this month"</p>
-                            <p><strong>Strategy:</strong> Plan your twice-weekly schedule to hit exactly 8 donations</p>
-                            <p><strong>Math:</strong> $75 ÷ 8 donations = $9.38 extra per donation</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical Offer:</strong> "$75 for 8 donations this month"</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Strategy:</strong> Plan your twice-weekly schedule to hit exactly 8 donations</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Math:</strong> $75 ÷ 8 donations = $9.38 extra per donation</p>
                         </div>
                         
                         <div class="bonus-structure">
                             <h4>📈 Progressive Bonuses</h4>
-                            <p><strong>Example Structure:</strong></p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Example Structure:</strong></p>
                             <ul>
                                 <li>4 donations: $25 bonus</li>
                                 <li>6 donations: $50 bonus</li>
                                 <li>8 donations: $100 bonus</li>
                             </ul>
-                            <p><strong>Strategy:</strong> Always aim for the highest tier if possible</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Strategy:</strong> Always aim for the highest tier if possible</p>
                         </div>
                         
                         <div class="bonus-structure">
                             <h4>🔄 Streak Bonuses</h4>
-                            <p><strong>Example:</strong> "$10 extra per donation if you donate every week this month"</p>
-                            <p><strong>Challenge:</strong> Requires consistency but pays well</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Example:</strong> "$10 extra per donation if you donate every week this month"</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Challenge:</strong> Requires consistency but pays well</p>
                         </div>
                     </div>
                     
-                    <h3>Seasonal Promotion Calendar</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Seasonal Promotion Calendar</h3>
                     <div class="seasonal-calendar">
                         <div class="season-promotions">
                             <h4>🌸 Spring (March-May)</h4>
-                            <p>Spring break bonuses, tax season promotions, Mother's Day specials</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Spring break bonuses, tax season promotions, Mother's Day specials</p>
                         </div>
                         
                         <div class="season-promotions">
                             <h4>☀️ Summer (June-August)</h4>
-                            <p>Back-to-school bonuses, vacation season promotions, father's Day specials</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Back-to-school bonuses, vacation season promotions, father's Day specials</p>
                         </div>
                         
                         <div class="season-promotions">
                             <h4>🍂 Fall (September-November)</h4>
-                            <p>Back-to-school campaigns, Halloween bonuses, Thanksgiving promotions</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Back-to-school campaigns, Halloween bonuses, Thanksgiving promotions</p>
                         </div>
                         
                         <div class="season-promotions">
                             <h4>❄️ Winter (December-February)</h4>
-                            <p>Holiday bonuses, New Year promotions, Valentine's Day specials</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Holiday bonuses, New Year promotions, Valentine's Day specials</p>
                         </div>
                     </div>
                 </section>
 
                 <section id="stacking-strategies">
-                    <h2>📚 Advanced Bonus Stacking Strategies</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📚 Advanced Bonus Stacking Strategies</h2>
                     
-                    <h3>What is Bonus Stacking?</h3>
-                    <p>Bonus stacking involves combining multiple bonus types in a single donation or period to maximize total earnings.</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">What is Bonus Stacking?</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Bonus stacking involves combining multiple bonus types in a single donation or period to maximize total earnings.</p>
                     
                     <div class="stacking-examples">
                         <div class="stacking-example">
                             <h4>💰 Perfect Storm Example</h4>
-                            <p><strong>Base Pay:</strong> $45 (regular donation)</p>
-                            <p><strong>+ New Donor Bonus:</strong> $100</p>
-                            <p><strong>+ Holiday Promotion:</strong> $25</p>
-                            <p><strong>+ Referral Bonus:</strong> $50 (separate payment)</p>
-                            <p><strong>Total Earnings:</strong> $220 for one donation session</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Base Pay:</strong> $45 (regular donation)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>+ New Donor Bonus:</strong> $100</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>+ Holiday Promotion:</strong> $25</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>+ Referral Bonus:</strong> $50 (separate payment)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Total Earnings:</strong> $220 for one donation session</p>
                         </div>
                         
                         <div class="stacking-example">
                             <h4>📅 Monthly Stacking</h4>
-                            <p><strong>Regular 8 donations:</strong> $320</p>
-                            <p><strong>+ Monthly completion bonus:</strong> $75</p>
-                            <p><strong>+ Streak bonus:</strong> $40 (8 × $5)</p>
-                            <p><strong>+ Milestone bonus:</strong> $100 (25th donation)</p>
-                            <p><strong>Total Monthly Earnings:</strong> $535</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Regular 8 donations:</strong> $320</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>+ Monthly completion bonus:</strong> $75</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>+ Streak bonus:</strong> $40 (8 × $5)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>+ Milestone bonus:</strong> $100 (25th donation)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Total Monthly Earnings:</strong> $535</p>
                         </div>
                     </div>
                     
-                    <h3>Stacking Rules and Limitations</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Stacking Rules and Limitations</h3>
                     <div class="stacking-rules">
                         <ul>
                             <li><strong>Read Fine Print:</strong> Some bonuses cannot be combined</li>
@@ -526,9 +647,9 @@
                 </section>
 
                 <section id="tracking-tips">
-                    <h2>📊 Tracking and Optimization Tips</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📊 Tracking and Optimization Tips</h2>
                     
-                    <h3>Create a Bonus Tracking System</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Create a Bonus Tracking System</h3>
                     <div class="tracking-methods">
                         <div class="tracking-method">
                             <h4>📱 Use Apps and Spreadsheets</h4>
@@ -551,39 +672,39 @@
                         </div>
                     </div>
                     
-                    <h3>Pro Optimization Strategies</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Pro Optimization Strategies</h3>
                     <div class="optimization-strategies">
                         <div class="optimization-tip">
                             <h4>🎯 Multi-Center Intelligence</h4>
-                            <p>Even though you can only donate at one center, track bonuses at all local centers to know when to switch (after completing current bonus cycles).</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Even though you can only donate at one center, track bonuses at all local centers to know when to switch (after completing current bonus cycles).</p>
                         </div>
                         
                         <div class="optimization-tip">
                             <h4>💡 Bonus Arbitrage</h4>
-                            <p>Some donors strategically time their "return" to centers to take advantage of return donor bonuses after waiting periods.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Some donors strategically time their "return" to centers to take advantage of return donor bonuses after waiting periods.</p>
                         </div>
                         
                         <div class="optimization-tip">
                             <h4>📊 ROI Analysis</h4>
-                            <p>Calculate the true value of travel time and effort when comparing bonuses at different centers.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Calculate the true value of travel time and effort when comparing bonuses at different centers.</p>
                         </div>
                         
                         <div class="optimization-tip">
                             <h4>🔄 Seasonal Planning</h4>
-                            <p>Plan your donation schedule around predictable seasonal bonus patterns to maximize annual earnings.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Plan your donation schedule around predictable seasonal bonus patterns to maximize annual earnings.</p>
                         </div>
                     </div>
                     
                     <div class="annual-strategy">
                         <h4>📈 Annual Earnings Strategy</h4>
-                        <p><strong>Goal:</strong> Maximize total annual earnings through strategic bonus utilization</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Goal:</strong> Maximize total annual earnings through strategic bonus utilization</p>
                         <ol>
                             <li><strong>Q1:</strong> Focus on new donor bonuses at highest-paying center</li>
                             <li><strong>Q2:</strong> Maximize referral bonuses and spring promotions</li>
                             <li><strong>Q3:</strong> Take advantage of back-to-school campaigns</li>
                             <li><strong>Q4:</strong> Capitalize on holiday bonuses and year-end promotions</li>
                         </ol>
-                        <p><strong>Potential Bonus Earnings:</strong> $1,500-$3,000+ annually beyond base pay</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Potential Bonus Earnings:</strong> $1,500-$3,000+ annually beyond base pay</p>
                     </div>
                 </section>
             </div>
@@ -619,26 +740,26 @@
 
             <!-- Related Articles -->
             <section class="related-articles">
-                <h3>Related Articles</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Related Articles</h3>
                 <div class="related-grid">
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/which-plasma-center-pays-most-money">Which Plasma Center Pays the Most Money?</a></h4>
-                        <p>Compare base pay rates across all major plasma center chains.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Compare base pay rates across all major plasma center chains.</p>
                     </article>
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/biolife-vs-csl-plasma-comparison">BioLife vs CSL Plasma: Which Pays More?</a></h4>
-                        <p>Head-to-head comparison of bonus programs at major chains.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Head-to-head comparison of bonus programs at major chains.</p>
                     </article>
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/how-much-money-plasma-donation">How Much Money Can You Make Donating Plasma?</a></h4>
-                        <p>Complete earnings breakdown including bonus potential.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Complete earnings breakdown including bonus potential.</p>
                     </article>
                 </div>
             </section>
 
             <!-- Sources & References -->
             <section class="content-section sources-section">
-                <h3>📚 Sources & References</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                 <div class="sources-list">
                     <ul>
                         <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood Donor Screening Requirements</a></li>
@@ -654,42 +775,42 @@
 
             <!-- Author Profile -->
             <section class="content-section author-profile">
-                <h3>Glen Meade, Bonus Optimization Expert & Promotion Tracker</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Bonus Optimization Expert & Promotion Tracker</h3>
                 <div class="author-badges">
                     <span class="badge">🎁 Bonus Specialist</span>
                     <span class="badge">📊 Promotion Tracker</span>
                     <span class="badge">💰 Incentive Optimizer</span>
                 </div>
-                <p>Glen systematically tracks bonus programs and promotional offers across all major plasma center chains, developing strategies that help donors maximize their bonus earnings. His comprehensive bonus calendar and stacking techniques have helped thousands of donors earn an additional $200-500 monthly through strategic bonus optimization.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Glen systematically tracks bonus programs and promotional offers across all major plasma center chains, developing strategies that help donors maximize their bonus earnings. His comprehensive bonus calendar and stacking techniques have helped thousands of donors earn an additional $200-500 monthly through strategic bonus optimization.</p>
                 
                 <div class="disclaimer-note">
-                    <p><strong>Transparency:</strong> Glen is not a financial advisor or medical professional. This information is educational only. Always consult tax professionals for tax advice and healthcare providers for medical guidance.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a financial advisor or medical professional. This information is educational only. Always consult tax professionals for tax advice and healthcare providers for medical guidance.</p>
                 </div>
                 
                 <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
             </section>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, eligibility requirements, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -713,7 +834,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -737,7 +858,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
         </div>
     </footer>
 

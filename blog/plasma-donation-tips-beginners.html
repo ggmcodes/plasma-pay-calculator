@@ -153,7 +153,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -164,43 +261,67 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">Pay Calculator</a>
-            </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="blog-post-content">
+    <main class="min-h-screen bg-gray-50">
         <!-- Breadcrumbs -->
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
-                <li>First-Time Donor Tips</li>
-            </ol>
-        </nav>
+        
 
         <!-- Article -->
-        <article class="blog-article">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <header class="article-header">
-                <h1>Plasma Donation Tips for First-Time Donors: Complete Beginner's Guide 2025</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Plasma Donation Tips for First-Time Donors: Complete Beginner's Guide 2025</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/Lks7vei-eAg/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="article-meta">
@@ -215,7 +336,7 @@
 
             <!-- Table of Contents -->
             <div class="table-of-contents">
-                <h3>Table of Contents</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Table of Contents</h3>
                 <ul>
                     <li><a href="#eligibility">Eligibility Requirements</a></li>
                     <li><a href="#preparation">Pre-Donation Preparation</a></li>
@@ -230,32 +351,32 @@
             <!-- Article Content -->
             <div class="article-content">
                 <section id="eligibility">
-                    <h2>✅ Eligibility Requirements</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">✅ Eligibility Requirements</h2>
                     
-                    <h3>Basic Requirements</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Basic Requirements</h3>
                     <div class="requirements-grid">
                         <div class="requirement-card">
                             <h4>📋 Age</h4>
-                            <p>18-65 years old (some centers allow up to 69)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">18-65 years old (some centers allow up to 69)</p>
                         </div>
                         
                         <div class="requirement-card">
                             <h4>⚖️ Weight</h4>
-                            <p>Minimum 110 lbs (50 kg)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Minimum 110 lbs (50 kg)</p>
                         </div>
                         
                         <div class="requirement-card">
                             <h4>🆔 ID Required</h4>
-                            <p>Valid government-issued photo ID</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Valid government-issued photo ID</p>
                         </div>
                         
                         <div class="requirement-card">
                             <h4>📍 Address Proof</h4>
-                            <p>Recent mail with current address</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Recent mail with current address</p>
                         </div>
                     </div>
                     
-                    <h3>Health Requirements</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Health Requirements</h3>
                     <ul>
                         <li>No active infections or illnesses</li>
                         <li>Stable blood pressure (90-180 systolic, 50-100 diastolic)</li>
@@ -267,7 +388,7 @@
                     
                     <div class="warning-box">
                         <h4>⚠️ Temporary Deferrals</h4>
-                        <p>You may be temporarily deferred if you have:</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">You may be temporarily deferred if you have:</p>
                         <ul>
                             <li>Recent tattoos or piercings (varies by location)</li>
                             <li>Recent travel to certain countries</li>
@@ -279,27 +400,27 @@
                 </section>
 
                 <section id="preparation">
-                    <h2>🥗 Pre-Donation Preparation</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🥗 Pre-Donation Preparation</h2>
                     
-                    <h3>The Night Before</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">The Night Before</h3>
                     <div class="prep-timeline">
                         <div class="prep-item">
                             <h4>💤 Get Good Sleep</h4>
-                            <p>Aim for 7-8 hours of quality sleep</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Aim for 7-8 hours of quality sleep</p>
                         </div>
                         
                         <div class="prep-item">
                             <h4>🍗 Eat Protein-Rich Dinner</h4>
-                            <p>Chicken, fish, beans, or tofu help maintain protein levels</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Chicken, fish, beans, or tofu help maintain protein levels</p>
                         </div>
                         
                         <div class="prep-item">
                             <h4>💧 Start Hydrating</h4>
-                            <p>Begin drinking extra water (but not excessively)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Begin drinking extra water (but not excessively)</p>
                         </div>
                     </div>
                     
-                    <h3>Day of Donation</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Day of Donation</h3>
                     <div class="day-of-prep">
                         <h4>🌅 Morning (2-3 hours before)</h4>
                         <ul>
@@ -319,21 +440,21 @@
                     
                     <div class="pro-tip">
                         <h4>💡 Pro Tip</h4>
-                        <p>Iron-rich foods 24-48 hours before donation can help ensure you pass the hemoglobin test. Try spinach, red meat, beans, or fortified cereals.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Iron-rich foods 24-48 hours before donation can help ensure you pass the hemoglobin test. Try spinach, red meat, beans, or fortified cereals.</p>
                     </div>
                 </section>
 
                 <section id="what-to-expect">
-                    <h2>🏥 What to Expect at Your First Visit</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏥 What to Expect at Your First Visit</h2>
                     
-                    <h3>Check-In Process</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Check-In Process</h3>
                     <div class="process-steps">
                         <div class="step">
                             <span class="step-number">1</span>
                             <div class="step-content">
                                 <h4>Registration</h4>
-                                <p>Provide ID, proof of address, and complete paperwork</p>
-                                <p><strong>Time:</strong> 15-30 minutes</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Provide ID, proof of address, and complete paperwork</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Time:</strong> 15-30 minutes</p>
                             </div>
                         </div>
                         
@@ -341,8 +462,8 @@
                             <span class="step-number">2</span>
                             <div class="step-content">
                                 <h4>Medical History</h4>
-                                <p>Detailed questionnaire about health, travel, and lifestyle</p>
-                                <p><strong>Time:</strong> 10-15 minutes</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Detailed questionnaire about health, travel, and lifestyle</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Time:</strong> 10-15 minutes</p>
                             </div>
                         </div>
                         
@@ -350,8 +471,8 @@
                             <span class="step-number">3</span>
                             <div class="step-content">
                                 <h4>Physical Exam</h4>
-                                <p>Basic physical assessment by medical staff</p>
-                                <p><strong>Time:</strong> 10-15 minutes</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Basic physical assessment by medical staff</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Time:</strong> 10-15 minutes</p>
                             </div>
                         </div>
                         
@@ -359,8 +480,8 @@
                             <span class="step-number">4</span>
                             <div class="step-content">
                                 <h4>Vital Signs</h4>
-                                <p>Blood pressure, pulse, temperature, weight</p>
-                                <p><strong>Time:</strong> 5-10 minutes</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Blood pressure, pulse, temperature, weight</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Time:</strong> 5-10 minutes</p>
                             </div>
                         </div>
                         
@@ -368,24 +489,24 @@
                             <span class="step-number">5</span>
                             <div class="step-content">
                                 <h4>Blood Tests</h4>
-                                <p>Protein and hematocrit levels, infectious disease screening</p>
-                                <p><strong>Time:</strong> 5-10 minutes</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Protein and hematocrit levels, infectious disease screening</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Time:</strong> 5-10 minutes</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-visit-box">
                         <h4>📋 First Visit Total Time</h4>
-                        <p><strong>2-4 hours</strong> (subsequent visits: 1-2 hours)</p>
-                        <p>Bring a book, phone, or entertainment for waiting periods.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>2-4 hours</strong> (subsequent visits: 1-2 hours)</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Bring a book, phone, or entertainment for waiting periods.</p>
                     </div>
                 </section>
 
                 <section id="donation-process">
-                    <h2>🩸 The Donation Process</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🩸 The Donation Process</h2>
                     
-                    <h3>Plasmapheresis Explained</h3>
-                    <p>Plasma donation uses a process called plasmapheresis, which separates plasma from your blood and returns red blood cells and platelets back to your body.</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Plasmapheresis Explained</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Plasma donation uses a process called plasmapheresis, which separates plasma from your blood and returns red blood cells and platelets back to your body.</p>
                     
                     <div class="process-breakdown">
                         <div class="process-step">
@@ -417,7 +538,7 @@
                         </div>
                     </div>
                     
-                    <h3>During Donation</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">During Donation</h3>
                     <div class="during-donation-tips">
                         <h4>What You Can Do</h4>
                         <ul>
@@ -438,32 +559,32 @@
                 </section>
 
                 <section id="after-donation">
-                    <h2>🌟 Post-Donation Care</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🌟 Post-Donation Care</h2>
                     
-                    <h3>Immediate After-Care</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Immediate After-Care</h3>
                     <div class="aftercare-grid">
                         <div class="aftercare-item">
                             <h4>🍪 Snack Area</h4>
-                            <p>Most centers provide snacks and drinks. Take advantage!</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Most centers provide snacks and drinks. Take advantage!</p>
                         </div>
                         
                         <div class="aftercare-item">
                             <h4>💧 Hydrate</h4>
-                            <p>Drink plenty of fluids over the next 24 hours</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Drink plenty of fluids over the next 24 hours</p>
                         </div>
                         
                         <div class="aftercare-item">
                             <h4>🏋️ Avoid Heavy Lifting</h4>
-                            <p>No heavy lifting with donation arm for 4-6 hours</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">No heavy lifting with donation arm for 4-6 hours</p>
                         </div>
                         
                         <div class="aftercare-item">
                             <h4>🩹 Keep Bandage On</h4>
-                            <p>Leave bandage on for at least 4 hours</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Leave bandage on for at least 4 hours</p>
                         </div>
                     </div>
                     
-                    <h3>Next 24 Hours</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Next 24 Hours</h3>
                     <ul>
                         <li>Eat iron-rich foods to help replenish</li>
                         <li>Avoid alcohol and smoking</li>
@@ -483,11 +604,11 @@
                 </section>
 
                 <section id="maximizing-earnings">
-                    <h2>💰 Maximizing Your Earnings</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💰 Maximizing Your Earnings</h2>
                     
-                    <h3>New Donor Bonuses</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">New Donor Bonuses</h3>
                     <div class="bonus-strategy">
-                        <p><strong>Typical New Donor Bonus:</strong> $50-$100 first donation, up to $600-$800 in first month</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Typical New Donor Bonus:</strong> $50-$100 first donation, up to $600-$800 in first month</p>
                         <ul>
                             <li>Complete bonus requirements within specified timeframe</li>
                             <li>Don't miss scheduled appointments</li>
@@ -495,57 +616,57 @@
                         </ul>
                     </div>
                     
-                    <h3>Long-Term Earning Tips</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Long-Term Earning Tips</h3>
                     <div class="earning-tips">
                         <div class="tip">
                             <h4>📅 Consistent Schedule</h4>
-                            <p>Donate twice weekly (with 48 hours between donations) for maximum earnings</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Donate twice weekly (with 48 hours between donations) for maximum earnings</p>
                         </div>
                         
                         <div class="tip">
                             <h4>🎯 Bonus Tracking</h4>
-                            <p>Keep track of monthly and milestone bonuses</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Keep track of monthly and milestone bonuses</p>
                         </div>
                         
                         <div class="tip">
                             <h4>🏥 Multiple Centers</h4>
-                            <p>Compare rates at different centers (but only donate at one)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Compare rates at different centers (but only donate at one)</p>
                         </div>
                         
                         <div class="tip">
                             <h4>💳 Referral Programs</h4>
-                            <p>Earn bonuses by referring friends and family</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Earn bonuses by referring friends and family</p>
                         </div>
                     </div>
                 </section>
 
                 <section id="common-concerns">
-                    <h2>❓ Common First-Timer Concerns</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">❓ Common First-Timer Concerns</h2>
                     
                     <div class="faq-section">
                         <div class="faq-item">
                             <h4>Does it hurt?</h4>
-                            <p>Most donors report minimal discomfort. The needle insertion feels like a typical blood draw or vaccination. The process itself is generally painless.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Most donors report minimal discomfort. The needle insertion feels like a typical blood draw or vaccination. The process itself is generally painless.</p>
                         </div>
                         
                         <div class="faq-item">
                             <h4>Will I feel weak or tired?</h4>
-                            <p>Most people feel normal after donation. Staying hydrated and eating well beforehand prevents most side effects.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Most people feel normal after donation. Staying hydrated and eating well beforehand prevents most side effects.</p>
                         </div>
                         
                         <div class="faq-item">
                             <h4>Is it safe?</h4>
-                            <p>Yes, plasma donation is very safe when done at licensed centers. All equipment is sterile and single-use.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Yes, plasma donation is very safe when done at licensed centers. All equipment is sterile and single-use.</p>
                         </div>
                         
                         <div class="faq-item">
                             <h4>How often can I donate?</h4>
-                            <p>Up to twice per week with at least 48 hours between donations. Your body replaces plasma within 24-48 hours.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Up to twice per week with at least 48 hours between donations. Your body replaces plasma within 24-48 hours.</p>
                         </div>
                         
                         <div class="faq-item">
                             <h4>What if I'm afraid of needles?</h4>
-                            <p>Let the staff know. They're experienced with needle-anxious donors and can help you feel more comfortable.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Let the staff know. They're experienced with needle-anxious donors and can help you feel more comfortable.</p>
                         </div>
                     </div>
                 </section>
@@ -582,26 +703,26 @@
 
             <!-- Related Articles -->
             <section class="related-articles">
-                <h3>Related Articles</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Related Articles</h3>
                 <div class="related-grid">
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/best-times-donate-plasma">Best Times to Donate Plasma for Maximum Pay</a></h4>
-                        <p>Optimize your schedule to minimize wait times and maximize earnings.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Optimize your schedule to minimize wait times and maximize earnings.</p>
                     </article>
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/which-plasma-center-pays-most-money">Which Plasma Center Pays the Most Money?</a></h4>
-                        <p>Complete comparison of payment rates across major chains.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Complete comparison of payment rates across major chains.</p>
                     </article>
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/how-much-money-plasma-donation">How Much Money Can You Make Donating Plasma?</a></h4>
-                        <p>Detailed breakdown of earning potential by state and experience.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Detailed breakdown of earning potential by state and experience.</p>
                     </article>
                 </div>
             </section>
 
             <!-- Sources & References -->
             <section class="content-section sources-section">
-                <h3>📚 Sources & References</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                 <div class="sources-list">
                     <ul>
                         <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood Donor Screening Requirements</a></li>
@@ -617,42 +738,42 @@
 
             <!-- Author Profile -->
             <section class="content-section author-profile">
-                <h3>Glen Meade, New Donor Specialist & Beginner Education Expert</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, New Donor Specialist & Beginner Education Expert</h3>
                 <div class="author-badges">
                     <span class="badge">👋 New Donor Advocate</span>
                     <span class="badge">📚 Education Specialist</span>
                     <span class="badge">🎯 First-Time Success Expert</span>
                 </div>
-                <p>Glen has guided over 15,000 first-time plasma donors through their initial experiences, developing comprehensive preparation strategies that ensure successful first visits. His step-by-step approach eliminates common beginner mistakes and anxiety, helping new donors feel confident and prepared while maximizing their first-month earning potential through proper bonus completion.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Glen has guided over 15,000 first-time plasma donors through their initial experiences, developing comprehensive preparation strategies that ensure successful first visits. His step-by-step approach eliminates common beginner mistakes and anxiety, helping new donors feel confident and prepared while maximizing their first-month earning potential through proper bonus completion.</p>
                 
                 <div class="disclaimer-note">
-                    <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
                 </div>
                 
                 <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
             </section>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, eligibility requirements, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -676,7 +797,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -700,7 +821,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
         </div>
     </footer>
 

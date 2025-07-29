@@ -246,7 +246,102 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
 
     <style>
     .language-switcher {
@@ -302,9 +397,159 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <div class="language-switcher">
         <a href="/es/blog/understanding-plasma-medical-uses.html" class="lang-option spanish" title="Español">
@@ -315,7 +560,7 @@
 
     <div class="container">
         <div class="article-header">
-            <h1>Understanding Plasma: Medical Uses and Why Your Donation Matters</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Understanding Plasma: Medical Uses and Why Your Donation Matters</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/qjnAnF0jIGk/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
             <div class="article-meta">
@@ -327,11 +572,11 @@
         </div>
 
         <div class="content-section">
-            <h2>What is Plasma and Why is it Essential?</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">What is Plasma and Why is it Essential?</h2>
             
-            <p>Plasma is the liquid portion of blood, comprising approximately 55% of total blood volume. This pale yellow fluid contains water, proteins, nutrients, hormones, and antibodies that are crucial for maintaining life and health.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Plasma is the liquid portion of blood, comprising approximately 55% of total blood volume. This pale yellow fluid contains water, proteins, nutrients, hormones, and antibodies that are crucial for maintaining life and health.</p>
             
-            <h3>Plasma Composition</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Plasma Composition</h3>
             <ul>
                 <li><strong>Water (90-92%):</strong> The primary component that helps transport nutrients and waste</li>
                 <li><strong>Proteins (7-8%):</strong> Including albumin, immunoglobulins, and clotting factors</li>
@@ -343,11 +588,11 @@
 
             <div class="highlight-box">
                 <h4>Key Fact</h4>
-                <p>Unlike red blood cells that take weeks to regenerate, plasma replenishes itself within 24-48 hours after donation, making it possible to donate plasma twice weekly while maintaining your health.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Unlike red blood cells that take weeks to regenerate, plasma replenishes itself within 24-48 hours after donation, making it possible to donate plasma twice weekly while maintaining your health.</p>
             </div>
 
-            <h3>Critical Plasma Proteins</h3>
-            <p>The proteins in plasma are what make it so medically valuable:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Critical Plasma Proteins</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">The proteins in plasma are what make it so medically valuable:</p>
             
             <ul>
                 <li><strong>Albumin:</strong> Maintains blood volume and transports substances</li>
@@ -359,14 +604,14 @@
         </div>
 
         <div class="content-section">
-            <h2>Life-Saving Medical Applications</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Life-Saving Medical Applications</h2>
             
-            <p>Donated plasma undergoes sophisticated processing to create plasma-derived medicines (PDMs) that treat a wide range of serious medical conditions. These treatments are often the only therapy option for patients with rare diseases.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Donated plasma undergoes sophisticated processing to create plasma-derived medicines (PDMs) that treat a wide range of serious medical conditions. These treatments are often the only therapy option for patients with rare diseases.</p>
 
             <div class="medical-applications">
                 <div class="application-card">
                     <h4>🛡️ Immune System Disorders</h4>
-                    <p>Immunoglobulin therapy derived from plasma helps patients with:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Immunoglobulin therapy derived from plasma helps patients with:</p>
                     <div class="condition">Primary Immunodeficiency Diseases</div>
                     <div class="condition">Chronic Inflammatory Demyelinating Polyneuropathy (CIDP)</div>
                     <div class="condition">Multifocal Motor Neuropathy</div>
@@ -376,7 +621,7 @@
 
                 <div class="application-card">
                     <h4>🩸 Blood Clotting Disorders</h4>
-                    <p>Clotting factor concentrates treat bleeding disorders:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Clotting factor concentrates treat bleeding disorders:</p>
                     <div class="condition">Hemophilia A and B</div>
                     <div class="condition">Von Willebrand Disease</div>
                     <div class="condition">Factor Deficiencies</div>
@@ -386,7 +631,7 @@
 
                 <div class="application-card">
                     <h4>🫁 Lung Diseases</h4>
-                    <p>Alpha-1 antitrypsin replacement therapy for:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Alpha-1 antitrypsin replacement therapy for:</p>
                     <div class="condition">Alpha-1 Antitrypsin Deficiency</div>
                     <div class="condition">Emphysema</div>
                     <div class="condition">Chronic Obstructive Pulmonary Disease</div>
@@ -395,7 +640,7 @@
 
                 <div class="application-card">
                     <h4>🔥 Burn and Trauma Care</h4>
-                    <p>Albumin solutions for critical care situations:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Albumin solutions for critical care situations:</p>
                     <div class="condition">Severe Burns</div>
                     <div class="condition">Hypovolemic Shock</div>
                     <div class="condition">Liver Failure</div>
@@ -406,14 +651,14 @@
 
             <div class="info-box">
                 <h4>Manufacturing Process</h4>
-                <p>Plasma must be processed within strict time limits and undergo extensive testing and purification. The manufacturing process for plasma-derived medicines can take 6-12 months from donation to final product, highlighting the importance of consistent donation supply.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Plasma must be processed within strict time limits and undergo extensive testing and purification. The manufacturing process for plasma-derived medicines can take 6-12 months from donation to final product, highlighting the importance of consistent donation supply.</p>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>Patient Impact and Statistics</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Patient Impact and Statistics</h2>
             
-            <p>The impact of plasma donation extends far beyond individual donations. Understanding the scope helps illustrate why regular plasma donation is so crucial for patient care worldwide.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">The impact of plasma donation extends far beyond individual donations. Understanding the scope helps illustrate why regular plasma donation is so crucial for patient care worldwide.</p>
 
             <div class="statistics-grid">
                 <div class="stat-item">
@@ -434,8 +679,8 @@
                 </div>
             </div>
 
-            <h3>Rare Disease Treatment</h3>
-            <p>For many patients with rare diseases, plasma-derived medicines are the only available treatment option:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Rare Disease Treatment</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">For many patients with rare diseases, plasma-derived medicines are the only available treatment option:</p>
             
             <ul>
                 <li><strong>Primary Immunodeficiency:</strong> Affects 1 in 1,200 people worldwide</li>
@@ -446,15 +691,15 @@
 
             <div class="highlight-box">
                 <h4>Patient Story Impact</h4>
-                <p>A single patient with Primary Immunodeficiency may require immunoglobulin therapy derived from 400-1,000 plasma donations annually. This treatment allows them to live normal, productive lives despite their immune system disorder.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">A single patient with Primary Immunodeficiency may require immunoglobulin therapy derived from 400-1,000 plasma donations annually. This treatment allows them to live normal, productive lives despite their immune system disorder.</p>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>The Manufacturing and Safety Process</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">The Manufacturing and Safety Process</h2>
             
-            <h3>From Donation to Medicine</h3>
-            <p>The journey from plasma donation to life-saving medicine involves multiple sophisticated steps:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">From Donation to Medicine</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">The journey from plasma donation to life-saving medicine involves multiple sophisticated steps:</p>
             
             <ol>
                 <li><strong>Collection:</strong> Plasma is collected at licensed donation centers using sterile, single-use equipment</li>
@@ -467,7 +712,7 @@
                 <li><strong>Quality Testing:</strong> Extensive testing ensures safety and efficacy</li>
             </ol>
 
-            <h3>Safety Measures</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Safety Measures</h3>
             <ul>
                 <li><strong>Donor Screening:</strong> Comprehensive health questionnaires and medical examinations</li>
                 <li><strong>Testing Protocols:</strong> Each donation tested for HIV, Hepatitis B & C, and other pathogens</li>
@@ -478,15 +723,15 @@
 
             <div class="info-box">
                 <h4>Quality Assurance</h4>
-                <p>The plasma industry maintains one of the highest safety records in medicine. No cases of viral transmission have been reported from plasma-derived medicines manufactured using current safety protocols since the 1990s.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">The plasma industry maintains one of the highest safety records in medicine. No cases of viral transmission have been reported from plasma-derived medicines manufactured using current safety protocols since the 1990s.</p>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>Innovation and Future Applications</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Innovation and Future Applications</h2>
             
-            <h3>Research and Development</h3>
-            <p>Plasma continues to be a source of medical innovation and breakthrough treatments:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Research and Development</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Plasma continues to be a source of medical innovation and breakthrough treatments:</p>
             
             <ul>
                 <li><strong>Hyperimmune Plasma:</strong> Targeted antibodies for specific diseases</li>
@@ -496,8 +741,8 @@
                 <li><strong>Personalized Medicine:</strong> Tailored treatments based on patient-specific needs</li>
             </ul>
 
-            <h3>Emerging Applications</h3>
-            <p>Scientists continue to discover new medical applications for plasma-derived products:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Emerging Applications</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Scientists continue to discover new medical applications for plasma-derived products:</p>
             
             <ul>
                 <li><strong>Wound Healing:</strong> Plasma-rich preparations for faster healing</li>
@@ -509,15 +754,15 @@
 
             <div class="highlight-box">
                 <h4>Future Outlook</h4>
-                <p>The demand for plasma-derived medicines is expected to grow 6-8% annually, driven by aging populations, increased diagnosis of rare diseases, and expanding treatment applications. This makes plasma donation more important than ever.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">The demand for plasma-derived medicines is expected to grow 6-8% annually, driven by aging populations, increased diagnosis of rare diseases, and expanding treatment applications. This makes plasma donation more important than ever.</p>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>How Your Donation Makes a Difference</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">How Your Donation Makes a Difference</h2>
             
-            <h3>Direct Patient Impact</h3>
-            <p>Every plasma donation directly contributes to patient care and medical advancement:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Direct Patient Impact</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Every plasma donation directly contributes to patient care and medical advancement:</p>
             
             <ul>
                 <li><strong>Immediate Need:</strong> Helps maintain adequate supply for current patients</li>
@@ -527,8 +772,8 @@
                 <li><strong>Cost Effectiveness:</strong> Helps keep treatments affordable for patients</li>
             </ul>
 
-            <h3>Global Health Impact</h3>
-            <p>Plasma donation contributes to global health security and medical preparedness:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Global Health Impact</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Plasma donation contributes to global health security and medical preparedness:</p>
             
             <ul>
                 <li><strong>Pandemic Response:</strong> Rapid production of treatments for emerging diseases</li>
@@ -539,15 +784,15 @@
 
             <div class="info-box">
                 <h4>Donation Frequency</h4>
-                <p>Regular donors can donate plasma up to twice weekly, with at least 48 hours between donations. This frequency is safe because plasma regenerates quickly, unlike red blood cells which take weeks to replace.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Regular donors can donate plasma up to twice weekly, with at least 48 hours between donations. This frequency is safe because plasma regenerates quickly, unlike red blood cells which take weeks to replace.</p>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>Understanding Plasma vs. Blood Donation</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">Understanding Plasma vs. Blood Donation</h2>
             
-            <h3>Key Differences</h3>
-            <p>While both plasma and whole blood donations are valuable, they serve different medical purposes:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Key Differences</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">While both plasma and whole blood donations are valuable, they serve different medical purposes:</p>
             
             <div class="medical-applications">
                 <div class="application-card">
@@ -575,8 +820,8 @@
                 </div>
             </div>
 
-            <h3>Complementary Roles</h3>
-            <p>Both types of donation are essential for comprehensive patient care:</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Complementary Roles</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Both types of donation are essential for comprehensive patient care:</p>
             
             <ul>
                 <li><strong>Emergency Medicine:</strong> Whole blood for trauma, surgery, and acute conditions</li>
@@ -588,18 +833,18 @@
 
         <div class="author-section">
             <h4>About the Author</h4>
-            <p><strong>Glen Meade</strong> - Plasma donation researcher with extensive analysis of plasma medical applications and donation impact. His research helps donors understand how their contributions create life-saving medicines and support critical medical treatments.</p>
-            <p><strong>Data Review:</strong> This article contains information compiled from medical research, FDA data, and official plasma medicine documentation. All information is current as of January 2025.</p>
+            <p class="text-gray-700 leading-relaxed mb-4"><strong>Glen Meade</strong> - Plasma donation researcher with extensive analysis of plasma medical applications and donation impact. His research helps donors understand how their contributions create life-saving medicines and support critical medical treatments.</p>
+            <p class="text-gray-700 leading-relaxed mb-4"><strong>Data Review:</strong> This article contains information compiled from medical research, FDA data, and official plasma medicine documentation. All information is current as of January 2025.</p>
         </div>
 
         <div class="warning-box">
             <h4>Medical Disclaimer</h4>
-            <p>This information is for educational purposes only and should not replace professional medical advice. Patients requiring plasma-derived medicines should always consult with qualified healthcare professionals for personalized treatment guidance and medical decisions.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">This information is for educational purposes only and should not replace professional medical advice. Patients requiring plasma-derived medicines should always consult with qualified healthcare professionals for personalized treatment guidance and medical decisions.</p>
         </div>
 
         <!-- Sources & References -->
         <div class="content-section">
-            <h2>📚 Sources & References</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📚 Sources & References</h2>
             <div class="sources-list">
                 <ul>
                     <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood and Blood Products</a></li>
@@ -609,26 +854,32 @@
                     <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6174688/" target="_blank" rel="noopener">NCBI - Plasma Protein Therapeutics</a></li>
                     <li><a href="https://www.immuneglobulin.org" target="_blank" rel="noopener">International Patient Organisation for PIDD</a></li>
                 </ul>
-                <p style="font-style: italic; margin-top: 15px;"><em>Medical information compiled from peer-reviewed medical literature, FDA guidelines, and international health organizations. Information verified January 2025.</em></p>
+                <p class="text-gray-700 leading-relaxed mb-4" style="font-style: italic; margin-top: 15px;"><em>Medical information compiled from peer-reviewed medical literature, FDA guidelines, and international health organizations. Information verified January 2025.</em></p>
             </div>
         </div>
 
         <!-- Author Profile -->
         <section class="content-section author-profile">
-            <h3>Glen Meade, Plasma Donation Researcher & Medical Application Analyst</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Medical Application Analyst</h3>
             <div class="author-badges">
                 <span class="badge">📊 2,522+ Centers Analyzed</span>
                 <span class="badge">🩸 Medical Uses Expert</span>
                 <span class="badge">💊 Plasma Medicine Specialist</span>
             </div>
-            <p>Glen has extensively researched plasma medical applications and the life-saving impact of plasma donations. His analysis of plasma-derived medicine manufacturing, patient treatment outcomes, and donation impact helps donors understand how their contributions directly save lives and support critical medical treatments worldwide.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched plasma medical applications and the life-saving impact of plasma donations. His analysis of plasma-derived medicine manufacturing, patient treatment outcomes, and donation impact helps donors understand how their contributions directly save lives and support critical medical treatments worldwide.</p>
             
             <div class="disclaimer-note">
-                <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
             </div>
             
             <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
         </section>
     </div>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

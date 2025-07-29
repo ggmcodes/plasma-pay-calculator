@@ -153,7 +153,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -164,43 +261,67 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">Pay Calculator</a>
-            </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileMenu()">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="blog-post-content">
+    <main class="min-h-screen bg-gray-50">
         <!-- Breadcrumbs -->
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
-                <li>Plasma Pay Calculator in Texas</li>
-            </ol>
-        </nav>
+        
 
         <!-- Article -->
-        <article class="blog-article">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <header class="article-header">
-                <h1>Plasma Pay Calculator in Texas: Pay Rates and Locations 2025 Guide</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Plasma Pay Calculator in Texas: Pay Rates and Locations 2025 Guide</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/PHIgYUGQPvU/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="article-meta">
@@ -215,7 +336,7 @@
 
             <!-- Table of Contents -->
             <div class="table-of-contents">
-                <h3>Table of Contents</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Table of Contents</h3>
                 <ul>
                     <li><a href="#texas-overview">Texas Plasma Scene Overview</a></li>
                     <li><a href="#houston">Houston Area Centers</a></li>
@@ -230,28 +351,28 @@
             <!-- Article Content -->
             <div class="article-content">
                 <section id="texas-overview">
-                    <h2>🌟 Texas Plasma Donation Scene Overview</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🌟 Texas Plasma Donation Scene Overview</h2>
                     
                     <div class="texas-stats">
                         <div class="stat-card">
-                            <h3>150+</h3>
-                            <p>Plasma Centers Statewide</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">150+</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Plasma Centers Statewide</p>
                         </div>
                         <div class="stat-card">
-                            <h3>$25-$60</h3>
-                            <p>Per Donation Range</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">$25-$60</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Per Donation Range</p>
                         </div>
                         <div class="stat-card">
-                            <h3>$600-$1,000</h3>
-                            <p>New Donor Bonuses</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">$600-$1,000</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">New Donor Bonuses</p>
                         </div>
                         <div class="stat-card">
-                            <h3>4</h3>
-                            <p>Major Metro Areas</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">4</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">Major Metro Areas</p>
                         </div>
                     </div>
                     
-                    <h3>Why Texas is Great for Plasma Donors</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Why Texas is Great for Plasma Donors</h3>
                     <ul>
                         <li><strong>High Competition:</strong> Multiple chains compete for donors</li>
                         <li><strong>Large Population:</strong> High demand keeps rates competitive</li>
@@ -262,51 +383,51 @@
                 </section>
 
                 <section id="houston">
-                    <h2>🏙️ Houston Area Centers</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏙️ Houston Area Centers</h2>
                     
                     <div class="city-overview">
-                        <h3>Houston Metropolitan Area</h3>
-                        <p><strong>25+ Centers</strong> | <strong>Population:</strong> 7.1M | <strong>Pay Range:</strong> $25-$60</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Houston Metropolitan Area</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>25+ Centers</strong> | <strong>Population:</strong> 7.1M | <strong>Pay Range:</strong> $25-$60</p>
                     </div>
                     
                     <div class="centers-grid">
                         <div class="center-highlight">
                             <h4>💙 BioLife Plasma Services</h4>
                             <div class="center-details">
-                                <p><strong>Locations:</strong> 8+ centers across Houston metro</p>
-                                <p><strong>Pay Range:</strong> $20-$50 per donation</p>
-                                <p><strong>New Donor Bonus:</strong> Up to $750 first month</p>
-                                <p><strong>Best Locations:</strong> Medical Center, Westchase, Humble</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Locations:</strong> 8+ centers across Houston metro</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $20-$50 per donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>New Donor Bonus:</strong> Up to $750 first month</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Locations:</strong> Medical Center, Westchase, Humble</p>
                             </div>
                         </div>
                         
                         <div class="center-highlight">
                             <h4>🧬 CSL Plasma</h4>
                             <div class="center-details">
-                                <p><strong>Locations:</strong> 6+ centers in Houston area</p>
-                                <p><strong>Pay Range:</strong> $25-$60 per donation</p>
-                                <p><strong>New Donor Bonus:</strong> Up to $1,000 for first 5 donations</p>
-                                <p><strong>Best Locations:</strong> Westheimer, FM 1960, Southeast</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Locations:</strong> 6+ centers in Houston area</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $25-$60 per donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>New Donor Bonus:</strong> Up to $1,000 for first 5 donations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Locations:</strong> Westheimer, FM 1960, Southeast</p>
                             </div>
                         </div>
                         
                         <div class="center-highlight">
                             <h4>🔬 Grifols Biomat USA</h4>
                             <div class="center-details">
-                                <p><strong>Locations:</strong> 5+ centers around Houston</p>
-                                <p><strong>Pay Range:</strong> $20-$50 per donation</p>
-                                <p><strong>New Donor Bonus:</strong> $50 on 3rd, $100 on 8th donation</p>
-                                <p><strong>Best Locations:</strong> TMC, Lakewood, Pecos</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Locations:</strong> 5+ centers around Houston</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $20-$50 per donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>New Donor Bonus:</strong> $50 on 3rd, $100 on 8th donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Locations:</strong> TMC, Lakewood, Pecos</p>
                             </div>
                         </div>
                         
                         <div class="center-highlight">
                             <h4>💊 Octapharma Plasma</h4>
                             <div class="center-details">
-                                <p><strong>Locations:</strong> 3+ centers in Houston metro</p>
-                                <p><strong>Pay Range:</strong> $25-$60 per donation</p>
-                                <p><strong>New Donor Bonus:</strong> $75 first, $125 second donation</p>
-                                <p><strong>Best Locations:</strong> South Houston, Sheridan</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Locations:</strong> 3+ centers in Houston metro</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Pay Range:</strong> $25-$60 per donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>New Donor Bonus:</strong> $75 first, $125 second donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Best Locations:</strong> South Houston, Sheridan</p>
                             </div>
                         </div>
                     </div>
@@ -323,17 +444,17 @@
                 </section>
 
                 <section id="dallas">
-                    <h2>🌆 Dallas-Fort Worth Centers</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🌆 Dallas-Fort Worth Centers</h2>
                     
                     <div class="city-overview">
-                        <h3>Dallas-Fort Worth Metroplex</h3>
-                        <p><strong>30+ Centers</strong> | <strong>Population:</strong> 7.8M | <strong>Pay Range:</strong> $25-$60</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Dallas-Fort Worth Metroplex</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>30+ Centers</strong> | <strong>Population:</strong> 7.8M | <strong>Pay Range:</strong> $25-$60</p>
                     </div>
                     
                     <div class="dfw-areas">
                         <div class="area-section">
                             <h4>Dallas Proper</h4>
-                            <p><strong>12+ centers</strong> with competitive rates. Best areas: Deep Ellum, Oak Cliff, North Dallas</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>12+ centers</strong> with competitive rates. Best areas: Deep Ellum, Oak Cliff, North Dallas</p>
                             <ul>
                                 <li>BioLife: 4 locations, $20-$50 range</li>
                                 <li>CSL Plasma: 3 locations, $25-$60 range</li>
@@ -343,7 +464,7 @@
                         
                         <div class="area-section">
                             <h4>Fort Worth</h4>
-                            <p><strong>8+ centers</strong> often less crowded than Dallas. Areas: TCU, Alliance, South Fort Worth</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>8+ centers</strong> often less crowded than Dallas. Areas: TCU, Alliance, South Fort Worth</p>
                             <ul>
                                 <li>Grifols Biomat: 3 locations, $20-$50 range</li>
                                 <li>CSL Plasma: 2 locations, $25-$60 range</li>
@@ -353,7 +474,7 @@
                         
                         <div class="area-section">
                             <h4>Suburbs (Plano, Garland, Irving)</h4>
-                            <p><strong>10+ centers</strong> in suburban areas. Often shorter wait times, good parking</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>10+ centers</strong> in suburban areas. Often shorter wait times, good parking</p>
                             <ul>
                                 <li>Multiple chains represented</li>
                                 <li>Good for consistent donors</li>
@@ -374,11 +495,11 @@
                 </section>
 
                 <section id="austin">
-                    <h2>🎸 Austin Area Centers</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎸 Austin Area Centers</h2>
                     
                     <div class="city-overview">
-                        <h3>Austin Metropolitan Area</h3>
-                        <p><strong>12+ Centers</strong> | <strong>Population:</strong> 2.4M | <strong>Pay Range:</strong> $25-$55</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Austin Metropolitan Area</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>12+ Centers</strong> | <strong>Population:</strong> 2.4M | <strong>Pay Range:</strong> $25-$55</p>
                     </div>
                     
                     <div class="austin-centers">
@@ -386,26 +507,26 @@
                         <div class="chain-breakdown">
                             <div class="chain-info">
                                 <h5>💙 BioLife Plasma</h5>
-                                <p>3 locations: UT area, South Austin, North Austin</p>
-                                <p>Popular with UT students, good bonus programs</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">3 locations: UT area, South Austin, North Austin</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Popular with UT students, good bonus programs</p>
                             </div>
                             
                             <div class="chain-info">
                                 <h5>🧬 CSL Plasma</h5>
-                                <p>2 locations: East Austin, Cedar Park</p>
-                                <p>Highest pay rates in Austin area</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">2 locations: East Austin, Cedar Park</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Highest pay rates in Austin area</p>
                             </div>
                             
                             <div class="chain-info">
                                 <h5>🔬 Grifols Biomat</h5>
-                                <p>2 locations: Central Austin, Round Rock</p>
-                                <p>Good loyalty programs, professional staff</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">2 locations: Central Austin, Round Rock</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Good loyalty programs, professional staff</p>
                             </div>
                             
                             <div class="chain-info">
                                 <h5>💊 Octapharma</h5>
-                                <p>1 location: South Austin</p>
-                                <p>Newest facility, state-of-the-art equipment</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">1 location: South Austin</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Newest facility, state-of-the-art equipment</p>
                             </div>
                         </div>
                     </div>
@@ -422,11 +543,11 @@
                 </section>
 
                 <section id="san-antonio">
-                    <h2>🌮 San Antonio Centers</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🌮 San Antonio Centers</h2>
                     
                     <div class="city-overview">
-                        <h3>San Antonio Metropolitan Area</h3>
-                        <p><strong>15+ Centers</strong> | <strong>Population:</strong> 2.6M | <strong>Pay Range:</strong> $20-$55</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">San Antonio Metropolitan Area</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>15+ Centers</strong> | <strong>Population:</strong> 2.6M | <strong>Pay Range:</strong> $20-$55</p>
                     </div>
                     
                     <div class="sa-highlights">
@@ -434,33 +555,33 @@
                         <div class="location-grid">
                             <div class="location-card">
                                 <h5>Medical Center Area</h5>
-                                <p>4+ centers near UTHSA and medical facilities</p>
-                                <p>Higher rates due to medical professional donors</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">4+ centers near UTHSA and medical facilities</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Higher rates due to medical professional donors</p>
                             </div>
                             
                             <div class="location-card">
                                 <h5>Downtown/Southtown</h5>
-                                <p>3+ centers with good public transit access</p>
-                                <p>Popular with downtown workers</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">3+ centers with good public transit access</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Popular with downtown workers</p>
                             </div>
                             
                             <div class="location-card">
                                 <h5>North Side (UTSA Area)</h5>
-                                <p>3+ centers catering to university students</p>
-                                <p>Competitive student bonuses</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">3+ centers catering to university students</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Competitive student bonuses</p>
                             </div>
                             
                             <div class="location-card">
                                 <h5>East/West Side</h5>
-                                <p>5+ centers in residential areas</p>
-                                <p>Often less crowded, good for regulars</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">5+ centers in residential areas</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Often less crowded, good for regulars</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="sa-military">
                         <h4>🪖 Military-Friendly Features</h4>
-                        <p>San Antonio's large military population has led to:</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">San Antonio's large military population has led to:</p>
                         <ul>
                             <li>Extended hours to accommodate military schedules</li>
                             <li>Locations near major bases (Lackland, Fort Sam Houston)</li>
@@ -471,12 +592,12 @@
                 </section>
 
                 <section id="other-cities">
-                    <h2>🏘️ Other Major Texas Cities</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏘️ Other Major Texas Cities</h2>
                     
                     <div class="other-cities-grid">
                         <div class="city-card">
                             <h4>El Paso</h4>
-                            <p><strong>6+ centers</strong> | Pay: $20-$50</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>6+ centers</strong> | Pay: $20-$50</p>
                             <ul>
                                 <li>UTEP student population</li>
                                 <li>Border city dynamics</li>
@@ -486,7 +607,7 @@
                         
                         <div class="city-card">
                             <h4>Corpus Christi</h4>
-                            <p><strong>4+ centers</strong> | Pay: $20-$45</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>4+ centers</strong> | Pay: $20-$45</p>
                             <ul>
                                 <li>Coastal city, TAMUCC presence</li>
                                 <li>Less competition, stable rates</li>
@@ -496,7 +617,7 @@
                         
                         <div class="city-card">
                             <h4>Lubbock</h4>
-                            <p><strong>4+ centers</strong> | Pay: $25-$50</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>4+ centers</strong> | Pay: $25-$50</p>
                             <ul>
                                 <li>Texas Tech university town</li>
                                 <li>High student donation rates</li>
@@ -506,7 +627,7 @@
                         
                         <div class="city-card">
                             <h4>College Station</h4>
-                            <p><strong>3+ centers</strong> | Pay: $25-$50</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>3+ centers</strong> | Pay: $25-$50</p>
                             <ul>
                                 <li>Texas A&M dominated market</li>
                                 <li>Seasonal fluctuations</li>
@@ -516,7 +637,7 @@
                         
                         <div class="city-card">
                             <h4>Waco</h4>
-                            <p><strong>3+ centers</strong> | Pay: $20-$45</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>3+ centers</strong> | Pay: $20-$45</p>
                             <ul>
                                 <li>Baylor University area</li>
                                 <li>Smaller market, personal service</li>
@@ -526,7 +647,7 @@
                         
                         <div class="city-card">
                             <h4>Amarillo</h4>
-                            <p><strong>3+ centers</strong> | Pay: $20-$45</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>3+ centers</strong> | Pay: $20-$45</p>
                             <ul>
                                 <li>Panhandle region hub</li>
                                 <li>Agricultural community</li>
@@ -537,7 +658,7 @@
                 </section>
 
                 <section id="texas-tips">
-                    <h2>🤠 Texas-Specific Donation Tips</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🤠 Texas-Specific Donation Tips</h2>
                     
                     <div class="texas-specific-tips">
                         <div class="tip-category">
@@ -624,26 +745,26 @@
 
             <!-- Related Articles -->
             <section class="related-articles">
-                <h3>Related Articles</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Related Articles</h3>
                 <div class="related-grid">
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/which-plasma-center-pays-most-money">Which Plasma Center Pays the Most Money?</a></h4>
-                        <p>Compare payment rates across all major plasma center chains.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Compare payment rates across all major plasma center chains.</p>
                     </article>
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/how-much-money-plasma-donation">How Much Money Can You Make Donating Plasma?</a></h4>
-                        <p>Complete breakdown of earning potential by state and experience.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Complete breakdown of earning potential by state and experience.</p>
                     </article>
-                    <article class="related-card">
+                    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         <h4><a href="/blog/plasma-donation-tips-beginners">Plasma Donation Tips for First-Time Donors</a></h4>
-                        <p>Everything new donors need to know before their first appointment.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Everything new donors need to know before their first appointment.</p>
                     </article>
                 </div>
             </section>
 
         <!-- Sources & References -->
         <section class="content-section sources-section">
-            <h3>📚 Sources & References</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
             <div class="sources-list">
                 <ul>
                     <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood Donor Screening Requirements</a></li>
@@ -659,41 +780,41 @@
 
         <!-- Author Profile -->
         <section class="content-section author-profile">
-            <h3>Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
             <div class="author-badges">
                 <span class="badge">📊 2,522+ Centers Analyzed</span>
                 <span class="badge">🏢 Location Research Expert</span>
             </div>
-            <p>Glen has extensively researched plasma donation centers across all 50 states, with particular expertise in Texas markets. He has personally visited over 40 plasma centers in Texas, analyzed pay structures across Houston, Dallas, Austin, and San Antonio, and maintains real-time data on 150+ Texas locations to help donors maximize their earning potential.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched plasma donation centers across all 50 states, with particular expertise in Texas markets. He has personally visited over 40 plasma centers in Texas, analyzed pay structures across Houston, Dallas, Austin, and San Antonio, and maintains real-time data on 150+ Texas locations to help donors maximize their earning potential.</p>
             
             <div class="disclaimer-note">
-                <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
             </div>
             
             <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
         </section>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, <a href="/health/" class="text-green-600 hover:text-green-800 underline">eligibility requirements</a>, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -717,7 +838,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -741,7 +862,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
         </div>
     </footer>
 

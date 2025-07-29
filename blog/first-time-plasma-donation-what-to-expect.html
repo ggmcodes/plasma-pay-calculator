@@ -125,7 +125,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -136,33 +233,68 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">💰 Pay Calculator</a>
-            </nav>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     
-    <main class="blog-post">
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
-            <div class="breadcrumb">
+            <div class="flex items-center space-x-2 text-sm text-gray-600 mb-8">
                 <a href="/">Home</a> > <a href="/blog/index.html">Blog</a> > First Time Plasma Donation Guide
             </div>
             
             <!-- Hero Section -->
-            <article class="post-header">
-                <h1>First Time Plasma Donation: Complete Step-by-Step Guide 2025</h1>
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">First Time Plasma Donation: Complete Step-by-Step Guide 2025</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/SJWPKMb9u-k/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="post-meta">
@@ -173,7 +305,7 @@
                 
                 <!-- Confidence-Building Quick Answer -->
                 <div class="quick-answer-box confidence">
-                    <h2>😊 You've Got This! Here's What Happens:</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">😊 You've Got This! Here's What Happens:</h2>
                     <div class="first-time-overview">
                         <div class="overview-item">
                             <span class="icon">⏰</span>
@@ -201,13 +333,13 @@
                 
                 <!-- What to Bring -->
                 <section class="content-section">
-                    <h2>📋 What to Bring (Required Documents)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📋 What to Bring (Required Documents)</h2>
                     
-                    <p><strong>Don't show up empty-handed!</strong> You'll need these specific documents:</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Don't show up empty-handed!</strong> You'll need these specific documents:</p>
                     
                     <div class="documents-checklist">
                         <div class="doc-category">
-                            <h3>🆔 Photo Identification (Choose One)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🆔 Photo Identification (Choose One)</h3>
                             <ul class="doc-list">
                                 <li>✅ Driver's License (most common)</li>
                                 <li>✅ State-issued ID card</li>
@@ -219,7 +351,7 @@
                         </div>
                         
                         <div class="doc-category">
-                            <h3>📄 Social Security Verification (Choose One)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📄 Social Security Verification (Choose One)</h3>
                             <ul class="doc-list">
                                 <li>✅ Social Security card (original)</li>
                                 <li>✅ W-2 form (current year)</li>
@@ -229,7 +361,7 @@
                         </div>
                         
                         <div class="doc-category">
-                            <h3>🏠 Proof of Address (Within 30 Days)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🏠 Proof of Address (Within 30 Days)</h3>
                             <ul class="doc-list">
                                 <li>✅ Utility bill (electric, gas, water)</li>
                                 <li>✅ Bank statement</li>
@@ -243,193 +375,193 @@
                     
                     <div class="helpful-tip">
                         <h4>💡 Pro Tip:</h4>
-                        <p>Call ahead or check the center's website to confirm current document requirements. Some centers may have slight variations.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Call ahead or check the center's website to confirm current document requirements. Some centers may have slight variations.</p>
                     </div>
                 </section>
 
                 <!-- Step-by-Step Process -->
                 <section class="content-section">
-                    <h2>👣 Step-by-Step: Your First Visit Timeline</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">👣 Step-by-Step: Your First Visit Timeline</h2>
                     
                     <div class="timeline">
                         <div class="timeline-step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h3>Check-In & Registration (15-30 minutes)</h3>
-                                <p><strong>What happens:</strong> Present your documents, register in their system, get a donor ID</p>
-                                <p><strong>Your job:</strong> Have documents ready, provide accurate information</p>
-                                <p><strong>Tip:</strong> Arrive early - centers can get busy</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Check-In & Registration (15-30 minutes)</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What happens:</strong> Present your documents, register in their system, get a donor ID</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Your job:</strong> Have documents ready, provide accurate information</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Tip:</strong> Arrive early - centers can get busy</p>
                             </div>
                         </div>
                         
                         <div class="timeline-step">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h3>Health Questionnaire (20-30 minutes)</h3>
-                                <p><strong>What happens:</strong> Detailed medical history, travel questions, lifestyle assessment</p>
-                                <p><strong>Your job:</strong> Answer honestly - it's for your safety and others'</p>
-                                <p><strong>Common topics:</strong> Medications, recent travel, tattoos, medical conditions</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Health Questionnaire (20-30 minutes)</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What happens:</strong> Detailed medical history, travel questions, lifestyle assessment</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Your job:</strong> Answer honestly - it's for your safety and others'</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Common topics:</strong> Medications, recent travel, tattoos, medical conditions</p>
                             </div>
                         </div>
                         
                         <div class="timeline-step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h3>Physical Examination (15-20 minutes)</h3>
-                                <p><strong>What happens:</strong> Basic physical by medical professional</p>
-                                <p><strong>They check:</strong> Blood pressure, pulse, temperature, weight</p>
-                                <p><strong>Vein assessment:</strong> Looking for good donation veins</p>
-                                <p><strong>No surprises:</strong> All standard medical procedures</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Physical Examination (15-20 minutes)</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What happens:</strong> Basic physical by medical professional</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>They check:</strong> Blood pressure, pulse, temperature, weight</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Vein assessment:</strong> Looking for good donation veins</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>No surprises:</strong> All standard medical procedures</p>
                             </div>
                         </div>
                         
                         <div class="timeline-step">
                             <div class="step-number">4</div>
                             <div class="step-content">
-                                <h3>Blood Tests (5-10 minutes)</h3>
-                                <p><strong>What they test:</strong> Protein levels, hematocrit (iron), blood type</p>
-                                <p><strong>Why it matters:</strong> Ensures you're healthy enough to donate</p>
-                                <p><strong>Results:</strong> Available immediately - you'll know if you qualify</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Blood Tests (5-10 minutes)</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What they test:</strong> Protein levels, hematocrit (iron), blood type</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Why it matters:</strong> Ensures you're healthy enough to donate</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Results:</strong> Available immediately - you'll know if you qualify</p>
                             </div>
                         </div>
                         
                         <div class="timeline-step">
                             <div class="step-number">5</div>
                             <div class="step-content">
-                                <h3>Training Video (15-30 minutes)</h3>
-                                <p><strong>What you'll learn:</strong> Donation process, safety protocols, what to expect</p>
-                                <p><strong>Interactive:</strong> Often includes quiz or acknowledgment</p>
-                                <p><strong>Purpose:</strong> Ensures you understand everything before proceeding</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Training Video (15-30 minutes)</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>What you'll learn:</strong> Donation process, safety protocols, what to expect</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Interactive:</strong> Often includes quiz or acknowledgment</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Purpose:</strong> Ensures you understand everything before proceeding</p>
                             </div>
                         </div>
                         
                         <div class="timeline-step">
                             <div class="step-number">6</div>
                             <div class="step-content">
-                                <h3>The Actual Donation (45-90 minutes)</h3>
-                                <p><strong>Setup:</strong> Comfortable chair, entertainment (TV/WiFi)</p>
-                                <p><strong>Process:</strong> Needle insertion, blood collection, plasma separation, return</p>
-                                <p><strong>Your experience:</strong> Minimal discomfort, able to use phone/read</p>
-                                <p><strong>Staff attention:</strong> Regular check-ins, immediate help if needed</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">The Actual Donation (45-90 minutes)</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Setup:</strong> Comfortable chair, entertainment (TV/WiFi)</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Process:</strong> Needle insertion, blood collection, plasma separation, return</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Your experience:</strong> Minimal discomfort, able to use phone/read</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Staff attention:</strong> Regular check-ins, immediate help if needed</p>
                             </div>
                         </div>
                         
                         <div class="timeline-step">
                             <div class="step-number">7</div>
                             <div class="step-content">
-                                <h3>Recovery & Payment (15-20 minutes)</h3>
-                                <p><strong>Rest period:</strong> Snacks, drinks, monitoring</p>
-                                <p><strong>Payment:</strong> Prepaid debit card or cash</p>
-                                <p><strong>Schedule next:</strong> Book your second appointment</p>
-                                <p><strong>Take home:</strong> Care instructions, contact info</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Recovery & Payment (15-20 minutes)</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Rest period:</strong> Snacks, drinks, monitoring</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Payment:</strong> Prepaid debit card or cash</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Schedule next:</strong> Book your second appointment</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Take home:</strong> Care instructions, contact info</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="total-time">
-                        <h3>⏱️ Total First Visit Time: 2-4 Hours</h3>
-                        <p>Future visits will only take 1-2 hours since you skip steps 1-5!</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⏱️ Total First Visit Time: 2-4 Hours</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">Future visits will only take 1-2 hours since you skip steps 1-5!</p>
                     </div>
                 </section>
 
                 <!-- What the Donation Feels Like -->
                 <section class="content-section">
-                    <h2>🤔 What Does Plasma Donation Actually Feel Like?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🤔 What Does Plasma Donation Actually Feel Like?</h2>
                     
                     <div class="experience-breakdown">
                         <div class="experience-phase">
-                            <h3>🩹 Needle Insertion (30 seconds)</h3>
-                            <p><strong>Feels like:</strong> Quick pinch, similar to blood draw or vaccination</p>
-                            <p><strong>Pain level:</strong> 2-3 out of 10 (brief discomfort)</p>
-                            <p><strong>What helps:</strong> Look away, take deep breaths, think about the money!</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🩹 Needle Insertion (30 seconds)</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Feels like:</strong> Quick pinch, similar to blood draw or vaccination</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Pain level:</strong> 2-3 out of 10 (brief discomfort)</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>What helps:</strong> Look away, take deep breaths, think about the money!</p>
                         </div>
                         
                         <div class="experience-phase">
-                            <h3>🩸 Blood Collection Phase (20-30 minutes)</h3>
-                            <p><strong>Feels like:</strong> Nothing! You might feel slight pulling sensation</p>
-                            <p><strong>What you can do:</strong> Watch TV, use phone, read, listen to music</p>
-                            <p><strong>Staff checks:</strong> Every 10-15 minutes to ensure you're comfortable</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🩸 Blood Collection Phase (20-30 minutes)</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Feels like:</strong> Nothing! You might feel slight pulling sensation</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>What you can do:</strong> Watch TV, use phone, read, listen to music</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Staff checks:</strong> Every 10-15 minutes to ensure you're comfortable</p>
                         </div>
                         
                         <div class="experience-phase">
-                            <h3>🔄 Saline Return (15-30 minutes)</h3>
-                            <p><strong>Feels like:</strong> Cool sensation as saline enters your arm</p>
-                            <p><strong>Purpose:</strong> Returns your red blood cells plus saline for hydration</p>
-                            <p><strong>Normal:</strong> Some people feel cold, which is completely normal</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🔄 Saline Return (15-30 minutes)</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Feels like:</strong> Cool sensation as saline enters your arm</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Purpose:</strong> Returns your red blood cells plus saline for hydration</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Normal:</strong> Some people feel cold, which is completely normal</p>
                         </div>
                         
                         <div class="experience-phase">
-                            <h3>✅ Completion</h3>
-                            <p><strong>Removal:</strong> Quick, minimal discomfort</p>
-                            <p><strong>Immediate feeling:</strong> Relief, accomplishment, excited about payment!</p>
-                            <p><strong>Most donors say:</strong> "That was easier than I expected!"</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">✅ Completion</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Removal:</strong> Quick, minimal discomfort</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Immediate feeling:</strong> Relief, accomplishment, excited about payment!</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Most donors say:</strong> "That was easier than I expected!"</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- First-Timer Bonuses -->
                 <section class="content-section">
-                    <h2>💰 New Donor Bonuses: Your Golden Opportunity</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💰 New Donor Bonuses: Your Golden Opportunity</h2>
                     
                     <div class="bonus-explainer">
-                        <h3>🎁 Why Centers Pay New Donor Bonuses</h3>
-                        <p>Plasma centers compete for reliable donors, so they offer significant incentives to new donors who complete their initial donation series. This is <strong>free money on top of regular pay!</strong></p>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🎁 Why Centers Pay New Donor Bonuses</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">Plasma centers compete for reliable donors, so they offer significant incentives to new donors who complete their initial donation series. This is <strong>free money on top of regular pay!</strong></p>
                     </div>
                     
                     <div class="bonus-comparison">
                         <div class="center-bonus">
                             <h4>🏆 CSL Plasma (Highest Bonuses)</h4>
                             <div class="bonus-structure">
-                                <p><strong>Structure:</strong> $125 for each of first 8 donations</p>
-                                <p><strong>Total Bonus:</strong> $1,000</p>
-                                <p><strong>Time Limit:</strong> Must complete within 45 days</p>
-                                <p><strong>Plus Regular Pay:</strong> $40-$70 per visit on top of bonus</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Structure:</strong> $125 for each of first 8 donations</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Total Bonus:</strong> $1,000</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Time Limit:</strong> Must complete within 45 days</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Plus Regular Pay:</strong> $40-$70 per visit on top of bonus</p>
                             </div>
                         </div>
                         
                         <div class="center-bonus">
                             <h4>🥈 BioLife Plasma</h4>
                             <div class="bonus-structure">
-                                <p><strong>Structure:</strong> Graduated bonus system</p>
-                                <p><strong>Total Bonus:</strong> $750-$900</p>
-                                <p><strong>Example:</strong> $100, $75, $75, $100, $75, $75, $100, $150</p>
-                                <p><strong>Plus Regular Pay:</strong> $35-$65 per visit</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Structure:</strong> Graduated bonus system</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Total Bonus:</strong> $750-$900</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Example:</strong> $100, $75, $75, $100, $75, $75, $100, $150</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Plus Regular Pay:</strong> $35-$65 per visit</p>
                             </div>
                         </div>
                         
                         <div class="center-bonus">
                             <h4>🥉 Grifols & Others</h4>
                             <div class="bonus-structure">
-                                <p><strong>Structure:</strong> Varies by location</p>
-                                <p><strong>Total Bonus:</strong> $600-$800</p>
-                                <p><strong>Common Pattern:</strong> Higher bonuses for visits 1, 4, and 8</p>
-                                <p><strong>Plus Regular Pay:</strong> $30-$60 per visit</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Structure:</strong> Varies by location</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Total Bonus:</strong> $600-$800</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Common Pattern:</strong> Higher bonuses for visits 1, 4, and 8</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Plus Regular Pay:</strong> $30-$60 per visit</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-month-calculator">
-                        <h3>📊 Your Potential First Month Earnings</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📊 Your Potential First Month Earnings</h3>
                         <div class="earnings-examples">
                             <div class="earning-scenario">
                                 <h4>Conservative Example:</h4>
-                                <p>Regular pay: $40 × 8 visits = $320</p>
-                                <p>New donor bonus: $600</p>
-                                <p><strong>First month total: $920</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Regular pay: $40 × 8 visits = $320</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">New donor bonus: $600</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>First month total: $920</strong></p>
                             </div>
                             
                             <div class="earning-scenario featured">
                                 <h4>Average Example:</h4>
-                                <p>Regular pay: $55 × 8 visits = $440</p>
-                                <p>New donor bonus: $800</p>
-                                <p><strong>First month total: $1,240</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Regular pay: $55 × 8 visits = $440</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">New donor bonus: $800</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>First month total: $1,240</strong></p>
                             </div>
                             
                             <div class="earning-scenario">
                                 <h4>Best Case Example:</h4>
-                                <p>Regular pay: $70 × 8 visits = $560</p>
-                                <p>New donor bonus: $1,000</p>
-                                <p><strong>First month total: $1,560</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Regular pay: $70 × 8 visits = $560</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">New donor bonus: $1,000</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>First month total: $1,560</strong></p>
                             </div>
                         </div>
                     </div>
@@ -437,42 +569,42 @@
 
                 <!-- Common First-Timer Concerns -->
                 <section class="content-section">
-                    <h2>😰 Common First-Timer Worries (And Why They're Not a Big Deal)</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">😰 Common First-Timer Worries (And Why They're Not a Big Deal)</h2>
                     
                     <div class="concerns-addressed">
                         <div class="concern">
-                            <h3>😵 "I'm afraid of needles"</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">😵 "I'm afraid of needles"</h3>
                             <div class="concern-response">
-                                <p><strong>Reality:</strong> Most needle-phobic people do fine. The staff is trained to help anxious donors.</p>
-                                <p><strong>Tips:</strong> Tell the staff, don't look during insertion, focus on breathing or entertainment</p>
-                                <p><strong>Success story:</strong> "I was terrified but the staff was so understanding. Now I donate regularly!" - Jessica, 26</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Reality:</strong> Most needle-phobic people do fine. The staff is trained to help anxious donors.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Tips:</strong> Tell the staff, don't look during insertion, focus on breathing or entertainment</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Success story:</strong> "I was terrified but the staff was so understanding. Now I donate regularly!" - Jessica, 26</p>
                             </div>
                         </div>
                         
                         <div class="concern">
-                            <h3>🤮 "What if I faint or get sick?"</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🤮 "What if I faint or get sick?"</h3>
                             <div class="concern-response">
-                                <p><strong>Reality:</strong> Only 1-2% of first-time donors experience dizziness, even fewer faint</p>
-                                <p><strong>Prevention:</strong> Eat a good meal, stay hydrated, get enough sleep</p>
-                                <p><strong>Staff prepared:</strong> They handle this daily and know exactly what to do</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Reality:</strong> Only 1-2% of first-time donors experience dizziness, even fewer faint</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Prevention:</strong> Eat a good meal, stay hydrated, get enough sleep</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Staff prepared:</strong> They handle this daily and know exactly what to do</p>
                             </div>
                         </div>
                         
                         <div class="concern">
-                            <h3>⏰ "It takes too long"</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⏰ "It takes too long"</h3>
                             <div class="concern-response">
-                                <p><strong>Reality:</strong> Yes, first visit is long, but future visits are only 1-2 hours</p>
-                                <p><strong>Perspective:</strong> You're earning $15-30+ per hour for sitting and watching TV</p>
-                                <p><strong>Bring:</strong> Phone, book, music, or just enjoy the rest time</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Reality:</strong> Yes, first visit is long, but future visits are only 1-2 hours</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Perspective:</strong> You're earning $15-30+ per hour for sitting and watching TV</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Bring:</strong> Phone, book, music, or just enjoy the rest time</p>
                             </div>
                         </div>
                         
                         <div class="concern">
-                            <h3>🏥 "Is it safe?"</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🏥 "Is it safe?"</h3>
                             <div class="concern-response">
-                                <p><strong>Reality:</strong> Extremely safe when done at FDA-regulated centers</p>
-                                <p><strong>Numbers:</strong> 40+ million donations yearly with 95% experiencing zero issues</p>
-                                <p><strong>Equipment:</strong> All sterile, single-use needles and tubing</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Reality:</strong> Extremely safe when done at FDA-regulated centers</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Numbers:</strong> 40+ million donations yearly with 95% experiencing zero issues</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Equipment:</strong> All sterile, single-use needles and tubing</p>
                             </div>
                         </div>
                     </div>
@@ -480,10 +612,10 @@
 
                 <!-- Preparation Tips -->
                 <section class="content-section">
-                    <h2>🏃‍♂️ How to Prepare for Success</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏃‍♂️ How to Prepare for Success</h2>
                     
                     <div class="prep-timeline">
-                        <h3>📅 Night Before</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 Night Before</h3>
                         <ul>
                             <li>Get 7-8 hours of sleep</li>
                             <li>Eat a balanced dinner with protein</li>
@@ -492,7 +624,7 @@
                             <li>Gather your required documents</li>
                         </ul>
                         
-                        <h3>📅 Morning Of</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 Morning Of</h3>
                         <ul>
                             <li>Eat a substantial breakfast (avoid fatty foods)</li>
                             <li>Drink 16-20 oz of water</li>
@@ -501,7 +633,7 @@
                             <li>Bring entertainment (phone, book, headphones)</li>
                         </ul>
                         
-                        <h3>📅 2 Hours Before</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📅 2 Hours Before</h3>
                         <ul>
                             <li>Eat a light snack</li>
                             <li>Drink more water</li>
@@ -518,10 +650,10 @@
 
                 <!-- Call to Action -->
                 <section class="content-section cta-section">
-                    <h2>🚀 Ready for Your First Donation?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚀 Ready for Your First Donation?</h2>
                     
                     <div class="final-cta">
-                        <p>You now know exactly what to expect! <strong>Thousands of people have their first successful donation every day.</strong> Take the leap and start earning <strong>$900+ your first month</strong>!</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">You now know exactly what to expect! <strong>Thousands of people have their first successful donation every day.</strong> Take the leap and start earning <strong>$900+ your first month</strong>!</p>
                         
                         <div class="cta-buttons">
                             <a href="/?search=true" class="cta-btn primary">🔍 Find Centers Near Me</a>
@@ -529,7 +661,7 @@
                         </div>
                         
                         <div class="final-checklist">
-                            <h3>✅ Your Action Checklist:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">✅ Your Action Checklist:</h3>
                             <ol>
                                 <li><strong>Find a center</strong> with the highest new donor bonuses</li>
                                 <li><strong>Gather documents</strong> (ID, Social Security proof, address proof)</li>
@@ -544,7 +676,7 @@
 
                 <!-- Related Articles -->
                 <section class="related-articles">
-                    <h3>🔗 Essential First-Timer Guides:</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🔗 Essential First-Timer Guides:</h3>
                     <div class="related-links">
                         <a href="/blog/can-you-donate-plasma-twice-a-week.html">Can You Donate Plasma Twice a Week?</a>
                         <a href="/blog/plasma-donation-side-effects.html">Plasma Donation Side Effects Guide</a>
@@ -555,7 +687,7 @@
 
                 <!-- Sources & References -->
                 <section class="content-section sources-section">
-                    <h3>📚 Sources & References</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                     <div class="sources-list">
                         <ul>
                             <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood Donor Screening Requirements</a></li>
@@ -571,15 +703,15 @@
 
                 <!-- Author Profile -->
                 <section class="content-section author-profile">
-                    <h3>Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
                     <div class="author-badges">
                         <span class="badge">📊 2,522+ Centers Analyzed</span>
                         <span class="badge">👶 First-Time Guide Expert</span>
                     </div>
-                    <p>Glen has extensively researched the first-time plasma donation experience across hundreds of centers nationwide. His analysis of donation processes, wait times, and new donor experiences helps first-time donors know exactly what to expect and how to maximize their success.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched the first-time plasma donation experience across hundreds of centers nationwide. His analysis of donation processes, wait times, and new donor experiences helps first-time donors know exactly what to expect and how to maximize their success.</p>
                     
                     <div class="disclaimer-note">
-                        <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
                     </div>
                     
                     <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
@@ -588,21 +720,21 @@
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer">
-                        <h2>⚠️ Important Medical Disclaimer</h2>
-                        <p><strong>This information is for educational purposes only and should not replace professional medical advice.</strong></p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚠️ Important Medical Disclaimer</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>This information is for educational purposes only and should not replace professional medical advice.</strong></p>
                         <ul>
                             <li><strong>Medical Consultation:</strong> Consult your healthcare provider before donating plasma, especially if you have medical conditions</li>
                             <li><strong>Individual Screening:</strong> Each center performs individual medical screening - this guide is general information only</li>
@@ -610,17 +742,17 @@
                             <li><strong>Emergency Care:</strong> Seek immediate medical attention for any concerning symptoms during or after donation</li>
                             <li><strong>Not Medical Advice:</strong> This content is educational and not affiliated with specific plasma centers or medical organizations</li>
                         </ul>
-                        <p><em>Last updated: January 2025. Always verify current requirements and guidelines with plasma centers and healthcare providers.</em></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><em>Last updated: January 2025. Always verify current requirements and guidelines with plasma centers and healthcare providers.</em></p>
                     </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, <a href="/health/" class="text-green-600 hover:text-green-800 underline">eligibility requirements</a>, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -644,7 +776,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -685,7 +817,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
             <p class="owner-info">
                 🏥 Plasma center owner? <a href="mailto:hello@plasmapaycalculator.com?subject=Claim%20or%20Upgrade%20Listing" class="owner-link">Claim or upgrade your listing</a>
             </p>

@@ -125,7 +125,104 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -136,38 +233,68 @@
         </a>
     </div>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/">
-                    <span class="logo-icon">💙</span>
-                    <span class="logo-text">Plasma Pay Calculator</span>
-                </a>
+        <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav-links">
-                <a href="/?search=true">Find Centers</a>
-                <a href="/blog/index.html">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/about.html">About</a>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="pay-calculator-btn">💰 Pay Calculator</a>
-            </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     
-    <main class="blog-post">
+    <main class="min-h-screen bg-gray-50">
         <div class="container">
-            <div class="breadcrumb">
+            <div class="flex items-center space-x-2 text-sm text-gray-600 mb-8">
                 <a href="/">Home</a> > <a href="/blog/index.html">Blog</a> > Plasma Donation Weight Requirements
             </div>
             
             <!-- Hero Section -->
-            <article class="post-header">
-                <h1>Plasma Donation Weight Requirements: Complete Guide 2025</h1>
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Plasma Donation Weight Requirements: Complete Guide 2025</h1>
                     <div class="article-image" style="background: url('https://images.unsplash.com/Zyx1bK9mqmA/1200x400?auto=format&fit=crop&q=80') center/cover; height: 300px; margin: 2rem 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
 
                 <div class="post-meta">
@@ -178,7 +305,7 @@
                 
                 <!-- Quick Answer Box -->
                 <div class="quick-answer-box">
-                    <h2>⚖️ Quick Weight Facts</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚖️ Quick Weight Facts</h2>
                     <div class="weight-quick-facts">
                         <div class="fact-item">
                             <span class="fact-number">110 lbs</span>
@@ -193,7 +320,7 @@
                             <span class="fact-label">Official upper limit</span>
                         </div>
                     </div>
-                    <p><strong>Bottom line:</strong> You must weigh at least 110 pounds to donate plasma. Heavier donors earn more money because they can safely donate larger volumes.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4"><strong>Bottom line:</strong> You must weigh at least 110 pounds to donate plasma. Heavier donors earn more money because they can safely donate larger volumes.</p>
                 </div>
             </article>
 
@@ -202,12 +329,12 @@
                 
                 <!-- Weight Requirements Overview -->
                 <section class="content-section">
-                    <h2>📏 FDA Weight Requirements Explained</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📏 FDA Weight Requirements Explained</h2>
                     
                     <div class="requirements-overview">
                         <div class="requirement-box critical">
-                            <h3>🚨 Absolute Minimum: 110 Pounds (50 kg)</h3>
-                            <p>This is a <strong>non-negotiable FDA requirement</strong>. No exceptions are made, even if you're otherwise healthy. Centers must weigh you at every visit.</p>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🚨 Absolute Minimum: 110 Pounds (50 kg)</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">This is a <strong>non-negotiable FDA requirement</strong>. No exceptions are made, even if you're otherwise healthy. Centers must weigh you at every visit.</p>
                             
                             <div class="why-110">
                                 <h4>Why 110 pounds?</h4>
@@ -221,7 +348,7 @@
                         </div>
                         
                         <div class="weight-verification">
-                            <h3>⚖️ How Centers Verify Weight</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚖️ How Centers Verify Weight</h3>
                             <ul>
                                 <li>Digital scale measurement at every visit</li>
                                 <li>Must remove heavy items (coat, shoes)</li>
@@ -235,14 +362,14 @@
 
                 <!-- Weight-Based Pay Tiers -->
                 <section class="content-section">
-                    <h2>💰 How Weight Affects Your Plasma Donation Pay</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💰 How Weight Affects Your Plasma Donation Pay</h2>
                     
                     <div class="pay-explanation">
                         <p class="highlight-box">Heavier donors can safely donate more plasma volume, so centers pay more! Your weight determines your "plasma allowance" per FDA guidelines.</p>
                     </div>
                     
                     <div class="pay-tiers">
-                        <h3>📊 Typical Weight-Based Pay Tiers</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📊 Typical Weight-Based Pay Tiers</h3>
                         
                         <table class="weight-pay-table">
                             <thead>
@@ -287,25 +414,25 @@
                     </div>
                     
                     <div class="earnings-example">
-                        <h3>💵 Real Earnings Example</h3>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">💵 Real Earnings Example</h3>
                         <div class="example-cards">
                             <div class="example-card">
                                 <h4>Sarah (115 lbs)</h4>
-                                <p>Earns: $40 per donation</p>
-                                <p>Monthly (8 visits): $320</p>
-                                <p>Yearly potential: $3,840</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Earns: $40 per donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Monthly (8 visits): $320</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Yearly potential: $3,840</p>
                             </div>
                             <div class="example-card featured">
                                 <h4>Mike (185 lbs)</h4>
-                                <p>Earns: $65 per donation</p>
-                                <p>Monthly (8 visits): $520</p>
-                                <p>Yearly potential: $6,240</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Earns: $65 per donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Monthly (8 visits): $520</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Yearly potential: $6,240</p>
                             </div>
                             <div class="example-card">
                                 <h4>Jennifer (220 lbs)</h4>
-                                <p>Earns: $85 per donation</p>
-                                <p>Monthly (8 visits): $680</p>
-                                <p>Yearly potential: $8,160</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Earns: $85 per donation</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Monthly (8 visits): $680</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Yearly potential: $8,160</p>
                             </div>
                         </div>
                     </div>
@@ -313,13 +440,13 @@
 
                 <!-- Height-to-Weight Ratios -->
                 <section class="content-section">
-                    <h2>📐 Height-to-Weight Ratio Requirements</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📐 Height-to-Weight Ratio Requirements</h2>
                     
                     <div class="ratio-explanation">
-                        <p>Some centers use height-weight ratios to ensure healthy body composition. While 110 lbs is the minimum, very tall donors may need to weigh more.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Some centers use height-weight ratios to ensure healthy body composition. While 110 lbs is the minimum, very tall donors may need to weigh more.</p>
                         
                         <div class="ratio-table-container">
-                            <h3>Minimum Weight by Height (Some Centers)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Minimum Weight by Height (Some Centers)</h3>
                             <table class="height-weight-table">
                                 <thead>
                                     <tr>
@@ -364,41 +491,41 @@
                         </div>
                         
                         <div class="ratio-notes">
-                            <p><strong>Note:</strong> Most centers only enforce the 110 lb minimum, but some may have additional requirements for very tall donors to ensure safe donation.</p>
+                            <p class="text-gray-700 leading-relaxed mb-4"><strong>Note:</strong> Most centers only enforce the 110 lb minimum, but some may have additional requirements for very tall donors to ensure safe donation.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Special Weight Situations -->
                 <section class="content-section">
-                    <h2>🤔 Special Weight Situations</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🤔 Special Weight Situations</h2>
                     
                     <div class="special-situations">
                         <div class="situation-card">
-                            <h3>🤰 Recent Weight Loss</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🤰 Recent Weight Loss</h3>
                             <div class="situation-details">
-                                <p><strong>Situation:</strong> Lost weight and now under 110 lbs</p>
-                                <p><strong>Result:</strong> Must wait until weight is back over 110 lbs</p>
-                                <p><strong>Tips:</strong> Focus on healthy weight gain, protein-rich diet</p>
-                                <p><strong>Timeline:</strong> Can resume donating immediately once over 110 lbs</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Situation:</strong> Lost weight and now under 110 lbs</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Result:</strong> Must wait until weight is back over 110 lbs</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Tips:</strong> Focus on healthy weight gain, protein-rich diet</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Timeline:</strong> Can resume donating immediately once over 110 lbs</p>
                             </div>
                         </div>
                         
                         <div class="situation-card">
-                            <h3>🏋️ Bodybuilders & Athletes</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🏋️ Bodybuilders & Athletes</h3>
                             <div class="situation-details">
-                                <p><strong>Good news:</strong> Muscle mass counts toward weight!</p>
-                                <p><strong>Benefits:</strong> Often in highest pay tier due to weight</p>
-                                <p><strong>Consideration:</strong> May have excellent vein access</p>
-                                <p><strong>Note:</strong> High protein diets usually mean good plasma levels</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Good news:</strong> Muscle mass counts toward weight!</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Benefits:</strong> Often in highest pay tier due to weight</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Consideration:</strong> May have excellent vein access</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Note:</strong> High protein diets usually mean good plasma levels</p>
                             </div>
                         </div>
                         
                         <div class="situation-card">
-                            <h3>📈 Borderline Weight (108-112 lbs)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📈 Borderline Weight (108-112 lbs)</h3>
                             <div class="situation-details">
-                                <p><strong>Challenge:</strong> Weight can fluctuate daily</p>
-                                <p><strong>Solutions:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Challenge:</strong> Weight can fluctuate daily</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Solutions:</strong></p>
                                 <ul>
                                     <li>Donate after meals (temporary weight gain)</li>
                                     <li>Stay well-hydrated (adds 1-2 lbs)</li>
@@ -409,17 +536,17 @@
                         </div>
                         
                         <div class="situation-card">
-                            <h3>⚖️ Extreme Obesity (BMI 40+)</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚖️ Extreme Obesity (BMI 40+)</h3>
                             <div class="situation-details">
-                                <p><strong>Policy varies:</strong> Some centers have BMI limits</p>
-                                <p><strong>Common issues:</strong></p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Policy varies:</strong> Some centers have BMI limits</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Common issues:</strong></p>
                                 <ul>
                                     <li>Difficulty accessing veins</li>
                                     <li>Equipment limitations (chair weight limits)</li>
                                     <li>Some centers cap at BMI 40</li>
                                     <li>Others accommodate with special equipment</li>
                                 </ul>
-                                <p><strong>Best approach:</strong> Call ahead to verify policies</p>
+                                <p class="text-gray-700 leading-relaxed mb-4"><strong>Best approach:</strong> Call ahead to verify policies</p>
                             </div>
                         </div>
                     </div>
@@ -427,11 +554,11 @@
 
                 <!-- Tips for Meeting Weight Requirements -->
                 <section class="content-section">
-                    <h2>💡 Tips for Meeting Weight Requirements</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💡 Tips for Meeting Weight Requirements</h2>
                     
                     <div class="weight-tips">
                         <div class="tips-category">
-                            <h3>📈 If You're Just Under 110 lbs:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📈 If You're Just Under 110 lbs:</h3>
                             <div class="tips-grid">
                                 <div class="tip-card">
                                     <h4>🍽️ Healthy Weight Gain</h4>
@@ -466,7 +593,7 @@
                         </div>
                         
                         <div class="warning-box">
-                            <h3>⚠️ What NOT to Do</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚠️ What NOT to Do</h3>
                             <ul>
                                 <li>❌ Don't lie about your weight - you'll be weighed</li>
                                 <li>❌ Don't wear ankle weights or hide objects</li>
@@ -479,10 +606,10 @@
 
                 <!-- International Weight Requirements -->
                 <section class="content-section">
-                    <h2>🌍 Weight Requirements in Other Countries</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🌍 Weight Requirements in Other Countries</h2>
                     
                     <div class="international-comparison">
-                        <p>For context, here's how U.S. requirements compare globally:</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">For context, here's how U.S. requirements compare globally:</p>
                         
                         <table class="international-table">
                             <thead>
@@ -530,10 +657,10 @@
 
                 <!-- Call to Action -->
                 <section class="content-section cta-section">
-                    <h2>⚖️ Meet the Weight Requirements?</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚖️ Meet the Weight Requirements?</h2>
                     
                     <div class="final-cta">
-                        <p>If you weigh 110+ pounds, you're eligible to start earning <strong>$400-$800 monthly</strong> through plasma donation! Heavier donors can earn even more.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">If you weigh 110+ pounds, you're eligible to start earning <strong>$400-$800 monthly</strong> through plasma donation! Heavier donors can earn even more.</p>
                         
                         <div class="cta-buttons">
                             <a href="/?search=true" class="cta-btn primary">🔍 Find Centers Near Me</a>
@@ -541,7 +668,7 @@
                         </div>
                         
                         <div class="weight-summary">
-                            <h3>📊 Quick Weight Summary:</h3>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📊 Quick Weight Summary:</h3>
                             <ul>
                                 <li>✅ Minimum: 110 pounds (no exceptions)</li>
                                 <li>✅ Higher weight = higher pay</li>
@@ -555,7 +682,7 @@
 
                 <!-- Related Articles -->
                 <section class="related-articles">
-                    <h3>🔗 Related Eligibility Guides:</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🔗 Related Eligibility Guides:</h3>
                     <div class="related-links">
                         <a href="/blog/first-time-plasma-donation-what-to-expect.html">First Time Donor Guide</a>
                         <a href="/blog/how-to-prepare-for-plasma-donation.html">Preparation Checklist</a>
@@ -566,7 +693,7 @@
 
                 <!-- Sources & References -->
                 <section class="content-section sources-section">
-                    <h3>📚 Sources & References</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📚 Sources & References</h3>
                     <div class="sources-list">
                         <ul>
                             <li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" target="_blank" rel="noopener">FDA - Blood Donor Screening Requirements</a></li>
@@ -582,15 +709,15 @@
 
                 <!-- Author Profile -->
                 <section class="content-section author-profile">
-                    <h3>Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">Glen Meade, Plasma Donation Researcher & Data Analyst</h3>
                     <div class="author-badges">
                         <span class="badge">📊 2,522+ Centers Analyzed</span>
                         <span class="badge">⚖️ Weight Policy Expert</span>
                     </div>
-                    <p>Glen specializes in analyzing plasma center weight requirements and pay structures across all 50 states. Through comprehensive data analysis and research, Glen helps donors understand eligibility criteria and maximize their earnings potential.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Glen specializes in analyzing plasma center weight requirements and pay structures across all 50 states. Through comprehensive data analysis and research, Glen helps donors understand eligibility criteria and maximize their earnings potential.</p>
                     
                     <div class="disclaimer-note">
-                        <p><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
                     </div>
                     
                     <p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
@@ -599,21 +726,21 @@
         </div>
 
 <div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #92400e; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
                 <strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
                 Always consult a qualified healthcare provider before donating plasma.
             </p>
         </div>
 
 <div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #4b5563; font-size: 0.875rem;">
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
                 <strong>Written by Glen Meade</strong>, Plasma Donation Researcher & Data Specialist
             </p>
         </div>
 
 <div class="medical-disclaimer">
-                        <h2>⚠️ Important Medical Disclaimer</h2>
-                        <p><strong>This information is for educational purposes only and should not replace professional medical advice.</strong></p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚠️ Important Medical Disclaimer</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4"><strong>This information is for educational purposes only and should not replace professional medical advice.</strong></p>
                         <ul>
                             <li><strong>Weight Requirements:</strong> Are set by the FDA for donor safety - no exceptions can be made</li>
                             <li><strong>Health Considerations:</strong> Being underweight may indicate health issues requiring medical attention</li>
@@ -621,17 +748,17 @@
                             <li><strong>Medical Advice:</strong> Consult healthcare providers before attempting weight changes</li>
                             <li><strong>Safety First:</strong> Never attempt to circumvent weight requirements - they exist for your protection</li>
                         </ul>
-                        <p><em>Last updated: January 2025. Requirements based on current FDA regulations.</em></p>
+                        <p class="text-gray-700 leading-relaxed mb-4"><em>Last updated: January 2025. Requirements based on current FDA regulations.</em></p>
                     </div>
 
 <div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-            <h3 style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">About the Author</h3>
             <div style="display: flex; align-items: start; gap: 1rem;">
                 <div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
                 <div>
                     <h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-                    <p style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
-                    <p style="color: #6b7280; margin: 0; font-size: 0.875rem;">
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher & Data Specialist</p>
+                    <p class="text-gray-700 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
                         Glen has spent over 5 years researching plasma donation centers across the United States, 
                         compiling comprehensive data on pay rates, eligibility requirements, and donor experiences. 
                         His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
@@ -655,7 +782,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Plasma Pay Calculator</h4>
-                <p>Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
+                <p class="text-gray-700 leading-relaxed mb-4">Find the highest paying plasma donation centers near you. Compare rates, reviews, and hours at 1,294+ locations nationwide.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -696,7 +823,7 @@
 </main>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
             <p class="owner-info">
                 🏥 Plasma center owner? <a href="mailto:hello@plasmapaycalculator.com?subject=Claim%20or%20Upgrade%20Listing" class="owner-link">Claim or upgrade your listing</a>
             </p>

@@ -308,7 +308,102 @@
                 font-size: 14px;
             }
         }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
 
     <style>
     .language-switcher {
@@ -364,9 +459,159 @@
             font-size: 11px;
         }
     }
-    </style>
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">🩸</span>
+                    </div>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        Plasma Pay Calculator
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
+                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
+                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
+                    <div class="py-2">
+                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <div class="language-switcher">
         <a href="/es/blog/plasma-donation-weight-requirements-bmi-guide-2025.html" class="lang-option spanish" title="Español">
@@ -378,20 +623,20 @@
     <div class="container">
         <a href="../blog/" class="back-link">← Back to Blog</a>
         
-        <h1>⚖️ Plasma Donation Weight Requirements & BMI Guide 2025</h1>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">⚖️ Plasma Donation Weight Requirements & BMI Guide 2025</h1>
         
         <div class="weight-alert">
-            <h3>📏 WEIGHT ELIGIBILITY CRITICAL</h3>
-            <p><strong>Weight requirements are strictly enforced at all plasma donation centers and directly affect your earning potential.</strong> Understanding minimum weights, BMI limits, and volume calculations helps you meet eligibility standards safely and maximize your donation frequency and payments.</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📏 WEIGHT ELIGIBILITY CRITICAL</h3>
+            <p class="text-gray-700 leading-relaxed mb-4"><strong>Weight requirements are strictly enforced at all plasma donation centers and directly affect your earning potential.</strong> Understanding minimum weights, BMI limits, and volume calculations helps you meet eligibility standards safely and maximize your donation frequency and payments.</p>
         </div>
 
-        <p><strong>Plasma donation weight requirements exist for medical safety</strong> and determine how much plasma you can donate per session. Meeting these standards affects not only your eligibility but also your earning potential, as larger donors can give more plasma and often receive higher compensation.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Plasma donation weight requirements exist for medical safety</strong> and determine how much plasma you can donate per session. Meeting these standards affects not only your eligibility but also your earning potential, as larger donors can give more plasma and often receive higher compensation.</p>
 
-        <h2>⚖️ Weight & BMI Eligibility Calculator</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚖️ Weight & BMI Eligibility Calculator</h2>
 
         <div class="weight-calculator">
-            <h3>📊 Check Your Donation Eligibility</h3>
-            <p>Calculate your BMI, eligibility status, and potential donation volume based on current industry standards.</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📊 Check Your Donation Eligibility</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">Calculate your BMI, eligibility status, and potential donation volume based on current industry standards.</p>
             
             <div class="calculator-grid">
                 <div>
@@ -431,41 +676,41 @@
             </div>
         </div>
 
-        <h2>🏥 Center-Specific Weight Requirements</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏥 Center-Specific Weight Requirements</h2>
 
         <div class="center-requirements">
-            <h3>📍 Major Plasma Center Weight Standards</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">📍 Major Plasma Center Weight Standards</h3>
             
             <div class="center-card">
                 <h4>💧 CSL Plasma - Weight Requirements</h4>
-                <p><strong>Minimum weight:</strong> 110 lbs (50 kg) | <strong>Maximum volume:</strong> 880ml for 175+ lbs donors</p>
-                <p><strong>Special notes:</strong> Strict weight verification at each visit. Weight fluctuations of 10+ lbs may require re-evaluation.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Minimum weight:</strong> 110 lbs (50 kg) | <strong>Maximum volume:</strong> 880ml for 175+ lbs donors</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Special notes:</strong> Strict weight verification at each visit. Weight fluctuations of 10+ lbs may require re-evaluation.</p>
             </div>
             
             <div class="center-card">
                 <h4>🩸 BioLife Plasma - Weight Standards</h4>
-                <p><strong>Minimum weight:</strong> 110 lbs (50 kg) | <strong>Volume calculation:</strong> Based on weight and hematocrit levels</p>
-                <p><strong>Special notes:</strong> BMI considerations for overall health assessment. Regular weight monitoring required.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Minimum weight:</strong> 110 lbs (50 kg) | <strong>Volume calculation:</strong> Based on weight and hematocrit levels</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Special notes:</strong> BMI considerations for overall health assessment. Regular weight monitoring required.</p>
             </div>
             
             <div class="center-card">
                 <h4>🏥 Grifols - Weight Guidelines</h4>
-                <p><strong>Minimum weight:</strong> 110 lbs (50 kg) | <strong>Maximum donation:</strong> Calculated using FDA volume charts</p>
-                <p><strong>Special notes:</strong> Weight-based payment tiers in some locations. Higher weights may qualify for premium rates.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Minimum weight:</strong> 110 lbs (50 kg) | <strong>Maximum donation:</strong> Calculated using FDA volume charts</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Special notes:</strong> Weight-based payment tiers in some locations. Higher weights may qualify for premium rates.</p>
             </div>
             
             <div class="center-card">
                 <h4>🎯 Octapharma - Weight Policies</h4>
-                <p><strong>Minimum weight:</strong> 110 lbs (50 kg) | <strong>Volume limits:</strong> Strictly follow FDA plasma volume guidelines</p>
-                <p><strong>Special notes:</strong> Regular BMI assessment as part of health screening. Weight stability requirements.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Minimum weight:</strong> 110 lbs (50 kg) | <strong>Volume limits:</strong> Strictly follow FDA plasma volume guidelines</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Special notes:</strong> Regular BMI assessment as part of health screening. Weight stability requirements.</p>
             </div>
         </div>
 
-        <h2>📊 FDA Plasma Volume Chart</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📊 FDA Plasma Volume Chart</h2>
 
         <div class="volume-chart">
-            <h3>🩸 Maximum Donation Volumes by Weight</h3>
-            <p>FDA regulations determine maximum plasma volumes based on donor weight to ensure safety and prevent adverse reactions.</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🩸 Maximum Donation Volumes by Weight</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">FDA regulations determine maximum plasma volumes based on donor weight to ensure safety and prevent adverse reactions.</p>
             
             <table class="volume-table">
                 <thead>
@@ -504,126 +749,126 @@
                 </tbody>
             </table>
             
-            <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Note:</strong> Actual volumes may be lower based on hematocrit levels, protein levels, and individual health factors.</p>
+            <p class="text-gray-700 leading-relaxed mb-4" style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Note:</strong> Actual volumes may be lower based on hematocrit levels, protein levels, and individual health factors.</p>
         </div>
 
-        <h2>💡 Meeting Weight Requirements Safely</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💡 Meeting Weight Requirements Safely</h2>
 
         <div class="weight-tips">
-            <h3>🎯 Healthy Weight Management for Donors</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">🎯 Healthy Weight Management for Donors</h3>
             <div class="tips-grid">
                 <div class="tip-card">
                     <h4>⚖️ Weight Stability</h4>
-                    <p>Maintain consistent weight within 10 lbs of your baseline. Rapid weight changes may trigger additional health screenings or temporary deferrals.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Maintain consistent weight within 10 lbs of your baseline. Rapid weight changes may trigger additional health screenings or temporary deferrals.</p>
                 </div>
                 <div class="tip-card">
                     <h4>🥗 Healthy Weight gain</h4>
-                    <p>If under minimum weight, focus on nutrient-dense foods, protein-rich meals, and gradual healthy weight gain rather than rapid increases.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">If under minimum weight, focus on nutrient-dense foods, protein-rich meals, and gradual healthy weight gain rather than rapid increases.</p>
                 </div>
                 <div class="tip-card">
                     <h4>💧 Hydration Impact</h4>
-                    <p>Proper hydration affects both weight and plasma quality. Drink plenty of water but understand that dehydration can affect daily weight readings.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Proper hydration affects both weight and plasma quality. Drink plenty of water but understand that dehydration can affect daily weight readings.</p>
                 </div>
                 <div class="tip-card">
                     <h4>📅 Timing Considerations</h4>
-                    <p>Weigh yourself at consistent times. Morning weights are typically lower due to overnight fasting and fluid loss.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Weigh yourself at consistent times. Morning weights are typically lower due to overnight fasting and fluid loss.</p>
                 </div>
                 <div class="tip-card">
                     <h4>🏃‍♀️ Exercise Balance</h4>
-                    <p>Regular exercise improves overall health but intense workouts before donation can affect weight and hydration status.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Regular exercise improves overall health but intense workouts before donation can affect weight and hydration status.</p>
                 </div>
                 <div class="tip-card">
                     <h4>📊 Documentation</h4>
-                    <p>Track weight trends over time. Centers may require explanation for significant weight changes between visits.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Track weight trends over time. Centers may require explanation for significant weight changes between visits.</p>
                 </div>
             </div>
         </div>
 
-        <h2>🏥 Medical Considerations for Weight Requirements</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🏥 Medical Considerations for Weight Requirements</h2>
 
         <div class="health-considerations">
-            <h3>⚕️ Health Factors Affecting Weight Eligibility</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚕️ Health Factors Affecting Weight Eligibility</h3>
             
             <div class="health-item">
                 <h4>💊 Medications Affecting Weight</h4>
-                <p><strong>Common impacts:</strong> Steroids, antidepressants, diabetes medications, and hormonal treatments can cause weight fluctuations.</p>
-                <p><strong>Disclosure requirement:</strong> Always inform centers about medications that might affect your weight or plasma composition.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Common impacts:</strong> Steroids, antidepressants, diabetes medications, and hormonal treatments can cause weight fluctuations.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Disclosure requirement:</strong> Always inform centers about medications that might affect your weight or plasma composition.</p>
             </div>
             
             <div class="health-item">
                 <h4>🍽️ Eating Disorders Considerations</h4>
-                <p><strong>Safety priority:</strong> Centers are trained to identify signs of eating disorders and may defer donors for health protection.</p>
-                <p><strong>Medical evaluation:</strong> Rapid weight changes may trigger medical review and require healthcare provider clearance.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Safety priority:</strong> Centers are trained to identify signs of eating disorders and may defer donors for health protection.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Medical evaluation:</strong> Rapid weight changes may trigger medical review and require healthcare provider clearance.</p>
             </div>
             
             <div class="health-item">
                 <h4>🤰 Pregnancy and Postpartum</h4>
-                <p><strong>Pregnancy prohibition:</strong> Plasma donation is not allowed during pregnancy regardless of weight status.</p>
-                <p><strong>Postpartum return:</strong> Weight requirements apply normally after medical clearance, typically 6+ weeks postpartum.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Pregnancy prohibition:</strong> Plasma donation is not allowed during pregnancy regardless of weight status.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Postpartum return:</strong> Weight requirements apply normally after medical clearance, typically 6+ weeks postpartum.</p>
             </div>
             
             <div class="health-item">
                 <h4>🧬 Metabolic Conditions</h4>
-                <p><strong>Thyroid disorders:</strong> Conditions affecting metabolism may cause weight instability requiring medical management.</p>
-                <p><strong>Diabetes management:</strong> Blood sugar control affects weight stability and overall donation eligibility.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Thyroid disorders:</strong> Conditions affecting metabolism may cause weight instability requiring medical management.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Diabetes management:</strong> Blood sugar control affects weight stability and overall donation eligibility.</p>
             </div>
             
             <div class="health-item">
                 <h4>💪 Body Composition Factors</h4>
-                <p><strong>Muscle vs. fat:</strong> Athletic individuals with high muscle mass may have different health profiles despite meeting weight requirements.</p>
-                <p><strong>BMI limitations:</strong> Standard BMI calculations may not account for unusual body composition in very athletic donors.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>Muscle vs. fat:</strong> Athletic individuals with high muscle mass may have different health profiles despite meeting weight requirements.</p>
+                <p class="text-gray-700 leading-relaxed mb-4"><strong>BMI limitations:</strong> Standard BMI calculations may not account for unusual body composition in very athletic donors.</p>
             </div>
         </div>
 
-        <h2>🚫 Common Weight-Related Disqualifications</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🚫 Common Weight-Related Disqualifications</h2>
 
-        <p><strong>Underweight donors (below 110 lbs):</strong> Cannot donate plasma regardless of health status. This limit protects donors from excessive fluid loss relative to body size.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Underweight donors (below 110 lbs):</strong> Cannot donate plasma regardless of health status. This limit protects donors from excessive fluid loss relative to body size.</p>
 
-        <p><strong>Rapid weight loss:</strong> Losing 10+ pounds between donations may indicate health issues requiring medical evaluation before continuing donations.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Rapid weight loss:</strong> Losing 10+ pounds between donations may indicate health issues requiring medical evaluation before continuing donations.</p>
 
-        <p><strong>Extreme obesity concerns:</strong> Very high BMI (35+) may require additional medical clearance and monitoring due to associated health risks.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Extreme obesity concerns:</strong> Very high BMI (35+) may require additional medical clearance and monitoring due to associated health risks.</p>
 
-        <p><strong>Weight fluctuation patterns:</strong> Consistent significant weight changes between visits may indicate underlying health issues or medication effects.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Weight fluctuation patterns:</strong> Consistent significant weight changes between visits may indicate underlying health issues or medication effects.</p>
 
-        <h2>💰 Weight Impact on Earnings</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">💰 Weight Impact on Earnings</h2>
 
-        <p><strong>Volume-based compensation:</strong> Larger donors who can give more plasma often earn more per donation. The difference between 690ml and 880ml donations can be $5-15 per session.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Volume-based compensation:</strong> Larger donors who can give more plasma often earn more per donation. The difference between 690ml and 880ml donations can be $5-15 per session.</p>
 
-        <p><strong>Efficiency advantages:</strong> Higher-weight donors often complete donations faster due to larger blood vessels and better flow rates, allowing more frequent successful donations.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Efficiency advantages:</strong> Higher-weight donors often complete donations faster due to larger blood vessels and better flow rates, allowing more frequent successful donations.</p>
 
-        <p><strong>Bonus eligibility:</strong> Some centers offer weight-based bonuses or have higher base rates for donors who can give maximum volumes.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Bonus eligibility:</strong> Some centers offer weight-based bonuses or have higher base rates for donors who can give maximum volumes.</p>
 
-        <h2>📝 Documentation and Verification</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">📝 Documentation and Verification</h2>
 
-        <p><strong>Initial screening:</strong> Weight verification is part of every first-time donor screening and establishes your baseline for future visits.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Initial screening:</strong> Weight verification is part of every first-time donor screening and establishes your baseline for future visits.</p>
 
-        <p><strong>Regular monitoring:</strong> Centers weigh donors at each visit. Significant changes trigger additional questions and potential medical review.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Regular monitoring:</strong> Centers weigh donors at each visit. Significant changes trigger additional questions and potential medical review.</p>
 
-        <p><strong>Medical records:</strong> Weight trends become part of your donor medical record and may be reviewed during periodic health assessments.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Medical records:</strong> Weight trends become part of your donor medical record and may be reviewed during periodic health assessments.</p>
 
-        <h2>🎯 Optimization Strategies</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">🎯 Optimization Strategies</h2>
 
-        <p><strong>Consistent timing:</strong> Donate at similar times of day to minimize natural weight fluctuations that could affect your donation volume calculations.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Consistent timing:</strong> Donate at similar times of day to minimize natural weight fluctuations that could affect your donation volume calculations.</p>
 
-        <p><strong>Healthy maintenance:</strong> Focus on maintaining weight through proper nutrition rather than trying to gain or lose weight specifically for donation purposes.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Healthy maintenance:</strong> Focus on maintaining weight through proper nutrition rather than trying to gain or lose weight specifically for donation purposes.</p>
 
-        <p><strong>Long-term planning:</strong> Understand that sustainable donation requires stable health and weight patterns over months and years, not just individual sessions.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Long-term planning:</strong> Understand that sustainable donation requires stable health and weight patterns over months and years, not just individual sessions.</p>
 
-        <h2>⚠️ Red Flags and Safety Concerns</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">⚠️ Red Flags and Safety Concerns</h2>
 
-        <p><strong>Extreme weight management:</strong> Using dangerous methods to meet weight requirements, such as dehydration or rapid weight gain/loss, can cause serious health problems.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Extreme weight management:</strong> Using dangerous methods to meet weight requirements, such as dehydration or rapid weight gain/loss, can cause serious health problems.</p>
 
-        <p><strong>Eating before weighing:</strong> While proper pre-donation nutrition is important, artificially inflating weight through excessive food or fluid intake can be dangerous.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Eating before weighing:</strong> While proper pre-donation nutrition is important, artificially inflating weight through excessive food or fluid intake can be dangerous.</p>
 
-        <p><strong>Ignoring health changes:</strong> Weight changes often indicate underlying health issues that should be addressed with healthcare providers, not ignored for donation purposes.</p>
+        <p class="text-gray-700 leading-relaxed mb-4"><strong>Ignoring health changes:</strong> Weight changes often indicate underlying health issues that should be addressed with healthcare providers, not ignored for donation purposes.</p>
 
         <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 15px; color: white;">
-            <h3 style="color: white; margin-top: 0;">⚖️ Check Your Weight Eligibility Now</h3>
-            <p style="font-size: 18px; margin-bottom: 25px;">Use our calculator to determine your donation volume and optimize your earning potential!</p>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mt-6 mb-3">⚖️ Check Your Weight Eligibility Now</h3>
+            <p class="text-gray-700 leading-relaxed mb-4" style="font-size: 18px; margin-bottom: 25px;">Use our calculator to determine your donation volume and optimize your earning potential!</p>
             <button onclick="window.scrollTo(0, 400)" style="background: #27ae60; color: white; border: none; padding: 15px 30px; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer;">Calculate Eligibility ↑</button>
         </div>
 
-        <p>Understanding weight requirements helps you maintain eligibility and maximize earnings safely. For more donation optimization tips, check our <a href="plasma-donation-calculators-income-tools-2025.html" style="color: #3498db;">earning calculators</a> and <a href="csl-plasma-pay-chart-2025-complete-rates-guide.html" style="color: #3498db;">complete pay rate guides</a>.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Understanding weight requirements helps you maintain eligibility and maximize earnings safely. For more donation optimization tips, check our <a href="plasma-donation-calculators-income-tools-2025.html" style="color: #3498db;">earning calculators</a> and <a href="csl-plasma-pay-chart-2025-complete-rates-guide.html" style="color: #3498db;">complete pay rate guides</a>.</p>
     </div>
 
     <script>
@@ -806,6 +1051,12 @@
         
         // Initialize with feet/inches input
         toggleHeightInput();
+    </script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
