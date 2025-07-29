@@ -208,11 +208,71 @@
     <!-- Navigation -->
     
 
-    <div class="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Coming Soon</h1>
-            <a href="/" class="text-blue-600 hover:underline">Return Home</a>
+    <div class="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="container mx-auto px-6 py-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl font-bold text-gray-800 mb-6">Plasma Donation Frequency Guide</h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Learn optimal donation schedules, FDA requirements, and maximize your earnings while staying healthy.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">📅</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Schedule Optimization</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Complete guide to maximizing your plasma donation schedule while following FDA safety requirements.</p>
+                        <a href="/blog/plasma-donation-frequency-schedule-optimization-2025.html" class="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                            Read Full Guide →
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🔄</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Twice Weekly Donations</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Everything you need to know about donating plasma twice per week safely and effectively.</p>
+                        <a href="/blog/can-you-donate-plasma-twice-a-week.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                            Learn More →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Key Frequency Facts</h2>
+                    <div class="grid md:grid-cols-3 gap-6 text-center">
+                        <div class="p-6 bg-green-50 rounded-lg">
+                            <div class="text-3xl font-bold text-green-600 mb-2">2x</div>
+                            <div class="text-gray-800 font-semibold">Per Week Maximum</div>
+                            <div class="text-sm text-gray-600">FDA safety limit</div>
+                        </div>
+                        <div class="p-6 bg-blue-50 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">48</div>
+                            <div class="text-gray-800 font-semibold">Hours Between</div>
+                            <div class="text-sm text-gray-600">Minimum waiting period</div>
+                        </div>
+                        <div class="p-6 bg-purple-50 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">104</div>
+                            <div class="text-gray-800 font-semibold">Annual Limit</div>
+                            <div class="text-sm text-gray-600">Maximum per year</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

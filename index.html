@@ -122,21 +122,12 @@
     </script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
             line-height: 1.6;
             color: #2c3e50;
-            background: linear-gradient(135deg, #f8fffe 0%, #e8f8f5 100%);
-            min-height: 100vh;
         }
 
-        /* Navigation */
         nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -192,21 +183,6 @@
             white-space: nowrap;
         }
 
-        .language-switcher {
-            background: rgba(39, 174, 96, 0.1);
-            border: 1px solid rgba(39, 174, 96, 0.2);
-            color: #27ae60;
-            padding: 0.3rem 0.6rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            text-decoration: none;
-            margin-left: 1rem;
-        }
-
-        .language-switcher:hover {
-            background: rgba(39, 174, 96, 0.2);
-        }
-
         .nav-links {
             display: flex;
             list-style: none;
@@ -229,24 +205,6 @@
         .nav-links a.active {
             color: #27ae60;
             background: rgba(39, 174, 96, 0.1);
-        }
-
-        .cta-btn {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.3s;
-            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
-            font-size: 0.85rem;
-            white-space: nowrap;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
         }
 
         .mobile-menu-btn {
@@ -301,20 +259,74 @@
             background: rgba(39, 174, 96, 0.1);
         }
 
-        @media (max-width: 1200px) {
-            .nav-container {
-                padding: 0 1rem;
-            }
-            
+        @media (max-width: 968px) {
             .nav-links {
-                gap: 1rem;
+                display: none;
             }
             
-            .nav-links a {
-                padding: 0.4rem 0.6rem;
-                font-size: 0.85rem;
+            .mobile-menu-btn {
+                display: block;
             }
             
+            .trust-badge {
+                font-size: 0.6rem;
+                padding: 0.15rem 0.4rem;
+            }
+            
+            .logo {
+                font-size: 1rem;
+            }
+            
+            .logo-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
+            }
+        }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation */
+
+        .language-switcher {
+            background: rgba(39, 174, 96, 0.1);
+            border: 1px solid rgba(39, 174, 96, 0.2);
+            color: #27ae60;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+
+        .language-switcher:hover {
+            background: rgba(39, 174, 96, 0.2);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+        }
+
+        @media (max-width: 1200px) {
+
             .cta-btn {
                 padding: 0.4rem 0.8rem;
                 font-size: 0.8rem;
@@ -322,23 +334,11 @@
         }
 
         @media (max-width: 1000px) {
-            .trust-badge {
-                display: none;
-            }
-            
-            .nav-links {
-                gap: 0.8rem;
-            }
+
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
 
-            .mobile-menu-btn {
-                display: block;
-            }
         }
 
         /* Main Content */
@@ -672,9 +672,6 @@
 
         /* Mobile */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
 
             .header h1 {
                 font-size: 2rem;
@@ -704,7 +701,7 @@
                 padding: 1.2rem 1.5rem;
             }
         }
-    </style>
+</style>
 
     <!-- Calculator Schema -->
     <script type="application/ld+json">

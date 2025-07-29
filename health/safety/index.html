@@ -208,11 +208,97 @@
     <!-- Navigation -->
     
 
-    <div class="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Coming Soon</h1>
-            <a href="/" class="text-blue-600 hover:underline">Return Home</a>
+    <div class="min-h-screen bg-gradient-to-br from-red-50 to-orange-50">
+        <div class="container mx-auto px-6 py-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl font-bold text-gray-800 mb-6">Plasma Donation Safety</h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive safety information, side effects, and medical guidance for safe plasma donation.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🏥</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Medical Safety Guide</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Complete medical analysis covering FDA safety measures, research findings, and health monitoring protocols.</p>
+                        <a href="/blog/plasma-donation-safety-medical-concerns-2025.html" class="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+                            Read Safety Guide →
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">⚠️</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Side Effects Guide</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Learn about common and rare side effects, prevention strategies, and when to seek medical attention.</p>
+                        <a href="/blog/plasma-donation-side-effects.html" class="inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors font-semibold">
+                            View Side Effects →
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">💪</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Recovery Tips</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Complete recovery guide with nutrition tips, hydration strategies, and post-donation care.</p>
+                        <a href="/blog/plasma-donation-recovery-tips-complete-guide-2025.html" class="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                            Recovery Guide →
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🥗</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Nutrition & Diet</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Optimize your health and earnings with proper nutrition before and after plasma donation.</p>
+                        <a href="/blog/plasma-donation-nutrition-diet-optimization-2025.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                            Nutrition Guide →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Safety Statistics</h2>
+                    <div class="grid md:grid-cols-3 gap-6 text-center">
+                        <div class="p-6 bg-green-50 rounded-lg">
+                            <div class="text-3xl font-bold text-green-600 mb-2">95%</div>
+                            <div class="text-gray-800 font-semibold">No Side Effects</div>
+                            <div class="text-sm text-gray-600">Experience zero issues</div>
+                        </div>
+                        <div class="p-6 bg-blue-50 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">FDA</div>
+                            <div class="text-gray-800 font-semibold">Regulated</div>
+                            <div class="text-sm text-gray-600">Strict safety oversight</div>
+                        </div>
+                        <div class="p-6 bg-purple-50 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                            <div class="text-gray-800 font-semibold">Years of Safety</div>
+                            <div class="text-sm text-gray-600">Proven track record</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
