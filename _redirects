@@ -35,3 +35,109 @@ https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301
 # Ensure clean URLs for common variations
 /calculators/georgia/ /calculators/georgia 301
 /calculators/california/ /calculators/california 301
+
+# Fix 404 errors identified by Bing scan
+# Redirect missing state pages to relevant calculators
+/state/texas.html /calculators/texas 301
+/state/new-york.html /calculators/new-york 301
+/state/florida.html /calculators/florida 301
+/state/california.html /calculators/california 301
+/state/texas/austin.html /calculators/texas/austin 301
+/state/texas/houston.html /calculators/texas/houston 301
+/state/texas/dallas.html /calculators/texas/dallas 301
+/state/california/san-diego.html /calculators/california/san-diego 301
+/state/california/los-angeles.html /calculators/california/los-angeles 301
+/state/illinois/chicago.html /calculators/illinois/chicago 301
+/state/new-york/new-york-city.html /calculators/new-york/new-york-city 301
+
+# Redirect missing individual pages
+/calculator.html / 301
+/calculators/ /calculators 301
+/calculator/ / 301
+/frederick-md-plasma-donation.html /calculators/maryland/frederick 301
+/how-much-do-you-get-for-donating-plasma.html /how-much-money-can-you-make-donating-plasma.html 301
+/lowell-ma-plasma-donation.html /calculators/massachusetts/lowell 301
+/iowa-plasma-donation-earnings.html /calculators/iowa 301
+
+# Health directory redirects
+/health/requirements/ /plasma-donation-requirements-2025.html 301
+/health/nutrition/ /blog/plasma-donation-health-tips.html 301
+/health/safety/ /plasma-donation-side-effects-safety-guide.html 301
+/health/frequency/ /blog/can-you-donate-plasma-twice-a-week.html 301
+/health/screening/ /blog/complete-medical-eligibility-guide-plasma-donation.html 301
+
+# Spanish blog post redirects - redirect to English versions since Spanish posts don't exist
+/es/blog/can-you-donate-plasma-twice-a-week.html /blog/can-you-donate-plasma-twice-a-week.html 301
+/es/blog/which-plasma-center-pays-most-money.html /blog/which-plasma-center-pays-most-money.html 301
+/es/blog/plasma-center-comparison.html /blog/plasma-center-comparison.html 301
+/es/blog/can-you-donate-plasma-with-tattoos.html /blog/can-you-donate-plasma-with-tattoos.html 301
+/es/blog/complete-medical-eligibility-guide-plasma-donation.html /blog/complete-medical-eligibility-guide-plasma-donation.html 301
+/es/blog/biolife-vs-csl-plasma-comparison.html /blog/biolife-vs-csl-plasma-comparison.html 301
+/es/blog/does-irs-track-plasma-donations.html /blog/does-irs-track-plasma-donations.html 301
+/es/blog/ab-plasma-secret-income-revealed.html /blog/ab-plasma-secret-income-revealed.html 301
+/es/blog/ab-plasma-donation-calculator.html /blog/ab-plasma-donation-calculator.html 301
+/es/blog/octapharma-vs-competitors-payment-calculator.html /blog/octapharma-vs-competitors-payment-calculator.html 301
+/es/blog/ultimate-plasma-donation-guide.html /blog/ultimate-plasma-donation-guide.html 301
+/es/blog/highest-paying-plasma-centers-2025.html /blog/highest-paying-plasma-centers-2025.html 301
+/es/blog/understanding-plasma-medical-uses.html /blog/understanding-plasma-medical-uses.html 301
+/es/blog/plasma-donation-side-effects.html /blog/plasma-donation-side-effects.html 301
+/es/blog/do-plasma-centers-report-social-security.html /blog/do-plasma-centers-report-social-security.html 301
+/es/blog/plasma-donation-eligibility-quiz-viral.html /blog/plasma-donation-eligibility-quiz-viral.html 301
+/es/blog/how-to-prepare-for-plasma-donation.html /blog/how-to-prepare-for-plasma-donation.html 301
+/es/blog/plasma-donation-weight-requirements.html /blog/plasma-donation-weight-requirements.html 301
+/es/blog/how-much-money-can-you-make-donating-plasma-2025.html /blog/how-much-money-can-you-make-donating-plasma-2025.html 301
+/es/blog/plasma-donation-process-step-by-step.html /blog/plasma-donation-process-step-by-step.html 301
+/es/blog/24-hour-plasma-centers-complete-locator-guide-2025.html /blog/24-hour-plasma-centers-complete-locator-guide-2025.html 301
+/es/blog/plasma-donation-requirements.html /blog/plasma-donation-requirements.html 301
+/es/blog/plasma-donation-schedule.html /blog/plasma-donation-schedule.html 301
+/es/blog/plasma-donation-tips-beginners.html /blog/plasma-donation-tips-beginners.html 301
+/es/blog/how-to-increase-vein-size-plasma-donation.html /blog/how-to-increase-vein-size-plasma-donation.html 301
+/es/blog/plasma-donation-health-tips.html /blog/plasma-donation-health-tips.html 301
+/es/blog/plasma-donation-tax-guide-2025.html /comprehensive-plasma-tax-guide-2025.html 301
+/es/blog/do-you-get-1099-plasma-donation.html /blog/do-you-get-1099-plasma-donation.html 301
+/es/blog/plasma-donation-taxes.html /blog/plasma-donation-taxes.html 301
+/es/blog/can-you-make-1000-month-donating-plasma.html /blog/can-you-make-1000-month-donating-plasma.html 301
+/es/blog/plasma-donation-bonuses-promotions.html /blog/plasma-donation-bonuses-promotions.html 301
+/es/blog/best-times-donate-plasma.html /blog/best-times-donate-plasma.html 301
+/es/blog/weekly-plasma-earnings-calculator.html /blog/weekly-plasma-earnings-calculator.html 301
+/es/blog/best-plasma-centers-texas.html /blog/best-plasma-centers-texas.html 301
+/es/blog/first-time-plasma-donation-what-to-expect.html /blog/first-time-plasma-donation-what-to-expect.html 301
+/es/blog/maximize-plasma-earnings.html /maximize-plasma-donation-earnings-guide.html 301
+/es/blog/first-time-plasma-donation.html /blog/first-time-plasma-donation.html 301
+/es/blog/highest-paying-plasma-centers-near-me.html /blog/highest-paying-plasma-centers-near-me.html 301
+/es/blog/state-by-state-plasma-donation-laws-regulations-2025.html /blog/state-by-state-plasma-donation-laws-regulations-2025.html 301
+/es/blog/csl-plasma-pay-rates-2025.html /blog/csl-plasma-pay-rates-2025.html 301
+
+# Spanish center redirects
+/es/centers/biolife/ /centers/biolife 301
+/es/centers/octapharma/ /centers/octapharma 301
+/es/centers/grifols/ /centers/grifols 301
+/es/centers/csl-plasma/ /centers/csl-plasma 301
+/es/centers/ /centers 301
+
+# Spanish health redirects
+/es/health/side-effects/ /health/side-effects 301
+/es/health/ /health 301
+
+# Spanish page redirects
+/es/calculators/ /calculators 301
+/es/process/ /process 301
+/es/plasma-donation-requirements-2025.html /plasma-donation-requirements-2025.html 301
+/es/first-time-plasma-donation-bonus.html /first-time-plasma-donation-bonus.html 301
+/es/states.html /states.html 301
+/es/make-money-online-plasma-donation.html /make-money-online-plasma-donation.html 301
+/es/how-much-money-can-you-make-donating-plasma.html /how-much-money-can-you-make-donating-plasma.html 301
+/es/octapharma-payment-calculator.html /octapharma-payment-calculator.html 301
+/es/plasma-donation-pay-rates-2025.html /plasma-donation-pay-rates-2025.html 301
+/es/make-1000-month-plasma-donation.html /make-1000-month-plasma-donation.html 301
+/es/how-much-can-you-make-week-donating-plasma.html /how-much-can-you-make-week-donating-plasma.html 301
+/es/csl-plasma-tax-calculator.html /csl-plasma-tax-calculator.html 301
+/es/best-side-hustle-2025.html /best-side-hustle-2025.html 301
+
+# Additional missing blog posts
+/es/blog/plasma-donation-scam-detector-calculator.html /blog/plasma-donation-scam-detector-calculator.html 301
+/es/blog/first-time-plasma-donation-bonus-calculator.html /blog/first-time-plasma-donation-bonus-calculator.html 301
+/es/blog/plasma-donation-blood-money-difference.html /blog/plasma-donation-blood-money-difference.html 301
+/es/blog/plasma-donation-health-benefits-calculator.html /blog/plasma-donation-health-benefits-calculator.html 301
+/es/blog/plasma-donation-schedule-money-maximizer.html /blog/plasma-donation-schedule-money-maximizer.html 301
+/blog/plasma-donation-taxes-calculator.html /blog/plasma-donation-taxes.html 301
