@@ -1,0 +1,2508 @@
+{
+  "total_files": 859,
+  "total_links": 38394,
+  "broken_links": [
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/plasma-donation-pay-chart-by-state.html",
+      "link": "/blog/plasma-donation-taxes-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-taxes-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/health/index.html",
+      "link": "/health/nutrition/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/health/nutrition"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/health/index.html",
+      "link": "/health/screening/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/health/screening"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/health/index.html",
+      "link": "/calculator/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculator"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/index.html",
+      "link": "tel:+12135551234",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+12135551234"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/index.html",
+      "link": "tel:+12125552345",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+12125552345"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/index.html",
+      "link": "tel:+13125553456",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+13125553456"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/index.html",
+      "link": "tel:+17135554567",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+17135554567"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/index.html",
+      "link": "tel:+16025555678",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+16025555678"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/which-plasma-center-pays-most-money.html",
+      "link": "/es/blog/which-plasma-center-pays-most-money.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/which-plasma-center-pays-most-money.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/which-plasma-center-pays-most-money.html",
+      "link": "/calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/which-plasma-center-pays-most-money.html",
+      "link": "/privacy",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/privacy"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/which-plasma-center-pays-most-money.html",
+      "link": "/terms",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/terms"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/which-plasma-center-pays-most-money.html",
+      "link": "/contact",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/contact"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/which-plasma-center-pays-most-money.html",
+      "link": "/js/i18n.js",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/js/i18n.js"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/emergency-plasma-donation-cash-crisis-guide-2025.html",
+      "link": "/es/blog/emergency-plasma-donation-cash-crisis-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/emergency-plasma-donation-cash-crisis-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/biolife-vs-csl-plasma-comparison.html",
+      "link": "/es/blog/biolife-vs-csl-plasma-comparison.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/biolife-vs-csl-plasma-comparison.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/shocking-discovery-33-hour-secret-2025.html",
+      "link": "/es/blog/shocking-discovery-33-hour-secret-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/shocking-discovery-33-hour-secret-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-anchorage-alaska-earnings.html",
+      "link": "/es/blog/plasma-donation-anchorage-alaska-earnings.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-anchorage-alaska-earnings.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/csl-plasma-pay-chart-2025-complete-rates-guide.html",
+      "link": "/es/blog/csl-plasma-pay-chart-2025-complete-rates-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/csl-plasma-pay-chart-2025-complete-rates-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/annual-plasma-income-calculator-guide-2025.html",
+      "link": "/es/blog/annual-plasma-income-calculator-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/annual-plasma-income-calculator-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation.html",
+      "link": "/es/blog/first-time-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/first-time-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/advanced-plasma-donation-optimization-hacks-2025.html",
+      "link": "/es/blog/advanced-plasma-donation-optimization-hacks-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/advanced-plasma-donation-optimization-hacks-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/seasonal-plasma-donation-income-optimization-2025.html",
+      "link": "/es/blog/seasonal-plasma-donation-income-optimization-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/seasonal-plasma-donation-income-optimization-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/best-side-hustles-unemployed-2025.html",
+      "link": "/es/blog/best-side-hustles-unemployed-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/best-side-hustles-unemployed-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/maximize-plasma-earnings.html",
+      "link": "/es/blog/maximize-plasma-earnings.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/maximize-plasma-earnings.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-tax-implications-irs-guide-2025.html",
+      "link": "/es/blog/plasma-donation-tax-implications-irs-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-tax-implications-irs-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/broke-need-money-desperately-2025.html",
+      "link": "/es/blog/broke-need-money-desperately-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/broke-need-money-desperately-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/laid-off-plasma-donation-emergency-income.html",
+      "link": "/es/blog/laid-off-plasma-donation-emergency-income.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/laid-off-plasma-donation-emergency-income.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/es/blog/first-time-plasma-donation-what-to-expect.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/first-time-plasma-donation-what-to-expect.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/how-much-do-you-get-for-donating-plasma.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/how-much-do-you-get-for-donating-plasma.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/state/california/los-angeles.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/california/los-angeles.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/state/new-york/new-york-city.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/new-york-city.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/state/illinois/chicago.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/chicago.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/state/texas/houston.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/texas/houston.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/lowell-ma-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/lowell-ma-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/frederick-md-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/frederick-md-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/iowa-plasma-donation-earnings.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/iowa-plasma-donation-earnings.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/state/california/san-diego.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/california/san-diego.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/state/texas/dallas.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/texas/dallas.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/state/texas/austin.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/texas/austin.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-what-to-expect.html",
+      "link": "/mobile-menu.js",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/mobile-menu.js"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/one-weird-trick-400-month-2025.html",
+      "link": "/es/blog/one-weird-trick-400-month-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/one-weird-trick-400-month-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/highest-paying-plasma-centers-near-me.html",
+      "link": "/es/blog/highest-paying-plasma-centers-near-me.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/highest-paying-plasma-centers-near-me.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/highest-paying-plasma-centers-near-me.html",
+      "link": "/blog/which-plasma-center-pays-most-money",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/which-plasma-center-pays-most-money"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/cant-pay-bills-plasma-salvation-2025.html",
+      "link": "/es/blog/cant-pay-bills-plasma-salvation-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cant-pay-bills-plasma-salvation-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/index.html",
+      "link": "/blog/maximize-plasma-donation-earnings-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/maximize-plasma-donation-earnings-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/index.html",
+      "link": "/blog/csl-biolife-octapharma-comparison-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/csl-biolife-octapharma-comparison-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/index.html",
+      "link": "/blog/plasma-donation-side-effects-safety-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-side-effects-safety-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/index.html",
+      "link": "/blog/weight-requirements-maximum-pay-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/weight-requirements-maximum-pay-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/index.html",
+      "link": "/blog/comprehensive-plasma-tax-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/comprehensive-plasma-tax-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/advanced-plasma-donation-optimization-techniques-2025.html",
+      "link": "/es/blog/advanced-plasma-donation-optimization-techniques-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/advanced-plasma-donation-optimization-techniques-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/do-plasma-centers-report-social-security.html",
+      "link": "/es/blog/do-plasma-centers-report-social-security.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/do-plasma-centers-report-social-security.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-safety-medical-concerns-2025.html",
+      "link": "/es/blog/plasma-donation-safety-medical-concerns-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-safety-medical-concerns-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/does-irs-track-plasma-donations.html",
+      "link": "/es/blog/does-irs-track-plasma-donations.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/does-irs-track-plasma-donations.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/understanding-plasma-medical-uses.html",
+      "link": "/es/blog/understanding-plasma-medical-uses.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/understanding-plasma-medical-uses.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-health-tips.html",
+      "link": "/es/blog/plasma-donation-health-tips.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-health-tips.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/pregnancy-plasma-donation-medical-guide-2025.html",
+      "link": "/es/blog/pregnancy-plasma-donation-medical-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/pregnancy-plasma-donation-medical-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/can-you-donate-plasma-with-medical-conditions-2025.html",
+      "link": "/es/blog/can-you-donate-plasma-with-medical-conditions-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/can-you-donate-plasma-with-medical-conditions-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/complete-cost-breakdown-plasma-donation-2025.html",
+      "link": "/es/blog/complete-cost-breakdown-plasma-donation-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/complete-cost-breakdown-plasma-donation-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/can-you-donate-plasma-with-tattoos.html",
+      "link": "/es/blog/can-you-donate-plasma-with-tattoos.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/can-you-donate-plasma-with-tattoos.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-schedule.html",
+      "link": "/es/blog/plasma-donation-schedule.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-schedule.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-weight-requirements-bmi-guide-2025.html",
+      "link": "/es/blog/plasma-donation-weight-requirements-bmi-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-weight-requirements-bmi-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/best-times-donate-plasma.html",
+      "link": "/es/blog/best-times-donate-plasma.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/best-times-donate-plasma.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/best-times-donate-plasma.html",
+      "link": "/blog/plasma-donation-tips-beginners",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-tips-beginners"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/best-times-donate-plasma.html",
+      "link": "/blog/plasma-donation-bonuses-promotions",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-bonuses-promotions"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/state-by-state-plasma-donation-laws-regulations-2025.html",
+      "link": "/es/blog/state-by-state-plasma-donation-laws-regulations-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/state-by-state-plasma-donation-laws-regulations-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/state-by-state-plasma-donation-laws-regulations-2025.html",
+      "link": "/faq",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/faq"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/state-by-state-plasma-donation-laws-regulations-2025.html",
+      "link": "/state/california.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/california.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/state-by-state-plasma-donation-laws-regulations-2025.html",
+      "link": "/state/texas.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/texas.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/state-by-state-plasma-donation-laws-regulations-2025.html",
+      "link": "/state/florida.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/florida.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/state-by-state-plasma-donation-laws-regulations-2025.html",
+      "link": "/state/new-york.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-york.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-calculators-income-tools-2025.html",
+      "link": "/es/blog/plasma-donation-calculators-income-tools-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-calculators-income-tools-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/insurance-companies-hate-plasma-donors-2025.html",
+      "link": "/es/blog/insurance-companies-hate-plasma-donors-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/insurance-companies-hate-plasma-donors-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/insurance-companies-hate-plasma-donors-2025.html",
+      "link": "/insurance-lawsuit-plasma-donors.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/insurance-lawsuit-plasma-donors.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/insurance-companies-hate-plasma-donors-2025.html",
+      "link": "/insurance-protection-plasma-donors.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/insurance-protection-plasma-donors.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/ab-plasma-secret-income-revealed.html",
+      "link": "/es/blog/ab-plasma-secret-income-revealed.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/ab-plasma-secret-income-revealed.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/is-plasma-donation-worth-it-financial-analysis.html",
+      "link": "/es/blog/is-plasma-donation-worth-it-financial-analysis.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/is-plasma-donation-worth-it-financial-analysis.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-to-prepare-for-plasma-donation.html",
+      "link": "/es/blog/how-to-prepare-for-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-to-prepare-for-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/do-you-get-1099-plasma-donation.html",
+      "link": "/es/blog/do-you-get-1099-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/do-you-get-1099-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-recovery-tips-complete-guide-2025.html",
+      "link": "/es/blog/plasma-donation-recovery-tips-complete-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-recovery-tips-complete-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/college-student-plasma-income-optimization-2025.html",
+      "link": "/es/blog/college-student-plasma-income-optimization-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/college-student-plasma-income-optimization-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/new-york-city-plasma-donation-earnings-guide-2025.html",
+      "link": "/es/blog/new-york-city-plasma-donation-earnings-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/new-york-city-plasma-donation-earnings-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-process-step-by-step.html",
+      "link": "/es/blog/plasma-donation-process-step-by-step.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-process-step-by-step.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-health-risks-medical-analysis-2025.html",
+      "link": "/es/blog/plasma-donation-health-risks-medical-analysis-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-health-risks-medical-analysis-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/does-red-cross-pay-for-blood-donations.html",
+      "link": "/es/blog/does-red-cross-pay-for-blood-donations.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/does-red-cross-pay-for-blood-donations.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/does-red-cross-pay-for-blood-donations.html",
+      "link": "/blog/how-much-money-plasma-donation",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-money-plasma-donation"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/does-red-cross-pay-for-blood-donations.html",
+      "link": "/blog/plasma-donation-process-step-by-step",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-process-step-by-step"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/does-red-cross-pay-for-blood-donations.html",
+      "link": "/blog/highest-paying-plasma-centers-near-me",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/highest-paying-plasma-centers-near-me"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-scam-detector-calculator.html",
+      "link": "/es/blog/plasma-donation-scam-detector-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-scam-detector-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/csl-plasma-pay-rates-2025.html",
+      "link": "/es/blog/csl-plasma-pay-rates-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/csl-plasma-pay-rates-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/lost-job-plasma-donation-survival-guide.html",
+      "link": "/es/blog/lost-job-plasma-donation-survival-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/lost-job-plasma-donation-survival-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/can-you-donate-plasma-twice-a-week.html",
+      "link": "/es/blog/can-you-donate-plasma-twice-a-week.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/can-you-donate-plasma-twice-a-week.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-nutrition-diet-optimization-2025.html",
+      "link": "/es/blog/plasma-donation-nutrition-diet-optimization-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-nutrition-diet-optimization-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-to-improve-veins-for-plasma-donation-complete-guide.html",
+      "link": "/es/blog/how-to-improve-veins-for-plasma-donation-complete-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-to-improve-veins-for-plasma-donation-complete-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/realistic-plasma-income-budget-calculator-2025.html",
+      "link": "/es/blog/realistic-plasma-income-budget-calculator-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/realistic-plasma-income-budget-calculator-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-money-can-you-make-donating-plasma-2025.html",
+      "link": "/es/blog/how-much-money-can-you-make-donating-plasma-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-money-can-you-make-donating-plasma-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-health-benefits-calculator.html",
+      "link": "/es/blog/plasma-donation-health-benefits-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-health-benefits-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-to-increase-vein-size-plasma-donation.html",
+      "link": "/es/blog/how-to-increase-vein-size-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-to-increase-vein-size-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/best-plasma-centers-texas.html",
+      "link": "/es/blog/best-plasma-centers-texas.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/best-plasma-centers-texas.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/15-ways-make-money-2025-viral-ranking.html",
+      "link": "/es/blog/15-ways-make-money-2025-viral-ranking.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/15-ways-make-money-2025-viral-ranking.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-taxes-irs-legal-guide-2025.html",
+      "link": "/es/blog/plasma-donation-taxes-irs-legal-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-taxes-irs-legal-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/ab-plasma-donation-calculator.html",
+      "link": "/es/blog/ab-plasma-donation-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/ab-plasma-donation-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-do-you-get-donating-plasma-iowa.html",
+      "link": "/es/blog/how-much-do-you-get-donating-plasma-iowa.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-do-you-get-donating-plasma-iowa.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-do-you-get-donating-plasma-iowa.html",
+      "link": "/state/iowa.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/iowa.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-do-you-get-donating-plasma-iowa.html",
+      "link": "/blog/best-times-donate-plasma",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/best-times-donate-plasma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/highest-paying-plasma-centers-2025.html",
+      "link": "/es/blog/highest-paying-plasma-centers-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/highest-paying-plasma-centers-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-health-screening-guide.html",
+      "link": "/es/blog/plasma-donation-health-screening-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-health-screening-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-center-comparison.html",
+      "link": "/es/blog/plasma-center-comparison.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-center-comparison.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/first-time-plasma-donation-bonus-calculator.html",
+      "link": "/es/blog/first-time-plasma-donation-bonus-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/first-time-plasma-donation-bonus-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/unemployed-plasma-donation-income-bridge.html",
+      "link": "/es/blog/unemployed-plasma-donation-income-bridge.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/unemployed-plasma-donation-income-bridge.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/emergency-money-plasma-donation-broke.html",
+      "link": "/es/blog/emergency-money-plasma-donation-broke.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/emergency-money-plasma-donation-broke.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/make-1200-week-donating-plasma-calculator.html",
+      "link": "/es/blog/make-1200-week-donating-plasma-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/make-1200-week-donating-plasma-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/emergency-same-day-plasma-donation-cash-2025.html",
+      "link": "/es/blog/emergency-same-day-plasma-donation-cash-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/emergency-same-day-plasma-donation-cash-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-frequency-schedule-optimization-2025.html",
+      "link": "/es/blog/plasma-donation-frequency-schedule-optimization-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-frequency-schedule-optimization-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-side-hustle-complete-guide.html",
+      "link": "/es/blog/plasma-donation-side-hustle-complete-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-side-hustle-complete-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-vs-blood-donation-money-calculator.html",
+      "link": "/es/blog/plasma-vs-blood-donation-money-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-vs-blood-donation-money-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/cuanto-pagan-por-donar-plasma-guia-completa-2025.html",
+      "link": "/es/blog/cuanto-pagan-por-donar-plasma-guia-completa-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cuanto-pagan-por-donar-plasma-guia-completa-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california-plasma-donation-pay-rates-complete-guide-2025.html",
+      "link": "/es/blog/california-plasma-donation-pay-rates-complete-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california-plasma-donation-pay-rates-complete-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/can-you-make-1000-month-donating-plasma.html",
+      "link": "/es/blog/can-you-make-1000-month-donating-plasma.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/can-you-make-1000-month-donating-plasma.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/earn-800-month-plasma-donation-complete-strategy-guide-2025.html",
+      "link": "/es/blog/earn-800-month-plasma-donation-complete-strategy-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/earn-800-month-plasma-donation-complete-strategy-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/new-jersey-plasma-donation-earnings-guide-2025.html",
+      "link": "/es/blog/new-jersey-plasma-donation-earnings-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/new-jersey-plasma-donation-earnings-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-side-hustle-college-calculator.html",
+      "link": "/es/blog/plasma-donation-side-hustle-college-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-side-hustle-college-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-taxes.html",
+      "link": "/es/blog/plasma-donation-taxes.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-taxes.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-blood-money-difference.html",
+      "link": "/es/blog/plasma-donation-blood-money-difference.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-blood-money-difference.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-side-effects.html",
+      "link": "/es/blog/plasma-donation-side-effects.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-side-effects.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-des-moines-iowa.html",
+      "link": "/es/blog/plasma-donation-des-moines-iowa.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-des-moines-iowa.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/fastest-plasma-qualification-speed-guide-2025.html",
+      "link": "/es/blog/fastest-plasma-qualification-speed-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/fastest-plasma-qualification-speed-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-vs-everything-2025-shocking-comparison.html",
+      "link": "/es/blog/plasma-vs-everything-2025-shocking-comparison.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-vs-everything-2025-shocking-comparison.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-eligibility-requirements-comprehensive-guide-2025.html",
+      "link": "/es/blog/plasma-donation-eligibility-requirements-comprehensive-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-eligibility-requirements-comprehensive-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-near-me-locator-guide-2025.html",
+      "link": "/es/blog/plasma-donation-near-me-locator-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-near-me-locator-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-first-time-complete-guide-2025.html",
+      "link": "/es/blog/plasma-donation-first-time-complete-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-first-time-complete-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/octapharma-vs-competitors-payment-calculator.html",
+      "link": "/es/blog/octapharma-vs-competitors-payment-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/octapharma-vs-competitors-payment-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-schedule-money-maximizer.html",
+      "link": "/es/blog/plasma-donation-schedule-money-maximizer.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-schedule-money-maximizer.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-side-effects-red-veins-medical-guide-2025.html",
+      "link": "/es/blog/plasma-donation-side-effects-red-veins-medical-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-side-effects-red-veins-medical-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-requirements.html",
+      "link": "/es/blog/plasma-donation-requirements.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-requirements.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-tips-beginners.html",
+      "link": "/es/blog/plasma-donation-tips-beginners.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-tips-beginners.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/complete-medical-eligibility-guide-plasma-donation.html",
+      "link": "/es/blog/complete-medical-eligibility-guide-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/complete-medical-eligibility-guide-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/student-loan-crisis-plasma-solution-2025.html",
+      "link": "/es/blog/student-loan-crisis-plasma-solution-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/student-loan-crisis-plasma-solution-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/student-loan-crisis-plasma-solution-2025.html",
+      "link": "/student-loan-plasma-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/student-loan-plasma-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/better-ways-earn-money-than-plasma-donation-2025.html",
+      "link": "/es/blog/better-ways-earn-money-than-plasma-donation-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/better-ways-earn-money-than-plasma-donation-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-money-plasma-donation.html",
+      "link": "/es/blog/how-much-money-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-money-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-fort-collins-colorado-earnings.html",
+      "link": "/es/blog/plasma-donation-fort-collins-colorado-earnings.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-fort-collins-colorado-earnings.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/easy-money-no-experience-2025.html",
+      "link": "/es/blog/easy-money-no-experience-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/easy-money-no-experience-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/find-highest-paying-plasma-centers-near-me-2025.html",
+      "link": "/es/blog/find-highest-paying-plasma-centers-near-me-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/find-highest-paying-plasma-centers-near-me-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-referral-income-maximization-2025.html",
+      "link": "/es/blog/plasma-donation-referral-income-maximization-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-referral-income-maximization-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-rockville-maryland-earnings.html",
+      "link": "/es/blog/plasma-donation-rockville-maryland-earnings.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-rockville-maryland-earnings.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-do-you-actually-make-donating-plasma.html",
+      "link": "/es/blog/how-much-do-you-actually-make-donating-plasma.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-do-you-actually-make-donating-plasma.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-bonuses-promotions.html",
+      "link": "/es/blog/plasma-donation-bonuses-promotions.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-bonuses-promotions.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-bonuses-promotions.html",
+      "link": "/blog/biolife-vs-csl-plasma-comparison",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/biolife-vs-csl-plasma-comparison"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/pregnancy-plasma-donation-complete-guide-2025.html",
+      "link": "/es/blog/pregnancy-plasma-donation-complete-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/pregnancy-plasma-donation-complete-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/need-money-now-emergency-plasma-2025.html",
+      "link": "/es/blog/need-money-now-emergency-plasma-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/need-money-now-emergency-plasma-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-eligibility-quiz-viral.html",
+      "link": "/es/blog/plasma-donation-eligibility-quiz-viral.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-eligibility-quiz-viral.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/weekly-plasma-earnings-calculator.html",
+      "link": "/es/blog/weekly-plasma-earnings-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/weekly-plasma-earnings-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/ultimate-plasma-donation-guide.html",
+      "link": "/es/blog/ultimate-plasma-donation-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/ultimate-plasma-donation-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/csl-plasma-tax-calculator.html",
+      "link": "/es/blog/csl-plasma-tax-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/csl-plasma-tax-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-income-tax-deductions-guide-2025.html",
+      "link": "/es/blog/plasma-income-tax-deductions-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-income-tax-deductions-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-income-tax-deductions-guide-2025.html",
+      "link": "/plasma-tax-deduction-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/plasma-tax-deduction-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-do-you-get-for-donating-plasma-in-iowa.html",
+      "link": "/es/blog/how-much-do-you-get-for-donating-plasma-in-iowa.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-do-you-get-for-donating-plasma-in-iowa.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html",
+      "link": "/es/blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-bonus-maximization-strategies-2025.html",
+      "link": "/es/blog/plasma-donation-bonus-maximization-strategies-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-bonus-maximization-strategies-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/make-1000-month-plasma-donation-realistic-guide-2025.html",
+      "link": "/es/blog/make-1000-month-plasma-donation-realistic-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/make-1000-month-plasma-donation-realistic-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-tax-guide-2025.html",
+      "link": "/es/blog/plasma-donation-tax-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-tax-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/highest-paying-plasma-centers-by-state-location-guide-2025.html",
+      "link": "/es/blog/highest-paying-plasma-centers-by-state-location-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/highest-paying-plasma-centers-by-state-location-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/24-hour-plasma-centers-complete-locator-guide-2025.html",
+      "link": "/es/blog/24-hour-plasma-centers-complete-locator-guide-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/24-hour-plasma-centers-complete-locator-guide-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-weight-requirements.html",
+      "link": "/es/blog/plasma-donation-weight-requirements.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-weight-requirements.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/shocking-irs-tracks-plasma-income-2025.html",
+      "link": "/es/blog/shocking-irs-tracks-plasma-income-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/shocking-irs-tracks-plasma-income-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/social-security-plasma-income-impact-2025.html",
+      "link": "/es/blog/social-security-plasma-income-impact-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/social-security-plasma-income-impact-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/social-security-plasma-income-impact-2025.html",
+      "link": "/social-security-plasma-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/social-security-plasma-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-after-covid-vaccine-timing-2025.html",
+      "link": "/es/blog/plasma-donation-after-covid-vaccine-timing-2025.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-after-covid-vaccine-timing-2025.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/index.html",
+      "link": "favicon.svg",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/favicon.svg"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/index.html",
+      "link": "manifest.json",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/manifest.json"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/index.html",
+      "link": "blog/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/blog"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/index.html",
+      "link": "calculator.js",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/calculator.js"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/states.html",
+      "link": "favicon.svg",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/favicon.svg"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/grifols/index.html",
+      "link": "/es/centers/grifols/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/centers/grifols"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/csl-plasma/index.html",
+      "link": "/es/centers/csl-plasma/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/centers/csl-plasma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/biolife/index.html",
+      "link": "/es/centers/biolife/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/centers/biolife"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/centers/octapharma/index.html",
+      "link": "/es/centers/octapharma/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/centers/octapharma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/first-time-plasma-donation.html",
+      "link": "/es/blog/california/first-time-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/first-time-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/first-time-plasma-donation.html",
+      "link": "/california-cities",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/california-cities"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-tech-entertainment-plasma-earnings.html",
+      "link": "/es/blog/california/california-tech-entertainment-plasma-earnings.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-entertainment-plasma-earnings.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/maximize-plasma-earnings.html",
+      "link": "/es/blog/california/maximize-plasma-earnings.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/maximize-plasma-earnings.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "/es/blog/california/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-tax-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-tax-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-earnings-calculator.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-earnings-calculator.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-income-tax-deductions.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-income-tax-deductions.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-budget-planning.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-budget-planning.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-financial-planning.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-financial-planning.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-health-benefits.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-health-benefits.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-eligibility-requirements.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-eligibility-requirements.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-side-effects.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-side-effects.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-recovery-tips.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-recovery-tips.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-preparation-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-preparation-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-frequency-guidelines.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-frequency-guidelines.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-bay-area.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-bay-area.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-san-francisco.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-san-francisco.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-sacramento.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-sacramento.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-fresno.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-fresno.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-center-comparison.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-center-comparison.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-first-time-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-first-time-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-process-explained.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-process-explained.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-what-to-expect.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-what-to-expect.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-tips-for-beginners.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-tips-for-beginners.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-common-questions.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-common-questions.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/index.html",
+      "link": "california-plasma-donation-myths-debunked.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-myths-debunked.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-requirements-eligibility.html",
+      "link": "/es/blog/california/california-plasma-donation-requirements-eligibility.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-plasma-donation-requirements-eligibility.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/do-plasma-centers-report-social-security.html",
+      "link": "/es/blog/california/do-plasma-centers-report-social-security.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/do-plasma-centers-report-social-security.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/does-irs-track-plasma-donations.html",
+      "link": "/es/blog/california/does-irs-track-plasma-donations.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/does-irs-track-plasma-donations.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/plasma-donation-health-tips.html",
+      "link": "/es/blog/california/plasma-donation-health-tips.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-donation-health-tips.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/plasma-donation-schedule.html",
+      "link": "/es/blog/california/plasma-donation-schedule.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-donation-schedule.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/do-you-get-1099-plasma-donation.html",
+      "link": "/es/blog/california/do-you-get-1099-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/do-you-get-1099-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-tech-irs-plasma-tracking.html",
+      "link": "/es/blog/california/california-tech-irs-plasma-tracking.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-irs-plasma-tracking.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/how-to-increase-vein-size-plasma-donation.html",
+      "link": "/es/blog/california/how-to-increase-vein-size-plasma-donation.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/how-to-increase-vein-size-plasma-donation.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/plasma-center-comparison.html",
+      "link": "/es/blog/california/plasma-center-comparison.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-center-comparison.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/can-you-make-1000-month-donating-plasma.html",
+      "link": "/es/blog/california/can-you-make-1000-month-donating-plasma.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/can-you-make-1000-month-donating-plasma.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/plasma-donation-taxes.html",
+      "link": "/es/blog/california/plasma-donation-taxes.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-donation-taxes.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-tech-vein-health-guide.html",
+      "link": "/es/blog/california/california-tech-vein-health-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-vein-health-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-tech-social-security-benefits.html",
+      "link": "/es/blog/california/california-tech-social-security-benefits.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-social-security-benefits.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-side-effects-safety.html",
+      "link": "/es/blog/california/california-plasma-donation-side-effects-safety.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-plasma-donation-side-effects-safety.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/plasma-donation-requirements.html",
+      "link": "/es/blog/california/plasma-donation-requirements.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-donation-requirements.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/ultimate-plasma-donation-guide.html",
+      "link": "/es/blog/california/ultimate-plasma-donation-guide.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/ultimate-plasma-donation-guide.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-maximize-earnings.html",
+      "link": "/es/blog/california/california-plasma-donation-maximize-earnings.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-plasma-donation-maximize-earnings.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-tech-1099-forms.html",
+      "link": "/es/blog/california/california-tech-1099-forms.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-1099-forms.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-los-angeles-san-diego.html",
+      "link": "/es/blog/california/california-plasma-donation-los-angeles-san-diego.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-plasma-donation-los-angeles-san-diego.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/st-louis/index.html",
+      "link": "/state/missouri.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/missouri.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/st-louis/index.html",
+      "link": "/state/arizona/phoenix.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/phoenix.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/st-louis/index.html",
+      "link": "/state/pennsylvania/philadelphia.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/philadelphia.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/st-louis/index.html",
+      "link": "/state/texas/san-antonio.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/texas/san-antonio.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/springfield-mo/index.html",
+      "link": "/es/calculators/missouri/springfield-mo/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/missouri/springfield-mo"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/columbia-mo/index.html",
+      "link": "/es/calculators/missouri/columbia-mo/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/missouri/columbia-mo"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/north-carolina/winston-salem/index.html",
+      "link": "/state/north-carolina/charlotte.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/charlotte.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/north-carolina/winston-salem/index.html",
+      "link": "/state/north-carolina/raleigh.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/raleigh.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/north-carolina/winston-salem/index.html",
+      "link": "/state/north-carolina/greensboro.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/greensboro.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/north-carolina/winston-salem/index.html",
+      "link": "/state/north-carolina/durham.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/durham.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/north-carolina/winston-salem/index.html",
+      "link": "/state/north-carolina.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/north-carolina/raleigh/index.html",
+      "link": "/state/north-carolina/winston-salem.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/winston-salem.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/north-dakota/fargo/index.html",
+      "link": "/state/north-dakota.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/north-dakota.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/alaska/wasilla/index.html",
+      "link": "/state/alaska.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/alaska.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/illinois/joliet/index.html",
+      "link": "/es/calculators/illinois/joliet/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/illinois/joliet"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/illinois/joliet/index.html",
+      "link": "/state/illinois.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/illinois.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/illinois/peoria/index.html",
+      "link": "/state/illinois/aurora.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/aurora.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/illinois/peoria/index.html",
+      "link": "/state/illinois/rockford.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/rockford.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/illinois/peoria/index.html",
+      "link": "/state/illinois/springfield.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/springfield.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/illinois/rockford/index.html",
+      "link": "/state/illinois/peoria.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/peoria.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/illinois/naperville/index.html",
+      "link": "/es/calculators/illinois/naperville/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/illinois/naperville"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/virginia/richmond/index.html",
+      "link": "/state/virginia.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/virginia.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/virginia/alexandria/index.html",
+      "link": "/es/calculators/virginia/alexandria/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/virginia/alexandria"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/washington/bellevue/index.html",
+      "link": "/state/washington/seattle.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/washington/seattle.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/washington/bellevue/index.html",
+      "link": "/state/washington/spokane.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/washington/spokane.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/washington/bellevue/index.html",
+      "link": "/state/washington/tacoma.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/washington/tacoma.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/washington/bellevue/index.html",
+      "link": "/state/washington/vancouver.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/washington/vancouver.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/washington/bellevue/index.html",
+      "link": "/state/washington.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/washington.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/washington/seattle/index.html",
+      "link": "/state/washington/bellevue.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/washington/bellevue.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/vermont/rutland/index.html",
+      "link": "/state/vermont.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/vermont.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/georgia/atlanta/index.html",
+      "link": "/state/georgia/augusta.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/augusta.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/georgia/atlanta/index.html",
+      "link": "/state/georgia/columbus.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/columbus.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/georgia/atlanta/index.html",
+      "link": "/state/georgia/macon.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/macon.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/georgia/atlanta/index.html",
+      "link": "/state/georgia/savannah.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/savannah.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/georgia/atlanta/index.html",
+      "link": "/state/georgia.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/georgia.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/georgia/columbus/index.html",
+      "link": "/state/georgia/atlanta.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/atlanta.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/georgia/athens/index.html",
+      "link": "/es/calculators/georgia/athens/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/georgia/athens"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/connecticut/waterbury/index.html",
+      "link": "/state/connecticut.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/connecticut.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/alabama/birmingham/index.html",
+      "link": "/state/alabama.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/alabama.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-mexico/albuquerque/index.html",
+      "link": "/state/new-mexico.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-mexico.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/oklahoma/oklahoma-city/index.html",
+      "link": "/state/oklahoma.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/oklahoma.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/colorado/aurora/index.html",
+      "link": "/state/colorado.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/colorado.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/ohio/toledo/index.html",
+      "link": "/state/ohio/columbus.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/columbus.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/ohio/toledo/index.html",
+      "link": "/state/ohio/cleveland.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/cleveland.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/ohio/toledo/index.html",
+      "link": "/state/ohio/cincinnati.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/cincinnati.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/ohio/toledo/index.html",
+      "link": "/state/ohio/akron.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/akron.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/ohio/toledo/index.html",
+      "link": "/state/ohio.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/ohio.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/ohio/columbus/index.html",
+      "link": "/state/ohio/toledo.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/toledo.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/maine/portland-me/index.html",
+      "link": "/es/calculators/maine/portland-me/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/maine/portland-me"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/maine/portland-me/index.html",
+      "link": "/state/maine.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/maine.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/maine/auburn-me/index.html",
+      "link": "/es/calculators/maine/auburn-me/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/maine/auburn-me"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/mississippi/southaven/index.html",
+      "link": "/state/mississippi.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/mississippi.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/utah/salt-lake-city/index.html",
+      "link": "/state/utah.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/utah.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/delaware/smyrna/index.html",
+      "link": "/state/delaware.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/delaware.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/delaware/newark-de/index.html",
+      "link": "/es/calculators/delaware/newark-de/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/delaware/newark-de"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/indiana/carmel/index.html",
+      "link": "/state/indiana/indianapolis.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/indianapolis.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/indiana/carmel/index.html",
+      "link": "/state/indiana/fort-wayne.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/fort-wayne.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/indiana/carmel/index.html",
+      "link": "/state/indiana/evansville.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/evansville.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/indiana/carmel/index.html",
+      "link": "/state/indiana/south-bend.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/south-bend.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/indiana/carmel/index.html",
+      "link": "/state/indiana.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/indiana.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/indiana/gary/index.html",
+      "link": "/es/calculators/indiana/gary/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/indiana/gary"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/indiana/south-bend/index.html",
+      "link": "/state/indiana/carmel.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/carmel.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/arkansas/jonesboro/index.html",
+      "link": "/state/arkansas.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/arkansas.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/iowa/waterloo/index.html",
+      "link": "/es/calculators/iowa/waterloo/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/iowa/waterloo"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-york/rochester/index.html",
+      "link": "/state/new-york/buffalo.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/buffalo.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-york/rochester/index.html",
+      "link": "/state/new-york/syracuse.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/syracuse.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-york/rochester/index.html",
+      "link": "/state/new-york/albany.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/albany.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-york/syracuse/index.html",
+      "link": "/state/new-york/rochester.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/rochester.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-york/albany/index.html",
+      "link": "/es/calculators/new-york/albany/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-york/albany"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/concord-nh/index.html",
+      "link": "/es/calculators/new-hampshire/concord-nh/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/concord-nh"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/concord-nh/index.html",
+      "link": "/state/new-hampshire.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-hampshire.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/rochester-nh/index.html",
+      "link": "/es/calculators/new-hampshire/rochester-nh/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/rochester-nh"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/manchester-nh/index.html",
+      "link": "/es/calculators/new-hampshire/manchester-nh/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/manchester-nh"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/derry/index.html",
+      "link": "/es/calculators/new-hampshire/derry/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/derry"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/rhode-island/warwick/index.html",
+      "link": "/state/rhode-island.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/rhode-island.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/west-virginia/wheeling/index.html",
+      "link": "/state/west-virginia.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/west-virginia.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/west-virginia/charleston-wv/index.html",
+      "link": "/es/calculators/west-virginia/charleston-wv/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/west-virginia/charleston-wv"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/wisconsin/green-bay/index.html",
+      "link": "/state/wisconsin.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/wisconsin.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/michigan/detroit/index.html",
+      "link": "/state/michigan/grand-rapids.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/grand-rapids.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/michigan/detroit/index.html",
+      "link": "/state/michigan/warren.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/warren.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/michigan/detroit/index.html",
+      "link": "/state/michigan/sterling-heights.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/sterling-heights.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/michigan/detroit/index.html",
+      "link": "/state/michigan/lansing.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/lansing.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/michigan/detroit/index.html",
+      "link": "/state/michigan.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/michigan.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/michigan/sterling-heights/index.html",
+      "link": "/state/michigan/detroit.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/detroit.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/arizona/mesa/index.html",
+      "link": "/state/arizona/tucson.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/tucson.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/arizona/mesa/index.html",
+      "link": "/state/arizona/chandler.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/chandler.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/arizona/mesa/index.html",
+      "link": "/state/arizona/scottsdale.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/scottsdale.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/arizona/mesa/index.html",
+      "link": "/state/arizona.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/arizona.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/arizona/phoenix/index.html",
+      "link": "/state/arizona/mesa.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/mesa.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-dakota/aberdeen/index.html",
+      "link": "/state/south-dakota.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/south-dakota.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-dakota/watertown-sd/index.html",
+      "link": "/es/calculators/south-dakota/watertown-sd/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-dakota/watertown-sd"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-carolina/greenville/index.html",
+      "link": "/es/calculators/south-carolina/greenville/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-carolina/greenville"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-carolina/greenville/index.html",
+      "link": "/state/south-carolina.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/south-carolina.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-carolina/columbia-sc/index.html",
+      "link": "/es/calculators/south-carolina/columbia-sc/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-carolina/columbia-sc"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/massachusetts/cambridge/index.html",
+      "link": "/state/massachusetts/boston.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/boston.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/massachusetts/cambridge/index.html",
+      "link": "/state/massachusetts/worcester.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/worcester.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/massachusetts/cambridge/index.html",
+      "link": "/state/massachusetts/springfield.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/springfield.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/massachusetts/cambridge/index.html",
+      "link": "/state/massachusetts/lowell.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/lowell.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/massachusetts/cambridge/index.html",
+      "link": "/state/massachusetts.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/massachusetts/worcester/index.html",
+      "link": "/state/massachusetts/cambridge.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/cambridge.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/montana/helena/index.html",
+      "link": "/es/calculators/montana/helena/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/montana/helena"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/montana/helena/index.html",
+      "link": "/state/montana.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/montana.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/wyoming/laramie/index.html",
+      "link": "/state/wyoming.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/wyoming.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/rochester-mn/index.html",
+      "link": "/es/calculators/minnesota/rochester-mn/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/rochester-mn"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/rochester-mn/index.html",
+      "link": "/state/minnesota.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/minnesota.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/bloomington-mn/index.html",
+      "link": "/es/calculators/minnesota/bloomington-mn/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/bloomington-mn"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/st-paul/index.html",
+      "link": "/es/calculators/minnesota/st-paul/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/st-paul"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/florida/jacksonville/index.html",
+      "link": "/state/florida/miami.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/florida/miami.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/florida/jacksonville/index.html",
+      "link": "/state/florida/tampa.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/florida/tampa.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/florida/jacksonville/index.html",
+      "link": "/state/florida/orlando.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/florida/orlando.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/florida/jacksonville/index.html",
+      "link": "/state/florida/st-petersburg.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/florida/st-petersburg.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/florida/orlando/index.html",
+      "link": "/state/florida/jacksonville.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/florida/jacksonville.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/florida/fort-lauderdale/index.html",
+      "link": "/es/calculators/florida/fort-lauderdale/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/florida/fort-lauderdale"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/kentucky/owensboro/index.html",
+      "link": "/state/kentucky.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/kentucky.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/louisiana/lake-charles/index.html",
+      "link": "/state/louisiana.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/louisiana.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/maryland/gaithersburg/index.html",
+      "link": "/state/maryland.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/maryland.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/texas/austin/index.html",
+      "link": "/state/texas/fort-worth.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/texas/fort-worth.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/hawaii/pearl-city/index.html",
+      "link": "/state/hawaii.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/hawaii.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/hawaii/kailua-hi/index.html",
+      "link": "/es/calculators/hawaii/kailua-hi/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/hawaii/kailua-hi"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/kansas/olathe/index.html",
+      "link": "/state/kansas.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/kansas.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/kansas/kansas-city-ks/index.html",
+      "link": "/es/calculators/kansas/kansas-city-ks/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/kansas/kansas-city-ks"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/pennsylvania/reading/index.html",
+      "link": "/state/pennsylvania/pittsburgh.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/pittsburgh.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/pennsylvania/reading/index.html",
+      "link": "/state/pennsylvania/allentown.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/allentown.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/pennsylvania/reading/index.html",
+      "link": "/state/pennsylvania/erie.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/erie.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/pennsylvania/reading/index.html",
+      "link": "/state/pennsylvania.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/pennsylvania/erie/index.html",
+      "link": "/state/pennsylvania/reading.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/reading.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/nebraska/lincoln/index.html",
+      "link": "/state/nebraska.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/nebraska.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/nebraska/bellevue-ne/index.html",
+      "link": "/es/calculators/nebraska/bellevue-ne/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/nebraska/bellevue-ne"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/tennessee/chattanooga/index.html",
+      "link": "/state/tennessee/nashville.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/nashville.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/tennessee/chattanooga/index.html",
+      "link": "/state/tennessee/memphis.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/memphis.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/tennessee/chattanooga/index.html",
+      "link": "/state/tennessee/knoxville.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/knoxville.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/tennessee/chattanooga/index.html",
+      "link": "/state/tennessee/clarksville.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/clarksville.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/tennessee/chattanooga/index.html",
+      "link": "/state/tennessee.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/tennessee/knoxville/index.html",
+      "link": "/state/tennessee/chattanooga.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/chattanooga.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-jersey/newark/index.html",
+      "link": "/state/new-jersey/jersey-city.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/jersey-city.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-jersey/newark/index.html",
+      "link": "/state/new-jersey/paterson.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/paterson.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-jersey/newark/index.html",
+      "link": "/state/new-jersey/elizabeth.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/elizabeth.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-jersey/newark/index.html",
+      "link": "/state/new-jersey/edison.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/edison.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-jersey/newark/index.html",
+      "link": "/state/new-jersey.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-jersey/jersey-city/index.html",
+      "link": "/state/new-jersey/newark.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/newark.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/idaho/boise/index.html",
+      "link": "/state/idaho.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/idaho.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/oregon/salem-or/index.html",
+      "link": "/es/calculators/oregon/salem-or/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/oregon/salem-or"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/oregon/salem-or/index.html",
+      "link": "/state/oregon.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/oregon.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/district-of-columbia/georgetown/index.html",
+      "link": "/state/district-of-columbia.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/district-of-columbia.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/nevada/henderson/index.html",
+      "link": "/state/nevada.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/nevada.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/california/sacramento/index.html",
+      "link": "/state/california/san-francisco.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/california/san-francisco.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/california/sacramento/index.html",
+      "link": "/state/california/fresno.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/california/fresno.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/calculators/california/fresno/index.html",
+      "link": "/state/california/sacramento.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/state/california/sacramento.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cuanto-dinero-puedes-ganar-donando-plasma.html",
+      "link": "/blog/cuanto-dinero-puedes-ganar-donando-plasma/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/cuanto-dinero-puedes-ganar-donando-plasma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cuanto-dinero-puedes-ganar-donando-plasma.html",
+      "link": "/mobile-menu-es.js",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/mobile-menu-es.js"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cual-centro-plasma-paga-mas-dinero.html",
+      "link": "/blog/cual-centro-plasma-paga-mas-dinero/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/cual-centro-plasma-paga-mas-dinero"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cual-centro-plasma-paga-mas-dinero.html",
+      "link": "/es/blog/mejores-horarios-donar-plasma",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/mejores-horarios-donar-plasma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cual-centro-plasma-paga-mas-dinero.html",
+      "link": "/es/blog/consejos-donacion-plasma-principiantes",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/consejos-donacion-plasma-principiantes"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cual-centro-plasma-paga-mas-dinero.html",
+      "link": "/es/blog/cuanto-dinero-puedes-ganar-donando-plasma",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cuanto-dinero-puedes-ganar-donando-plasma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cual-centro-plasma-paga-mas-dinero.html",
+      "link": "/es/preguntas.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/preguntas.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cual-centro-plasma-paga-mas-dinero.html",
+      "link": "/es/acerca.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/acerca.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/consejos-donacion-plasma-principiantes.html",
+      "link": "/blog/consejos-donacion-plasma-principiantes/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/consejos-donacion-plasma-principiantes"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/consejos-donacion-plasma-principiantes.html",
+      "link": "/es/blog/cual-centro-plasma-paga-mas-dinero",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cual-centro-plasma-paga-mas-dinero"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/mejores-centros-plasma-california.html",
+      "link": "/blog/mejores-centros-plasma-california/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/mejores-centros-plasma-california"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/bonos-promociones-donacion-plasma.html",
+      "link": "/blog/bonos-promociones-donacion-plasma/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/bonos-promociones-donacion-plasma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cuanto-pagan-por-donar-plasma.html",
+      "link": "../favicon.svg",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/../favicon.svg"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cuanto-pagan-por-donar-plasma.html",
+      "link": "/blog/cuanto-pagan-por-donar-plasma/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/cuanto-pagan-por-donar-plasma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/mejores-horarios-donar-plasma.html",
+      "link": "/blog/mejores-horarios-donar-plasma/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/mejores-horarios-donar-plasma"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/blog/biolife-vs-csl-plasma-comparacion.html",
+      "link": "/blog/biolife-vs-csl-plasma-comparacion/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/blog/biolife-vs-csl-plasma-comparacion"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/missouri/index.html",
+      "link": "/es/privacidad.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/privacidad.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/missouri/index.html",
+      "link": "/es/terminos.html",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/terminos.html"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-jersey/index.html",
+      "link": "/es/calculators/new-jersey/newark-nj/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-jersey/newark-nj"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/missouri/columbia/index.html",
+      "link": "/calculators/missouri/columbia/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/columbia"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/missouri/springfield/index.html",
+      "link": "/calculators/missouri/springfield/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/springfield"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/virginia/chesapeake/index.html",
+      "link": "/calculators/virginia/chesapeake/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/virginia/chesapeake"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/maine/auburn/index.html",
+      "link": "/calculators/maine/auburn/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/maine/auburn"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/maine/portland/index.html",
+      "link": "/calculators/maine/portland/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/maine/portland"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/delaware/newark/index.html",
+      "link": "/calculators/delaware/newark/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/delaware/newark"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/iowa/iowa-city/index.html",
+      "link": "/calculators/iowa/iowa-city/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/iowa/iowa-city"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/rochester/index.html",
+      "link": "/calculators/new-hampshire/rochester/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/rochester"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/dover/index.html",
+      "link": "/calculators/new-hampshire/dover/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/dover"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/concord/index.html",
+      "link": "/calculators/new-hampshire/concord/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/concord"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/manchester/index.html",
+      "link": "/calculators/new-hampshire/manchester/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/manchester"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/west-virginia/charleston/index.html",
+      "link": "/calculators/west-virginia/charleston/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/west-virginia/charleston"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-dakota/watertown/index.html",
+      "link": "/calculators/south-dakota/watertown/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-dakota/watertown"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-carolina/columbia/index.html",
+      "link": "/calculators/south-carolina/columbia/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-carolina/columbia"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-carolina/mount-pleasant/index.html",
+      "link": "/calculators/south-carolina/mount-pleasant/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-carolina/mount-pleasant"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/montana/butte/index.html",
+      "link": "/calculators/montana/butte/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/montana/butte"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/rochester/index.html",
+      "link": "/calculators/minnesota/rochester/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/rochester"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/saint-paul/index.html",
+      "link": "/calculators/minnesota/saint-paul/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/saint-paul"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/bloomington/index.html",
+      "link": "/calculators/minnesota/bloomington/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/bloomington"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/hawaii/kailua/index.html",
+      "link": "/calculators/hawaii/kailua/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/hawaii/kailua"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/kansas/kansas-city/index.html",
+      "link": "/calculators/kansas/kansas-city/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/kansas/kansas-city"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/nebraska/bellevue/index.html",
+      "link": "/calculators/nebraska/bellevue/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/nebraska/bellevue"
+    },
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/oregon/salem/index.html",
+      "link": "/calculators/oregon/salem/",
+      "expected_path": "/Users/glengomezmeade/plasma-pay-calculator/calculators/oregon/salem"
+    }
+  ],
+  "issues": [
+    {
+      "file": "/Users/glengomezmeade/plasma-pay-calculator/includes/topic-navigation.html",
+      "issues": [
+        "Missing navigation",
+        "Missing PPC logo",
+        "Missing mobile menu functionality"
+      ]
+    }
+  ],
+  "missing_files": [
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/lost-job-plasma-donation-survival-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/macon.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-scam-detector-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/florida.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/emergency-same-day-plasma-donation-cash-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-1099-forms.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/centers/biolife",
+    "/Users/glengomezmeade/plasma-pay-calculator/lowell-ma-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/faq",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-income-tax-deductions-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/advanced-plasma-donation-optimization-hacks-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/rochester-mn",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/missouri.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/terms",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-eligibility-requirements-comprehensive-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-after-covid-vaccine-timing-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-taxes-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/maine/auburn",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/oregon/salem-or",
+    "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+17135554567",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-vs-blood-donation-money-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/sterling-heights.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/social-security-plasma-income-impact-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/nebraska/bellevue-ne",
+    "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+16025555678",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/lansing.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/california/san-diego.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california-plasma-donation-pay-rates-complete-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/virginia.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/mejores-horarios-donar-plasma",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/mejores-centros-plasma-california",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/montana/helena",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/nebraska/bellevue",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-dakota/watertown",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/virginia/alexandria",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/need-money-now-emergency-plasma-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/chicago.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/best-side-hustles-unemployed-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-process-explained.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/washington/tacoma.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/akron.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/rochester",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/consejos-donacion-plasma-principiantes",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/cincinnati.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/can-you-make-1000-month-donating-plasma.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/best-plasma-centers-texas.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/hawaii.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/california/sacramento.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/js/i18n.js",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/manifest.json",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-side-hustle-college-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/first-time-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/buffalo.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/highest-paying-plasma-centers-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-first-time-complete-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-bay-area.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-common-questions.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-sacramento.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/derry",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/how-much-money-plasma-donation",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/syracuse.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/florida/orlando.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/csl-biolife-octapharma-comparison-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/indiana/gary",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-safety-medical-concerns-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/biolife-vs-csl-plasma-comparison",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/does-irs-track-plasma-donations.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/west-virginia/charleston-wv",
+    "/Users/glengomezmeade/plasma-pay-calculator/insurance-lawsuit-plasma-donors.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/evansville.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-jersey/newark-nj",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/one-weird-trick-400-month-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/texas/fort-worth.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/understanding-plasma-medical-uses.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-health-risks-medical-analysis-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/california-cities",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/hawaii/kailua-hi",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-center-comparison.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-process-step-by-step",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-donation-taxes.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/centers/csl-plasma",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/can-you-donate-plasma-with-medical-conditions-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/ohio.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/centers/octapharma",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cuanto-dinero-puedes-ganar-donando-plasma",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/kansas.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/california/fresno.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-schedule.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/cual-centro-plasma-paga-mas-dinero",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/complete-cost-breakdown-plasma-donation-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/maine/auburn-me",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/texas.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/laid-off-plasma-donation-emergency-income.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/lowell.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/district-of-columbia.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-york.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/worcester.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/comprehensive-plasma-tax-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/erie.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/texas/austin.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-san-francisco.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/concord",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cant-pay-bills-plasma-salvation-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/octapharma-vs-competitors-payment-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/aurora.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-recovery-tips.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-taxes.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/illinois.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-donation-schedule.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-frequency-guidelines.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/south-dakota.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-referral-income-maximization-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/frederick-md-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-tips-beginners",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/missouri/springfield-mo",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-first-time-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/minnesota.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/washington.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/edison.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-vein-health-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/mississippi.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-health-screening-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/can-you-donate-plasma-with-tattoos.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-social-security-benefits.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/preguntas.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-weight-requirements.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/augusta.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/delaware.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/springfield",
+    "/Users/glengomezmeade/plasma-pay-calculator/health/nutrition",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/seasonal-plasma-donation-income-optimization-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/best-times-donate-plasma.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/state-by-state-plasma-donation-laws-regulations-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-tax-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/bloomington",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/raleigh.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/new-york-city.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-side-effects-red-veins-medical-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-income-tax-deductions.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/realistic-plasma-income-budget-calculator-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-anchorage-alaska-earnings.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/blog",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/pregnancy-plasma-donation-complete-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/which-plasma-center-pays-most-money",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-weight-requirements-bmi-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/first-time-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/fastest-plasma-qualification-speed-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/greensboro.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/connecticut.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/csl-plasma-pay-rates-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/toledo.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/charlotte.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/weight-requirements-maximum-pay-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/ab-plasma-donation-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/maximize-plasma-earnings.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-side-hustle-complete-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/atlanta.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/north-dakota.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/mesa.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-fresno.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/emergency-plasma-donation-cash-crisis-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/grand-rapids.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/texas/san-antonio.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-to-increase-vein-size-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/do-plasma-centers-report-social-security.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/college-student-plasma-income-optimization-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/better-ways-earn-money-than-plasma-donation-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/easy-money-no-experience-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/maryland.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/earn-800-month-plasma-donation-complete-strategy-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/montana/butte",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/memphis.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-bonuses-promotions.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/rockford.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/california.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/iowa/iowa-city",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/jersey-city.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-carolina/greenville",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/illinois/joliet",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cual-centro-plasma-paga-mas-dinero",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/ab-plasma-secret-income-revealed.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-center-comparison.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/florida/jacksonville.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/kentucky.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/rhode-island.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/clarksville.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/washington/vancouver.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/newark.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/bloomington-mn",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/cleveland.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-eligibility-requirements.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/oregon/salem",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/allentown.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/west-virginia.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-des-moines-iowa.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-plasma-donation-maximize-earnings.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-money-can-you-make-donating-plasma-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/weekly-plasma-earnings-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/15-ways-make-money-2025-viral-ranking.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/24-hour-plasma-centers-complete-locator-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/maine/portland",
+    "/Users/glengomezmeade/plasma-pay-calculator/privacy",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/maximize-plasma-donation-earnings-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-tips-beginners.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-vs-everything-2025-shocking-comparison.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-irs-plasma-tracking.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/tucson.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-myths-debunked.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/do-you-get-1099-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-donation-health-tips.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/winston-salem.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-plasma-donation-los-angeles-san-diego.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-rockville-maryland-earnings.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-taxes-irs-legal-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/savannah.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/does-red-cross-pay-for-blood-donations.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/annual-plasma-income-calculator-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-financial-planning.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/emergency-money-plasma-donation-broke.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/../favicon.svg",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/ohio/columbus.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/pregnancy-plasma-donation-medical-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/can-you-donate-plasma-twice-a-week.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/washington/spokane.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/ultimate-plasma-donation-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-recovery-tips-complete-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/insurance-companies-hate-plasma-donors-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/how-much-do-you-get-for-donating-plasma.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/student-loan-plasma-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-do-you-actually-make-donating-plasma.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/maximize-plasma-earnings.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/how-to-increase-vein-size-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/fort-wayne.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/contact",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/oregon.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/dover",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/arizona.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-what-to-expect.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-plasma-donation-requirements-eligibility.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/carmel.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/nebraska.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/washington/seattle.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/iowa-plasma-donation-earnings.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/student-loan-crisis-plasma-solution-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/arkansas.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/can-you-make-1000-month-donating-plasma.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/maine/portland-me",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/acerca.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-center-comparison.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/find-highest-paying-plasma-centers-near-me-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/florida/fort-lauderdale",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/peoria.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/consejos-donacion-plasma-principiantes",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/do-plasma-centers-report-social-security.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/delaware/newark-de",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/privacidad.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+13125553456",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/minnesota/st-paul",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/montana.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/missouri/columbia-mo",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/california/los-angeles.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/ultimate-plasma-donation-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/texas/houston.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-tips-for-beginners.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/highest-paying-plasma-centers-by-state-location-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/complete-medical-eligibility-guide-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/florida/tampa.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/cuanto-pagan-por-donar-plasma",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/south-bend.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/health/screening",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/philadelphia.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/kansas/kansas-city",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-earnings-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/west-virginia/charleston",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/advanced-plasma-donation-optimization-techniques-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/utah.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/chandler.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/wyoming.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/minnesota/saint-paul",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/oklahoma.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-preparation-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/rochester.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-side-effects.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/biolife-vs-csl-plasma-comparacion",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/springfield.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/wisconsin.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/paterson.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/georgia/columbus.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/rochester-nh",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/cambridge.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-health-benefits-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-tax-implications-irs-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/first-time-plasma-donation-what-to-expect.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/knoxville.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/concord-nh",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/vermont.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/social-security-plasma-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/does-irs-track-plasma-donations.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-tech-entertainment-plasma-earnings.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/hawaii/kailua",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/pittsburgh.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/terminos.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-york/albany.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/chattanooga.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/alabama.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-hampshire.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-carolina/columbia-sc",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/bonos-promociones-donacion-plasma",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-tax-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/biolife-vs-csl-plasma-comparison.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/south-dakota/watertown-sd",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/plasma-donation-requirements.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+12135551234",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/highest-paying-plasma-centers-near-me",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/new-york-city-plasma-donation-earnings-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/shocking-irs-tracks-plasma-income-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/idaho.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/nevada.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-process-step-by-step.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/cuanto-dinero-puedes-ganar-donando-plasma",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/mejores-horarios-donar-plasma",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-to-prepare-for-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/indiana.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-side-effects.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/highest-paying-plasma-centers-near-me.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-side-effects-safety-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/illinois/naperville",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/make-1000-month-plasma-donation-realistic-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/best-times-donate-plasma",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-schedule-money-maximizer.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/iowa/waterloo",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-jersey/elizabeth.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-bonus-maximization-strategies-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-carolina/mount-pleasant",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/florida/miami.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/delaware/newark",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-fort-collins-colorado-earnings.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/virginia/chesapeake",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/csl-plasma-pay-chart-2025-complete-rates-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-nutrition-diet-optimization-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/plasma-tax-deduction-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-blood-money-difference.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/centers/grifols",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-money-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-health-benefits.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/california/california-plasma-donation-budget-planning.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/washington/bellevue.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/shocking-discovery-33-hour-secret-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/scottsdale.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/arizona/phoenix.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-requirements.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/which-plasma-center-pays-most-money.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/indiana/indianapolis.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculator",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/south-carolina.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/new-mexico.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/is-plasma-donation-worth-it-financial-analysis.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/colorado.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/mobile-menu-es.js",
+    "/Users/glengomezmeade/plasma-pay-calculator/insurance-protection-plasma-donors.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/first-time-plasma-donation-bonus-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-york/albany",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/south-carolina/columbia",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/kansas/kansas-city-ks",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/california-plasma-donation-side-effects-safety.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-do-you-get-donating-plasma-iowa.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/tennessee/nashville.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-much-do-you-get-for-donating-plasma-in-iowa.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/mobile-menu.js",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-near-me-locator-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/detroit.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/michigan/warren.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/broke-need-money-desperately-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/north-carolina/durham.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/how-to-improve-veins-for-plasma-donation-complete-guide.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-health-tips.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/georgia.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/make-1200-week-donating-plasma-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/illinois/springfield.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/massachusetts/boston.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/iowa.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/cuanto-pagan-por-donar-plasma-guia-completa-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/pennsylvania/reading.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/rochester",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/alaska.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/favicon.svg",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/new-hampshire/manchester-nh",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/new-hampshire/manchester",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-eligibility-quiz-viral.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-calculators-income-tools-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/favicon.svg",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/calculators/georgia/athens",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/unemployed-plasma-donation-income-bridge.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/calculator.js",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/maine.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/centers/tel:+12125552345",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/new-jersey-plasma-donation-earnings-guide-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/florida/st-petersburg.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/california/san-francisco.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/california/do-you-get-1099-plasma-donation.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/blog/plasma-donation-bonuses-promotions",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/michigan.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/louisiana.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/plasma-donation-frequency-schedule-optimization-2025.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/es/blog/csl-plasma-tax-calculator.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/state/texas/dallas.html",
+    "/Users/glengomezmeade/plasma-pay-calculator/calculators/missouri/columbia"
+  ]
+}

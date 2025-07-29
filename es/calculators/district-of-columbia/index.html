@@ -196,9 +196,214 @@
             font-size: 11px;
         }
     }
-    </style>
+    
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .trust-badge {
+                font-size: 0.6rem;
+                padding: 0.15rem 0.4rem;
+            }
+            
+            .logo {
+                font-size: 1rem;
+            }
+            
+            .logo-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
+            }
+        }
+
+        /* Add padding to body to account for fixed nav */
+        body {
+            padding-top: 80px;
+        }
+</style>
 </head>
 <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/es/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Calculadora Plasma
+                </a>
+                <div class="trust-badge">Actualizado 2025</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/es/#calculator">Calculadora</a></li>
+                <li><a href="/es/blog/">Blog</a></li>
+                <li><a href="/es/states.html">Estados</a></li>
+                <li><a href="/es/centers/">Centros</a></li>
+                <li><a href="/es/health/">Salud</a></li>
+                <li><a href="/es/process/">Proceso</a></li>
+                <li><a href="/es/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/es/#calculator">Calculadora</a></li>
+                <li><a href="/es/blog/">Blog</a></li>
+                <li><a href="/es/states.html">Estados</a></li>
+                <li><a href="/es/centers/">Centros</a></li>
+                <li><a href="/es/health/">Salud</a></li>
+                <li><a href="/es/process/">Proceso</a></li>
+                <li><a href="/es/faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navigation -->
+    
+
+    <!-- Navigation -->
+    
+
+    <!-- Navigation -->
+    
+
 
     <div class="language-switcher">
         <a href="/calculators/district-of-columbia/" class="lang-option english" title="English">
@@ -208,58 +413,7 @@
     </div>
 
     <!-- Header -->
-        <header class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">🩸</span>
-                    </div>
-                    <a href="/es/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
-                        Calculadora de Pago por Plasma
-                    </a>
-                </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-6">
-                    <a href="/es/calculadoras/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Calculadoras</a>
-                    <a href="/es/centros/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Centros</a>
-                    <a href="/es/salud/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Guía de Salud</a>
-                    <a href="/es/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
-                    <div class="language-switcher">
-                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
-                            <option value="es">🇪🇸 Español</option>
-                            <option value="en">🇺🇸 English</option>
-                        </select>
-                    </div>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Navigation Menu -->
-            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
-                <div class="flex flex-col space-y-3 pt-4">
-                    <a href="/es/calculadoras/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Calculadoras</a>
-                    <a href="/es/centros/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Centros</a>
-                    <a href="/es/salud/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Guía de Salud</a>
-                    <a href="/es/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
-                    <div class="py-2">
-                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
-                            <option value="es">🇪🇸 Español</option>
-                            <option value="en">🇺🇸 English</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+        
 
     <main>
 

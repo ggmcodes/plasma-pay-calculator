@@ -415,59 +415,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">🩸</span>
-                    </div>
-                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors">
-                        Plasma Pay Calculator
-                    </a>
-                </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-6">
-                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">State Calculators</a>
-                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Find Centers</a>
-                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Health Guide</a>
-                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Blog</a>
-                    <div class="language-switcher">
-                        <select id="languageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
-                            <option value="en">🇺🇸 English</option>
-                            <option value="es">🇪🇸 Español</option>
-                        </select>
-                    </div>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <p class="text-gray-700 leading-relaxed mb-4"ath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Navigation Menu -->
-            <div id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
-                <div class="flex flex-col space-y-3 pt-4">
-                    <a href="/calculators/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">State Calculators</a>
-                    <a href="/centers/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Find Centers</a>
-                    <a href="/health/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Health Guide</a>
-                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium py-2 transition-colors">Blog</a>
-                    <div class="py-2">
-                        <select id="mobileLanguageSelect" class="bg-gray-100 border border-gray-300 rounded px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-red-500">
-                            <option value="en">🇺🇸 English</option>
-                            <option value="es">🇪🇸 Español</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
@@ -479,28 +426,36 @@
                 <div class="trust-badge">Updated for 2025</div>
             </div>
             <ul class="nav-links">
-                <li><a href="/" class="active">Calculator</a></li>
+                <li><a href="/#calculator">Calculator</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/states.html">States</a></li>
                 <li><a href="/centers/">Centers</a></li>
+                <li><a href="/health/">Health</a></li>
+                <li><a href="/process/">Process</a></li>
                 <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
             <ul>
-                <li><a href="/">Calculator</a></li>
+                <li><a href="/#calculator">Calculator</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/states.html">States</a></li>
                 <li><a href="/centers/">Centers</a></li>
+                <li><a href="/health/">Health</a></li>
+                <li><a href="/process/">Process</a></li>
                 <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/es/" class="language-switcher">🇲🇽 Español</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Navigation -->
+    
+
+    
+
+    <!-- Navigation -->
+    
 
     <main class="min-h-screen bg-gray-50">
         <div class="container">
