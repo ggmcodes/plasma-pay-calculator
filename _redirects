@@ -141,3 +141,9 @@ https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301
 /es/blog/plasma-donation-health-benefits-calculator.html /blog/plasma-donation-health-benefits-calculator.html 301
 /es/blog/plasma-donation-schedule-money-maximizer.html /blog/plasma-donation-schedule-money-maximizer.html 301
 /blog/plasma-donation-taxes-calculator.html /blog/plasma-donation-taxes.html 301
+
+# Replace meta refresh redirects with proper 301 redirects
+/blog/california-tech-irs-plasma-tracking.html /blog/does-irs-track-plasma-donations.html 301
+/blog/california-tech-1099-forms.html /blog/do-you-get-1099-plasma-donation.html 301
+/blog/california-tech-entertainment-plasma-earnings.html /blog/california-plasma-donation-los-angeles-san-diego.html 301
+/blog/california-tech-social-security-benefits.html /blog/do-plasma-centers-report-social-security.html 301
