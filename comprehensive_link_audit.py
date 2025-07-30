@@ -11,7 +11,7 @@ import json
 def comprehensive_link_audit():
     """Complete audit of all internal links"""
     
-    base_dir = "/Users/glengomezmeade/Projects/plasma-pay-calculator"
+    base_dir = "/Users/glengomezmeade/plasma-pay-calculator"
     
     print("🔍 COMPREHENSIVE PPC LINK AUDIT")
     print("🎯 Verifying English ↔ Spanish Link Integrity")
