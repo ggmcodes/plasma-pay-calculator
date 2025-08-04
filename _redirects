@@ -18,6 +18,11 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 http://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 
+# Redirect /state/ URLs to /calculators/ (fixing 404s)
+/state/michigan/grand-rapids.html /calculators/michigan/grand-rapids 301
+/state/michigan/grand-rapids /calculators/michigan/grand-rapids 301
+/state/* /calculators/:splat 301
+
 # Calculator trailing slash redirects (remove trailing slash)
 /calculators/*/  /calculators/:splat 301
 
