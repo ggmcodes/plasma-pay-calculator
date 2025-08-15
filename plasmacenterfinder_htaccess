@@ -1,0 +1,41 @@
+# .htaccess file for plasmacenterfinder.com
+# Place this file in the root directory of plasmacenterfinder.com
+
+RewriteEngine On
+
+# Force HTTPS and redirect to plasmapaycalculator.com
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^plasmacenterfinder\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.plasmacenterfinder\.com$
+RewriteRule ^(.*)$ https://plasmapaycalculator.com/$1 [R=301,L]
+
+# Specific redirects for guides directory to blog
+RewriteRule ^guides/first-time-plasma-donor-guide-2025\.html$ https://plasmapaycalculator.com/blog/first-time-plasma-donor-guide-2025.html [R=301,L]
+RewriteRule ^guides/maximize-plasma-donation-earnings-2025\.html$ https://plasmapaycalculator.com/blog/maximize-plasma-donation-earnings-2025.html [R=301,L]
+RewriteRule ^guides/biolife-vs-csl-plasma-comparison-2025\.html$ https://plasmapaycalculator.com/blog/biolife-vs-csl-plasma-comparison-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-requirements-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-requirements-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-side-effects-safety-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-side-effects-safety-2025.html [R=301,L]
+RewriteRule ^guides/best-plasma-centers-by-state-2025\.html$ https://plasmapaycalculator.com/blog/best-plasma-centers-by-state-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-payment-methods-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-payment-methods-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-referral-bonuses-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-referral-bonuses-2025.html [R=301,L]
+RewriteRule ^guides/health-tips-plasma-donors-2025\.html$ https://plasmapaycalculator.com/blog/health-tips-plasma-donors-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-process-explained-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-process-explained-2025.html [R=301,L]
+RewriteRule ^guides/plasma-vs-blood-donation-guide-2025\.html$ https://plasmapaycalculator.com/blog/plasma-vs-blood-donation-guide-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-tax-guide-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-tax-guide-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-disqualifications-complete-list-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-disqualifications-complete-list-2025.html [R=301,L]
+RewriteRule ^guides/student-guide-plasma-donation-college-money-2025\.html$ https://plasmapaycalculator.com/blog/student-guide-plasma-donation-college-money-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-myths-vs-facts-debunked-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-myths-vs-facts-debunked-2025.html [R=301,L]
+RewriteRule ^guides/how-to-recover-faster-after-plasma-donation-2025\.html$ https://plasmapaycalculator.com/blog/how-to-recover-faster-after-plasma-donation-2025.html [R=301,L]
+RewriteRule ^guides/emergency-money-plasma-donation-financial-crisis-2025\.html$ https://plasmapaycalculator.com/blog/emergency-money-plasma-donation-financial-crisis-2025.html [R=301,L]
+RewriteRule ^guides/what-to-eat-before-after-plasma-donation-2025\.html$ https://plasmapaycalculator.com/blog/what-to-eat-before-after-plasma-donation-2025.html [R=301,L]
+RewriteRule ^guides/plasma-donation-vs-gig-economy-comparison-2025\.html$ https://plasmapaycalculator.com/blog/plasma-donation-vs-gig-economy-comparison-2025.html [R=301,L]
+
+# General guides redirect
+RewriteRule ^guides/(.*)$ https://plasmapaycalculator.com/blog/$1 [R=301,L]
+
+# Redirect homepage to centers
+RewriteRule ^$ https://plasmapaycalculator.com/centers/ [R=301,L]
+RewriteRule ^index\.html$ https://plasmapaycalculator.com/centers/ [R=301,L]
+
+# Catch all - redirect everything else
+RewriteRule ^(.*)$ https://plasmapaycalculator.com/$1 [R=301,L]

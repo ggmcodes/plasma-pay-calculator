@@ -1,8 +1,18 @@
-# Redirect from old domain to new domain
+# Redirect from old domains to new domain
 https://bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
 https://www.bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
 http://bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
 http://www.bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
+
+# Redirect plasmacenterfinder.com to plasmapaycalculator.com
+https://plasmacenterfinder.com/* https://plasmapaycalculator.com/centers/:splat 301!
+https://www.plasmacenterfinder.com/* https://plasmapaycalculator.com/centers/:splat 301!
+http://plasmacenterfinder.com/* https://plasmapaycalculator.com/centers/:splat 301!
+http://www.plasmacenterfinder.com/* https://plasmapaycalculator.com/centers/:splat 301!
+
+# Specific plasmacenterfinder guides to blog redirects
+https://plasmacenterfinder.com/guides/* https://plasmapaycalculator.com/blog/:splat 301!
+https://www.plasmacenterfinder.com/guides/* https://plasmapaycalculator.com/blog/:splat 301!
 
 # Force HTTPS and remove www
 https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!

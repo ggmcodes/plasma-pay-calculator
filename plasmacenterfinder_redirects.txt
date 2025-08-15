@@ -1,0 +1,121 @@
+# PLASMACENTERFINDER.COM REDIRECT RULES
+# Add these to your hosting provider's redirect configuration
+
+# ==================================================
+# OPTION 1: NETLIFY _redirects file
+# Add these lines to your existing _redirects file
+# ==================================================
+
+# Redirect all plasmacenterfinder.com traffic to plasmapaycalculator.com
+https://plasmacenterfinder.com/* https://plasmapaycalculator.com/:splat 301!
+https://www.plasmacenterfinder.com/* https://plasmapaycalculator.com/:splat 301!
+http://plasmacenterfinder.com/* https://plasmapaycalculator.com/:splat 301!
+http://www.plasmacenterfinder.com/* https://plasmapaycalculator.com/:splat 301!
+
+# Specific path mappings for plasmacenterfinder content
+https://plasmacenterfinder.com/guides/* https://plasmapaycalculator.com/blog/:splat 301!
+https://www.plasmacenterfinder.com/guides/* https://plasmapaycalculator.com/blog/:splat 301!
+
+# ==================================================
+# OPTION 2: .htaccess file for Apache servers
+# Place this in the root of plasmacenterfinder.com
+# ==================================================
+
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://plasmapaycalculator.com/$1 [R=301,L]
+
+# Redirect all requests to plasmapaycalculator.com
+RewriteCond %{HTTP_HOST} ^plasmacenterfinder\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.plasmacenterfinder\.com$
+RewriteRule ^(.*)$ https://plasmapaycalculator.com/$1 [R=301,L]
+
+# Specific redirects for guides to blog
+RewriteRule ^guides/(.*)$ https://plasmapaycalculator.com/blog/$1 [R=301,L]
+
+# ==================================================
+# OPTION 3: Cloudflare Page Rules (if using Cloudflare)
+# ==================================================
+
+# Create a page rule:
+# URL Pattern: *plasmacenterfinder.com/*
+# Setting: Forwarding URL (301 - Permanent Redirect)
+# Destination: https://plasmapaycalculator.com/$2
+
+# ==================================================
+# OPTION 4: Domain Registrar/DNS Level Redirect
+# ==================================================
+
+# Many domain registrars offer URL forwarding
+# Set up a 301 permanent redirect from:
+# plasmacenterfinder.com → plasmapaycalculator.com
+# with path forwarding enabled
+
+# ==================================================
+# OPTION 5: HTML Meta Redirect (backup option)
+# Place this index.html at plasmacenterfinder.com root
+# ==================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting to Plasma Pay Calculator</title>
+    <meta http-equiv="refresh" content="0; url=https://plasmapaycalculator.com">
+    <link rel="canonical" href="https://plasmapaycalculator.com">
+    <script type="text/javascript">
+        // JavaScript redirect as backup
+        window.location.href = "https://plasmapaycalculator.com" + window.location.pathname + window.location.search;
+    </script>
+</head>
+<body>
+    <p>This site has moved. Redirecting to <a href="https://plasmapaycalculator.com">Plasma Pay Calculator</a>...</p>
+</body>
+</html>
+
+# ==================================================
+# SPECIFIC URL MAPPINGS
+# ==================================================
+
+# Blog/Guide redirects (plasmacenterfinder guides → plasmapaycalculator blog)
+/guides/first-time-plasma-donor-guide-2025.html → /blog/first-time-plasma-donor-guide-2025.html
+/guides/maximize-plasma-donation-earnings-2025.html → /blog/maximize-plasma-donation-earnings-2025.html
+/guides/biolife-vs-csl-plasma-comparison-2025.html → /blog/biolife-vs-csl-plasma-comparison-2025.html
+/guides/plasma-donation-requirements-2025.html → /blog/plasma-donation-requirements-2025.html
+/guides/plasma-donation-side-effects-safety-2025.html → /blog/plasma-donation-side-effects-safety-2025.html
+/guides/best-plasma-centers-by-state-2025.html → /blog/best-plasma-centers-by-state-2025.html
+/guides/plasma-donation-payment-methods-2025.html → /blog/plasma-donation-payment-methods-2025.html
+/guides/plasma-donation-referral-bonuses-2025.html → /blog/plasma-donation-referral-bonuses-2025.html
+/guides/health-tips-plasma-donors-2025.html → /blog/health-tips-plasma-donors-2025.html
+/guides/plasma-donation-process-explained-2025.html → /blog/plasma-donation-process-explained-2025.html
+/guides/plasma-vs-blood-donation-guide-2025.html → /blog/plasma-vs-blood-donation-guide-2025.html
+/guides/plasma-donation-tax-guide-2025.html → /blog/plasma-donation-tax-guide-2025.html
+/guides/plasma-donation-disqualifications-complete-list-2025.html → /blog/plasma-donation-disqualifications-complete-list-2025.html
+/guides/student-guide-plasma-donation-college-money-2025.html → /blog/student-guide-plasma-donation-college-money-2025.html
+/guides/plasma-donation-myths-vs-facts-debunked-2025.html → /blog/plasma-donation-myths-vs-facts-debunked-2025.html
+/guides/how-to-recover-faster-after-plasma-donation-2025.html → /blog/how-to-recover-faster-after-plasma-donation-2025.html
+/guides/emergency-money-plasma-donation-financial-crisis-2025.html → /blog/emergency-money-plasma-donation-financial-crisis-2025.html
+/guides/what-to-eat-before-after-plasma-donation-2025.html → /blog/what-to-eat-before-after-plasma-donation-2025.html
+/guides/plasma-donation-vs-gig-economy-comparison-2025.html → /blog/plasma-donation-vs-gig-economy-comparison-2025.html
+
+# Centers page (already exists on plasmapaycalculator)
+/ → /centers/
+/index.html → /centers/
+
+# ==================================================
+# VERIFICATION STEPS
+# ==================================================
+
+1. Test redirects using:
+   curl -I https://plasmacenterfinder.com
+   Should show: Location: https://plasmapaycalculator.com
+
+2. Check specific paths:
+   curl -I https://plasmacenterfinder.com/guides/first-time-plasma-donor-guide-2025.html
+   Should redirect to: https://plasmapaycalculator.com/blog/first-time-plasma-donor-guide-2025.html
+
+3. Submit redirect changes to Google Search Console for both domains
+
+4. Update any backlinks you control to point directly to plasmapaycalculator.com
