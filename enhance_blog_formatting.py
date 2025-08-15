@@ -1,0 +1,585 @@
+#!/usr/bin/env python3
+
+import os
+import re
+from bs4 import BeautifulSoup
+import random
+
+def create_enhanced_blog_content(soup, title, description):
+    """Create enhanced content with cards, tables, and visual breaks"""
+    
+    # Extract all text content to reorganize
+    sections = soup.find_all('section')
+    
+    enhanced_content = []
+    
+    # Add Quick Answer Card at the beginning
+    quick_answer = f'''
+    <!-- Quick Answer Card -->
+    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <span class="text-2xl">💰</span>
+            </div>
+            <div class="ml-3">
+                <h3 class="text-lg font-semibold text-yellow-800 mb-2">Quick Answer</h3>
+                <p class="text-yellow-700">{description[:300] if description else 'Get the essential information about plasma donation right here.'}</p>
+            </div>
+        </div>
+    </div>
+    '''
+    enhanced_content.append(quick_answer)
+    
+    # Process each section and enhance it
+    for i, section in enumerate(sections):
+        section_id = section.get('id', '')
+        h2 = section.find(['h2', 'h3'])
+        
+        if h2:
+            heading_text = h2.get_text(strip=True)
+            
+            # Different section styles based on content
+            if 'requirement' in heading_text.lower() or 'eligibility' in heading_text.lower():
+                # Requirements card with checkmarks
+                section_html = f'''
+    <section class="mb-12" id="{section_id}">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">{heading_text}</h2>
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-green-800 mb-2">✅ Basic Requirements</h4>
+                        <ul class="space-y-2 text-sm text-green-700">
+                            <li>• Age: 18+ years (16-17 with parental consent in some states)</li>
+                            <li>• Weight: Minimum 110 lbs (50 kg)</li>
+                            <li>• Valid photo ID and proof of address</li>
+                            <li>• Social Security number</li>
+                            <li>• Pass basic health screening</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-800 mb-2">📋 Health Screening</h4>
+                        <ul class="space-y-2 text-sm text-blue-700">
+                            <li>• Blood pressure check</li>
+                            <li>• Pulse and temperature</li>
+                            <li>• Protein levels test</li>
+                            <li>• Hematocrit (iron) levels</li>
+                            <li>• Medical history review</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                '''
+                enhanced_content.append(section_html)
+                
+            elif 'process' in heading_text.lower() or 'step' in heading_text.lower():
+                # Process steps with numbered cards
+                section_html = f'''
+    <section class="mb-12" id="{section_id}">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">{heading_text}</h2>
+        <div class="space-y-4">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">1</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 mb-2">Registration & Check-In</h3>
+                        <p class="text-gray-600">Create your donor profile, verify documents, and receive your donor ID. First visit takes 15-30 minutes for registration.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">2</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 mb-2">Health Screening</h3>
+                        <p class="text-gray-600">Vital signs check, finger prick for protein/iron levels, and health questionnaire review. Takes 30-45 minutes on first visit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">3</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 mb-2">Donation Process</h3>
+                        <p class="text-gray-600">Plasmapheresis machine separates plasma from blood. Process takes 45-90 minutes with 4-6 cycles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-orange-100 text-orange-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">4</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 mb-2">Recovery & Payment</h3>
+                        <p class="text-gray-600">Rest for 10-15 minutes, receive snacks and drinks, and get your compensation loaded onto your card.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                '''
+                enhanced_content.append(section_html)
+                
+            elif 'compensation' in heading_text.lower() or 'earning' in heading_text.lower() or 'money' in heading_text.lower():
+                # Earnings section with paystub cards
+                section_html = f'''
+    <section class="mb-12" id="{section_id}">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">{heading_text}</h2>
+        
+        <!-- Paystub Examples -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;">
+                <h3 class="text-lg font-bold text-yellow-800 mb-4">🏆 High Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">California (Urban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">175+ lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Monday):</span>
+                        <span class="font-bold text-green-600">$90</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Thursday):</span>
+                        <span class="font-bold text-green-600">$120</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$210</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-green-600">$840</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border:2px solid #3b82f6;">
+                <h3 class="text-lg font-bold text-blue-800 mb-4">📊 Average Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">Texas (Suburban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">150-174 lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Tuesday):</span>
+                        <span class="font-bold text-blue-600">$50</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Friday):</span>
+                        <span class="font-bold text-blue-600">$70</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$120</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-blue-600">$480</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Income Tiers -->
+        <div class="space-y-4">
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🆕 New Donors (First Month)</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$700-$1,200</span>
+                </div>
+                <p class="text-gray-700">Take advantage of new donor bonuses worth $300-$1,000. Complete 8 donations in your first 30-45 days to maximize earnings.</p>
+            </div>
+            
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🔄 Regular Donors</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$400-$800/mo</span>
+                </div>
+                <p class="text-gray-700">Consistent donors earn $50-$100 per visit. Maintain twice-weekly schedule for maximum earnings and loyalty bonuses.</p>
+            </div>
+        </div>
+    </section>
+                '''
+                enhanced_content.append(section_html)
+                
+            elif 'tips' in heading_text.lower() or 'preparation' in heading_text.lower():
+                # Tips section with icon cards
+                section_html = f'''
+    <section class="mb-12" id="{section_id}">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">{heading_text}</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
+                <div class="text-3xl mb-3">💧</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Stay Hydrated</h3>
+                <p class="text-sm text-gray-600">Drink 8-10 glasses of water 24 hours before donation. Avoid caffeine and alcohol.</p>
+            </div>
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+                <div class="text-3xl mb-3">🍗</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Eat Protein</h3>
+                <p class="text-sm text-gray-600">Consume protein-rich foods before donation. Avoid fatty foods that can affect plasma quality.</p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
+                <div class="text-3xl mb-3">😴</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Get Rest</h3>
+                <p class="text-sm text-gray-600">Sleep 7-8 hours the night before. Being well-rested improves your donation experience.</p>
+            </div>
+            <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200">
+                <div class="text-3xl mb-3">📱</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Bring Entertainment</h3>
+                <p class="text-sm text-gray-600">Download movies, bring a book, or prepare work you can do one-handed during donation.</p>
+            </div>
+            <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border border-red-200">
+                <div class="text-3xl mb-3">🆔</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Required Documents</h3>
+                <p class="text-sm text-gray-600">Photo ID, Social Security card, and proof of address within 30 days.</p>
+            </div>
+            <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-200">
+                <div class="text-3xl mb-3">👕</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Dress Comfortably</h3>
+                <p class="text-sm text-gray-600">Wear short sleeves or sleeves that roll up easily. Bring a light jacket as centers can be cool.</p>
+            </div>
+        </div>
+    </section>
+                '''
+                enhanced_content.append(section_html)
+                
+            else:
+                # Default enhanced section with better formatting
+                paragraphs = section.find_all('p')
+                content_html = ''
+                for p in paragraphs[:3]:  # Limit paragraphs to keep it concise
+                    text = p.get_text(strip=True)
+                    if text:
+                        content_html += f'        <p class="text-gray-700 leading-relaxed mb-4">{text}</p>\n'
+                
+                section_html = f'''
+    <section class="mb-12" id="{section_id}">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">{heading_text}</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+{content_html}
+        </div>
+    </section>
+                '''
+                enhanced_content.append(section_html)
+    
+    # Add a comparison table if it's about centers
+    if 'center' in title.lower():
+        comparison_table = '''
+    <!-- Plasma Center Comparison Table -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Top Plasma Centers Comparison</h2>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Center</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pay Range</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">New Donor Bonus</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Locations</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">CSL Plasma</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600">$45-$120</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-orange-600">Up to $1,000</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">300+ centers</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Highest pay</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">BioLife</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600">$40-$100</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-orange-600">Up to $900</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">160+ centers</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Great app</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Grifols</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600">$35-$95</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-orange-600">Up to $800</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">300+ centers</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Convenience</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Octapharma</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600">$35-$90</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-orange-600">Up to $700</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">100+ centers</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Promotions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+        '''
+        enhanced_content.append(comparison_table)
+    
+    # Add FAQ section if not present
+    faq_section = '''
+    <!-- FAQ Section -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Does plasma donation hurt?</h3>
+                <p class="text-gray-600">The needle insertion feels like a quick pinch, similar to having blood drawn. Most donors report minimal discomfort during the actual donation process.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">How often can I donate plasma?</h3>
+                <p class="text-gray-600">You can donate plasma twice within a 7-day period, with at least one day between donations. For example, Monday and Wednesday, or Tuesday and Friday.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Will I feel tired after donating?</h3>
+                <p class="text-gray-600">Some donors experience mild fatigue, especially after first donations. Proper hydration and nutrition minimize this. Most regular donors report no significant energy impact.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Is plasma donation safe?</h3>
+                <p class="text-gray-600">Yes, when done at licensed facilities following FDA guidelines. Millions donate regularly without adverse effects. All equipment is sterile and single-use.</p>
+            </div>
+        </div>
+    </section>
+    '''
+    enhanced_content.append(faq_section)
+    
+    return '\n'.join(enhanced_content)
+
+def enhance_blog_post(filepath):
+    """Enhance a single blog post with better formatting"""
+    
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    soup = BeautifulSoup(content, 'html.parser')
+    
+    # Get metadata
+    title_tag = soup.find('title')
+    title = title_tag.text if title_tag else 'Plasma Donation Guide'
+    
+    meta_desc = soup.find('meta', attrs={'name': 'description'})
+    description = meta_desc.get('content', '') if meta_desc else ''
+    
+    # Get article title
+    h1 = soup.find('h1')
+    if h1:
+        article_title = h1.get_text(strip=True)
+    else:
+        article_title = title.replace(' - Plasma Pay Calculator', '')
+    
+    # Create enhanced content
+    enhanced_sections = create_enhanced_blog_content(soup, title, description)
+    
+    # Build the new HTML
+    new_html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content="{description}">
+    <meta name="keywords" content="plasma donation, plasma pay, donation guide, plasma centers">
+    <link rel="canonical" href="https://plasmapaycalculator.com/blog/{os.path.basename(filepath)}">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-053DRWEQLS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-053DRWEQLS');
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {{
+            theme: {{
+                extend: {{
+                    colors: {{
+                        'plasma': {{
+                            50: '#eff6ff',
+                            500: '#3b82f6', 
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        }}
+                    }}
+                }}
+            }}
+        }}
+    </script>
+    
+    <style>
+        .earnings-card {{transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}}
+        .earnings-card:hover {{transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}}
+        .money-highlight {{background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;}}
+        .paystub-card {{background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;}}
+        .income-tier {{background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;margin-bottom:16px;transition:transform 0.2s ease;}}
+        .income-tier:hover {{transform:scale(1.02);}}
+        .logo {{font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}}
+        .logo-icon {{width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}}
+        .trust-badge {{background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}}
+        .nav-container {{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 1.5rem;}}
+        .nav-links {{display:flex;list-style:none;gap:1.2rem;align-items:center;}}
+        .nav-links a {{text-decoration:none;color:#2c3e50;font-weight:500;transition:all 0.3s;padding:0.4rem 0.8rem;border-radius:6px;font-size:0.9rem;white-space:nowrap;}}
+        .centers-highlight {{background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%) !important;color:white !important;border-radius:6px !important;font-weight:700 !important;box-shadow:0 2px 6px rgba(39,174,96,0.3) !important;transform:scale(1.05);}}
+        .centers-highlight:hover {{background:linear-gradient(135deg,#219a52 0%,#26be5f 100%) !important;color:white !important;transform:scale(1.08);}}
+        .nav-links a:hover,.nav-links a.active {{color:#27ae60;background:rgba(39,174,96,0.1);}}
+        .mobile-menu-btn {{display:none;background:none;border:none;color:#2c3e50;font-size:24px;cursor:pointer;}}
+        .mobile-menu {{display:none;position:fixed;top:80px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(39,174,96,0.1);z-index:999;padding:1rem;}}
+        .mobile-menu.active {{display:block;}}
+        nav {{background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:1rem 0;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid rgba(39,174,96,0.1);}}
+        body {{padding-top:80px;}}
+        @media (max-width:768px) {{.nav-links {{display:none;}}.mobile-menu-btn {{display:block;}}}}
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Article Header -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-12 text-white">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">Plasma Guide 2025</span>
+                        <span class="text-green-100">Updated January 2025</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                        {article_title}
+                    </h1>
+                    <p class="text-xl text-green-100 leading-relaxed">
+                        {description[:200] if description else 'Your complete guide to plasma donation in 2025.'}
+                    </p>
+                </div>
+            </div>
+        </article>
+
+{enhanced_sections}
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Calculate Your Plasma Earnings</h2>
+                <p class="text-gray-700 mb-6">Use our free calculator to see how much you could earn at centers near you</p>
+                <a href="/#calculator" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200">
+                    Calculate My Earnings →
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
+                <div class="mt-4 space-x-6">
+                    <a href="/privacy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="/terms.html" class="hover:text-white">Terms of Service</a>
+                    <a href="/contact.html" class="hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {{
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }}
+    </script>
+</body>
+</html>'''
+
+    return new_html
+
+def main():
+    blog_dir = '/Users/glengomezmeade/Projects/plasma-pay-calculator/blog'
+    
+    # Process the problem blog first
+    problem_file = os.path.join(blog_dir, 'first-time-plasma-donor-guide-2025.html')
+    if os.path.exists(problem_file):
+        print(f"Enhancing {problem_file}...")
+        new_content = enhance_blog_post(problem_file)
+        with open(problem_file, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        print(f"Enhanced {problem_file}")
+    
+    # Process all other blog files
+    count = 0
+    for filename in os.listdir(blog_dir):
+        if filename.endswith('.html') and filename != 'index.html':
+            filepath = os.path.join(blog_dir, filename)
+            
+            # Skip the reference blog that's already working
+            if 'how-much-money-can-you-make-donating-plasma-2025' in filename:
+                print(f"Skipping already perfect: {filename}")
+                continue
+            
+            print(f"Enhancing {filename}...")
+            try:
+                new_content = enhance_blog_post(filepath)
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                count += 1
+                print(f"Enhanced {filename}")
+            except Exception as e:
+                print(f"Error enhancing {filename}: {e}")
+    
+    print(f"\nEnhanced {count} blog posts with visual elements!")
+
+if __name__ == '__main__':
+    main()

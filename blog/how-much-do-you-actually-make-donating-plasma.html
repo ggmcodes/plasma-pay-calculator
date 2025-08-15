@@ -47,6 +47,10 @@
     <style>
         .earnings-card {transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}
         .earnings-card:hover {transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}
+        .money-highlight {background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;}
+        .paystub-card {background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;}
+        .income-tier {background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;margin-bottom:16px;transition:transform 0.2s ease;}
+        .income-tier:hover {transform:scale(1.02);}
         .logo {font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
         .logo-icon {width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}
         .trust-badge {background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}
@@ -117,168 +121,615 @@
             </div>
         </article>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">💰 Quick Answer: Real Plasma Donation Earnings</h2>
-        </section>
 
-        <section class="mb-12" id="real-donor-examples">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📊 Real Donor Examples & Actual Paystubs</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Let's look at real earnings from actual plasma donors across different scenarios:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Weight:165 lbs •Center:CSL Plasma •Frequency:2x/week</p>
-            <p class="text-gray-700 leading-relaxed mb-4">"I consistently earn $120 per week, which covers my textbooks and groceries. The first month was amazing with all the bonuses!"</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Weight:210 lbs •Center:Grifols Biomat •Frequency:2x/week</p>
-            <p class="text-gray-700 leading-relaxed mb-4">"Higher weight tier means more pay. I make about $80 per donation, so $160/week consistently."</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Weight:140 lbs •Center:BioLife •Frequency:1-2x/week</p>
-            <p class="text-gray-700 leading-relaxed mb-4">"Even with inconsistent donations, I still make enough for my car payment every month."</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>First Month:$750 (with new donor bonuses)</li>
-                <li>Months 2-12:$480/month average</li>
-                <li>Annual Total:$6,030</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>First Month:$900 (with bonuses)</li>
-                <li>Months 2-12:$640/month average</li>
-                <li>Annual Total:$7,940</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>First Month:$650 (with bonuses)</li>
-                <li>Months 2-12:$350/month average</li>
-                <li>Annual Total:$4,500</li>
-            </ul>
-        </section>
+    <!-- Quick Answer Card -->
+    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <span class="text-2xl">💰</span>
+            </div>
+            <div class="ml-3">
+                <h3 class="text-lg font-semibold text-yellow-800 mb-2">Quick Answer</h3>
+                <p class="text-yellow-700">Real plasma donation earnings revealed: $45-100 per visit + $900 first-month bonuses. See actual donor paystubs, monthly breakdowns, and maximize your income...</p>
+            </div>
+        </div>
+    </div>
+    
 
-        <section class="mb-12" id="monthly-breakdown">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📅 Month-by-Month Earnings Breakdown</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Here's exactly what you can expect to earn each month as a new plasma donor:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Pro Tip:Complete all required donations within the bonus timeframe to maximize earnings.</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>New donor bonuses: $400-$700</li>
-                <li>Regular donations: $250-$500</li>
-                <li>Referral opportunities</li>
-                <li>Best time to maximize earnings</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Regular pay rates apply</li>
-                <li>Occasional promotional bonuses</li>
-                <li>Building donation routine</li>
-                <li>Loyalty program benefits start</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Steady monthly income</li>
-                <li>Seasonal promotional bonuses</li>
-                <li>Referral bonus opportunities</li>
-                <li>Return donor bonuses (if taking breaks)</li>
-            </ul>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">💰 Quick Answer: Real Plasma Donation Earnings</h2>
+        
+        <!-- Paystub Examples -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;">
+                <h3 class="text-lg font-bold text-yellow-800 mb-4">🏆 High Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">California (Urban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">175+ lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Monday):</span>
+                        <span class="font-bold text-green-600">$90</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Thursday):</span>
+                        <span class="font-bold text-green-600">$120</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$210</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-green-600">$840</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border:2px solid #3b82f6;">
+                <h3 class="text-lg font-bold text-blue-800 mb-4">📊 Average Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">Texas (Suburban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">150-174 lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Tuesday):</span>
+                        <span class="font-bold text-blue-600">$50</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Friday):</span>
+                        <span class="font-bold text-blue-600">$70</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$120</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-blue-600">$480</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Income Tiers -->
+        <div class="space-y-4">
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🆕 New Donors (First Month)</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$700-$1,200</span>
+                </div>
+                <p class="text-gray-700">Take advantage of new donor bonuses worth $300-$1,000. Complete 8 donations in your first 30-45 days to maximize earnings.</p>
+            </div>
+            
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🔄 Regular Donors</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$400-$800/mo</span>
+                </div>
+                <p class="text-gray-700">Consistent donors earn $50-$100 per visit. Maintain twice-weekly schedule for maximum earnings and loyalty bonuses.</p>
+            </div>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="state-by-state">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🗺️ State-by-State Earnings Comparison</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Plasma donation rates vary significantly by state. Here are the highest and lowest paying states:</p>
-        </section>
+    <section class="mb-12" id="real-donor-examples">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📊 Real Donor Examples & Actual Paystubs</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Let's look at real earnings from actual plasma donors across different scenarios:</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Weight:165 lbs •Center:CSL Plasma •Frequency:2x/week</p>
+        <p class="text-gray-700 leading-relaxed mb-4">"I consistently earn $120 per week, which covers my textbooks and groceries. The first month was amazing with all the bonuses!"</p>
 
-        <section class="mb-12" id="weight-tiers">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">⚖️ How Your Weight Affects Your Earnings</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Your body weight directly impacts how much plasma you can donate and how much you'll earn:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Lower volume = lower pay, but still significant monthly income potential</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Most common weight tier with good earning potential</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Sweet spot for earnings - higher volume, better rates</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Highest earning potential - maximum rates at most centers</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Some donors strategically maintain weight above 175 lbs to qualify for higher tiers. However, always prioritize your health over earnings.</p>
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="bonus-maximization">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Bonus Maximization Strategies</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Smart donors can earn significantly more by strategically timing their donations and taking advantage of all available bonuses:</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Complete all required donations within timeframe</li>
-                <li>Average bonus value: $400-$800 first month</li>
-                <li>Some centers offer up to $1,000 for new donors</li>
-                <li>Don't miss deadlines - bonuses expire</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Earn $50-$100 per successful referral</li>
-                <li>Some centers offer unlimited referral bonuses</li>
-                <li>Social media strategy can yield multiple referrals</li>
-                <li>Track friends' completion requirements</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Holiday bonuses (Christmas, New Year, etc.)</li>
-                <li>Back-to-school promotions (August/September)</li>
-                <li>Summer vacation bonuses</li>
-                <li>Monthly frequency bonuses</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Take 3-6 month breaks to qualify for "return donor" bonuses</li>
-                <li>Return bonuses often worth $200-$500</li>
-                <li>Plan breaks around major life events</li>
-                <li>Multiple center strategy (rotate between centers)</li>
-            </ul>
-        </section>
+    <section class="mb-12" id="monthly-breakdown">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📅 Month-by-Month Earnings Breakdown</h2>
+        
+        <!-- Paystub Examples -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;">
+                <h3 class="text-lg font-bold text-yellow-800 mb-4">🏆 High Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">California (Urban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">175+ lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Monday):</span>
+                        <span class="font-bold text-green-600">$90</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Thursday):</span>
+                        <span class="font-bold text-green-600">$120</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$210</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-green-600">$840</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border:2px solid #3b82f6;">
+                <h3 class="text-lg font-bold text-blue-800 mb-4">📊 Average Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">Texas (Suburban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">150-174 lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Tuesday):</span>
+                        <span class="font-bold text-blue-600">$50</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Friday):</span>
+                        <span class="font-bold text-blue-600">$70</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$120</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-blue-600">$480</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Income Tiers -->
+        <div class="space-y-4">
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🆕 New Donors (First Month)</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$700-$1,200</span>
+                </div>
+                <p class="text-gray-700">Take advantage of new donor bonuses worth $300-$1,000. Complete 8 donations in your first 30-45 days to maximize earnings.</p>
+            </div>
+            
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🔄 Regular Donors</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$400-$800/mo</span>
+                </div>
+                <p class="text-gray-700">Consistent donors earn $50-$100 per visit. Maintain twice-weekly schedule for maximum earnings and loyalty bonuses.</p>
+            </div>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="tax-implications">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📋 Tax Implications & 1099 Forms</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Important: Plasma donation income is taxable. Here's what you need to know:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Annual Earnings:$6,000</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Estimated Tax (22% bracket):$1,320</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Net Income:$4,680</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>If you earn $600+ from a single center in one tax year</li>
-                <li>Each center reports separately</li>
-                <li>You'll receive 1099-MISC forms in January</li>
-                <li>Keep your own records of all earnings</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Set aside 15-25% of earnings for taxes</li>
-                <li>Track mileage to donation centers (deductible)</li>
-                <li>Consider quarterly estimated tax payments</li>
-                <li>Consult tax professional for significant earnings</li>
-            </ul>
-        </section>
+    <section class="mb-12" id="state-by-state">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🗺️ State-by-State Earnings Comparison</h2>
+        
+        <!-- Paystub Examples -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;">
+                <h3 class="text-lg font-bold text-yellow-800 mb-4">🏆 High Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">California (Urban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">175+ lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Monday):</span>
+                        <span class="font-bold text-green-600">$90</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Thursday):</span>
+                        <span class="font-bold text-green-600">$120</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$210</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-green-600">$840</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border:2px solid #3b82f6;">
+                <h3 class="text-lg font-bold text-blue-800 mb-4">📊 Average Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">Texas (Suburban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">150-174 lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Tuesday):</span>
+                        <span class="font-bold text-blue-600">$50</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Friday):</span>
+                        <span class="font-bold text-blue-600">$70</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$120</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-blue-600">$480</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Income Tiers -->
+        <div class="space-y-4">
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🆕 New Donors (First Month)</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$700-$1,200</span>
+                </div>
+                <p class="text-gray-700">Take advantage of new donor bonuses worth $300-$1,000. Complete 8 donations in your first 30-45 days to maximize earnings.</p>
+            </div>
+            
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🔄 Regular Donors</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$400-$800/mo</span>
+                </div>
+                <p class="text-gray-700">Consistent donors earn $50-$100 per visit. Maintain twice-weekly schedule for maximum earnings and loyalty bonuses.</p>
+            </div>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="realistic-expectations">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Setting Realistic Expectations</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">While plasma donation can provide significant supplemental income, it's important to have realistic expectations:</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Consistent supplemental income of $300-$700/month</li>
-                <li>Great first month with bonuses ($650-$1,200)</li>
-                <li>Flexible schedule (most centers open 7 days)</li>
-                <li>Opportunity to help save lives</li>
-                <li>Potential for referral income</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>To replace full-time income</li>
-                <li>Guaranteed earnings (health deferrals happen)</li>
-                <li>Quick in-and-out visits (1.5-2 hours typical)</li>
-                <li>Same rates at all centers</li>
-                <li>Bonuses to last forever</li>
-            </ul>
-        </section>
+    <section class="mb-12" id="weight-tiers">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">⚖️ How Your Weight Affects Your Earnings</h2>
+        
+        <!-- Paystub Examples -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;">
+                <h3 class="text-lg font-bold text-yellow-800 mb-4">🏆 High Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">California (Urban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">175+ lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Monday):</span>
+                        <span class="font-bold text-green-600">$90</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Thursday):</span>
+                        <span class="font-bold text-green-600">$120</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$210</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-green-600">$840</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border:2px solid #3b82f6;">
+                <h3 class="text-lg font-bold text-blue-800 mb-4">📊 Average Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">Texas (Suburban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">150-174 lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Tuesday):</span>
+                        <span class="font-bold text-blue-600">$50</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Friday):</span>
+                        <span class="font-bold text-blue-600">$70</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$120</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-blue-600">$480</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Income Tiers -->
+        <div class="space-y-4">
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🆕 New Donors (First Month)</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$700-$1,200</span>
+                </div>
+                <p class="text-gray-700">Take advantage of new donor bonuses worth $300-$1,000. Complete 8 donations in your first 30-45 days to maximize earnings.</p>
+            </div>
+            
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🔄 Regular Donors</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$400-$800/mo</span>
+                </div>
+                <p class="text-gray-700">Consistent donors earn $50-$100 per visit. Maintain twice-weekly schedule for maximum earnings and loyalty bonuses.</p>
+            </div>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">💰 The Bottom Line: Real Plasma Earnings</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Based on our analysis of 1,000+ real donor earnings:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Plasma donation can provide meaningful supplemental income when done consistently. The key is maximizing bonuses in your first month, then settling into a routine that works for your schedule and financial goals.</p>
-        </section>
+    <section class="mb-12" id="bonus-maximization">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Bonus Maximization Strategies</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Smart donors can earn significantly more by strategically timing their donations and taking advantage of all available bonuses:</p>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📚 Sources & References</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Earnings data compiled from verified donor reports, official plasma center compensation schedules, and real-world income tracking. Information updated January 2025.</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>FDA - Blood Donor Screening Requirements</li>
-                <li>CDC - Blood Safety Basics</li>
-                <li>CSL Plasma - Compensation Information</li>
-                <li>BioLife Plasma - Donor Compensation</li>
-                <li>Grifols - Plasma Donation Information</li>
-                <li>Bureau of Labor Statistics - Wage Data</li>
-            </ul>
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Glen Meade, Plasma Earnings Analyst & Real Income Tracker</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Glen tracks actual plasma donation earnings from over 5,000 real donors nationwide, analyzing the gap between advertised pay rates and real-world income. His research reveals the true earning potential after accounting for wait times, deferrals, and hidden costs, helping donors set realistic income expectations and optimize their actual earnings.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Transparency:Glen is not a financial advisor or medical professional. This information is educational only. Always consult tax professionals for tax advice and healthcare providers for medical guidance.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
-        </section>
+    <section class="mb-12" id="tax-implications">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📋 Tax Implications & 1099 Forms</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Important: Plasma donation income is taxable. Here's what you need to know:</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Annual Earnings:$6,000</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Estimated Tax (22% bracket):$1,320</p>
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="realistic-expectations">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Setting Realistic Expectations</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">While plasma donation can provide significant supplemental income, it's important to have realistic expectations:</p>
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">💰 The Bottom Line: Real Plasma Earnings</h2>
+        
+        <!-- Paystub Examples -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;">
+                <h3 class="text-lg font-bold text-yellow-800 mb-4">🏆 High Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">California (Urban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">175+ lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Monday):</span>
+                        <span class="font-bold text-green-600">$90</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Thursday):</span>
+                        <span class="font-bold text-green-600">$120</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$210</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-green-600">$840</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border:2px solid #3b82f6;">
+                <h3 class="text-lg font-bold text-blue-800 mb-4">📊 Average Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">Texas (Suburban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">150-174 lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Tuesday):</span>
+                        <span class="font-bold text-blue-600">$50</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Friday):</span>
+                        <span class="font-bold text-blue-600">$70</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$120</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-blue-600">$480</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Income Tiers -->
+        <div class="space-y-4">
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🆕 New Donors (First Month)</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$700-$1,200</span>
+                </div>
+                <p class="text-gray-700">Take advantage of new donor bonuses worth $300-$1,000. Complete 8 donations in your first 30-45 days to maximize earnings.</p>
+            </div>
+            
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🔄 Regular Donors</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$400-$800/mo</span>
+                </div>
+                <p class="text-gray-700">Consistent donors earn $50-$100 per visit. Maintain twice-weekly schedule for maximum earnings and loyalty bonuses.</p>
+            </div>
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📚 Sources & References</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Earnings data compiled from verified donor reports, official plasma center compensation schedules, and real-world income tracking. Information updated January 2025.</p>
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Glen Meade, Plasma Earnings Analyst & Real Income Tracker</h2>
+        
+        <!-- Paystub Examples -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;">
+                <h3 class="text-lg font-bold text-yellow-800 mb-4">🏆 High Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">California (Urban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">175+ lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Monday):</span>
+                        <span class="font-bold text-green-600">$90</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Thursday):</span>
+                        <span class="font-bold text-green-600">$120</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$210</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-green-600">$840</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paystub-card p-6 rounded-xl" style="background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border:2px solid #3b82f6;">
+                <h3 class="text-lg font-bold text-blue-800 mb-4">📊 Average Earner Example</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span>Location:</span>
+                        <span class="font-medium">Texas (Suburban)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Weight Category:</span>
+                        <span class="font-medium">150-174 lbs</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 1 (Tuesday):</span>
+                        <span class="font-bold text-blue-600">$50</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Visit 2 (Friday):</span>
+                        <span class="font-bold text-blue-600">$70</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 mt-2">
+                        <span class="font-bold">Weekly Total:</span>
+                        <span class="font-bold text-lg">$120</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-bold">Monthly Potential:</span>
+                        <span class="font-bold text-xl text-blue-600">$480</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Income Tiers -->
+        <div class="space-y-4">
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🆕 New Donors (First Month)</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$700-$1,200</span>
+                </div>
+                <p class="text-gray-700">Take advantage of new donor bonuses worth $300-$1,000. Complete 8 donations in your first 30-45 days to maximize earnings.</p>
+            </div>
+            
+            <div class="income-tier" style="background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🔄 Regular Donors</h3>
+                    <span class="text-3xl font-bold" style="background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">$400-$800/mo</span>
+                </div>
+                <p class="text-gray-700">Consistent donors earn $50-$100 per visit. Maintain twice-weekly schedule for maximum earnings and loyalty bonuses.</p>
+            </div>
+        </div>
+    </section>
+                
+
+    <!-- FAQ Section -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Does plasma donation hurt?</h3>
+                <p class="text-gray-600">The needle insertion feels like a quick pinch, similar to having blood drawn. Most donors report minimal discomfort during the actual donation process.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">How often can I donate plasma?</h3>
+                <p class="text-gray-600">You can donate plasma twice within a 7-day period, with at least one day between donations. For example, Monday and Wednesday, or Tuesday and Friday.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Will I feel tired after donating?</h3>
+                <p class="text-gray-600">Some donors experience mild fatigue, especially after first donations. Proper hydration and nutrition minimize this. Most regular donors report no significant energy impact.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Is plasma donation safe?</h3>
+                <p class="text-gray-600">Yes, when done at licensed facilities following FDA guidelines. Millions donate regularly without adverse effects. All equipment is sterile and single-use.</p>
+            </div>
+        </div>
+    </section>
+    
 
         <!-- CTA Section -->
         <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
@@ -307,10 +758,10 @@
     </footer>
 
     <script>
-        function toggleMobileMenu() {{
+        function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('active');
-        }}
+        }
     </script>
 </body>
 </html>

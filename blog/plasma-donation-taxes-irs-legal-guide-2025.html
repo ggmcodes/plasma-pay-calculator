@@ -47,6 +47,10 @@
     <style>
         .earnings-card {transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}
         .earnings-card:hover {transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}
+        .money-highlight {background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;}
+        .paystub-card {background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;}
+        .income-tier {background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;margin-bottom:16px;transition:transform 0.2s ease;}
+        .income-tier:hover {transform:scale(1.02);}
         .logo {font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
         .logo-icon {width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}
         .trust-badge {background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}
@@ -117,6 +121,45 @@
             </div>
         </article>
 
+
+    <!-- Quick Answer Card -->
+    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <span class="text-2xl">💰</span>
+            </div>
+            <div class="ml-3">
+                <h3 class="text-lg font-semibold text-yellow-800 mb-2">Quick Answer</h3>
+                <p class="text-yellow-700">Essential legal guide to plasma donation taxes, IRS reporting requirements, tax deductions, and compliance. Avoid costly mistakes with expert tax advice.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- FAQ Section -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Does plasma donation hurt?</h3>
+                <p class="text-gray-600">The needle insertion feels like a quick pinch, similar to having blood drawn. Most donors report minimal discomfort during the actual donation process.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">How often can I donate plasma?</h3>
+                <p class="text-gray-600">You can donate plasma twice within a 7-day period, with at least one day between donations. For example, Monday and Wednesday, or Tuesday and Friday.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Will I feel tired after donating?</h3>
+                <p class="text-gray-600">Some donors experience mild fatigue, especially after first donations. Proper hydration and nutrition minimize this. Most regular donors report no significant energy impact.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Is plasma donation safe?</h3>
+                <p class="text-gray-600">Yes, when done at licensed facilities following FDA guidelines. Millions donate regularly without adverse effects. All equipment is sterile and single-use.</p>
+            </div>
+        </div>
+    </section>
+    
+
         <!-- CTA Section -->
         <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
             <div class="text-center">
@@ -144,10 +187,10 @@
     </footer>
 
     <script>
-        function toggleMobileMenu() {{
+        function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('active');
-        }}
+        }
     </script>
 </body>
 </html>

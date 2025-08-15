@@ -47,6 +47,10 @@
     <style>
         .earnings-card {transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}
         .earnings-card:hover {transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}
+        .money-highlight {background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;}
+        .paystub-card {background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;}
+        .income-tier {background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;margin-bottom:16px;transition:transform 0.2s ease;}
+        .income-tier:hover {transform:scale(1.02);}
         .logo {font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
         .logo-icon {width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}
         .trust-badge {background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}
@@ -117,163 +121,223 @@
             </div>
         </article>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📋 The Basic Tattoo & Plasma Donation Rules</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Tattoo and piercing deferral periods exist to prevent the transmission of bloodborne pathogens like Hepatitis B, Hepatitis C, and HIV. The incubation period means these infections might not show up in blood tests immediately after exposure.</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>🩸Safety first:Rules protect both donors and plasma recipients</li>
-                <li>📅Standard wait:4-12 months is typical across most states</li>
-                <li>🏢State regulation:Each state sets its own specific rules</li>
-                <li>📋Documentation required:Proof from licensed facilities may reduce wait times</li>
-                <li>💉Includes piercings:Similar rules apply to body piercings</li>
-            </ul>
-        </section>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🗺️ Tattoo Rules by State</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">These states have well-regulated tattoo industries and may allow immediate donation if done at state-licensed facilities:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Immediate donation with state-licensed shop documentation</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Licensed facility = no waiting period required</p>
-            <p class="text-gray-700 leading-relaxed mb-4">State-regulated shops allow immediate donation</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Licensed parlor documentation accepted</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Regulated facilities with proper documentation</p>
-            <p class="text-gray-700 leading-relaxed mb-4">State-licensed shops eligible for immediate donation</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Most common requirement - regardless of where tattoo was done:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">More conservative states with longer waiting periods:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Rules can change and individual plasma centers may have different policies.Always call your local centerto confirm current requirements for your specific situation.</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Arizona</li>
-                <li>Colorado</li>
-                <li>Georgia</li>
-                <li>Michigan</li>
-                <li>North Carolina</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Ohio</li>
-                <li>Virginia</li>
-                <li>Washington</li>
-                <li>Wisconsin</li>
-                <li>And many others...</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Oklahoma (12 months)</li>
-                <li>Louisiana (12 months)</li>
-                <li>Some rural areas (varies)</li>
-                <li>Certain plasma center chains (company policy)</li>
-            </ul>
-        </section>
+    <!-- Quick Answer Card -->
+    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <span class="text-2xl">💰</span>
+            </div>
+            <div class="ml-3">
+                <h3 class="text-lg font-semibold text-yellow-800 mb-2">Quick Answer</h3>
+                <p class="text-yellow-700">🎨 DEPENDS on state & tattoo age! Most require 4-12 month wait. Some states allow immediate donation from licensed shops. Complete guide: rules by state, FDA ...</p>
+            </div>
+        </div>
+    </div>
+    
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🏪 Licensed Shop Requirements & Documentation</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Dated receipt showing date of service, shop name, and license information</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Certificate from shop confirming completion and safety protocols followed</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Business license number and state registration details</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Proof shop is compliant with local health regulations</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>🆔State business license:Valid state registration</li>
-                <li>🏥Health department approval:Current health permits</li>
-                <li>🛡️Safety compliance:Follows state sterilization requirements</li>
-                <li>📋Proper documentation:Provides official receipts/certificates</li>
-                <li>💉Single-use needles:Sterile, disposable equipment only</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>❌ Home/garage tattoos</li>
-                <li>❌ Unlicensed "scratch" artists</li>
-                <li>❌ Shops without proper permits</li>
-                <li>❌ Prison/jail tattoos</li>
-                <li>❌ Amateur/friend tattoos</li>
-                <li>❌ Overseas tattoos (unless properly documented)</li>
-            </ul>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📋 The Basic Tattoo & Plasma Donation Rules</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Tattoo and piercing deferral periods exist to prevent the transmission of bloodborne pathogens like Hepatitis B, Hepatitis C, and HIV. The incubation period means these infections might not show up in blood tests immediately after exposure.</p>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">💎 Body Piercing Rules (Similar to Tattoos)</h2>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>✨Professional ear piercing:Often shorter wait times</li>
-                <li>✨Medical piercings:Doctor-performed may have different rules</li>
-                <li>✨Jewelry stores:Some professional ear piercing at jewelry stores accepted</li>
-                <li>✨Sterile environments:Hospital/clinic piercings often exempt</li>
-            </ul>
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📅 Real-World Timeline Examples</h2>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🗺️ Tattoo Rules by State</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">These states have well-regulated tattoo industries and may allow immediate donation if done at state-licensed facilities:</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Immediate donation with state-licensed shop documentation</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Licensed facility = no waiting period required</p>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">💡 Tips for Tattooed Plasma Donors</h2>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Research your state's rules first</li>
-                <li>Choose only licensed, reputable shops</li>
-                <li>Get all documentation at time of service</li>
-                <li>Consider timing around donation schedule</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Keep ALL paperwork from tattoo shop</li>
-                <li>Take photos of licenses/certificates</li>
-                <li>Get contact info for the shop</li>
-                <li>Verify shop's license status online</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Call your plasma center before visiting</li>
-                <li>Ask about your specific state's rules</li>
-                <li>Bring all documentation when you return</li>
-                <li>Be honest about tattoo dates and locations</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Resume donating as soon as eligible</li>
-                <li>Don't miss out on new donor bonuses</li>
-                <li>Maintain twice-weekly donation schedule</li>
-                <li>Consider tattoo timing around bonus periods</li>
-            </ul>
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🚫 Common Tattoo & Plasma Donation Myths</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">✅ Truth:Tattoo size doesn't matter. The infection risk is the same whether it's a tiny dot or a full sleeve.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">✅ Truth:Only recent tattoos (within waiting period) affect eligibility. Old tattoos don't matter.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">✅ Truth:Plasma centers check for visible tattoos and ask directly. Lying puts recipients at risk and can get you permanently banned.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">✅ Truth:Rules vary significantly by state. What's allowed in California might not be allowed in Oklahoma.</p>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🏪 Licensed Shop Requirements & Documentation</h2>
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-green-800 mb-2">✅ Basic Requirements</h4>
+                        <ul class="space-y-2 text-sm text-green-700">
+                            <li>• Age: 18+ years (16-17 with parental consent in some states)</li>
+                            <li>• Weight: Minimum 110 lbs (50 kg)</li>
+                            <li>• Valid photo ID and proof of address</li>
+                            <li>• Social Security number</li>
+                            <li>• Pass basic health screening</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-800 mb-2">📋 Health Screening</h4>
+                        <ul class="space-y-2 text-sm text-blue-700">
+                            <li>• Blood pressure check</li>
+                            <li>• Pulse and temperature</li>
+                            <li>• Protein levels test</li>
+                            <li>• Hematocrit (iron) levels</li>
+                            <li>• Medical history review</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                
 
-        <section class="mb-12">
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">💎 Body Piercing Rules (Similar to Tattoos)</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🎨 Ready to Donate with Tattoos?</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Know the rules for your state and situation! Whether you can donate immediately or need to wait, you can still earn$400-$800 monthlyonce you're eligible.</p>
-            <ol class="list-decimal list-inside space-y-2 mb-6 text-gray-700">
-                <li>📅 Check when you got your last tattoo</li>
-                <li>🗺️ Know your state's specific rules</li>
-                <li>📋 Gather documentation from licensed shops</li>
-                <li>📞 Call your plasma center to verify</li>
-                <li>💰 Resume earning as soon as eligible!</li>
-            </ol>
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🔗 Related Eligibility Guides:</h2>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📅 Real-World Timeline Examples</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📚 Sources & References</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Tattoo and piercing eligibility information compiled from FDA regulations, state health departments, and plasma center policies. Information verified January 2025.</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>FDA - Blood Donor Screening Requirements</li>
-                <li>CDC - Blood Safety and Availability</li>
-                <li>CSL Plasma - Tattoo and Piercing Policies</li>
-                <li>BioLife Plasma - DonorEligibility Requirements</li>
-                <li>AABB - Blood Donation Standards</li>
-                <li>Plasma Protein Therapeutics Association</li>
-            </ul>
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Glen Meade, Plasma Donation Researcher & Data Analyst</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched tattoo and piercing policies across all 50 states and major plasma center chains. His analysis helps donors understand state-specific requirements and navigate eligibility rules for body art.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Transparency:Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">💡 Tips for Tattooed Plasma Donors</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
+                <div class="text-3xl mb-3">💧</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Stay Hydrated</h3>
+                <p class="text-sm text-gray-600">Drink 8-10 glasses of water 24 hours before donation. Avoid caffeine and alcohol.</p>
+            </div>
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+                <div class="text-3xl mb-3">🍗</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Eat Protein</h3>
+                <p class="text-sm text-gray-600">Consume protein-rich foods before donation. Avoid fatty foods that can affect plasma quality.</p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
+                <div class="text-3xl mb-3">😴</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Get Rest</h3>
+                <p class="text-sm text-gray-600">Sleep 7-8 hours the night before. Being well-rested improves your donation experience.</p>
+            </div>
+            <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200">
+                <div class="text-3xl mb-3">📱</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Bring Entertainment</h3>
+                <p class="text-sm text-gray-600">Download movies, bring a book, or prepare work you can do one-handed during donation.</p>
+            </div>
+            <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border border-red-200">
+                <div class="text-3xl mb-3">🆔</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Required Documents</h3>
+                <p class="text-sm text-gray-600">Photo ID, Social Security card, and proof of address within 30 days.</p>
+            </div>
+            <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-200">
+                <div class="text-3xl mb-3">👕</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Dress Comfortably</h3>
+                <p class="text-sm text-gray-600">Wear short sleeves or sleeves that roll up easily. Bring a light jacket as centers can be cool.</p>
+            </div>
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🚫 Common Tattoo & Plasma Donation Myths</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">✅ Truth:Tattoo size doesn't matter. The infection risk is the same whether it's a tiny dot or a full sleeve.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">✅ Truth:Only recent tattoos (within waiting period) affect eligibility. Old tattoos don't matter.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">✅ Truth:Plasma centers check for visible tattoos and ask directly. Lying puts recipients at risk and can get you permanently banned.</p>
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🎨 Ready to Donate with Tattoos?</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Know the rules for your state and situation! Whether you can donate immediately or need to wait, you can still earn$400-$800 monthlyonce you're eligible.</p>
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🔗 Related Eligibility Guides:</h2>
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-green-800 mb-2">✅ Basic Requirements</h4>
+                        <ul class="space-y-2 text-sm text-green-700">
+                            <li>• Age: 18+ years (16-17 with parental consent in some states)</li>
+                            <li>• Weight: Minimum 110 lbs (50 kg)</li>
+                            <li>• Valid photo ID and proof of address</li>
+                            <li>• Social Security number</li>
+                            <li>• Pass basic health screening</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-800 mb-2">📋 Health Screening</h4>
+                        <ul class="space-y-2 text-sm text-blue-700">
+                            <li>• Blood pressure check</li>
+                            <li>• Pulse and temperature</li>
+                            <li>• Protein levels test</li>
+                            <li>• Hematocrit (iron) levels</li>
+                            <li>• Medical history review</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📚 Sources & References</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Tattoo and piercing eligibility information compiled from FDA regulations, state health departments, and plasma center policies. Information verified January 2025.</p>
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Glen Meade, Plasma Donation Researcher & Data Analyst</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched tattoo and piercing policies across all 50 states and major plasma center chains. His analysis helps donors understand state-specific requirements and navigate eligibility rules for body art.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Transparency:Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
+
+        </div>
+    </section>
+                
+
+    <!-- FAQ Section -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Does plasma donation hurt?</h3>
+                <p class="text-gray-600">The needle insertion feels like a quick pinch, similar to having blood drawn. Most donors report minimal discomfort during the actual donation process.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">How often can I donate plasma?</h3>
+                <p class="text-gray-600">You can donate plasma twice within a 7-day period, with at least one day between donations. For example, Monday and Wednesday, or Tuesday and Friday.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Will I feel tired after donating?</h3>
+                <p class="text-gray-600">Some donors experience mild fatigue, especially after first donations. Proper hydration and nutrition minimize this. Most regular donors report no significant energy impact.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Is plasma donation safe?</h3>
+                <p class="text-gray-600">Yes, when done at licensed facilities following FDA guidelines. Millions donate regularly without adverse effects. All equipment is sterile and single-use.</p>
+            </div>
+        </div>
+    </section>
+    
 
         <!-- CTA Section -->
         <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
@@ -302,10 +366,10 @@
     </footer>
 
     <script>
-        function toggleMobileMenu() {{
+        function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('active');
-        }}
+        }
     </script>
 </body>
 </html>

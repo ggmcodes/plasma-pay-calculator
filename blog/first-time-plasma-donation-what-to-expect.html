@@ -47,6 +47,10 @@
     <style>
         .earnings-card {transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}
         .earnings-card:hover {transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}
+        .money-highlight {background:linear-gradient(135deg,#10b981 0%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;}
+        .paystub-card {background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid #f59e0b;}
+        .income-tier {background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;padding:20px;margin-bottom:16px;transition:transform 0.2s ease;}
+        .income-tier:hover {transform:scale(1.02);}
         .logo {font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
         .logo-icon {width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}
         .trust-badge {background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}
@@ -117,184 +121,175 @@
             </div>
         </article>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📋 What to Bring (Required Documents)</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Don't show up empty-handed!You'll need these specific documents:</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Call ahead or check the center's website to confirm current document requirements. Some centers may have slight variations.</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>✅ Driver's License (most common)</li>
-                <li>✅ State-issued ID card</li>
-                <li>✅ Passport</li>
-                <li>✅ Military ID</li>
-                <li>❌ Expired IDs not accepted</li>
-                <li>❌ Student IDs not sufficient</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>✅ Social Security card (original)</li>
-                <li>✅ W-2 form (current year)</li>
-                <li>✅ Pay stub showing full SSN</li>
-                <li>❌ Photocopies not accepted</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>✅ Utility bill (electric, gas, water)</li>
-                <li>✅ Bank statement</li>
-                <li>✅ Cell phone bill</li>
-                <li>✅ Lease agreement</li>
-                <li>❌ Mail over 30 days old</li>
-                <li>❌ Electronic screenshots (need printed)</li>
-            </ul>
-        </section>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">👣 Step-by-Step: Your First Visit Timeline</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">What happens:Present your documents, register in their system, get a donor ID</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Your job:Have documents ready, provide accurate information</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Tip:Arrive early - centers can get busy</p>
-            <p class="text-gray-700 leading-relaxed mb-4">What happens:Detailed medical history, travel questions, lifestyle assessment</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Your job:Answer honestly - it's for your safety and others'</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Common topics:Medications, recent travel, tattoos, medical conditions</p>
-            <p class="text-gray-700 leading-relaxed mb-4">What happens:Basic physical by medical professional</p>
-            <p class="text-gray-700 leading-relaxed mb-4">They check:Blood pressure, pulse, temperature, weight</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Vein assessment:Looking for good donation veins</p>
-            <p class="text-gray-700 leading-relaxed mb-4">No surprises:All standard medical procedures</p>
-            <p class="text-gray-700 leading-relaxed mb-4">What they test:Protein levels, hematocrit (iron), blood type</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Why it matters:Ensures you're healthy enough to donate</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Results:Available immediately - you'll know if you qualify</p>
-            <p class="text-gray-700 leading-relaxed mb-4">What you'll learn:Donation process, safety protocols, what to expect</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Interactive:Often includes quiz or acknowledgment</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Purpose:Ensures you understand everything before proceeding</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Setup:Comfortable chair, entertainment (TV/WiFi)</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Process:Needle insertion, blood collection, plasma separation, return</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Your experience:Minimal discomfort, able to use phone/read</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Staff attention:Regular check-ins, immediate help if needed</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Rest period:Snacks, drinks, monitoring</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Payment:Prepaid debit card or cash</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Schedule next:Book your second appointment</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Take home:Care instructions, contact info</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Future visits will only take 1-2 hours since you skip steps 1-5!</p>
-        </section>
+    <!-- Quick Answer Card -->
+    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <span class="text-2xl">💰</span>
+            </div>
+            <div class="ml-3">
+                <h3 class="text-lg font-semibold text-yellow-800 mb-2">Quick Answer</h3>
+                <p class="text-yellow-700">Complete first-time plasma donor guide 2025. Earn $1200+ your first month with new donor bonuses. Step-by-step process, requirements, tips & payment schedules.</p>
+            </div>
+        </div>
+    </div>
+    
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🤔 What Does Plasma Donation Actually Feel Like?</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Feels like:Quick pinch, similar to blood draw or vaccination</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Pain level:2-3 out of 10 (brief discomfort)</p>
-            <p class="text-gray-700 leading-relaxed mb-4">What helps:Look away, take deep breaths, think about the money!</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Feels like:Nothing! You might feel slight pulling sensation</p>
-            <p class="text-gray-700 leading-relaxed mb-4">What you can do:Watch TV, use phone, read, listen to music</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Staff checks:Every 10-15 minutes to ensure you're comfortable</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Feels like:Cool sensation as saline enters your arm</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Purpose:Returns your red blood cells plus saline for hydration</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Normal:Some people feel cold, which is completely normal</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Removal:Quick, minimal discomfort</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Immediate feeling:Relief, accomplishment, excited about payment!</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Most donors say:"That was easier than I expected!"</p>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📋 What to Bring (Required Documents)</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Don't show up empty-handed!You'll need these specific documents:</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Call ahead or check the center's website to confirm current document requirements. Some centers may have slight variations.</p>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">💰 New Donor Bonuses: Your Golden Opportunity</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Plasma centers compete for reliable donors, so they offer significant incentives to new donors who complete their initial donation series. This isfree money on top of regular pay!</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Structure:$125 for each of first 8 donations</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Total Bonus:$1,000</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Time Limit:Must complete within 45 days</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Plus Regular Pay:$40-$70 per visit on top of bonus</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Structure:Graduated bonus system</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Total Bonus:$750-$900</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Example:$100, $75, $75, $100, $75, $75, $100, $150</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Plus Regular Pay:$35-$65 per visit</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Structure:Varies by location</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Total Bonus:$600-$800</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Common Pattern:Higher bonuses for visits 1, 4, and 8</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Plus Regular Pay:$30-$60 per visit</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Regular pay: $40 × 8 visits = $320</p>
-            <p class="text-gray-700 leading-relaxed mb-4">New donor bonus: $600</p>
-            <p class="text-gray-700 leading-relaxed mb-4">First month total: $920</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Regular pay: $55 × 8 visits = $440</p>
-            <p class="text-gray-700 leading-relaxed mb-4">New donor bonus: $800</p>
-            <p class="text-gray-700 leading-relaxed mb-4">First month total: $1,240</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Regular pay: $70 × 8 visits = $560</p>
-            <p class="text-gray-700 leading-relaxed mb-4">New donor bonus: $1,000</p>
-            <p class="text-gray-700 leading-relaxed mb-4">First month total: $1,560</p>
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">😰 Common First-Timer Worries (And Why They're Not a Big Deal)</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Reality:Most needle-phobic people do fine. The staff is trained to help anxious donors.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Tips:Tell the staff, don't look during insertion, focus on breathing or entertainment</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Success story:"I was terrified but the staff was so understanding. Now I donate regularly!" - Jessica, 26</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Reality:Only 1-2% of first-time donors experience dizziness, even fewer faint</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Prevention:Eat a good meal, stay hydrated, get enough sleep</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Staff prepared:They handle this daily and know exactly what to do</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Reality:Yes, first visit is long, but future visits are only 1-2 hours</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Perspective:You're earning $15-30+ per hour for sitting and watching TV</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Bring:Phone, book, music, or just enjoy the rest time</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Reality:Extremely safe when done at FDA-regulated centers</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Numbers:40+ million donations yearly with 95% experiencing zero issues</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Equipment:All sterile, single-use needles and tubing</p>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">👣 Step-by-Step: Your First Visit Timeline</h2>
+        <div class="space-y-4">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">1</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 mb-2">Registration & Check-In</h3>
+                        <p class="text-gray-600">Create your donor profile, verify documents, and receive your donor ID. First visit takes 15-30 minutes for registration.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">2</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 mb-2">Health Screening</h3>
+                        <p class="text-gray-600">Vital signs check, finger prick for protein/iron levels, and health questionnaire review. Takes 30-45 minutes on first visit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">3</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 mb-2">Donation Process</h3>
+                        <p class="text-gray-600">Plasmapheresis machine separates plasma from blood. Process takes 45-90 minutes with 4-6 cycles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-orange-100 text-orange-600 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">4</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 mb-2">Recovery & Payment</h3>
+                        <p class="text-gray-600">Rest for 10-15 minutes, receive snacks and drinks, and get your compensation loaded onto your card.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🏃‍♂️ How to Prepare for Success</h2>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Get 7-8 hours of sleep</li>
-                <li>Eat a balanced dinner with protein</li>
-                <li>Drink extra water (80+ oz throughout day)</li>
-                <li>No alcohol for 24 hours</li>
-                <li>Gather your required documents</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Eat a substantial breakfast (avoid fatty foods)</li>
-                <li>Drink 16-20 oz of water</li>
-                <li>Take any regular medications as prescribed</li>
-                <li>Wear comfortable clothes with easy arm access</li>
-                <li>Bring entertainment (phone, book, headphones)</li>
-            </ul>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>Eat a light snack</li>
-                <li>Drink more water</li>
-                <li>Avoid caffeine (can affect blood pressure)</li>
-                <li>Double-check you have all documents</li>
-            </ul>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🤔 What Does Plasma Donation Actually Feel Like?</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Feels like:Quick pinch, similar to blood draw or vaccination</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Pain level:2-3 out of 10 (brief discomfort)</p>
+        <p class="text-gray-700 leading-relaxed mb-4">What helps:Look away, take deep breaths, think about the money!</p>
 
-        <section class="mb-12">
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🚀 Ready for Your First Donation?</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">You now know exactly what to expect!Thousands of people have their first successful donation every day.Take the leap and start earning$900+ your first month!</p>
-            <ol class="list-decimal list-inside space-y-2 mb-6 text-gray-700">
-                <li>Find a centerwith the highest new donor bonuses</li>
-                <li>Gather documents(ID, Social Security proof, address proof)</li>
-                <li>Schedule appointmentwhen you have 3-4 hours available</li>
-                <li>Prepare properly(hydrate, eat, sleep well)</li>
-                <li>Bring entertainmentfor the wait time</li>
-                <li>Stay positive- you're about to earn some serious money!</li>
-            </ol>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">💰 New Donor Bonuses: Your Golden Opportunity</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Plasma centers compete for reliable donors, so they offer significant incentives to new donors who complete their initial donation series. This isfree money on top of regular pay!</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Structure:$125 for each of first 8 donations</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Total Bonus:$1,000</p>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">🔗 Essential First-Timer Guides:</h2>
-        </section>
+        </div>
+    </section>
+                
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">📚 Sources & References</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Data compiled from official plasma center websites, FDA guidelines, and industry safety standards. Information verified January 2025.</p>
-            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
-                <li>FDA - Blood Donor Screening Requirements</li>
-                <li>CDC - Blood Safety Basics</li>
-                <li>CSL Plasma - Donor Requirements</li>
-                <li>BioLife Plasma - Donor Safety Information</li>
-                <li>AABB - Blood Donation FAQs</li>
-                <li>American Red Cross - Donation Process</li>
-            </ul>
-        </section>
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">😰 Common First-Timer Worries (And Why They're Not a Big Deal)</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Reality:Most needle-phobic people do fine. The staff is trained to help anxious donors.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Tips:Tell the staff, don't look during insertion, focus on breathing or entertainment</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Success story:"I was terrified but the staff was so understanding. Now I donate regularly!" - Jessica, 26</p>
 
-        <section class="mb-12" id="">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Glen Meade, Plasma Donation Researcher & Data Analyst</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched the first-time plasma donation experience across hundreds of centers nationwide. His analysis of donation processes, wait times, and new donor experiences helps first-time donors know exactly what to expect and how to maximize their success.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">Transparency:Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
-            <p class="text-gray-700 leading-relaxed mb-4">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
-        </section>
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🏃‍♂️ How to Prepare for Success</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🚀 Ready for Your First Donation?</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">You now know exactly what to expect!Thousands of people have their first successful donation every day.Take the leap and start earning$900+ your first month!</p>
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">🔗 Essential First-Timer Guides:</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">📚 Sources & References</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Data compiled from official plasma center websites, FDA guidelines, and industry safety standards. Information verified January 2025.</p>
+
+        </div>
+    </section>
+                
+
+    <section class="mb-12" id="">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Glen Meade, Plasma Donation Researcher & Data Analyst</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched the first-time plasma donation experience across hundreds of centers nationwide. His analysis of donation processes, wait times, and new donor experiences helps first-time donors know exactly what to expect and how to maximize their success.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Transparency:Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+        <p class="text-gray-700 leading-relaxed mb-4">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
+
+        </div>
+    </section>
+                
+
+    <!-- FAQ Section -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Does plasma donation hurt?</h3>
+                <p class="text-gray-600">The needle insertion feels like a quick pinch, similar to having blood drawn. Most donors report minimal discomfort during the actual donation process.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">How often can I donate plasma?</h3>
+                <p class="text-gray-600">You can donate plasma twice within a 7-day period, with at least one day between donations. For example, Monday and Wednesday, or Tuesday and Friday.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Will I feel tired after donating?</h3>
+                <p class="text-gray-600">Some donors experience mild fatigue, especially after first donations. Proper hydration and nutrition minimize this. Most regular donors report no significant energy impact.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Is plasma donation safe?</h3>
+                <p class="text-gray-600">Yes, when done at licensed facilities following FDA guidelines. Millions donate regularly without adverse effects. All equipment is sterile and single-use.</p>
+            </div>
+        </div>
+    </section>
+    
 
         <!-- CTA Section -->
         <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
@@ -323,10 +318,10 @@
     </footer>
 
     <script>
-        function toggleMobileMenu() {{
+        function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('active');
-        }}
+        }
     </script>
 </body>
 </html>
