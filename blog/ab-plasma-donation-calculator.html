@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AB Plasma Calculator 2025: Elite Donor Earnings Up to $2,...</title>
     <meta name="description" content="💎 AB ELITE: Calculate your premium AB plasma earnings! Universal donors earn 25% MORE than regular plasma. FREE calculator shows your exclusive earning poten...">
-    <meta name="keywords" content="AB plasma donation calculator, AB elite plasma, universal plasma donor, AB plasma pay rates, plasma donation AB blood type, AB plasma earnings">
+    <meta name="keywords" content="plasma donation, plasma pay, donation guide, plasma centers">
     <link rel="canonical" href="https://plasmapaycalculator.com/blog/ab-plasma-donation-calculator.html">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
@@ -22,6 +22,9 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
          crossorigin="anonymous"></script>
     
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,332 +32,122 @@
             theme: {
                 extend: {
                     colors: {
-                        'plasma-green': '#27ae60',
-                        'plasma-green-dark': '#219a52',
+                        'plasma': {
+                            50: '#eff6ff',
+                            500: '#3b82f6', 
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        }
                     }
                 }
             }
         }
     </script>
     
-    <script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "AB Plasma Calculator 2025: Elite Donor Earnings Up to $2,400/Year!",
-  "description": "\ud83d\udc8e AB ELITE: Calculate your premium AB plasma earnings! Universal donors earn 25% MORE than regular plasma. FREE calculator shows your exclusive earning potential.",
-  "datePublished": "2025-01-01",
-  "dateModified": "2025-01-15",
-  "author": {
-    "@type": "Organization",
-    "name": "Plasma Pay Calculator"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Plasma Pay Calculator",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://plasmapaycalculator.com/icon-512.png"
-    }
-  }
-}
-
-</script>
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "AB Plasma Calculator 2025: Elite Donor Earnings Up to $2,400/Year!",
-  "description": "\ud83d\udc8e AB ELITE: Calculate your premium AB plasma earnings! Universal donors earn 25% MORE than regular plasma. FREE calculator shows your exclusive earning potential.",
-  "datePublished": "2025-01-01",
-  "dateModified": "2025-01-15",
-  "author": {
-    "@type": "Organization",
-    "name": "Plasma Pay Calculator"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Plasma Pay Calculator",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://plasmapaycalculator.com/icon-512.png"
-    }
-  }
-}
-
-</script>
-
+    <style>
+        .earnings-card {transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}
+        .earnings-card:hover {transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}
+        .logo {font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+        .logo-icon {width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}
+        .trust-badge {background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}
+        .nav-container {max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 1.5rem;}
+        .nav-links {display:flex;list-style:none;gap:1.2rem;align-items:center;}
+        .nav-links a {text-decoration:none;color:#2c3e50;font-weight:500;transition:all 0.3s;padding:0.4rem 0.8rem;border-radius:6px;font-size:0.9rem;white-space:nowrap;}
+        .centers-highlight {background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%) !important;color:white !important;border-radius:6px !important;font-weight:700 !important;box-shadow:0 2px 6px rgba(39,174,96,0.3) !important;transform:scale(1.05);}
+        .centers-highlight:hover {background:linear-gradient(135deg,#219a52 0%,#26be5f 100%) !important;color:white !important;transform:scale(1.08);}
+        .nav-links a:hover,.nav-links a.active {color:#27ae60;background:rgba(39,174,96,0.1);}
+        .mobile-menu-btn {display:none;background:none;border:none;color:#2c3e50;font-size:24px;cursor:pointer;}
+        .mobile-menu {display:none;position:fixed;top:80px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(39,174,96,0.1);z-index:999;padding:1rem;}
+        .mobile-menu.active {display:block;}
+        nav {background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:1rem 0;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid rgba(39,174,96,0.1);}
+        body {padding-top:80px;}
+        @media (max-width:768px) {.nav-links {display:none;}.mobile-menu-btn {display:block;}}
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="/" class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-gradient-to-br from-plasma-green to-green-500 rounded-lg flex items-center justify-center text-white font-bold text-xs">
-                            PPC
-                        </div>
-                        <span class="font-bold text-lg text-gray-900">Plasma Pay Calculator</span>
-                    </a>
-                    <span class="ml-3 px-2 py-1 bg-green-100 text-plasma-green text-xs font-medium rounded-full">
-                        Updated 2025
-                    </span>
-                </div>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="/#calculator" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Calculator</a>
-                    <a href="/blog/" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                    <a href="/states.html" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">States</a>
-                    <a href="/centers/" class="bg-gradient-to-r from-plasma-green to-green-500 text-white px-4 py-2 rounded-md text-sm font-bold hover:scale-105 transition-transform shadow-md">
-                        🏥 Centers
-                    </a>
-                    <a href="/topics/requirements-eligibility/" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Health</a>
-                    <a href="/faq.html" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
-                </div>
-                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-lg z-40 md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="/#calculator" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Calculator</a>
-            <a href="/blog/" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Blog</a>
-            <a href="/states.html" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">States</a>
-            <a href="/centers/" class="block px-3 py-2 bg-gradient-to-r from-plasma-green to-green-500 text-white rounded-md font-bold">🏥 Centers</a>
-            <a href="/topics/requirements-eligibility/" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Health</a>
-            <a href="/faq.html" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">FAQ</a>
-        </div>
-    </div>
-
     <!-- Main Content -->
-    <main class="pt-20 pb-16">
-        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-<div class="container">
-<div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-<div class="elite-badge">💎 AB ELITE DONOR</div>
-<h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">AB Plasma Donation Calculator</h1>
-<p class="article-description">
-                    As an AB blood type, you're the universal plasma donor! Calculate your premium earnings potential with exclusive AB plasma rates and bonuses.
-                </p>
-</div>
-<div class="calculator-section">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">💎 Calculate Your AB Elite Earnings</h2>
-<div class="calculator-form">
-<div class="form-group">
-<label for="location">Your Location</label>
-<select id="location">
-<option value="">Select your area</option>
-<option value="major-city">Major City (LA, NYC, Chicago)</option>
-<option value="medium-city">Medium City</option>
-<option value="small-city">Small City/Suburban</option>
-<option value="rural">Rural Area</option>
-</select>
-</div>
-<div class="form-group">
-<label for="center-type">Preferred Center Type</label>
-<select id="center-type">
-<option value="">Select center type</option>
-<option value="csl">CSL Plasma</option>
-<option value="biolife">BioLife Plasma</option>
-<option value="octapharma">Octapharma Plasma</option>
-<option value="grifols">Grifols Biomat</option>
-<option value="other">Other/Local Center</option>
-</select>
-</div>
-<div class="form-group">
-<label for="donor-status">Donor Status</label>
-<select id="donor-status">
-<option value="">Select status</option>
-<option value="new">New AB Donor (First Time)</option>
-<option value="returning">Returning AB Donor</option>
-<option value="experienced">Experienced (6+ months)</option>
-</select>
-</div>
-<div class="form-group">
-<label for="frequency">Donation Frequency</label>
-<select id="frequency">
-<option value="">How often will you donate?</option>
-<option value="13">Every 28 days (Maximum - 13/year)</option>
-<option value="10">Every 5-6 weeks (10/year)</option>
-<option value="6">Every 8-9 weeks (6/year)</option>
-<option value="4">Occasionally (4/year)</option>
-</select>
-</div>
-</div>
-<button class="calculate-btn" onclick="calculateABEarnings()">
-                    💎 Calculate My AB Elite Earnings
-                </button>
-<div class="results-box" id="results">
-<div class="earnings-display" id="annual-earnings">$0</div>
-<p class="text-gray-600 leading-relaxed mb-4" id="earnings-breakdown"></p>
-<p class="text-gray-600 leading-relaxed mb-4" id="comparison-text"></p>
-</div>
-</div>
-<div class="mb-12">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">💎 Why AB Plasma is Premium</h2>
-<div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-xl text-center my-6">
-<h3 class="text-xl font-bold text-gray-900">AB = Universal Plasma Donor</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Your AB plasma can be given to patients of ANY blood type, making it incredibly valuable to medical facilities and plasma centers!</p>
-</div>
-<h3 class="text-xl font-bold text-gray-900">AB Plasma Advantages</h3>
-<ul class="space-y-2 text-gray-700" style="margin-left: 2rem; margin-bottom: 2rem;">
-<li><strong>Universal compatibility:</strong> Your plasma works for A, B, AB, and O patients</li>
-<li><strong>Higher demand:</strong> Only 4% of population has AB blood type</li>
-<li><strong>Premium rates:</strong> Often 20-30% higher pay than regular plasma</li>
-<li><strong>More frequent donations:</strong> Can donate every 28 days vs twice weekly</li>
-<li><strong>Special programs:</strong> Many centers have "AB Elite" bonus programs</li>
-<li><strong>Expedited processing:</strong> Shorter wait times at many facilities</li>
-</ul>
-<h3 class="text-xl font-bold text-gray-900">AB vs Regular Plasma Donation</h3>
-<table class="bg-white rounded-xl shadow-md overflow-hidden">
-<thead>
-<tr>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feature</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Regular Plasma</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">AB Plasma</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm"><strong>Donation Frequency</strong></td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Twice weekly (104/year max)</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Every 28 days (13/year max)</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm"><strong>Base Pay Rate</strong></td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$40-$100 per visit</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="premium-highlight">$60-$150 per visit</span></td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm"><strong>Annual Potential</strong></td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$4,000-$10,000</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm"><span class="premium-highlight">$800-$2,400</span></td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm"><strong>Time Commitment</strong></td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">High (2x weekly)</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Low (monthly)</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm"><strong>Wait Times</strong></td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Variable</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Often shorter</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm"><strong>Special Programs</strong></td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Standard bonuses</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">AB Elite programs</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="mb-12">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 AB Elite Earning Strategies</h2>
-<h3 class="text-xl font-bold text-gray-900">1. Join AB Elite Programs</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Many major centers have special programs for AB donors:</p>
-<ul class="space-y-2 text-gray-700" style="margin-left: 2rem; margin-bottom: 2rem;">
-<li><strong>CSL Plasma AB Elite:</strong> Up to $150 per donation in major markets</li>
-<li><strong>BioLife AB Plus:</strong> Premium rates + priority scheduling</li>
-<li><strong>Octapharma AB Advantage:</strong> Bonus payments for consistent donations</li>
-</ul>
-<h3 class="text-xl font-bold text-gray-900">2. Timing Your Donations</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Strategic timing can maximize your AB plasma earnings:</p>
-<ul class="space-y-2 text-gray-700" style="margin-left: 2rem; margin-bottom: 2rem;">
-<li><strong>Holiday periods:</strong> Increased demand = higher rates</li>
-<li><strong>Emergency shortages:</strong> Centers may offer urgent bonuses</li>
-<li><strong>New center openings:</strong> Promotional rates to attract AB donors</li>
-<li><strong>End of month:</strong> Centers may offer bonuses to meet quotas</li>
-</ul>
-<h3 class="text-xl font-bold text-gray-900">3. Multiple Center Strategy</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Since you can only donate monthly, you can potentially work with multiple centers:</p>
-<ol style="margin-left: 2rem; margin-bottom: 2rem;">
-<li><strong>Research policies:</strong> Check if centers allow donors from other facilities</li>
-<li><strong>Stagger timing:</strong> Donate at different centers in different weeks</li>
-<li><strong>Compare rates:</strong> Always go to the highest paying available option</li>
-<li><strong>Track carefully:</strong> Maintain records to avoid conflicts</li>
-</ol>
-</div>
-<div class="mb-12">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">📋 AB Plasma Donor Requirements</h2>
-<h3 class="text-xl font-bold text-gray-900">Basic Eligibility</h3>
-<ul class="space-y-2 text-gray-700" style="margin-left: 2rem; margin-bottom: 2rem;">
-<li><strong>Blood Type:</strong> AB+ or AB- (verified through testing)</li>
-<li><strong>Age:</strong> 18-69 years old (varies by center)</li>
-<li><strong>Weight:</strong> Minimum 110 lbs</li>
-<li><strong>Health:</strong> Pass medical screening and physical exam</li>
-<li><strong>Identification:</strong> Valid photo ID and Social Security number</li>
-<li><strong>Address:</strong> Proof of current address</li>
-</ul>
-<h3 class="text-xl font-bold text-gray-900">AB-Specific Considerations</h3>
-<ul class="space-y-2 text-gray-700" style="margin-left: 2rem; margin-bottom: 2rem;">
-<li><strong>Antibody testing:</strong> Additional screening for AB compatibility</li>
-<li><strong>Higher standards:</strong> Some centers have stricter <a class="text-green-600 hover:text-green-800 underline" href="/topics/requirements-eligibility/">health requirements</a></li>
-<li><strong>Commitment expectations:</strong> Centers prefer regular AB donors</li>
-</ul>
-<div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-xl text-center my-6">
-<h3 class="text-xl font-bold text-gray-900">💡 Pro Tip for AB Donors</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Call ahead and mention you're AB! Many centers will prioritize scheduling and may offer special incentives to secure your commitment.</p>
-</div>
-</div>
-<div style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; text-align: center; padding: 3rem 2rem; border-radius: 20px; margin: 3rem 0;">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Ready to Maximize Your AB Elite Earnings?</h2>
-<p class="text-gray-600 leading-relaxed mb-4">Find the highest paying plasma centers in your area and start earning premium rates as an AB universal donor!</p>
-<div style="margin-top: 2rem;">
-<a class="cta-btn" href="../#calculator" style="background: white; color: #3498db; margin-right: 1rem;">Find My Centers →</a>
-<a class="cta-btn" href="/centers/" style="background: rgba(255,255,255,0.2);" target="_blank">Location Finder →</a>
-</div>
-</div>
-</div>
-
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Article Header -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-12 text-white">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">Plasma Guide 2025</span>
+                        <span class="text-green-100">Updated January 2025</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                        AB Plasma Donation Calculator
+                    </h1>
+                    <p class="text-xl text-green-100 leading-relaxed">
+                        💎 AB ELITE: Calculate your premium AB plasma earnings! Universal donors earn 25% MORE than regular plasma. FREE calculator shows your exclusive earning poten...
+                    </p>
+                </div>
+            </div>
         </article>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Calculate Your Plasma Earnings</h2>
+                <p class="text-gray-700 mb-6">Use our free calculator to see how much you could earn at centers near you</p>
+                <a href="/#calculator" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200">
+                    Calculate My Earnings →
+                </a>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="text-white font-bold mb-4">Plasma Pay Calculator</h4>
-                    <p class="text-sm">Get accurate plasma donation income estimates with current 2025 rates.</p>
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
+                <div class="mt-4 space-x-6">
+                    <a href="/privacy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="/terms.html" class="hover:text-white">Terms of Service</a>
+                    <a href="/contact.html" class="hover:text-white">Contact</a>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/calculators/california/" class="hover:text-white transition-colors">Earnings Calculator</a></li>
-                        <li><a href="/blog/" class="hover:text-white transition-colors">Income Tips</a></li>
-                        <li><a href="/faq.html" class="hover:text-white transition-colors">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/about.html" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; 2025 Plasma Pay Calculator. Information for educational purposes.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function toggleMobileMenu() {
+        function toggleMobileMenu() {{
             const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+            menu.classList.toggle('active');
+        }}
     </script>
 </body>
 </html>

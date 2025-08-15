@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Does Red Cross Pay for Blood Donations? What to Know Before</title>
     <meta name="description" content="Thinking about donating blood to the Red Cross? Learn why they don't pay, how it works, and where you can earn money donating plasma instead. Updated 2025 rates & requirements.">
-    <meta name="keywords" content="does red cross pay for blood, red cross blood donation payment, american red cross pay donors, blood donation compensation, paid plasma donation">
-    <link rel="canonical" href="https://plasmapaycalculator.com/blog/does-red-cross-pay-for-blood-donations">
+    <meta name="keywords" content="plasma donation, plasma pay, donation guide, plasma centers">
+    <link rel="canonical" href="https://plasmapaycalculator.com/blog/does-red-cross-pay-for-blood-donations.html">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <!-- Google tag (gtag.js) -->
@@ -22,6 +22,9 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
          crossorigin="anonymous"></script>
     
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,350 +32,142 @@
             theme: {
                 extend: {
                     colors: {
-                        'plasma-green': '#27ae60',
-                        'plasma-green-dark': '#219a52',
+                        'plasma': {
+                            50: '#eff6ff',
+                            500: '#3b82f6', 
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        }
                     }
                 }
             }
         }
     </script>
     
-    <script type="application/ld+json">
-
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Does the Red Cross Pay for Blood Donations? Everything You Need to Know",
-        "description": "Comprehensive guide explaining why the Red Cross doesn't pay for blood donations and alternatives for earning money through plasma donation",
-        "author": {
-            "@type": "Organization",
-            "name": "Plasma Pay Calculator"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Plasma Pay Calculator",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://plasmapaycalculator.com/images/logo.png"
-            }
-        },
-        "datePublished": "2025-01-04",
-        "dateModified": "2025-01-04",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://plasmapaycalculator.com/blog/does-red-cross-pay-for-blood-donations"
-        }
-    }
-    
-</script>
-<script type="application/ld+json">
-
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does the American Red Cross pay for blood donations?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. The American Red Cross does not pay for blood donations. All donations are voluntary to ensure safety and honesty from donors."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why doesn't the Red Cross pay for blood?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Red Cross operates a volunteer-based system to improve blood safety, avoid transmission risks, and keep costs lower for patients and hospitals."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I get paid to donate plasma instead?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Plasma centers do pay donors, often $50–$100 per visit. Frequent donors can earn $300–$700 a month depending on location and bonuses."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is it safe to donate both blood to the Red Cross and plasma for money?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, but it's important to space out donations. Wait at least eight weeks after donating blood before giving again, and follow safety guidelines for plasma."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are there other ways to get paid for donations?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Besides plasma, some centers pay for platelet donations, and there is compensation for sperm, egg, or research study participation. Whole blood is not paid."
-          }
-        }
-      ]
-    }
-    
-</script>
-
+    <style>
+        .earnings-card {transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}
+        .earnings-card:hover {transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}
+        .logo {font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+        .logo-icon {width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}
+        .trust-badge {background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}
+        .nav-container {max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 1.5rem;}
+        .nav-links {display:flex;list-style:none;gap:1.2rem;align-items:center;}
+        .nav-links a {text-decoration:none;color:#2c3e50;font-weight:500;transition:all 0.3s;padding:0.4rem 0.8rem;border-radius:6px;font-size:0.9rem;white-space:nowrap;}
+        .centers-highlight {background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%) !important;color:white !important;border-radius:6px !important;font-weight:700 !important;box-shadow:0 2px 6px rgba(39,174,96,0.3) !important;transform:scale(1.05);}
+        .centers-highlight:hover {background:linear-gradient(135deg,#219a52 0%,#26be5f 100%) !important;color:white !important;transform:scale(1.08);}
+        .nav-links a:hover,.nav-links a.active {color:#27ae60;background:rgba(39,174,96,0.1);}
+        .mobile-menu-btn {display:none;background:none;border:none;color:#2c3e50;font-size:24px;cursor:pointer;}
+        .mobile-menu {display:none;position:fixed;top:80px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(39,174,96,0.1);z-index:999;padding:1rem;}
+        .mobile-menu.active {display:block;}
+        nav {background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:1rem 0;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid rgba(39,174,96,0.1);}
+        body {padding-top:80px;}
+        @media (max-width:768px) {.nav-links {display:none;}.mobile-menu-btn {display:block;}}
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="/" class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-gradient-to-br from-plasma-green to-green-500 rounded-lg flex items-center justify-center text-white font-bold text-xs">
-                            PPC
-                        </div>
-                        <span class="font-bold text-lg text-gray-900">Plasma Pay Calculator</span>
-                    </a>
-                    <span class="ml-3 px-2 py-1 bg-green-100 text-plasma-green text-xs font-medium rounded-full">
-                        Updated 2025
-                    </span>
-                </div>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="/#calculator" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Calculator</a>
-                    <a href="/blog/" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                    <a href="/states.html" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">States</a>
-                    <a href="/centers/" class="bg-gradient-to-r from-plasma-green to-green-500 text-white px-4 py-2 rounded-md text-sm font-bold hover:scale-105 transition-transform shadow-md">
-                        🏥 Centers
-                    </a>
-                    <a href="/topics/requirements-eligibility/" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Health</a>
-                    <a href="/faq.html" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
-                </div>
-                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-lg z-40 md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="/#calculator" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Calculator</a>
-            <a href="/blog/" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Blog</a>
-            <a href="/states.html" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">States</a>
-            <a href="/centers/" class="block px-3 py-2 bg-gradient-to-r from-plasma-green to-green-500 text-white rounded-md font-bold">🏥 Centers</a>
-            <a href="/topics/requirements-eligibility/" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Health</a>
-            <a href="/faq.html" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">FAQ</a>
-        </div>
-    </div>
-
     <!-- Main Content -->
-    <main class="pt-20 pb-16">
-        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-<div class="container">
-<div class="breadcrumb">
-<a href="/">Home</a> &gt; <a href="/blog/index.html">Blog</a> &gt; Does the Red Cross Pay for Blood Donations?
-            </div>
-<!-- Hero Section -->
-<article class="post-header">
-<h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">Does the Red Cross Pay for Blood Donations? Everything You Need to Know</h1>
-<div class="post-meta">
-<span class="author">By Glen Meade</span>
-<span class="date">January 4, 2025</span>
-<span class="read-time">6 min read</span>
-</div>
-</article>
-<!-- Main Content -->
-<div class="post-content">
-<p class="intro">When times are tough or when people are simply looking for ways to help others, blood donation often comes up as a powerful option. But one of the most <a class="text-green-600 hover:text-green-800 underline" href="/faq.html">common questions</a> people ask is: <strong>Does the American Red Cross pay for blood donations?</strong></p>
-<p class="text-gray-600 leading-relaxed mb-4">Whether you're interested in saving lives, earning a little extra money, or both, understanding how blood donation works — and whether compensation is involved — is important before you roll up your sleeve.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">The Short Answer: No, the Red Cross Does Not Pay</h2>
-<p class="text-gray-600 leading-relaxed mb-4">The American Red Cross, as well as most community blood centers in the United States, <strong>do not pay donors for giving blood</strong>. Blood donation through these organizations is entirely voluntary. This model is based on a system of altruism: the idea that blood should be freely given to help patients in need.</p>
-<p class="text-gray-600 leading-relaxed mb-4">This approach helps ensure the safety and integrity of the blood supply. Volunteer donors are believed to be more honest in disclosing health information and lifestyle factors that could impact the safety of donated blood.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Why Doesn't the Red Cross Pay for Blood?</h2>
-<p class="text-gray-600 leading-relaxed mb-4">There are a few important reasons:</p>
-<div class="info-card">
-<h3 class="text-xl font-bold text-gray-900">1. Safety First</h3>
-<p class="text-gray-600 leading-relaxed mb-4">When money is involved, there's a higher risk that individuals might not fully disclose medical history, risky behaviors, or travel that could make their blood unsafe. By removing the financial incentive, organizations can encourage more truthful health screenings.</p>
-</div>
-<div class="info-card">
-<h3 class="text-xl font-bold text-gray-900">2. Public Trust and Supply Reliability</h3>
-<p class="text-gray-600 leading-relaxed mb-4">A volunteer-based system increases public trust in the safety of the blood supply. Countries with paid blood donation systems have historically experienced more issues with contaminated or lower-quality blood.</p>
-</div>
-<div class="info-card">
-<h3 class="text-xl font-bold text-gray-900">3. Cost Efficiency for Hospitals and Patients</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Free donations help keep costs lower for hospitals and patients who need transfusions. When blood must be purchased, overall healthcare costs can rise.</p>
-</div>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Who Uses Red Cross Blood Donations?</h2>
-<p class="text-gray-600 leading-relaxed mb-4">Blood collected by the American Red Cross supports thousands of hospitals and clinics across the country. These donations are used in a variety of critical medical situations, including:</p>
-<ul class="space-y-2 text-gray-700">
-<li>Surgeries</li>
-<li>Emergency trauma care</li>
-<li>Cancer treatments</li>
-<li>Chronic illnesses like anemia</li>
-<li>Complications from childbirth</li>
-</ul>
-<p class="highlight-text">One single blood donation can help save up to three lives, as it can be separated into red cells, plasma, and platelets.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Can You Get Paid to Donate Plasma Instead?</h2>
-<p class="text-gray-600 leading-relaxed mb-4">While the Red Cross and most blood banks don't pay for whole blood donations, <strong>plasma donation is different</strong>. Plasma is a component of your blood that is especially valuable for creating life-saving therapies, including treatments for immune disorders and clotting conditions.</p>
-<p class="text-gray-600 leading-relaxed mb-4">In the United States, many private plasma donation centers do pay donors. Well-known examples include:</p>
-<div class="center-list">
-<ul class="space-y-2 text-gray-700">
-<li><a href="/#search?q=CSL%20Plasma">CSL Plasma</a></li>
-<li><a href="/#search?q=Grifols">Grifols/Biomat USA</a></li>
-<li><a href="/#search?q=Octapharma">Octapharma Plasma</a></li>
-<li><a href="/#search?q=KEDPLASMA">KEDPlasma</a></li>
-</ul>
-</div>
-<p class="text-gray-600 leading-relaxed mb-4">These centers typically pay between <strong>$50 and $100 per donation</strong>, and frequent donors can potentially earn <strong>$300–$700 per month</strong>, depending on how often they donate and available bonuses.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Why Does Plasma Donation Pay While Blood Donation Doesn't?</h2>
-<p class="text-gray-600 leading-relaxed mb-4">Plasma donations are used for pharmaceutical manufacturing and are considered a commercial product, so there is an established system for compensating donors. By contrast, whole blood is often directly transfused into patients in hospitals and relies on voluntary community support.</p>
-<p class="text-gray-600 leading-relaxed mb-4">Additionally, plasma donation requires more time (often 60–90 minutes per visit) and involves a more complex process called plasmapheresis, which separates plasma from your blood cells and returns the rest to your body.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Can You Donate to the Red Cross and Still Donate Plasma for Money?</h2>
-<p class="text-gray-600 leading-relaxed mb-4">Yes — many people choose to donate whole blood (unpaid) to organizations like the Red Cross a few times per year while also earning extra cash through plasma donation at private centers.</p>
-<p class="text-gray-600 leading-relaxed mb-4">However, it's crucial to space out your donations properly to protect your health. After giving whole blood, you should wait at least eight weeks before donating again. For plasma, most centers allow you to donate twice per week, but you should always listen to your body and consult with medical staff to ensure safe timing.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Other Ways to Get Paid (Or Compensated) for Donations</h2>
-<p class="text-gray-600 leading-relaxed mb-4">If you're looking for other ways to earn money while helping others, here are a few options:</p>
-<ul class="space-y-2 text-gray-700">
-<li><strong>Platelet Donation:</strong> Some private centers pay for platelet donations (often used for cancer patients). This process takes longer but may offer compensation.</li>
-<li><strong>White Blood Cell (Leukapheresis) Donation:</strong> Less common, but sometimes compensated in research settings.</li>
-<li><strong>Sperm or Egg Donation:</strong> A completely different category, but these are compensated.</li>
-<li><strong>Medical Research Studies:</strong> Clinical trials and certain research programs pay volunteers for participation, including some that involve blood samples.</li>
-</ul>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Alternatives to Red Cross for Paid Blood or Plasma Donations</h2>
-<p class="text-gray-600 leading-relaxed mb-4">If your primary goal is financial, here are a few alternatives to explore:</p>
-<ul class="space-y-2 text-gray-700">
-<li><strong>Local Plasma Centers:</strong> Check for nearby plasma donation centers using keywords like "plasma donation near me" or visit large national center websites to schedule an appointment.</li>
-<li><strong>Blood Centers with Research Partnerships:</strong> Some research-focused blood banks may offer compensation for blood used in specific studies, although this is rare.</li>
-</ul>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Should You Donate Blood for Free?</h2>
-<p class="text-gray-600 leading-relaxed mb-4">While getting paid can be a nice bonus, many people find that donating blood through the Red Cross is a meaningful way to give back to the community. You won't receive money, but you will:</p>
-<ul class="space-y-2 text-gray-700">
-<li>Help save lives</li>
-<li>Support patients in local hospitals</li>
-<li>Build community resilience</li>
-<li>Potentially receive a small token of appreciation, such as a T-shirt or snacks</li>
-</ul>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Final Thoughts</h2>
-<p class="text-gray-600 leading-relaxed mb-4">The American Red Cross and similar organizations rely on volunteer blood donors to keep hospitals and clinics stocked with safe, life-saving blood. If you're motivated by helping others, blood donation can be one of the most powerful gifts you can give.</p>
-<p class="text-gray-600 leading-relaxed mb-4">However, if you're interested in earning extra money while still helping patients, plasma donation at a paid center is an excellent alternative.</p>
-<div class="cta-box">
-<p class="text-gray-600 leading-relaxed mb-4">👉 <strong>Want to know how much you could earn?</strong> Use our <a href="https://plasmapaycalculator.com" target="_blank">Plasma Pay Calculator</a> to find out your potential weekly and monthly earnings.</p>
-</div>
-</div>
-<div class="blog-nav">
-<h3 class="text-xl font-bold text-gray-900">Related Articles</h3>
-<ul class="space-y-2 text-gray-700">
-<li><a href="/blog/how-much-money-plasma-donation">How Much Money Can You Make Donating Plasma?</a></li>
-<li><a href="/blog/plasma-donation-process-step-by-step">Complete Plasma Donation Process Guide</a></li>
-<li><a href="/blog/highest-paying-plasma-centers-near-me">Find the Highest Paying Plasma Centers</a></li>
-</ul>
-</div>
-<!-- Sources & References -->
-<section class="mb-12">
-<h3 class="text-xl font-bold text-gray-900">📚 Sources &amp; References</h3>
-<div class="sources-list">
-<ul class="space-y-2 text-gray-700">
-<li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" rel="noopener" target="_blank">FDA - Blood Donor Screening Requirements</a></li>
-<li><a href="https://www.cdc.gov/bloodsafety/basics.html" rel="noopener" target="_blank">CDC - Blood Safety Basics</a></li>
-<li><a href="https://www.redcross.org/donate-blood/blood-donation-process" rel="noopener" target="_blank">American Red Cross - Donation Process</a></li>
-<li><a href="https://www.cslplasma.com/become-a-donor" rel="noopener" target="_blank">CSL Plasma - Donor Requirements</a></li>
-<li><a href="https://www.biolifeplasma.com/donor-safety" rel="noopener" target="_blank">BioLife Plasma - Donor Safety Information</a></li>
-<li><a href="https://www.aabb.org/tm/donation/Pages/donatefaqs.aspx" rel="noopener" target="_blank">AABB - Blood Donation FAQs</a></li>
-</ul>
-<p class="sources-note"><em>Data compiled from official plasma center websites, FDA guidelines, and industry safety standards. Information verified January 2025.</em></p>
-</div>
-</section>
-<!-- Author Profile -->
-<section class="mb-12">
-<h3 class="text-xl font-bold text-gray-900">Glen Meade, Plasma Donation Researcher &amp; Data Analyst</h3>
-<div class="author-badges">
-<span class="badge">📊 2,522+ Centers Analyzed</span>
-<span class="badge">🔍 Blood vs Plasma Expert</span>
-</div>
-<p class="text-gray-600 leading-relaxed mb-4">Glen has extensively researched the differences between volunteer blood donation systems and paid plasma donation programs. His analysis of compensation models across blood banks and plasma centers helps donors understand the distinct purposes and payment structures of each donation type, enabling informed decisions about their donation journey.</p>
-<div class="disclaimer-note">
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
-</div>
-<p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
-</section>
-</div>
-<div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-<p class="text-gray-600 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
-<strong>Written by Glen Meade</strong>, Plasma Donation Researcher &amp; Data Specialist
-            </p>
-</div>
-<div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-<p class="text-gray-600 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
-<strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
-                Always consult a qualified healthcare provider before donating plasma.
-            </p>
-</div>
-<div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-<h3 class="text-xl font-bold text-gray-900" style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
-<div style="display: flex; align-items: start; gap: 1rem;">
-<div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
-<div>
-<h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-<p class="text-gray-600 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher &amp; Data Specialist</p>
-<p class="text-gray-600 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
-                        Glen has spent over 5 years researching plasma donation centers across the United States, 
-                        compiling comprehensive data on pay rates, <a class="text-green-600 hover:text-green-800 underline" href="/topics/requirements-eligibility/">eligibility requirements</a>, and donor experiences. 
-                        His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Article Header -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-12 text-white">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">Plasma Guide 2025</span>
+                        <span class="text-green-100">Updated January 2025</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                        Does the Red Cross Pay for Blood Donations? Everything You Need to Know
+                    </h1>
+                    <p class="text-xl text-green-100 leading-relaxed">
+                        Thinking about donating blood to the Red Cross? Learn why they don't pay, how it works, and where you can earn money donating plasma instead. Updated 2025 rates & requirements.
                     </p>
-</div>
-</div>
-</div>
-<div class="source-citations" style="background: #f3f4f6; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-<h4 style="color: #1f2937; font-size: 1.125rem; margin-bottom: 0.75rem;">Sources &amp; References</h4>
-<ul class="space-y-2 text-gray-700" style="color: #4b5563; font-size: 0.875rem; margin: 0; padding-left: 1.5rem;">
-<li>FDA Plasma Donation Guidelines - <a href="https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/donating-plasma" style="color: #3b82f6;">FDA.gov</a></li>
-<li>CSL Plasma Official Pay Rates - <a href="https://www.cslplasma.com" style="color: #3b82f6;">CSLPlasma.com</a></li>
-<li>BioLife Plasma Donor Information - <a href="https://www.biolifeplasma.com" style="color: #3b82f6;">BioLifePlasma.com</a></li>
-<li>American Red Cross Blood &amp; Plasma Facts - <a href="https://www.redcross.org" style="color: #3b82f6;">RedCross.org</a></li>
-<li>Pay rate and eligibility information compiled from official plasma center websites and public data sources as of 2025.</li>
-</ul>
-</div>
-
+                </div>
+            </div>
         </article>
+
+        <section class="mb-12" id="">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">📚 Sources & References</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Data compiled from official plasma center websites, FDA guidelines, and industry safety standards. Information verified January 2025.</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>FDA - Blood Donor Screening Requirements</li>
+                <li>CDC - Blood Safety Basics</li>
+                <li>American Red Cross - Donation Process</li>
+                <li>CSL Plasma - Donor Requirements</li>
+                <li>BioLife Plasma - Donor Safety Information</li>
+                <li>AABB - Blood Donation FAQs</li>
+            </ul>
+        </section>
+
+        <section class="mb-12" id="">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Glen Meade, Plasma Donation Researcher & Data Analyst</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Glen has extensively researched the differences between volunteer blood donation systems and paid plasma donation programs. His analysis of compensation models across blood banks and plasma centers helps donors understand the distinct purposes and payment structures of each donation type, enabling informed decisions about their donation journey.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Transparency:Glen is not a medical professional. This information is educational only. Always consult your healthcare provider and plasma center for personalized advice.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
+        </section>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Calculate Your Plasma Earnings</h2>
+                <p class="text-gray-700 mb-6">Use our free calculator to see how much you could earn at centers near you</p>
+                <a href="/#calculator" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200">
+                    Calculate My Earnings →
+                </a>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="text-white font-bold mb-4">Plasma Pay Calculator</h4>
-                    <p class="text-sm">Get accurate plasma donation income estimates with current 2025 rates.</p>
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
+                <div class="mt-4 space-x-6">
+                    <a href="/privacy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="/terms.html" class="hover:text-white">Terms of Service</a>
+                    <a href="/contact.html" class="hover:text-white">Contact</a>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/calculators/california/" class="hover:text-white transition-colors">Earnings Calculator</a></li>
-                        <li><a href="/blog/" class="hover:text-white transition-colors">Income Tips</a></li>
-                        <li><a href="/faq.html" class="hover:text-white transition-colors">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/about.html" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; 2025 Plasma Pay Calculator. Information for educational purposes.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function toggleMobileMenu() {
+        function toggleMobileMenu() {{
             const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+            menu.classList.toggle('active');
+        }}
     </script>
 </body>
 </html>

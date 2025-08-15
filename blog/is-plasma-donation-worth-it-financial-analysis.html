@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💰 Is Plasma Donation Worth It? Complete Financial Analysi...</title>
     <meta name="description" content="Is plasma donation worth your time? Complete cost-benefit analysis: $25-50/hour potential, health considerations, and real ROI calculations. Get the facts now!">
-    <meta name="keywords" content="is plasma donation worth it, plasma donation pros and cons, plasma donation financial analysis, is donating plasma profitable">
-    <link rel="canonical" href="https://plasmapaycalculator.com/blog/is-plasma-donation-worth-it-financial-analysis">
+    <meta name="keywords" content="plasma donation, plasma pay, donation guide, plasma centers">
+    <link rel="canonical" href="https://plasmapaycalculator.com/blog/is-plasma-donation-worth-it-financial-analysis.html">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <!-- Google tag (gtag.js) -->
@@ -22,6 +22,9 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
          crossorigin="anonymous"></script>
     
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,839 +32,355 @@
             theme: {
                 extend: {
                     colors: {
-                        'plasma-green': '#27ae60',
-                        'plasma-green-dark': '#219a52',
+                        'plasma': {
+                            50: '#eff6ff',
+                            500: '#3b82f6', 
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        }
                     }
                 }
             }
         }
     </script>
     
-    <script type="application/ld+json">
-
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "@id": "https://plasmapaycalculator.com/blog/is-plasma-donation-worth-it-financial-analysis",
-        "headline": "Is Plasma Donation Worth It? Complete Financial Analysis",
-        "description": "Detailed financial and practical analysis of plasma donation value proposition with real-world examples",
-        "author": {
-            "@type": "Organization",
-            "name": "Plasma Pay Calculator"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Plasma Pay Calculator",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://plasmapaycalculator.com/images/logo.png"
-            }
-        },
-        "datePublished": "2025-01-20",
-        "dateModified": "2025-01-20",
-        "mainEntityOfPage": "https://plasmapaycalculator.com/blog/is-plasma-donation-worth-it-financial-analysis"
-    }
-    
-</script>
-<script type="application/ld+json">
-
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Is plasma donation financially worth it as a side income?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Plasma donation can be worth it if you need $400-800 monthly supplemental income and have 6-8 hours weekly. The effective hourly rate ranges from $25-50 when optimized. It's worth it for students, part-time workers, and those near high-paying centers, but not for high earners ($40+/hour) or those with health issues."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What are the hidden costs of plasma donation?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Hidden costs include transportation ($25-55/month for gas, parking, wear & tear), health supplements ($50-95/month for iron, protein, hydration products), tax obligations (12-22% federal bracket), and opportunity cost of time. Net monthly income is typically $403 after $600 gross minus expenses and taxes."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How does plasma donation compare to other side income sources?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Plasma donation offers guaranteed income ($25-50/hour) with no skills required and immediate start (1-2 days), unlike variable gig work. It pays better than retail ($12-18/hour) and delivery driving ($10-25/hour after expenses), but less than skilled freelancing ($15-75/hour). The key advantage is predictable, guaranteed earnings."
-                }
-            }
-        ]
-    }
-    
-</script>
-
+    <style>
+        .earnings-card {transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}
+        .earnings-card:hover {transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}
+        .logo {font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+        .logo-icon {width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}
+        .trust-badge {background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}
+        .nav-container {max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 1.5rem;}
+        .nav-links {display:flex;list-style:none;gap:1.2rem;align-items:center;}
+        .nav-links a {text-decoration:none;color:#2c3e50;font-weight:500;transition:all 0.3s;padding:0.4rem 0.8rem;border-radius:6px;font-size:0.9rem;white-space:nowrap;}
+        .centers-highlight {background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%) !important;color:white !important;border-radius:6px !important;font-weight:700 !important;box-shadow:0 2px 6px rgba(39,174,96,0.3) !important;transform:scale(1.05);}
+        .centers-highlight:hover {background:linear-gradient(135deg,#219a52 0%,#26be5f 100%) !important;color:white !important;transform:scale(1.08);}
+        .nav-links a:hover,.nav-links a.active {color:#27ae60;background:rgba(39,174,96,0.1);}
+        .mobile-menu-btn {display:none;background:none;border:none;color:#2c3e50;font-size:24px;cursor:pointer;}
+        .mobile-menu {display:none;position:fixed;top:80px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(39,174,96,0.1);z-index:999;padding:1rem;}
+        .mobile-menu.active {display:block;}
+        nav {background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:1rem 0;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid rgba(39,174,96,0.1);}
+        body {padding-top:80px;}
+        @media (max-width:768px) {.nav-links {display:none;}.mobile-menu-btn {display:block;}}
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="/" class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-gradient-to-br from-plasma-green to-green-500 rounded-lg flex items-center justify-center text-white font-bold text-xs">
-                            PPC
-                        </div>
-                        <span class="font-bold text-lg text-gray-900">Plasma Pay Calculator</span>
-                    </a>
-                    <span class="ml-3 px-2 py-1 bg-green-100 text-plasma-green text-xs font-medium rounded-full">
-                        Updated 2025
-                    </span>
-                </div>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="/#calculator" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Calculator</a>
-                    <a href="/blog/" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                    <a href="/states.html" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">States</a>
-                    <a href="/centers/" class="bg-gradient-to-r from-plasma-green to-green-500 text-white px-4 py-2 rounded-md text-sm font-bold hover:scale-105 transition-transform shadow-md">
-                        🏥 Centers
-                    </a>
-                    <a href="/topics/requirements-eligibility/" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Health</a>
-                    <a href="/faq.html" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
-                </div>
-                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-lg z-40 md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="/#calculator" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Calculator</a>
-            <a href="/blog/" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Blog</a>
-            <a href="/states.html" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">States</a>
-            <a href="/centers/" class="block px-3 py-2 bg-gradient-to-r from-plasma-green to-green-500 text-white rounded-md font-bold">🏥 Centers</a>
-            <a href="/topics/requirements-eligibility/" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Health</a>
-            <a href="/faq.html" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">FAQ</a>
-        </div>
-    </div>
-
     <!-- Main Content -->
-    <main class="pt-20 pb-16">
-        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-<!-- Breadcrumbs -->
-<!-- Article -->
-<article class="blog-article">
-<!-- Quick Answer -->
-<section class="verdict-box">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 The Verdict: Is It Worth It?</h2>
-<div class="verdict-grid">
-<div class="verdict-card positive">
-<h3 class="text-xl font-bold text-gray-900">✅ YES, If You...</h3>
-<ul class="space-y-2 text-gray-700">
-<li>Need $400-800 monthly supplemental income</li>
-<li>Have 6-8 hours weekly for donations</li>
-<li>Live near high-paying centers ($50+/visit)</li>
-<li>Can donate consistently without deferrals</li>
-<li>Value flexible, guaranteed income</li>
-</ul>
-<p class="verdict-note"><strong>Effective Rate:</strong> $25-50/hour</p>
-</div>
-<div class="verdict-card negative">
-<h3 class="text-xl font-bold text-gray-900">❌ NO, If You...</h3>
-<ul class="space-y-2 text-gray-700">
-<li>Earn $40+/hour in other work</li>
-<li>Have frequent health issues</li>
-<li>Need immediate, large sums of money</li>
-<li>Live far from plasma centers</li>
-<li>Uncomfortable with medical procedures</li>
-</ul>
-<p class="verdict-note"><strong>Better Options:</strong> High-skill freelancing, overtime</p>
-</div>
-</div>
-</section>
-<!-- Table of Contents -->
-<div class="table-of-contents">
-<h3 class="text-xl font-bold text-gray-900">Complete Analysis</h3>
-<ul class="space-y-2 text-gray-700">
-<li><a href="#hourly-rate-analysis">True Hourly Rate Analysis</a></li>
-<li><a href="#cost-benefit-breakdown">Cost-Benefit Breakdown</a></li>
-<li><a href="#comparison-alternatives">vs. Other Income Sources</a></li>
-<li><a href="#health-considerations">Health &amp; Safety Considerations</a></li>
-<li><a href="#real-world-scenarios">Real-World Scenarios</a></li>
-<li><a href="#maximizing-value">Maximizing Value Proposition</a></li>
-<li><a href="#who-should-consider">Who Should Consider It?</a></li>
-</ul>
-</div>
-<!-- Article Content -->
-<div class="article-content">
-<section id="hourly-rate-analysis">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">⏰ True Hourly Rate Analysis</h2>
-<p class="text-gray-600 leading-relaxed mb-4">The real question isn't just "how much do you earn?" but "how much do you earn per hour of your time?"</p>
-<div class="time-breakdown">
-<h3 class="text-xl font-bold text-gray-900">Complete Time Investment Per Donation</h3>
-<div class="time-analysis">
-<div class="time-component">
-<span class="time-label">Travel Time (Round Trip)</span>
-<span class="time-range">15-45 minutes</span>
-</div>
-<div class="time-component">
-<span class="time-label">Check-in &amp; Screening</span>
-<span class="time-range">15-30 minutes</span>
-</div>
-<div class="time-component">
-<span class="time-label">Wait Time</span>
-<span class="time-range">0-60 minutes</span>
-</div>
-<div class="time-component">
-<span class="time-label">Actual Donation</span>
-<span class="time-range">45-75 minutes</span>
-</div>
-<div class="time-component">
-<span class="time-label">Recovery &amp; Snacks</span>
-<span class="time-range">10-15 minutes</span>
-</div>
-<div class="time-total">
-<span class="time-label"><strong>Total Time Investment</strong></span>
-<span class="time-range"><strong>1.5-4 hours</strong></span>
-</div>
-</div>
-</div>
-<div class="hourly-scenarios">
-<h3 class="text-xl font-bold text-gray-900">Hourly Rate Scenarios</h3>
-<div class="scenario-grid">
-<div class="scenario-card best">
-<h4>🏆 Best Case Scenario</h4>
-<ul class="space-y-2 text-gray-700">
-<li>High-paying center: $80/donation</li>
-<li>Close location: 10 min travel</li>
-<li>Off-peak time: No wait</li>
-<li>Fast processor: 45 min donation</li>
-</ul>
-<div class="hourly-rate">$53/hour</div>
-<p class="scenario-note">Total time: 1.5 hours</p>
-</div>
-<div class="scenario-card average">
-<h4>📊 Average Scenario</h4>
-<ul class="space-y-2 text-gray-700">
-<li>Mid-tier center: $50/donation</li>
-<li>Moderate travel: 20 min travel</li>
-<li>Some wait: 30 min wait</li>
-<li>Normal pace: 60 min donation</li>
-</ul>
-<div class="hourly-rate">$27/hour</div>
-<p class="scenario-note">Total time: 1.8 hours</p>
-</div>
-<div class="scenario-card worst">
-<h4>⚠️ Worst Case Scenario</h4>
-<ul class="space-y-2 text-gray-700">
-<li>Low-paying center: $25/donation</li>
-<li>Far location: 30 min travel</li>
-<li>Peak time: 60 min wait</li>
-<li>Slow processing: 75 min donation</li>
-</ul>
-<div class="hourly-rate">$8/hour</div>
-<p class="scenario-note">Total time: 3 hours</p>
-</div>
-</div>
-</div>
-<div class="optimization-impact">
-<h3 class="text-xl font-bold text-gray-900">💡 Optimization Impact on Hourly Rates</h3>
-<div class="optimization-factors">
-<div class="factor">
-<strong>Center Selection:</strong> Can increase hourly rate by 50-100%
-                            </div>
-<div class="factor">
-<strong>Time Optimization:</strong> Off-peak visits save 30-60 minutes
-                            </div>
-<div class="factor">
-<strong>Location Strategy:</strong> Choosing nearby centers adds $5-15/hour
-                            </div>
-<div class="factor">
-<strong>Health Consistency:</strong> Avoiding deferrals maintains income flow
-                            </div>
-</div>
-</div>
-</section>
-<section id="cost-benefit-breakdown">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">💰 Complete Cost-Benefit Breakdown</h2>
-<div class="cost-benefit-analysis">
-<div class="benefits-section">
-<h3 class="text-xl font-bold text-gray-900">✅ Financial Benefits</h3>
-<div class="benefit-items">
-<div class="benefit-item">
-<h4>Direct Income</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Regular:</strong> $400-800/month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>First Month:</strong> $650-1,200 (with bonuses)</p>
-</div>
-<div class="benefit-item">
-<h4>Bonus Income</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>New Donor:</strong> $400-800</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Referrals:</strong> $50-100 each</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Promotions:</strong> $100-300 seasonal</p>
-</div>
-<div class="benefit-item">
-<h4>Tax Deductions</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Mileage:</strong> $0.655/mile (2025)</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Health Supplements:</strong> If medically necessary</p>
-</div>
-<div class="benefit-item">
-<h4>Health Monitoring</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Free Screenings:</strong> $100-200 value</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Early Detection:</strong> Potential health issues</p>
-</div>
-</div>
-</div>
-<div class="costs-section">
-<h3 class="text-xl font-bold text-gray-900">❌ Hidden Costs &amp; Considerations</h3>
-<div class="cost-items">
-<div class="cost-item">
-<h4>Transportation</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Gas:</strong> $10-30/month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Wear &amp; Tear:</strong> $15-25/month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Parking:</strong> $0-50/month</p>
-</div>
-<div class="cost-item">
-<h4>Health Maintenance</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Iron Supplements:</strong> $15-25/month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Protein Powder:</strong> $20-40/month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Hydration Products:</strong> $15-30/month</p>
-</div>
-<div class="cost-item">
-<h4>Opportunity Cost</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Lost Work Time:</strong> Variable</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Social Time:</strong> 6-8 hours/week</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Exercise Time:</strong> Recovery periods</p>
-</div>
-<div class="cost-item">
-<h4>Tax Implications</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Federal Tax:</strong> 12-22% bracket</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>State Tax:</strong> 0-13% depending on state</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Self-Employment:</strong> Not applicable (W-9 income)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="net-analysis">
-<h3 class="text-xl font-bold text-gray-900">📊 Net Income Analysis</h3>
-<div class="income-examples">
-<div class="income-example">
-<h4>Monthly Net Income Example</h4>
-<div class="calculation">
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Gross Income:</strong> $600</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Transportation:</strong> -$25</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Supplements:</strong> -$40</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Tax Withholding (22%):</strong> -$132</p>
-<p class="net-result"><strong>Net Income: $403</strong></p>
-</div>
-</div>
-<div class="income-example">
-<h4>Annual Net Income Range</h4>
-<div class="annual-range">
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Conservative:</strong> $3,600-4,800</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Optimized:</strong> $5,400-7,200</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Maximum:</strong> $6,600-8,400</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="comparison-alternatives">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">⚖️ Comparison vs. Other Income Sources</h2>
-<div class="income-comparison">
-<table class="bg-white rounded-xl shadow-md overflow-hidden">
-<thead>
-<tr>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Income Source</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hourly Rate</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Flexibility</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Startup Time</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Guaranteed Pay</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Skills Required</th>
-</tr>
-</thead>
-<tbody>
-<tr class="highlight">
-<td class="px-6 py-4 whitespace-nowrap text-sm"><strong>Plasma Donation</strong></td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$25-50</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">High</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">1-2 days</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">✅ Yes</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">None</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Uber/Lyft (after expenses)</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$12-25</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Very High</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">1-2 weeks</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">❌ Variable</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Driving, car</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm">DoorDash (after expenses)</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$10-20</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Very High</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">3-7 days</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">❌ Variable</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Driving</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Freelance Writing</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$15-75</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Medium</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">2-8 weeks</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">❌ Variable</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Writing skills</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Virtual Assistant</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$15-35</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Medium</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">2-4 weeks</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">❌ Variable</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Admin skills</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Retail Part-time</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$12-18</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Low</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">1-2 weeks</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">✅ Yes</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Customer service</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Tutoring</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">$20-60</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Medium</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">2-6 weeks</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">❌ Variable</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm">Subject expertise</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="competitive-advantages">
-<h3 class="text-xl font-bold text-gray-900">🏆 Where Plasma Donation Excels</h3>
-<div class="advantage-grid">
-<div class="advantage">
-<h4>Guaranteed Income</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Unlike gig work, you know exactly what you'll earn every visit</p>
-</div>
-<div class="advantage">
-<h4>No Skills Required</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Only health requirements - no education, experience, or training needed</p>
-</div>
-<div class="advantage">
-<h4>Immediate Start</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Begin earning within 1-2 days of initial screening</p>
-</div>
-<div class="advantage">
-<h4>Productive Downtime</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Use donation time for reading, studying, or other activities</p>
-</div>
-<div class="advantage">
-<h4>Health Benefits</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Regular health monitoring and potential early issue detection</p>
-</div>
-<div class="advantage">
-<h4>Social Impact</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Contribute to life-saving medical treatments</p>
-</div>
-</div>
-</div>
-</section>
-<section id="health-considerations">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🏥 Health &amp; Safety Considerations</h2>
-<p class="text-gray-600 leading-relaxed mb-4">The non-financial aspects of plasma donation are equally important to consider:</p>
-<div class="health-factors">
-<div class="health-pros">
-<h3 class="text-xl font-bold text-gray-900">✅ Health Benefits</h3>
-<ul class="space-y-2 text-gray-700">
-<li><strong>Regular Health Monitoring:</strong> Blood pressure, pulse, protein, hematocrit checks</li>
-<li><strong>Early Detection:</strong> Potential identification of health issues</li>
-<li><strong>Regulated Safety:</strong> FDA oversight ensures safety protocols</li>
-<li><strong>Professional Staff:</strong> Trained medical professionals oversee process</li>
-<li><strong>Sterile Environment:</strong> Single-use, sterile equipment for every donation</li>
-</ul>
-</div>
-<div class="health-considerations">
-<h3 class="text-xl font-bold text-gray-900">⚠️ Health Considerations</h3>
-<ul class="space-y-2 text-gray-700">
-<li><strong>Time Commitment:</strong> 6-8 hours weekly impacts exercise/sleep schedules</li>
-<li><strong>Protein Depletion:</strong> Requires increased protein intake (50g daily)</li>
-<li><strong>Iron Monitoring:</strong> Need to maintain adequate iron levels</li>
-<li><strong>Hydration Needs:</strong> Increased water intake requirements</li>
-<li><strong>Minor Side Effects:</strong> Possible bruising, fatigue, or dizziness</li>
-<li><strong>Immune Considerations:</strong> Temporary minor reduction in plasma proteins</li>
-</ul>
-</div>
-</div>
-<div class="eligibility-factors">
-<h3 class="text-xl font-bold text-gray-900">🎯 Eligibility Success Factors</h3>
-<div class="success-grid">
-<div class="success-factor">
-<h4>Age &amp; Weight</h4>
-<p class="text-gray-600 leading-relaxed mb-4">18-69 years old, 110+ lbs (higher weight = higher pay)</p>
-</div>
-<div class="success-factor">
-<h4>Health Stability</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Consistent blood pressure, iron levels, and protein</p>
-</div>
-<div class="success-factor">
-<h4>Lifestyle Factors</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Regular sleep, good nutrition, adequate hydration</p>
-</div>
-<div class="success-factor">
-<h4>Medical History</h4>
-<p class="text-gray-600 leading-relaxed mb-4">No disqualifying conditions or medications</p>
-</div>
-</div>
-</div>
-</section>
-<section id="real-world-scenarios">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🌟 Real-World Scenarios: When It's Worth It</h2>
-<div class="scenario-profiles">
-<div class="profile-card worth-it">
-<h3 class="text-xl font-bold text-gray-900">👩‍🎓 Sarah - College Student</h3>
-<div class="profile-details">
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Situation:</strong> Full-time student, needs $500/month for expenses</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Location:</strong> Near campus with high-paying center ($60/visit)</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Schedule:</strong> Flexible, can donate during optimal times</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Health:</strong> Young, healthy, consistent donation ability</p>
-</div>
-<div class="verdict positive">
-<h4>✅ WORTH IT</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Effective rate: $40/hour | Monthly income: $600 | Perfect fit for flexible student schedule</p>
-</div>
-</div>
-<div class="profile-card worth-it">
-<h3 class="text-xl font-bold text-gray-900">👨‍💼 Mike - Part-time Worker</h3>
-<div class="profile-details">
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Situation:</strong> Works evenings, free mornings, needs extra income</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Location:</strong> Suburban area with decent rates ($45/visit)</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Schedule:</strong> Can donate during off-peak morning hours</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Health:</strong> Good health, 185 lbs (higher pay tier)</p>
-</div>
-<div class="verdict positive">
-<h4>✅ WORTH IT</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Effective rate: $35/hour | Monthly income: $480 | Complements work schedule perfectly</p>
-</div>
-</div>
-<div class="profile-card not-worth-it">
-<h3 class="text-xl font-bold text-gray-900">👩‍💻 Jessica - Software Developer</h3>
-<div class="profile-details">
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Situation:</strong> Earns $75/hour freelancing, limited time</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Location:</strong> Urban area with average rates ($40/visit)</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Schedule:</strong> Busy work schedule, weekend family time</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Health:</strong> Stressful job affects sleep and blood pressure</p>
-</div>
-<div class="verdict negative">
-<h4>❌ NOT WORTH IT</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Opportunity cost too high | Better to work extra freelance hours | Health stress concerns</p>
-</div>
-</div>
-<div class="profile-card marginal">
-<h3 class="text-xl font-bold text-gray-900">👨‍🏭 David - Factory Worker</h3>
-<div class="profile-details">
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Situation:</strong> Full-time job at $18/hour, needs debt payoff</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Location:</strong> Rural area with lower rates ($30/visit)</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Schedule:</strong> Can only donate weekends due to work schedule</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Health:</strong> Physical job causes fatigue, occasional high BP</p>
-</div>
-<div class="verdict marginal">
-<h4>⚠️ MARGINAL</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Lower effective rate due to weekend rush | Health monitoring beneficial | Consider carefully</p>
-</div>
-</div>
-</div>
-</section>
-<section id="maximizing-value">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">📈 Maximizing Your Value Proposition</h2>
-<p class="text-gray-600 leading-relaxed mb-4">If you decide plasma donation is worth it, here's how to maximize the value:</p>
-<div class="maximization-strategies">
-<div class="strategy-section">
-<h3 class="text-xl font-bold text-gray-900">💰 Financial Optimization</h3>
-<div class="strategy-items">
-<div class="strategy-item">
-<h4>Center Selection</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Choose highest-paying centers within reasonable distance</p>
-<p class="impact">Impact: +$10-30 per visit</p>
-</div>
-<div class="strategy-item">
-<h4>Bonus Maximization</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Complete all new donor bonuses and take advantage of promotions</p>
-<p class="impact">Impact: +$400-800 first month</p>
-</div>
-<div class="strategy-item">
-<h4>Referral Income</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Build systematic referral network for ongoing bonus income</p>
-<p class="impact">Impact: +$50-100 per referral</p>
-</div>
-<div class="strategy-item">
-<h4>Tax Optimization</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Track deductible expenses and plan for tax obligations</p>
-<p class="impact">Impact: +5-10% effective income</p>
-</div>
-</div>
-</div>
-<div class="strategy-section">
-<h3 class="text-xl font-bold text-gray-900">⏰ Time Optimization</h3>
-<div class="strategy-items">
-<div class="strategy-item">
-<h4>Off-Peak Scheduling</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Donate during less busy times to minimize wait</p>
-<p class="impact">Impact: Save 30-60 minutes per visit</p>
-</div>
-<div class="strategy-item">
-<h4>Productive Use of Time</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Use donation time for education, work, or entertainment</p>
-<p class="impact">Impact: +$5-15 effective hourly rate</p>
-</div>
-<div class="strategy-item">
-<h4>Location Optimization</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Choose centers near other errands to combine trips</p>
-<p class="impact">Impact: Reduce opportunity cost</p>
-</div>
-</div>
-</div>
-<div class="strategy-section">
-<h3 class="text-xl font-bold text-gray-900">🏥 Health Optimization</h3>
-<div class="strategy-items">
-<div class="strategy-item">
-<h4>Consistency Maintenance</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Maintain health metrics to avoid deferrals</p>
-<p class="impact">Impact: Maintain income flow</p>
-</div>
-<div class="strategy-item">
-<h4>Hydration Protocol</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Optimal hydration for faster donation processing</p>
-<p class="impact">Impact: Reduce donation time by 10-15%</p>
-</div>
-<div class="strategy-item">
-<h4>Nutrition Management</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Proper nutrition to maintain protein and iron levels</p>
-<p class="impact">Impact: Avoid costly deferrals</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="who-should-consider">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Who Should Consider Plasma Donation?</h2>
-<div class="ideal-candidates">
-<div class="candidate-type">
-<h3 class="text-xl font-bold text-gray-900">✅ Ideal Candidates</h3>
-<ul class="space-y-2 text-gray-700">
-<li><strong>Students:</strong> Flexible schedules, need supplemental income</li>
-<li><strong>Part-time Workers:</strong> Looking to maximize income during free hours</li>
-<li><strong>Retirees:</strong> Healthy seniors with time availability</li>
-<li><strong>Stay-at-home Parents:</strong> Need income while maintaining schedule flexibility</li>
-<li><strong>Debt Payoff Seekers:</strong> Want guaranteed extra income for financial goals</li>
-<li><strong>Rural Residents:</strong> Limited other high-paying flexible work options</li>
-</ul>
-</div>
-<div class="poor-candidates">
-<h3 class="text-xl font-bold text-gray-900">❌ Poor Candidates</h3>
-<ul class="space-y-2 text-gray-700">
-<li><strong>High Earners:</strong> Those earning $40+/hour in other work</li>
-<li><strong>Health Issues:</strong> Frequent blood pressure, iron, or protein problems</li>
-<li><strong>Busy Professionals:</strong> Limited time with high opportunity costs</li>
-<li><strong>Needle Phobic:</strong> Uncomfortable with medical procedures</li>
-<li><strong>Inconsistent Schedules:</strong> Cannot commit to regular donation schedule</li>
-<li><strong>Far from Centers:</strong> Travel time makes hourly rate uncompetitive</li>
-</ul>
-</div>
-</div>
-<div class="decision-framework">
-<h3 class="text-xl font-bold text-gray-900">🤔 Decision Framework</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Ask yourself these key questions:</p>
-<div class="decision-questions">
-<div class="question-box">
-<h4>1. Financial Need</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Do I need $400-800 monthly supplemental income?</p>
-</div>
-<div class="question-box">
-<h4>2. Time Availability</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Can I consistently dedicate 6-8 hours per week?</p>
-</div>
-<div class="question-box">
-<h4>3. Opportunity Cost</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Is $25-50/hour competitive with my other options?</p>
-</div>
-<div class="question-box">
-<h4>4. Health Stability</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Am I healthy enough to donate consistently?</p>
-</div>
-<div class="question-box">
-<h4>5. Location Access</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Do I live within reasonable distance of good centers?</p>
-</div>
-</div>
-<p class="decision-note">If you answered "yes" to 4-5 questions, plasma donation is likely worth it for you.</p>
-</div>
-</section>
-<section class="conclusion">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Final Verdict: The Bottom Line</h2>
-<div class="final-analysis">
-<div class="analysis-card">
-<h3 class="text-xl font-bold text-gray-900">💰 Financial Bottom Line</h3>
-<ul class="space-y-2 text-gray-700">
-<li>Effective hourly rate: $25-50 (optimized)</li>
-<li>Monthly income potential: $400-800</li>
-<li>Annual income potential: $4,800-9,600</li>
-<li>First-month bonus opportunity: $650-1,200</li>
-</ul>
-</div>
-<div class="analysis-card">
-<h3 class="text-xl font-bold text-gray-900">⏰ Time Investment</h3>
-<ul class="space-y-2 text-gray-700">
-<li>6-8 hours per week commitment</li>
-<li>1.5-2.5 hours per donation (optimized)</li>
-<li>Productive time during donation possible</li>
-<li>Flexible scheduling available</li>
-</ul>
-</div>
-<div class="analysis-card">
-<h3 class="text-xl font-bold text-gray-900">🏥 Health Considerations</h3>
-<ul class="space-y-2 text-gray-700">
-<li>Generally safe for healthy individuals</li>
-<li>Regular health monitoring benefits</li>
-<li>Requires nutritional awareness</li>
-<li>Minor time impact on exercise/activities</li>
-</ul>
-</div>
-</div>
-<div class="final-recommendation">
-<h3 class="text-xl font-bold text-gray-900">🎯 Our Recommendation</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Plasma donation is worth it if you meet these criteria:</p>
-<div class="criteria-checklist">
-<div class="criteria-item">✅ Need supplemental income of $400-800/month</div>
-<div class="criteria-item">✅ Have 6-8 hours weekly availability</div>
-<div class="criteria-item">✅ Live within 20 minutes of a quality center</div>
-<div class="criteria-item">✅ Can maintain consistent health for donations</div>
-<div class="criteria-item">✅ Value guaranteed income over variable earnings</div>
-</div>
-<p class="final-note">If you meet 4-5 criteria, plasma donation can be an excellent addition to your income strategy.</p>
-</div>
-</section>
-</div>
-<!-- Call to Action -->
-<div class="article-cta">
-<h3 class="text-xl font-bold text-gray-900">Ready to Evaluate Plasma Donation for Yourself?</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Find the highest-paying centers in your area and calculate your potential earnings to make an informed decision.</p>
-<div class="cta-buttons">
-<a class="cta-btn primary" href="/">Find Centers Near Me</a>
-<a class="cta-btn secondary" href="https://plasmapaycalculator.com" target="_blank">Calculate My ROI</a>
-</div>
-</div>
-<!-- Sources & References -->
-<section class="mb-12">
-<h3 class="text-xl font-bold text-gray-900">📚 Sources &amp; References</h3>
-<div class="sources-list">
-<ul class="space-y-2 text-gray-700">
-<li><a href="https://www.fda.gov/vaccines-blood-biologics/blood-blood-products/blood-donor-screening-requirements" rel="noopener" target="_blank">FDA - Blood Donor Screening Requirements</a></li>
-<li><a href="https://www.cdc.gov/bloodsafety/basics.html" rel="noopener" target="_blank">CDC - Blood Safety Basics</a></li>
-<li><a href="https://www.bls.gov/oes/current/oes_nat.htm" rel="noopener" target="_blank">Bureau of Labor Statistics - Wage Data</a></li>
-<li><a href="https://www.cslplasma.com/compensation" rel="noopener" target="_blank">CSL Plasma - Compensation Information</a></li>
-<li><a href="https://www.biolifeplasma.com/donor-compensation" rel="noopener" target="_blank">BioLife Plasma - Donor Compensation</a></li>
-<li><a href="https://www.irs.gov/publications/p525" rel="noopener" target="_blank">IRS - Taxable and Nontaxable Income</a></li>
-</ul>
-<p class="sources-note"><em>Financial analysis based on verified compensation data, government wage statistics, and donor survey responses. Tax implications based on IRS guidance. Updated January 2025.</em></p>
-</div>
-</section>
-<!-- Author Profile -->
-<section class="mb-12">
-<h3 class="text-xl font-bold text-gray-900">Glen Meade, Financial Analyst &amp; Plasma Industry Researcher</h3>
-<div class="author-badges">
-<span class="badge">📊 Financial Analysis Expert</span>
-<span class="badge">💰 ROI Specialist</span>
-<span class="badge">🎯 Cost-Benefit Analyst</span>
-</div>
-<p class="text-gray-600 leading-relaxed mb-4">Glen combines financial analysis expertise with comprehensive plasma industry research to provide data-driven insights on donation profitability. He has analyzed thousands of donor financial outcomes and developed frameworks for evaluating the true ROI of plasma donation across different demographics and economic situations.</p>
-<div class="disclaimer-note">
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Transparency:</strong> Glen is not a financial advisor or medical professional. This analysis is educational only. Always consult financial advisors for personal financial decisions and healthcare providers for medical guidance.</p>
-</div>
-<p class="last-updated">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
-</section>
-</article>
-<div class="author-byline" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-<p class="text-gray-600 leading-relaxed mb-4" style="margin: 0; color: #4b5563; font-size: 0.875rem;">
-<strong>Written by Glen Meade</strong>, Plasma Donation Researcher &amp; Data Specialist
-            </p>
-</div>
-<div class="medical-disclaimer" style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-<p class="text-gray-600 leading-relaxed mb-4" style="margin: 0; color: #92400e; font-size: 0.875rem;">
-<strong>⚕️ Medical Disclaimer:</strong> This content is for informational purposes only. It is not medical advice. 
-                Always consult a qualified healthcare provider before donating plasma.
-            </p>
-</div>
-<div class="author-bio" style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 12px; margin-top: 3rem;">
-<h3 class="text-xl font-bold text-gray-900" style="color: #1f2937; font-size: 1.25rem; margin-bottom: 1rem;">About the Author</h3>
-<div style="display: flex; align-items: start; gap: 1rem;">
-<div style="background: #3b82f6; color: white; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">GM</div>
-<div>
-<h4 style="color: #1f2937; margin: 0 0 0.5rem 0;">Glen Meade</h4>
-<p class="text-gray-600 leading-relaxed mb-4" style="color: #4b5563; margin: 0 0 0.5rem 0; font-size: 0.875rem;">Plasma Donation Researcher &amp; Data Specialist</p>
-<p class="text-gray-600 leading-relaxed mb-4" style="color: #6b7280; margin: 0; font-size: 0.875rem;">
-                        Glen has spent over 5 years researching plasma donation centers across the United States, 
-                        compiling comprehensive data on pay rates, <a class="text-green-600 hover:text-green-800 underline" href="/topics/requirements-eligibility/">eligibility requirements</a>, and donor experiences. 
-                        His work helps thousands of donors find the best centers and maximize their earnings while contributing to life-saving treatments.
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Article Header -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-12 text-white">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">Plasma Guide 2025</span>
+                        <span class="text-green-100">Updated January 2025</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                        💰 Is Plasma Donation Worth It? Complete Financial Analysi...
+                    </h1>
+                    <p class="text-xl text-green-100 leading-relaxed">
+                        Is plasma donation worth your time? Complete cost-benefit analysis: $25-50/hour potential, health considerations, and real ROI calculations. Get the facts now!
                     </p>
-</div>
-</div>
-</div>
-<div class="source-citations" style="background: #f3f4f6; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-<h4 style="color: #1f2937; font-size: 1.125rem; margin-bottom: 0.75rem;">Sources &amp; References</h4>
-<ul class="space-y-2 text-gray-700" style="color: #4b5563; font-size: 0.875rem; margin: 0; padding-left: 1.5rem;">
-<li>FDA Plasma Donation Guidelines - <a href="https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/donating-plasma" style="color: #3b82f6;">FDA.gov</a></li>
-<li>CSL Plasma Official Pay Rates - <a href="https://www.cslplasma.com" style="color: #3b82f6;">CSLPlasma.com</a></li>
-<li>BioLife Plasma Donor Information - <a href="https://www.biolifeplasma.com" style="color: #3b82f6;">BioLifePlasma.com</a></li>
-<li>American Red Cross Blood &amp; Plasma Facts - <a href="https://www.redcross.org" style="color: #3b82f6;">RedCross.org</a></li>
-<li>Pay rate and eligibility information compiled from official plasma center websites and public data sources as of 2025.</li>
-</ul>
-</div>
-
+                </div>
+            </div>
         </article>
+
+        <section class="mb-12" id="">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 The Verdict: Is It Worth It?</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Effective Rate:$25-50/hour</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Better Options:High-skill freelancing, overtime</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Need $400-800 monthly supplemental income</li>
+                <li>Have 6-8 hours weekly for donations</li>
+                <li>Live near high-paying centers ($50+/visit)</li>
+                <li>Can donate consistently without deferrals</li>
+                <li>Value flexible, guaranteed income</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Earn $40+/hour in other work</li>
+                <li>Have frequent health issues</li>
+                <li>Need immediate, large sums of money</li>
+                <li>Live far from plasma centers</li>
+                <li>Uncomfortable with medical procedures</li>
+            </ul>
+        </section>
+
+        <section class="mb-12" id="hourly-rate-analysis">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">⏰ True Hourly Rate Analysis</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">The real question isn't just "how much do you earn?" but "how much do you earn per hour of your time?"</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Total time: 1.5 hours</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Total time: 1.8 hours</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Total time: 3 hours</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>High-paying center: $80/donation</li>
+                <li>Close location: 10 min travel</li>
+                <li>Off-peak time: No wait</li>
+                <li>Fast processor: 45 min donation</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Mid-tier center: $50/donation</li>
+                <li>Moderate travel: 20 min travel</li>
+                <li>Some wait: 30 min wait</li>
+                <li>Normal pace: 60 min donation</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Low-paying center: $25/donation</li>
+                <li>Far location: 30 min travel</li>
+                <li>Peak time: 60 min wait</li>
+                <li>Slow processing: 75 min donation</li>
+            </ul>
+        </section>
+
+        <section class="mb-12" id="cost-benefit-breakdown">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">💰 Complete Cost-Benefit Breakdown</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Regular:$400-800/month</p>
+            <p class="text-gray-700 leading-relaxed mb-4">First Month:$650-1,200 (with bonuses)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">New Donor:$400-800</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Referrals:$50-100 each</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Promotions:$100-300 seasonal</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Mileage:$0.655/mile (2025)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Health Supplements:If medically necessary</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Free Screenings:$100-200 value</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Early Detection:Potential health issues</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Gas:$10-30/month</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Wear & Tear:$15-25/month</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Parking:$0-50/month</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Iron Supplements:$15-25/month</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Protein Powder:$20-40/month</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Hydration Products:$15-30/month</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Lost Work Time:Variable</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Social Time:6-8 hours/week</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Exercise Time:Recovery periods</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Federal Tax:12-22% bracket</p>
+            <p class="text-gray-700 leading-relaxed mb-4">State Tax:0-13% depending on state</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Self-Employment:Not applicable (W-9 income)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Gross Income:$600</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Transportation:-$25</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Supplements:-$40</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Tax Withholding (22%):-$132</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Net Income: $403</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Conservative:$3,600-4,800</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Optimized:$5,400-7,200</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Maximum:$6,600-8,400</p>
+        </section>
+
+        <section class="mb-12" id="comparison-alternatives">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">⚖️ Comparison vs. Other Income Sources</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Unlike gig work, you know exactly what you'll earn every visit</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Only health requirements - no education, experience, or training needed</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Begin earning within 1-2 days of initial screening</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Use donation time for reading, studying, or other activities</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Regular health monitoring and potential early issue detection</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Contribute to life-saving medical treatments</p>
+        </section>
+
+        <section class="mb-12" id="health-considerations">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">🏥 Health & Safety Considerations</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">The non-financial aspects of plasma donation are equally important to consider:</p>
+            <p class="text-gray-700 leading-relaxed mb-4">18-69 years old, 110+ lbs (higher weight = higher pay)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Consistent blood pressure, iron levels, and protein</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Regular sleep, good nutrition, adequate hydration</p>
+            <p class="text-gray-700 leading-relaxed mb-4">No disqualifying conditions or medications</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Regular Health Monitoring:Blood pressure, pulse, protein, hematocrit checks</li>
+                <li>Early Detection:Potential identification of health issues</li>
+                <li>Regulated Safety:FDA oversight ensures safety protocols</li>
+                <li>Professional Staff:Trained medical professionals oversee process</li>
+                <li>Sterile Environment:Single-use, sterile equipment for every donation</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Time Commitment:6-8 hours weekly impacts exercise/sleep schedules</li>
+                <li>Protein Depletion:Requires increased protein intake (50g daily)</li>
+                <li>Iron Monitoring:Need to maintain adequate iron levels</li>
+                <li>Hydration Needs:Increased water intake requirements</li>
+                <li>Minor Side Effects:Possible bruising, fatigue, or dizziness</li>
+                <li>Immune Considerations:Temporary minor reduction in plasma proteins</li>
+            </ul>
+        </section>
+
+        <section class="mb-12" id="real-world-scenarios">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">🌟 Real-World Scenarios: When It's Worth It</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Situation:Full-time student, needs $500/month for expenses</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Location:Near campus with high-paying center ($60/visit)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Schedule:Flexible, can donate during optimal times</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Health:Young, healthy, consistent donation ability</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Effective rate: $40/hour | Monthly income: $600 | Perfect fit for flexible student schedule</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Situation:Works evenings, free mornings, needs extra income</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Location:Suburban area with decent rates ($45/visit)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Schedule:Can donate during off-peak morning hours</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Health:Good health, 185 lbs (higher pay tier)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Effective rate: $35/hour | Monthly income: $480 | Complements work schedule perfectly</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Situation:Earns $75/hour freelancing, limited time</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Location:Urban area with average rates ($40/visit)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Schedule:Busy work schedule, weekend family time</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Health:Stressful job affects sleep and blood pressure</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Opportunity cost too high | Better to work extra freelance hours | Health stress concerns</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Situation:Full-time job at $18/hour, needs debt payoff</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Location:Rural area with lower rates ($30/visit)</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Schedule:Can only donate weekends due to work schedule</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Health:Physical job causes fatigue, occasional high BP</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Lower effective rate due to weekend rush | Health monitoring beneficial | Consider carefully</p>
+        </section>
+
+        <section class="mb-12" id="maximizing-value">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">📈 Maximizing Your Value Proposition</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">If you decide plasma donation is worth it, here's how to maximize the value:</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Choose highest-paying centers within reasonable distance</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: +$10-30 per visit</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Complete all new donor bonuses and take advantage of promotions</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: +$400-800 first month</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Build systematic referral network for ongoing bonus income</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: +$50-100 per referral</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Track deductible expenses and plan for tax obligations</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: +5-10% effective income</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Donate during less busy times to minimize wait</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: Save 30-60 minutes per visit</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Use donation time for education, work, or entertainment</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: +$5-15 effective hourly rate</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Choose centers near other errands to combine trips</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: Reduce opportunity cost</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Maintain health metrics to avoid deferrals</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: Maintain income flow</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Optimal hydration for faster donation processing</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: Reduce donation time by 10-15%</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Proper nutrition to maintain protein and iron levels</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Impact: Avoid costly deferrals</p>
+        </section>
+
+        <section class="mb-12" id="who-should-consider">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Who Should Consider Plasma Donation?</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Ask yourself these key questions:</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Do I need $400-800 monthly supplemental income?</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Can I consistently dedicate 6-8 hours per week?</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Is $25-50/hour competitive with my other options?</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Am I healthy enough to donate consistently?</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Do I live within reasonable distance of good centers?</p>
+            <p class="text-gray-700 leading-relaxed mb-4">If you answered "yes" to 4-5 questions, plasma donation is likely worth it for you.</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Students:Flexible schedules, need supplemental income</li>
+                <li>Part-time Workers:Looking to maximize income during free hours</li>
+                <li>Retirees:Healthy seniors with time availability</li>
+                <li>Stay-at-home Parents:Need income while maintaining schedule flexibility</li>
+                <li>Debt Payoff Seekers:Want guaranteed extra income for financial goals</li>
+                <li>Rural Residents:Limited other high-paying flexible work options</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>High Earners:Those earning $40+/hour in other work</li>
+                <li>Health Issues:Frequent blood pressure, iron, or protein problems</li>
+                <li>Busy Professionals:Limited time with high opportunity costs</li>
+                <li>Needle Phobic:Uncomfortable with medical procedures</li>
+                <li>Inconsistent Schedules:Cannot commit to regular donation schedule</li>
+                <li>Far from Centers:Travel time makes hourly rate uncompetitive</li>
+            </ul>
+        </section>
+
+        <section class="mb-12" id="">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Final Verdict: The Bottom Line</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Plasma donation is worth it if you meet these criteria:</p>
+            <p class="text-gray-700 leading-relaxed mb-4">If you meet 4-5 criteria, plasma donation can be an excellent addition to your income strategy.</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Effective hourly rate: $25-50 (optimized)</li>
+                <li>Monthly income potential: $400-800</li>
+                <li>Annual income potential: $4,800-9,600</li>
+                <li>First-month bonus opportunity: $650-1,200</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>6-8 hours per week commitment</li>
+                <li>1.5-2.5 hours per donation (optimized)</li>
+                <li>Productive time during donation possible</li>
+                <li>Flexible scheduling available</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Generally safe for healthy individuals</li>
+                <li>Regular health monitoring benefits</li>
+                <li>Requires nutritional awareness</li>
+                <li>Minor time impact on exercise/activities</li>
+            </ul>
+        </section>
+
+        <section class="mb-12" id="">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">📚 Sources & References</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Financial analysis based on verified compensation data, government wage statistics, and donor survey responses. Tax implications based on IRS guidance. Updated January 2025.</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>FDA - Blood Donor Screening Requirements</li>
+                <li>CDC - Blood Safety Basics</li>
+                <li>Bureau of Labor Statistics - Wage Data</li>
+                <li>CSL Plasma - Compensation Information</li>
+                <li>BioLife Plasma - Donor Compensation</li>
+                <li>IRS - Taxable and Nontaxable Income</li>
+            </ul>
+        </section>
+
+        <section class="mb-12" id="">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Glen Meade, Financial Analyst & Plasma Industry Researcher</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">Glen combines financial analysis expertise with comprehensive plasma industry research to provide data-driven insights on donation profitability. He has analyzed thousands of donor financial outcomes and developed frameworks for evaluating the true ROI of plasma donation across different demographics and economic situations.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">Transparency:Glen is not a financial advisor or medical professional. This analysis is educational only. Always consult financial advisors for personal financial decisions and healthcare providers for medical guidance.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">📅 Last Updated: January 8, 2025 | ✅ Data Verified | 📅 Next Review: April 2025</p>
+        </section>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Calculate Your Plasma Earnings</h2>
+                <p class="text-gray-700 mb-6">Use our free calculator to see how much you could earn at centers near you</p>
+                <a href="/#calculator" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200">
+                    Calculate My Earnings →
+                </a>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="text-white font-bold mb-4">Plasma Pay Calculator</h4>
-                    <p class="text-sm">Get accurate plasma donation income estimates with current 2025 rates.</p>
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
+                <div class="mt-4 space-x-6">
+                    <a href="/privacy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="/terms.html" class="hover:text-white">Terms of Service</a>
+                    <a href="/contact.html" class="hover:text-white">Contact</a>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/calculators/california/" class="hover:text-white transition-colors">Earnings Calculator</a></li>
-                        <li><a href="/blog/" class="hover:text-white transition-colors">Income Tips</a></li>
-                        <li><a href="/faq.html" class="hover:text-white transition-colors">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/about.html" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; 2025 Plasma Pay Calculator. Information for educational purposes.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function toggleMobileMenu() {
+        function toggleMobileMenu() {{
             const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+            menu.classList.toggle('active');
+        }}
     </script>
 </body>
 </html>

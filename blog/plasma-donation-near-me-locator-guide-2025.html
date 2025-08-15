@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plasma Near Me: Find Centers & Pay Rates 2025 - Live Loca...</title>
     <meta name="description" content="Find plasma donation centers near you with live pay rates, hours, and bonuses. Interactive map shows CSL, BioLife, Grifols locations with 2025 pricing.">
-    <meta name="keywords" content="plasma donation near me, plasma centers near me, CSL plasma near me, BioLife near me, plasma donation locations">
-    <link rel="canonical" href="">
+    <meta name="keywords" content="plasma donation, plasma pay, donation guide, plasma centers">
+    <link rel="canonical" href="https://plasmapaycalculator.com/blog/plasma-donation-near-me-locator-guide-2025.html">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <!-- Google tag (gtag.js) -->
@@ -22,6 +22,9 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
          crossorigin="anonymous"></script>
     
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,341 +32,122 @@
             theme: {
                 extend: {
                     colors: {
-                        'plasma-green': '#27ae60',
-                        'plasma-green-dark': '#219a52',
+                        'plasma': {
+                            50: '#eff6ff',
+                            500: '#3b82f6', 
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        }
                     }
                 }
             }
         }
     </script>
     
-    <script type="application/ld+json">
-
-    [
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Plasma Donation Near Me: Find Centers & Pay Rates 2025",
-        "description": "Complete guide to finding plasma donation centers near you with current pay rates, hours, and bonus information",
-        "author": {
-            "@type": "Organization",
-            "name": "Plasma Pay Calculator"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Plasma Pay Calculator",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://plasmapaycalculator.com/logo.png"
-            }
-        },
-        "datePublished": "2025-01-21",
-        "dateModified": "2025-01-21"
-    },
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I find plasma donation centers near me?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Use official center locators: CSL Plasma, BioLife, Grifols, and Octapharma websites have location finders. Search 'plasma donation near me' or enter your ZIP code to find centers within 25 miles with current hours and contact info."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Which plasma centers pay the most near me?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "CSL Plasma typically offers highest new donor bonuses ($1000+ first month), BioLife pays up to $900 first month, while Grifols and Octapharma offer $600-800 bonuses. Urban locations generally pay $10-30 more per donation than rural centers."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What should I look for when choosing a plasma center?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Consider pay rates, new donor bonuses, location convenience, wait times, staff friendliness, facility cleanliness, parking availability, and operating hours that fit your schedule."
-                }
-            }
-        ]
-    }
-    ]
-    
-</script>
-<script type="application/ld+json">
-
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Plasma Near Me: Find Centers & Pay Rates 2025 - Live Location",
-  "description": "Find plasma donation centers near you with live pay rates, hours, and bonuses. Interactive map shows CSL, BioLife, Grifols locations with 2025 pricing.",
-  "datePublished": "2025-01-01",
-  "dateModified": "2025-01-15",
-  "author": {
-    "@type": "Organization",
-    "name": "Plasma Pay Calculator"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Plasma Pay Calculator",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://plasmapaycalculator.com/icon-512.png"
-    }
-  }
-}
-
-</script>
-
+    <style>
+        .earnings-card {transition:all 0.3s ease;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid #0ea5e9;}
+        .earnings-card:hover {transform:translateY(-4px);box-shadow:0 20px 40px rgba(14,165,233,0.15);}
+        .logo {font-size:1.2rem;font-weight:700;color:#27ae60;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+        .logo-icon {width:32px;height:32px;background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:12px;box-shadow:0 2px 6px rgba(39,174,96,0.3);}
+        .trust-badge {background:rgba(39,174,96,0.1);color:#27ae60;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.7rem;font-weight:500;margin-left:0.8rem;white-space:nowrap;}
+        .nav-container {max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 1.5rem;}
+        .nav-links {display:flex;list-style:none;gap:1.2rem;align-items:center;}
+        .nav-links a {text-decoration:none;color:#2c3e50;font-weight:500;transition:all 0.3s;padding:0.4rem 0.8rem;border-radius:6px;font-size:0.9rem;white-space:nowrap;}
+        .centers-highlight {background:linear-gradient(135deg,#27ae60 0%,#2ecc71 100%) !important;color:white !important;border-radius:6px !important;font-weight:700 !important;box-shadow:0 2px 6px rgba(39,174,96,0.3) !important;transform:scale(1.05);}
+        .centers-highlight:hover {background:linear-gradient(135deg,#219a52 0%,#26be5f 100%) !important;color:white !important;transform:scale(1.08);}
+        .nav-links a:hover,.nav-links a.active {color:#27ae60;background:rgba(39,174,96,0.1);}
+        .mobile-menu-btn {display:none;background:none;border:none;color:#2c3e50;font-size:24px;cursor:pointer;}
+        .mobile-menu {display:none;position:fixed;top:80px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(39,174,96,0.1);z-index:999;padding:1rem;}
+        .mobile-menu.active {display:block;}
+        nav {background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:1rem 0;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid rgba(39,174,96,0.1);}
+        body {padding-top:80px;}
+        @media (max-width:768px) {.nav-links {display:none;}.mobile-menu-btn {display:block;}}
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="/" class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-gradient-to-br from-plasma-green to-green-500 rounded-lg flex items-center justify-center text-white font-bold text-xs">
-                            PPC
-                        </div>
-                        <span class="font-bold text-lg text-gray-900">Plasma Pay Calculator</span>
-                    </a>
-                    <span class="ml-3 px-2 py-1 bg-green-100 text-plasma-green text-xs font-medium rounded-full">
-                        Updated 2025
-                    </span>
-                </div>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="/#calculator" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Calculator</a>
-                    <a href="/blog/" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                    <a href="/states.html" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">States</a>
-                    <a href="/centers/" class="bg-gradient-to-r from-plasma-green to-green-500 text-white px-4 py-2 rounded-md text-sm font-bold hover:scale-105 transition-transform shadow-md">
-                        🏥 Centers
-                    </a>
-                    <a href="/topics/requirements-eligibility/" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">Health</a>
-                    <a href="/faq.html" class="text-gray-600 hover:text-plasma-green transition-colors px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
-                </div>
-                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
             </div>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+                <li><a href="/topics/requirements-eligibility/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-lg z-40 md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="/#calculator" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Calculator</a>
-            <a href="/blog/" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Blog</a>
-            <a href="/states.html" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">States</a>
-            <a href="/centers/" class="block px-3 py-2 bg-gradient-to-r from-plasma-green to-green-500 text-white rounded-md font-bold">🏥 Centers</a>
-            <a href="/topics/requirements-eligibility/" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">Health</a>
-            <a href="/faq.html" class="block px-3 py-2 text-gray-600 hover:text-plasma-green hover:bg-gray-50 rounded-md">FAQ</a>
-        </div>
-    </div>
-
     <!-- Main Content -->
-    <main class="pt-20 pb-16">
-        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="nav-container">
-<div style="display: flex; align-items: center;">
-<a class="logo" href="/">
-<div class="logo-icon">PPC</div>
-                    Plasma Pay Calculator
-                </a>
-<div class="trust-badge">Updated for 2025</div>
-</div>
-<ul class="nav-links">
-<li><a href="/#calculator">Calculator</a></li>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="/states.html">States</a></li>
-<li><a class="centers-highlight" href="/centers/">🏥 Centers</a></li>
-<li><a href="/topics/requirements-eligibility/">Health</a></li>
-<li><a href="/faq.html">FAQ</a></li>
-</ul>
-<button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-</div>
-<div class="container">
-<a class="back-link" href="../blog/">← Back to Blog</a>
-<h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">📍 Find Plasma Donation Centers Near Me 2025</h1>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Finding the right plasma donation center near you can mean the difference between earning $300 or $1200 per month.</strong> This comprehensive guide helps you locate centers, compare pay rates, understand bonuses, and choose the best option for maximizing your plasma donation income.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🔍 Interactive Center Finder</h2>
-<div class="location-finder">
-<h3 class="text-xl font-bold text-gray-900">Find Plasma Centers in Your Area</h3>
-<p class="text-gray-600 leading-relaxed mb-4">Enter your location to find nearby plasma donation centers with current pay rates and bonuses.</p>
-<div class="finder-grid">
-<div>
-<div class="input-group">
-<label for="userLocation">Your Location:</label>
-<input id="userLocation" placeholder="Enter city, state or ZIP code" type="text"/>
-</div>
-<div class="input-group">
-<label for="searchRadius">Search Radius:</label>
-<select id="searchRadius">
-<option value="10">Within 10 miles</option>
-<option selected="" value="25">Within 25 miles</option>
-<option value="50">Within 50 miles</option>
-</select>
-</div>
-</div>
-<button class="find-btn" onclick="findCenters()">Find Centers</button>
-</div>
-<div class="results-container" id="searchResults">
-<h4>🏥 Centers Near You</h4>
-<div id="centersList"></div>
-</div>
-</div>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🏥 Major Plasma Center Chains</h2>
-<div class="center-chains">
-<h3 class="text-xl font-bold text-gray-900">Know Your Options</h3>
-<div class="chains-grid">
-<div class="chain-card">
-<h4>🩸 CSL Plasma</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Locations:</strong> 300+ centers nationwide</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>New donor bonus:</strong> Up to $1000+ first month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Pay range:</strong> $50-100 per donation</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Best for:</strong> Highest bonuses, urban areas</p>
-</div>
-<div class="chain-card">
-<h4>💉 BioLife Plasma</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Locations:</strong> 220+ centers</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>New donor bonus:</strong> Up to $900 first month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Pay range:</strong> $45-95 per donation</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Best for:</strong> Consistent rates, good bonuses</p>
-</div>
-<div class="chain-card">
-<h4>🏥 Grifols</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Locations:</strong> 200+ centers</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>New donor bonus:</strong> Up to $800 first month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Pay range:</strong> $40-90 per donation</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Best for:</strong> Reliable service, smaller cities</p>
-</div>
-<div class="chain-card">
-<h4>🎯 Octapharma</h4>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Locations:</strong> 180+ centers</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>New donor bonus:</strong> Up to $700 first month</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Pay range:</strong> $40-85 per donation</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Best for:</strong> Quick processing, rural areas</p>
-</div>
-</div>
-</div>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">💡 Choosing the Best Center for You</h2>
-<div class="tips-section">
-<h3 class="text-xl font-bold text-gray-900">Smart Selection Strategies</h3>
-<div class="tips-grid">
-<div class="tip-card">
-<h4>💰 Compare Total Earnings</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Don't just look at per-donation rates. Factor in new donor bonuses, loyalty programs, and promotional offers to calculate total monthly earnings.</p>
-</div>
-<div class="tip-card">
-<h4>📍 Consider Convenience</h4>
-<p class="text-gray-600 leading-relaxed mb-4">A center 5 minutes away paying $5 less might be better than driving 45 minutes for slightly higher rates. Factor in time and gas costs.</p>
-</div>
-<div class="tip-card">
-<h4>⏰ Check Wait Times</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Some centers have notorious long waits. Call ahead or check online reviews to understand typical processing times at different locations.</p>
-</div>
-<div class="tip-card">
-<h4>🏆 Read Reviews</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Google reviews and Facebook comments reveal important details about staff friendliness, facility cleanliness, and payment reliability.</p>
-</div>
-<div class="tip-card">
-<h4>📞 Call for Current Rates</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Pay rates and bonuses change frequently. Call centers directly to confirm current promotions and ask about any special offers.</p>
-</div>
-<div class="tip-card">
-<h4>🎁 Ask About Bonuses</h4>
-<p class="text-gray-600 leading-relaxed mb-4">Beyond new donor bonuses, ask about referral bonuses, frequency bonuses, and seasonal promotions that can boost earnings.</p>
-</div>
-</div>
-</div>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🗺️ Using Official Center Locators</h2>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>CSL Plasma Locator:</strong> Visit cslplasma.com and use their "Find a Center" tool. Filter by services offered and view current hours, contact information, and specific location promotions.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>BioLife Center Finder:</strong> biolifeplasma.com offers an interactive map showing all locations with distance calculations, driving directions, and center-specific bonus information.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Grifols Location Tool:</strong> grifolsplasma.com provides detailed center information including parking availability, public transit access, and staff languages spoken.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Octapharma Locator:</strong> octapharmaplasma.com includes real-time updates on center capacity and estimated wait times for better planning.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">📋 What to Ask When Calling Centers</h2>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Current pay rates:</strong> "What do you currently pay for first-time donors and returning donors in my weight category?"</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Bonus programs:</strong> "What new donor bonuses are available and how long do they last?"</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Appointment availability:</strong> "What's your earliest availability for a new donor screening?"</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Required documents:</strong> "What documents do I need to bring for my first visit?"</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Processing time:</strong> "How long does the full screening and first donation typically take?"</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Payment methods:</strong> "Do you offer same-day payment? Prepaid cards or cash?"</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🚗 Transportation and Accessibility</h2>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Public transportation:</strong> Many plasma centers are located near bus routes or subway stations. Check local transit apps for routes and schedules to your chosen center.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Parking availability:</strong> Urban centers may have limited parking or charge fees. Factor parking costs into your earnings calculations.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Rideshare options:</strong> If you don't drive, calculate Uber/Lyft costs. Some donors find ridesharing cost-effective, especially for centers with high pay rates.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Walking distance:</strong> Centers within walking distance eliminate transportation costs entirely, potentially making lower-paying nearby centers more profitable than distant high-paying ones.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">💻 Online Research Strategies</h2>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Google Maps reviews:</strong> Read recent reviews for insights into wait times, staff behavior, facility cleanliness, and payment reliability. Look for patterns in complaints or praise.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Facebook group discussions:</strong> Local plasma donation Facebook groups often share current bonus information, center comparisons, and insider tips from experienced donors.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Reddit community insights:</strong> Subreddits like r/plagueinc and location-specific subreddits frequently discuss plasma center experiences and rate comparisons.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Yelp business listings:</strong> Check Yelp for additional reviews and photos of center interiors, helping you assess facility quality and professionalism.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🎯 Maximizing Your Center Choice</h2>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Multi-center strategy:</strong> In areas with multiple centers, some donors alternate between chains to maximize new donor bonuses (where regulations allow).</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Seasonal considerations:</strong> Some centers offer higher rates during summer (student donors) or holidays. Plan your center choice around these fluctuations.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Loyalty vs. bonus hunting:</strong> Decide whether to build a relationship with one center for potential loyalty perks or chase bonuses at multiple locations.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Backup options:</strong> Always identify 2-3 acceptable centers in case your primary choice has issues, closes for maintenance, or changes policies.</p>
-<h2 class="text-2xl font-bold text-gray-900 mb-6">🚨 Red Flags to Avoid</h2>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Consistently poor reviews:</strong> Centers with multiple recent complaints about cleanliness, staff rudeness, or payment issues should be avoided.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Unclear payment policies:</strong> Legitimate centers clearly explain pay rates and bonus structures. Vague or changing information is a warning sign.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Pressure tactics:</strong> Avoid centers that pressure you to donate when you're not feeling well or try to rush the screening process.</p>
-<p class="text-gray-600 leading-relaxed mb-4"><strong>Outdated facilities:</strong> Centers with obviously old equipment or poor maintenance may not follow current safety and hygiene standards.</p>
-<div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #3498db, #2980b9); border-radius: 15px; color: white;">
-<h3 class="text-xl font-bold text-gray-900" style="color: white; margin-top: 0;">📍 Find Your Perfect Plasma Center</h3>
-<p class="text-gray-600 leading-relaxed mb-4" style="font-size: 18px; margin-bottom: 25px;">Use our finder above to locate the highest-paying centers near you and start maximizing your plasma income today!</p>
-<button onclick="window.scrollTo(0, 400)" style="background: #e74c3c; color: white; border: none; padding: 15px 30px; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer;">Find Centers Now ↑</button>
-</div>
-<p class="text-gray-600 leading-relaxed mb-4">Ready to start earning? Use our locator above to find centers, then check our <a href="csl-plasma-pay-chart-2025-complete-rates-guide.html" style="color: #3498db;">pay rate guides</a> and <a href="make-1000-month-plasma-donation-realistic-guide-2025.html" style="color: #3498db;">income maximization strategies</a> for the best results.</p>
-</div>
-<div class="results-container" id="searchResults">
-<h4>🏥 Centers Near You</h4>
-<div id="centersList"></div>
-</div>
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Article Header -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-12 text-white">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">Plasma Guide 2025</span>
+                        <span class="text-green-100">Updated January 2025</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                        📍 Find Plasma Donation Centers Near Me 2025
+                    </h1>
+                    <p class="text-xl text-green-100 leading-relaxed">
+                        Find plasma donation centers near you with live pay rates, hours, and bonuses. Interactive map shows CSL, BioLife, Grifols locations with 2025 pricing.
+                    </p>
+                </div>
+            </div>
         </article>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Calculate Your Plasma Earnings</h2>
+                <p class="text-gray-700 mb-6">Use our free calculator to see how much you could earn at centers near you</p>
+                <a href="/#calculator" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200">
+                    Calculate My Earnings →
+                </a>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="text-white font-bold mb-4">Plasma Pay Calculator</h4>
-                    <p class="text-sm">Get accurate plasma donation income estimates with current 2025 rates.</p>
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
+                <div class="mt-4 space-x-6">
+                    <a href="/privacy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="/terms.html" class="hover:text-white">Terms of Service</a>
+                    <a href="/contact.html" class="hover:text-white">Contact</a>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/calculators/california/" class="hover:text-white transition-colors">Earnings Calculator</a></li>
-                        <li><a href="/blog/" class="hover:text-white transition-colors">Income Tips</a></li>
-                        <li><a href="/faq.html" class="hover:text-white transition-colors">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/about.html" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="/terms" class="hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; 2025 Plasma Pay Calculator. Information for educational purposes.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function toggleMobileMenu() {
+        function toggleMobileMenu() {{
             const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+            menu.classList.toggle('active');
+        }}
     </script>
 </body>
 </html>
