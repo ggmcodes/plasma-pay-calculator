@@ -351,6 +351,46 @@
 </div>
 </section>
 </main>
+
+<!-- Footer -->
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h4>Calculadora de Pago de Plasma</h4>
+<p>Obtén estimaciones precisas de ingresos por donación de plasma con las tarifas actuales de 2025. Ve exactamente cuánto ganarás antes de donar.</p>
+</div>
+<div class="footer-section">
+<h4>Recursos de Ganancias</h4>
+<ul>
+<li><a href="/es/">Calculadora de Ganancias</a></li>
+<li><a href="/es/blog/">Consejos para Maximizar Ingresos</a></li>
+<li><a href="/es/faq.html">Preguntas Frecuentes sobre Pagos</a></li>
+<li><a href="/es/centers/">Encontrar Centros</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>🔥 Calculadoras Virales</h4>
+<ul>
+<li><a href="/es/blog/calculadora-bono-primera-donacion-plasma.html" style="color: #f39c12; font-weight: 600;">🚨 Calculadora de Bono Primera Vez</a></li>
+<li><a href="/es/blog/maximizador-horario-donacion-plasma.html" style="color: #f39c12; font-weight: 600;">📅 Secreto de $8,000+</a></li>
+<li><a href="/es/blog/detector-estafas-donacion-plasma.html" style="color: #f39c12; font-weight: 600;">⚠️ Detector de Estafas</a></li>
+<li><a href="/es/blog/calculadora-beneficios-salud-donacion-plasma.html" style="color: #f39c12; font-weight: 600;">🔬 Calculadora de Beneficios de Salud</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Legal y Soporte</h4>
+<ul>
+<li><a href="/es/about.html">Acerca de</a></li>
+<li><a href="/es/privacy.html">Política de Privacidad</a></li>
+<li><a href="/es/terms.html">Términos de Servicio</a></li>
+<li><a href="/es/contact.html">Contacto</a></li>
+<li><a href="/es/faq.html">Preguntas Frecuentes</a></li>
+<li><a href="/es/states.html">Todos los Estados</a></li>
+</ul>
+</div>
+</div>
+<p>© 2025 Calculadora de Pago de Plasma. Estimaciones basadas en tarifas actuales. Las ganancias reales pueden variar. Información con fines educativos.</p>
+</footer>
 <!-- Footer -->
 <footer class="bg-gray-900 text-white py-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -387,10 +427,10 @@
 </div>
 </div>
 <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-<p>© 2025 Calculadora de Pago de Plasma. Todos los derechos reservados.</p>
+
 </div>
 </div>
-</footer>
+
 <!-- Calculator JavaScript -->
 <script>const payRates = {'philadelphia': {min: 75, max: 100 }, 'pittsburgh': {min: 70, max: 95 }, 'allentown': {min: 65, max: 85 }, 'reading': {min: 60, max: 80 }, 'erie': {min: 60, max: 80 }, 'other': {min: 60, max: 80 }};const centerMultipliers = {'csl': 1.1, 'biolife': 1.05, 'grifols': 1.0, 'octapharma': 0.95 };function calculateEarnings() {const weight = document.getElementById('weight').value;const frequency = parseInt(document.getElementById('frequency').value);const location = document.getElementById('location').value;const donorStatus = document.getElementById('donorStatus').value;const center = document.getElementById('center').value;const distance = parseInt(document.getElementById('distance').value);let baseRate = (payRates[location].min + payRates[location].max) / 2;if (weight === '175') {baseRate *= 1.2;}else if (weight === '110') {baseRate *= 0.9;}baseRate *= centerMultipliers[center];if (donorStatus === 'new') {baseRate *= 1.55;}const perDonation = Math.round(baseRate);const weekly = perDonation * frequency;const monthly = weekly * 4.33;const annual = monthly * 12;const gasCost = distance * 0.19;const netPerDonation = Math.max(0, perDonation - gasCost);const netMonthly = Math.round(netPerDonation * frequency * 4.33);document.getElementById('perDonation').textContent = `$${perDonation}`;document.getElementById('weekly').textContent = `$${weekly}`;document.getElementById('monthly').textContent = `$${Math.round(monthly)}`;document.getElementById('annual').textContent = `$${Math.round(annual)}`;document.getElementById('netEarnings').textContent = `Ganancias netas: $${netMonthly}/mes`;if (donorStatus === 'new') {document.getElementById('bonusInfo').textContent = '¡Incluye bonos de nuevo donante! Los donantes recurrentes ganarán menos.';}else {document.getElementById('bonusInfo').textContent = 'Ganancias para donantes recurrentes. Los nuevos donantes pueden ganar más.';}document.getElementById('results').classList.remove('hidden');document.getElementById('results').scrollIntoView({behavior: 'smooth' });}document.addEventListener('DOMContentLoaded', function() {const mobileMenuBtn = document.getElementById('mobileMenuBtn');const mobileMenu = document.getElementById('mobileMenu');if (mobileMenuBtn && mobileMenu) {mobileMenuBtn.addEventListener('click', function() {mobileMenu.classList.toggle('hidden');});}const languageSelect = document.getElementById('languageSelect');const mobileLanguageSelect = document.getElementById('mobileLanguageSelect');function handleLanguageChange(selectedLang) {if (selectedLang === 'en') {const currentPath = window.location.pathname;let englishPath;if (currentPath === '/es/' || currentPath === '/es/index.html') {englishPath = '/';}else {englishPath = currentPath.replace('/es', '');}window.location.href = englishPath;}}if (languageSelect) {languageSelect.addEventListener('change', function() {handleLanguageChange(this.value);});}if (mobileLanguageSelect) {mobileLanguageSelect.addEventListener('change', function() {handleLanguageChange(this.value);});}});</script>
 </body>

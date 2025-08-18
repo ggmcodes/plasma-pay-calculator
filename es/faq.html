@@ -359,5 +359,46 @@
 </main>
 <script>function toggleFAQ(element) {const answer = element.nextElementSibling;const isExpanded = answer.classList.contains('expanded');document.querySelectorAll('.faq-answer.expanded').forEach(item => {item.classList.remove('expanded');});document.querySelectorAll('.faq-question.expanded').forEach(item => {item.classList.remove('expanded');});if (!isExpanded) {answer.classList.add('expanded');element.classList.add('expanded');}}</script>
 <script>function toggleMobileMenu() {const mobileMenu = document.getElementById('mobileMenu');mobileMenu.classList.toggle('active');}document.addEventListener('DOMContentLoaded', function() {const mobileMenuBtn = document.getElementById('mobileMenuBtn');const mobileMenu = document.getElementById('mobileMenu');if (mobileMenuBtn && mobileMenu) {mobileMenuBtn.addEventListener('click', function() {mobileMenu.classList.toggle('hidden');});}const languageSelect = document.getElementById('languageSelect');const mobileLanguageSelect = document.getElementById('mobileLanguageSelect');function handleLanguageChange(selectedLang) {if (selectedLang === 'en') {const currentPath = window.location.pathname;let englishPath;if (currentPath === '/es/' || currentPath === '/es/index.html') {englishPath = '/';}else {englishPath = currentPath.replace('/es', '');}window.location.href = englishPath;}}if (languageSelect) {languageSelect.addEventListener('change', function() {handleLanguageChange(this.value);});}if (mobileLanguageSelect) {mobileLanguageSelect.addEventListener('change', function() {handleLanguageChange(this.value);});}});</script>
+
+<!-- Footer -->
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h4>Calculadora de Pago de Plasma</h4>
+<p>Obtén estimaciones precisas de ingresos por donación de plasma con las tarifas actuales de 2025. Ve exactamente cuánto ganarás antes de donar.</p>
+</div>
+<div class="footer-section">
+<h4>Recursos de Ganancias</h4>
+<ul>
+<li><a href="/es/">Calculadora de Ganancias</a></li>
+<li><a href="/es/blog/">Consejos para Maximizar Ingresos</a></li>
+<li><a href="/es/faq.html">Preguntas Frecuentes sobre Pagos</a></li>
+<li><a href="/es/centers/">Encontrar Centros</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>🔥 Calculadoras Virales</h4>
+<ul>
+<li><a href="/es/blog/calculadora-bono-primera-donacion-plasma.html" style="color: #f39c12; font-weight: 600;">🚨 Calculadora de Bono Primera Vez</a></li>
+<li><a href="/es/blog/maximizador-horario-donacion-plasma.html" style="color: #f39c12; font-weight: 600;">📅 Secreto de $8,000+</a></li>
+<li><a href="/es/blog/detector-estafas-donacion-plasma.html" style="color: #f39c12; font-weight: 600;">⚠️ Detector de Estafas</a></li>
+<li><a href="/es/blog/calculadora-beneficios-salud-donacion-plasma.html" style="color: #f39c12; font-weight: 600;">🔬 Calculadora de Beneficios de Salud</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Legal y Soporte</h4>
+<ul>
+<li><a href="/es/about.html">Acerca de</a></li>
+<li><a href="/es/privacy.html">Política de Privacidad</a></li>
+<li><a href="/es/terms.html">Términos de Servicio</a></li>
+<li><a href="/es/contact.html">Contacto</a></li>
+<li><a href="/es/faq.html">Preguntas Frecuentes</a></li>
+<li><a href="/es/states.html">Todos los Estados</a></li>
+</ul>
+</div>
+</div>
+<p>© 2025 Calculadora de Pago de Plasma. Estimaciones basadas en tarifas actuales. Las ganancias reales pueden variar. Información con fines educativos.</p>
+</footer>
+
 </body>
 </html>
