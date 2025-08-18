@@ -146,6 +146,28 @@
 
     <!-- Main Content -->
     <main class="pt-20 pb-16">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm text-gray-600">
+            <li><a href="/" class="hover:text-plasma-green">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="/blog/" class="hover:text-plasma-green">Blog</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 font-medium">Current Article</li>
+        </ol>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm text-gray-600">
+            <li><a href="/" class="hover:text-plasma-green">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="/blog/" class="hover:text-plasma-green">Blog</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 font-medium">Current Article</li>
+        </ol>
+    </nav>
+
         <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="nav-container">
 <div style="display: flex; align-items: center;">
@@ -186,7 +208,7 @@
 <h4>Timeline to Money:</h4>
 <ul class="space-y-2 text-gray-700">
 <li><strong>Day 1:</strong> Find centers, gather documents</li>
-<li><strong>Day 2-3:</strong> First donation + immediate payment</li>
+<li><strong>Day 2-3:</strong> <a href="/blog/first-time-plasma-donation.html" class="text-blue-600 hover:text-blue-800">First donation</a> + immediate payment</li>
 <li><strong>Day 4-5:</strong> Second donation + more money</li>
 <li><strong>Week 1 total:</strong> $50-100 guaranteed</li>
 </ul>
@@ -317,7 +339,7 @@
 </div>
 <div class="desperate-story">
 <p class="text-gray-600 leading-relaxed mb-4"><strong>"Car broke down and I needed $200 for repairs to get to work."</strong></p>
-<p class="text-gray-600 leading-relaxed mb-4"><em>"Plasma center was my salvation. First donation got me $60 same day, second donation 48 hours later got me another $55. With selling some clothes online, I had enough for the repair. Still donate regularly now as my emergency fund."</em></p>
+<p class="text-gray-600 leading-relaxed mb-4"><em>"Plasma center was my salvation. <a href="/blog/first-time-plasma-donation.html" class="text-blue-600 hover:text-blue-800">First donation</a> got me $60 same day, second donation 48 hours later got me another $55. With selling some clothes online, I had enough for the repair. Still donate regularly now as my emergency fund."</em></p>
 <p class="text-gray-600 leading-relaxed mb-4" style="text-align: right; font-weight: bold;">- David, 41, Tampa</p>
 </div>
 <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Desperate Money Action Plan</h2>
@@ -385,7 +407,42 @@
 </div>
 </div>
         </article>
-    </main>
+
+    <!-- Back to Blog -->
+    <div class="mt-8 text-center">
+        <a href="/blog/" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+            ← Back to All Articles
+        </a>
+    </div>
+
+    
+    <section class="mb-12" id="related-guides">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">💰 Related Earnings Guides</h2>
+        <div class="bg-white rounded-xl shadow-md p-6">
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">Earnings Strategies</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• <a href="/blog/maximize-plasma-donation-earnings-2025.html" class="text-blue-600 hover:text-blue-800">Maximize Your Earnings</a></li>
+                        <li>• <a href="/blog/plasma-donation-bonuses-promotions.html" class="text-blue-600 hover:text-blue-800">Bonus Strategies</a></li>
+                        <li>• <a href="/blog/plasma-donation-schedule.html" class="text-blue-600 hover:text-blue-800">Optimal Donation Schedule</a></li>
+                        <li>• <a href="/blog/plasma-donation-referral-bonuses-2025.html" class="text-blue-600 hover:text-blue-800">Referral Income Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-3">Center Comparisons</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• <a href="/blog/which-plasma-center-pays-most-money.html" class="text-blue-600 hover:text-blue-800">Highest Paying Centers</a></li>
+                        <li>• <a href="/blog/csl-plasma-pay-rates-2025.html" class="text-blue-600 hover:text-blue-800">CSL Plasma Rates</a></li>
+                        <li>• <a href="/blog/biolife-plasma-pay-chart-2025.html" class="text-blue-600 hover:text-blue-800">BioLife Pay Chart</a></li>
+                        <li>• <a href="/blog/grifols-plasma-pay-calculator-2025.html" class="text-blue-600 hover:text-blue-800">Grifols Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
@@ -398,7 +455,7 @@
                 <div>
                     <h4 class="text-white font-bold mb-4">Resources</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="/calculators/california/" class="hover:text-white transition-colors">Earnings Calculator</a></li>
+                        <li><a href="/#calculator" class="hover:text-white transition-colors">Earnings Calculator</a></li>
                         <li><a href="/blog/" class="hover:text-white transition-colors">Income Tips</a></li>
                         <li><a href="/faq.html" class="hover:text-white transition-colors">FAQ</a></li>
                     </ul>
