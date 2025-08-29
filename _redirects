@@ -1,45 +1,253 @@
 # Redirects for Netlify
 
+# ============================================
+# PROTOCOL REDIRECTS
+# ============================================
+http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+http://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
+
+# ============================================
+# STATE DIRECTORY REDIRECTS (Legacy URLs)
+# ============================================
+/state/* /calculators/:splat 301!
+/states/ /calculators/ 301!
+/states /calculators/ 301!
+
+# Specific state/city redirects with proper names
+/state/massachusetts/worcester /calculators/massachusetts/worcester/ 301!
+/state/massachusetts/boston /calculators/massachusetts/boston/ 301!
+/state/indiana/gary /calculators/indiana/gary/ 301!
+/state/connecticut /calculators/connecticut/ 301!
+/state/virginia/newport-news /calculators/virginia/newport-news/ 301!
+/state/hawaii/hilo /calculators/hawaii/hilo/ 301!
+/state/missouri/columbia-mo /calculators/missouri/columbia/ 301!
+/state/new-york/new-york-city /calculators/new-york/new-york-city/ 301!
+/state/illinois/springfield /calculators/illinois/springfield/ 301!
+/state/illinois/rockford /calculators/illinois/rockford/ 301!
+/state/washington/spokane /calculators/washington/spokane/ 301!
+/state/washington/seattle /calculators/washington/seattle/ 301!
+/state/new-hampshire/manchester-nh /calculators/new-hampshire/manchester/ 301!
+/state/louisiana/new-orleans /calculators/louisiana/new-orleans/ 301!
+/state/louisiana/baton-rouge /calculators/louisiana/baton-rouge/ 301!
+/state/ohio/cincinnati /calculators/ohio/cincinnati/ 301!
+/state/virginia/norfolk /calculators/virginia/norfolk/ 301!
+/state/wisconsin/racine /calculators/wisconsin/racine/ 301!
+/state/connecticut/bridgeport /calculators/connecticut/bridgeport/ 301!
+/state/kansas/olathe /calculators/kansas/olathe/ 301!
+/state/delaware/smyrna /calculators/delaware/smyrna/ 301!
+/state/south-dakota/sioux-falls /calculators/south-dakota/sioux-falls/ 301!
+/state/west-virginia/morgantown /calculators/west-virginia/morgantown/ 301!
+/state/south-carolina/columbia-sc /calculators/south-carolina/columbia/ 301!
+/state/maryland/baltimore /calculators/maryland/baltimore/ 301!
+/state/nebraska/kearney /calculators/nebraska/kearney/ 301!
+/state/utah /calculators/utah/ 301!
+/state/iowa /calculators/iowa/ 301!
+/state/illinois /calculators/illinois/ 301!
+/state/south-dakota /calculators/south-dakota/ 301!
+/state/vermont /calculators/vermont/ 301!
+
+# ============================================
+# CALCULATOR CITY NAME VARIATIONS
+# ============================================
+# Delaware
+/calculators/delaware/newark/ /calculators/delaware/newark-de/ 301!
+/calculators/delaware/newark /calculators/delaware/newark-de/ 301!
+
+# Maine
+/calculators/maine/auburn/ /calculators/maine/auburn-me/ 301!
+/calculators/maine/auburn /calculators/maine/auburn-me/ 301!
+/calculators/maine/portland/ /calculators/maine/portland-me/ 301!
+/calculators/maine/portland /calculators/maine/portland-me/ 301!
+
+# New Hampshire  
+/calculators/new-hampshire/rochester/ /calculators/new-hampshire/rochester-nh/ 301!
+/calculators/new-hampshire/rochester /calculators/new-hampshire/rochester-nh/ 301!
+/calculators/new-hampshire/manchester-nh/ /calculators/new-hampshire/manchester/ 301!
+/calculators/new-hampshire/manchester-nh /calculators/new-hampshire/manchester/ 301!
+
+# Missouri
+/calculators/missouri/springfield/ /calculators/missouri/springfield-mo/ 301!
+/calculators/missouri/springfield /calculators/missouri/springfield-mo/ 301!
+/calculators/missouri/columbia-mo/ /calculators/missouri/columbia/ 301!
+/calculators/missouri/columbia-mo /calculators/missouri/columbia/ 301!
+
+# Hawaii
+/calculators/hawaii/kailua/ /calculators/hawaii/kailua-kona/ 301!
+/calculators/hawaii/kailua /calculators/hawaii/kailua-kona/ 301!
+/calculators/hawaii/hilo/ /calculators/hawaii/hilo-hi/ 301!
+/calculators/hawaii/hilo /calculators/hawaii/hilo-hi/ 301!
+
+# Nebraska
+/calculators/nebraska/bellevue/ /calculators/nebraska/bellevue-ne/ 301!
+/calculators/nebraska/bellevue /calculators/nebraska/bellevue-ne/ 301!
+
+# Kansas
+/calculators/kansas/kansas-city/ /calculators/kansas/kansas-city-ks/ 301!
+/calculators/kansas/kansas-city /calculators/kansas/kansas-city-ks/ 301!
+
+# Arkansas
+/calculators/arkansas/fayetteville/ /calculators/arkansas/fayetteville-ar/ 301!
+/calculators/arkansas/fayetteville /calculators/arkansas/fayetteville-ar/ 301!
+
+# Alaska
+/calculators/alaska/wasilla/ /calculators/alaska/wasilla-ak/ 301!
+/calculators/alaska/wasilla /calculators/alaska/wasilla-ak/ 301!
+
+# South Dakota
+/calculators/south-dakota/watertown-sd/ /calculators/south-dakota/watertown/ 301!
+/calculators/south-dakota/watertown /calculators/south-dakota/watertown/ 301!
+
+# West Virginia
+/calculators/west-virginia/charleston-wv/ /calculators/west-virginia/charleston/ 301!
+
+# Double calculator path fix
+/calculators/calculators/vermont/ /calculators/vermont/ 301!
+
+# State HTML files
+/calculators/connecticut.html /calculators/connecticut/ 301!
+/state/connecticut.html /calculators/connecticut/ 301!
+/calculators/iowa.html /calculators/iowa/ 301!
+/state/iowa.html /calculators/iowa/ 301!
+/calculators/virginia/newport-news.html /calculators/virginia/newport-news/ 301!
+/state/virginia/newport-news.html /calculators/virginia/newport-news/ 301!
+/calculators/indiana/fort-wayne.html /calculators/indiana/fort-wayne/ 301!
+/calculators/illinois/rockford.html /calculators/illinois/rockford/ 301!
+/state/illinois/rockford.html /calculators/illinois/rockford/ 301!
+/calculators/washington/spokane.html /calculators/washington/spokane/ 301!
+/state/washington/spokane.html /calculators/washington/spokane/ 301!
+/calculators/new-hampshire/manchester-nh.html /calculators/new-hampshire/manchester/ 301!
+/state/new-hampshire/manchester-nh.html /calculators/new-hampshire/manchester/ 301!
+/calculators/ohio/cincinnati.html /calculators/ohio/cincinnati/ 301!
+/state/ohio/cincinnati.html /calculators/ohio/cincinnati/ 301!
+/calculators/virginia/norfolk.html /calculators/virginia/norfolk/ 301!
+/state/virginia/norfolk.html /calculators/virginia/norfolk/ 301!
+/calculators/louisiana/baton-rouge.html /calculators/louisiana/baton-rouge/ 301!
+/state/louisiana/baton-rouge.html /calculators/louisiana/baton-rouge/ 301!
+/calculators/washington/seattle.html /calculators/washington/seattle/ 301!
+/state/washington/seattle.html /calculators/washington/seattle/ 301!
+
+# Missing state index pages
+/calculators/louisiana /calculators/louisiana/ 301!
+/calculators/south-carolina /calculators/south-carolina/ 301!
+/calculators/oklahoma /calculators/oklahoma/ 301!
+/calculators/pennsylvania /calculators/pennsylvania/ 301!
+/calculators/wyoming /calculators/wyoming/ 301!
+/calculators/utah /calculators/utah/ 301!
+/calculators/maine /calculators/maine/ 301!
+/calculators/illinois /calculators/illinois/ 301!
+/calculators/south-dakota /calculators/south-dakota/ 301!
+/calculators/hawaii /calculators/hawaii/ 301!
+/calculators/vermont /calculators/vermont/ 301!
+
+# ============================================
+# SPANISH (ES) REDIRECTS
+# ============================================
+/es/estado/* /es/calculators/:splat 301!
+/es/terms/ /es/terms.html 301!
+/es/terms /es/terms.html 301!
+/es/blog/cuanto-dinero-puedes-ganar-donando-plasma/ /es/blog/cuanto-dinero-puedes-ganar-donando-plasma.html 301!
+/es/blog/requisitos-donacion-plasma/ /blog/requisitos-donacion-plasma/ 301!
+/es/blog/consejos-donacion-plasma-principiantes/ /blog/consejos-donacion-plasma-principiantes/ 301!
+/es/blog/mejores-centros-plasma-california/ /blog/mejores-centros-plasma-california/ 301!
+/es/blog/cual-centro-plasma-paga-mas-dinero/ /blog/cual-centro-plasma-paga-mas-dinero/ 301!
+/es/blog/mejores-horarios-donar-plasma/ /blog/mejores-horarios-donar-plasma/ 301!
+/es/blog/bonos-promociones-donacion-plasma /blog/bonos-promociones-donacion-plasma/ 301!
+/es/blog/guia-completa-donacion-plasma /blog/guia-completa-donacion-plasma/ 301!
+/es/blog/cuanto-pagan-por-donar-plasma /blog/cuanto-pagan-por-donar-plasma-guia-completa-2025/ 301!
+
+# Spanish state pages
+/es/estado/vermont.html /es/calculators/vermont/ 301!
+/es/estado/mississippi/gulfport.html /es/calculators/mississippi/gulfport/ 301!
+/es/estado/kansas /es/calculators/kansas/ 301!
+
+# ============================================
+# BLOG REDIRECTS
+# ============================================
+# California subdirectory (doesn't exist - redirect to main blog)
+/blog/california/california-plasma-donation-san-francisco.html /blog/plasma-donation-san-francisco-guide/ 301!
+/blog/california/california-plasma-donation-tips-for-beginners.html /blog/plasma-donation-tips-beginners-guide/ 301!
+/blog/california/california-plasma-donation-first-time-guide.html /blog/first-time-plasma-donation-guide/ 301!
+/blog/california/california-plasma-donation-side-effects.html /blog/plasma-donation-side-effects-complete-guide/ 301!
+/blog/california/california-plasma-donation-sacramento.html /blog/plasma-donation-sacramento-guide/ 301!
+/blog/california/california-plasma-donation-common-questions.html /blog/plasma-donation-faq-common-questions/ 301!
+/blog/california/california-plasma-donation-tax-guide.html /blog/plasma-donation-taxes/ 301!
+/blog/california/can-you-make-1000-month-donating-plasma.html /blog/can-you-make-1000-month-donating-plasma/ 301!
+/blog/california/do-you-get-1099-plasma-donation/ /blog/do-you-get-1099-plasma-donation/ 301!
+/blog/california/california-tech-social-security-benefits.html /blog/social-security-plasma-income-impact-2025/ 301!
+/blog/california/california-tech-irs-plasma-tracking.html /blog/does-irs-track-plasma-donations/ 301!
+/blog/california/first-time-plasma-donation.html /blog/first-time-plasma-donation/ 301!
+/blog/california/plasma-donation-requirements /blog/plasma-donation-requirements/ 301!
+/blog/california/california-tech-1099-forms.html /blog/do-you-get-1099-plasma-donation/ 301!
+/blog/california/california-tech-entertainment-plasma-earnings /blog/plasma-donation-entertainment-workers-guide/ 301!
+/blog/california/california-tech-vein-health-guide /blog/how-to-increase-vein-size-plasma-donation/ 301!
+/blog/california/california-plasma-donation-maximize-earnings/ /blog/plasma-donation-maximize-earnings-2025/ 301!
+/blog/california/california-plasma-donation-maximize-earnings /blog/plasma-donation-maximize-earnings-2025/ 301!
+
+# Blog trailing slash fixes
+/blog/mejores-horarios-donar-plasma/ /blog/mejores-horarios-donar-plasma.html 301!
+/blog/requisitos-donacion-plasma/ /blog/requisitos-donacion-plasma.html 301!
+/blog/cual-centro-plasma-paga-mas-dinero/ /blog/cual-centro-plasma-paga-mas-dinero.html 301!
+/blog/biolife-vs-csl-plasma-comparacion/ /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025/ 301!
+/blog/24-hour-plasma-centers-complete-locator-guide-2025/ /blog/24-hour-plasma-centers-complete-locator-guide-2025.html 301!
+/blog/first-time-plasma-donation-bonus-calculator/ /blog/first-time-plasma-donation-bonus-calculator.html 301!
+/blog/first-time-plasma-donation/ /blog/first-time-plasma-donation.html 301!
+/blog/plasma-donation-taxes/ /blog/plasma-donation-taxes.html 301!
+/blog/plasma-donation-requirements/ /blog/plasma-donation-requirements.html 301!
+/blog/does-irs-track-plasma-donations/ /blog/does-irs-track-plasma-donations.html 301!
+/blog/do-you-get-1099-plasma-donation/ /blog/do-you-get-1099-plasma-donation.html 301!
+/blog/social-security-plasma-income-impact-2025/ /blog/social-security-plasma-income-impact-2025.html 301!
+/blog/lost-job-plasma-donation-survival-guide/ /blog/lost-job-plasma-donation-survival-guide.html 301!
+/blog/plasma-donation-health-risks-medical-analysis-2025/ /blog/plasma-donation-health-risks-medical-analysis-2025.html 301!
+/blog/biolife-vs-csl-plasma-pay-chart-comparison-2025/ /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html 301!
+/blog/california-plasma-donation-requirements-eligibility/ /blog/plasma-donation-requirements.html 301!
+/blog/california-plasma-donation-requirements-eligibility /blog/plasma-donation-requirements.html 301!
+/blog/highest-paying-plasma-centers-by-state-location-guide-2025.html /blog/highest-paying-plasma-centers-by-state-location-guide-2025/ 301!
+/blog/emergency-money-plasma-donation-financial-crisis-2025.html /blog/emergency-money-plasma-donation-financial-crisis-2025/ 301!
+/blog/seasonal-plasma-donation-income-optimization-2025.html /blog/seasonal-plasma-donation-income-optimization-2025/ 301!
+/blog/understanding-plasma-medical-uses.html /blog/understanding-plasma-medical-uses/ 301!
+/blog/does-irs-track-plasma-donations.html /blog/does-irs-track-plasma-donations/ 301!
+/blog/which-plasma-center-pays-most-money.html /blog/which-plasma-center-pays-most-money/ 301!
+/blog/can-you-make-1000-month-donating-plasma /blog/can-you-make-1000-month-donating-plasma.html 301!
+
+# WWW blog redirects
+/www.plasmapaycalculator.com/blog/* /blog/:splat 301!
+
+# ============================================
+# TOOL REDIRECTS
+# ============================================
+/tools/all-plasma-centers-comparison.html /centers/ 301!
+/tools/all-plasma-centers-comparison/ /centers/ 301!
+/tools/octapharma-vs-grifols-calculator.html /tools/octapharma-vs-grifols-calculator/ 301!
+/tools/csl-vs-biolife-calculator.html /tools/csl-vs-biolife-calculator/ 301!
+
+# ============================================
+# MISC PAGE REDIRECTS
+# ============================================
+/plasma-donation-requirements-2025/ /blog/plasma-donation-requirements.html 301!
+/frederick-md-plasma-donation.html /calculators/maryland/frederick/ 301!
+/how-much-money-can-you-make-donating-plasma/ /blog/how-much-money-can-you-make-donating-plasma.html 301!
+/how-much-money-can-you-make-donating-plasma /blog/how-much-money-can-you-make-donating-plasma.html 301!
+/csl-plasma-tax-calculator/ /tools/csl-vs-biolife-calculator.html 301!
+/terms/ /terms.html 301!
+/terms /terms.html 301!
+/privacy/ /privacy.html 301!
+/about/ /about.html 301!
+/about /about.html 301!
+/states/ /calculators/ 301!
+/states /calculators/ 301!
+/index.html / 301!
+/seasonal/holiday-plasma-bonus-guide.html /blog/holiday-plasma-bonus-guide-2025/ 301!
+/es/states.html /es/calculators/ 301!
+
+# ============================================
+# EXISTING REDIRECTS (Keep these)
+# ============================================
 # Fix query parameter redirects
 /?search=true /calculators/indiana/ 301!
 
-# Fix old state paths
-/state/* /calculators/:splat 301!
-
-# Remove trailing .html from blog posts
-/blog/*.html /blog/:splat 301!
-
-# Fix blog subdirectory issues
-/blog/california/centers.html /centers/ 301!
-/blog/california/california-cities.html /calculators/california/ 301!
-
-# Spanish blog redirect
-/es/blog/cuanto-pagan-por-donar-plasma /blog/cuanto-pagan-por-donar-plasma-guia-completa-2025 301!
-
 # FAQ redirect
 /faq /faq.html 301!
-
-# Add trailing slashes to directories
-/calculators/michigan/lansing /calculators/michigan/lansing/ 301!
-/calculators/oregon/eugene /calculators/oregon/eugene/ 301!
-/calculators/new-jersey/edison /calculators/new-jersey/edison/ 301!
-/calculators/wyoming/laramie /calculators/wyoming/laramie/ 301!
-/calculators/hawaii/honolulu /calculators/hawaii/honolulu/ 301!
-/calculators/ohio/akron /calculators/ohio/akron/ 301!
-/calculators/oregon/salem /calculators/oregon/salem/ 301!
-/calculators/south-dakota/watertown /calculators/south-dakota/watertown/ 301!
-/calculators/georgia/savannah /calculators/georgia/savannah/ 301!
-/calculators/virginia/virginia-beach /calculators/virginia/virginia-beach/ 301!
-
-# Blog post redirects (remove .html)
-/blog/plasma-donation-health-tips.html /blog/plasma-donation-health-tips/ 301!
-/blog/plasma-donation-health-risks-medical-analysis-2025.html /blog/plasma-donation-health-risks-medical-analysis-2025/ 301!
-/blog/california/how-to-increase-vein-size-plasma-donation.html /blog/how-to-increase-vein-size-plasma-donation/ 301!
-/blog/cuanto-pagan-por-donar-plasma-guia-completa-2025.html /blog/cuanto-pagan-por-donar-plasma-guia-completa-2025/ 301!
-/blog/plasma-donation-requirements.html /blog/plasma-donation-requirements/ 301!
-/blog/plasma-donation-referral-income-maximization-2025.html /blog/plasma-donation-referral-income-maximization-2025/ 301!
-/blog/emergency-money-plasma-donation-broke.html /blog/emergency-money-plasma-donation-broke/ 301!
-/blog/guia-completa-donacion-plasma.html /blog/guia-completa-donacion-plasma/ 301!
 
 # Spanish calculator redirects
 /es/calculators/new-jersey/ /calculators/new-jersey/ 301!
@@ -49,7 +257,3 @@ https://plasmacenterfinder.com/* https://plasmapaycalculator.com/centers/:splat 
 https://www.plasmacenterfinder.com/* https://plasmapaycalculator.com/centers/:splat 301!
 http://plasmacenterfinder.com/* https://plasmapaycalculator.com/centers/:splat 301!
 http://www.plasmacenterfinder.com/* https://plasmapaycalculator.com/centers/:splat 301!
-
-# Specific path redirects
-https://plasmacenterfinder.com/guides/* https://plasmapaycalculator.com/blog/:splat 301!
-https://www.plasmacenterfinder.com/guides/* https://plasmapaycalculator.com/blog/:splat 301!
