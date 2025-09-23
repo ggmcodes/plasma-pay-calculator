@@ -147,3 +147,300 @@ https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301
 /blog/california-tech-1099-forms.html /blog/do-you-get-1099-plasma-donation.html 301
 /blog/california-tech-entertainment-plasma-earnings.html /blog/california-plasma-donation-los-angeles-san-diego.html 301
 /blog/california-tech-social-security-benefits.html /blog/do-plasma-centers-report-social-security.html 301
+
+# COMPREHENSIVE GSC REDIRECT FIXES
+# =====================================
+
+# 1. COMPREHENSIVE .HTML REMOVAL RULES
+# Remove .html from all calculator pages (English)
+/calculators/*.html /calculators/:splat 301
+/calculators/*/*.html /calculators/:splat 301
+/calculators/*/*/*.html /calculators/:splat 301
+
+# Remove .html from all Spanish calculator pages
+/es/calculators/*.html /es/calculators/:splat 301
+/es/calculators/*/*.html /es/calculators/:splat 301
+/es/calculators/*/*/*.html /es/calculators/:splat 301
+
+# 2. COMPREHENSIVE STATE-TO-CALCULATOR REDIRECTS
+# English state redirects (all patterns)
+/state/* /calculators/:splat 301
+
+# Spanish state redirects (all patterns)
+/es/estado/* /es/calculators/:splat 301
+
+# 3. BLOG TRAILING SLASH FIXES
+# Remove trailing slashes from blog posts
+/blog/*/ /blog/:splat 301
+
+# 4. ROOT PAGE REDIRECTS
+/terms /terms.html 301
+/about /about.html 301
+/contact /contact.html 301
+/privacy /privacy.html 301
+/faq /faq.html 301
+
+# 5. WWW SUBDOMAIN FIXES (additional patterns)
+https://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
+http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
+
+# 6. SPECIFIC GSC ERROR REDIRECTS
+# Blog post specific redirects
+/blog/california-tech-entertainment-plasma-earnings/ /blog/california-plasma-donation-los-angeles-san-diego 301
+/blog/best-plasma-centers-texas/ /blog/best-plasma-centers-texas 301
+/blog/plasma-donation-taxes/ /blog/plasma-donation-taxes 301
+/blog/how-to-recover-faster-after-plasma-donation-2025/ /blog/how-to-recover-faster-after-plasma-donation-2025 301
+/blog/cant-pay-bills-plasma-salvation-2025/ /blog/cant-pay-bills-plasma-salvation-2025 301
+/blog/first-time-plasma-donation-bonus-calculator/ /blog/first-time-plasma-donation-bonus-calculator 301
+/blog/15-ways-make-money-2025-viral-ranking/ /blog/15-ways-make-money-2025-viral-ranking 301
+/blog/earn-800-month-plasma-donation-complete-strategy-guide-2025/ /blog/earn-800-month-plasma-donation-complete-strategy-guide-2025 301
+/blog/ab-plasma-donation-calculator/ /blog/ab-plasma-donation-calculator 301
+/blog/best-times-donate-plasma/ /blog/best-times-donate-plasma 301
+/blog/plasma-donation-schedule/ /blog/plasma-donation-schedule 301
+/blog/biolife-vs-csl-plasma-pay-chart-comparison-2025/ /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025 301
+/blog/highest-paying-plasma-centers-by-state-location-guide-2025/ /blog/highest-paying-plasma-centers-by-state-location-guide-2025 301
+/blog/ab-plasma-secret-income-revealed/ /blog/ab-plasma-secret-income-revealed 301
+/blog/plasma-donation-health-risks-medical-analysis-2025/ /blog/plasma-donation-health-risks-medical-analysis-2025 301
+/blog/plasma-donation-schedule-money-maximizer/ /blog/plasma-donation-schedule-money-maximizer 301
+/blog/shocking-discovery-33-hour-secret-2025/ /blog/shocking-discovery-33-hour-secret-2025 301
+/blog/california-tech-vein-health-guide/ /blog/how-to-increase-vein-size-plasma-donation 301
+/blog/how-to-increase-vein-size-plasma-donation/ /blog/how-to-increase-vein-size-plasma-donation 301
+/blog/plasma-donation-process-explained-2025/ /blog/plasma-donation-process-explained-2025 301
+/blog/plasma-donation-ssi-disability-impact-guide-2025/ /blog/plasma-donation-ssi-disability-impact-guide-2025 301
+/blog/lost-job-plasma-donation-survival-guide/ /blog/lost-job-plasma-donation-survival-guide 301
+/blog/social-security-plasma-income-impact-2025/ /blog/social-security-plasma-income-impact-2025 301
+/blog/plasma-donation-side-effects-red-veins-medical-guide-2025/ /blog/plasma-donation-side-effects-red-veins-medical-guide-2025 301
+/blog/better-ways-earn-money-than-plasma-donation-2025/ /blog/better-ways-earn-money-than-plasma-donation-2025 301
+/blog/best-plasma-centers-by-state-2025.html/ /blog/best-plasma-centers-by-state-2025 301
+/blog/new-jersey-plasma-donation-earnings-guide-2025/ /blog/new-jersey-plasma-donation-earnings-guide-2025 301
+/blog/do-you-get-1099-plasma-donation/ /blog/do-you-get-1099-plasma-donation 301
+/blog/does-irs-track-plasma-donations/ /blog/does-irs-track-plasma-donations 301
+/blog/do-plasma-centers-report-social-security/ /blog/do-plasma-centers-report-social-security 301
+/blog/plasma-donation-requirements/ /blog/plasma-donation-requirements 301
+
+# Root level page redirects
+/plasma-donation-requirements-2025/ /plasma-donation-requirements-2025 301
+/how-much-money-can-you-make-donating-plasma/ /how-much-money-can-you-make-donating-plasma 301
+/states/ /states 301
+
+# Tools directory
+/tools/eligibility-checker/ /tools/eligibility-checker 301
+
+# Spanish blog redirects
+/es/blog/cuanto-dinero-puedes-ganar-donando-plasma/ /es/blog/cuanto-dinero-puedes-ganar-donando-plasma 301
+/es/blog/requisitos-donacion-plasma/ /es/blog/requisitos-donacion-plasma 301
+/es/blog/consejos-donacion-plasma-principiantes/ /es/blog/consejos-donacion-plasma-principiantes 301
+/es/terms/ /es/terms 301
+
+# Spanish page trailing slash fixes
+/es/ /es 301
+
+# California specific blog post pattern
+/blog/california/ /blog/ 301
+
+# SPECIFIC GSC ERROR URL REDIRECTS
+# =================================
+
+# Calculator trailing slash variations
+/calculators/delaware/newark/ /calculators/delaware/newark 301
+/calculators/nebraska/bellevue/ /calculators/nebraska/bellevue 301
+/calculators/maine/portland/ /calculators/maine/portland 301
+/calculators/kansas/kansas-city/ /calculators/kansas/kansas-city 301
+
+# State directory without .html
+/calculators/wisconsin /calculators/wisconsin/index 301
+/calculators/north-dakota /calculators/north-dakota/index 301
+/calculators/montana /calculators/montana/index 301
+/calculators/kentucky /calculators/kentucky/index 301
+/calculators/indiana /calculators/indiana/index 301
+/calculators/tennessee /calculators/tennessee/index 301
+/calculators/arkansas /calculators/arkansas/index 301
+/calculators/north-carolina /calculators/north-carolina/index 301
+/calculators/new-jersey /calculators/new-jersey/index 301
+/calculators/minnesota /calculators/minnesota/index 301
+/calculators/oklahoma /calculators/oklahoma/index 301
+/calculators/louisiana /calculators/louisiana/index 301
+/calculators/south-carolina /calculators/south-carolina/index 301
+/calculators/connecticut /calculators/connecticut/index 301
+/calculators/virginia /calculators/virginia/index 301
+
+# Specific city calculator redirects without .html
+/calculators/west-virginia/huntington /calculators/west-virginia/huntington/index 301
+/calculators/illinois/naperville /calculators/illinois/naperville/index 301
+/calculators/colorado/colorado-springs /calculators/colorado/colorado-springs/index 301
+/calculators/illinois/aurora /calculators/illinois/aurora/index 301
+/calculators/district-of-columbia/georgetown /calculators/district-of-columbia/georgetown/index 301
+/calculators/missouri/independence /calculators/missouri/independence/index 301
+/calculators/pennsylvania/philadelphia /calculators/pennsylvania/philadelphia/index 301
+/calculators/oklahoma/norman /calculators/oklahoma/norman/index 301
+/calculators/iowa/des-moines /calculators/iowa/des-moines/index 301
+/calculators/minnesota/minneapolis /calculators/minnesota/minneapolis/index 301
+/calculators/north-carolina/raleigh /calculators/north-carolina/raleigh/index 301
+/calculators/iowa/davenport /calculators/iowa/davenport/index 301
+/calculators/delaware/wilmington /calculators/delaware/wilmington/index 301
+/calculators/north-carolina/charlotte /calculators/north-carolina/charlotte/index 301
+/calculators/illinois/chicago /calculators/illinois/chicago/index 301
+/calculators/wisconsin/racine /calculators/wisconsin/racine/index 301
+/calculators/new-mexico/las-cruces /calculators/new-mexico/las-cruces/index 301
+/calculators/illinois/rockford /calculators/illinois/rockford/index 301
+/calculators/nebraska/kearney /calculators/nebraska/kearney/index 301
+/calculators/maryland/rockville /calculators/maryland/rockville/index 301
+/calculators/massachusetts/lowell /calculators/massachusetts/lowell/index 301
+/calculators/vermont/colchester /calculators/vermont/colchester/index 301
+/calculators/wisconsin /calculators/wisconsin/index 301
+/calculators/idaho/boise /calculators/idaho/boise/index 301
+/calculators/mississippi/biloxi /calculators/mississippi/biloxi/index 301
+/calculators/arizona/chandler /calculators/arizona/chandler/index 301
+/calculators/florida/tampa /calculators/florida/tampa/index 301
+/calculators/wyoming/gillette /calculators/wyoming/gillette/index 301
+/calculators/indiana/fort-wayne /calculators/indiana/fort-wayne/index 301
+/calculators/vermont/south-burlington /calculators/vermont/south-burlington/index 301
+/calculators/ohio/cincinnati /calculators/ohio/cincinnati/index 301
+/calculators/pennsylvania/pittsburgh /calculators/pennsylvania/pittsburgh/index 301
+/calculators/georgia/atlanta /calculators/georgia/atlanta/index 301
+/calculators/colorado/denver /calculators/colorado/denver/index 301
+/calculators/ohio/cleveland /calculators/ohio/cleveland/index 301
+/calculators/louisiana/lake-charles /calculators/louisiana/lake-charles/index 301
+/calculators/louisiana/baton-rouge /calculators/louisiana/baton-rouge/index 301
+/calculators/louisiana/lafayette /calculators/louisiana/lafayette/index 301
+/calculators/arkansas/springdale /calculators/arkansas/springdale/index 301
+/calculators/colorado/lakewood /calculators/colorado/lakewood/index 301
+/calculators/virginia/newport-news /calculators/virginia/newport-news/index 301
+/calculators/hawaii/kailua-hi /calculators/hawaii/kailua-hi/index 301
+/calculators/virginia/alexandria /calculators/virginia/alexandria/index 301
+/calculators/idaho/meridian /calculators/idaho/meridian/index 301
+/calculators/maine/south-portland /calculators/maine/south-portland/index 301
+/calculators/kansas/wichita /calculators/kansas/wichita/index 301
+/calculators/west-virginia/wheeling /calculators/west-virginia/wheeling/index 301
+/calculators/mississippi/jackson /calculators/mississippi/jackson/index 301
+/calculators/nebraska/bellevue-ne /calculators/nebraska/bellevue-ne/index 301
+/calculators/alabama/mobile /calculators/alabama/mobile/index 301
+/calculators/rhode-island/cranston /calculators/rhode-island/cranston/index 301
+/calculators/mississippi/hattiesburg /calculators/mississippi/hattiesburg/index 301
+/calculators/north-dakota/bismarck /calculators/north-dakota/bismarck/index 301
+/calculators/rhode-island/providence /calculators/rhode-island/providence/index 301
+/calculators/kansas/kansas-city-ks /calculators/kansas/kansas-city-ks/index 301
+/calculators/florida/jacksonville /calculators/florida/jacksonville/index 301
+/calculators/mississippi/gulfport /calculators/mississippi/gulfport/index 301
+/calculators/maine/portland-me /calculators/maine/portland-me/index 301
+/calculators/florida/st-petersburg /calculators/florida/st-petersburg/index 301
+/calculators/ohio/toledo /calculators/ohio/toledo/index 301
+/calculators/florida/orlando /calculators/florida/orlando/index 301
+/calculators/pennsylvania/allentown /calculators/pennsylvania/allentown/index 301
+/calculators/nevada/henderson /calculators/nevada/henderson/index 301
+/calculators/illinois/joliet /calculators/illinois/joliet/index 301
+/calculators/new-york/albany /calculators/new-york/albany/index 301
+/calculators/ohio/columbus /calculators/ohio/columbus/index 301
+/calculators/hawaii/pearl-city /calculators/hawaii/pearl-city/index 301
+/calculators/georgia/augusta /calculators/georgia/augusta/index 301
+/calculators/nevada/las-vegas /calculators/nevada/las-vegas/index 301
+/calculators/arizona/tucson /calculators/arizona/tucson/index 301
+/calculators/michigan/warren /calculators/michigan/warren/index 301
+/calculators/vermont/essex /calculators/vermont/essex/index 301
+
+# Additional calculator city redirects
+/calculators/maryland/bowie /calculators/maryland/bowie/index 301
+/calculators/tennessee/knoxville /calculators/tennessee/knoxville/index 301
+/calculators/utah/salt-lake-city /calculators/utah/salt-lake-city/index 301
+/calculators/tennessee/clarksville /calculators/tennessee/clarksville/index 301
+/calculators/new-hampshire/rochester /calculators/new-hampshire/rochester/index 301
+/calculators/kentucky/bowling-green /calculators/kentucky/bowling-green/index 301
+/calculators/georgia/columbus /calculators/georgia/columbus/index 301
+/calculators/district-of-columbia/dupont-circle /calculators/district-of-columbia/dupont-circle/index 301
+/calculators/iowa/sioux-city /calculators/iowa/sioux-city/index 301
+/calculators/ohio/akron /calculators/ohio/akron/index 301
+/calculators/missouri/kansas-city /calculators/missouri/kansas-city/index 301
+/calculators/michigan/detroit /calculators/michigan/detroit/index 301
+/calculators/kentucky/covington /calculators/kentucky/covington/index 301
+/calculators/district-of-columbia/capitol-hill /calculators/district-of-columbia/capitol-hill/index 301
+/calculators/new-mexico/rio-rancho /calculators/new-mexico/rio-rancho/index 301
+/calculators/kentucky/owensboro /calculators/kentucky/owensboro/index 301
+/calculators/south-carolina/charleston /calculators/south-carolina/charleston/index 301
+/calculators/district-of-columbia/adams-morgan /calculators/district-of-columbia/adams-morgan/index 301
+/calculators/connecticut/new-haven /calculators/connecticut/new-haven/index 301
+/calculators/montana/great-falls /calculators/montana/great-falls/index 301
+/calculators/utah/west-valley-city /calculators/utah/west-valley-city/index 301
+/calculators/south-carolina/greenville /calculators/south-carolina/greenville/index 301
+/calculators/vermont/rutland /calculators/vermont/rutland/index 301
+/calculators/washington/tacoma /calculators/washington/tacoma/index 301
+/calculators/pennsylvania/erie /calculators/pennsylvania/erie/index 301
+/calculators/hawaii/kaneohe /calculators/hawaii/kaneohe/index 301
+/calculators/delaware/dover /calculators/delaware/dover/index 301
+/calculators/south-carolina/north-charleston /calculators/south-carolina/north-charleston/index 301
+/calculators/idaho/nampa /calculators/idaho/nampa/index 301
+/calculators/utah/orem /calculators/utah/orem/index 301
+/calculators/wisconsin/kenosha /calculators/wisconsin/kenosha/index 301
+/calculators/new-mexico/albuquerque /calculators/new-mexico/albuquerque/index 301
+/calculators/new-hampshire/concord-nh /calculators/new-hampshire/concord-nh/index 301
+/calculators/indiana/indianapolis /calculators/indiana/indianapolis/index 301
+/calculators/utah/provo /calculators/utah/provo/index 301
+/calculators/district-of-columbia/washington /calculators/district-of-columbia/washington/index 301
+/calculators/kentucky/lexington /calculators/kentucky/lexington/index 301
+/calculators/florida/fort-lauderdale /calculators/florida/fort-lauderdale/index 301
+/calculators/kentucky/louisville /calculators/kentucky/louisville/index 301
+/calculators/new-hampshire/rochester-nh /calculators/new-hampshire/rochester-nh/index 301
+/calculators/oklahoma/tulsa /calculators/oklahoma/tulsa/index 301
+/calculators/new-mexico/roswell /calculators/new-mexico/roswell/index 301
+/calculators/indiana/carmel /calculators/indiana/carmel/index 301
+/calculators/vermont/burlington /calculators/vermont/burlington/index 301
+/calculators/south-carolina/rock-hill /calculators/south-carolina/rock-hill/index 301
+/calculators/new-hampshire/nashua /calculators/new-hampshire/nashua/index 301
+/calculators/vermont/rutland /calculators/vermont/rutland/index 301
+/calculators/oklahoma/lawton /calculators/oklahoma/lawton/index 301
+/calculators/massachusetts/worcester /calculators/massachusetts/worcester/index 301
+/calculators/massachusetts/boston /calculators/massachusetts/boston/index 301
+/calculators/indiana/gary /calculators/indiana/gary/index 301
+
+# Missing state directories
+/calculators/texas /calculators/texas/index 301
+/calculators/california /calculators/california/index 301
+/calculators/florida /calculators/florida/index 301
+/calculators/new-york /calculators/new-york/index 301
+/calculators/pennsylvania /calculators/pennsylvania/index 301
+/calculators/illinois /calculators/illinois/index 301
+/calculators/ohio /calculators/ohio/index 301
+/calculators/georgia /calculators/georgia/index 301
+/calculators/michigan /calculators/michigan/index 301
+/calculators/washington /calculators/washington/index 301
+/calculators/arizona /calculators/arizona/index 301
+/calculators/massachusetts /calculators/massachusetts/index 301
+/calculators/maryland /calculators/maryland/index 301
+/calculators/colorado /calculators/colorado/index 301
+/calculators/missouri /calculators/missouri/index 301
+/calculators/oregon /calculators/oregon/index 301
+/calculators/wisconsin /calculators/wisconsin/index 301
+/calculators/alabama /calculators/alabama/index 301
+/calculators/south-carolina /calculators/south-carolina/index 301
+/calculators/kansas /calculators/kansas/index 301
+/calculators/utah /calculators/utah/index 301
+/calculators/nevada /calculators/nevada/index 301
+/calculators/new-mexico /calculators/new-mexico/index 301
+/calculators/west-virginia /calculators/west-virginia/index 301
+/calculators/nebraska /calculators/nebraska/index 301
+/calculators/idaho /calculators/idaho/index 301
+/calculators/hawaii /calculators/hawaii/index 301
+/calculators/maine /calculators/maine/index 301
+/calculators/new-hampshire /calculators/new-hampshire/index 301
+/calculators/rhode-island /calculators/rhode-island/index 301
+/calculators/montana /calculators/montana/index 301
+/calculators/delaware /calculators/delaware/index 301
+/calculators/south-dakota /calculators/south-dakota/index 301
+/calculators/north-dakota /calculators/north-dakota/index 301
+/calculators/alaska /calculators/alaska/index 301
+/calculators/vermont /calculators/vermont/index 301
+/calculators/wyoming /calculators/wyoming/index 301
+/calculators/district-of-columbia /calculators/district-of-columbia/index 301
+
+# State page redirects (.html variations)
+/calculators/texas.html /calculators/texas/index 301
+/calculators/wisconsin.html /calculators/wisconsin/index 301
+/calculators/north-dakota.html /calculators/north-dakota/index 301
+/calculators/montana.html /calculators/montana/index 301
+/calculators/kentucky.html /calculators/kentucky/index 301
+/calculators/indiana.html /calculators/indiana/index 301
+/calculators/tennessee.html /calculators/tennessee/index 301
+/calculators/arkansas.html /calculators/arkansas/index 301
+/calculators/north-carolina.html /calculators/north-carolina/index 301
+/calculators/connecticut.html /calculators/connecticut/index 301
+/calculators/hawaii.html /calculators/hawaii/index 301
+/calculators/alabama.html /calculators/alabama/index 301
