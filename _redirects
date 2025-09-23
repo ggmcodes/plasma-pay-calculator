@@ -238,6 +238,66 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 # California specific blog post pattern
 /blog/california/ /blog/ 301
 
+# SPECIFIC 404 ERROR FIXES FROM GSC
+# ==================================
+
+# Missing California blog posts (redirect to existing ones or main blog)
+/blog/california/california-plasma-donation-fresno.html /blog/california/california-plasma-donation-los-angeles-san-diego.html 301
+/blog/california/california-plasma-donation-recovery-tips.html /blog/california/california-plasma-donation-side-effects-safety.html 301
+/blog/california/california-plasma-donation-myths-debunked.html /blog/california/california-plasma-donation-requirements-eligibility.html 301
+/blog/california/california-plasma-donation-sacramento.html /blog/california/california-plasma-donation-los-angeles-san-diego.html 301
+/blog/california/california-plasma-donation-common-questions.html /blog/california/california-plasma-donation-requirements-eligibility.html 301
+/blog/california/california-plasma-donation-tips-for-beginners.html /blog/california/first-time-plasma-donation.html 301
+/blog/california/california-plasma-donation-san-francisco.html /blog/california/california-plasma-donation-los-angeles-san-diego.html 301
+/blog/california/california-plasma-donation-first-time-guide.html /blog/california/first-time-plasma-donation.html 301
+/blog/california/california-plasma-donation-side-effects.html /blog/california/california-plasma-donation-side-effects-safety.html 301
+/blog/california/california-plasma-donation-tax-guide.html /blog/california/plasma-donation-taxes.html 301
+/blog/california/centers.html /centers/ 301
+/blog/california/california-cities.html /california-cities.html 301
+/blog/california/california-plasma-donation-budget-planning.html /blog/california/california-plasma-donation-maximize-earnings.html 301
+/blog/california/california-plasma-donation-earnings-calculator.html /blog/california/california-plasma-donation-maximize-earnings.html 301
+
+# Missing Spanish blog posts
+/blog/mejores-centros-plasma-california/ /blog/california/plasma-center-comparison.html 301
+/blog/requisitos-donacion-plasma/ /blog/california/plasma-donation-requirements.html 301
+/blog/mejores-horarios-donar-plasma/ /blog/california/plasma-donation-schedule.html 301
+/blog/cual-centro-plasma-paga-mas-dinero/ /blog/california/plasma-center-comparison.html 301
+/blog/biolife-vs-csl-plasma-comparacion/ /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html 301
+/blog/guia-completa-donacion-plasma/ /blog/california/ultimate-plasma-donation-guide.html 301
+
+# Wrong calculator directory names (missing state suffixes)
+/calculators/missouri/columbia/ /calculators/missouri/columbia-mo/ 301
+/calculators/missouri/springfield/ /calculators/missouri/springfield-mo/ 301
+/calculators/iowa/iowa-city/ /calculators/iowa/iowa-city-ia/ 301
+/calculators/south-carolina/mount-pleasant/ /calculators/south-carolina/mount-pleasant-sc/ 301
+/calculators/minnesota/saint-paul/ /calculators/minnesota/saint-paul-mn/ 301
+/calculators/south-carolina/columbia/ /calculators/south-carolina/columbia-sc/ 301
+/calculators/maine/auburn/ /calculators/maine/auburn-me/ 301
+/calculators/hawaii/kailua/ /calculators/hawaii/kailua-kona/ 301
+/calculators/oregon/salem/ /calculators/oregon/salem-or/ 301
+/calculators/south-dakota/watertown/ /calculators/south-dakota/watertown-sd/ 301
+
+# Double calculator path fix
+/calculators/calculators/vermont/ /calculators/vermont/ 301
+
+# Tools redirects
+/tools/all-plasma-centers-comparison.html /centers/ 301
+/tools/all-plasma-centers-comparison/ /centers/ 301
+
+# State page redirects (missing .html files)
+/state/michigan/grand-rapids.html /calculators/michigan/grand-rapids/ 301
+/es/estado/mississippi/gulfport.html /es/calculators/mississippi/gulfport/ 301
+/es/estado/pennsylvania/reading.html /es/calculators/pennsylvania/reading/ 301
+/state/pennsylvania /calculators/pennsylvania/ 301
+/state/texas/houston.html /calculators/texas/houston/ 301
+/state/mississippi.html /calculators/mississippi/ 301
+
+# Spanish calculator directory redirect
+/es/calculators/ /calculators/ 301
+
+# Spanish blog post that doesn't exist
+/es/blog/does-irs-track-plasma-donations.html /blog/does-irs-track-plasma-donations.html 301
+
 # SPECIFIC GSC ERROR URL REDIRECTS
 # =================================
 
