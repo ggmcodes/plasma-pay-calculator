@@ -504,3 +504,57 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /calculators/connecticut.html /calculators/connecticut/index 301
 /calculators/hawaii.html /calculators/hawaii/index 301
 /calculators/alabama.html /calculators/alabama/index 301
+
+# Fix GSC Failed Redirects - October 2025
+# Spanish calculator redirects
+/es/calculators/kentucky /es/calculators/kentucky/index 301
+/es/estado/kentucky /es/calculators/kentucky/index 301
+/es/calculators/georgia /es/calculators/georgia/index 301
+/es/estado/georgia /es/calculators/georgia/index 301
+
+# State and city calculator redirects
+/state/missouri/st-louis /calculators/missouri/st-louis 301
+/calculators/missouri/st-louis /calculators/missouri/st-louis/index 301
+/calculators/hawaii /calculators/hawaii/index 301
+/state/illinois/aurora.html /calculators/illinois/aurora 301
+/calculators/illinois/aurora.html /calculators/illinois/aurora 301
+/state/idaho/boise.html /calculators/idaho/boise 301
+/calculators/idaho/boise.html /calculators/idaho/boise 301
+/state/california/sacramento.html /calculators/california/sacramento 301
+/calculators/california/sacramento.html /calculators/california/sacramento 301
+/calculators/iowa.html /calculators/iowa/index 301
+/state/iowa.html /calculators/iowa/index 301
+/calculators/iowa /calculators/iowa/index 301
+/iowa-plasma-donation-earnings.html /calculators/iowa/index 301
+/state/missouri/st-louis.html /calculators/missouri/st-louis 301
+/calculators/missouri/st-louis.html /calculators/missouri/st-louis 301
+/calculators/colorado.html /calculators/colorado/index 301
+/state/colorado.html /calculators/colorado/index 301
+/state/kansas /calculators/kansas/index 301
+/state/texas/san-antonio.html /calculators/texas/san-antonio 301
+/calculators/texas/san-antonio.html /calculators/texas/san-antonio 301
+/state/nebraska/lincoln /calculators/nebraska/lincoln 301
+/calculators/nebraska/lincoln /calculators/nebraska/lincoln/index 301
+/calculators/arkansas/jonesboro /calculators/arkansas/jonesboro/index 301
+/state/arkansas/jonesboro /calculators/arkansas/jonesboro/index 301
+/calculators/maryland/baltimore /calculators/maryland/baltimore/index 301
+/state/maryland/baltimore /calculators/maryland/baltimore/index 301
+/state/north-dakota/minot.html /calculators/north-dakota/minot 301
+/calculators/north-dakota/minot.html /calculators/north-dakota/minot 301
+/state/montana/missoula /calculators/montana/missoula/index 301
+/calculators/oklahoma.html /calculators/oklahoma/index 301
+/state/oklahoma.html /calculators/oklahoma/index 301
+
+# Missing viral/clickbait content redirects to relevant existing pages
+/shocking-irs-tracks-plasma-income-2025 /comprehensive-plasma-tax-guide-2025 301
+/shocking-irs-tracks-plasma-income-2025/ /comprehensive-plasma-tax-guide-2025 301
+/plasma-donation-eligibility-quiz-viral /plasma-donation-requirements-2025 301
+/plasma-donation-eligibility-quiz-viral/ /plasma-donation-requirements-2025 301
+/one-weird-trick-400-month-2025 /plasma-donation-pay-rates-2025 301
+/one-weird-trick-400-month-2025/ /plasma-donation-pay-rates-2025 301
+/shocking-discovery-33-hour-secret-2025 /plasma-donation-pay-rates-2025 301
+/shocking-discovery-33-hour-secret-2025/ /plasma-donation-pay-rates-2025 301
+/plasma-vs-everything-2025-shocking-comparison /plasma-donation-pay-rates-2025 301
+/plasma-vs-everything-2025-shocking-comparison/ /plasma-donation-pay-rates-2025 301
+/15-ways-make-money-2025-viral-ranking /make-1000-month-plasma-donation 301
+/15-ways-make-money-2025-viral-ranking/ /make-1000-month-plasma-donation 301
