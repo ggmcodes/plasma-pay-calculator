@@ -504,3 +504,37 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /calculators/connecticut.html /calculators/connecticut/index 301
 /calculators/hawaii.html /calculators/hawaii/index 301
 /calculators/alabama.html /calculators/alabama/index 301
+
+# ============================================================
+# ADDITIONAL GSC ERROR FIXES - October 2025
+# Added: 2025-10-15 - New crawl errors from GSC
+# ============================================================
+
+# Blog posts at root that should be in /blog/ (not covered by existing wildcards)
+/plasma-vs-everything-2025-shocking-comparison/ /blog/plasma-vs-everything-2025-shocking-comparison.html 301
+/shocking-irs-tracks-plasma-income-2025 /blog/shocking-irs-tracks-plasma-income-2025.html 301
+/plasma-donation-eligibility-quiz-viral /blog/plasma-donation-eligibility-quiz-viral.html 301
+/one-weird-trick-400-month-2025.html /blog/one-weird-trick-400-month-2025.html 301
+/one-weird-trick-400-month-2025 /blog/one-weird-trick-400-month-2025.html 301
+
+# Missing blog post - redirect to similar content
+/plasma-donation-myths-vs-facts-debunked-2025.html /blog/plasma-donation-complete-beginners-guide.html 301
+/plasma-donation-myths-vs-facts-debunked-2025 /blog/plasma-donation-complete-beginners-guide.html 301
+/blog/plasma-donation-myths-vs-facts-debunked-2025.html /blog/plasma-donation-complete-beginners-guide.html 301
+
+# Calculator pages that need trailing slashes  
+/calculators/virginia/richmond /calculators/virginia/richmond/ 301
+
+# Ensure new-york-city goes to correct path (new-york not new-york-city)
+/calculators/new-york/new-york-city /calculators/new-york/new-york/ 301
+
+# Blog post variations
+/blog/biolife-vs-csl-plasma-comparison-2025/ /blog/biolife-vs-csl-plasma-comparison.html 301
+/blog/biolife-vs-csl-plasma-comparison-2025 /blog/biolife-vs-csl-plasma-comparison.html 301
+/blog/ganar-1000-donando-plasma/ /blog/can-you-make-1000-month-donating-plasma.html 301
+/blog/ganar-1000-donando-plasma /blog/can-you-make-1000-month-donating-plasma.html 301
+
+# KEDPlasma specific (redirect to highest-paying centers)
+/blog/kedplasma-pay-chart-2025.html /blog/highest-paying-plasma-centers-2025.html 301
+/blog/kedplasma-pay-chart-2025 /blog/highest-paying-plasma-centers-2025.html 301
+
