@@ -177,8 +177,20 @@
         },
 
         centersDirectory: () => {
-          // Under header/nav
-          this.inject('olgam', 'centersDirectory', 'nav', 'afterend');
+          // After hero section, before center listings
+          const heroSelectors = [
+            'section.relative.min-h-\\[100vh\\]',
+            'section.bg-gray-800',
+            'section.text-center.bg-gray-800'
+          ];
+
+          for (const selector of heroSelectors) {
+            const hero = document.querySelector(selector);
+            if (hero) {
+              this.inject('olgam', 'centersDirectory', selector, 'afterend');
+              break;
+            }
+          }
         },
 
         nyState: () => {
