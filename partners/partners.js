@@ -322,6 +322,86 @@
               break;
             }
           }
+        },
+
+        manhattan: () => {
+          const heroSelectors = [
+            'section.relative.min-h-\\[50vh\\]',
+            'section.relative.min-h-\\[60vh\\]',
+            'section[class*="min-h"]'
+          ];
+
+          for (const selector of heroSelectors) {
+            const hero = document.querySelector(selector);
+            if (hero) {
+              this.inject('olgam', 'manhattan', selector, 'afterend');
+              break;
+            }
+          }
+        },
+
+        brooklyn: () => {
+          const heroSelectors = [
+            'section.relative.min-h-\\[50vh\\]',
+            'section.relative.min-h-\\[60vh\\]',
+            'section[class*="min-h"]'
+          ];
+
+          for (const selector of heroSelectors) {
+            const hero = document.querySelector(selector);
+            if (hero) {
+              this.inject('olgam', 'brooklyn', selector, 'afterend');
+              break;
+            }
+          }
+        },
+
+        queens: () => {
+          const heroSelectors = [
+            'section.relative.min-h-\\[50vh\\]',
+            'section.relative.min-h-\\[60vh\\]',
+            'section[class*="min-h"]'
+          ];
+
+          for (const selector of heroSelectors) {
+            const hero = document.querySelector(selector);
+            if (hero) {
+              this.inject('olgam', 'queens', selector, 'afterend');
+              break;
+            }
+          }
+        },
+
+        bronx: () => {
+          const heroSelectors = [
+            'section.relative.min-h-\\[50vh\\]',
+            'section.relative.min-h-\\[60vh\\]',
+            'section[class*="min-h"]'
+          ];
+
+          for (const selector of heroSelectors) {
+            const hero = document.querySelector(selector);
+            if (hero) {
+              this.inject('olgam', 'bronx', selector, 'afterend');
+              break;
+            }
+          }
+        },
+
+        statenIsland: () => {
+          const heroSelectors = [
+            'section.relative.min-h-\\[50vh\\]',
+            'section.relative.min-h-\\[60vh\\]',
+            'section[class*="min-h"]'
+          ];
+
+          for (const selector of heroSelectors) {
+            const hero = document.querySelector(selector);
+            if (hero) {
+              this.inject('olgam', 'statenIsland', selector, 'afterend');
+              break;
+            }
+          }
         }
       };
 

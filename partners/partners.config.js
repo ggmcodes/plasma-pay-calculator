@@ -94,6 +94,31 @@ window.PartnersConfig = {
           enabled: true,
           utmCampaign: 'edison-page',
           gaLabel: 'olgam_edison'
+        },
+        manhattan: {
+          enabled: true,
+          utmCampaign: 'manhattan-page',
+          gaLabel: 'olgam_manhattan'
+        },
+        brooklyn: {
+          enabled: true,
+          utmCampaign: 'brooklyn-page',
+          gaLabel: 'olgam_brooklyn'
+        },
+        queens: {
+          enabled: true,
+          utmCampaign: 'queens-page',
+          gaLabel: 'olgam_queens'
+        },
+        bronx: {
+          enabled: true,
+          utmCampaign: 'bronx-page',
+          gaLabel: 'olgam_bronx'
+        },
+        statenIsland: {
+          enabled: true,
+          utmCampaign: 'staten-island-page',
+          gaLabel: 'olgam_statenisland'
         }
       }
     }
