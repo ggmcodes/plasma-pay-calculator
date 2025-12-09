@@ -2255,7 +2255,7 @@ class PlasmaApp {
                             <div class="brand-logo">${brandInfo.logo}</div>
                             <div class="center-title-content">
                                 <h3 class="center-name">
-                                    <a href="/center/${center.id}/${this.slugify(center.name)}" style="color: inherit; text-decoration: none;">
+                                    <a href="/centers/" style="color: inherit; text-decoration: none;">
                                         ${center.name}
                                     </a>
                                 </h3>

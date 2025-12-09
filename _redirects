@@ -3048,3 +3048,49 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /blog/kedplasma-pay-chart-2025.html /blog/highest-paying-plasma-centers-2025.html 301
 /blog/kedplasma-pay-chart-2025 /blog/highest-paying-plasma-centers-2025.html 301
 
+# ===============================================
+# GSC 404 ERROR FIXES - December 2025
+# ===============================================
+
+# Blog post filename variations (missing "2025" suffix or different names)
+/blog/how-much-money-can-you-make-donating-plasma.html /blog/how-much-money-can-you-make-donating-plasma-2025.html 301
+/blog/how-much-money-can-you-make-donating-plasma /blog/how-much-money-can-you-make-donating-plasma-2025.html 301
+/blog/biolife-plasma-pay-chart-2025.html /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html 301
+/blog/biolife-plasma-pay-chart-2025 /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html 301
+
+# Non-existent blog posts - redirect to similar content
+/blog/plasma-donation-disqualifications-complete-list-2025.html /plasma-donation-requirements-2025.html 301
+/blog/plasma-donation-disqualifications-complete-list-2025/ /plasma-donation-requirements-2025.html 301
+/blog/plasma-donation-disqualifications-complete-list-2025 /plasma-donation-requirements-2025.html 301
+/blog/grifols-plasma-pay-calculator-2025.html /tools/octapharma-vs-grifols-calculator.html 301
+/blog/grifols-plasma-pay-calculator-2025/ /tools/octapharma-vs-grifols-calculator.html 301
+/blog/grifols-plasma-pay-calculator-2025 /tools/octapharma-vs-grifols-calculator.html 301
+
+# Blog post trailing slash and URL variations
+/blog/maximize-plasma-donation-earnings-2025/ /maximize-plasma-donation-earnings-guide.html 301
+/blog/maximize-plasma-donation-earnings-2025 /maximize-plasma-donation-earnings-guide.html 301
+/blog/plasma-donation-process-explained-2025 /blog/plasma-donation-process-step-by-step.html 301
+/blog/plasma-donation-process-explained-2025/ /blog/plasma-donation-process-step-by-step.html 301
+/blog/plasma-donation-side-effects-safety-2025 /plasma-donation-side-effects-safety-guide.html 301
+/blog/plasma-donation-side-effects-safety-2025/ /plasma-donation-side-effects-safety-guide.html 301
+/blog/best-plasma-centers-by-state-2025/ /states.html 301
+/blog/best-plasma-centers-by-state-2025 /states.html 301
+/blog/plasma-donation-myths-vs-facts-debunked-2025.html /blog/plasma-donation-myths-vs-facts-debunked-2025 301
+/blog/ab-blood-type-plasma-donation-rates.html /blog/ab-plasma-secret-income-revealed.html 301
+/blog/ab-blood-type-plasma-donation-rates /blog/ab-plasma-secret-income-revealed.html 301
+/blog/plasma-vs-blood-donation-guide-2025/ /blog/plasma-donation-blood-money-difference.html 301
+/blog/plasma-vs-blood-donation-guide-2025 /blog/plasma-donation-blood-money-difference.html 301
+/blog/plasma-donation-ssi-disability-impact-guide-2025/ /blog/plasma-donation-ssi-disability-impact-guide-2025.html 301
+/blog/kedplasma-pay-chart-2025/ /blog/highest-paying-plasma-centers-2025.html 301
+
+# Singular /center/ to plural /centers/ redirect (fix for app.js bug)
+/center/* /centers/ 301
+
+# Duplicate calculators path fix
+/calculators/calculators/texas/ /calculators/texas 301
+/calculators/calculators/* /calculators/:splat 301
+
+# Legacy state path redirects (if not already covered by existing rules)
+/state/iowa/iowa-city.html /calculators/iowa/iowa-city 301
+/state/iowa/iowa-city /calculators/iowa/iowa-city 301
+
