@@ -197,6 +197,41 @@
     <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/health/side-effects/" />
   </url>
 <url>
+    <loc>https://plasmapaycalculator.com/health/nutrition/</loc>
+    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/health/nutrition/" />
+  </url>
+<url>
+    <loc>https://plasmapaycalculator.com/health/screening/</loc>
+    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/health/screening/" />
+  </url>
+<url>
+    <loc>https://plasmapaycalculator.com/health/frequency/</loc>
+    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/health/frequency/" />
+  </url>
+<url>
+    <loc>https://plasmapaycalculator.com/health/requirements/</loc>
+    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/health/requirements/" />
+  </url>
+<url>
+    <loc>https://plasmapaycalculator.com/health/safety/</loc>
+    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/health/safety/" />
+  </url>
+<url>
     <loc>https://plasmapaycalculator.com/includes/topic-navigation/</loc>
     <lastmod>2025-07-22T15:36:58+00:00</lastmod>
     <priority>0.6</priority>
