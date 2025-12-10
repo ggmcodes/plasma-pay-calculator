@@ -1382,5 +1382,21 @@
 </div>
 <p class="text-gray-700 leading-relaxed mb-4">© 2025 California Plasma Tax Calculator. Professional tax advice recommended. Information for educational purposes only.</p>
 </footer>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
 </body>
 </html>

@@ -971,5 +971,21 @@
 <strong>Financial:</strong> Earnings shown are estimates based on publicly available information and may not reflect actual payments. Rates change frequently. Tax implications vary by jurisdiction. Consult a tax professional regarding income reporting requirements.
         </p>
 </div>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
 </body>
 </html>

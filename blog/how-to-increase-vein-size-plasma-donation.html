@@ -680,10 +680,9 @@
                 <li><a href="/#calculator">Calculator</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/states.html">States</a></li>
-                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
                 <li><a href="/health/">Health</a></li>
-                
                 <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
         </div>
@@ -692,10 +691,9 @@
                 <li><a href="/#calculator">Calculator</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/states.html">States</a></li>
-                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
                 <li><a href="/health/">Health</a></li>
-                
                 <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
             </ul>
         </div>
     </nav>
@@ -1143,5 +1141,21 @@
         </div>
         <p>&copy; 2025 Plasma Pay Calculator. Health information for educational purposes. Consult medical professionals for specific advice.</p>
     </footer>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
 </body>
 </html>
