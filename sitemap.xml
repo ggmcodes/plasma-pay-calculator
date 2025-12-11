@@ -274,6 +274,22 @@
     <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/centers/octapharma/" />
   </url>
 <url>
+    <loc>https://plasmapaycalculator.com/centers/olgam/</loc>
+    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/centers/olgam/" />
+    <html:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/centers/olgam/" />
+  </url>
+<url>
+    <loc>https://plasmapaycalculator.com/es/centers/olgam/</loc>
+    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <html:link rel="alternate" hreflang="en" href="https://plasmapaycalculator.com/centers/olgam/" />
+    <html:link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/centers/olgam/" />
+  </url>
+<url>
     <loc>https://plasmapaycalculator.com/metro/chicago-metro/</loc>
     <lastmod>2025-07-22T15:36:58+00:00</lastmod>
     <priority>0.6</priority>
