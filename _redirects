@@ -3094,3 +3094,32 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /state/iowa/iowa-city.html /calculators/iowa/iowa-city 301
 /state/iowa/iowa-city /calculators/iowa/iowa-city 301
 
+
+# Redirects for deleted Spanish blog pages (consolidated to English versions)
+/blog/biolife-vs-csl-plasma-comparacion.html /blog/biolife-vs-csl-plasma-comparison.html 301
+/blog/bonos-promociones-donacion-plasma.html /blog/plasma-donation-bonuses-promotions.html 301
+/blog/consejos-donacion-plasma-principiantes.html /blog/plasma-donation-tips-beginners.html 301
+/blog/cual-centro-plasma-paga-mas-dinero.html /blog/which-plasma-center-pays-most-money.html 301
+/blog/cuanto-dinero-puedes-ganar-donando-plasma.html /blog/how-much-money-can-you-make-donating-plasma-2025.html 301
+/blog/cuanto-pagan-por-donar-plasma.html /blog/cuanto-pagan-por-donar-plasma-guia-completa-2025.html 301
+/blog/ganar-1000-donando-plasma.html /blog/can-you-make-1000-month-donating-plasma.html 301
+/blog/guia-completa-donacion-plasma.html /blog/ultimate-plasma-donation-guide.html 301
+/blog/mejores-centros-plasma-california.html /blog/california-plasma-donation-los-angeles-san-diego.html 301
+/blog/mejores-horarios-donar-plasma.html /blog/best-times-donate-plasma.html 301
+/blog/requisitos-donacion-plasma.html /blog/plasma-donation-requirements.html 301
+
+# Redirects for deleted/renamed blog pages
+/blog/comprehensive-plasma-tax-guide-2025.html /blog/plasma-donation-tax-guide-2025.html 301
+/blog/highest-paying-plasma-centers-2025.html /blog/highest-paying-plasma-centers-near-me.html 301
+/blog/plasma-donation-requirements-2025.html /blog/plasma-donation-requirements.html 301
+/blog/plasma-donation-taxes-calculator.html /blog/plasma-tax-deduction-calculator-2025.html 301
+/blog/weight-requirements-maximum-pay-guide.html /blog/plasma-donation-weight-requirements.html 301
+/blog/emergency-money-plasma-donation-broke.html /blog/emergency-plasma-donation-cash-crisis-guide-2025.html 301
+/blog/lost-job-plasma-donation-survival-guide.html /blog/best-side-hustles-unemployed-2025.html 301
+/comprehensive-plasma-tax-guide-2025.html /blog/plasma-donation-tax-guide-2025.html 301
+
+# California stub page redirects
+/blog/california-tech-1099-forms.html /blog/do-you-get-1099-plasma-donation.html 301
+/blog/california-tech-entertainment-plasma-earnings.html /blog/california-plasma-donation-maximize-earnings.html 301
+/blog/california-tech-irs-plasma-tracking.html /blog/does-irs-track-plasma-donations.html 301
+/blog/california-tech-social-security-benefits.html /blog/do-plasma-centers-report-social-security.html 301
