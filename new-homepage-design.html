@@ -166,10 +166,10 @@ h1, h2, h3, h4 {
 }
 .color-swatch:hover { transform: scale(1.15); }
 .color-swatch.active { border-color: white; transform: scale(1.15); }
-.color-swatch.amber { background: #F59E0B; }
+.color-swatch.gold { background: #FBBF24; }
 .color-swatch.coral { background: #F43F5E; }
 .color-swatch.green { background: #22C55E; }
-.color-swatch.orange { background: #F97316; }
+.color-swatch.amber { background: #F59E0B; }
 
 .font-btn {
     padding: 0.5rem 1rem;
@@ -1511,10 +1511,10 @@ function toggleMobileMenu() {
 // Style picker functionality
 function setAccentColor(color) {
     const colors = {
-        amber: { main: '#F59E0B', light: '#FCD34D' },
+        gold: { main: '#FBBF24', light: '#FDE68A' },
         coral: { main: '#F43F5E', light: '#FB7185' },
         green: { main: '#22C55E', light: '#86EFAC' },
-        orange: { main: '#F97316', light: '#FDBA74' }
+        amber: { main: '#F59E0B', light: '#FCD34D' }
     };
 
     document.documentElement.style.setProperty('--gold', colors[color].main);
@@ -1553,10 +1553,10 @@ function setHeadlineFont(fontClass, fontFamily) {
 <div class="style-picker">
     <div class="picker-row">
         <span class="picker-label">Color</span>
-        <button class="color-swatch amber" onclick="setAccentColor('amber')" title="Amber"></button>
+        <button class="color-swatch gold" onclick="setAccentColor('gold')" title="Yellow Gold"></button>
         <button class="color-swatch coral active" onclick="setAccentColor('coral')" title="Coral"></button>
         <button class="color-swatch green" onclick="setAccentColor('green')" title="Green"></button>
-        <button class="color-swatch orange" onclick="setAccentColor('orange')" title="Orange"></button>
+        <button class="color-swatch amber" onclick="setAccentColor('amber')" title="Amber"></button>
     </div>
     <div class="picker-row">
         <span class="picker-label">Font</span>
