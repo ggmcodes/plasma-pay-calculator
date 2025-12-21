@@ -16,9 +16,9 @@
 :root {
     --deep-teal: #0D4F4F;
     --teal-light: #1A6B6B;
-    /* Brighter amber accent - user requested more vibrant */
-    --gold: #F59E0B;
-    --gold-light: #FCD34D;
+    /* Bright coral accent - user's choice */
+    --gold: #F43F5E;
+    --gold-light: #FB7185;
     --cream: #FFFBF5;
     --cream-dark: #FEF3E2;
     --charcoal: #1A1A1A;
@@ -42,8 +42,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lora', Georgia, serif;
-    font-weight: 600;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-weight: 700;
     line-height: 1.2;
 }
 
@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
 }
 
 .logo {
-    font-family: 'Lora', serif;
+    font-family: 'Libre Baskerville', serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
@@ -167,7 +167,7 @@ h1, h2, h3, h4 {
 .color-swatch:hover { transform: scale(1.15); }
 .color-swatch.active { border-color: white; transform: scale(1.15); }
 .color-swatch.amber { background: #F59E0B; }
-.color-swatch.coral { background: #FB7185; }
+.color-swatch.coral { background: #F43F5E; }
 .color-swatch.green { background: #22C55E; }
 .color-swatch.orange { background: #F97316; }
 
@@ -1512,7 +1512,7 @@ function toggleMobileMenu() {
 function setAccentColor(color) {
     const colors = {
         amber: { main: '#F59E0B', light: '#FCD34D' },
-        coral: { main: '#FB7185', light: '#FDA4AF' },
+        coral: { main: '#F43F5E', light: '#FB7185' },
         green: { main: '#22C55E', light: '#86EFAC' },
         orange: { main: '#F97316', light: '#FDBA74' }
     };
@@ -1553,16 +1553,16 @@ function setHeadlineFont(fontClass, fontFamily) {
 <div class="style-picker">
     <div class="picker-row">
         <span class="picker-label">Color</span>
-        <button class="color-swatch amber active" onclick="setAccentColor('amber')" title="Amber"></button>
-        <button class="color-swatch coral" onclick="setAccentColor('coral')" title="Coral"></button>
+        <button class="color-swatch amber" onclick="setAccentColor('amber')" title="Amber"></button>
+        <button class="color-swatch coral active" onclick="setAccentColor('coral')" title="Coral"></button>
         <button class="color-swatch green" onclick="setAccentColor('green')" title="Green"></button>
         <button class="color-swatch orange" onclick="setAccentColor('orange')" title="Orange"></button>
     </div>
     <div class="picker-row">
         <span class="picker-label">Font</span>
-        <button class="font-btn lora active" onclick="setHeadlineFont('lora')">Lora</button>
+        <button class="font-btn lora" onclick="setHeadlineFont('lora')">Lora</button>
         <button class="font-btn playfair" onclick="setHeadlineFont('playfair')">Playfair</button>
-        <button class="font-btn libre" onclick="setHeadlineFont('libre')">Libre</button>
+        <button class="font-btn libre active" onclick="setHeadlineFont('libre')">Libre</button>
         <button class="font-btn merriweather" onclick="setHeadlineFont('merriweather')">Merriweather</button>
     </div>
 </div>
