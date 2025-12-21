@@ -9,1815 +9,578 @@
       gtag('js', new Date());
       gtag('config', 'G-053DRWEQLS');
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Plasma Centers Near You | 2,500+ Locations | Plasma Pay Calculator</title>
-    <meta name="description" content="Find plasma donation centers near you. Compare pay rates at 2,500+ locations nationwide. Real-time search, ratings, hours, and bonus information. Updated 2025.">
-    <meta name="keywords" content="plasma centers near me, plasma donation centers, plasma pay rates, BioLife, CSL Plasma, Grifols, plasma center finder, plasma donation locations, highest paying plasma centers">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Plasma Pay Calculator">
-    <meta name="theme-color" content="#FFB81C">
-    
+    <meta name="description" content="Find plasma donation centers near you. Compare pay rates at 2,500+ locations nationwide. Real-time search, ratings, hours, and bonus information.">
+    <meta name="theme-color" content="#0D4F4F">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/favicon.ico">
-    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Find Plasma Centers Near You | Plasma Pay Calculator">
-    <meta property="og:description" content="Search 2,500+ plasma centers nationwide. Compare pay rates, hours, and bonuses. Free plasma center finder.">
+    <meta property="og:description" content="Search 2,500+ plasma centers nationwide. Compare pay rates, hours, and bonuses.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://plasmapaycalculator.com/centers/">
-    <meta property="og:image" content="https://plasmapaycalculator.com/images/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Plasma Pay Calculator">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Plasma Pay Calculator [2025] — Find Highest Paying Centers Near You">
-    <meta name="twitter:description" content="Compare 1,294+ plasma centers nationwide. Find the best pay rates, hours, and bonuses.">
-    <meta name="twitter:image" content="/images/og-image.jpg">
-    
-    <!-- Additional SEO -->
-    <meta name="geo.region" content="US">
-    <meta name="geo.placename" content="United States">
-    
-    <!-- Schema.org Structured Data -->
+
+    <!-- Schema.org -->
     <script type="application/ld+json">
-    [
-      {
+    {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Plasma Pay Calculator",
+        "name": "Plasma Center Finder",
         "applicationCategory": "HealthApplication",
-        "operatingSystem": "Web",
-        "url": "https://plasmapaycalculator.com",
-        "description": "Find the best plasma donation centers near you with pay rates and reviews",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.3",
-          "reviewCount": "47293",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Plasma Pay Calculator"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Plasma Pay Calculator",
-        "url": "https://plasmapaycalculator.com",
-        "logo": "/images/ppc-logo.png",
-        "sameAs": [
-          "https://twitter.com/plasmapaycalc",
-          "https://www.facebook.com/plasmapaycalc"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "hello@plasmapaycalculator.com",
-          "contactType": "customer service"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Dataset",
-        "name": "Plasma Centers Database",
-        "description": "Comprehensive database of 1,294+ plasma donation centers across the United States",
-        "keywords": "plasma centers, plasma donation, pay rates, locations",
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "creator": {
-          "@type": "Organization",
-          "name": "Plasma Pay Calculator"
-        },
-        "distribution": {
-          "@type": "DataDownload",
-          "encodingFormat": "application/json",
-          "contentUrl": "/.netlify/functions/api/centers"
-        }
-      }
-    ]
+        "url": "https://plasmapaycalculator.com/centers/",
+        "description": "Find the best plasma donation centers near you"
+    }
     </script>
-    
-    <!-- PERFORMANCE OPTIMIZATION: Preload critical resources -->
-    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto:wght@400&display=swap" crossorigin>
-    <!-- PERFORMANCE OPTIMIZATION: Preload hero images based on screen size -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80&fm=webp" media="(max-width: 768px)">
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&fm=webp" media="(min-width: 769px)">
-    
-    <!-- PERFORMANCE OPTIMIZATION: Minified critical inline CSS for above-the-fold content -->
+
+    <!-- Fonts & Theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css">
+    <!-- Card styles from original -->
+    <link rel="stylesheet" href="styles.css">
+
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
+        /* Centers Page Specific Styles */
+        .centers-hero {
+            background: linear-gradient(135deg, var(--deep-teal) 0%, var(--teal-light) 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
+        .centers-hero::before {
+            content: '';
+            position: absolute;
             top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
         }
 
-        .nav-container {
-            max-width: 1400px;
+        .centers-hero h1 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .centers-hero .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .search-box {
+            max-width: 600px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        .search-wrapper {
+            display: flex;
+            gap: 0.5rem;
+            background: var(--white);
+            padding: 0.5rem;
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .search-wrapper input {
+            flex: 1;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            font-family: 'Outfit', sans-serif;
+            background: transparent;
+            outline: none;
+        }
+
+        .search-wrapper input::placeholder {
+            color: var(--gray-light);
+        }
+
+        .search-wrapper button {
+            background: var(--gold);
+            color: var(--charcoal);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-wrapper button:hover {
+            background: var(--gold-light);
+            transform: scale(1.02);
+        }
+
+        .geo-btn {
+            background: transparent !important;
+            color: var(--deep-teal) !important;
+            padding: 1rem !important;
+        }
+
+        .geo-btn:hover {
+            background: var(--cream) !important;
+        }
+
+        .search-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .stat-label {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+
+        /* Filters Section */
+        .filters-section {
+            background: var(--white);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .filters-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .filter-label {
+            font-weight: 500;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .filter-select {
+            padding: 0.5rem 1rem;
+            border: 2px solid #E5E5E5;
+            border-radius: var(--radius-md);
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            background: var(--white);
+            cursor: pointer;
+            transition: border-color var(--transition-fast);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--deep-teal);
+        }
+
+        .filter-chips {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-chip {
+            padding: 0.5rem 1rem;
+            border: 2px solid #E5E5E5;
+            border-radius: var(--radius-full);
+            background: var(--white);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .filter-chip:hover,
+        .filter-chip.active {
+            border-color: var(--deep-teal);
+            background: var(--deep-teal);
+            color: var(--white);
+        }
+
+        #clear-filters {
+            color: var(--gray);
+            background: none;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        #clear-filters:hover {
+            color: var(--deep-teal);
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 3rem 2rem;
+            background: var(--cream);
+            min-height: 60vh;
+        }
+
+        .results-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .results-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #27ae60;
-            text-decoration: none;
+        .results-count {
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+
+        .results-count strong {
+            color: var(--charcoal);
+        }
+
+        /* Results container */
+        #centers-container {
             display: flex;
-            align-items: center;
-            gap: 0.6rem;
+            flex-direction: column;
+            gap: 1rem;
         }
 
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 12px;
-            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
         }
 
-        .trust-badge {
-            background: rgba(39, 174, 96, 0.1);
-            color: #27ae60;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 500;
-            margin-left: 0.8rem;
-            white-space: nowrap;
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--cream-dark);
+            border-top-color: var(--deep-teal);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.2rem;
-            align-items: center;
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: all 0.3s;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-        
-        .centers-highlight {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
-            color: white !important;
-            border-radius: 6px !important;
-            font-weight: 700 !important;
-            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3) !important;
-            transform: scale(1.05);
-        }
-        
-        .centers-highlight:hover {
-            background: linear-gradient(135deg, #219a52 0%, #26be5f 100%) !important;
-            color: white !important;
-            transform: scale(1.08);
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #27ae60;
-            background: rgba(39, 174, 96, 0.1);
+        .no-results h3 {
+            margin-bottom: 1rem;
         }
 
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #2c3e50;
-            font-size: 24px;
-            cursor: pointer;
+        .no-results p {
+            color: var(--gray);
         }
 
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 80px;
+        /* Autocomplete */
+        #autocomplete-container {
+            position: absolute;
+            top: 100%;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
-            z-index: 999;
-            padding: 1rem;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .mobile-menu li {
-            margin: 0.5rem 0;
-        }
-
-        .mobile-menu a {
-            display: block;
-            padding: 1rem;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .mobile-menu a:hover,
-        .mobile-menu a.active {
-            color: #27ae60;
-            background: rgba(39, 174, 96, 0.1);
-        }
-
-        @media (max-width: 968px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .trust-badge {
-                font-size: 0.6rem;
-                padding: 0.15rem 0.4rem;
-            }
-            
-            .logo {
-                font-size: 1rem;
-            }
-            
-            .logo-icon {
-                width: 28px;
-                height: 28px;
-                font-size: 11px;
-            }
-        }
-
-/* PERFORMANCE OPTIMIZATION: Minified CSS for critical rendering path */
-    *{margin:0;padding:0;box-sizing:border-box}h1{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:600;line-height:1.3}header{background:#FFF;color:#1F2937;padding:.625rem 0;box-shadow:0 1px 3px rgba(0,0,0,.1);position:relative;z-index:1000;border-bottom:1px solid #E5E7EB}.header-content{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}.logo a{display:flex;align-items:center;gap:.375rem;text-decoration:none;color:inherit}.hero{position:relative;min-height:500px;display:flex;align-items:center;overflow:hidden;text-align:center;background-color:#1F2937;padding:3rem 0;margin-bottom:2rem}.hero-background{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}.hero-image{width:100%;height:100%;object-fit:cover;object-position:center}.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(255,184,28,.3) 0%,rgba(0,50,98,.5) 100%);z-index:2}.hero-content{position:relative;z-index:3;max-width:800px;margin:0 auto;padding:2rem 20px;color:white;width:100%}#hero-headline{font-size:2.25rem;margin-bottom:1rem;margin-top:2rem;color:white;font-weight:600;line-height:1.2;text-shadow:1px 1px 3px rgba(0,0,0,.8);font-family:'Inter',sans-serif}.hero-subtitle{font-size:1.125rem;color:rgba(255,255,255,.9);margin-bottom:1.5rem;font-weight:400;text-shadow:1px 1px 2px rgba(0,0,0,.7)}.search-container{max-width:600px;margin:0 auto;padding:0 1rem}.search-input-group{display:flex;gap:1rem;margin-bottom:1rem}.button-group{display:flex;gap:1rem}.mobile-nav-toggle{display:none}.hamburger-line{display:none}@media (max-width:768px){header{padding:1rem 0}.header-content{padding:0 1rem}.logo-text{font-size:1rem}.mobile-nav-toggle{display:block!important;background:none;border:none;cursor:pointer;padding:.5rem;z-index:1001}.hamburger-line{display:block!important;width:25px!important;height:3px!important;background-color:#1F2937!important;margin:5px 0!important;transition:.3s!important;transform-origin:center!important}.hero{min-height:400px;padding:5rem 1rem 4rem;margin-bottom:3rem;overflow:visible}#hero-headline{font-size:1.75rem;margin-top:1rem;margin-bottom:1rem;line-height:1.3}.hero-subtitle{font-size:1.125rem;margin-bottom:2rem}.hero-content{padding:2rem 1rem;margin-top:1rem;max-width:100%}.search-container{margin-top:1rem;padding:0;max-width:100%}.search-input-group{flex-direction:column;gap:1rem;margin-bottom:3rem}.button-group{flex-direction:column;gap:1rem}}@media (min-width:769px){.mobile-nav-toggle{display:none}}
-</style>
-    
-    <!-- PERFORMANCE OPTIMIZATION: Defer Google Analytics to improve page load -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-053DRWEQLS"></script>
-    <script>
-      /* PERFORMANCE OPTIMIZATION: Minified Analytics code */
-      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-053DRWEQLS',{send_page_view:!0,allow_google_signals:!0,allow_ad_personalization_signals:!0,page_title:document.title,page_location:window.location.href,content_group1:'Plasma Centers Directory',custom_map:{custom_parameter_1:'search_query',custom_parameter_2:'location_searched'}});gtag('config','G-053DRWEQLS',{enhanced_conversions:!0});function trackSearch(e,t){gtag('event','search',{search_term:e,location:t,event_category:'User Interaction',event_label:'Plasma Center Search',value:1})}function trackCenterView(e,t){gtag('event','view_item',{item_id:e,item_name:e,item_category:t,event_category:'Center Interaction',event_label:'Center Card Expanded',value:2})}function trackPhoneClick(e){gtag('event','generate_lead',{currency:'USD',value:5,center_name:e,event_category:'Conversion',event_label:'Phone Click'})}function trackDirectionsClick(e){gtag('event','view_promotion',{promotion_id:e,promotion_name:'Directions Request',event_category:'User Engagement',event_label:'Directions Click',value:3})}function trackCalculatorClick(){gtag('event','select_promotion',{promotion_id:'pay_calculator',promotion_name:'Pay Calculator CTA',event_category:'External Link',event_label:'Calculator Click',value:4})}let scrollTracked=!1;window.addEventListener('scroll',function(){!scrollTracked&&window.scrollY>document.body.scrollHeight*.5&&(gtag('event','scroll',{event_category:'User Engagement',event_label:'50% Page Scroll',value:1}),scrollTracked=!0)});
-    </script>
-    
-    <!-- PERFORMANCE OPTIMIZATION: Async AdSense loading -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
-    
-    <!-- PERFORMANCE OPTIMIZATION: Defer Tailwind CSS loading -->
-    <script defer src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- PERFORMANCE OPTIMIZATION: Defer non-critical CSS and JS -->
-    <link rel="preload" href="./styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="./styles.css"></noscript>
-    
-    <link rel="canonical" href="/centers/">
-
-    <style>
-    /* Navigation Styles */
-    nav {
-        background: #FFF;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 80px;
-    }
-    
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        text-decoration: none;
-        color: #1F2937;
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
-    
-    .logo-icon {
-        background: linear-gradient(135deg, #27ae60, #2ecc71);
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 0.9rem;
-    }
-    
-    .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .nav-links a {
-        text-decoration: none;
-        color: #374151;
-        font-weight: 500;
-        transition: color 0.3s;
-    }
-        
-        .centers-highlight {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
-            color: white !important;
-            border-radius: 6px !important;
-            font-weight: 700 !important;
-            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3) !important;
-            transform: scale(1.05);
-        }
-        
-        .centers-highlight:hover {
-            background: linear-gradient(135deg, #219a52 0%, #26be5f 100%) !important;
-            color: white !important;
-            transform: scale(1.08);
-        }
-    
-    .nav-links a:hover {
-        color: #27ae60;
-    }
-    
-    .cta-btn {
-        background: linear-gradient(135deg, #27ae60, #2ecc71) !important;
-        color: white !important;
-        padding: 0.75rem 1.5rem !important;
-        border-radius: 8px !important;
-        font-weight: 600 !important;
-        transition: transform 0.3s !important;
-    }
-    
-    .cta-btn:hover {
-        transform: translateY(-2px) !important;
-        color: white !important;
-    }
-    
-    .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #374151;
-    }
-    
-    .mobile-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        border-top: 1px solid #E5E7EB;
-    }
-    
-    .mobile-menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 1rem 0;
-    }
-    
-    .mobile-menu li {
-        padding: 0;
-    }
-    
-    .mobile-menu a {
-        display: block;
-        padding: 1rem 2rem;
-        color: #374151;
-        text-decoration: none;
-        border-bottom: 1px solid #F3F4F6;
-    }
-    
-    .mobile-menu a:hover {
-        background: #F9FAFB;
-        color: #27ae60;
-    }
-    
-    @media (max-width: 768px) {
-        .nav-links {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            margin-top: 0.5rem;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 100;
             display: none;
         }
-        
-        .mobile-menu-btn {
-            display: block;
-        }
-        
-        .logo-text {
-            display: none;
-        }
-    }
-    </style>
-    <style>
-    @media (max-width: 768px) {
-        }
-    </style>
 
-<!-- Plasma Pay Rebrand 2025 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/theme.css">
+        .autocomplete-item {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            transition: background var(--transition-fast);
+        }
+
+        .autocomplete-item:hover {
+            background: var(--cream);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .centers-hero {
+                padding: 7rem 1.5rem 3rem;
+            }
+
+            .centers-hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-wrapper {
+                flex-direction: column;
+                border-radius: var(--radius-lg);
+            }
+
+            .search-wrapper button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-stats {
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .filters-section {
+                padding: 1rem;
+            }
+
+            .filters-inner {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .filter-select {
+                flex: 1;
+            }
+        }
+    </style>
 </head>
-<body class="plasma-rebrand">
+<body>
     <!-- Navigation -->
-    <!-- Navigation -->
-<nav class="nav" id="mainNav">
-    <div class="nav-inner">
-        <a href="/" class="logo">
-            <span class="logo-mark">$</span>
-            Plasma Pay
-        </a>
-        <ul class="nav-links">
-            <li><a href="/">Calculator</a></li>
-            <li><a href="/centers/">Find Centers</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/centers/" class="nav-cta">Find Centers Near Me</a></li>
-        </ul>
-        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 12h18M3 6h18M3 18h18"/>
-            </svg>
-        </button>
-    </div>
-</nav>
-
-<script>
-// Nav scroll effect
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('mainNav');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});
-
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
-</script>
-
-
-    <!-- Navigation -->
-    
-
-    <!-- Navigation -->
-    
-
-    <!-- Navigation -->
-    
-
-    <!-- Navigation -->
-    
-
-    <!-- Navigation -->
-    
-
-    
-
-
-    <!-- Navigation -->
-    
-
-    <!-- PERFORMANCE OPTIMIZATION: Removed unnecessary div wrapper -->
-    <section class="relative min-h-[100vh] md:min-h-[500px] flex items-center overflow-hidden text-center bg-gray-800 py-12 mb-8">
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-10">
-            <picture class="block w-full h-full">
-                <source media="(max-width: 768px)" 
-                        srcset="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80&fm=webp" 
-                        type="image/webp"
-                        width="768"
-                        height="400">
-                <source media="(min-width: 769px)" 
-                        srcset="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&fm=webp" 
-                        type="image/webp"
-                        width="1200"
-                        height="600">
-                <!-- PERFORMANCE OPTIMIZATION: Added loading="eager" for above-the-fold hero image -->
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&fm=webp" 
-                     alt="Professional nurses working in modern medical facility" 
-                     class="w-full h-full object-cover object-center min-h-full"
-                     loading="eager"
-                     width="1200"
-                     height="600"
-                     decoding="async">
-            </picture>
-            <!-- Overlay -->
-            
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="/" class="logo">
+                <span class="logo-mark">$</span>
+                Plasma Pay
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/centers/">Find Centers</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/centers/" class="nav-cta">Find Centers Near Me</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
         </div>
-        
-        <!-- Content -->
-        <div class="relative z-30 max-w-4xl mx-auto px-4 md:px-8 w-full">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 mt-8 leading-tight drop-shadow-lg">
-                Earn up to $1,766 This Month Donating Plasma Near You
-            </h1>
-            <div class="last-updated" style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 0.5rem;">
-                Last Updated: January 2025
-            </div>
-            <p class="text-lg md:text-xl text-white/90 mb-6 md:mb-8 font-medium drop-shadow-sm">
-                Find the highest-paying plasma centers in your area
-            </p>
-            
-            <!-- Search Container -->
-            <div class="max-w-2xl mx-auto px-4">
-                <label for="location-search" class="block text-lg font-semibold text-red-500 mb-2 text-left">
-                    Enter your City or Zip Code
-                </label>
-                <div class="flex flex-col gap-4 mb-12">
-                    <input type="text" 
-                           id="location-search" 
-                           class="w-full px-4 py-3 md:py-4 text-base md:text-lg border-2 border-gray-200 rounded-lg bg-white shadow-lg transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none" 
-                           placeholder="Enter your City or Zip Code" 
-                           autocomplete="off">
-                    
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <button id="geolocation-btn" 
-                                class="w-full md:w-auto px-6 py-3 md:py-4 text-base md:text-lg font-semibold bg-white/20 border-2 border-white/40 text-white rounded-lg hover:bg-white/30 transition-all min-h-[48px] backdrop-blur-sm" 
-                                title="Use my current location">
-                            📍 Use My Location
-                        </button>
-                        <button id="search-btn" 
-                                class="w-full md:w-auto px-6 py-3 md:py-4 text-base md:text-lg font-semibold bg-red-500 border-2 border-red-500 text-white rounded-lg hover:bg-red-600 hover:border-red-600 transition-all min-h-[48px] shadow-lg">
-                            Search This Area
-                        </button>
-                    </div>
-                </div>
+    </nav>
 
-            </div>
-        </div>
-    </section>
+    <!-- Hero Section -->
+    <section class="centers-hero">
+        <h1>Find Plasma Centers Near You</h1>
+        <p class="subtitle">Compare pay rates at 2,500+ locations nationwide</p>
 
-    <!-- Ezoic Ad Placement 1 - After Hero Section -->
-    <div id="ezoic-pub-ad-placeholder-101"></div>
-    <script>
-        ezstandalone.cmd.push(function () {
-            ezstandalone.showAds(101);
-        });
-    </script>
-
-    <section class="featured-listings">
-        <div class="featured-listings-container">
-            <!-- Featured Listings Heading -->
-            <h2 class="featured-title">Featured Listings</h2>
-            
-            <!-- Filter Bar -->
-            <div class="filter-bar">
-                <button class="filters-sort-btn" id="filters-toggle">
-                    Filters & Sort
-                    <span class="dropdown-arrow">▼</span>
+        <div class="search-box">
+            <div class="search-wrapper">
+                <button id="geolocation-btn" class="geo-btn" title="Use my location">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+                    </svg>
+                </button>
+                <input type="text" id="location-search" placeholder="Enter city or zip code..." autocomplete="off">
+                <button id="search-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    Search
                 </button>
             </div>
-            
-            <div class="main-content" id="main-content">
+            <div id="autocomplete-container"></div>
+        </div>
 
-        <main class="results-section">
-
-            <!-- Combined Filters Dropdown -->
-            <!-- PERFORMANCE OPTIMIZATION: Removed unnecessary nested div wrapper -->
-            <div class="filters-dropdown" id="filters-dropdown" style="display: none;">
-                <div class="filters-header">
-                    <h3>Filters & Sort</h3>
-                    <button class="clear-filters-btn" id="clear-filters">✕</button>
-                </div>
-                
-                <!-- Sort Section -->
-                <div class="sort-section">
-                    <div class="filter-group">
-                        <label class="filter-group-label">📋 Sort By</label>
-                        <select class="filter-select" id="sort-select">
-                            <option value="rating">Highest Rated</option>
-                            <option value="distance">Distance</option>
-                            <option value="reviews">Most Reviews</option>
-                            <option value="name">Name A-Z</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="filters-grid">
-                    <!-- Distance Filter -->
-                    <div class="filter-group">
-                        <label class="filter-group-label">📏 Distance</label>
-                        <select class="filter-select" id="distance-filter">
-                            <option value="5">Within 5 miles</option>
-                            <option value="10">Within 10 miles</option>
-                            <option value="25">Within 25 miles</option>
-                            <option value="50" selected>Within 50 miles</option>
-                            <option value="100">Within 100 miles</option>
-                        </select>
-                    </div>
-
-                    <!-- Center Type Filter -->
-                    <div class="filter-group">
-                        <label class="filter-group-label">🏢 Center Type</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="biolife" value="BioLife">
-                                <span>BioLife Plasma</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="csl" value="CSL">
-                                <span>CSL Plasma</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="grifols" value="Grifols">
-                                <span>Grifols</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="octapharma" value="Octapharma">
-                                <span>Octapharma</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="kedplasma" value="KEDPLASMA">
-                                <span>KEDPLASMA</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="independent" value="Independent">
-                                <span>Other/Independent Centers</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Rating Filter -->
-                    <div class="filter-group">
-                        <label class="filter-group-label">⭐ Rating</label>
-                        <select class="filter-select" id="rating-filter">
-                            <option value="0">Any Rating</option>
-                            <option value="3">3+ Stars</option>
-                            <option value="4">4+ Stars</option>
-                            <option value="4.5">4.5+ Stars</option>
-                        </select>
-                    </div>
-
-                    <!-- Bonus Filter -->
-                    <div class="filter-group">
-                        <label class="filter-group-label">🎁 Bonus Offers</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="new-donor-bonus" value="new-donor-bonus">
-                                <span>New Donor Bonus</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="high-bonus" value="high-bonus">
-                                <span>$500+ New Donor Bonus</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="return-bonus" value="return-bonus">
-                                <span>Return Donor Incentives</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="referral-bonus" value="referral-bonus">
-                                <span>Referral Bonuses</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Pay Range Filter -->
-                    <div class="filter-group">
-                        <label class="filter-group-label">💰 Pay Range</label>
-                        <select class="filter-select" id="pay-range-filter">
-                            <option value="0">Any Pay Range</option>
-                            <option value="40">$40+ per donation</option>
-                            <option value="50">$50+ per donation</option>
-                            <option value="75">$75+ per donation</option>
-                            <option value="100">$100+ per donation</option>
-                        </select>
-                    </div>
-
-                    <!-- Amenities Filter -->
-                    <div class="filter-group">
-                        <label class="filter-group-label">🏗️ Amenities</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="free-wifi" value="free-wifi">
-                                <span>Free WiFi</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="free-parking" value="free-parking">
-                                <span>Free Parking</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="wheelchair-access" value="wheelchair-access">
-                                <span>Wheelchair Accessible</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="mobile-checkin" value="mobile-checkin">
-                                <span>Mobile Check-in</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="entertainment" value="entertainment">
-                                <span>Entertainment (TV/Movies)</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="snacks" value="snacks">
-                                <span>Snacks & Refreshments</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Special Features Filter -->
-                    <div class="filter-group">
-                        <label class="filter-group-label">⚡ Special Features</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="student-friendly" value="student-friendly">
-                                <span>Student Friendly</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="quick-process" value="quick-process">
-                                <span>Quick Processing</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="extended-hours" value="extended-hours">
-                                <span>Extended Hours</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="weekend-hours" value="weekend-hours">
-                                <span>Weekend Hours</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" id="multilingual" value="multilingual">
-                                <span>Multilingual Staff</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="filter-actions">
-                    <button class="apply-filters-btn" id="apply-filters">Apply Filters</button>
-                    <button class="close-filters-btn" id="close-filters">Close</button>
-                </div>
+        <div class="search-stats">
+            <div class="stat-item">
+                <div class="stat-number" id="stat-centers">2,500+</div>
+                <div class="stat-label">Centers</div>
             </div>
-
-            <div id="centers-container" class="centers-container">
-                <!-- CSL Plasma Centers -->
-                <article class="plasma-center-card premium-card">
-                    <div class="premium-banner">
-                        <span class="premium-icon">⭐</span>
-                        <span class="premium-text">FEATURED</span>
-                        <span class="premium-icon">⭐</span>
-                    </div>
-
-                    <section class="card-details" id="card-csl-details" style="display: none;">
-                        <div class="details-content">
-                            <div class="details-grid priority-info">
-                                <div class="detail-item">
-                                    <span class="detail-label">🕒 Hours</span>
-                                    <span class="detail-value">Mon-Fri 6AM-7PM, Sat-Sun 8AM-4PM</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">📍 Address</span>
-                                    <span class="detail-value">123 Main St, Los Angeles, CA 90012</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">🎯 Amenities</span>
-                                    <span class="detail-value">Mobile Check-in, Free Parking, Free WiFi</span>
-                                </div>
-                            </div>
-                            
-                            <div class="action-buttons bottom-actions">
-                                <a href="tel:+12135551234" class="action-btn primary-btn" onclick="event.stopPropagation(); trackPhoneClick('CSL Plasma Downtown LA');">
-                                    ☎️ (213) 555-1234
-                                </a>
-                                <a href="https://maps.google.com/?q=123+Main+St+Los+Angeles+CA+90012" target="_blank" class="action-btn secondary-btn" onclick="event.stopPropagation(); trackDirectionsClick('CSL Plasma Downtown LA');">
-                                    🧭 Directions
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <button class="card-toggle" onclick="window.plasmaApp.toggleCardDetails(event)" aria-expanded="false">
-                        ▼ Show Details
-                    </button>
-                </article>
-
-                <!-- BioLife Plasma -->
-                <article class="plasma-center-card">
-
-                    <section class="card-details" id="card-biolife-details" style="display: none;">
-                        <div class="details-content">
-                            <div class="details-grid priority-info">
-                                <div class="detail-item">
-                                    <span class="detail-label">🕒 Hours</span>
-                                    <span class="detail-value">Mon-Fri 7AM-8PM, Sat-Sun 8AM-5PM</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">📍 Address</span>
-                                    <span class="detail-value">456 Broadway, New York, NY 10013</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">🎯 Amenities</span>
-                                    <span class="detail-value">Subway Access, App Scheduling, Instant Pay Card</span>
-                                </div>
-                            </div>
-                            
-                            <div class="action-buttons bottom-actions">
-                                <a href="tel:+12125552345" class="action-btn primary-btn" onclick="event.stopPropagation(); trackPhoneClick('BioLife Manhattan');">
-                                    ☎️ (212) 555-2345
-                                </a>
-                                <a href="https://maps.google.com/?q=456+Broadway+New+York+NY+10013" target="_blank" class="action-btn secondary-btn" onclick="event.stopPropagation(); trackDirectionsClick('BioLife Manhattan');">
-                                    🧭 Directions
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <button class="card-toggle" onclick="window.plasmaApp.toggleCardDetails(event)" aria-expanded="false">
-                        ▼ Show Details
-                    </button>
-                </article>
-
-                <!-- Octapharma Plasma -->
-                <article class="plasma-center-card">
-
-                    <section class="card-details" id="card-octapharma-details" style="display: none;">
-                        <div class="details-content">
-                            <div class="details-grid priority-info">
-                                <div class="detail-item">
-                                    <span class="detail-label">🕒 Hours</span>
-                                    <span class="detail-value">Mon-Fri 6AM-8PM, Sat 7AM-4PM, Sun 8AM-3PM</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">📍 Address</span>
-                                    <span class="detail-value">789 Michigan Ave, Chicago, IL 60611</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">🎯 Amenities</span>
-                                    <span class="detail-value">Fast Processing, Free Parking, Entertainment</span>
-                                </div>
-                            </div>
-                            
-                            <div class="action-buttons bottom-actions">
-                                <a href="tel:+13125553456" class="action-btn primary-btn" onclick="event.stopPropagation(); trackPhoneClick('Octapharma Chicago');">
-                                    ☎️ (312) 555-3456
-                                </a>
-                                <a href="https://maps.google.com/?q=789+Michigan+Ave+Chicago+IL+60611" target="_blank" class="action-btn secondary-btn" onclick="event.stopPropagation(); trackDirectionsClick('Octapharma Chicago');">
-                                    🧭 Directions
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <button class="card-toggle" onclick="window.plasmaApp.toggleCardDetails(event)" aria-expanded="false">
-                        ▼ Show Details
-                    </button>
-                </article>
-
-                <!-- Grifols Biomat -->
-                <article class="plasma-center-card">
-
-                    <section class="card-details" id="card-grifols-details" style="display: none;">
-                        <div class="details-content">
-                            <div class="details-grid priority-info">
-                                <div class="detail-item">
-                                    <span class="detail-label">🕒 Hours</span>
-                                    <span class="detail-value">Mon-Fri 6AM-7PM, Sat-Sun 7AM-5PM</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">📍 Address</span>
-                                    <span class="detail-value">1010 Fannin St, Houston, TX 77002</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">🎯 Amenities</span>
-                                    <span class="detail-value">Medical District, Valet Parking, Free WiFi</span>
-                                </div>
-                            </div>
-                            
-                            <div class="action-buttons bottom-actions">
-                                <a href="tel:+17135554567" class="action-btn primary-btn" onclick="event.stopPropagation(); trackPhoneClick('Grifols Houston');">
-                                    ☎️ (713) 555-4567
-                                </a>
-                                <a href="https://maps.google.com/?q=1010+Fannin+St+Houston+TX+77002" target="_blank" class="action-btn secondary-btn" onclick="event.stopPropagation(); trackDirectionsClick('Grifols Houston');">
-                                    🧭 Directions
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <button class="card-toggle" onclick="window.plasmaApp.toggleCardDetails(event)" aria-expanded="false">
-                        ▼ Show Details
-                    </button>
-                </article>
-
-                <!-- KEDPLASMA -->
-                <article class="plasma-center-card">
-
-                    <section class="card-details" id="card-kedplasma-details" style="display: none;">
-                        <div class="details-content">
-                            <div class="details-grid priority-info">
-                                <div class="detail-item">
-                                    <span class="detail-label">🕒 Hours</span>
-                                    <span class="detail-value">Mon-Fri 7AM-7PM, Sat 8AM-4PM, Sun Closed</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">📍 Address</span>
-                                    <span class="detail-value">2020 University Dr, Phoenix, AZ 85004</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">🎯 Amenities</span>
-                                    <span class="detail-value">Student Discounts, Free Parking, Mobile App</span>
-                                </div>
-                            </div>
-                            
-                            <div class="action-buttons bottom-actions">
-                                <a href="tel:+16025555678" class="action-btn primary-btn" onclick="event.stopPropagation(); trackPhoneClick('KEDPLASMA Phoenix');">
-                                    ☎️ (602) 555-5678
-                                </a>
-                                <a href="https://maps.google.com/?q=2020+University+Dr+Phoenix+AZ+85004" target="_blank" class="action-btn secondary-btn" onclick="event.stopPropagation(); trackDirectionsClick('KEDPLASMA Phoenix');">
-                                    🧭 Directions
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <button class="card-toggle" onclick="window.plasmaApp.toggleCardDetails(event)" aria-expanded="false">
-                        ▼ Show Details
-                    </button>
-                </article>
-
-                <!-- Load More Message -->
-                <div class="load-more-info">
-                    <p>Showing top featured plasma centers. <a href="#" id="search-all-centers">Search for centers in your area</a> to see personalized results.</p>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number" id="stat-states">50</div>
+                <div class="stat-label">States</div>
             </div>
-
-            <div id="load-more-container" class="load-more-container">
-                <button id="load-more-btn" class="load-more-btn">Load More Centers</button>
+            <div class="stat-item">
+                <div class="stat-number" id="stat-avg-pay">$65</div>
+                <div class="stat-label">Avg. Pay</div>
             </div>
         </div>
     </section>
 
-    <!-- Spacing Section -->
-
-    <!-- Pay Calculator CTA -->
-    <section class="calculator-cta-section">
-        <div class="calculator-cta-container">
-            <div class="calculator-cta-image">
-                <!-- PERFORMANCE OPTIMIZATION: Added loading="lazy" to all non-hero images -->
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                     alt="Happy person using smartphone to calculate earnings from plasma donation" 
-                     width="300" height="200" loading="lazy">
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="filters-inner">
+            <div class="filter-group">
+                <span class="filter-label">Distance:</span>
+                <select id="distance-filter" class="filter-select">
+                    <option value="10">10 miles</option>
+                    <option value="25">25 miles</option>
+                    <option value="50" selected>50 miles</option>
+                    <option value="100">100 miles</option>
+                </select>
             </div>
-            <div class="calculator-cta-content">
-                <h2>💰 Curious how much you'll make?</h2>
-                <p>Use our free Plasma Pay Calculator to estimate your monthly earnings based on your donation frequency and local rates.</p>
-                <a href="https://plasmapaycalculator.com" target="_blank" class="calculator-cta-btn" onclick="if(typeof trackCalculatorClick === 'function') trackCalculatorClick();">Try Our Free Pay Calculator →</a>
+
+            <div class="filter-chips">
+                <button class="filter-chip" data-type="biolife">BioLife</button>
+                <button class="filter-chip" data-type="csl">CSL Plasma</button>
+                <button class="filter-chip" data-type="grifols">Grifols</button>
+                <button class="filter-chip" data-type="octapharma">Octapharma</button>
+            </div>
+
+            <button id="clear-filters">Clear Filters</button>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results-section">
+        <div class="results-inner">
+            <div class="results-header">
+                <div class="results-count">
+                    Showing <strong id="results-showing">0</strong> of <strong id="results-total">0</strong> centers
+                </div>
+            </div>
+
+            <div id="centers-container">
+                <!-- Centers will be loaded here by app.js -->
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Finding centers near you...</p>
+                </div>
+            </div>
+
+            <div id="load-more-container" style="display: none;">
+                <button id="load-more-btn">Load More Centers</button>
             </div>
         </div>
     </section>
 
-    <!-- State Calculator Links Section -->
-    <section class="state-calculators-section" style="background-color: #f8fafc; padding: 3rem 0;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
-            <div class="text-center mb-8">
-                <h2 style="font-size: 2.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem;">
-                    💰 State-Specific Plasma Pay Calculators
-                </h2>
-                <p style="font-size: 1.125rem; color: #6b7280; max-width: 600px; margin: 0 auto;">
-                    Get accurate earnings estimates for your state with our interactive calculators. Each calculator includes local pay rates and bonuses.
-                </p>
-            </div>
-            
-            <div class="popular-states-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                <div class="state-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 1.5rem; text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤠</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Texas</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem;">$50-$90 per visit • 200+ centers</p>
-                    <a href="https://plasmapaycalculator.com/calculators/texas/" target="_blank" 
-                       style="display: inline-block; background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 500; transition: background-color 0.2s;"
-                       onmouseover="this.style.backgroundColor='#2563eb'" onmouseout="this.style.backgroundColor='#3b82f6'">
-                        Calculate Texas Earnings →
-                    </a>
-                </div>
-                
-                <div class="state-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 1.5rem; text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌊</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">California</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem;">$50-$90 per visit • 200+ centers</p>
-                    <a href="https://plasmapaycalculator.com/calculators/california/" target="_blank" 
-                       style="display: inline-block; background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 500; transition: background-color 0.2s;"
-                       onmouseover="this.style.backgroundColor='#2563eb'" onmouseout="this.style.backgroundColor='#3b82f6'">
-                        Calculate California Earnings →
-                    </a>
-                </div>
-                
-                <div class="state-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 1.5rem; text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏝️</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Florida</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem;">$45-$85 per visit • 150+ centers</p>
-                    <a href="https://plasmapaycalculator.com/calculators/florida/" target="_blank" 
-                       style="display: inline-block; background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 500; transition: background-color 0.2s;"
-                       onmouseover="this.style.backgroundColor='#2563eb'" onmouseout="this.style.backgroundColor='#3b82f6'">
-                        Calculate Florida Earnings →
-                    </a>
-                </div>
-            </div>
-            
-            <div class="all-states-cta" style="text-center; background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 2rem;">
-                <h3 style="font-size: 1.5rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem;">
-                    Calculate Earnings for All 50 States
-                </h3>
-                <p style="color: #6b7280; margin-bottom: 1.5rem;">
-                    Find your state's specific pay rates, bonuses, and center locations with our comprehensive calculator tools.
-                </p>
-                <a href="https://plasmapaycalculator.com/" target="_blank" 
-                   style="display: inline-block; background: #059669; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: background-color 0.2s;"
-                   onmouseover="this.style.backgroundColor='#047857'" onmouseout="this.style.backgroundColor='#059669'">
-                    🧮 View All State Calculators →
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo">
+                    <span class="logo-mark">$</span>
+                    Plasma Pay
                 </a>
+                <p>Helping thousands of donors maximize their plasma donation earnings since 2023. Find the best-paying centers, calculate your earnings, and start earning today.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Calculators</h4>
+                <ul>
+                    <li><a href="/">Plasma Pay Calculator</a></li>
+                    <li><a href="/biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
+                    <li><a href="/csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
+                    <li><a href="/grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/centers/">Find Centers</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/first-time-donor-guide.html">First Time Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/advertise.html">Advertise</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                </ul>
             </div>
         </div>
-    </section>
 
-    <!-- Ezoic Ad Placement 2 - After Calculator Section -->
-    <div id="ezoic-pub-ad-placeholder-102"></div>
-    <script>
-        ezstandalone.cmd.push(function () {
-            ezstandalone.showAds(102);
-        });
-    </script>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="stats-content">
-            <h2>Find the Highest-Paying Plasma Centers Near You</h2>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">1,294+</div>
-                    <div class="stat-label">Plasma Centers</div>
-                    <div class="stat-desc">Nationwide locations</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">$45-$100</div>
-                    <div class="stat-label">Pay Range</div>
-                    <div class="stat-desc">Per donation</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">$700+</div>
-                    <div class="stat-label">New Donor Bonus</div>
-                    <div class="stat-desc">First month potential</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Major Chains</div>
-                    <div class="stat-desc">BioLife, CSL, Grifols & more</div>
-                </div>
-            </div>
-            
-            <div class="stats-features">
-                <div class="feature-item">
-                    ✓ Real-time pay rates and bonuses
-                </div>
-                <div class="feature-item">
-                    ✓ Verified donor reviews and ratings
-                </div>
-                <div class="feature-item">
-                    ✓ Hours, contact info, and directions
-                </div>
-                <div class="feature-item">
-                    ✓ Compare centers in your area
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Data Sources & Research Methodology Section -->
-    <section class="py-12 md:py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    📊 Our Research & Data Sources
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Transparent methodology behind America's most comprehensive plasma center database
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-8 mb-12">
-                <!-- Research Overview -->
-                <div class="bg-blue-50 rounded-xl p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        🔬 Research Overview
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">🏢</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">2,522+ Centers Analyzed</h4>
-                                <p class="text-gray-700">Comprehensive coverage of all major plasma center chains across all 50 states</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">📅</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Monthly Data Updates</h4>
-                                <p class="text-gray-700">Pay rates, bonuses, and center information verified and updated monthly</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">👥</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">47,000+ Reviews Processed</h4>
-                                <p class="text-gray-700">Donor experiences aggregated from multiple review platforms and sources</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Sources -->
-                <div class="bg-green-50 rounded-xl p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        📋 Primary Data Sources
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">🌐</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Official Center Websites</h4>
-                                <p class="text-gray-700">Direct verification from CSL Plasma, BioLife, Grifols, Octapharma, and KEDPLASMA</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">📞</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Direct Center Communication</h4>
-                                <p class="text-gray-700">Phone verification of hours, bonuses, and current promotional offers</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">⭐</span>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Verified Donor Reports</h4>
-                                <p class="text-gray-700">Real donor experiences from Google Reviews, Yelp, and specialized plasma forums</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Verification Process -->
-            <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl p-8 mb-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
-                    ✅ Our 4-Step Verification Process
-                </h3>
-                <div class="grid md:grid-cols-4 gap-6">
-                    <div class="text-center">
-                        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <span class="text-2xl">🔍</span>
-                        </div>
-                        <h4 class="font-bold text-gray-900 mb-2">1. Data Collection</h4>
-                        <p class="text-sm text-gray-700">Gather information from official sources and verified donor reports</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <span class="text-2xl">📞</span>
-                        </div>
-                        <h4 class="font-bold text-gray-900 mb-2">2. Direct Verification</h4>
-                        <p class="text-sm text-gray-700">Contact centers directly to confirm pay rates and current promotions</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <span class="text-2xl">🔄</span>
-                        </div>
-                        <h4 class="font-bold text-gray-900 mb-2">3. Cross-Reference</h4>
-                        <p class="text-sm text-gray-700">Compare data across multiple sources to ensure accuracy</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <span class="text-2xl">📊</span>
-                        </div>
-                        <h4 class="font-bold text-gray-900 mb-2">4. Database Update</h4>
-                        <p class="text-sm text-gray-700">Publish verified information with clear source attribution</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Accuracy & Transparency -->
-            <div class="bg-yellow-50 rounded-xl p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
-                    🎯 Accuracy & Transparency Commitment
-                </h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="text-center">
-                        <span class="text-4xl mb-4 block">📍</span>
-                        <h4 class="font-bold text-gray-900 mb-2">Source Attribution</h4>
-                        <p class="text-gray-700">All data clearly marked as "verified," "estimated," or "reported" with source dates</p>
-                    </div>
-                    <div class="text-center">
-                        <span class="text-4xl mb-4 block">🔄</span>
-                        <h4 class="font-bold text-gray-900 mb-2">Regular Updates</h4>
-                        <p class="text-gray-700">Monthly verification cycles ensure information stays current and accurate</p>
-                    </div>
-                    <div class="text-center">
-                        <span class="text-4xl mb-4 block">📧</span>
-                        <h4 class="font-bold text-gray-900 mb-2">Error Reporting</h4>
-                        <p class="text-gray-700">Found incorrect information? <a href="/about.html#contact-section" class="text-blue-600 hover:underline">Report it</a> and we'll investigate within 24 hours</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Research Credits -->
-            <div class="mt-8 text-center bg-gray-50 rounded-lg p-6">
-                <h4 class="text-lg font-bold text-gray-900 mb-3">👨‍💼 Research Team</h4>
-                <p class="text-gray-700 mb-2">
-                    <strong>Lead Researcher:</strong> Glen Meade, Data Analyst & Plasma Donation Research Specialist
-                </p>
-                <p class="text-sm text-gray-600">
-                    Independent research team with no affiliations to plasma collection companies. All analysis conducted objectively for donor benefit.
-                </p>
-                <div class="mt-4 text-xs text-gray-500">
-                    <p>📅 Last Updated: January 2025 | 🔄 Next Review: February 2025 | ✅ Data Accuracy: 97.3%</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--  PREVIEW: Full Donor Essentials Section -->
-    <section class="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    🎯 Essential Gear for Successful Plasma Donors
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Maximize your donations and earnings with these donor-recommended products
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Pre-Donation Prep -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        💪 Pre-Donation Prep
-                    </h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Optimum Nutrition Gold Standard
-                            </a>
-                            <p class="text-sm text-gray-600">Meet protein requirements easily</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Iron Supplements
-                            </a>
-                            <p class="text-sm text-gray-600">Prevent low-iron deferrals</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Liquid I.V.
-                            </a>
-                            <p class="text-sm text-gray-600">Rapid hydration boost</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Quest RX Protein Bars
-                            </a>
-                            <p class="text-sm text-gray-600">Quick protein on-the-go</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                HydroFlask 32 oz
-                            </a>
-                            <p class="text-sm text-gray-600">Stay hydrated all day</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Health Monitoring -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        📊 Health Monitoring
-                    </h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Blood Pressure Monitor
-                            </a>
-                            <p class="text-sm text-gray-600">Check before visits</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Fitbit Charge 6
-                            </a>
-                            <p class="text-sm text-gray-600">Track health metrics</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Garmin Vivoactive
-                            </a>
-                            <p class="text-sm text-gray-600">Advanced health tracking</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Digital Scale
-                            </a>
-                            <p class="text-sm text-gray-600">Monitor weight tier</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Thermometer
-                            </a>
-                            <p class="text-sm text-gray-600">Ensure no fever</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Recovery & Comfort -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        🔄 Recovery & Comfort
-                    </h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Arm Compression Sleeves
-                            </a>
-                            <p class="text-sm text-gray-600">Post-donation comfort</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Heating Pad
-                            </a>
-                            <p class="text-sm text-gray-600">Soothe donation site</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Foam Roller (Recovery)
-                            </a>
-                            <p class="text-sm text-gray-600">Muscle recovery</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Ice Packs
-                            </a>
-                            <p class="text-sm text-gray-600">Reduce swelling</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Hyperice Massage Gun
-                            </a>
-                            <p class="text-sm text-gray-600">Deep muscle recovery</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Organization & Tracking -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        📅 Organization & Tracking
-                    </h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Donation Planner
-                            </a>
-                            <p class="text-sm text-gray-600">Track earnings & schedule</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Pill Organizer
-                            </a>
-                            <p class="text-sm text-gray-600">Supplement schedule</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Meal Prep Containers
-                            </a>
-                            <p class="text-sm text-gray-600">Nutrition planning</p>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                                Your Money or Your Life
-                            </a>
-                            <p class="text-sm text-gray-600">Financial wisdom</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="mt-8 text-center">
-                <p class="text-sm text-gray-500">
-                     These products are donor favorites!
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!--  PREVIEW: Inline Product Tip (for blog posts/content) -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
-            <h4 class="text-lg font-bold text-gray-900 mb-3">💡 Pro Tip: Boost Your Iron Levels</h4>
-            <p class="text-gray-700 mb-4">
-                Many donors get deferred due to low iron. Stay donation-ready with these iron supplements:
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow hover:shadow-md transition-shadow">
-                    <span class="text-2xl">💊</span>
-                    <span class="font-medium text-blue-600">Gentle Iron Supplement</span>
-                </a>
-                <a href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow hover:shadow-md transition-shadow">
-                    <span class="text-2xl">🍊</span>
-                    <span class="font-medium text-blue-600">Liquid I.V. (with Vitamin C)</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!--  PREVIEW: Quick Product Card (for state/city pages) -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-3">
-                🎯 Maximize Your Donation Success
-            </h3>
-            <p class="text-gray-700 mb-4">
-                Stay hydrated and meet protein requirements with these donor essentials:
-            </p>
-            <div class="grid md:grid-cols-2 gap-4">
-                <a href="#" target="_blank" rel="noopener" class="flex items-start gap-3 bg-white p-4 rounded-lg hover:shadow-md transition-shadow">
-                    <span class="text-3xl">💧</span>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Liquid I.V. Hydration</h4>
-                        <p class="text-sm text-gray-600">2x faster hydration than water alone</p>
-                    </div>
-                </a>
-                <a href="#" target="_blank" rel="noopener" class="flex items-start gap-3 bg-white p-4 rounded-lg hover:shadow-md transition-shadow">
-                    <span class="text-3xl">💪</span>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Whey Optimum Nutrition Gold Standard</h4>
-                        <p class="text-sm text-gray-600">Meet the 50g daily protein requirement</p>
-                    </div>
-                </a>
-            </div>
-            <p class="text-xs text-gray-500 mt-4">
-                *unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                     alt="Professional plasma center staff helping patients" 
-                     width="300" height="200" loading="lazy">
-            </div>
-            <div class="cta-content">
-                <h2>Are you a plasma center?</h2>
-                <p>Get featured placement and attract more donors with our premium listing service</p>
-                <button class="cta-btn" onclick="window.location.href='mailto:hello@plasmapaycalculator.com'">Get Featured</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Money-Making Opportunities Section -->
-    <section class="py-16 md:py-20 bg-gradient-to-br from-green-50 to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    💰 Turn Your Plasma Into Real Money: Earning $400-$800 Monthly
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Discover why plasma donation is one of the most reliable ways to earn extra income while helping save lives
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <div class="text-4xl mb-4">💵</div>
-                    <h3 class="text-2xl font-bold text-green-600 mb-4">Consistent Monthly Income</h3>
-                    <div class="text-3xl font-bold text-gray-900 mb-2">$400-$800</div>
-                    <p class="text-gray-600 mb-4">Average monthly earnings for regular donors (twice weekly)</p>
-                    <ul class="text-left space-y-2 text-gray-700">
-                        <li>• $45-$100 per donation</li>
-                        <li>• Up to 2 donations per week</li>
-                        <li>• New donor bonuses up to $1,000</li>
-                        <li>• Same-day payment at most centers</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <div class="text-4xl mb-4">🎯</div>
-                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Maximize Your Earnings</h3>
-                    <div class="text-3xl font-bold text-gray-900 mb-2">Smart Strategy</div>
-                    <p class="text-gray-600 mb-4">Tips to boost your plasma donation income</p>
-                    <ul class="text-left space-y-2 text-gray-700">
-                        <li>• Compare rates across centers</li>
-                        <li>• Take advantage of new donor bonuses</li>
-                        <li>• Maintain consistent donation schedule</li>
-                        <li>• Stay healthy to avoid deferrals</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <div class="text-4xl mb-4">⏰</div>
-                    <h3 class="text-2xl font-bold text-purple-600 mb-4">Time Investment</h3>
-                    <div class="text-3xl font-bold text-gray-900 mb-2">1-2 Hours</div>
-                    <p class="text-gray-600 mb-4">Per donation session (including screening)</p>
-                    <ul class="text-left space-y-2 text-gray-700">
-                        <li>• Flexible scheduling options</li>
-                        <li>• Open 7 days a week</li>
-                        <li>• Online appointment booking</li>
-                        <li>• Comfortable donation areas</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Financial Benefits Breakdown -->
-            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">💰 Real Earning Potential by Center Chain</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full border-collapse">
-                        <thead>
-                            <tr class="bg-gray-50">
-                                <th class="border border-gray-200 p-3 text-left font-semibold">Center Chain</th>
-                                <th class="border border-gray-200 p-3 text-center font-semibold">Per Donation</th>
-                                <th class="border border-gray-200 p-3 text-center font-semibold">New Donor Bonus</th>
-                                <th class="border border-gray-200 p-3 text-center font-semibold">Monthly Potential</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-200 p-3 font-medium">CSL Plasma</td>
-                                <td class="border border-gray-200 p-3 text-center text-green-600 font-bold">$50-$100</td>
-                                <td class="border border-gray-200 p-3 text-center text-blue-600 font-bold">Up to $700</td>
-                                <td class="border border-gray-200 p-3 text-center text-purple-600 font-bold">$400-$800</td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 p-3 font-medium">BioLife Plasma</td>
-                                <td class="border border-gray-200 p-3 text-center text-green-600 font-bold">$45-$90</td>
-                                <td class="border border-gray-200 p-3 text-center text-blue-600 font-bold">Up to $900</td>
-                                <td class="border border-gray-200 p-3 text-center text-purple-600 font-bold">$360-$720</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-200 p-3 font-medium">Grifols Biomat</td>
-                                <td class="border border-gray-200 p-3 text-center text-green-600 font-bold">$50-$95</td>
-                                <td class="border border-gray-200 p-3 text-center text-blue-600 font-bold">Up to $600</td>
-                                <td class="border border-gray-200 p-3 text-center text-purple-600 font-bold">$400-$760</td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 p-3 font-medium">Octapharma</td>
-                                <td class="border border-gray-200 p-3 text-center text-green-600 font-bold">$45-$85</td>
-                                <td class="border border-gray-200 p-3 text-center text-blue-600 font-bold">Up to $500</td>
-                                <td class="border border-gray-200 p-3 text-center text-purple-600 font-bold">$360-$680</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="text-sm text-gray-600 mt-4 text-center">*Rates vary by location and donor weight. New donor bonuses typically apply to first 5-8 donations.</p>
-            </div>
-
-            <!-- Why Plasma Donation Makes Financial Sense -->
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
-                <h3 class="text-2xl font-bold mb-4">🚀 Why Smart People Choose Plasma Donation for Extra Income</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div>
-                        <div class="text-3xl mb-2">📅</div>
-                        <h4 class="font-bold mb-2">Flexible Schedule</h4>
-                        <p class="text-sm opacity-90">Donate when it fits your life - mornings, evenings, weekends</p>
-                    </div>
-                    <div>
-                        <div class="text-3xl mb-2">💳</div>
-                        <h4 class="font-bold mb-2">Instant Payment</h4>
-                        <p class="text-sm opacity-90">Get paid immediately after each donation via prepaid card</p>
-                    </div>
-                    <div>
-                        <div class="text-3xl mb-2">🏥</div>
-                        <h4 class="font-bold mb-2">Safe & Regulated</h4>
-                        <p class="text-sm opacity-90">FDA-regulated process with trained medical professionals</p>
-                    </div>
-                    <div>
-                        <div class="text-3xl mb-2">❤️</div>
-                        <h4 class="font-bold mb-2">Help Save Lives</h4>
-                        <p class="text-sm opacity-90">Your plasma helps create life-saving medications</p>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <a href="#search" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
-                        Find High-Paying Centers Near Me →
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Money-Making Opportunity Section -->
-    <section class="py-16 md:py-20 bg-gradient-to-br from-green-50 to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                💰 Turn Your Plasma Into Real Money
-            </h2>
-            
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-green-600 mb-4">💵 Earn $400-$800/Month</h3>
-                    <p class="text-gray-700 mb-4">Regular plasma donors can earn substantial monthly income while helping save lives. New donors often earn $600-$1000 in their first month.</p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li>• $45-$100 per donation</li>
-                        <li>• Up to 2 donations per week</li>
-                        <li>• New donor bonuses available</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-4">🎯 Find the Best Paying Centers</h3>
-                    <p class="text-gray-700 mb-4">Compare rates and bonuses from all major plasma companies. Find the highest-paying centers in your area.</p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li>• CSL Plasma locations</li>
-                        <li>• BioLife centers</li>
-                        <li>• Grifols and Octapharma</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-red-600 mb-4">⏰ Quick & Convenient</h3>
-                    <p class="text-gray-700 mb-4">Most donations take 1-2 hours. Centers are open 7 days a week with flexible scheduling to fit your routine.</p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li>• Online appointment booking</li>
-                        <li>• Same-day payments</li>
-                        <li>• Comfortable donor lounges</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ezoic Ad Placement 3 - Before Footer -->
-    <div id="ezoic-pub-ad-placeholder-103"></div>
-    <script>
-        ezstandalone.cmd.push(function () {
-            ezstandalone.showAds(103);
-        });
-    </script>
-        
-        <!-- E-E-A-T Compliance in Footer -->
-        <div class="border-t border-gray-600 pt-8 mt-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Author Byline -->
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h4 class="text-lg font-bold text-gray-900 mb-3">✍️ Written By</h4>
-                    <p class="text-gray-700 text-sm">
-                        <strong>Glen Meade</strong><br>
-                        Plasma Donation Researcher & Data Specialist
-                    </p>
-                </div>
-
-                <!-- Medical Disclaimer -->
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h4 class="text-lg font-bold text-red-600 mb-3">⚕️ Medical Disclaimer</h4>
-                    <p class="text-gray-700 text-sm">
-                        This content is for informational purposes only. It is not medical advice. 
-                        Always consult a qualified healthcare provider before donating plasma.
-                    </p>
-                </div>
-
-                <!-- Author Bio -->
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h4 class="text-lg font-bold text-blue-600 mb-3">👨‍💼 About the Author</h4>
-                    <div class="flex items-start gap-3">
-                        <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">GM</div>
-                        <div>
-                            <h5 class="font-semibold text-gray-900 text-sm">Glen Meade</h5>
-                            <p class="text-gray-600 text-xs mb-1">Researcher & Data Specialist</p>
-                            <p class="text-gray-700 text-xs">
-                                5+ years researching plasma donation centers across the United States.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Source Citations -->
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h4 class="text-lg font-bold text-green-600 mb-3">📋 Sources & References</h4>
-                    <ul class="text-gray-700 text-xs space-y-1">
-                        <li>• <a href="https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/donating-plasma" class="text-blue-600 hover:text-blue-800">FDA Guidelines</a></li>
-                        <li>• <a href="https://www.cslplasma.com" class="text-blue-600 hover:text-blue-800">CSL Plasma</a></li>
-                        <li>• <a href="https://www.biolifeplasma.com" class="text-blue-600 hover:text-blue-800">BioLife Plasma</a></li>
-                        <li>• <a href="https://www.redcross.org" class="text-blue-600 hover:text-blue-800">American Red Cross</a></li>
-                        <li>• Official center websites and public data sources (2025)</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="advertise-banner">
+            <p>Are you a plasma center looking to reach new donors? Advertise with us!</p>
+            <a href="/advertise.html">Learn More</a>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved. Information for educational purposes only.</p>
-            <p class="owner-info">
-                🏥 Plasma center owner? <a href="mailto:hello@plasmapaycalculator.com?subject=Claim%20or%20Upgrade%20Listing" class="owner-link">Claim or upgrade your listing</a>
-            </p>
+            <p>&copy; 2024 PlasmaPayCalculator.com. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+            </div>
         </div>
     </footer>
 
-    <!-- PERFORMANCE OPTIMIZATION: Defer all non-critical JavaScript -->
-    <script defer src="app.js"></script>
-    
-    <!-- JavaScript cleaned up to prevent conflicts -->
-
     <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('mainNav');
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
 
-            // Language switcher functionality
-            const languageSelect = document.getElementById('languageSelect');
-            const mobileLanguageSelect = document.getElementById('mobileLanguageSelect');
-            
-            function handleLanguageChange(selectedLang) {
-                if (selectedLang === 'es') {
-                    const currentPath = window.location.pathname;
-                    let spanishPath;
-                    
-                    if (currentPath === '/' || currentPath === '/index.html') {
-                        spanishPath = '/es/';
-                    } else {
-                        spanishPath = '/es' + currentPath;
-                    }
-                    
-                    window.location.href = spanishPath;
-                }
-            }
-            
-            if (languageSelect) {
-                languageSelect.addEventListener('change', function() {
-                    handleLanguageChange(this.value);
-                });
-            }
-            
-            if (mobileLanguageSelect) {
-                mobileLanguageSelect.addEventListener('change', function() {
-                    handleLanguageChange(this.value);
-                });
-            }
-        });
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
     </script>
 
-    <!-- Partners System -->
+    <!-- Center Finder App -->
+    <script defer src="app.js"></script>
     <script src="/partners/partners.config.js"></script>
     <script src="/partners/partners.js"></script>
-    <script>
-      Partners.init('centersDirectory');
-    </script>
 </body>
 </html>
