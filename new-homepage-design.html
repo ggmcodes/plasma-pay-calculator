@@ -11,20 +11,21 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
     --deep-teal: #0D4F4F;
     --teal-light: #1A6B6B;
-    --gold: #D4A574;
-    --gold-light: #E8C9A8;
-    --cream: #FAF8F5;
-    --cream-dark: #F0EDE8;
+    /* Brighter amber accent - user requested more vibrant */
+    --gold: #F59E0B;
+    --gold-light: #FCD34D;
+    --cream: #FFFBF5;
+    --cream-dark: #FEF3E2;
     --charcoal: #1A1A1A;
     --gray: #6B6B6B;
     --gray-light: #9A9A9A;
     --white: #FFFFFF;
-    --success: #2D8A6E;
+    --success: #22C55E;
     --gradient-hero: linear-gradient(135deg, rgba(13, 79, 79, 0.92) 0%, rgba(26, 107, 107, 0.88) 100%);
 }
 
@@ -41,9 +42,9 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Lora', Georgia, serif;
     font-weight: 600;
-    line-height: 1.15;
+    line-height: 1.2;
 }
 
 /* Floating Nav */
@@ -72,7 +73,7 @@ h1, h2, h3, h4 {
 }
 
 .logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
@@ -126,6 +127,37 @@ h1, h2, h3, h4 {
 
 .mobile-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
 .nav.scrolled .mobile-toggle { color: var(--charcoal); }
+
+/* Color Picker Bar */
+.color-picker {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--charcoal);
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 9999;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.color-picker span { color: white; font-weight: 600; font-size: 0.9rem; }
+.color-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.2s;
+}
+.color-swatch:hover { transform: scale(1.15); }
+.color-swatch.active { border-color: white; transform: scale(1.15); }
+.color-swatch.amber { background: #F59E0B; }
+.color-swatch.coral { background: #FB7185; }
+.color-swatch.green { background: #22C55E; }
+.color-swatch.orange { background: #F97316; }
 
 /* Hero */
 .hero {
@@ -255,7 +287,7 @@ h1, h2, h3, h4 {
 }
 
 .stat { text-align: center; }
-.stat-value { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold); }
+.stat-value { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold); }
 .stat-label { font-size: 0.85rem; opacity: 0.8; }
 
 /* Hero Card */
@@ -313,7 +345,7 @@ h1, h2, h3, h4 {
 }
 
 .earnings-preview .amount {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
     font-size: 3rem;
     font-weight: 700;
 }
@@ -568,7 +600,7 @@ h1, h2, h3, h4 {
 }
 
 .result-value {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
     font-size: 2.5rem;
     font-weight: 700;
 }
@@ -1444,6 +1476,36 @@ function toggleMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 }
+
+// Color picker functionality
+function setAccentColor(color, colorName) {
+    const colors = {
+        amber: { main: '#F59E0B', light: '#FCD34D' },
+        coral: { main: '#FB7185', light: '#FDA4AF' },
+        green: { main: '#22C55E', light: '#86EFAC' },
+        orange: { main: '#F97316', light: '#FDBA74' }
+    };
+
+    document.documentElement.style.setProperty('--gold', colors[color].main);
+    document.documentElement.style.setProperty('--gold-light', colors[color].light);
+
+    // Update active state
+    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+    document.querySelector(`.color-swatch.${color}`).classList.add('active');
+
+    // Update label
+    document.querySelector('.color-picker span').textContent = `Accent: ${colorName}`;
+}
 </script>
+
+<!-- Color Picker Bar -->
+<div class="color-picker">
+    <span>Accent: Amber</span>
+    <button class="color-swatch amber active" onclick="setAccentColor('amber', 'Amber')" title="Amber"></button>
+    <button class="color-swatch coral" onclick="setAccentColor('coral', 'Coral')" title="Coral"></button>
+    <button class="color-swatch green" onclick="setAccentColor('green', 'Green')" title="Green"></button>
+    <button class="color-swatch orange" onclick="setAccentColor('orange', 'Orange')" title="Orange"></button>
+</div>
+
 </body>
 </html>
