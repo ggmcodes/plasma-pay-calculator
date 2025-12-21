@@ -11,7 +11,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Merriweather:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
     --deep-teal: #0D4F4F;
@@ -128,25 +128,37 @@ h1, h2, h3, h4 {
 .mobile-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
 .nav.scrolled .mobile-toggle { color: var(--charcoal); }
 
-/* Color Picker Bar */
-.color-picker {
+/* Style Picker Bar */
+.style-picker {
     position: fixed;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     background: var(--charcoal);
-    padding: 1rem 2rem;
-    border-radius: 100px;
+    padding: 1.25rem 2rem;
+    border-radius: 20px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 1rem;
     z-index: 9999;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
-.color-picker span { color: white; font-weight: 600; font-size: 0.9rem; }
+.picker-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.picker-label {
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    min-width: 50px;
+}
 .color-swatch {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     cursor: pointer;
     border: 3px solid transparent;
@@ -158,6 +170,25 @@ h1, h2, h3, h4 {
 .color-swatch.coral { background: #FB7185; }
 .color-swatch.green { background: #22C55E; }
 .color-swatch.orange { background: #F97316; }
+
+.font-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 2px solid rgba(255,255,255,0.2);
+    background: transparent;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.font-btn:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.1); }
+.font-btn.active { border-color: white; background: rgba(255,255,255,0.15); }
+.font-btn.lora { font-family: 'Lora', serif; }
+.font-btn.playfair { font-family: 'Playfair Display', serif; }
+.font-btn.libre { font-family: 'Libre Baskerville', serif; }
+.font-btn.merriweather { font-family: 'Merriweather', serif; }
 
 /* Hero */
 .hero {
@@ -1477,8 +1508,8 @@ function toggleMobileMenu() {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 }
 
-// Color picker functionality
-function setAccentColor(color, colorName) {
+// Style picker functionality
+function setAccentColor(color) {
     const colors = {
         amber: { main: '#F59E0B', light: '#FCD34D' },
         coral: { main: '#FB7185', light: '#FDA4AF' },
@@ -1492,19 +1523,48 @@ function setAccentColor(color, colorName) {
     // Update active state
     document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
     document.querySelector(`.color-swatch.${color}`).classList.add('active');
+}
 
-    // Update label
-    document.querySelector('.color-picker span').textContent = `Accent: ${colorName}`;
+function setHeadlineFont(fontClass, fontFamily) {
+    const fonts = {
+        lora: "'Lora', Georgia, serif",
+        playfair: "'Playfair Display', Georgia, serif",
+        libre: "'Libre Baskerville', Georgia, serif",
+        merriweather: "'Merriweather', Georgia, serif"
+    };
+
+    // Update all headlines
+    document.querySelectorAll('h1, h2, h3, h4').forEach(el => {
+        el.style.fontFamily = fonts[fontClass];
+    });
+
+    // Update logo too
+    document.querySelectorAll('.logo').forEach(el => {
+        el.style.fontFamily = fonts[fontClass];
+    });
+
+    // Update active state
+    document.querySelectorAll('.font-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`.font-btn.${fontClass}`).classList.add('active');
 }
 </script>
 
-<!-- Color Picker Bar -->
-<div class="color-picker">
-    <span>Accent: Amber</span>
-    <button class="color-swatch amber active" onclick="setAccentColor('amber', 'Amber')" title="Amber"></button>
-    <button class="color-swatch coral" onclick="setAccentColor('coral', 'Coral')" title="Coral"></button>
-    <button class="color-swatch green" onclick="setAccentColor('green', 'Green')" title="Green"></button>
-    <button class="color-swatch orange" onclick="setAccentColor('orange', 'Orange')" title="Orange"></button>
+<!-- Style Picker Bar -->
+<div class="style-picker">
+    <div class="picker-row">
+        <span class="picker-label">Color</span>
+        <button class="color-swatch amber active" onclick="setAccentColor('amber')" title="Amber"></button>
+        <button class="color-swatch coral" onclick="setAccentColor('coral')" title="Coral"></button>
+        <button class="color-swatch green" onclick="setAccentColor('green')" title="Green"></button>
+        <button class="color-swatch orange" onclick="setAccentColor('orange')" title="Orange"></button>
+    </div>
+    <div class="picker-row">
+        <span class="picker-label">Font</span>
+        <button class="font-btn lora active" onclick="setHeadlineFont('lora')">Lora</button>
+        <button class="font-btn playfair" onclick="setHeadlineFont('playfair')">Playfair</button>
+        <button class="font-btn libre" onclick="setHeadlineFont('libre')">Libre</button>
+        <button class="font-btn merriweather" onclick="setHeadlineFont('merriweather')">Merriweather</button>
+    </div>
 </div>
 
 </body>
