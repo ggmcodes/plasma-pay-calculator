@@ -2,260 +2,1062 @@
 <html lang="en">
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-053DRWEQLS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-053DRWEQLS');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plasma Pay Calculator | See What You Could Earn</title>
-    <meta name="description" content="Calculate your plasma donation earnings. See what you could earn at centers near you.">
-    <meta name="theme-color" content="#22c55e">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #22c55e;
-            --primary-soft: #86efac;
-            --primary-deep: #16a34a;
-            --coral: #fb7185;
-            --coral-soft: #fecdd3;
-            --peach: #fdba74;
-            --amber: #fbbf24;
-            --cream: #fefce8;
-            --warm-white: #fffbeb;
-            --warm-gray-50: #fafaf9;
-            --warm-gray-100: #f5f5f4;
-            --warm-gray-200: #e7e5e4;
-            --warm-gray-400: #a8a29e;
-            --warm-gray-600: #57534e;
-            --warm-gray-800: #292524;
-            --warm-gray-900: #1c1917;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'DM Sans', system-ui, sans-serif; line-height: 1.6; color: var(--warm-gray-800); background: var(--warm-white); }
-        h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; line-height: 1.2; }
-        nav { background: rgba(255, 251, 235, 0.95); backdrop-filter: blur(12px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(34, 197, 94, 0.1); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
-        .logo { font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--primary-deep); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
-        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-soft) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
-        .nav-links { display: flex; list-style: none; gap: 0.5rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--warm-gray-600); font-weight: 500; padding: 0.6rem 1rem; border-radius: 10px; transition: all 0.3s ease; }
-        .nav-links a:hover { color: var(--primary-deep); background: rgba(34, 197, 94, 0.1); }
-        .nav-cta { background: linear-gradient(135deg, var(--coral) 0%, #f43f5e 100%) !important; color: white !important; font-weight: 600 !important; box-shadow: 0 4px 14px rgba(251, 113, 133, 0.3); }
-        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
-        .hero { min-height: 100vh; padding: 140px 2rem 80px; background: linear-gradient(180deg, var(--warm-white) 0%, var(--cream) 100%); position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 100%; background: radial-gradient(circle, rgba(251, 113, 133, 0.08) 0%, transparent 60%); }
-        .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 60%; height: 80%; background: radial-gradient(circle, rgba(134, 239, 172, 0.1) 0%, transparent 60%); }
-        .hero-content { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: white; border: 1px solid var(--warm-gray-200); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; color: var(--warm-gray-600); margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .hero-badge span { color: var(--primary); }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--warm-gray-900); margin-bottom: 1.5rem; }
-        .hero h1 .highlight { color: var(--primary); }
-        .hero p { font-size: 1.25rem; color: var(--warm-gray-600); max-width: 600px; margin: 0 auto 2.5rem; }
-        .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%); color: white; padding: 1.1rem 2.5rem; border-radius: 16px; font-size: 1.1rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3); }
-        .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4); }
-        .hero-trust { display: flex; justify-content: center; gap: 2.5rem; margin-top: 4rem; flex-wrap: wrap; }
-        .trust-item { display: flex; align-items: center; gap: 0.5rem; color: var(--warm-gray-600); font-size: 0.95rem; }
-        .trust-item svg { width: 20px; height: 20px; color: var(--primary); }
-        .calculator-section { padding: 6rem 2rem; background: var(--warm-gray-50); }
-        .section-header { text-align: center; max-width: 600px; margin: 0 auto 3rem; }
-        .section-header h2 { font-size: 2.25rem; color: var(--warm-gray-900); margin-bottom: 1rem; }
-        .section-header p { color: var(--warm-gray-600); font-size: 1.1rem; }
-        .calculator { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 2.5rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); border: 1px solid var(--warm-gray-100); }
-        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
-        .form-group { display: flex; flex-direction: column; }
-        .form-group.full-width { grid-column: span 2; }
-        .form-group label { font-weight: 600; color: var(--warm-gray-800); margin-bottom: 0.5rem; font-size: 0.95rem; }
-        .form-group .hint { font-size: 0.85rem; color: var(--warm-gray-500); margin-top: 0.35rem; }
-        .form-group select, .form-group input { padding: 0.9rem 1rem; border: 2px solid var(--warm-gray-200); border-radius: 12px; font-size: 1rem; font-family: inherit; color: var(--warm-gray-800); background: var(--warm-gray-50); transition: all 0.2s ease; }
-        .form-group select:focus, .form-group input:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1); }
-        .calculate-btn { width: 100%; padding: 1.2rem 2rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%); color: white; border: none; border-radius: 14px; font-size: 1.15rem; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3); }
-        .calculate-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(34, 197, 94, 0.4); }
-        .results { max-width: 700px; margin: 2rem auto 0; background: linear-gradient(135deg, var(--cream) 0%, white 100%); border-radius: 24px; padding: 2.5rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); border: 2px solid var(--primary-soft); display: none; }
-        .results.show { display: block; animation: slideUp 0.5s ease; }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .results-header { text-align: center; margin-bottom: 2rem; }
-        .results-header h3 { font-size: 1.75rem; color: var(--primary-deep); }
-        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
-        .result-card { text-align: center; padding: 1.5rem 1rem; background: white; border-radius: 16px; border: 1px solid var(--warm-gray-200); }
-        .result-value { font-family: 'Fraunces', Georgia, serif; font-size: 2.25rem; font-weight: 700; color: var(--primary-deep); margin-bottom: 0.25rem; }
-        .result-label { color: var(--warm-gray-600); font-size: 0.9rem; }
-        .breakdown { background: var(--warm-gray-50); border-radius: 16px; padding: 1.5rem; margin-top: 1.5rem; }
-        .breakdown h4 { text-align: center; color: var(--warm-gray-700); margin-bottom: 1rem; font-size: 1.1rem; }
-        .breakdown-item { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--warm-gray-200); font-size: 0.95rem; }
-        .breakdown-item:last-child { border-bottom: none; }
-        .breakdown-item.total { font-weight: 700; color: var(--primary-deep); font-size: 1.1rem; padding-top: 1rem; margin-top: 0.5rem; border-top: 2px solid var(--primary-soft); }
-        .earning-tip { background: linear-gradient(135deg, var(--primary-soft) 0%, rgba(134, 239, 172, 0.3) 100%); padding: 1.25rem; border-radius: 14px; margin-top: 1.5rem; text-align: center; }
-        .earning-tip p { color: var(--primary-deep); font-weight: 500; margin: 0; }
-        .faq-section { padding: 6rem 2rem; background: var(--cream); }
-        .faq-container { max-width: 700px; margin: 0 auto; }
-        .faq-item { background: white; border-radius: 16px; margin-bottom: 1rem; border: 1px solid var(--warm-gray-200); overflow: hidden; }
-        .faq-question { padding: 1.25rem 1.5rem; font-weight: 600; color: var(--warm-gray-800); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-question:hover { background: var(--warm-gray-50); }
-        .faq-question svg { width: 20px; height: 20px; color: var(--warm-gray-400); transition: transform 0.3s ease; }
-        .faq-item.open .faq-question svg { transform: rotate(180deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .faq-item.open .faq-answer { max-height: 500px; }
-        .faq-answer p { padding: 0 1.5rem 1.25rem; color: var(--warm-gray-600); line-height: 1.7; }
-        footer { background: var(--warm-gray-900); color: var(--warm-gray-400); padding: 4rem 2rem 2rem; }
-        .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; }
-        .footer-section h4 { color: white; font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; margin-bottom: 1rem; }
-        .footer-section ul { list-style: none; }
-        .footer-section li { margin-bottom: 0.5rem; }
-        .footer-section a { color: var(--warm-gray-400); text-decoration: none; }
-        .footer-section a:hover { color: var(--primary-soft); }
-        .advertise-banner { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 16px; text-align: center; margin-bottom: 2rem; }
-        .advertise-banner h4 { color: white; margin-bottom: 0.5rem; }
-        .advertise-banner p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 1rem; }
-        .advertise-banner a { display: inline-block; background: white; color: #667eea; padding: 0.6rem 1.5rem; border-radius: 10px; font-weight: 600; text-decoration: none; }
-        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid var(--warm-gray-800); font-size: 0.9rem; }
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-053DRWEQLS');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plasma Pay Calculator | Earn $500-1,200/Month Donating Plasma</title>
+<meta name="description" content="Calculate your plasma donation earnings instantly. New donors earn $800-1,200 their first month. Find the highest-paying centers near you.">
+<meta name="theme-color" content="#0D4F4F">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --deep-teal: #0D4F4F;
+    --teal-light: #1A6B6B;
+    --gold: #D4A574;
+    --gold-light: #E8C9A8;
+    --cream: #FAF8F5;
+    --cream-dark: #F0EDE8;
+    --charcoal: #1A1A1A;
+    --gray: #6B6B6B;
+    --gray-light: #9A9A9A;
+    --white: #FFFFFF;
+    --success: #2D8A6E;
+    --gradient-hero: linear-gradient(135deg, rgba(13, 79, 79, 0.92) 0%, rgba(26, 107, 107, 0.88) 100%);
+}
 
-        /* Quiz Section */
-        .quiz-section { padding: 6rem 2rem; background: linear-gradient(180deg, var(--warm-white) 0%, var(--coral-soft) 20%, var(--warm-white) 100%); }
-        .quiz-container { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 2.5rem; box-shadow: 0 8px 40px rgba(251, 113, 133, 0.1); border: 1px solid var(--coral-soft); }
-        .quiz-progress { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; padding: 1rem; background: var(--warm-gray-50); border-radius: 12px; }
-        .quiz-progress span { font-size: 0.9rem; color: var(--warm-gray-600); }
-        .quiz-question { display: none; }
-        .quiz-question.active { display: block; animation: slideUp 0.4s ease; }
-        .quiz-question h4 { font-size: 1.25rem; color: var(--warm-gray-800); margin-bottom: 1.5rem; }
-        .quiz-options { display: flex; flex-direction: column; gap: 0.75rem; }
-        .quiz-btn { padding: 1rem 1.25rem; background: var(--warm-gray-50); border: 2px solid var(--warm-gray-200); border-radius: 12px; cursor: pointer; text-align: left; font-size: 1rem; font-family: inherit; transition: all 0.2s ease; }
-        .quiz-btn:hover { border-color: var(--primary); background: rgba(34, 197, 94, 0.05); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Promo Sections */
-        .promo-section { padding: 5rem 2rem; }
-        .promo-container { max-width: 1000px; margin: 0 auto; }
-        .promo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
-        .promo-card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--warm-gray-100); transition: all 0.3s ease; }
-        .promo-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
-        .promo-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .promo-card h4 { font-size: 1.25rem; color: var(--warm-gray-800); margin-bottom: 0.75rem; }
-        .promo-card p { color: var(--warm-gray-600); font-size: 0.95rem; line-height: 1.6; }
-        .promo-card .highlight-box { background: var(--cream); padding: 0.75rem; border-radius: 10px; margin-top: 1rem; font-weight: 600; color: var(--primary-deep); }
+html { scroll-behavior: smooth; }
 
-        /* Why Donate Section */
-        .why-section { background: var(--cream); }
+body {
+    font-family: 'Outfit', -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-        /* Side Hustle Section */
-        .sidehustle-section { background: linear-gradient(135deg, #faf5ff 0%, #fdf4ff 100%); }
-        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 2rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .comparison-table th, .comparison-table td { padding: 1rem; text-align: center; border-bottom: 1px solid var(--warm-gray-100); }
-        .comparison-table th { background: var(--warm-gray-50); font-weight: 600; color: var(--warm-gray-800); }
-        .comparison-table tr:last-child td { border-bottom: none; }
-        .comparison-table .highlight-row { background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(134, 239, 172, 0.1) 100%); }
-        .comparison-table .highlight-row td { color: var(--primary-deep); font-weight: 600; }
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.15;
+}
 
-        /* College Section */
-        .college-section { background: linear-gradient(135deg, #fff7ed 0%, #fffbeb 100%); }
-        .testimonial-card { background: white; padding: 1.5rem; border-radius: 16px; border-left: 4px solid var(--peach); }
-        .testimonial-card p { color: var(--warm-gray-700); font-style: italic; margin-bottom: 0.75rem; }
-        .testimonial-card .author { font-size: 0.85rem; color: var(--warm-gray-500); }
+/* Floating Nav */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    transition: all 0.4s ease;
+}
 
-        /* Calculators Grid */
-        .calculators-section { padding: 5rem 2rem; background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%); }
-        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; max-width: 1100px; margin: 2.5rem auto 0; }
-        .calc-card { background: white; padding: 1.5rem; border-radius: 16px; text-decoration: none; transition: all 0.3s ease; border: 1px solid var(--warm-gray-100); }
-        .calc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
-        .calc-card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
-        .calc-card h4 { font-size: 1.1rem; color: var(--warm-gray-800); margin-bottom: 0.5rem; }
-        .calc-card p { font-size: 0.9rem; color: var(--warm-gray-600); margin-bottom: 0.75rem; }
-        .calc-card .link { font-size: 0.9rem; font-weight: 600; color: var(--primary-deep); }
+.nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+}
 
-        /* Products Section */
-        .products-section { padding: 5rem 2rem; background: var(--warm-gray-50); }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 2.5rem auto 0; }
-        .product-category { background: white; padding: 1.75rem; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
-        .product-category h4 { color: var(--primary-deep); margin-bottom: 1rem; font-size: 1.1rem; }
-        .product-category ul { list-style: none; }
-        .product-category li { margin-bottom: 0.6rem; }
-        .product-category a { color: var(--warm-gray-700); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
-        .product-category a:hover { color: var(--primary); }
+.nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        /* Section CTA */
-        .section-cta { text-align: center; margin-top: 2.5rem; }
-        .section-cta a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
-        .cta-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%); color: white; box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3); }
-        .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(34, 197, 94, 0.4); }
-        .cta-coral { background: linear-gradient(135deg, var(--coral) 0%, #f43f5e 100%); color: white; box-shadow: 0 6px 20px rgba(251, 113, 133, 0.3); }
-        .cta-coral:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(251, 113, 133, 0.4); }
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
 
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .hero h1 { font-size: 2rem; }
-            .form-grid { grid-template-columns: 1fr; }
-            .form-group.full-width { grid-column: span 1; }
-            .results-grid { grid-template-columns: 1fr; }
-            .hero-trust { flex-direction: column; gap: 1rem; }
-        }
-    </style>
+.nav.scrolled .logo { color: var(--deep-teal); }
+
+.logo-mark {
+    width: 36px;
+    height: 36px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.nav.scrolled .nav-links a { color: var(--charcoal); }
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta {
+    background: var(--gold) !important;
+    color: var(--charcoal) !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 100px !important;
+    font-weight: 600 !important;
+}
+
+.nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-2px); }
+
+.mobile-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+.nav.scrolled .mobile-toggle { color: var(--charcoal); }
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1920&q=80') center/cover;
+}
+
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text { color: var(--white); }
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(212, 165, 116, 0.2);
+    border: 1px solid var(--gold);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-badge .pulse {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease 0.1s both;
+}
+
+.hero h1 span { color: var(--gold); }
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 500px;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--charcoal);
+    box-shadow: 0 4px 20px rgba(212, 165, 116, 0.4);
+}
+
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(212, 165, 116, 0.5); }
+
+.btn-secondary {
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.btn-secondary:hover { background: rgba(255,255,255,0.25); }
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.stat { text-align: center; }
+.stat-value { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold); }
+.stat-label { font-size: 0.85rem; opacity: 0.8; }
+
+/* Hero Card */
+.hero-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.hero-card h3 {
+    font-size: 1.75rem;
+    color: var(--deep-teal);
+    margin-bottom: 0.5rem;
+}
+
+.hero-card p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+}
+
+.quick-calc {
+    display: grid;
+    gap: 1rem;
+}
+
+.input-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.input-group label { font-weight: 500; font-size: 0.9rem; color: var(--charcoal); }
+
+.input-group select, .input-group input {
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--cream-dark);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--cream);
+    color: var(--charcoal);
+    transition: all 0.3s;
+}
+
+.input-group select:focus, .input-group input:focus {
+    outline: none;
+    border-color: var(--deep-teal);
+    background: var(--white);
+}
+
+.earnings-preview {
+    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--teal-light) 100%);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.earnings-preview .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.earnings-preview .period { opacity: 0.8; font-size: 0.9rem; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Trust Bar */
+.trust-bar {
+    background: var(--white);
+    padding: 2rem;
+    border-bottom: 1px solid var(--cream-dark);
+}
+
+.trust-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.trust-item svg { color: var(--success); }
+
+.trust-item strong { color: var(--charcoal); }
+
+/* Social Proof */
+.social-proof {
+    padding: 6rem 2rem;
+    background: var(--white);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.section-header .eyebrow {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+}
+
+.section-header p { color: var(--gray); font-size: 1.1rem; }
+
+.testimonials-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+
+.testimonial-rating {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-info h5 { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.95rem; }
+.testimonial-info span { font-size: 0.85rem; color: var(--gray); }
+
+.testimonial-earnings {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--success);
+    color: var(--white);
+    padding: 0.4rem 0.75rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Calculator Section */
+.calculator-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+}
+
+.calc-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calculator-card {
+    background: var(--white);
+    border-radius: 32px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.calc-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.calc-header h2 { font-size: 2.25rem; color: var(--deep-teal); margin-bottom: 0.5rem; }
+.calc-header p { color: var(--gray); }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-group.full { grid-column: span 2; }
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group label .bonus { color: var(--success); font-weight: 500; }
+
+.form-group select, .form-group input {
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--cream-dark);
+    border-radius: 14px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--cream);
+    color: var(--charcoal);
+    transition: all 0.3s;
+}
+
+.form-group select:focus, .form-group input:focus {
+    outline: none;
+    border-color: var(--deep-teal);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(13, 79, 79, 0.1);
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--teal-light) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 16px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(13, 79, 79, 0.3);
+}
+
+.calculate-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 79, 79, 0.4); }
+
+/* Results */
+.results {
+    display: none;
+    margin-top: 2.5rem;
+    animation: fadeInUp 0.5s ease;
+}
+
+.results.show { display: block; }
+
+.results-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.results-header h3 { font-size: 1.75rem; color: var(--deep-teal); }
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.result-card {
+    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--teal-light) 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.result-card.featured {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--charcoal);
+    transform: scale(1.05);
+}
+
+.result-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.result-label { font-size: 0.9rem; opacity: 0.9; }
+
+.breakdown {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.breakdown h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--cream-dark);
+    font-size: 0.95rem;
+}
+
+.breakdown-item:last-child { border-bottom: none; }
+.breakdown-item.total { font-weight: 700; color: var(--deep-teal); font-size: 1.1rem; padding-top: 1rem; border-top: 2px solid var(--deep-teal); margin-top: 0.5rem; }
+
+.earning-tip {
+    background: linear-gradient(135deg, rgba(45, 138, 110, 0.1) 0%, rgba(45, 138, 110, 0.05) 100%);
+    border: 1px solid var(--success);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.earning-tip p { color: var(--success); font-weight: 500; margin: 0; }
+
+/* Quiz Section */
+.quiz-section {
+    padding: 6rem 2rem;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80') center/cover;
+    opacity: 0.1;
+}
+
+.quiz-container {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.quiz-card {
+    background: var(--cream);
+    border-radius: 32px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+}
+
+.quiz-progress {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.quiz-progress .dot {
+    width: 10px;
+    height: 10px;
+    background: var(--cream-dark);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.quiz-progress .dot.active { background: var(--deep-teal); width: 30px; border-radius: 10px; }
+.quiz-progress .dot.complete { background: var(--success); }
+
+.quiz-question { display: none; animation: fadeInUp 0.4s ease; }
+.quiz-question.active { display: block; }
+
+.quiz-question h4 {
+    font-size: 1.5rem;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.quiz-options { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.quiz-btn {
+    padding: 1.25rem 1.5rem;
+    background: var(--white);
+    border: 2px solid var(--cream-dark);
+    border-radius: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--charcoal);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.quiz-btn:hover { border-color: var(--deep-teal); background: rgba(13, 79, 79, 0.05); }
+
+#quizResult { margin-top: 2rem; }
+
+/* CTA Section */
+.cta-section {
+    padding: 8rem 2rem;
+    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--teal-light) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=80') center/cover;
+    opacity: 0.15;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+}
+
+.cta-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+}
+
+.cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+/* FAQ Section */
+.faq-section {
+    padding: 6rem 2rem;
+    background: var(--cream);
+}
+
+.faq-container { max-width: 800px; margin: 0 auto; }
+
+.faq-item {
+    background: var(--white);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.faq-question {
+    padding: 1.5rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--charcoal);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.faq-question:hover { background: var(--cream); }
+
+.faq-question .icon {
+    width: 24px;
+    height: 24px;
+    background: var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.faq-item.open .faq-question .icon { transform: rotate(180deg); }
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-item.open .faq-answer { max-height: 500px; }
+
+.faq-answer p {
+    padding: 0 2rem 1.5rem;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 5rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.footer-brand { max-width: 300px; }
+
+.footer-brand .logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand p { color: var(--gray-light); line-height: 1.7; }
+
+.footer-section h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--gold);
+}
+
+.footer-section ul { list-style: none; }
+.footer-section li { margin-bottom: 0.75rem; }
+.footer-section a { color: var(--gray-light); text-decoration: none; transition: color 0.3s; }
+.footer-section a:hover { color: var(--gold); }
+
+.advertise-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.advertise-banner h4 { font-family: 'Outfit', sans-serif; margin-bottom: 0.5rem; }
+.advertise-banner p { opacity: 0.9; margin-bottom: 1rem; font-size: 0.95rem; }
+.advertise-banner a {
+    display: inline-block;
+    background: var(--white);
+    color: #667eea;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+.advertise-banner a:hover { transform: translateY(-2px); }
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: var(--gray-light);
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .nav-links { display: none; }
+    .mobile-toggle { display: block; }
+
+    .hero-content { grid-template-columns: 1fr; text-align: center; padding-top: 6rem; }
+    .hero-subtitle { margin: 0 auto 2.5rem; }
+    .hero-ctas { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-card { margin-top: 2rem; }
+
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: span 1; }
+    .results-grid { grid-template-columns: 1fr; }
+    .result-card.featured { transform: none; }
+
+    .footer-content { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+    .trust-inner { gap: 2rem; }
+    .trust-item { font-size: 0.85rem; }
+    .hero-stats { gap: 1.5rem; }
+    .stat-value { font-size: 2rem; }
+    .footer-content { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="logo"><div class="logo-icon">💚</div>Plasma Pay</a>
-            <ul class="nav-links">
-                <li><a href="#calculator">Calculator</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/centers/" class="nav-cta">Find Centers</a></li>
-            </ul>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge"><span>✨</span> Updated for 2025</div>
-            <h1>Your Plasma Has <span class="highlight">Real Value</span></h1>
-            <p>Discover what you could earn by donating plasma. We'll help you find the best-paying centers near you.</p>
-            <a href="#calculator" class="hero-cta">Calculate Your Earnings →</a>
-            <div class="hero-trust">
-                <div class="trust-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Instant results</span></div>
-                <div class="trust-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>2025 rates</span></div>
-                <div class="trust-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>All major centers</span></div>
+<!-- Navigation -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <div class="logo-mark">P</div>
+            Plasma Pay
+        </a>
+        <ul class="nav-links">
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#quiz">Eligibility</a></li>
+            <li><a href="/blog/">Resources</a></li>
+            <li><a href="/centers/" class="nav-cta">Find Centers</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-badge">
+                <div class="pulse"></div>
+                New donors earning $1,200+ this month
+            </div>
+            <h1>Turn Your Plasma Into <span>Real Income</span></h1>
+            <p class="hero-subtitle">Join 50,000+ donors earning $500-1,200 monthly. Calculate your earnings in seconds and find the highest-paying centers near you.</p>
+            <div class="hero-ctas">
+                <a href="#calculator" class="btn btn-primary">Calculate My Earnings</a>
+                <a href="/centers/" class="btn btn-secondary">Find Centers Near Me</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">$847</div>
+                    <div class="stat-label">Avg First Month</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">50K+</div>
+                    <div class="stat-label">Happy Donors</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">2,500+</div>
+                    <div class="stat-label">Centers Listed</div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <section id="calculator-section" class="calculator-section">
-        <div class="section-header">
-            <h2>See Your Earning Potential</h2>
-            <p>Tell us a few details and we'll calculate what you could earn each month.</p>
+        <div class="hero-card">
+            <h3>Quick Estimate</h3>
+            <p>See your potential in 30 seconds</p>
+            <div class="quick-calc">
+                <div class="input-group">
+                    <label>I am a...</label>
+                    <select id="quickDonorType">
+                        <option value="new">New Donor (first time!)</option>
+                        <option value="returning">Returning Donor</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>My weight is...</label>
+                    <select id="quickWeight">
+                        <option value="110-149">110-149 lbs</option>
+                        <option value="150-174">150-174 lbs (+10%)</option>
+                        <option value="175-200">175-200 lbs (+20%)</option>
+                        <option value="200+">200+ lbs (+25%)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="earnings-preview">
+                <div class="amount" id="quickAmount">$847</div>
+                <div class="period">estimated first month</div>
+            </div>
         </div>
-        <div id="calculator" class="calculator">
+    </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+    <div class="trust-inner">
+        <div class="trust-item">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span><strong>FDA Compliant</strong> Standards</span>
+        </div>
+        <div class="trust-item">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span><strong>2025 Rates</strong> Updated Weekly</span>
+        </div>
+        <div class="trust-item">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span><strong>All Major Centers</strong> CSL, BioLife, Octapharma</span>
+        </div>
+        <div class="trust-item">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <span><strong>4.9/5</strong> from 2,847 reviews</span>
+        </div>
+    </div>
+</div>
+
+<!-- Social Proof -->
+<section class="social-proof">
+    <div class="section-header">
+        <div class="eyebrow">Real Results</div>
+        <h2>Donors Love What They Earn</h2>
+        <p>Join thousands who've turned plasma donation into reliable monthly income.</p>
+    </div>
+    <div class="testimonials-grid">
+        <div class="testimonial">
+            <div class="testimonial-earnings">+$1,150</div>
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"I was skeptical at first, but this calculator was spot-on. Made $1,150 my first month at CSL Plasma. Now I'm covering my car payment every month."</p>
+            <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Marcus" class="testimonial-avatar">
+                <div class="testimonial-info">
+                    <h5>Marcus T.</h5>
+                    <span>Austin, TX • CSL Plasma</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-earnings">+$680/mo</div>
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"As a nursing student, this has been a lifesaver. I donate twice a week between classes and earn $680+ monthly. Pays for groceries and textbooks."</p>
+            <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Sarah" class="testimonial-avatar">
+                <div class="testimonial-info">
+                    <h5>Sarah M.</h5>
+                    <span>Phoenix, AZ • BioLife</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-earnings">+$920</div>
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"Used the center finder and found an Octapharma 10 minutes away I didn't know existed. Their new donor bonus got me $920 in 4 weeks!"</p>
+            <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="David" class="testimonial-avatar">
+                <div class="testimonial-info">
+                    <h5>David K.</h5>
+                    <span>Denver, CO • Octapharma</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Calculator Section -->
+<section id="calculator" class="calculator-section">
+    <div class="calc-container">
+        <div class="section-header">
+            <div class="eyebrow">Free Calculator</div>
+            <h2>Calculate Your Exact Earnings</h2>
+            <p>Get a personalized estimate based on your weight, location, and donation frequency.</p>
+        </div>
+        <div class="calculator-card">
             <form id="calculatorForm">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="donorType">Are you a new donor?</label>
+                        <label>Donor Status <span class="bonus">Bonuses available!</span></label>
                         <select id="donorType" required>
-                            <option value="">Select one</option>
-                            <option value="new">Yes, first time (bonus rates!)</option>
-                            <option value="returning">No, returning donor</option>
-                            <option value="lapsed">Returning after 6+ months</option>
+                            <option value="">Select status</option>
+                            <option value="new">New Donor (first time)</option>
+                            <option value="returning">Returning Donor</option>
+                            <option value="lapsed">Lapsed (6+ months away)</option>
                         </select>
-                        <div class="hint">New donors earn up to $1,200 their first month</div>
                     </div>
                     <div class="form-group">
-                        <label for="weight">Your weight</label>
+                        <label>Your Weight</label>
                         <select id="weight" required>
-                            <option value="">Select range</option>
+                            <option value="">Select weight</option>
                             <option value="110-149">110-149 lbs</option>
-                            <option value="150-174">150-174 lbs</option>
-                            <option value="175-200">175-200 lbs</option>
-                            <option value="200+">200+ lbs</option>
+                            <option value="150-174">150-174 lbs (+10%)</option>
+                            <option value="175-200">175-200 lbs (+20%)</option>
+                            <option value="200+">200+ lbs (+25%)</option>
                         </select>
-                        <div class="hint">Higher weight = more plasma = higher pay</div>
                     </div>
                     <div class="form-group">
-                        <label for="center">Preferred center</label>
+                        <label>Preferred Center</label>
                         <select id="center">
-                            <option value="average">Any center (average)</option>
+                            <option value="average">Any Center (average)</option>
                             <option value="csl">CSL Plasma</option>
                             <option value="biolife">BioLife</option>
                             <option value="octapharma">Octapharma</option>
@@ -263,20 +1065,20 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="state">Your state</label>
+                        <label>Your State</label>
                         <select id="state" required>
                             <option value="">Select state</option>
-                            <option value="CA">California</option>
-                            <option value="NY">New York</option>
-                            <option value="TX">Texas</option>
-                            <option value="FL">Florida</option>
-                            <option value="IL">Illinois</option>
+                            <option value="CA">California (+15%)</option>
+                            <option value="NY">New York (+12%)</option>
+                            <option value="TX">Texas (+8%)</option>
+                            <option value="FL">Florida (+5%)</option>
+                            <option value="IL">Illinois (+10%)</option>
                             <option value="OH">Ohio</option>
-                            <option value="other">Other state</option>
+                            <option value="other">Other State</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="frequency">How often would you donate?</label>
+                        <label>Donation Frequency</label>
                         <select id="frequency" required>
                             <option value="">Select frequency</option>
                             <option value="2">Twice per week (max)</option>
@@ -285,19 +1087,19 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="miles">Distance to center (miles)</label>
-                        <input type="number" id="miles" min="0" max="100" value="5">
+                        <label>Distance to Center (miles)</label>
+                        <input type="number" id="miles" value="5" min="0" max="100">
                     </div>
                     <div class="form-group">
-                        <label for="mpg">Your car's MPG</label>
-                        <input type="number" id="mpg" min="10" max="60" value="25">
+                        <label>Your Car's MPG</label>
+                        <input type="number" id="mpg" value="25" min="10" max="60">
                     </div>
                     <div class="form-group">
-                        <label for="gasPrice">Gas price ($/gallon)</label>
-                        <input type="number" id="gasPrice" min="2" max="7" step="0.01" value="3.50">
+                        <label>Gas Price ($/gallon)</label>
+                        <input type="number" id="gasPrice" value="3.50" min="2" max="7" step="0.01">
                     </div>
-                    <div class="form-group full-width">
-                        <label for="referrals">Monthly referrals</label>
+                    <div class="form-group full">
+                        <label>Monthly Referrals <span class="bonus">+$75 each!</span></label>
                         <select id="referrals">
                             <option value="0">None</option>
                             <option value="1">1 friend (+$75)</option>
@@ -305,491 +1107,337 @@
                         </select>
                     </div>
                 </div>
-                <button type="submit" class="calculate-btn">Calculate My Earnings</button>
+                <button type="submit" class="calculate-btn">Calculate My Earnings →</button>
             </form>
-        </div>
 
-        <div id="results" class="results">
-            <div class="results-header"><h3>Here's What You Could Earn</h3></div>
-            <div class="results-grid">
-                <div class="result-card"><div class="result-value">$<span id="weeklyNet">0</span></div><div class="result-label">Per Week</div></div>
-                <div class="result-card"><div class="result-value">$<span id="monthlyNet">0</span></div><div class="result-label">Per Month</div></div>
-                <div class="result-card"><div class="result-value">$<span id="yearlyNet">0</span></div><div class="result-label">Per Year</div></div>
+            <div id="results" class="results">
+                <div class="results-header">
+                    <h3>Your Personalized Estimate</h3>
+                </div>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value">$<span id="weeklyNet">0</span></div>
+                        <div class="result-label">Per Week</div>
+                    </div>
+                    <div class="result-card featured">
+                        <div class="result-value">$<span id="monthlyNet">0</span></div>
+                        <div class="result-label">Per Month</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">$<span id="yearlyNet">0</span></div>
+                        <div class="result-label">Per Year</div>
+                    </div>
+                </div>
+                <div class="breakdown">
+                    <h4>Detailed Breakdown</h4>
+                    <div class="breakdown-item"><span>Base rate per donation</span><span>$<span id="baseRate">0</span></span></div>
+                    <div class="breakdown-item"><span>Weight bonus</span><span>+<span id="weightBonus">0</span>%</span></div>
+                    <div class="breakdown-item"><span>Location adjustment</span><span>+<span id="stateBonus">0</span>%</span></div>
+                    <div class="breakdown-item"><span>Donations per month</span><span><span id="monthlyDonations">0</span> visits</span></div>
+                    <div class="breakdown-item"><span>Gross monthly</span><span>$<span id="grossMonthly">0</span></span></div>
+                    <div class="breakdown-item"><span>Referral bonuses</span><span>+$<span id="referralBonus">0</span></span></div>
+                    <div class="breakdown-item"><span>Gas costs (<span id="totalMiles">0</span> mi)</span><span>-$<span id="gasMonthly">0</span></span></div>
+                    <div class="breakdown-item"><span>Est. taxes (20%)</span><span>-$<span id="taxMonthly">0</span></span></div>
+                    <div class="breakdown-item total"><span>Your Take-Home</span><span>$<span id="finalMonthly">0</span>/mo</span></div>
+                </div>
+                <div class="earning-tip">
+                    <p id="earningAnalysis">You're on track to earn great supplemental income!</p>
+                </div>
             </div>
-            <div class="breakdown">
-                <h4>How we calculated this</h4>
-                <div class="breakdown-item"><span>Base rate per donation</span><span>$<span id="baseRate">0</span></span></div>
-                <div class="breakdown-item"><span>Weight bonus</span><span>+<span id="weightBonus">0</span>%</span></div>
-                <div class="breakdown-item"><span>Location adjustment</span><span>+<span id="stateBonus">0</span>%</span></div>
-                <div class="breakdown-item"><span>Donations per month</span><span><span id="monthlyDonations">0</span> visits</span></div>
-                <div class="breakdown-item"><span>Gross monthly</span><span>$<span id="grossMonthly">0</span></span></div>
-                <div class="breakdown-item"><span>Referral bonuses</span><span>+$<span id="referralBonus">0</span></span></div>
-                <div class="breakdown-item"><span>Gas costs (<span id="totalMiles">0</span> mi)</span><span>-$<span id="gasMonthly">0</span></span></div>
-                <div class="breakdown-item"><span>Estimated taxes (20%)</span><span>-$<span id="taxMonthly">0</span></span></div>
-                <div class="breakdown-item total"><span>Your take-home</span><span>$<span id="finalMonthly">0</span>/mo</span></div>
-            </div>
-            <div class="earning-tip"><p id="earningAnalysis">You're on track to earn great supplemental income!</p></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Eligibility Quiz Section -->
-    <section id="quiz" class="quiz-section">
+<!-- Quiz Section -->
+<section id="quiz" class="quiz-section">
+    <div class="quiz-container">
         <div class="section-header">
-            <h2>Check Your Eligibility</h2>
-            <p>Answer a few quick questions to see if you can start earning today.</p>
+            <div class="eyebrow">2-Minute Check</div>
+            <h2>Can You Donate Plasma?</h2>
+            <p>Answer a few quick questions to check your eligibility.</p>
         </div>
-        <div class="quiz-container">
+        <div class="quiz-card">
             <div class="quiz-progress">
-                <span>Takes about 2 minutes</span>
-                <span>•</span>
-                <span>12 questions</span>
-                <span>•</span>
-                <span>FDA standards</span>
+                <div class="dot active" id="dot1"></div>
+                <div class="dot" id="dot2"></div>
+                <div class="dot" id="dot3"></div>
+                <div class="dot" id="dot4"></div>
+                <div class="dot" id="dot5"></div>
             </div>
 
             <div id="q1" class="quiz-question active">
-                <h4>1. What's your age?</h4>
+                <h4>What's your age?</h4>
                 <div class="quiz-options">
-                    <button class="quiz-btn" onclick="showNotEligible('You must be at least 18 years old to donate plasma. Come back when you turn 18!')">Under 18</button>
+                    <button class="quiz-btn" onclick="showNotEligible('You must be 18+ to donate. Come back when you turn 18!')">Under 18</button>
                     <button class="quiz-btn" onclick="nextQuestion(1, true)">18-65 years old</button>
                     <button class="quiz-btn" onclick="nextQuestion(1, 'maybe')">66-69 years old</button>
-                    <button class="quiz-btn" onclick="showNotEligible('Most centers have an age limit of 69. Some may accept up to 70 with doctor approval.')">70+ years old</button>
+                    <button class="quiz-btn" onclick="showNotEligible('Most centers have an age limit of 69.')">70+ years old</button>
                 </div>
             </div>
 
             <div id="q2" class="quiz-question">
-                <h4>2. What's your current weight?</h4>
+                <h4>What's your current weight?</h4>
                 <div class="quiz-options">
-                    <button class="quiz-btn" onclick="showNotEligible('You must weigh at least 110 lbs (50 kg) to safely donate plasma.')">Under 110 lbs</button>
+                    <button class="quiz-btn" onclick="showNotEligible('Minimum weight is 110 lbs for safe donation.')">Under 110 lbs</button>
                     <button class="quiz-btn" onclick="nextQuestion(2, true)">110-149 lbs</button>
-                    <button class="quiz-btn" onclick="nextQuestion(2, 'bonus10')">150-174 lbs (+10% pay)</button>
-                    <button class="quiz-btn" onclick="nextQuestion(2, 'bonus20')">175+ lbs (+20% pay)</button>
+                    <button class="quiz-btn" onclick="nextQuestion(2, 'bonus')">150-174 lbs (+10% pay!)</button>
+                    <button class="quiz-btn" onclick="nextQuestion(2, 'bonus')">175+ lbs (+20% pay!)</button>
                 </div>
             </div>
 
             <div id="q3" class="quiz-question">
-                <h4>3. Do you currently have any of these conditions?</h4>
+                <h4>Any current health conditions?</h4>
                 <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(3, true)">None of these</button>
-                    <button class="quiz-btn" onclick="showNotEligible('Active infections disqualify donation. Wait until fully recovered.')">Cold, flu, or fever</button>
-                    <button class="quiz-btn" onclick="showMaybe('Controlled diabetes may be acceptable. Check with your local center.')">Diabetes</button>
-                    <button class="quiz-btn" onclick="showNotEligible('Heart conditions typically disqualify donation for safety reasons.')">Heart disease</button>
+                    <button class="quiz-btn" onclick="nextQuestion(3, true)">No health issues</button>
+                    <button class="quiz-btn" onclick="showNotEligible('Wait until fully recovered from illness.')">Cold, flu, or fever</button>
+                    <button class="quiz-btn" onclick="showMaybe('Controlled diabetes may be OK. Check with your center.')">Diabetes (controlled)</button>
+                    <button class="quiz-btn" onclick="showNotEligible('Heart conditions typically disqualify donation.')">Heart condition</button>
                 </div>
             </div>
 
             <div id="q4" class="quiz-question">
-                <h4>4. Have you had any tattoos or piercings in the last 4 months?</h4>
+                <h4>Recent tattoos or piercings (last 4 months)?</h4>
                 <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(4, true)">No tattoos/piercings</button>
-                    <button class="quiz-btn" onclick="showMaybe('Professional tattoos/piercings from licensed shops may be OK.')">Yes, at licensed shop</button>
-                    <button class="quiz-btn" onclick="showNotEligible('Non-professional tattoos/piercings require a 12-month waiting period.')">Yes, non-professional</button>
+                    <button class="quiz-btn" onclick="nextQuestion(4, true)">No recent tattoos/piercings</button>
+                    <button class="quiz-btn" onclick="showMaybe('Licensed shop tattoos may be OK. Check with center.')">Yes, at licensed shop</button>
+                    <button class="quiz-btn" onclick="showNotEligible('Non-professional work requires 12-month wait.')">Yes, non-professional</button>
                 </div>
             </div>
 
             <div id="q5" class="quiz-question">
-                <h4>5. Are you currently taking any medications?</h4>
+                <h4>Do you have required documents?</h4>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem; text-align: center;">Photo ID, Social Security card, proof of address</p>
                 <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(5, true)">No medications</button>
-                    <button class="quiz-btn" onclick="nextQuestion(5, true)">Basic OTC meds only</button>
-                    <button class="quiz-btn" onclick="showMaybe('Most prescription meds are OK, but antibiotics require waiting until course is complete.')">Prescription medications</button>
-                    <button class="quiz-btn" onclick="showNotEligible('Blood thinners disqualify donation due to bleeding risk.')">Blood thinners</button>
-                </div>
-            </div>
-
-            <div id="q6" class="quiz-question">
-                <h4>6. Have you ever had hepatitis, HIV, or used IV drugs?</h4>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(6, true)">No, never</button>
-                    <button class="quiz-btn" onclick="showNotEligible('These conditions permanently disqualify donation to ensure plasma safety.')">Yes to any</button>
-                </div>
-            </div>
-
-            <div id="q7" class="quiz-question">
-                <h4>7. Are you pregnant or have you given birth in the last 6 months?</h4>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(7, true)">Not applicable / No</button>
-                    <button class="quiz-btn" onclick="showNotEligible('Must wait 6 months after giving birth to donate.')">Currently pregnant</button>
-                    <button class="quiz-btn" onclick="showNotEligible('Must wait 6 months after delivery before donating.')">Gave birth recently</button>
-                </div>
-            </div>
-
-            <div id="q8" class="quiz-question">
-                <h4>8. Have you traveled outside the US/Canada in the last 3 years?</h4>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(8, true)">No international travel</button>
-                    <button class="quiz-btn" onclick="nextQuestion(8, true)">Western Europe/Australia only</button>
-                    <button class="quiz-btn" onclick="showMaybe('Travel to malaria-risk areas may require 1-3 year wait. Check with center.')">Tropical/developing countries</button>
-                </div>
-            </div>
-
-            <div id="q9" class="quiz-question">
-                <h4>9. Do you have visible track marks or injection sites?</h4>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(9, true)">No injection marks</button>
-                    <button class="quiz-btn" onclick="nextQuestion(9, true)">Medical injections only</button>
-                    <button class="quiz-btn" onclick="showNotEligible('Visible injection sites will result in deferral.')">Yes, visible marks</button>
-                </div>
-            </div>
-
-            <div id="q10" class="quiz-question">
-                <h4>10. What's your protein intake like?</h4>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(10, true)">Eat meat/protein regularly</button>
-                    <button class="quiz-btn" onclick="nextQuestion(10, 'warning')">Vegetarian/light eater</button>
-                    <button class="quiz-btn" onclick="showMaybe('Low protein levels cause deferrals. Eat 50g+ protein before donating.')">Very low protein diet</button>
-                </div>
-            </div>
-
-            <div id="q11" class="quiz-question">
-                <h4>11. Do you have these required documents?</h4>
-                <p style="color: var(--warm-gray-500); font-size: 0.9rem; margin-bottom: 1rem;">Photo ID, Social Security card, proof of address</p>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="nextQuestion(11, true)">Have all documents</button>
-                    <button class="quiz-btn" onclick="showMaybe('You MUST have all documents to donate. Get them ready first!')">Missing some documents</button>
-                </div>
-            </div>
-
-            <div id="q12" class="quiz-question">
-                <h4>12. How's your vein accessibility?</h4>
-                <div class="quiz-options">
-                    <button class="quiz-btn" onclick="showEligibleComprehensive()">Good/visible veins</button>
-                    <button class="quiz-btn" onclick="showEligibleComprehensive()">Average veins</button>
-                    <button class="quiz-btn" onclick="showMaybe('Poor veins may lead to deferrals. Hydrate well before donating.')">Hard to find veins</button>
+                    <button class="quiz-btn" onclick="showEligibleComprehensive()">Yes, I have all documents</button>
+                    <button class="quiz-btn" onclick="showMaybe('You need all documents. Get them ready first!')">Missing some documents</button>
                 </div>
             </div>
 
             <div id="quizResult"></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Why Donate Section -->
-    <section class="promo-section why-section">
-        <div class="promo-container">
-            <div class="section-header">
-                <h2>Why Donate Plasma?</h2>
-                <p>Earn money while making a real difference in people's lives.</p>
-            </div>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <div class="icon">💰</div>
-                    <h4>Earn $400-600 Monthly</h4>
-                    <p>Regular donors earn substantial supplemental income. New donors can earn $800-1,200 in their first month with bonus programs.</p>
-                    <div class="highlight-box">$4,800-7,200 annually</div>
-                </div>
-                <div class="promo-card">
-                    <div class="icon">❤️</div>
-                    <h4>Save Lives</h4>
-                    <p>Your plasma creates life-saving medications for immune disorders, bleeding conditions, and emergency trauma.</p>
-                    <div class="highlight-box">Each donation helps 3-4 patients</div>
-                </div>
-                <div class="promo-card">
-                    <div class="icon">⏰</div>
-                    <h4>Flexible Schedule</h4>
-                    <p>Donate up to twice per week on your schedule. Most centers are open mornings, evenings, and weekends.</p>
-                    <div class="highlight-box">Perfect for busy lifestyles</div>
-                </div>
-                <div class="promo-card">
-                    <div class="icon">🤝</div>
-                    <h4>Help Your Community</h4>
-                    <p>Plasma donation provides needed income while contributing to healthcare. A win-win for everyone.</p>
-                    <div class="highlight-box">Make an impact locally</div>
-                </div>
-            </div>
-            <div class="section-cta">
-                <a href="/centers/" class="cta-coral">Find Centers Near You →</a>
-            </div>
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h2>Ready to Start Earning?</h2>
+        <p>Find the highest-paying plasma center near you and book your first appointment today.</p>
+        <div class="cta-buttons">
+            <a href="/centers/" class="btn btn-primary">Find Centers Near Me →</a>
+            <a href="#calculator" class="btn btn-secondary">Calculate Earnings First</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Side Hustle Comparison Section -->
-    <section class="promo-section sidehustle-section">
-        <div class="promo-container">
-            <div class="section-header">
-                <h2>The Best Side Hustle for 2025</h2>
-                <p>See how plasma donation compares to other income options.</p>
-            </div>
-            <div class="promo-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <div class="promo-card">
-                    <div class="icon">💰</div>
-                    <h4>Higher Hourly Rate</h4>
-                    <p>Earn $25-50/hour vs $15-20/hour with rideshare or delivery. Just 2-3 hours per week for $400-600 monthly.</p>
-                </div>
-                <div class="promo-card">
-                    <div class="icon">⏰</div>
-                    <h4>Total Flexibility</h4>
-                    <p>No scheduled shifts, customer ratings, or vehicle requirements. Donate when you want, where you want.</p>
-                </div>
-                <div class="promo-card">
-                    <div class="icon">❤️</div>
-                    <h4>Meaningful Impact</h4>
-                    <p>Unlike other side hustles, you're literally saving lives while earning money.</p>
-                </div>
-            </div>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Side Hustle</th>
-                        <th>Hourly Rate</th>
-                        <th>Monthly Potential</th>
-                        <th>Requirements</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="highlight-row">
-                        <td>Plasma Donation</td>
-                        <td>$30-40</td>
-                        <td>$400-600</td>
-                        <td>Health screening only</td>
-                    </tr>
-                    <tr>
-                        <td>Uber/Lyft</td>
-                        <td>$15-20</td>
-                        <td>$300-500</td>
-                        <td>Car, insurance, gas</td>
-                    </tr>
-                    <tr>
-                        <td>DoorDash</td>
-                        <td>$12-18</td>
-                        <td>$250-400</td>
-                        <td>Vehicle, gas, wear</td>
-                    </tr>
-                    <tr>
-                        <td>Freelancing</td>
-                        <td>$20-50</td>
-                        <td>$300-800</td>
-                        <td>Skills, portfolio</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="section-cta">
-                <a href="#calculator" class="cta-primary">Calculate My Earnings →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- College Students Section -->
-    <section class="promo-section college-section">
-        <div class="promo-container">
-            <div class="section-header">
-                <h2>Perfect for College Students</h2>
-                <p>Make $400-600 monthly while studying.</p>
-            </div>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <h4>Perfect for Student Life</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem; color: var(--warm-gray-600);">✓ Study while you donate - WiFi available</li>
-                        <li style="margin-bottom: 0.5rem; color: var(--warm-gray-600);">✓ Flexible schedule around classes</li>
-                        <li style="margin-bottom: 0.5rem; color: var(--warm-gray-600);">✓ No experience needed</li>
-                        <li style="margin-bottom: 0.5rem; color: var(--warm-gray-600);">✓ Cover textbooks, food, entertainment</li>
-                    </ul>
-                </div>
-                <div class="promo-card">
-                    <h4>Student Earnings</h4>
-                    <div style="margin-bottom: 1rem; padding-left: 1rem; border-left: 3px solid var(--primary);">
-                        <strong style="color: var(--primary-deep);">First Month:</strong>
-                        <span style="color: var(--warm-gray-600);"> $800-1,200 with bonuses</span>
-                    </div>
-                    <div style="margin-bottom: 1rem; padding-left: 1rem; border-left: 3px solid var(--peach);">
-                        <strong style="color: var(--peach);">Per Semester:</strong>
-                        <span style="color: var(--warm-gray-600);"> $1,600-2,400</span>
-                    </div>
-                    <div style="padding-left: 1rem; border-left: 3px solid var(--coral);">
-                        <strong style="color: var(--coral);">School Year:</strong>
-                        <span style="color: var(--warm-gray-600);"> $3,200-4,800</span>
-                    </div>
-                </div>
-            </div>
-            <div class="promo-grid" style="margin-top: 1.5rem;">
-                <div class="testimonial-card">
-                    <p>"I made $4,200 my freshman year! Paid for all my textbooks and still had money for spring break."</p>
-                    <div class="author">— Sarah M., University of Texas</div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Perfect side hustle. I study during donations and earn $500/month. Way better than my campus job."</p>
-                    <div class="author">— Jake R., Florida State University</div>
-                </div>
-            </div>
-            <div class="section-cta">
-                <a href="#calculator" class="cta-primary">Calculate My College Earnings →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specialized Calculators Section -->
-    <section class="calculators-section">
+<!-- FAQ Section -->
+<section id="faq" class="faq-section">
+    <div class="faq-container">
         <div class="section-header">
-            <h2>Specialized Calculators</h2>
-            <p>Explore more tools to maximize your plasma earnings.</p>
+            <div class="eyebrow">Got Questions?</div>
+            <h2>Frequently Asked Questions</h2>
         </div>
-        <div class="calc-grid">
-            <a href="/how-much-can-you-make-week-donating-plasma.html" class="calc-card">
-                <div class="icon">📊</div>
-                <h4>Weekly Earnings Calculator</h4>
-                <p>Calculate exactly how much you can make per week.</p>
-                <div class="link">$200-400 per week →</div>
-            </a>
-            <a href="/first-time-plasma-donation-bonus.html" class="calc-card">
-                <div class="icon">🎁</div>
-                <h4>First-Time Bonus Guide</h4>
-                <p>See the highest new donor bonuses available.</p>
-                <div class="link">Up to $1,200 bonus →</div>
-            </a>
-            <a href="/octapharma-payment-calculator.html" class="calc-card">
-                <div class="icon">🏢</div>
-                <h4>Octapharma Calculator</h4>
-                <p>Calculate earnings at Octapharma locations.</p>
-                <div class="link">$125 per visit →</div>
-            </a>
-            <a href="/csl-plasma-tax-calculator.html" class="calc-card">
-                <div class="icon">📋</div>
-                <h4>CSL Plasma Tax Calculator</h4>
-                <p>Calculate your tax liability and saving strategies.</p>
-                <div class="link">Tax help →</div>
-            </a>
-            <a href="/make-1000-month-plasma-donation.html" class="calc-card">
-                <div class="icon">💰</div>
-                <h4>$1,000+ Monthly Strategy</h4>
-                <p>Proven method to make $1,000+ per month.</p>
-                <div class="link">Secret strategy →</div>
-            </a>
-            <a href="/plasma-donation-pay-rates-2025.html" class="calc-card">
-                <div class="icon">📊</div>
-                <h4>2025 Pay Rates</h4>
-                <p>Complete guide to all center rates and bonuses.</p>
-                <div class="link">Compare rates →</div>
-            </a>
-            <a href="/plasma-donation-pay-chart-by-state.html" class="calc-card">
-                <div class="icon">🗺️</div>
-                <h4>Pay Chart by State</h4>
-                <p>Compare plasma pay rates across all 50 states.</p>
-                <div class="link">View state chart →</div>
-            </a>
-            <a href="/centers/" class="calc-card">
-                <div class="icon">🏥</div>
-                <h4>Center Finder</h4>
-                <p>Search 2,500+ plasma centers nationwide.</p>
-                <div class="link">Search centers →</div>
-            </a>
-        </div>
-    </section>
 
-    <!-- Products Section -->
-    <section class="products-section">
-        <div class="section-header">
-            <h2>Essentials for Successful Donors</h2>
-            <p>Products that help prevent deferrals and maximize earnings.</p>
-        </div>
-        <div class="products-grid">
-            <div class="product-category">
-                <h4>💪 Pre-Donation Prep</h4>
-                <ul>
-                    <li><a href="https://amzn.to/44mHHwl" target="_blank" rel="noopener">Optimum Nutrition Gold Standard Protein</a></li>
-                    <li><a href="https://amzn.to/4egbDhd" target="_blank" rel="noopener">Iron Supplements</a></li>
-                    <li><a href="https://amzn.to/4k4ju2B" target="_blank" rel="noopener">Liquid I.V. Hydration</a></li>
-                    <li><a href="https://amzn.to/3HRCtjk" target="_blank" rel="noopener">HydroFlask 32 oz</a></li>
-                </ul>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>How much can I really earn donating plasma?</span>
+                <div class="icon">▼</div>
             </div>
-            <div class="product-category">
-                <h4>📊 Health Monitoring</h4>
-                <ul>
-                    <li><a href="https://amzn.to/4lgHNeC" target="_blank" rel="noopener">Blood Pressure Monitor</a></li>
-                    <li><a href="https://amzn.to/4lfX4fJ" target="_blank" rel="noopener">Fitbit Charge Tracker</a></li>
-                    <li><a href="https://amzn.to/4lklW6c" target="_blank" rel="noopener">Digital Scale</a></li>
-                    <li><a href="https://amzn.to/4k1xnP0" target="_blank" rel="noopener">Digital Thermometer</a></li>
-                </ul>
-            </div>
-            <div class="product-category">
-                <h4>🔄 Recovery & Comfort</h4>
-                <ul>
-                    <li><a href="https://amzn.to/40hZJxg" target="_blank" rel="noopener">Arm Compression Sleeves</a></li>
-                    <li><a href="https://amzn.to/3G51fvX" target="_blank" rel="noopener">Heating Pad</a></li>
-                    <li><a href="https://amzn.to/3HP9I73" target="_blank" rel="noopener">Foam Roller</a></li>
-                    <li><a href="https://amzn.to/3FXwVmZ" target="_blank" rel="noopener">Ice Packs</a></li>
-                </ul>
+            <div class="faq-answer">
+                <p>New donors typically earn $800-1,200 in their first month thanks to new donor bonuses. After that, regular donors earn $400-700 monthly by donating twice per week. Your exact earnings depend on your weight, location, and chosen center.</p>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 2rem; color: var(--warm-gray-500); font-size: 0.9rem;">
-            Recommended by successful plasma donors.
-        </p>
-    </section>
 
-    <section id="faq" class="faq-section">
-        <div class="section-header">
-            <h2>Common Questions</h2>
-            <p>Everything you need to know about plasma donation earnings.</p>
-        </div>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>How much can I actually earn?</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </div>
-                <div class="faq-answer"><p>New donors can earn $50-120 per visit, with first-month bonuses reaching $900-1,200. Regular donors typically earn $400-700 monthly by donating twice per week.</p></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>Which plasma centers pay the most?</span>
+                <div class="icon">▼</div>
             </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Which centers pay the most?</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </div>
-                <div class="faq-answer"><p>CSL Plasma, BioLife, and Octapharma typically offer the highest rates. CSL averages $60-100 per visit, BioLife offers $50-90.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>How often can I donate?</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </div>
-                <div class="faq-answer"><p>FDA regulations allow plasma donation twice per week with at least 48 hours between visits. This means up to 8-9 donations per month.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Is plasma income taxable?</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </div>
-                <div class="faq-answer"><p>Yes, plasma donation income is taxable. Centers issue 1099 forms for earnings over $600 annually. We recommend setting aside 20% for taxes.</p></div>
+            <div class="faq-answer">
+                <p>CSL Plasma, BioLife, and Octapharma typically offer the highest rates. CSL averages $60-100 per visit, while BioLife offers $50-90. New donor bonuses can push first-month earnings above $1,000 at many locations.</p>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Plasma Pay Calculator</h4>
-                <p style="line-height: 1.7;">Helping you understand your plasma donation earning potential with accurate 2025 rates.</p>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>How often can I donate plasma?</span>
+                <div class="icon">▼</div>
             </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#calculator">Calculator</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/faq.html">FAQ</a></li>
-                    <li><a href="/centers/">Find Centers</a></li>
+            <div class="faq-answer">
+                <p>FDA regulations allow plasma donation up to twice per week, with at least 48 hours between donations. This means you can donate up to 8-9 times per month, maximizing your earning potential.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>Is plasma donation income taxable?</span>
+                <div class="icon">▼</div>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, plasma donation income is taxable. Centers issue 1099 forms for earnings over $600 annually. We recommend setting aside 20% for taxes. The good news: you can deduct mileage and related expenses!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>Does donating plasma hurt?</span>
+                <div class="icon">▼</div>
+            </div>
+            <div class="faq-answer">
+                <p>Most donors report minimal discomfort—similar to a routine blood draw. The needle prick lasts only a moment. During the 45-90 minute donation, you can relax, watch TV, or browse your phone. Many donors read or study!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <a href="/" class="logo">
+                <div class="logo-mark">P</div>
+                Plasma Pay
+            </a>
+            <p>Helping donors maximize their plasma earnings with accurate calculations and the best center recommendations since 2023.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#quiz">Eligibility Quiz</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Centers</h4>
+            <ul>
+                <li><a href="/centers/">Find Centers</a></li>
+                <li><a href="/centers/csl-plasma/">CSL Plasma</a></li>
+                <li><a href="/centers/biolife/">BioLife</a></li>
+                <li><a href="/centers/octapharma/">Octapharma</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="advertise-banner">
+        <h4>Advertise With Us</h4>
+        <p>Reach 50,000+ monthly visitors actively searching for plasma centers.</p>
+        <a href="/advertise.html">Partner With Us →</a>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Plasma Pay Calculator. Estimates based on current rates. Results may vary.</p>
+    </div>
+</footer>
+
+<script src="calculator.js"></script>
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Form submission
+document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    calculateEarnings();
+});
+
+// Quick calculator
+const quickDonorType = document.getElementById('quickDonorType');
+const quickWeight = document.getElementById('quickWeight');
+const quickAmount = document.getElementById('quickAmount');
+
+function updateQuickCalc() {
+    let base = quickDonorType.value === 'new' ? 847 : 520;
+    const weightMultipliers = { '110-149': 1, '150-174': 1.1, '175-200': 1.2, '200+': 1.25 };
+    const amount = Math.round(base * (weightMultipliers[quickWeight.value] || 1));
+    quickAmount.textContent = '$' + amount;
+}
+
+quickDonorType.addEventListener('change', updateQuickCalc);
+quickWeight.addEventListener('change', updateQuickCalc);
+
+// Quiz functions
+let currentQuestion = 1;
+
+function nextQuestion(q, answer) {
+    document.getElementById('q' + q).classList.remove('active');
+    document.getElementById('dot' + q).classList.remove('active');
+    document.getElementById('dot' + q).classList.add('complete');
+
+    if (q < 5) {
+        document.getElementById('q' + (q + 1)).classList.add('active');
+        document.getElementById('dot' + (q + 1)).classList.add('active');
+        currentQuestion = q + 1;
+    }
+}
+
+function showNotEligible(reason) {
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    document.getElementById('quizResult').innerHTML = `
+        <div style="background: #FEE2E2; border: 2px solid #EF4444; border-radius: 20px; padding: 2rem; text-align: center;">
+            <h4 style="color: #DC2626; margin-bottom: 1rem;">Not Eligible Right Now</h4>
+            <p style="color: #7F1D1D; margin-bottom: 1.5rem;">${reason}</p>
+            <button onclick="resetQuiz()" class="btn btn-primary" style="background: #EF4444;">Try Again</button>
+        </div>
+    `;
+}
+
+function showMaybe(message) {
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    document.getElementById('quizResult').innerHTML = `
+        <div style="background: #FEF3C7; border: 2px solid #F59E0B; border-radius: 20px; padding: 2rem; text-align: center;">
+            <h4 style="color: #D97706; margin-bottom: 1rem;">You May Be Eligible</h4>
+            <p style="color: #92400E; margin-bottom: 1.5rem;">${message}</p>
+            <a href="/centers/" class="btn btn-primary" style="background: #F59E0B; color: #000;">Find a Center to Confirm →</a>
+        </div>
+    `;
+}
+
+function showEligibleComprehensive() {
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    document.getElementById('quizResult').innerHTML = `
+        <div style="background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%); border: 2px solid #10B981; border-radius: 20px; padding: 2rem; text-align: center;">
+            <h4 style="color: #065F46; margin-bottom: 0.5rem; font-size: 1.5rem;">🎉 You're Eligible!</h4>
+            <p style="color: #047857; margin-bottom: 1.5rem; font-size: 1.1rem;">Great news! You meet the basic requirements to donate plasma.</p>
+            <div style="background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; text-align: left;">
+                <h5 style="color: #065F46; margin-bottom: 1rem;">Bring to your first visit:</h5>
+                <ul style="color: #047857; margin: 0; padding-left: 1.5rem;">
+                    <li>Valid photo ID</li>
+                    <li>Social Security card</li>
+                    <li>Proof of address (utility bill, bank statement)</li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/privacy.html">Privacy</a></li>
-                    <li><a href="/terms.html">Terms</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </div>
+            <a href="/centers/" class="btn btn-primary" style="background: #10B981;">Find Centers Near Me →</a>
         </div>
-        <div class="advertise-banner">
-            <h4>Advertise With Us</h4>
-            <p>Reach thousands of plasma donors searching for the best centers.</p>
-            <a href="/advertise.html">Partner With Us</a>
-        </div>
-        <div class="footer-bottom"><p>© 2025 Plasma Pay Calculator. Estimates based on current rates.</p></div>
-    </footer>
+    `;
+}
 
-    <script src="calculator.js"></script>
-    <script>
-        document.getElementById('calculatorForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            calculateEarnings();
-        });
-    </script>
+function resetQuiz() {
+    currentQuestion = 1;
+    document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+    document.querySelectorAll('.quiz-progress .dot').forEach(d => { d.classList.remove('active', 'complete'); });
+    document.getElementById('q1').classList.add('active');
+    document.getElementById('dot1').classList.add('active');
+    document.getElementById('quizResult').innerHTML = '';
+}
+
+// Mobile menu
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
 </body>
 </html>
