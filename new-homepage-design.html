@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-053DRWEQLS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-053DRWEQLS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma Pay Calculator | See What You Could Earn</title>
+    <meta name="description" content="Calculate your plasma donation earnings. See what you could earn at centers near you.">
+    <meta name="theme-color" content="#22c55e">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #22c55e;
+            --primary-soft: #86efac;
+            --primary-deep: #16a34a;
+            --coral: #fb7185;
+            --coral-soft: #fecdd3;
+            --peach: #fdba74;
+            --amber: #fbbf24;
+            --cream: #fefce8;
+            --warm-white: #fffbeb;
+            --warm-gray-50: #fafaf9;
+            --warm-gray-100: #f5f5f4;
+            --warm-gray-200: #e7e5e4;
+            --warm-gray-400: #a8a29e;
+            --warm-gray-600: #57534e;
+            --warm-gray-800: #292524;
+            --warm-gray-900: #1c1917;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'DM Sans', system-ui, sans-serif; line-height: 1.6; color: var(--warm-gray-800); background: var(--warm-white); }
+        h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; line-height: 1.2; }
+        nav { background: rgba(255, 251, 235, 0.95); backdrop-filter: blur(12px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(34, 197, 94, 0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--primary-deep); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-soft) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .nav-links { display: flex; list-style: none; gap: 0.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--warm-gray-600); font-weight: 500; padding: 0.6rem 1rem; border-radius: 10px; transition: all 0.3s ease; }
+        .nav-links a:hover { color: var(--primary-deep); background: rgba(34, 197, 94, 0.1); }
+        .nav-cta { background: linear-gradient(135deg, var(--coral) 0%, #f43f5e 100%) !important; color: white !important; font-weight: 600 !important; box-shadow: 0 4px 14px rgba(251, 113, 133, 0.3); }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+        .hero { min-height: 100vh; padding: 140px 2rem 80px; background: linear-gradient(180deg, var(--warm-white) 0%, var(--cream) 100%); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 100%; background: radial-gradient(circle, rgba(251, 113, 133, 0.08) 0%, transparent 60%); }
+        .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 60%; height: 80%; background: radial-gradient(circle, rgba(134, 239, 172, 0.1) 0%, transparent 60%); }
+        .hero-content { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: white; border: 1px solid var(--warm-gray-200); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; color: var(--warm-gray-600); margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .hero-badge span { color: var(--primary); }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--warm-gray-900); margin-bottom: 1.5rem; }
+        .hero h1 .highlight { color: var(--primary); }
+        .hero p { font-size: 1.25rem; color: var(--warm-gray-600); max-width: 600px; margin: 0 auto 2.5rem; }
+        .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%); color: white; padding: 1.1rem 2.5rem; border-radius: 16px; font-size: 1.1rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3); }
+        .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4); }
+        .hero-trust { display: flex; justify-content: center; gap: 2.5rem; margin-top: 4rem; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 0.5rem; color: var(--warm-gray-600); font-size: 0.95rem; }
+        .trust-item svg { width: 20px; height: 20px; color: var(--primary); }
+        .calculator-section { padding: 6rem 2rem; background: var(--warm-gray-50); }
+        .section-header { text-align: center; max-width: 600px; margin: 0 auto 3rem; }
+        .section-header h2 { font-size: 2.25rem; color: var(--warm-gray-900); margin-bottom: 1rem; }
+        .section-header p { color: var(--warm-gray-600); font-size: 1.1rem; }
+        .calculator { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 2.5rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); border: 1px solid var(--warm-gray-100); }
+        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full-width { grid-column: span 2; }
+        .form-group label { font-weight: 600; color: var(--warm-gray-800); margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .form-group .hint { font-size: 0.85rem; color: var(--warm-gray-500); margin-top: 0.35rem; }
+        .form-group select, .form-group input { padding: 0.9rem 1rem; border: 2px solid var(--warm-gray-200); border-radius: 12px; font-size: 1rem; font-family: inherit; color: var(--warm-gray-800); background: var(--warm-gray-50); transition: all 0.2s ease; }
+        .form-group select:focus, .form-group input:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1); }
+        .calculate-btn { width: 100%; padding: 1.2rem 2rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%); color: white; border: none; border-radius: 14px; font-size: 1.15rem; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3); }
+        .calculate-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(34, 197, 94, 0.4); }
+        .results { max-width: 700px; margin: 2rem auto 0; background: linear-gradient(135deg, var(--cream) 0%, white 100%); border-radius: 24px; padding: 2.5rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); border: 2px solid var(--primary-soft); display: none; }
+        .results.show { display: block; animation: slideUp 0.5s ease; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .results-header { text-align: center; margin-bottom: 2rem; }
+        .results-header h3 { font-size: 1.75rem; color: var(--primary-deep); }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        .result-card { text-align: center; padding: 1.5rem 1rem; background: white; border-radius: 16px; border: 1px solid var(--warm-gray-200); }
+        .result-value { font-family: 'Fraunces', Georgia, serif; font-size: 2.25rem; font-weight: 700; color: var(--primary-deep); margin-bottom: 0.25rem; }
+        .result-label { color: var(--warm-gray-600); font-size: 0.9rem; }
+        .breakdown { background: var(--warm-gray-50); border-radius: 16px; padding: 1.5rem; margin-top: 1.5rem; }
+        .breakdown h4 { text-align: center; color: var(--warm-gray-700); margin-bottom: 1rem; font-size: 1.1rem; }
+        .breakdown-item { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--warm-gray-200); font-size: 0.95rem; }
+        .breakdown-item:last-child { border-bottom: none; }
+        .breakdown-item.total { font-weight: 700; color: var(--primary-deep); font-size: 1.1rem; padding-top: 1rem; margin-top: 0.5rem; border-top: 2px solid var(--primary-soft); }
+        .earning-tip { background: linear-gradient(135deg, var(--primary-soft) 0%, rgba(134, 239, 172, 0.3) 100%); padding: 1.25rem; border-radius: 14px; margin-top: 1.5rem; text-align: center; }
+        .earning-tip p { color: var(--primary-deep); font-weight: 500; margin: 0; }
+        .faq-section { padding: 6rem 2rem; background: var(--cream); }
+        .faq-container { max-width: 700px; margin: 0 auto; }
+        .faq-item { background: white; border-radius: 16px; margin-bottom: 1rem; border: 1px solid var(--warm-gray-200); overflow: hidden; }
+        .faq-question { padding: 1.25rem 1.5rem; font-weight: 600; color: var(--warm-gray-800); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question:hover { background: var(--warm-gray-50); }
+        .faq-question svg { width: 20px; height: 20px; color: var(--warm-gray-400); transition: transform 0.3s ease; }
+        .faq-item.open .faq-question svg { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.open .faq-answer { max-height: 500px; }
+        .faq-answer p { padding: 0 1.5rem 1.25rem; color: var(--warm-gray-600); line-height: 1.7; }
+        footer { background: var(--warm-gray-900); color: var(--warm-gray-400); padding: 4rem 2rem 2rem; }
+        .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; }
+        .footer-section h4 { color: white; font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; margin-bottom: 1rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 0.5rem; }
+        .footer-section a { color: var(--warm-gray-400); text-decoration: none; }
+        .footer-section a:hover { color: var(--primary-soft); }
+        .advertise-banner { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 16px; text-align: center; margin-bottom: 2rem; }
+        .advertise-banner h4 { color: white; margin-bottom: 0.5rem; }
+        .advertise-banner p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 1rem; }
+        .advertise-banner a { display: inline-block; background: white; color: #667eea; padding: 0.6rem 1.5rem; border-radius: 10px; font-weight: 600; text-decoration: none; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid var(--warm-gray-800); font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .results-grid { grid-template-columns: 1fr; }
+            .hero-trust { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo"><div class="logo-icon">💚</div>Plasma Pay</a>
+            <ul class="nav-links">
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/centers/" class="nav-cta">Find Centers</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge"><span>✨</span> Updated for 2025</div>
+            <h1>Your Plasma Has <span class="highlight">Real Value</span></h1>
+            <p>Discover what you could earn by donating plasma. We'll help you find the best-paying centers near you.</p>
+            <a href="#calculator" class="hero-cta">Calculate Your Earnings →</a>
+            <div class="hero-trust">
+                <div class="trust-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Instant results</span></div>
+                <div class="trust-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>2025 rates</span></div>
+                <div class="trust-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>All major centers</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator-section" class="calculator-section">
+        <div class="section-header">
+            <h2>See Your Earning Potential</h2>
+            <p>Tell us a few details and we'll calculate what you could earn each month.</p>
+        </div>
+        <div id="calculator" class="calculator">
+            <form id="calculatorForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="donorType">Are you a new donor?</label>
+                        <select id="donorType" required>
+                            <option value="">Select one</option>
+                            <option value="new">Yes, first time (bonus rates!)</option>
+                            <option value="returning">No, returning donor</option>
+                            <option value="lapsed">Returning after 6+ months</option>
+                        </select>
+                        <div class="hint">New donors earn up to $1,200 their first month</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Your weight</label>
+                        <select id="weight" required>
+                            <option value="">Select range</option>
+                            <option value="110-149">110-149 lbs</option>
+                            <option value="150-174">150-174 lbs</option>
+                            <option value="175-200">175-200 lbs</option>
+                            <option value="200+">200+ lbs</option>
+                        </select>
+                        <div class="hint">Higher weight = more plasma = higher pay</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="center">Preferred center</label>
+                        <select id="center">
+                            <option value="average">Any center (average)</option>
+                            <option value="csl">CSL Plasma</option>
+                            <option value="biolife">BioLife</option>
+                            <option value="octapharma">Octapharma</option>
+                            <option value="grifols">Grifols</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">Your state</label>
+                        <select id="state" required>
+                            <option value="">Select state</option>
+                            <option value="CA">California</option>
+                            <option value="NY">New York</option>
+                            <option value="TX">Texas</option>
+                            <option value="FL">Florida</option>
+                            <option value="IL">Illinois</option>
+                            <option value="OH">Ohio</option>
+                            <option value="other">Other state</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">How often would you donate?</label>
+                        <select id="frequency" required>
+                            <option value="">Select frequency</option>
+                            <option value="2">Twice per week (max)</option>
+                            <option value="1">Once per week</option>
+                            <option value="0.5">Twice per month</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="miles">Distance to center (miles)</label>
+                        <input type="number" id="miles" min="0" max="100" value="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="mpg">Your car's MPG</label>
+                        <input type="number" id="mpg" min="10" max="60" value="25">
+                    </div>
+                    <div class="form-group">
+                        <label for="gasPrice">Gas price ($/gallon)</label>
+                        <input type="number" id="gasPrice" min="2" max="7" step="0.01" value="3.50">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="referrals">Monthly referrals</label>
+                        <select id="referrals">
+                            <option value="0">None</option>
+                            <option value="1">1 friend (+$75)</option>
+                            <option value="2">2 friends (+$150)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="calculate-btn">Calculate My Earnings</button>
+            </form>
+        </div>
+
+        <div id="results" class="results">
+            <div class="results-header"><h3>Here's What You Could Earn</h3></div>
+            <div class="results-grid">
+                <div class="result-card"><div class="result-value">$<span id="weeklyNet">0</span></div><div class="result-label">Per Week</div></div>
+                <div class="result-card"><div class="result-value">$<span id="monthlyNet">0</span></div><div class="result-label">Per Month</div></div>
+                <div class="result-card"><div class="result-value">$<span id="yearlyNet">0</span></div><div class="result-label">Per Year</div></div>
+            </div>
+            <div class="breakdown">
+                <h4>How we calculated this</h4>
+                <div class="breakdown-item"><span>Base rate per donation</span><span>$<span id="baseRate">0</span></span></div>
+                <div class="breakdown-item"><span>Weight bonus</span><span>+<span id="weightBonus">0</span>%</span></div>
+                <div class="breakdown-item"><span>Location adjustment</span><span>+<span id="stateBonus">0</span>%</span></div>
+                <div class="breakdown-item"><span>Donations per month</span><span><span id="monthlyDonations">0</span> visits</span></div>
+                <div class="breakdown-item"><span>Gross monthly</span><span>$<span id="grossMonthly">0</span></span></div>
+                <div class="breakdown-item"><span>Referral bonuses</span><span>+$<span id="referralBonus">0</span></span></div>
+                <div class="breakdown-item"><span>Gas costs (<span id="totalMiles">0</span> mi)</span><span>-$<span id="gasMonthly">0</span></span></div>
+                <div class="breakdown-item"><span>Estimated taxes (20%)</span><span>-$<span id="taxMonthly">0</span></span></div>
+                <div class="breakdown-item total"><span>Your take-home</span><span>$<span id="finalMonthly">0</span>/mo</span></div>
+            </div>
+            <div class="earning-tip"><p id="earningAnalysis">You're on track to earn great supplemental income!</p></div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="section-header">
+            <h2>Common Questions</h2>
+            <p>Everything you need to know about plasma donation earnings.</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How much can I actually earn?</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="faq-answer"><p>New donors can earn $50-120 per visit, with first-month bonuses reaching $900-1,200. Regular donors typically earn $400-700 monthly by donating twice per week.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Which centers pay the most?</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="faq-answer"><p>CSL Plasma, BioLife, and Octapharma typically offer the highest rates. CSL averages $60-100 per visit, BioLife offers $50-90.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How often can I donate?</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="faq-answer"><p>FDA regulations allow plasma donation twice per week with at least 48 hours between visits. This means up to 8-9 donations per month.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Is plasma income taxable?</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="faq-answer"><p>Yes, plasma donation income is taxable. Centers issue 1099 forms for earnings over $600 annually. We recommend setting aside 20% for taxes.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Plasma Pay Calculator</h4>
+                <p style="line-height: 1.7;">Helping you understand your plasma donation earning potential with accurate 2025 rates.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/centers/">Find Centers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                    <li><a href="/terms.html">Terms</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="advertise-banner">
+            <h4>Advertise With Us</h4>
+            <p>Reach thousands of plasma donors searching for the best centers.</p>
+            <a href="/advertise.html">Partner With Us</a>
+        </div>
+        <div class="footer-bottom"><p>© 2025 Plasma Pay Calculator. Estimates based on current rates.</p></div>
+    </footer>
+
+    <script src="calculator.js"></script>
+    <script>
+        document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            calculateEarnings();
+        });
+    </script>
+</body>
+</html>
