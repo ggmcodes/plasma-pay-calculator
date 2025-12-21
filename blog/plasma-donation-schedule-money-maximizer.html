@@ -533,39 +533,55 @@
     "dateModified": "2025-01-01"
 }
 </script>
+
+<!-- Plasma Pay Rebrand 2025 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/theme.css">
 </head>
-<body>
+<body class="plasma-rebrand">
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div style="display: flex; align-items: center;">
-                <a href="/" class="logo">
-                    <div class="logo-icon">PPC</div>
-                    Plasma Pay Calculator
-                </a>
-                <div class="trust-badge">Updated for 2025</div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/#calculator">Calculator</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/states.html">States</a></li>
-                <li><a href="/health/">Health</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-        </div>
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="/#calculator">Calculator</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/states.html">States</a></li>
-                <li><a href="/health/">Health</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navigation -->
+<nav class="nav" id="mainNav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <span class="logo-mark">$</span>
+            Plasma Pay
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/centers/">Find Centers</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/centers/" class="nav-cta">Find Centers Near Me</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12h18M3 6h18M3 18h18"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+    const nav = document.getElementById('mainNav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+</script>
+
 
     <!-- Navigation -->
 

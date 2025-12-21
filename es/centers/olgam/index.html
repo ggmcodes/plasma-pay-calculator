@@ -698,28 +698,55 @@
             }
         }
     </style>
+
+<!-- Plasma Pay Rebrand 2025 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/theme.css">
 </head>
-<body>
+<body class="plasma-rebrand">
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="/es/" class="logo">
-                <div class="logo-icon">P$</div>
-                Plasma Pay Calculator
-                <span class="trust-badge">Tarifas 2025</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/es/#calculator">Calculadora</a></li>
-                <li><a href="/es/blog/">Blog</a></li>
-                <li><a href="/es/states.html">Estados</a></li>
-                <li><a href="/es/health/">Salud</a></li>
-                <li><a href="/es/faq.html">FAQ</a></li>
-                <li><a href="/es/centers/" class="centers-highlight">Centros</a></li>
-                <li><a href="/centers/olgam/" class="lang-switch">English</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
-        </div>
-    </nav>
+    <!-- Navigation -->
+<nav class="nav" id="mainNav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <span class="logo-mark">$</span>
+            Plasma Pay
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/centers/">Find Centers</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/centers/" class="nav-cta">Find Centers Near Me</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12h18M3 6h18M3 18h18"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+    const nav = document.getElementById('mainNav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+</script>
+
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -1015,50 +1042,67 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Centros de Plasma</h4>
-                    <a href="/es/centers/csl-plasma/">CSL Plasma</a>
-                    <a href="/es/centers/biolife/">BioLife</a>
-                    <a href="/es/centers/octapharma/">Octapharma</a>
-                    <a href="/es/centers/grifols/">Grifols</a>
-                    <a href="/es/centers/olgam/">Olgam Life</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Recursos</h4>
-                    <a href="/es/blog/">Consejos de Donacion</a>
-                    <a href="/es/health/">Guia de Salud</a>
-                    <a href="/es/faq.html">FAQ</a>
-                    <a href="/es/#calculator">Calculadora de Pago</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Ciudades Principales</h4>
-                    <a href="/es/calculators/new-york/new-york-city/">Nueva York</a>
-                    <a href="/es/calculators/new-york/brooklyn/">Brooklyn</a>
-                    <a href="/es/calculators/new-york/bronx/">Bronx</a>
-                    <a href="/es/calculators/new-york/queens/">Queens</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Compania</h4>
-                    <a href="/es/about.html">Sobre Nosotros</a>
-                    <a href="/es/contact.html">Contacto</a>
-                    <a href="/es/privacy.html">Politica de Privacidad</a>
-                    <a href="/es/terms.html">Terminos de Servicio</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Plasma Pay Calculator. Todos los derechos reservados. No afiliado con Olgam Life.</p>
-            </div>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="/" class="logo">
+                <span class="logo-mark">$</span>
+                Plasma Pay
+            </a>
+            <p>Helping thousands of donors maximize their plasma donation earnings since 2023. Find the best-paying centers, calculate your earnings, and start earning today.</p>
         </div>
-    <div class="advertise-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; margin-top: 2rem; border-radius: 10px; text-align: center;">
-        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">Anúnciate Con Nosotros</h4>
-        <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; margin-bottom: 1rem;">Llega a miles de donantes de plasma activos buscando los mejores centros.</p>
-        <a href="/advertise.html" target="_blank" rel="noopener" style="display: inline-block; background: white; color: #667eea; padding: 0.6rem 1.5rem; border-radius: 5px; font-weight: 600; text-decoration: none;">Asóciate Con Nosotros</a>
+
+        <div class="footer-section">
+            <h4>Calculators</h4>
+            <ul>
+                <li><a href="/">Plasma Pay Calculator</a></li>
+                <li><a href="/biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
+                <li><a href="/csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
+                <li><a href="/grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
+                <li><a href="/octapharma-plasma-pay-chart.html">Octapharma Pay Chart</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="/centers/">Find Centers</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/plasma-donation-requirements.html">Requirements</a></li>
+                <li><a href="/first-time-donor-guide.html">First Time Guide</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/advertise.html">Advertise</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
     </div>
 
-    </footer>
+    <!-- Advertise Banner -->
+    <div class="advertise-banner">
+        <p>Are you a plasma center looking to reach new donors? Advertise with us!</p>
+        <a href="/advertise.html">Learn More</a>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 PlasmaPayCalculator.com. All rights reserved. Not affiliated with any plasma donation center.</p>
+        <div class="footer-legal">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+    </div>
+</footer>
+
 
     <script>
         function toggleMobileMenu() {

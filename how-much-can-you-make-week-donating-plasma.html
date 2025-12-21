@@ -247,39 +247,55 @@
             padding-top: 80px;
         }
 </style>
+
+<!-- Plasma Pay Rebrand 2025 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/theme.css">
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div style="display: flex; align-items: center;">
-                <a href="/" class="logo">
-                    <div class="logo-icon">PPC</div>
-                    Plasma Pay Calculator
-                </a>
-                <div class="trust-badge">Updated for 2025</div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/#calculator">Calculator</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/states.html">States</a></li>
-                <li><a href="/health/">Health</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-        </div>
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="/#calculator">Calculator</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/states.html">States</a></li>
-                <li><a href="/health/">Health</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navigation -->
+<nav class="nav" id="mainNav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <span class="logo-mark">$</span>
+            Plasma Pay
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/centers/">Find Centers</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/centers/" class="nav-cta">Find Centers Near Me</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12h18M3 6h18M3 18h18"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+    const nav = document.getElementById('mainNav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+</script>
+
 
     <!-- Navigation -->
 
@@ -488,21 +504,67 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Plasma Pay Calculator. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="/privacy.html" class="hover:text-green-400">Privacy Policy</a>
-                <a href="/terms.html" class="hover:text-green-400">Terms of Service</a>
-            </div>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="/" class="logo">
+                <span class="logo-mark">$</span>
+                Plasma Pay
+            </a>
+            <p>Helping thousands of donors maximize their plasma donation earnings since 2023. Find the best-paying centers, calculate your earnings, and start earning today.</p>
         </div>
-            <div class="mt-6 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-4 text-center">
-                <h4 class="text-white font-semibold mb-1">Advertise With Us</h4>
-                <p class="text-indigo-100 text-sm mb-3">Reach thousands of active plasma donors searching for the best centers.</p>
-                <a href="/advertise.html" target="_blank" rel="noopener" class="inline-block bg-white text-indigo-600 px-4 py-2 rounded font-semibold hover:bg-gray-100 transition">Partner With Us</a>
-            </div>
 
-    </footer>
+        <div class="footer-section">
+            <h4>Calculators</h4>
+            <ul>
+                <li><a href="/">Plasma Pay Calculator</a></li>
+                <li><a href="/biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
+                <li><a href="/csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
+                <li><a href="/grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
+                <li><a href="/octapharma-plasma-pay-chart.html">Octapharma Pay Chart</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="/centers/">Find Centers</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/plasma-donation-requirements.html">Requirements</a></li>
+                <li><a href="/first-time-donor-guide.html">First Time Guide</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/advertise.html">Advertise</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Advertise Banner -->
+    <div class="advertise-banner">
+        <p>Are you a plasma center looking to reach new donors? Advertise with us!</p>
+        <a href="/advertise.html">Learn More</a>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 PlasmaPayCalculator.com. All rights reserved. Not affiliated with any plasma donation center.</p>
+        <div class="footer-legal">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+    </div>
+</footer>
+
 
     <script>
         // Mobile menu toggle
