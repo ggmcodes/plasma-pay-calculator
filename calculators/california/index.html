@@ -17,7 +17,7 @@
     <title>California Plasma Calculator | Earn $500-$1,200/Month 2025 | LA, SF, San Diego</title>
     <meta name="description" content="Calculate exact plasma earnings in California. New donors earn $900-$1,200 first month, returning donors $500-$700/month. Real 2025 CA rates + bonuses.">
     <meta name="keywords" content="California plasma donation calculator, plasma pay California, LA plasma centers, San Diego plasma donation, San Francisco plasma pay, Sacramento CSL plasma, California BioLife rates">
-    <meta name="theme-color" content="#FFB81C">
+    <meta name="theme-color" content="#0D4F4F">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -76,545 +76,9 @@
     }
     </script>
     
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-        }
+    
 
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1.5rem;
-        }
-
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #27ae60;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 12px;
-            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
-        }
-
-        .trust-badge {
-            background: rgba(39, 174, 96, 0.1);
-            color: #27ae60;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 500;
-            margin-left: 0.8rem;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: all 0.3s;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-        
-        .centers-highlight {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
-            color: white !important;
-            border-radius: 6px !important;
-            font-weight: 700 !important;
-            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3) !important;
-            transform: scale(1.05);
-        }
-        
-        .centers-highlight:hover {
-            background: linear-gradient(135deg, #219a52 0%, #26be5f 100%) !important;
-            color: white !important;
-            transform: scale(1.08);
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #27ae60;
-            background: rgba(39, 174, 96, 0.1);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #2c3e50;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 80px;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
-            z-index: 999;
-            padding: 1rem;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .mobile-menu li {
-            margin: 0.5rem 0;
-        }
-
-        .mobile-menu a {
-            display: block;
-            padding: 1rem;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .mobile-menu a:hover,
-        .mobile-menu a.active {
-            color: #27ae60;
-            background: rgba(39, 174, 96, 0.1);
-        }
-
-        @media (max-width: 968px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .trust-badge {
-                font-size: 0.6rem;
-                padding: 0.15rem 0.4rem;
-            }
-            
-            .logo {
-                font-size: 1rem;
-            }
-            
-            .logo-icon {
-                width: 28px;
-                height: 28px;
-                font-size: 11px;
-            }
-        }
-
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Navigation */
-
-        .find-center-btn {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
-            font-size: 0.85rem;
-            white-space: nowrap;
-        }
-
-        .find-center-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
-            color: white;
-        }
-
-        .cta-btn {
-            background: linear-gradient(135deg, #FFB81C 0%, #003262 100%);
-            color: white !important;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.3s;
-            box-shadow: 0 2px 6px rgba(255, 184, 28, 0.3);
-            font-size: 0.85rem;
-            white-space: nowrap;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(255, 184, 28, 0.4);
-        }
-
-        @media (max-width: 1200px) {
-
-            .cta-btn {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.8rem;
-            }
-        }
-
-        @media (max-width: 1000px) {
-
-        }
-
-        @media (max-width: 768px) {
-
-        }
-
-        /* Main Content */
-        main {
-            margin-top: 100px;
-            padding: 2rem;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Calculator */
-        .calculator {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(255, 184, 28, 0.1);
-            margin-bottom: 3rem;
-        }
-
-        .calculator h2 {
-            color: #FFB81C;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-size: 1.8rem;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-
-        .form-group select,
-        .form-group input {
-            padding: 0.75rem;
-            border: 2px solid #ecf0f1;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group select:focus,
-        .form-group input:focus {
-            outline: none;
-            border-color: #FFB81C;
-        }
-
-        .calculate-btn {
-            width: 100%;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #FFB81C 0%, #003262 100%);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .calculate-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
-        }
-
-        /* Results */
-        .results {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
-            margin-top: 2rem;
-            display: none;
-        }
-
-        .results.show {
-            display: block;
-            animation: slideIn 0.5s ease;
-        }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .results h3 {
-            color: #FFB81C;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-size: 1.8rem;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .result-card {
-            text-align: center;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #f8fffe 0%, #e8f8f5 100%);
-            border-radius: 15px;
-            border: 2px solid #FFB81C;
-        }
-
-        .result-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #FFB81C;
-            margin-bottom: 0.5rem;
-        }
-
-        .result-label {
-            color: #7f8c8d;
-            font-weight: 500;
-        }
-
-        .breakdown {
-            border-top: 1px solid #ecf0f1;
-            padding-top: 2rem;
-        }
-
-        .breakdown h4 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .breakdown-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #ecf0f1;
-        }
-
-        .breakdown-item.total {
-            font-weight: 700;
-            color: #FFB81C;
-            border-bottom: none;
-            padding-top: 1rem;
-            font-size: 1.1rem;
-        }
-
-        /* Quiz Section */
-        .quiz-section {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.1);
-            margin-top: 3rem;
-        }
-
-        .quiz-section h3 {
-            color: #e74c3c;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-size: 1.8rem;
-        }
-
-        .quiz-question {
-            margin-bottom: 2rem;
-            display: none;
-        }
-
-        .quiz-question.active {
-            display: block;
-        }
-
-        .quiz-question h4 {
-            margin-bottom: 1rem;
-            color: #2c3e50;
-        }
-
-        .quiz-options {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .quiz-btn {
-            padding: 1rem;
-            background: #ecf0f1;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background 0.3s;
-            text-align: left;
-        }
-
-        .quiz-btn:hover {
-            background: #d5dbdb;
-        }
-
-        .quiz-result {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 15px;
-            margin-top: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: #FFB81C;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section a {
-            color: #bdc3c7;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: #FFB81C;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .calculator,
-            .results,
-            .quiz-section {
-                padding: 1.5rem;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-</style>
-
-    <style>
-    @media (max-width: 768px) {
-        }
-    </style>
+    
 
 <!-- Plasma Pay Rebrand 2025 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -624,19 +88,18 @@
 </head>
 <body class="plasma-rebrand">
     <!-- Navigation -->
-    <!-- Navigation -->
 <nav class="nav" id="mainNav">
     <div class="nav-inner">
-        <a href="/" class="logo">
+        <a href="../..//" class="logo">
             <span class="logo-mark">$</span>
             Plasma Pay
         </a>
         <ul class="nav-links">
-            <li><a href="/">Calculator</a></li>
-            <li><a href="/centers/">Find Centers</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/centers/" class="nav-cta">Find Centers Near Me</a></li>
+            <li><a href="../..//">Calculator</a></li>
+            <li><a href="../../centers/">Find Centers</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li><a href="../../faq.html">FAQ</a></li>
+            <li><a href="../../centers/" class="nav-cta">Find Centers Near Me</a></li>
         </ul>
         <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
@@ -663,9 +126,7 @@ function toggleMobileMenu() {
     navLinks.classList.toggle('active');
 }
 </script>
-
-
-    <!-- Navigation -->
+<!-- Navigation -->
     
 
     <!-- Navigation -->
@@ -675,7 +136,6 @@ function toggleMobileMenu() {
     
 
     
-
 
     <!-- Navigation -->
     
@@ -797,7 +257,7 @@ function toggleMobileMenu() {
 
             <!-- Eligibility Quiz -->
             <div style="text-align: center; margin: 2rem 0;">
-                <a href="#quiz" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                <a href="#quiz" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, var(--gold) 0%, var(--gold) 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
                     Can I Donate? Take 30-Second Quiz →
                 </a>
             </div>
@@ -874,42 +334,42 @@ function toggleMobileMenu() {
                                 <tr style="border-bottom: 1px solid #ecf0f1;">
                                     <td style="padding: 1rem; font-weight: 600;">Los Angeles</td>
                                     <td style="padding: 1rem; text-align: center;">$60-100</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">+$10-15</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">+$10-15</td>
                                     <td style="padding: 1rem; text-align: center; font-weight: 600;">$560-920</td>
                                     <td style="padding: 1rem; text-align: center;">CSL, BioLife</td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid #ecf0f1;">
                                     <td style="padding: 1rem; font-weight: 600;">San Francisco</td>
                                     <td style="padding: 1rem; text-align: center;">$55-95</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">+$8-12</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">+$8-12</td>
                                     <td style="padding: 1rem; text-align: center; font-weight: 600;">$504-836</td>
                                     <td style="padding: 1rem; text-align: center;">CSL, Octapharma</td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid #ecf0f1;">
                                     <td style="padding: 1rem; font-weight: 600;">San Diego</td>
                                     <td style="padding: 1rem; text-align: center;">$50-90</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">+$8-12</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">+$8-12</td>
                                     <td style="padding: 1rem; text-align: center; font-weight: 600;">$464-816</td>
                                     <td style="padding: 1rem; text-align: center;">CSL, BioLife, Grifols</td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid #ecf0f1;">
                                     <td style="padding: 1rem; font-weight: 600;">Sacramento</td>
                                     <td style="padding: 1rem; text-align: center;">$45-85</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">+$5-10</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">+$5-10</td>
                                     <td style="padding: 1rem; text-align: center; font-weight: 600;">$400-740</td>
                                     <td style="padding: 1rem; text-align: center;">CSL, BioLife</td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid #ecf0f1;">
                                     <td style="padding: 1rem; font-weight: 600;">Fresno</td>
                                     <td style="padding: 1rem; text-align: center;">$40-80</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">+$5-8</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">+$5-8</td>
                                     <td style="padding: 1rem; text-align: center; font-weight: 600;">$360-704</td>
                                     <td style="padding: 1rem; text-align: center;">CSL, Grifols</td>
                                 </tr>
                                 <tr>
                                     <td style="padding: 1rem; font-weight: 600;">Oakland</td>
                                     <td style="padding: 1rem; text-align: center;">$50-85</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">+$8-10</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">+$8-10</td>
                                     <td style="padding: 1rem; text-align: center; font-weight: 600;">$464-760</td>
                                     <td style="padding: 1rem; text-align: center;">CSL, BioLife</td>
                                 </tr>
@@ -973,12 +433,12 @@ function toggleMobileMenu() {
                             <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px;">
                                 <div style="font-weight: bold; color: #FFB81C; margin-bottom: 0.5rem;">150-174 lbs</div>
                                 <div style="font-size: 1.5rem; font-weight: bold; color: #2c3e50;">$44-88</div>
-                                <div style="color: #27ae60; font-size: 0.9rem;">+10% premium</div>
+                                <div style="color: var(--deep-teal); font-size: 0.9rem;">+10% premium</div>
                             </div>
                             <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px;">
                                 <div style="font-weight: bold; color: #FFB81C; margin-bottom: 0.5rem;">175+ lbs</div>
                                 <div style="font-size: 1.5rem; font-weight: bold; color: #2c3e50;">$48-96</div>
-                                <div style="color: #27ae60; font-size: 0.9rem;">+20% premium</div>
+                                <div style="color: var(--deep-teal); font-size: 0.9rem;">+20% premium</div>
                             </div>
                         </div>
                         <div style="text-align: center; background: rgba(255, 184, 28, 0.1); padding: 1rem; border-radius: 10px;">
@@ -993,7 +453,7 @@ function toggleMobileMenu() {
                     <div style="overflow-x: auto;">
                         <table style="width: 100%; border-collapse: collapse; background: #f8f9fa; border-radius: 10px; overflow: hidden;">
                             <thead>
-                                <tr style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white;">
+                                <tr style="background: linear-gradient(135deg, var(--deep-teal) 0%, var(--teal-light) 100%); color: white;">
                                     <th style="padding: 1rem; text-align: left; font-weight: 600;">Center</th>
                                     <th style="padding: 1rem; text-align: center; font-weight: 600;">First Month Bonus</th>
                                     <th style="padding: 1rem; text-align: center; font-weight: 600;">Donation Schedule</th>
@@ -1003,21 +463,21 @@ function toggleMobileMenu() {
                             <tbody>
                                 <tr style="border-bottom: 1px solid #ecf0f1;">
                                     <td style="padding: 1rem; font-weight: 600;">CSL Plasma</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">Up to $1,000</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">Up to $1,000</td>
                                     <td style="padding: 1rem; text-align: center;">8 donations</td>
-                                    <td style="padding: 1rem; text-align: center; font-weight: 600; color: #27ae60;">$1,200-1,500</td>
+                                    <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--deep-teal);">$1,200-1,500</td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid #ecf0f1;">
                                     <td style="padding: 1rem; font-weight: 600;">BioLife Plasma</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">Up to $900</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">Up to $900</td>
                                     <td style="padding: 1rem; text-align: center;">8 donations</td>
-                                    <td style="padding: 1rem; text-align: center; font-weight: 600; color: #27ae60;">$1,100-1,400</td>
+                                    <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--deep-teal);">$1,100-1,400</td>
                                 </tr>
                                 <tr>
                                     <td style="padding: 1rem; font-weight: 600;">Octapharma</td>
-                                    <td style="padding: 1rem; text-align: center; color: #27ae60; font-weight: 600;">Up to $600</td>
+                                    <td style="padding: 1rem; text-align: center; color: var(--deep-teal); font-weight: 600;">Up to $600</td>
                                     <td style="padding: 1rem; text-align: center;">8 donations</td>
-                                    <td style="padding: 1rem; text-align: center; font-weight: 600; color: #27ae60;">$900-1,200</td>
+                                    <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--deep-teal);">$900-1,200</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1146,10 +606,11 @@ function toggleMobileMenu() {
         </section>
 
 <!-- Footer -->
+<!-- Footer -->
 <footer class="footer">
     <div class="footer-grid">
         <div class="footer-brand">
-            <a href="/" class="logo">
+            <a href="../..//" class="logo">
                 <span class="logo-mark">$</span>
                 Plasma Pay
             </a>
@@ -1159,53 +620,51 @@ function toggleMobileMenu() {
         <div class="footer-section">
             <h4>Calculators</h4>
             <ul>
-                <li><a href="/">Plasma Pay Calculator</a></li>
-                <li><a href="/biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
-                <li><a href="/csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
-                <li><a href="/grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
-                <li><a href="/octapharma-plasma-pay-chart.html">Octapharma Pay Chart</a></li>
+                <li><a href="../..//">Plasma Pay Calculator</a></li>
+                <li><a href="../../biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
+                <li><a href="../../csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
+                <li><a href="../../grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
+                <li><a href="../../octapharma-plasma-pay-chart.html">Octapharma Pay Chart</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h4>Resources</h4>
             <ul>
-                <li><a href="/centers/">Find Centers</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/plasma-donation-requirements.html">Requirements</a></li>
-                <li><a href="/first-time-donor-guide.html">First Time Guide</a></li>
+                <li><a href="../../centers/">Find Centers</a></li>
+                <li><a href="../../blog/">Blog</a></li>
+                <li><a href="../../faq.html">FAQ</a></li>
+                <li><a href="../../plasma-donation-requirements.html">Requirements</a></li>
+                <li><a href="../../first-time-donor-guide.html">First Time Guide</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h4>Company</h4>
             <ul>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/advertise.html">Advertise</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Service</a></li>
+                <li><a href="../../about.html">About Us</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+                <li><a href="../../advertise.html">Advertise</a></li>
+                <li><a href="../../privacy.html">Privacy Policy</a></li>
+                <li><a href="../../terms.html">Terms of Service</a></li>
             </ul>
         </div>
     </div>
 
-    <!-- Advertise Banner -->
     <div class="advertise-banner">
         <p>Are you a plasma center looking to reach new donors? Advertise with us!</p>
-        <a href="/advertise.html">Learn More</a>
+        <a href="../../advertise.html">Learn More</a>
     </div>
 
     <div class="footer-bottom">
         <p>&copy; 2024 PlasmaPayCalculator.com. All rights reserved. Not affiliated with any plasma donation center.</p>
         <div class="footer-legal">
-            <a href="/privacy.html">Privacy</a>
-            <a href="/terms.html">Terms</a>
-            <a href="/disclaimer.html">Disclaimer</a>
+            <a href="../../privacy.html">Privacy</a>
+            <a href="../../terms.html">Terms</a>
+            <a href="../../disclaimer.html">Disclaimer</a>
         </div>
     </div>
 </footer>
-
 
     <!-- JavaScript -->
     <script src="/calculator.js"></script>
@@ -1242,11 +701,11 @@ function toggleMobileMenu() {
         function showNotEligible(reason) {
             document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
             document.getElementById('quizResult').innerHTML = `
-                <div style="background: #f8d7da; padding: 1.5rem; border-radius: 10px; border: 2px solid #e74c3c;">
+                <div style="background: #f8d7da; padding: 1.5rem; border-radius: 10px; border: 2px solid var(--gold);">
                     <h3 style="color: #721c24; margin-bottom: 1rem;">❌ Sorry, You Can't Donate Right Now</h3>
                     <p style="margin-bottom: 1rem;">${reason}</p>
                     <p>Check requirements or explore other income opportunities.</p>
-                    <button onclick="resetQuiz()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;">Take Quiz Again</button>
+                    <button onclick="resetQuiz()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: var(--gold); color: white; border: none; border-radius: 5px; cursor: pointer;">Take Quiz Again</button>
                 </div>
             `;
         }
@@ -1321,8 +780,8 @@ function toggleMobileMenu() {
                 </div>
 
                 <!-- Health & Safety -->
-                <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; border-left: 4px solid #27ae60;">
-                    <h3 style="color: #27ae60; margin-bottom: 1rem; font-size: 1.3rem;">🏥 Health & Safety</h3>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; border-left: 4px solid var(--deep-teal);">
+                    <h3 style="color: var(--deep-teal); margin-bottom: 1rem; font-size: 1.3rem;">🏥 Health & Safety</h3>
                     <div style="margin-bottom: 1rem;">
                         <a href="/blog/california/california-plasma-donation-side-effects-safety.html" style="color: #2c3e50; text-decoration: none; font-weight: 500; display: block; margin-bottom: 0.5rem;">
                             • California Plasma Donation Side Effects & Safety
@@ -1353,8 +812,8 @@ function toggleMobileMenu() {
                 </div>
 
                 <!-- Getting Started -->
-                <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; border-left: 4px solid #e74c3c;">
-                    <h3 style="color: #e74c3c; margin-bottom: 1rem; font-size: 1.3rem;">🚀 Getting Started</h3>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; border-left: 4px solid var(--gold);">
+                    <h3 style="color: var(--gold); margin-bottom: 1rem; font-size: 1.3rem;">🚀 Getting Started</h3>
                     <div style="margin-bottom: 1rem;">
                         <a href="/blog/california/california-plasma-donation-requirements-eligibility.html" style="color: #2c3e50; text-decoration: none; font-weight: 500; display: block; margin-bottom: 0.5rem;">
                             • California Requirements & Eligibility Guide
@@ -1382,8 +841,8 @@ function toggleMobileMenu() {
     </div>
 
     <!-- Medical & Financial Disclaimer -->
-    <div style="background: #f8f9fa; border: 2px solid #e74c3c; border-radius: 8px; padding: 1.5rem; margin: 2rem auto; max-width: 1200px;">
-        <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">⚠️ Important Medical & Financial Disclaimer</h4>
+    <div style="background: #f8f9fa; border: 2px solid var(--gold); border-radius: 8px; padding: 1.5rem; margin: 2rem auto; max-width: 1200px;">
+        <h4 style="color: var(--gold); margin-bottom: 0.5rem;">⚠️ Important Medical & Financial Disclaimer</h4>
         <p style="color: #555; margin: 0; font-size: 0.9rem; line-height: 1.6;">
             <strong>Medical:</strong> This calculator provides estimates only. Plasma donation eligibility and compensation vary by individual health status, location, and center policies. Always consult with medical professionals at plasma centers for personalized advice. Not medical advice.
             <br><br>

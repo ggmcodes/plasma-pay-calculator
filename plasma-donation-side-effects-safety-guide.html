@@ -19,7 +19,7 @@
     <meta name="keywords" content="plasma donation side effects, plasma donation safety, plasma donation risks, is plasma donation safe, plasma donation health effects">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Plasma Pay Calculator">
-    <meta name="theme-color" content="#e74c3c">
+    <meta name="theme-color" content="#0D4F4F">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -33,379 +33,7 @@
     <meta property="og:image" content="https://plasmapaycalculator.com/images/plasma-safety.jpg">
     <meta property="og:site_name" content="Plasma Pay Calculator">
     
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-        }
-
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1.5rem;
-        }
-
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #27ae60;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 12px;
-            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
-        }
-
-        .trust-badge {
-            background: rgba(39, 174, 96, 0.1);
-            color: #27ae60;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 500;
-            margin-left: 0.8rem;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: all 0.3s;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-        
-        .centers-highlight {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
-            color: white !important;
-            border-radius: 6px !important;
-            font-weight: 700 !important;
-            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3) !important;
-            transform: scale(1.05);
-        }
-        
-        .centers-highlight:hover {
-            background: linear-gradient(135deg, #219a52 0%, #26be5f 100%) !important;
-            color: white !important;
-            transform: scale(1.08);
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #27ae60;
-            background: rgba(39, 174, 96, 0.1);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #2c3e50;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 80px;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
-            z-index: 999;
-            padding: 1rem;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .mobile-menu li {
-            margin: 0.5rem 0;
-        }
-
-        .mobile-menu a {
-            display: block;
-            padding: 1rem;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .mobile-menu a:hover,
-        .mobile-menu a.active {
-            color: #27ae60;
-            background: rgba(39, 174, 96, 0.1);
-        }
-
-        @media (max-width: 968px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .trust-badge {
-                font-size: 0.6rem;
-                padding: 0.15rem 0.4rem;
-            }
-            
-            .logo {
-                font-size: 1rem;
-            }
-            
-            .logo-icon {
-                width: 28px;
-                height: 28px;
-                font-size: 11px;
-            }
-        }
-
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        .medical-header {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .medical-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        .medical-header p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .content-section {
-            background: white;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin: 2rem 0;
-        }
-        
-        .content-section h2 {
-            color: #e74c3c;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-        
-        .content-section h3 {
-            color: #2c3e50;
-            margin: 2rem 0 1rem 0;
-            font-size: 1.4rem;
-        }
-        
-        .content-section p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-        
-        .safety-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .safety-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            border-top: 4px solid #e74c3c;
-        }
-        
-        .severity-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .severity-table th {
-            background: #e74c3c;
-            color: white;
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .severity-table td {
-            padding: 1rem;
-            border-bottom: 1px solid #ecf0f1;
-        }
-        
-        .severity-table tr:hover {
-            background: rgba(231, 76, 60, 0.05);
-        }
-        
-        .warning-box {
-            background: #fff3cd;
-            border: 2px solid #ffc107;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-        }
-        
-        .warning-box h4 {
-            color: #856404;
-            margin-bottom: 0.5rem;
-        }
-        
-        .danger-box {
-            background: #f8d7da;
-            border: 2px solid #dc3545;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-        }
-        
-        .danger-box h4 {
-            color: #721c24;
-            margin-bottom: 0.5rem;
-        }
-        
-        .safe-box {
-            background: #d1ecf1;
-            border: 2px solid #bee5eb;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-        }
-        
-        .safe-box h4 {
-            color: #0c5460;
-            margin-bottom: 0.5rem;
-        }
-        
-        .symptom-list {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-        }
-        
-        .symptom-list ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .symptom-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #ecf0f1;
-        }
-        
-        .frequency-badge {
-            background: #17a2b8;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        @media (max-width: 768px) {
-            .medical-header h1 {
-                font-size: 2rem;
-            }
-            
-            .content-section {
-                padding: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-
-        }
-        
-        /* Navigation */
-
-        @media (max-width: 968px) {
-
-        }
-
-        /* Add padding to body to account for fixed nav */
-</style>
+    
 
 <!-- FAQ Schema for Featured Snippets -->
 <script type="application/ld+json">
@@ -457,7 +85,6 @@
 </head>
 <body class="plasma-rebrand">
     <!-- Navigation -->
-    <!-- Navigation -->
 <nav class="nav" id="mainNav">
     <div class="nav-inner">
         <a href="/" class="logo">
@@ -466,10 +93,10 @@
         </a>
         <ul class="nav-links">
             <li><a href="/">Calculator</a></li>
-            <li><a href="/centers/">Find Centers</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/centers/" class="nav-cta">Find Centers Near Me</a></li>
+            <li><a href="centers/">Find Centers</a></li>
+            <li><a href="blog/">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="centers/" class="nav-cta">Find Centers Near Me</a></li>
         </ul>
         <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
@@ -496,9 +123,7 @@ function toggleMobileMenu() {
     navLinks.classList.toggle('active');
 }
 </script>
-
-
-    <!-- Navigation -->
+<!-- Navigation -->
     
 
     <div class="medical-header">
@@ -510,8 +135,8 @@ function toggleMobileMenu() {
 
     <main class="container">
         <!-- Quick Answer Box for High CTR -->
-        <div style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f9f0 100%); border: 2px solid #27ae60; border-radius: 12px; padding: 24px; margin-bottom: 32px; box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15);">
-            <h2 style="color: #27ae60; font-size: 24px; font-weight: bold; margin-bottom: 16px; display: flex; align-items: center;">
+        <div style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f9f0 100%); border: 2px solid var(--deep-teal); border-radius: 12px; padding: 24px; margin-bottom: 32px; box-shadow: 0 4px 12px rgba(13, 79, 79, 0.15);">
+            <h2 style="color: var(--deep-teal); font-size: 24px; font-weight: bold; margin-bottom: 16px; display: flex; align-items: center;">
                 <span style="margin-right: 12px;">✅</span> Quick Answer: Plasma Donation Side Effects + Earnings
             </h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start;">
@@ -523,7 +148,7 @@ function toggleMobileMenu() {
                         <li>Bruising at needle site (normal)</li>
                         <li>Fatigue for 1-2 hours</li>
                     </ul>
-                    <p style="color: #27ae60; font-weight: 600; margin-top: 12px; margin-bottom: 0;">
+                    <p style="color: var(--deep-teal); font-weight: 600; margin-top: 12px; margin-bottom: 0;">
                         ⚡ Most side effects resolve within 30 minutes
                     </p>
                 </div>
@@ -535,7 +160,7 @@ function toggleMobileMenu() {
                         <li><strong>Per month:</strong> $400-700 regular income</li>
                         <li><strong>First month:</strong> $900-1,200 with bonuses</li>
                     </ul>
-                    <a href="/" style="display: inline-block; background: #27ae60; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 12px;">
+                    <a href="/" style="display: inline-block; background: var(--deep-teal); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 12px;">
                         Calculate Your Earnings →
                     </a>
                 </div>
@@ -851,6 +476,7 @@ function toggleMobileMenu() {
     </main>
 
     <!-- Footer -->
+<!-- Footer -->
 <footer class="footer">
     <div class="footer-grid">
         <div class="footer-brand">
@@ -865,48 +491,47 @@ function toggleMobileMenu() {
             <h4>Calculators</h4>
             <ul>
                 <li><a href="/">Plasma Pay Calculator</a></li>
-                <li><a href="/biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
-                <li><a href="/csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
-                <li><a href="/grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
-                <li><a href="/octapharma-plasma-pay-chart.html">Octapharma Pay Chart</a></li>
+                <li><a href="biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
+                <li><a href="csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
+                <li><a href="grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
+                <li><a href="octapharma-plasma-pay-chart.html">Octapharma Pay Chart</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h4>Resources</h4>
             <ul>
-                <li><a href="/centers/">Find Centers</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/plasma-donation-requirements.html">Requirements</a></li>
-                <li><a href="/first-time-donor-guide.html">First Time Guide</a></li>
+                <li><a href="centers/">Find Centers</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="plasma-donation-requirements.html">Requirements</a></li>
+                <li><a href="first-time-donor-guide.html">First Time Guide</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h4>Company</h4>
             <ul>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/advertise.html">Advertise</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Service</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
             </ul>
         </div>
     </div>
 
-    <!-- Advertise Banner -->
     <div class="advertise-banner">
         <p>Are you a plasma center looking to reach new donors? Advertise with us!</p>
-        <a href="/advertise.html">Learn More</a>
+        <a href="advertise.html">Learn More</a>
     </div>
 
     <div class="footer-bottom">
         <p>&copy; 2024 PlasmaPayCalculator.com. All rights reserved. Not affiliated with any plasma donation center.</p>
         <div class="footer-legal">
-            <a href="/privacy.html">Privacy</a>
-            <a href="/terms.html">Terms</a>
-            <a href="/disclaimer.html">Disclaimer</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="disclaimer.html">Disclaimer</a>
         </div>
     </div>
 </footer>
