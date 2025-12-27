@@ -17,7 +17,7 @@
     <title>About Plasma Calculator: $50-$120/Visit Estimates 2025 | Expert Donation Guide</title>
     <meta name="description" content="Expert plasma income guide. We help donors earn $500-$700/month nationwide. Accurate 2025 rates, bonuses, and earnings tips from experienced donors.">
     <meta name="keywords" content="about plasma pay calculator, plasma donation income guide, plasma donation earnings calculator, plasma income estimator">
-    <meta name="theme-color" content="#0D4F4F">
+    <meta name="theme-color" content="#27ae60">
     
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="canonical" href="https://plasmapaycalculator.com/about.html">
@@ -27,62 +27,500 @@
     <link rel="alternate" hreflang="es" href="https://plasmapaycalculator.com/es/about.html">
     <link rel="alternate" hreflang="x-default" href="https://plasmapaycalculator.com/about.html">
     
-    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
 
-    
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+        }
 
-<!-- Plasma Pay Rebrand 2025 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/theme.css">
-</head>
-<body class="plasma-rebrand">
-    <!-- Navigation -->
-<nav class="nav" id="mainNav">
-    <div class="nav-inner">
-        <a href="/" class="logo">
-            <span class="logo-mark">$</span>
-            Plasma Pay
-        </a>
-        <ul class="nav-links">
-            <li><a href="/">Calculator</a></li>
-            <li><a href="centers/">Find Centers</a></li>
-            <li><a href="blog/">Blog</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="centers/" class="nav-cta">Find Centers Near Me</a></li>
-        </ul>
-        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 12h18M3 6h18M3 18h18"/>
-            </svg>
-        </button>
-    </div>
-</nav>
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
 
-<script>
-// Nav scroll effect
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('mainNav');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .centers-highlight {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
+            color: white !important;
+            border-radius: 6px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3) !important;
+            transform: scale(1.05);
+        }
+        
+        .centers-highlight:hover {
+            background: linear-gradient(135deg, #219a52 0%, #26be5f 100%) !important;
+            color: white !important;
+            transform: scale(1.08);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .trust-badge {
+                font-size: 0.6rem;
+                padding: 0.15rem 0.4rem;
+            }
+            
+            .logo {
+                font-size: 1rem;
+            }
+            
+            .logo-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
+            }
+        }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            color: #27ae60;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .content-section h3 {
+            color: #3498db;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.4rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .content-section ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: #f8fffe;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(39, 174, 96, 0.1);
+        }
+
+        .stat-card h4 {
+            color: #27ae60;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            color: #7f8c8d;
+            margin: 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .team-member {
+            background: #f8fffe;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(39, 174, 96, 0.1);
+        }
+
+        .team-member h4 {
+            color: #27ae60;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member .role {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .cta-section p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            margin: 0 0.5rem;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #27ae60;
+        }
+
+        @media (max-width: 1200px) {
+
+            .cta-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 1000px) {
+
+        }
+
+        /* Find Center Button */
+        .find-center-btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .find-center-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+        }
+
+        @media (max-width: 768px) {
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .stats-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+</style>
+
+    <style>
+
     }
-});
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/health/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/health/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+            </ul>
+        </div>
+    </nav>
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
-</script>
-<!-- Navigation -->
+    <!-- Navigation -->
 
     <!-- Navigation -->
     
                     <!-- Hero Section -->
-                    <section class="hero" style="background: linear-gradient(rgba(13, 79, 79, 0.8), rgba(46, 204, 113, 0.8)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80') center/cover; color: white; padding: 80px 20px; text-align: center; margin-top: 80px;">
+                    <section class="hero" style="background: linear-gradient(rgba(39, 174, 96, 0.8), rgba(46, 204, 113, 0.8)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80') center/cover; color: white; padding: 80px 20px; text-align: center; margin-top: 80px;">
                         <div class="container mx-auto max-w-4xl">
                             <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">About Plasma Pay Calculator</h1>
                             <p style="font-size: 1.3rem; opacity: 0.95; max-width: 600px; margin: 0 auto;">Your trusted guide to plasma donation with accurate information and expert insights.</p>
@@ -194,47 +632,47 @@ function toggleMobileMenu() {
                     <div class="stat-card">
                         <h4>💰 Side Quest Hustle</h4>
                         <p>Your guide to finding profitable side hustles and building multiple income streams</p>
-                        <a href="https://sidequesthustle.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit sidequesthustle.com →</a>
+                        <a href="https://sidequesthustle.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit sidequesthustle.com →</a>
                     </div>
                     <div class="stat-card">
                         <h4>🏃‍♂️ Run Bike Calc</h4>
                         <p>Training calculators for runners and cyclists - pace, distance, and performance metrics</p>
-                        <a href="https://runbikecalc.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit runbikecalc.com →</a>
+                        <a href="https://runbikecalc.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit runbikecalc.com →</a>
                     </div>
                     <div class="stat-card">
                         <h4>🖨️ Test My Printer</h4>
                         <p>Free printer test pages and diagnostic tools to ensure your printer is working perfectly</p>
-                        <a href="https://testmyprinter.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit testmyprinter.com →</a>
+                        <a href="https://testmyprinter.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit testmyprinter.com →</a>
                     </div>
                     <div class="stat-card">
                         <h4>🛒 Test Before You Buy</h4>
                         <p>Product testing guides and reviews to help you make informed purchasing decisions</p>
-                        <a href="https://testbeforeyoubuy.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit testbeforeyoubuy.com →</a>
+                        <a href="https://testbeforeyoubuy.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit testbeforeyoubuy.com →</a>
                     </div>
                     <div class="stat-card">
                         <h4>📚 Sunset Study Club</h4>
                         <p>Study planning and academic success tools for college students and lifelong learners</p>
-                        <a href="https://sunsetstudyclub.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit sunsetstudyclub.com →</a>
+                        <a href="https://sunsetstudyclub.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit sunsetstudyclub.com →</a>
                     </div>
                     <div class="stat-card">
                         <h4>💉 Plasma Pay Calculator</h4>
                         <p>Calculate your plasma donation earnings with current 2025 rates from all major centers</p>
-                        <a href="https://plasmapaycalculator.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit plasmapaycalculator.com →</a>
+                        <a href="https://plasmapaycalculator.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit plasmapaycalculator.com →</a>
                     </div>
                     <div class="stat-card">
                         <h4>🧠 ADHD Focus Timer</h4>
                         <p>Pomodoro technique timer specifically designed for ADHD brains with customizable focus sessions</p>
-                        <a href="https://adhdfocustimer.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit adhdfocustimer.com →</a>
+                        <a href="https://adhdfocustimer.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit adhdfocustimer.com →</a>
                     </div>
                     <div class="stat-card">
                         <h4>🧘‍♀️ One Breathe Studio</h4>
                         <p>Mindfulness and meditation resources for stress relief and mental wellness</p>
-                        <a href="https://onebreathestudio.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit onebreathestudio.com →</a>
+                        <a href="https://onebreathestudio.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit onebreathestudio.com →</a>
                     </div>
                     <div class="stat-card">
                         <h4>🚗 Flex Driver Guide</h4>
                         <p>Complete earnings calculator and optimization guide for Amazon Flex delivery drivers</p>
-                        <a href="https://flexdriverguide.com" target="_blank" rel="noopener" style="color: var(--deep-teal); text-decoration: none; font-weight: 600;">Visit flexdriverguide.com →</a>
+                        <a href="https://flexdriverguide.com" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none; font-weight: 600;">Visit flexdriverguide.com →</a>
                     </div>
                 </div>
             </div>
@@ -244,8 +682,8 @@ function toggleMobileMenu() {
                 <p>Have questions about plasma donation or suggestions for improving our platform? We'd love to hear from you!</p>
                 
                 <div style="text-align: center; padding: 2rem; max-width: 600px; margin: 2rem auto;">
-                    <p style="font-size: 1.4rem; font-weight: 600; color: var(--deep-teal); margin-bottom: 1rem;">
-                        📧 <a href="mailto:hello@plasmapaycalculator.com" style="color: var(--deep-teal); text-decoration: none;">hello@plasmapaycalculator.com</a>
+                    <p style="font-size: 1.4rem; font-weight: 600; color: #27ae60; margin-bottom: 1rem;">
+                        📧 <a href="mailto:hello@plasmapaycalculator.com" style="color: #27ae60; text-decoration: none;">hello@plasmapaycalculator.com</a>
                     </p>
                     <p style="color: #7f8c8d; font-size: 0.9rem;">
                         We typically respond within 24-48 hours
@@ -262,67 +700,40 @@ function toggleMobileMenu() {
         </div>
     </main>
 
-    <!-- Footer -->
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <a href="/" class="logo">
-                <span class="logo-mark">$</span>
-                Plasma Pay
-            </a>
-            <p>Helping thousands of donors maximize their plasma donation earnings since 2023. Find the best-paying centers, calculate your earnings, and start earning today.</p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Plasma Pay Calculator</h4>
+                <p>Get accurate plasma donation income estimates with current 2025 rates. See exactly how much you'll earn before you donate.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Earning Resources</h4>
+                <ul>
+                    <li><a href="/#calculator">Earnings Calculator</a></li>
+                    <li><a href="/blog/">Maximizing Income Tips</a></li>
+                    <li><a href="/faq.html">Payment FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal & Support</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="footer-section">
-            <h4>Calculators</h4>
-            <ul>
-                <li><a href="/">Plasma Pay Calculator</a></li>
-                <li><a href="biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
-                <li><a href="csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
-                <li><a href="grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
-                <li><a href="octapharma-plasma-pay-chart.html">Octapharma Pay Chart</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Resources</h4>
-            <ul>
-                <li><a href="centers/">Find Centers</a></li>
-                <li><a href="blog/">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="plasma-donation-requirements.html">Requirements</a></li>
-                <li><a href="first-time-donor-guide.html">First Time Guide</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Company</h4>
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertise.html">Advertise</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Service</a></li>
-            </ul>
-        </div>
+    <div class="advertise-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; margin-top: 2rem; border-radius: 10px; text-align: center;">
+        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">Advertise With Us</h4>
+        <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; margin-bottom: 1rem;">Reach thousands of active plasma donors searching for the best centers.</p>
+        <a href="/advertise.html" target="_blank" rel="noopener" style="display: inline-block; background: white; color: #667eea; padding: 0.6rem 1.5rem; border-radius: 5px; font-weight: 600; text-decoration: none;">Partner With Us</a>
     </div>
 
-    <div class="advertise-banner">
-        <p>Are you a plasma center looking to reach new donors? Advertise with us!</p>
-        <a href="advertise.html">Learn More</a>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2024 PlasmaPayCalculator.com. All rights reserved. Not affiliated with any plasma donation center.</p>
-        <div class="footer-legal">
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="disclaimer.html">Disclaimer</a>
-        </div>
-    </div>
-</footer>
-
+        <p>&copy; 2025 Plasma Pay Calculator. Estimates based on current rates. Actual earnings may vary. Information for educational purposes.</p>
+    </footer>
     <script>
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');

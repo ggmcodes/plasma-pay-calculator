@@ -15,61 +15,721 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sunset Study Club - Your peaceful space for focused study sessions with Pomodoro timer and curated study essentials">
-    <meta name="theme-color" content="#0D4F4F">
+    <meta name="theme-color" content="#2d2d2d">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icon-192.png">
     <title>Sunset Study Club - Peaceful Focus Sessions</title>
-    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
 
-    
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+        }
 
-<!-- Plasma Pay Rebrand 2025 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/theme.css">
-</head>
-<body class="plasma-rebrand">
-    <!-- Navigation -->
-<nav class="nav" id="mainNav">
-    <div class="nav-inner">
-        <a href="/" class="logo">
-            <span class="logo-mark">$</span>
-            Plasma Pay
-        </a>
-        <ul class="nav-links">
-            <li><a href="/">Calculator</a></li>
-            <li><a href="centers/">Find Centers</a></li>
-            <li><a href="blog/">Blog</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="centers/" class="nav-cta">Find Centers Near Me</a></li>
-        </ul>
-        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 12h18M3 6h18M3 18h18"/>
-            </svg>
-        </button>
-    </div>
-</nav>
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
 
-<script>
-// Nav scroll effect
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('mainNav');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .centers-highlight {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
+            color: white !important;
+            border-radius: 6px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3) !important;
+            transform: scale(1.05);
+        }
+        
+        .centers-highlight:hover {
+            background: linear-gradient(135deg, #219a52 0%, #26be5f 100%) !important;
+            color: white !important;
+            transform: scale(1.08);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .trust-badge {
+                font-size: 0.6rem;
+                padding: 0.15rem 0.4rem;
+            }
+            
+            .logo {
+                font-size: 1rem;
+            }
+            
+            .logo-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
+            }
+        }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation */
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        /* Timer Section */
+        .timer-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin: 40px auto;
+            max-width: 500px;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .timer-container {
+            text-align: center;
+            color: #333;
+        }
+
+        .sun-circle {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(180deg, #e67e22 0%, #f39c12 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .timer-display {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            color: #2d2d2d;
+        }
+
+        .time-options {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .time-option {
+            padding: 8px 16px;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            border: none;
+        }
+
+        .time-option:hover {
+            background-color: #e0e0e0;
+        }
+
+        .time-option.active {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .timer-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .start-btn {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .start-btn:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        .pause-btn, .reset-btn {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .pause-btn:hover, .reset-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background-color: #f0f0f0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e67e22 0%, #f39c12 100%);
+            width: 100%;
+            transition: width 1s linear;
+        }
+
+        .session-info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        /* Product Showcases */
+        .products-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-category {
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            color: #2d2d2d;
+            margin-bottom: 15px;
+        }
+
+        .category-description {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .product-list {
+            list-style: none;
+        }
+
+        .product-item {
+            margin-bottom: 10px;
+        }
+
+        .product-link {
+            color: #e67e22;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .product-link:hover {
+            color: #d35400;
+            text-decoration: underline;
+        }
+
+        /* YouTube Section */
+        .youtube-section {
+            background: #f5f5f5;
+            padding: 80px 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: #ddd;
+            position: relative;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            color: #2d2d2d;
+            margin-bottom: 10px;
+        }
+
+        .video-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #d35400;
+            transform: translateY(-3px);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: white;
+            color: #2d2d2d;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: white;
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: 
+                0 4px 6px -1px rgba(241, 108, 41, 0.05),
+                0 2px 4px -1px rgba(241, 108, 41, 0.02),
+                0 0 0 1px rgba(241, 108, 41, 0.05);
+            margin: 40px 0;
+        }
+
+        .newsletter-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            color: #222222;
+            font-weight: 600;
+        }
+
+        .newsletter-section p {
+            font-size: 1.1rem;
+            color: #7A6E5D;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-btn {
+            background: linear-gradient(135deg, #F16C29 0%, #FDBD2C 100%);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(241, 108, 41, 0.2);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(241, 108, 41, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .timer-display {
+                font-size: 3rem;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+        }
+</style>
+
+    <style>
+
     }
-});
+            .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+        
+        .trust-badge {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
-</script>
-<!-- Navigation -->
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+            z-index: 999;
+            padding: 1rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin: 0.5rem 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <div class="trust-badge">Updated for 2025</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/health/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/#calculator">Calculator</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/states.html">States</a></li>
+                <li><a href="/health/">Health</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/centers/" class="centers-highlight">🏥 Centers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navigation -->
 
     <!-- Navigation -->
 
@@ -251,66 +911,6 @@ function toggleMobileMenu() {
             }
         });
     </script>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <a href="/" class="logo">
-                <span class="logo-mark">$</span>
-                Plasma Pay
-            </a>
-            <p>Helping thousands of donors maximize their plasma donation earnings since 2023. Find the best-paying centers, calculate your earnings, and start earning today.</p>
-        </div>
-
-        <div class="footer-section">
-            <h4>Calculators</h4>
-            <ul>
-                <li><a href="/">Plasma Pay Calculator</a></li>
-                <li><a href="biolife-plasma-pay-chart.html">BioLife Pay Chart</a></li>
-                <li><a href="csl-plasma-pay-chart.html">CSL Pay Chart</a></li>
-                <li><a href="grifols-biomat-pay-chart.html">Grifols Pay Chart</a></li>
-                <li><a href="octapharma-plasma-pay-chart.html">Octapharma Pay Chart</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Resources</h4>
-            <ul>
-                <li><a href="centers/">Find Centers</a></li>
-                <li><a href="blog/">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="plasma-donation-requirements.html">Requirements</a></li>
-                <li><a href="first-time-donor-guide.html">First Time Guide</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Company</h4>
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertise.html">Advertise</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Service</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="advertise-banner">
-        <p>Are you a plasma center looking to reach new donors? Advertise with us!</p>
-        <a href="advertise.html">Learn More</a>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2024 PlasmaPayCalculator.com. All rights reserved. Not affiliated with any plasma donation center.</p>
-        <div class="footer-legal">
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="disclaimer.html">Disclaimer</a>
-        </div>
-    </div>
-</footer>
 
 </body>
 </html>

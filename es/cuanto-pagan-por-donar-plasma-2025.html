@@ -19,7 +19,7 @@
     <meta name="keywords" content="cuanto pagan por donar plasma, donacion plasma pago, cuanto se gana donando plasma, plasma pago 2025, CSL plasma cuanto paga, BioLife pago plasma">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Calculadora de Pago de Plasma">
-    <meta name="theme-color" content="#0D4F4F">
+    <meta name="theme-color" content="#27ae60">
     <meta name="geo.region" content="US">
     <meta name="language" content="es">
     
@@ -40,8 +40,22 @@
     <meta property="og:image" content="https://plasmapaycalculator.com/images/plasma-pago-espanol.jpg">
     
     <!-- Tailwind CSS -->
-    
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#27ae60',
+                        secondary: '#2ecc71',
+                        accent: '#e74c3c',
+                        dark: '#2c3e50',
+                        light: '#ecf0f1'
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- FAQ Schema en Español -->
     <script type="application/ld+json">
@@ -77,56 +91,24 @@
       ]
     }
     </script>
-
-<!-- Plasma Pay Rebrand 2025 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/theme.css">
 </head>
 
-<body class="bg-gray-50 text-gray-900 plasma-rebrand">
+<body class="bg-gray-50 text-gray-900">
     <!-- Navegación -->
-    <!-- Navigation -->
-<!-- Navigation -->
-<nav class="nav" id="mainNav">
-    <div class="nav-inner">
-        <a href="../index.html" class="logo">
-            <span class="logo-mark">$</span>
-            Plasma Pay
-        </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Calculadora</a></li>
-            <li><a href="../centers/">Encontrar Centros</a></li>
-            <li><a href="../blog/">Blog</a></li>
-            <li><a href="../faq.html">Preguntas</a></li>
-            <li><a href="../centers/" class="nav-cta">Centros Cerca de Mi</a></li>
-        </ul>
-        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 12h18M3 6h18M3 18h18"/>
-            </svg>
-        </button>
-    </div>
-</nav>
-
-<script>
-// Nav scroll effect
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('mainNav');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});
-
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
-</script>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/es/" class="text-2xl font-bold text-primary">Calculadora de Pago de Plasma</a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="/es/" class="text-gray-700 hover:text-primary">Inicio</a>
+                    <a href="/es/calculators" class="text-gray-700 hover:text-primary">Calculadoras</a>
+                    <a href="/" class="text-gray-700 hover:text-primary">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Sección Hero -->
     <div class="bg-gradient-to-r from-green-50 to-blue-50 py-12">
@@ -331,59 +313,17 @@ function toggleMobileMenu() {
     </script>
 
     <!-- Footer -->
-    <!-- Footer -->
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <a href="../index.html" class="logo">
-                <span class="logo-mark">$</span>
-                Plasma Pay
-            </a>
-            <p>Ayudando a miles de donantes a maximizar sus ganancias por donacion de plasma desde 2023.</p>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-2">Calculadora de Pago de Plasma</h3>
+            <p class="text-gray-400">Obtén estimaciones precisas de ganancias por donación de plasma 2025.</p>
         </div>
+            <div class="mt-6 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-4 text-center">
+                <h4 class="text-white font-semibold mb-1">Anúnciate Con Nosotros</h4>
+                <p class="text-indigo-100 text-sm mb-3">Llega a miles de donantes de plasma activos buscando los mejores centros.</p>
+                <a href="https://forms.gle/swUdMQWEixhXbxAg7" target="_blank" rel="noopener" class="inline-block bg-white text-indigo-600 px-4 py-2 rounded font-semibold hover:bg-gray-100 transition">Asóciate Con Nosotros</a>
+            </div>
 
-        <div class="footer-section">
-            <h4>Calculadoras</h4>
-            <ul>
-                <li><a href="../index.html">Calculadora de Plasma</a></li>
-                <li><a href="../cuanto-pagan-por-donar-plasma-2025.html">Cuanto Pagan 2025</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Recursos</h4>
-            <ul>
-                <li><a href="../centers/">Encontrar Centros</a></li>
-                <li><a href="../blog/">Blog</a></li>
-                <li><a href="../faq.html">Preguntas Frecuentes</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Compania</h4>
-            <ul>
-                <li><a href="../about.html">Acerca de</a></li>
-                <li><a href="../contact.html">Contacto</a></li>
-                <li><a href="../privacy.html">Privacidad</a></li>
-                <li><a href="../terms.html">Terminos</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="advertise-banner">
-        <p>Eres un centro de plasma buscando alcanzar nuevos donantes? Anunciate con nosotros!</p>
-        <a href="../advertise.html">Mas Informacion</a>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2024 PlasmaPayCalculator.com. Todos los derechos reservados.</p>
-        <div class="footer-legal">
-            <a href="../privacy.html">Privacidad</a>
-            <a href="../terms.html">Terminos</a>
-        </div>
-    </div>
-</footer>
-
+    </footer>
 </body>
 </html>
