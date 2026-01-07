@@ -323,3 +323,77 @@ code, pre, .font-mono {
 main {
     margin-top: 80px;
 }
+
+/* ============================================
+   LEGACY NAV OVERRIDES
+   Override old green (#27ae60) styles with new mint/coral brand
+   These target the old class names used across the site
+   ============================================ */
+
+/* Nav bar - override old green border */
+nav {
+    border-bottom: 2px solid var(--mint) !important;
+}
+
+/* Logo text - mint color with Space Mono font */
+.logo {
+    font-family: var(--font-mono) !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: var(--mint) !important;
+}
+
+/* Logo icon box - mint gradient */
+.logo-icon {
+    width: 36px !important;
+    height: 36px !important;
+    background: linear-gradient(135deg, var(--mint) 0%, var(--mint-light) 100%) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 11px !important;
+}
+
+/* Trust badge - coral theme */
+.trust-badge {
+    background: var(--cream) !important;
+    color: var(--coral) !important;
+    border: 1px solid var(--coral) !important;
+    border-radius: 20px !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.7rem !important;
+    font-weight: 600 !important;
+    padding: 0.25rem 0.75rem !important;
+}
+
+/* Nav links hover - mint instead of green */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--mint) !important;
+    background: rgba(13, 148, 136, 0.1) !important;
+}
+
+/* Centers highlight button - coral gradient */
+.centers-highlight {
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+}
+
+.centers-highlight:hover {
+    background: linear-gradient(135deg, var(--coral-dark) 0%, var(--coral) 100%) !important;
+    color: white !important;
+}
+
+/* Mobile menu - mint border */
+.mobile-menu {
+    border-bottom: 2px solid var(--mint) !important;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+    color: var(--mint) !important;
+    background: rgba(13, 148, 136, 0.1) !important;
+}
