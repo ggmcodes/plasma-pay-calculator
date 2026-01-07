@@ -1,0 +1,325 @@
+/**
+ * Global Fonts & Brand Styles
+ * Include this file on all pages for consistent typography
+ *
+ * Usage: <link rel="stylesheet" href="/assets/css/global-fonts.css">
+ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap');
+
+/* CSS Variables - Brand Colors */
+:root {
+    --mint: #0d9488;
+    --mint-light: #14b8a6;
+    --coral: #f97316;
+    --coral-dark: #ea580c;
+    --charcoal: #1e293b;
+    --slate: #64748b;
+    --cream: #fefce8;
+
+    /* Font families */
+    --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Space Mono', 'SF Mono', Monaco, Consolas, monospace;
+}
+
+/* Base Typography - Use !important to override inline styles */
+body {
+    font-family: var(--font-sans) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-mono) !important;
+}
+
+code, pre, .font-mono {
+    font-family: var(--font-mono);
+}
+
+/* Navigation Styles */
+.ppc-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--mint);
+}
+
+.ppc-nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.ppc-logo {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--mint);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.ppc-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--mint) 0%, var(--mint-light) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.ppc-trust-badge {
+    background: var(--cream);
+    color: var(--coral);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 0.8rem;
+    border: 1px solid var(--coral);
+    font-family: var(--font-mono);
+}
+
+.ppc-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.ppc-nav-links a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.ppc-nav-links a:hover {
+    color: var(--mint);
+    background: rgba(13, 148, 136, 0.1);
+}
+
+.ppc-centers-highlight {
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%) !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+.ppc-centers-highlight:hover {
+    transform: scale(1.05);
+    color: white !important;
+}
+
+.ppc-language-switcher {
+    background: rgba(13, 148, 136, 0.1);
+    border: 1px solid rgba(13, 148, 136, 0.3);
+    color: var(--mint);
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.ppc-mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--charcoal);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.ppc-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--mint);
+    z-index: 999;
+    padding: 1rem;
+}
+
+.ppc-mobile-menu.active { display: block; }
+.ppc-mobile-menu ul { list-style: none; margin: 0; padding: 0; }
+.ppc-mobile-menu li { margin: 0.5rem 0; }
+.ppc-mobile-menu a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--charcoal);
+    font-weight: 500;
+    border-radius: 8px;
+}
+.ppc-mobile-menu a:hover { background: rgba(13, 148, 136, 0.1); color: var(--mint); }
+
+@media (max-width: 968px) {
+    .ppc-nav-links { display: none; }
+    .ppc-mobile-menu-btn { display: block; }
+    .ppc-trust-badge { display: none; }
+}
+
+/* Footer Styles */
+.ppc-footer {
+    background: var(--charcoal);
+    color: white;
+    padding: 4rem 2rem 2rem;
+}
+
+.ppc-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.ppc-footer-section h4 {
+    color: var(--mint);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: var(--font-mono);
+}
+
+.ppc-footer-section p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.ppc-footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ppc-footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.ppc-footer-section a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.ppc-footer-section a:hover {
+    color: var(--mint);
+}
+
+.ppc-footer-section a.highlight {
+    color: var(--coral);
+    font-weight: 600;
+}
+
+.ppc-advertise-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ppc-advertise-banner h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.ppc-advertise-banner p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.ppc-advertise-banner a {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ppc-footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #334155;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ppc-footer-bottom p {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Primary Button */
+.ppc-btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--mint) 0%, var(--mint-light) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.ppc-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(13, 148, 136, 0.4);
+}
+
+/* Secondary Button */
+.ppc-btn-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.ppc-btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.4);
+}
+
+/* Main content spacing for fixed nav */
+main {
+    margin-top: 80px;
+}
