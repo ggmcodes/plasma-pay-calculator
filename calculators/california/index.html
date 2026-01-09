@@ -721,11 +721,26 @@
                         </div>
                         
                         <div class="form-group">
+                            <label for="frequency">Donations Per Week</label>
+                            <select id="frequency" required>
+                                <option value="">Select frequency</option>
+                                <option value="1">1x per week</option>
+                                <option value="2" selected>2x per week (max)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <label for="miles">Distance to Center (miles)</label>
                             <input type="number" id="miles" min="0" max="100" step="0.1" placeholder="5.0" value="5">
                         </div>
                     </div>
-                    
+
+                    <!-- Hidden fields for calculator.js compatibility -->
+                    <input type="hidden" id="state" value="CA">
+                    <input type="hidden" id="mpg" value="25">
+                    <input type="hidden" id="gasPrice" value="5.50">
+                    <input type="hidden" id="referrals" value="0">
+
                     <button type="submit" class="calculate-btn">Optimize My Revenue Stream</button>
                     
                     <div style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d; font-style: italic;">
@@ -746,13 +761,37 @@
                         <div class="result-value">$<span id="monthlyNet">0</span></div>
                         <div class="result-label">Per Month (Net)</div>
                     </div>
+                    <div class="result-card">
+                        <div class="result-value">$<span id="yearlyNet">0</span></div>
+                        <div class="result-label">Per Year (Net)</div>
+                    </div>
                 </div>
-                
+
                 <div class="breakdown">
                     <h4>💡 Income Breakdown</h4>
                     <div class="breakdown-item">
+                        <span>Base Rate Per Visit:</span>
+                        <span>$<span id="baseRate">0</span></span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Weight Bonus:</span>
+                        <span>+<span id="weightBonus">0</span>%</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>California Premium:</span>
+                        <span>+<span id="stateBonus">0</span>%</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Monthly Donations:</span>
+                        <span><span id="monthlyDonations">0</span> visits</span>
+                    </div>
+                    <div class="breakdown-item">
                         <span>Monthly Gross Income:</span>
                         <span>$<span id="grossMonthly">0</span></span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Referral Bonuses:</span>
+                        <span>+$<span id="referralBonus">0</span></span>
                     </div>
                     <div class="breakdown-item">
                         <span>Gas Costs (<span id="totalMiles">0</span> miles):</span>
@@ -767,6 +806,8 @@
                         <span>$<span id="finalMonthly">0</span></span>
                     </div>
                 </div>
+
+                <p id="earningAnalysis" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 184, 28, 0.1); border-radius: 8px; color: #2c3e50;"></p>
                 
                 <!-- CTA after results -->
                 <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ecf0f1;">
