@@ -1,1 +1,20 @@
-plasma-pay-calculator/
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+
+# Build artifacts (optional - uncomment to exclude generated pages from git)
+# /p/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp files
+*.tmp
+*.bak

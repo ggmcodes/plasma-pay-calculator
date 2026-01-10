@@ -7,6 +7,7 @@ Allow: /es/calculators/
 Allow: /blog/
 Allow: /es/blog/
 Allow: /centers/
+Allow: /p/
 
 # Block admin, temp, and utility files
 Disallow: /admin/
@@ -17,6 +18,9 @@ Disallow: /*_test.html
 Disallow: /favicon-generator
 Disallow: /icon-generator
 Disallow: /create-favicons
+Disallow: /tools/*.py
+Disallow: /tools/*.mjs
 
-# Sitemap location
+# Sitemap locations
 Sitemap: https://plasmapaycalculator.com/sitemap.xml
+Sitemap: https://plasmapaycalculator.com/sitemap-programmatic.xml

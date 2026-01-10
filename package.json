@@ -1,5 +1,20 @@
 {
+  "name": "plasma-pay-calculator",
+  "version": "2.0.0",
+  "description": "Plasma donation pay calculator with programmatic SEO page generation",
+  "type": "module",
+  "scripts": {
+    "generate:programmatic": "node tools/generate-programmatic-pages.mjs",
+    "generate:programmatic:clean": "node tools/generate-programmatic-pages.mjs --clean",
+    "generate:programmatic:dry-run": "node tools/generate-programmatic-pages.mjs --dry-run",
+    "generate:programmatic:verbose": "node tools/generate-programmatic-pages.mjs --verbose",
+    "generate:plasma-pay": "node tools/generate-programmatic-pages.mjs --calculator=plasma-pay",
+    "generate:plasma-tax": "node tools/generate-programmatic-pages.mjs --calculator=plasma-tax"
+  },
   "dependencies": {
     "xmldom": "^0.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
