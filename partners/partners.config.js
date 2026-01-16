@@ -14,7 +14,7 @@ window.PartnersConfig = {
   partners: {
     olgam: {
       // Partner-level toggle
-      enabled: true,
+      enabled: false,
 
       // Partner details
       name: 'Olgam Life',

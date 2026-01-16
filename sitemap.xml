@@ -5899,12 +5899,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://plasmapaycalculator.com/centers/olgam/</loc>
-    <lastmod>2025-12-29</lastmod>
-    <priority>0.75</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://plasmapaycalculator.com/cities/los-angeles/</loc>
     <lastmod>2025-12-29</lastmod>
     <priority>0.6</priority>
@@ -7898,12 +7892,6 @@
   </url>
   <url>
     <loc>https://plasmapaycalculator.com/es/centers/</loc>
-    <lastmod>2025-12-29</lastmod>
-    <priority>0.75</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://plasmapaycalculator.com/es/centers/olgam/</loc>
     <lastmod>2025-12-29</lastmod>
     <priority>0.75</priority>
     <changefreq>weekly</changefreq>
