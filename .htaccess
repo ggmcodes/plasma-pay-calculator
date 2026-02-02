@@ -6,6 +6,12 @@ RewriteRule ^state/(.*)$ /calculators/$1 [R=301,L]
 # Redirect old /es/estado/ URLs to /es/calculators/
 RewriteRule ^es/estado/(.*)$ /es/calculators/$1 [R=301,L]
 
+# Add .html extension if file exists (handles URLs without .html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
 # Force non-www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
