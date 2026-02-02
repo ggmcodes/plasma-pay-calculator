@@ -1,5 +1,11 @@
 RewriteEngine On
 
+# Redirect old /state/ URLs to /calculators/
+RewriteRule ^state/(.*)$ /calculators/$1 [R=301,L]
+
+# Redirect old /es/estado/ URLs to /es/calculators/
+RewriteRule ^es/estado/(.*)$ /es/calculators/$1 [R=301,L]
+
 # Force non-www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
