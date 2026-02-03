@@ -6166,7 +6166,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "c8a31186-188a-43b1-b461-cb37c1d82172",
       "name": "CGT Global - Boston Clinic",
       "city": "Boston",
@@ -6181,7 +6180,6 @@
       "brand": "Independent",
       "latitude": 42.3642024,
       "longitude": -71.1357671,
-=======
       "id": "fa36c99f-2277-4c1a-a983-f0aa9f276d7e",
       "name": "Connecticut Blood Center",
       "city": "Middletown",
@@ -6196,7 +6194,6 @@
       "brand": "Independent",
       "latitude": 41.5561566,
       "longitude": -72.6820821,
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "website": "https://www.plasma.com",
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
@@ -25241,8 +25238,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "95bd38f9-be24-4312-9502-c3207a02bd72",
       "name": "Maimonides Blood Donation Center",
       "city": "Brooklyn",
@@ -25685,7 +25680,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "0bb12852-5f71-4230-9ab1-c42e7d7a2f97",
       "name": "Octapharma",
       "city": "Chattanooga",
@@ -32160,7 +32154,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "bf40562e-5306-4df1-971b-c2b24e491bbf",
       "name": "Rutland Regional Medical Center",
       "city": "Rutland",
@@ -32175,7 +32168,6 @@
       "brand": "Independent",
       "latitude": 43.5985264,
       "longitude": -72.9553776,
-=======
       "id": "37c8e9b8-866c-4f31-bc3f-25af7b627243",
       "name": "Rhode Island Blood Center - Providence Donor Center",
       "city": "Providence",
@@ -32190,7 +32182,6 @@
       "brand": "Independent",
       "latitude": 41.8299915,
       "longitude": -71.4253136,
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "website": "https://www.plasma.com",
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
@@ -33243,8 +33234,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "736dc892-6e21-43db-ac4a-2d5dda2c5a37",
       "name": "Kentucky Blood Center Somerset",
       "city": "Somerset",
@@ -33271,7 +33260,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "d310af43-a33e-4462-84e3-97a4f7be65a4",
       "name": "Parachute - Plasma Donation Center",
       "city": "Radcliff",
@@ -33350,7 +33338,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "8bd2c92d-0967-4d05-bf02-e8e32679ef1c",
       "name": "Target",
       "city": "New York",
@@ -33366,7 +33353,6 @@
       "latitude": 40.761387899999995,
       "longitude": -73.994646,
       "website": "https://www.target.com/sl/manhattan-hells-kitchen/3268",
-=======
       "id": "6ee1ee24-8df0-4792-874a-8f6b45f3b0e7",
       "name": "Western Kentucky Regional Blood Center",
       "city": "Owensboro",
@@ -33382,7 +33368,6 @@
       "latitude": 37.7466844,
       "longitude": -87.0883513,
       "website": "http://www.wkrbc.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -33420,7 +33405,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "64277b7b-d497-4c12-b5cf-175093ed6f0b",
       "name": "The Mount Sinai Hospital",
       "city": "New York",
@@ -33499,8 +33483,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "4cdf2739-f99f-4557-b0d7-e67cd48e3569",
       "name": "H Mart Little Ferry",
       "city": "Little Ferry",
@@ -33631,7 +33613,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "3eef8859-ee09-499a-8d43-32a8482dbf2b",
       "name": "Mount Sinai Medical Center",
       "city": "New York",
@@ -33647,7 +33628,6 @@
       "latitude": 40.7890717,
       "longitude": -73.9538601,
       "website": "http://www.mountsinai.org/",
-=======
       "id": "53fd5c84-16db-4df9-b9fb-1a18869b4c0a",
       "name": "NIH Donor Center at Fishers Lane",
       "city": "Rockville",
@@ -33663,7 +33643,6 @@
       "latitude": 39.063063,
       "longitude": -77.1139853,
       "website": "https://clinicalcenter.nih.gov/blooddonor/donationtypes/platelets.html",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -33675,7 +33654,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "7022196e-bc83-4716-892e-9a1a3c35a08f",
       "name": "James A. Lee, MD",
       "city": "New York",
@@ -33691,7 +33669,6 @@
       "latitude": 40.8407787,
       "longitude": -73.9431972,
       "website": "https://doctors.columbia.edu/us/ny/new-york/james-a-lee-md-161-fort-washington-avenue?utm_source=yextgmb",
-=======
       "id": "a09a9337-d8f6-4ebc-b98f-d40a02994079",
       "name": "Lancaster General Blood Donor Center",
       "city": "Lancaster",
@@ -33707,7 +33684,6 @@
       "latitude": 40.0654013,
       "longitude": -76.35427779999999,
       "website": "https://www.lghblooddonors.org/donorportal/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -34733,7 +34709,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "db216e9a-2899-461b-b544-3e7a835d47b4",
       "name": "Foundation for Morristown Medical Center",
       "city": "Morristown",
@@ -34749,7 +34724,6 @@
       "latitude": 40.785902,
       "longitude": -74.46786,
       "website": "https://www.f4mmc.org/?utm_source=google",
-=======
       "id": "81e29f89-a87b-47cf-84a8-f191986f794e",
       "name": "Freehold Donor Center",
       "city": "Freehold",
@@ -34843,7 +34817,6 @@
       "latitude": 40.9865048,
       "longitude": -73.6747895,
       "website": "http://nybc.org/ryejobs",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -34907,8 +34880,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "9345dbe4-843e-492d-9408-eb1fad1b0d6a",
       "name": "University of Iowa DeGowin Blood Center",
       "city": "Iowa City",
@@ -34987,7 +34958,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "081bc297-261e-410e-bdd3-294888f2b7ed",
       "name": "Biological Specialty Company",
       "city": "Medford",
@@ -35118,7 +35088,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "7284f932-52aa-42e3-ad0f-63861096afd0",
       "name": "Naval Blood Research Laboratory",
       "city": "Boston",
@@ -35145,8 +35114,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "8c22487c-8e90-431c-b64d-c582e50147d1",
       "name": "Da-Mar Biological Inc",
       "city": "Northborough",
@@ -35173,8 +35140,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "1775664e-7dc3-45ee-83cc-1cc54b8dc055",
       "name": "Versiti Blood Center of Michigan",
       "city": "Farmington Hills",
@@ -35279,7 +35244,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "d93d849d-bb63-4e4a-97dc-db7be9fe1482",
       "name": "The Blood Cancer Foundation of Michigan",
       "city": "Farmington Hills",
@@ -35436,8 +35400,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "2c769f1a-bbd1-44fb-a6c4-3e4d82d83a0e",
       "name": "Versiti Blood Center of Ohio",
       "city": "Hilliard",
@@ -35490,7 +35452,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "0d3b532c-d04e-4791-bfd5-32d41b1bd19a",
       "name": "4Kscore Test",
       "city": "Elmwood Park",
@@ -35569,8 +35530,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "cb455cb0-1516-49d9-afea-f22e8e08c181",
       "name": "Our Blood Institute, Northgate",
       "city": "Oklahoma City",
@@ -35779,7 +35738,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "ddb1cf82-1d52-4a12-9ea4-ef320037c0e6",
       "name": "Biological Specialty Company",
       "city": "Reading",
@@ -36170,8 +36128,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "728be411-e9e1-44fc-8415-c8347e0517c9",
       "name": "Bloodworks Northwest Bellevue Donor Center",
       "city": "Bellevue",
@@ -36224,7 +36180,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "c4f7fc46-5403-4c08-85c1-76b41faec06c",
       "name": "Wounded Warrior Project",
       "city": "Washington",
@@ -36251,7 +36206,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "60988d98-be6f-44ec-a0f3-1eddd119535b",
       "name": "CAMC General Hospital",
       "city": "Charleston",
@@ -36267,7 +36221,6 @@
       "latitude": 38.3479406,
       "longitude": -81.6269641,
       "website": "http://camc.org/gh",
-=======
       "id": "01f90526-334c-47c0-bfce-71a6ab957a53",
       "name": "Bloodworks Northwest Lynnwood Donor Center",
       "city": "Lynnwood",
@@ -36283,7 +36236,6 @@
       "latitude": 47.8194605,
       "longitude": -122.3154483,
       "website": "http://bloodworksnw.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -36503,7 +36455,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "1e6e21a3-53ec-4545-ab71-ce36fa6baf12",
       "name": "BioLife Hoover Laboratory",
       "city": "Hoover",
@@ -36519,7 +36470,6 @@
       "latitude": 33.3607168,
       "longitude": -86.78659259999999,
       "website": "http://biolifeplasma.com/",
-=======
       "id": "a9183980-14cf-4a8a-bf57-1b85386ef768",
       "name": "Southern Blood Service Inc",
       "city": "Birmingham",
@@ -36561,7 +36511,6 @@
       "latitude": 34.284509799999995,
       "longitude": -86.2269324,
       "website": "http://www.lifesouth.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -37197,7 +37146,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "96362430-b94e-40be-ad40-769067663eca",
       "name": "Clinical Discovery Institute",
       "city": "Miramar",
@@ -37224,8 +37172,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "515a587e-0e44-47d9-8004-511a19800a49",
       "name": "Parachute - Plasma Donation Center",
       "city": "Brunswick",
@@ -37460,7 +37406,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "82e04cdd-7e33-4089-b2c1-a52a2af9529c",
       "name": "Walmart Supercenter",
       "city": "Garfield",
@@ -37476,7 +37421,6 @@
       "latitude": 40.8666623,
       "longitude": -74.1010551,
       "website": "https://www.walmart.com/store/5752-garfield-nj/?veh=seo_loc",
-=======
       "id": "4e8548c3-184e-46be-8f61-5a3a46456a91",
       "name": "Atlanta Blood Services",
       "city": "Atlanta",
@@ -37492,7 +37436,6 @@
       "latitude": 33.9099425,
       "longitude": -84.35307189999999,
       "website": "http://www.atlantabloodservices.com/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -37582,7 +37525,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "cd3f90ed-da37-4216-8650-89e6f71dece5",
       "name": "Cord Blood",
       "city": "Montvale",
@@ -37590,7 +37532,6 @@
       "postal_code": "07645",
       "full_address": "102 Chestnut Ridge Rd, Montvale, NJ 07645",
       "phone": "+1 201-444-3900",
-=======
       "id": "1218a981-b655-4fcd-a46b-4a3ffe864943",
       "name": "New Jersey Blood Services",
       "city": "Clinton",
@@ -37598,19 +37539,15 @@
       "postal_code": "08809",
       "full_address": "6 Rupell Rd, Clinton, NJ 08809",
       "phone": "+1 908-735-0029",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "rating": 0,
       "reviews": 0,
       "typical_pay": "$40-$80",
       "first_visit_bonus": "Contact center",
       "brand": "Independent",
-<<<<<<< HEAD
       "latitude": 41.0552695,
       "longitude": -74.0695794,
-=======
       "latitude": 40.6374403,
       "longitude": -74.9260334,
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "website": "https://www.plasma.com",
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
@@ -37623,7 +37560,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "93535bf1-b867-46ab-91ee-244f27f23ed7",
       "name": "Princeton Plasma Physics Laboratory",
       "city": "Princeton",
@@ -37639,7 +37575,6 @@
       "latitude": 40.3506062,
       "longitude": -74.6028491,
       "website": "http://www.pppl.gov/",
-=======
       "id": "b0296bcc-9ae7-4e1e-82c7-acfb8c07afa7",
       "name": "New Jersey Blood Services - Howell Donor Center",
       "city": "Howell Township",
@@ -37655,7 +37590,6 @@
       "latitude": 40.152598999999995,
       "longitude": -74.2293691,
       "website": "https://www.nybc.org/howell-donor-center/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -38135,7 +38069,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "bd2fc34f-79c4-4d40-848d-1813a012ef49",
       "name": "Costco Wholesale",
       "city": "Teterboro",
@@ -38162,8 +38095,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "8752aeb1-489f-4042-9688-d64721cc1560",
       "name": "CSL Plasma",
       "city": "Ocala",
@@ -39230,7 +39161,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "2be6bc8e-3d82-4d88-b7dc-cdbb95d93563",
       "name": "Shiel Medical Laboratory",
       "city": "Brooklyn",
@@ -39246,7 +39176,6 @@
       "latitude": 40.6984715,
       "longitude": -73.9777647,
       "website": "https://questdiagnostics.com/?utm_source=google",
-=======
       "id": "2a8602ba-7109-4151-bc58-20f02df92f4c",
       "name": "New York Blood Center",
       "city": "Westbury",
@@ -39262,7 +39191,6 @@
       "latitude": 40.763974999999995,
       "longitude": -73.5515353,
       "website": "https://www.plasma.com",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -40418,8 +40346,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "7f4d3159-d7d5-4304-b0d9-8048fde95852",
       "name": "OneBlood",
       "city": "Miami",
@@ -40498,7 +40424,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "1f00d018-b152-429f-84ea-81168cd1d9ab",
       "name": "Miami Dade Medical Research Institute, LLC",
       "city": "Miami",
@@ -40681,8 +40606,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "6f07fde6-8343-497a-9dbe-4ee3cf57f892",
       "name": "OneBlood",
       "city": "Brandon",
@@ -40865,7 +40788,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "70448a09-ccc1-4bd4-a689-dc84693118f1",
       "name": "Tennessee Donor Services-Knoxville",
       "city": "Knoxville",
@@ -41828,7 +41750,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "d8d8503a-c358-4640-beb7-d7de48288eb2",
       "name": "Intermountain Health West Jordan Clinic",
       "city": "West Jordan",
@@ -41844,7 +41765,6 @@
       "latitude": 40.5871096,
       "longitude": -111.95686189999999,
       "website": "https://intermountainhealthcare.org/locations/west-jordan-clinic?utm_campaign=gmb",
-=======
       "id": "3b369f9d-dd78-4f51-b8cb-e1fa1c0affc3",
       "name": "Our Blood Institute, Edmond",
       "city": "Edmond",
@@ -41886,7 +41806,6 @@
       "latitude": 35.7009948,
       "longitude": -88.8580183,
       "website": "http://lifelinebloodserv.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -41976,8 +41895,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "aba5d4a2-f94c-4d6f-a9a5-bbe6abd7096c",
       "name": "ARUP Blood Services",
       "city": "Sandy",
@@ -42004,7 +41921,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "bd63a1b8-2ece-48cf-abaf-209d403f4b33",
       "name": "Plasmidsaurus San Diego",
       "city": "San Diego",
@@ -42239,7 +42155,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "6892f838-c62c-4990-aa81-e1b9c423b15a",
       "name": "Fresno Clinical Research Center",
       "city": "Fresno",
@@ -42255,7 +42170,6 @@
       "latitude": 36.839547599999996,
       "longitude": -119.781055,
       "website": "https://fresnocrc.com/",
-=======
       "id": "92614e6f-e0d4-4681-a995-b322fd48cc87",
       "name": "Central California Blood Center",
       "city": "Fresno",
@@ -42323,7 +42237,6 @@
       "latitude": 34.2252023,
       "longitude": -118.5002093,
       "website": "http://www.hemacaredonorcenter.com/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -42569,7 +42482,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "15e9b77a-7bb0-425a-800a-69753e9a06fb",
       "name": "Southcoast Health Laboratory Services",
       "city": "Fall River",
@@ -42648,8 +42560,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "d3bd611f-4992-4e4b-9d76-59ace536d1df",
       "name": "Labcorp",
       "city": "Fall River",
@@ -42884,8 +42794,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "70343834-cc0d-4939-a540-46adc9f44f9b",
       "name": "Grand Valley Blood Program",
       "city": "Grand Rapids",
@@ -42964,7 +42872,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "5510c564-d66d-4f1a-b6ba-6a418307da53",
       "name": "Grand Forks",
       "city": "Grand Forks",
@@ -43147,7 +43054,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "39ddcfcc-9618-4c9c-a2e8-903d56571dfb",
       "name": "Bridgeport Hospital Lab Services",
       "city": "Bridgeport",
@@ -43200,8 +43106,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "81e3de4c-a18e-4442-875d-368059df1dd0",
       "name": "BioLabs New Haven",
       "city": "New Haven",
@@ -43384,7 +43288,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "fc55a0ce-2980-4896-8c68-6b2dea2b3be9",
       "name": "Waterbury Hospital",
       "city": "Waterbury",
@@ -43400,7 +43303,6 @@
       "latitude": 41.5594469,
       "longitude": -73.0592966,
       "website": "http://www.waterburyhospital.org/",
-=======
       "id": "bcc9dde4-1b1f-4e6b-b847-8df3fed11e10",
       "name": "Saint Mary's Blood Draw Services - 3801 East Main Street",
       "city": "Waterbury",
@@ -43442,7 +43344,6 @@
       "latitude": 41.54432,
       "longitude": -73.0088859,
       "website": "https://www.trinityhealthofne.org/location/saint-marys-blood-draw-services-1981-east-main-street",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -43532,7 +43433,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "b354c020-eb34-49f5-bc0d-925565ea3c9a",
       "name": "St Mary's Hospital Laboratory",
       "city": "Waterbury",
@@ -43548,7 +43448,6 @@
       "latitude": 41.5527107,
       "longitude": -73.0043165,
       "website": "https://www.plasma.com",
-=======
       "id": "c0724522-c9e6-4ec6-82a0-26af1753e1f3",
       "name": "Saint Mary's Blood Draw Services - One Stop Testing",
       "city": "Waterbury",
@@ -43564,7 +43463,6 @@
       "latitude": 41.552902599999996,
       "longitude": -73.0368974,
       "website": "https://www.trinityhealthofne.org/location/saint-marys-blood-draw-services-one-stop-testing-56-franklin-street",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -43576,7 +43474,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "4bd23f53-af19-4dec-85b9-7ea8cc005981",
       "name": "Waterbury Hospital Health Center Blood",
       "city": "Naugatuck",
@@ -43591,7 +43488,6 @@
       "brand": "Independent",
       "latitude": 41.4929239,
       "longitude": -73.0538448,
-=======
       "id": "c177b75d-cc11-4c1a-8802-d3fc967cb41b",
       "name": "Waterbury Hosptial Blood Draw (Middlebury Office)",
       "city": "Middlebury",
@@ -43606,7 +43502,6 @@
       "brand": "Independent",
       "latitude": 41.5541371,
       "longitude": -73.09375159999999,
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "website": "https://www.waterburyhospital.org/laboratory-services/",
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
@@ -43619,7 +43514,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "f9511556-5919-45be-9f40-c2b5bc0e7a04",
       "name": "Norwalk Hospital, part of Nuvance Health",
       "city": "Norwalk",
@@ -43646,8 +43540,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "db19ce15-86c1-4d5a-ac83-c6f324d6b520",
       "name": "Labcorp",
       "city": "Norwalk",
@@ -43674,7 +43566,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "2a12aa37-7e8c-4b51-a0dd-beec2d995519",
       "name": "Danbury Hospital, part of Nuvance Health",
       "city": "Danbury",
@@ -43690,7 +43581,6 @@
       "latitude": 41.4053632,
       "longitude": -73.44530689999999,
       "website": "https://www.nuvancehealth.org/locations/danbury-hospital?utm_source=listings",
-=======
       "id": "a4208796-a504-4e10-978b-69c45efcab01",
       "name": "Blood Draw - Constitution Diagnostics Network, Sand Pit Rd. Danbury, part of Nuvance Health",
       "city": "Danbury",
@@ -43732,7 +43622,6 @@
       "latitude": 41.375677599999996,
       "longitude": -73.491826,
       "website": "https://findcare.nuvancehealth.org/provider/Blood+Draw+Kenosia+Avenue%2C+Danbury+-+Constitution+Diagnostics+Network%2C+part+of+Danbury+Hospital/2456635?unified=blood+draw",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -43978,7 +43867,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "7083ae4f-f3e5-484c-afa1-34e13105efd7",
       "name": "Nebraska Medical Center Bellevue",
       "city": "Bellevue",
@@ -44020,7 +43908,6 @@
       "latitude": 41.1372254,
       "longitude": -95.9478288,
       "website": "https://www.nebraskamed.com/bellevue",
-=======
       "id": "ac92e295-efeb-4c6d-a021-ea7cf034bdda",
       "name": "Midwest Regional Blood Services",
       "city": "Omaha",
@@ -44036,7 +43923,6 @@
       "latitude": 41.2564062,
       "longitude": -95.9715774,
       "website": "https://www.plasma.com",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -44464,7 +44350,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "aee0042e-9f5e-4a78-8228-b2a4993ec092",
       "name": "Sanford Wahpeton Clinic",
       "city": "Wahpeton",
@@ -44480,7 +44365,6 @@
       "latitude": 46.2653646,
       "longitude": -96.6048605,
       "website": "https://www.sanfordhealth.org/locations/sanford-wahpeton-clinic/?yxt_info=healthcare-facility-365d42f5-2117-48de-ad5f-682a5e9d106e",
-=======
       "id": "eac78ff1-d06b-47be-92e3-08cc65ce7817",
       "name": "Arkansas Blood Institute",
       "city": "North Little Rock",
@@ -44496,7 +44380,6 @@
       "latitude": 34.7954605,
       "longitude": -92.2556875,
       "website": "http://www.arkbi.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -45236,7 +45119,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "85a1d2fe-cd45-45fa-96bc-43d268990135",
       "name": "Nuvance Health Patient Blood Management (PBM) and Bloodless Medicine at Putnam Hospital",
       "city": "Carmel Hamlet",
@@ -45252,7 +45134,6 @@
       "latitude": 41.3835014,
       "longitude": -73.66318079999999,
       "website": "https://www.nuvancehealth.org/locations/patient-blood-management-and-bloodless-medicine-at-putnam-hospital?utm_source=listings",
-=======
       "id": "d7202b9e-cd87-40c8-b672-da498db3c9b8",
       "name": "Versiti Blood Center of Indiana",
       "city": "Carmel",
@@ -45268,7 +45149,6 @@
       "latitude": 39.968865,
       "longitude": -86.1458023,
       "website": "https://www.versiti.org/blood-donation-locations/indiana/carmel-blood-donation-center?utm_source=google",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -46242,7 +46122,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "6723a6a9-cf97-4bb2-96fc-e80c761a5000",
       "name": "LBN Colonic Clinic",
       "city": "Alexandria",
@@ -46269,8 +46148,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "8690f29e-b5e9-4ee4-9060-2ecb35a84556",
       "name": "AVAM Cancer and Blood Specialists, LLC",
       "city": "Alexandria",
@@ -47337,7 +47214,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "722218e5-855c-4fec-8faf-4ed06010d698",
       "name": "CGT Global - East Norriton Clinic",
       "city": "East Norriton Township",
@@ -47364,8 +47240,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "41020833-a1bd-4b90-a6a0-342f05ec09d4",
       "name": "Central Pennsylvania Blood Bnk",
       "city": "Hummelstown",
@@ -47444,8 +47318,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "a247e056-7538-4c99-a83b-751fdbd8fa68",
       "name": "Northeast Donor Center",
       "city": "Philadelphia",
@@ -47550,7 +47422,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "f4325b57-a328-46eb-ab4b-988416aeb157",
       "name": "Vitalant",
       "city": "Pittsburgh",
@@ -47733,7 +47604,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "5dbb3936-1f75-4da4-9c69-c064243cff00",
       "name": "Laboratory at PeaceHealth Ketchikan Medical Center",
       "city": "Ketchikan",
@@ -47749,7 +47619,6 @@
       "latitude": 55.3536571,
       "longitude": -131.6866346,
       "website": "https://www.peacehealth.org/locations/ketchikan/laboratory-peacehealth-ketchikan-medical-center?utm_source=gbp",
-=======
       "id": "1cdb2093-e6a3-4bb3-b2f8-55a4a0add592",
       "name": "Our Blood Institute, Norman",
       "city": "Norman",
@@ -47765,7 +47634,6 @@
       "latitude": 35.230807999999996,
       "longitude": -97.480891,
       "website": "http://www.obi.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -47881,7 +47749,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "095aa422-468a-4ca5-9f0f-f8e3163f7dce",
       "name": "First National Bank Alaska Kodiak Branch",
       "city": "Kodiak",
@@ -47934,8 +47801,6 @@
       }
     },
     {
-=======
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "45a2fe0b-2170-48ac-8d67-288826b67125",
       "name": "BioLife Plasma Services",
       "city": "Savannah",
@@ -48196,8 +48061,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "ed81b2ea-c62f-4fc0-a19d-69dd4512a46c",
       "name": "Miller-Keystone Blood Center",
       "city": "Reading",
@@ -48224,7 +48087,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "8061e75a-efff-4ef8-bd4c-1614bb274c08",
       "name": "Biomat USA",
       "city": "Scranton",
@@ -48329,8 +48191,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "875d57e2-07c7-4c56-bef5-fc41dba00fa6",
       "name": "Vitalant Blood Donation-Lincoln Park",
       "city": "Chicago",
@@ -48435,7 +48295,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "e7438557-040e-4f16-9938-c88494b2a6ce",
       "name": "Rio Rancho",
       "city": "Rio Rancho",
@@ -48722,8 +48581,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "5013493a-6904-41b7-b4fa-5fcb41e0c026",
       "name": "Community Blood Center - Lee's Summit Donor Center",
       "city": "Lee's Summit",
@@ -48750,7 +48607,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "56cbaf99-acb4-403b-b7d6-5862125ed7e7",
       "name": "Labcorp",
       "city": "St Charles",
@@ -49427,7 +49283,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "180451e8-0540-4fd1-ab0f-8bfb41332c0e",
       "name": "IMA Clinical Research - Warren",
       "city": "Warren",
@@ -49443,7 +49298,6 @@
       "latitude": 40.6511172,
       "longitude": -74.5731137,
       "website": "https://imaresearch.com/location/ima-clinical-research-warren-nj/",
-=======
       "id": "5274e0a0-74c3-42c8-b9fe-8899578a310c",
       "name": "Vitalant Blood Donation - Albuquerque",
       "city": "Albuquerque",
@@ -49511,7 +49365,6 @@
       "latitude": 42.9816861,
       "longitude": -85.63849189999999,
       "website": "https://www.versiti.org/blood-donation-locations/michigan/grand-rapids-blood-donation-center?utm_source=google",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -49601,8 +49454,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "14c44f36-97e9-4895-ac55-b47aff2cd738",
       "name": "Hoxworth Blood Center Central",
       "city": "Cincinnati",
@@ -49655,7 +49506,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "3e465f60-4713-4664-9d64-d9e1888a89f4",
       "name": "Community Tissue Services",
       "city": "Toledo",
@@ -50020,8 +49870,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "2515d72a-7500-4e3b-b9a7-d3833f650a9c",
       "name": "Blood Donor Center",
       "city": "Harrisburg",
@@ -50048,7 +49896,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "6f41e36b-c399-4d54-9436-9511909c6d22",
       "name": "Bethel",
       "city": "Bethel",
@@ -50387,7 +50234,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "dbd3e131-0eea-467c-a5f9-3296e118e941",
       "name": "Community Hospital of Anaconda",
       "city": "Anaconda",
@@ -50403,7 +50249,6 @@
       "latitude": 46.132597,
       "longitude": -112.95673409999999,
       "website": "http://www.communityhospitalofanaconda.org/",
-=======
       "id": "317c6f31-c5e1-4aa8-baca-83cbc6c093a5",
       "name": "Vitalant Blood Donation - Aberdeen",
       "city": "Aberdeen",
@@ -50419,7 +50264,6 @@
       "latitude": 45.4673614,
       "longitude": -98.4545974,
       "website": "https://www.vitalant.org/?utm_medium=organic",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -50717,7 +50561,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "16282c34-a99b-44bb-b2fc-3fd7d3d7d5b3",
       "name": "HemoSolutions Animal Bloodbank",
       "city": "Colorado Springs",
@@ -50733,7 +50576,6 @@
       "latitude": 38.8796189,
       "longitude": -104.7548747,
       "website": "http://www.hemosolutions.com/",
-=======
       "id": "0e72657b-36a4-454c-a31f-7c285a0c85e4",
       "name": "Vitalant Blood Donation- Denver",
       "city": "Denver",
@@ -50749,7 +50591,6 @@
       "latitude": 39.7272733,
       "longitude": -104.88831479999999,
       "website": "https://www.vitalant.org/?utm_medium=organic",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -50761,7 +50602,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "4bade129-e1a2-4b5c-8ef9-82b60e33be59",
       "name": "CSU Human Performance Clinical Research Laboratory",
       "city": "Fort Collins",
@@ -50777,7 +50617,6 @@
       "latitude": 40.5752923,
       "longitude": -105.09224839999999,
       "website": "http://www.hes.chhs.colostate.edu/hes-hpcrl/",
-=======
       "id": "fd0024a2-eb1f-47a4-8c45-4d6ab2e2bf6b",
       "name": "UCHealth Garth Englund Blood Center - Fort Collins",
       "city": "Fort Collins",
@@ -50793,7 +50632,6 @@
       "latitude": 40.5754199,
       "longitude": -105.0593296,
       "website": "https://www.uchealth.org/locations/garth-englund-blood-donation-center-fort-collins/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -51949,7 +51787,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "c20f2aff-ba00-413d-b2f7-03bb8f0ac704",
       "name": "Clinical Pharmacology of Miami",
       "city": "Hialeah",
@@ -51965,7 +51802,6 @@
       "latitude": 25.898181899999997,
       "longitude": -80.2949905,
       "website": "http://clinicalpharmacologyofmiami.com/",
-=======
       "id": "6e2251f7-b2a8-451c-9064-4230c3e78d88",
       "name": "Hialeah OneBlood",
       "city": "Hialeah",
@@ -51981,7 +51817,6 @@
       "latitude": 25.8963558,
       "longitude": -80.33573919999999,
       "website": "http://oneblood.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -51993,7 +51828,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "d072a974-1667-4153-9217-f2ea2675fc43",
       "name": "Reliable Clinical Research",
       "city": "Hialeah",
@@ -52009,7 +51843,6 @@
       "latitude": 25.8593285,
       "longitude": -80.3150732,
       "website": "https://www.reliablecr.com/",
-=======
       "id": "302bb4ad-7727-4361-baf4-caf940f43694",
       "name": "OneBlood",
       "city": "Tallahassee",
@@ -52077,7 +51910,6 @@
       "latitude": 43.995317299999996,
       "longitude": -88.57130529999999,
       "website": "https://www.communityblood.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -52297,7 +52129,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "6f4b510d-5af5-4e83-9a86-b804db38233c",
       "name": "Boulder City Hospital",
       "city": "Boulder City",
@@ -52313,7 +52144,6 @@
       "latitude": 35.9677272,
       "longitude": -114.84317539999999,
       "website": "http://bchcares.org/?utm_source=google",
-=======
       "id": "03e9095a-4754-4f07-84fc-8a295253c306",
       "name": "Vitalant Blood Donation- Boulder",
       "city": "Boulder",
@@ -52329,7 +52159,6 @@
       "latitude": 40.0310487,
       "longitude": -105.25925199999999,
       "website": "https://www.vitalant.org/?utm_medium=organic",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -52783,8 +52612,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "747d1a4d-c0f0-4873-bf03-f3fc5e955b49",
       "name": "WellSpan Blood Donor Services",
       "city": "York",
@@ -52811,7 +52638,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "20ffbdd9-2fde-45e3-9e96-19012018de93",
       "name": "Rhode Island",
       "city": "US",
@@ -53696,7 +53522,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "0a96e4bf-ac16-4f69-8deb-abcf8f4209fe",
       "name": "Core23 Biobank",
       "city": "Overland Park",
@@ -53712,7 +53537,6 @@
       "latitude": 38.886066,
       "longitude": -94.671921,
       "website": "https://www.plasma.com",
-=======
       "id": "9c140535-c9a1-4823-89bb-deb95fac3192",
       "name": "Community Blood Center - Overland Park",
       "city": "Overland Park",
@@ -53728,7 +53552,6 @@
       "latitude": 38.9365072,
       "longitude": -94.668852,
       "website": "https://www.savealifenow.org/overland-park-donor-center/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -53818,7 +53641,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "085648b6-0199-41c3-abe8-5fd427ff5e31",
       "name": "Clinical Reference Laboratory",
       "city": "Lenexa",
@@ -53834,7 +53656,6 @@
       "latitude": 38.976239299999996,
       "longitude": -94.7225029,
       "website": "http://www.crlcorp.com/",
-=======
       "id": "8a2264b9-73f0-4869-aabd-6fd9c2d66687",
       "name": "Community Blood Center - Olathe Donor Center",
       "city": "Olathe",
@@ -53876,7 +53697,6 @@
       "latitude": 38.911561299999995,
       "longitude": -94.77737359999999,
       "website": "https://donate.savealifenow.org/donor/schedules/center/12",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -54694,7 +54514,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "8b6a666e-895a-409c-abe8-3b76f89dd5c5",
       "name": "Southern New Hampshire Medical Center",
       "city": "Nashua",
@@ -54736,7 +54555,6 @@
       "latitude": 42.7564074,
       "longitude": -71.4620781,
       "website": "https://www.snhhealth.org/our-locations/popular-services/lab-services",
-=======
       "id": "d78910c6-d02c-465e-81e7-95b34c626a95",
       "name": "We Are Blood",
       "city": "Austin",
@@ -54752,7 +54570,6 @@
       "latitude": 30.311847,
       "longitude": -97.73928599999999,
       "website": "https://weareblood.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -56246,7 +56063,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "a871a594-164e-4e33-9267-17f5883943ac",
       "name": "Madison Hospital",
       "city": "Madison",
@@ -56262,7 +56078,6 @@
       "latitude": 34.7475412,
       "longitude": -86.7645537,
       "website": "http://www.madisonalhospital.org/",
-=======
       "id": "6727966c-23df-40c7-a699-13f07c5c439a",
       "name": "Lifesouth Community Blood Center",
       "city": "Decatur",
@@ -56330,7 +56145,6 @@
       "latitude": 34.729518299999995,
       "longitude": -86.7880151,
       "website": "https://www.lifesouth.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -57720,7 +57534,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "7408ee99-b07c-4a01-ae94-9f3bdba40d2a",
       "name": "East Jefferson General Hospital",
       "city": "Metairie",
@@ -57736,7 +57549,6 @@
       "latitude": 30.013329,
       "longitude": -90.18108199999999,
       "website": "http://www.ejgh.org/",
-=======
       "id": "dbd3330f-75ac-4225-8c6b-b90a6547a530",
       "name": "The Blood Center",
       "city": "New Orleans",
@@ -57804,7 +57616,6 @@
       "latitude": 29.9998369,
       "longitude": -90.16207899999999,
       "website": "http://www.thebloodcenter.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -59168,8 +58979,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "c8f32b5c-3f70-47e8-8f57-1bffa7606410",
       "name": "Florida's Blood Center St Lucie",
       "city": "Port St. Lucie",
@@ -59248,7 +59057,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "fbc52427-9c4c-4f81-8718-534bc7311d6a",
       "name": "Bulldog Biologic, LLC",
       "city": "Milledgeville",
@@ -59353,8 +59161,6 @@
       }
     },
     {
-<<<<<<< HEAD
-=======
       "id": "9fe7ef11-00a3-49bc-870e-8eb9280f61fb",
       "name": "Versiti Blood Center of Wisconsin",
       "city": "Racine",
@@ -59381,7 +59187,6 @@
       }
     },
     {
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "id": "9f093b52-8a3b-4168-a317-ae05e2d5fcde",
       "name": "Wegmans",
       "city": "Brooklyn",
@@ -59798,7 +59603,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "b6bcab4b-1e0b-4acb-8bc0-129b9933a11d",
       "name": "New England Center For Clinical Research",
       "city": "Fall River",
@@ -59814,7 +59618,6 @@
       "latitude": 41.6993594,
       "longitude": -71.1502707,
       "website": "http://www.neccr.com/",
-=======
       "id": "2e7cd4f0-cbd9-4cbc-b93d-d518d2f13fe3",
       "name": "Vitalant Blood Donation- Cheyenne",
       "city": "Cheyenne",
@@ -59856,7 +59659,6 @@
       "latitude": 45.546220999999996,
       "longitude": -122.6686134,
       "website": "https://www.plasma.com",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -60674,7 +60476,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "2dd8f419-bfbf-4974-8644-888b5f1a46ce",
       "name": "National Bank of Middlebury",
       "city": "Vergennes",
@@ -60690,7 +60491,6 @@
       "latitude": 44.167446899999995,
       "longitude": -73.2512727,
       "website": "https://nbmvt.com/",
-=======
       "id": "13df6995-4a05-4182-8e9d-76bfcb72845c",
       "name": "LifeSouth Community Blood Centers",
       "city": "Tuscaloosa",
@@ -60732,7 +60532,6 @@
       "latitude": 33.2755059,
       "longitude": -86.79256219999999,
       "website": "https://lifesouth.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -60848,7 +60647,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "af4ccbf0-c7bb-4183-9515-6fb831a871ef",
       "name": "Prime IV Hydration & Wellness - Virginia Beach",
       "city": "Virginia Beach",
@@ -60890,7 +60688,6 @@
       "latitude": 32.5799713,
       "longitude": -92.07086179999999,
       "website": "https://freedombehavioral.com/freedom-monroe/",
-=======
       "id": "13246920-6dc8-4e4c-ab71-d7c2c43ff3c5",
       "name": "LifeShare Blood Center",
       "city": "Bossier City",
@@ -60906,7 +60703,6 @@
       "latitude": 32.5353978,
       "longitude": -93.71037779999999,
       "website": "https://www.lifeshare.org/?utm_source=google",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -61750,7 +61546,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "03fa055e-aaa0-47fe-b4db-0c737b9b370b",
       "name": "Banks W.Turner, MD",
       "city": "Richmond",
@@ -61766,7 +61561,6 @@
       "latitude": 37.5522071,
       "longitude": -77.4674656,
       "website": "https://www.myprivia.com/groveavenueprimarycare/providers/dr-banks-turner",
-=======
       "id": "9b6ff49d-50c9-42ca-a323-492add2be0c9",
       "name": "LifeServe Blood Center",
       "city": "Aberdeen",
@@ -61782,7 +61576,6 @@
       "latitude": 45.4598796,
       "longitude": -98.4485895,
       "website": "http://lifeservebloodcenter.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -62028,7 +61821,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "8e55077e-6511-48f5-acbc-72855c740b9f",
       "name": "Pro Health Clinic - Bartlett",
       "city": "Bartlett",
@@ -62044,7 +61836,6 @@
       "latitude": 35.2064307,
       "longitude": -89.8567076,
       "website": "https://prohealthmemphis.com/bartlett-location/",
-=======
       "id": "dc4cff32-d42e-4488-9eb3-a1a76651654d",
       "name": "Vitalant Blood Donation- Memphis",
       "city": "Memphis",
@@ -62060,7 +61851,6 @@
       "latitude": 35.1124643,
       "longitude": -89.90507939999999,
       "website": "https://www.vitalant.org/?utm_medium=organic",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -62384,7 +62174,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "fba97a34-9ff1-4252-89fb-fdbad48f6faf",
       "name": "ProHealth Care's Laboratory Services Waukesha",
       "city": "Waukesha",
@@ -62400,7 +62189,6 @@
       "latitude": 43.0114734,
       "longitude": -88.2429094,
       "website": "https://www.prohealthcare.org/locations/profile/lab-waukesha/?utm_medium=listings",
-=======
       "id": "b644b122-9e4e-45f6-873a-2b5c80db0b32",
       "name": "LifeServe Blood Center",
       "city": "Ames",
@@ -62416,7 +62204,6 @@
       "latitude": 42.0549387,
       "longitude": -93.6228343,
       "website": "http://www.lifeservebloodcenter.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -62428,7 +62215,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "919753b1-6bca-4b00-a6e6-b1821d41ad27",
       "name": "ProHealth Care's Laboratory Services Pewaukee",
       "city": "Waukesha",
@@ -62444,7 +62230,6 @@
       "latitude": 43.0526096,
       "longitude": -88.2276696,
       "website": "https://www.prohealthcare.org/locations/profile/lab-pewaukee/?utm_medium=listings",
-=======
       "id": "559ff969-1fa8-4cc4-97fd-60c7e219fc66",
       "name": "Loess Hills Blood Donation Center",
       "city": "Council Bluffs",
@@ -62460,7 +62245,6 @@
       "latitude": 41.268273799999996,
       "longitude": -95.8671291,
       "website": "https://www.redcrossblood.org/local-homepage/location/am-red-cross-fs-loess-hills.html?utm_source=GMBlisting",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -63070,7 +62854,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "ecb5fdc2-51be-4fbf-b993-f3923adc2cc2",
       "name": "OU Health University of Oklahoma Medical Center",
       "city": "Oklahoma City",
@@ -63086,7 +62869,6 @@
       "latitude": 35.4801296,
       "longitude": -97.4967819,
       "website": "https://www.ouhealth.com/find-a-location/ou-health-university-of-oklahoma-medical-center/",
-=======
       "id": "c34ad66a-d330-4e60-931d-b77b867d856f",
       "name": "Versiti Blood Center of Indiana",
       "city": "Indianapolis",
@@ -63128,7 +62910,6 @@
       "latitude": 39.639889,
       "longitude": -86.1275725,
       "website": "https://www.versiti.org/blood-donation-locations/indiana/greenwood-blood-donation-center?utm_source=google",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -63660,7 +63441,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "8cf29dca-f8cf-4fb5-aad9-7adf7b6e884e",
       "name": "UnityPoint Health - Methodist West Hospital",
       "city": "West Des Moines",
@@ -63676,7 +63456,6 @@
       "latitude": 41.5968003,
       "longitude": -93.7950692,
       "website": "https://www.unitypoint.org/Locations/UnityPoint-Health---Methodist-West-Hospital?utm_source=gmb",
-=======
       "id": "2e7fff93-0a74-4cae-bd59-69575dc23d9e",
       "name": "LifeServe Blood Center",
       "city": "Waterloo",
@@ -63692,7 +63471,6 @@
       "latitude": 42.4650776,
       "longitude": -92.358004,
       "website": "http://www.lifeservebloodcenter.org/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
@@ -63886,7 +63664,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "ea47ed53-21b2-45fc-ba84-2937ef88fe61",
       "name": "Kaiser Permanente Orange County - Anaheim Medical Center",
       "city": "Anaheim",
@@ -63928,7 +63705,6 @@
       "latitude": 33.781122499999995,
       "longitude": -117.8642364,
       "website": "https://www.providence.org/locations/socal/st-joseph-hospital-orange?Is=location",
-=======
       "id": "9946061c-432d-4d0c-8d3d-048ef1a0ec0b",
       "name": "UCI Health Blood Donor Center — Orange",
       "city": "Orange",
@@ -63970,7 +63746,6 @@
       "latitude": 33.779716,
       "longitude": -117.86634679999999,
       "website": "https://choc.org/programs-services/blood-donor-services/",
->>>>>>> ea24acfd10ba0e36d55c38450e704309abc14c55
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",

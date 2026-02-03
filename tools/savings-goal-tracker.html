@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-053DRWEQLS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-053DRWEQLS');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/global-fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE Plasma Donation Savings Goal Tracker 2026: Track Your Earnings Progress</title>
+    <meta name="description" content="Set a savings goal and track your plasma donation progress! See exactly how many donations you need to reach your target - vacation, emergency fund, bills, or debt payoff. 100% FREE tool.">
+    <meta name="keywords" content="plasma donation savings tracker, plasma earnings goal, plasma donation money tracker, track plasma income, plasma donation progress, plasma donation budget">
+    <meta name="theme-color" content="#27ae60">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://plasmapaycalculator.com/tools/savings-goal-tracker">
+    <meta property="og:title" content="FREE Plasma Savings Goal Tracker - Track Your Progress">
+    <meta property="og:description" content="Set a savings goal and track your plasma donation earnings progress. See how many donations until you reach your target!">
+    <meta property="og:url" content="https://plasmapaycalculator.com/tools/savings-goal-tracker">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; line-height: 1.6; color: #2c3e50; background: #f8faf9; }
+
+        /* Navigation */
+        nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(39, 174, 96, 0.1); }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: #27ae60; text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+        .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 10px; }
+        .trust-badge { background: rgba(39, 174, 96, 0.1); color: #27ae60; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.7rem; font-weight: 500; margin-left: 0.8rem; }
+        .nav-links { display: flex; list-style: none; gap: 1.2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: #2c3e50; font-weight: 500; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.9rem; transition: all 0.3s; }
+        .nav-links a:hover { color: #27ae60; background: rgba(39, 174, 96, 0.1); }
+        .centers-highlight { background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important; color: white !important; font-weight: 700 !important; box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3) !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: #2c3e50; }
+        .mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; background: white; border-bottom: 1px solid #e0e0e0; z-index: 999; padding: 1rem; }
+        .mobile-menu.active { display: block; }
+        .mobile-menu ul { list-style: none; }
+        .mobile-menu li { margin: 0.5rem 0; }
+        .mobile-menu a { display: block; padding: 0.75rem; text-decoration: none; color: #2c3e50; border-radius: 8px; }
+        .mobile-menu a:hover { background: rgba(39, 174, 96, 0.1); color: #27ae60; }
+
+        /* Main Content */
+        main { margin-top: 70px; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 1.5rem; text-align: center; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .hero p { opacity: 0.9; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .hero-badges { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+        .hero-badge { background: rgba(255,255,255,0.2); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; }
+
+        /* Tool Section */
+        .tool-section { max-width: 900px; margin: -2rem auto 2rem; padding: 0 1rem; position: relative; z-index: 10; }
+        .card { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
+        .card h2 { font-size: 1.3rem; color: #333; margin-bottom: 1rem; }
+
+        /* Goal Presets */
+        .goal-presets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+        .preset-btn { padding: 1rem; border: 2px solid #e0e0e0; border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s; text-align: center; }
+        .preset-btn:hover { border-color: #667eea; transform: translateY(-2px); }
+        .preset-btn.selected { border-color: #667eea; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .preset-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
+        .preset-label { font-size: 0.8rem; font-weight: 500; }
+        .preset-amount { font-size: 0.75rem; opacity: 0.7; }
+
+        /* Custom Goal Form */
+        .custom-goal { display: flex; gap: 1rem; align-items: flex-end; margin-bottom: 2rem; }
+        .form-group { flex: 1; }
+        .form-group label { display: block; font-weight: 500; margin-bottom: 0.5rem; color: #555; font-size: 0.9rem; }
+        .form-group input, .form-group select { width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #667eea; }
+        .input-with-prefix { position: relative; }
+        .input-with-prefix span { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #666; font-weight: 500; }
+        .input-with-prefix input { padding-left: 2rem; }
+
+        /* Progress Section */
+        .progress-section { margin-top: 2rem; }
+        .progress-header { display: flex; justify-content: space-between; margin-bottom: 0.75rem; }
+        .progress-title { font-weight: 600; color: #333; }
+        .progress-percent { font-weight: 700; color: #667eea; }
+        .progress-bar { height: 24px; background: #e0e0e0; border-radius: 12px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; transition: width 0.5s ease-out; display: flex; align-items: center; justify-content: flex-end; padding-right: 0.75rem; min-width: 60px; }
+        .progress-amount { color: white; font-weight: 600; font-size: 0.85rem; }
+
+        /* Stats Grid */
+        .goal-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+        .stat-box { background: #f8f9fa; border-radius: 12px; padding: 1.25rem; text-align: center; }
+        .stat-value { font-size: 1.75rem; font-weight: 800; color: #667eea; }
+        .stat-label { font-size: 0.85rem; color: #666; margin-top: 0.25rem; }
+
+        /* Donations Tracker */
+        .donations-tracker { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e0e0e0; }
+        .tracker-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .tracker-title { font-size: 1.1rem; font-weight: 600; }
+        .add-donation-btn { padding: 0.5rem 1rem; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .add-donation-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3); }
+        .donation-list { max-height: 250px; overflow-y: auto; }
+        .donation-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: #f8f9fa; border-radius: 8px; margin-bottom: 0.5rem; }
+        .donation-info { display: flex; align-items: center; gap: 1rem; }
+        .donation-date { font-weight: 500; color: #333; }
+        .donation-center { font-size: 0.85rem; color: #666; }
+        .donation-amount { font-weight: 700; color: #27ae60; }
+        .delete-btn { background: none; border: none; color: #e74c3c; cursor: pointer; padding: 0.25rem 0.5rem; opacity: 0.6; transition: opacity 0.3s; font-size: 1.2rem; }
+        .delete-btn:hover { opacity: 1; }
+        .empty-state { text-align: center; padding: 2rem; color: #999; }
+
+        /* Modal */
+        .add-modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center; }
+        .add-modal.active { display: flex; }
+        .modal-content { background: white; border-radius: 16px; padding: 2rem; width: 90%; max-width: 400px; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .modal-title { font-size: 1.25rem; font-weight: 600; }
+        .close-modal { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; }
+        .modal-btn { width: 100%; padding: 0.75rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 10px; font-weight: 600; font-size: 1rem; cursor: pointer; margin-top: 1rem; }
+
+        /* Celebration */
+        .celebration { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 3rem; border-radius: 20px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3); z-index: 3000; }
+        .celebration.active { display: block; animation: bounceIn 0.5s ease-out; }
+        @keyframes bounceIn { 0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; } 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } }
+        .celebration-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .celebration h2 { color: #667eea; margin-bottom: 0.5rem; }
+
+        /* Centers Section */
+        .centers-section { background: white; padding: 3rem 1.5rem; }
+        .centers-container { max-width: 1000px; margin: 0 auto; }
+        .centers-section h2 { text-align: center; font-size: 1.5rem; color: #333; margin-bottom: 0.5rem; }
+        .centers-section .subtitle { text-align: center; color: #666; margin-bottom: 2rem; }
+        .centers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .center-card { border: 2px solid #e0e0e0; border-radius: 16px; padding: 1.5rem; text-align: center; transition: all 0.3s; }
+        .center-card:hover { border-color: #27ae60; transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .center-logo { font-size: 2rem; margin-bottom: 0.5rem; }
+        .center-name { font-weight: 700; font-size: 1.1rem; color: #333; margin-bottom: 0.25rem; }
+        .center-bonus { color: #27ae60; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .center-description { font-size: 0.85rem; color: #666; margin-bottom: 1rem; }
+        .center-link { display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
+        .center-link:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3); }
+
+        /* Related Tools */
+        .related-tools { background: #f8f9fa; padding: 3rem 1.5rem; }
+        .related-container { max-width: 1000px; margin: 0 auto; }
+        .related-tools h2 { text-align: center; font-size: 1.5rem; color: #333; margin-bottom: 2rem; }
+        .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .tool-card { background: white; border-radius: 16px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s; }
+        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .tool-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .tool-name { font-weight: 700; color: #333; margin-bottom: 0.5rem; }
+        .tool-desc { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+        .tool-link { color: #27ae60; font-weight: 600; text-decoration: none; }
+        .tool-link:hover { text-decoration: underline; }
+
+        /* FAQ Section */
+        .faq-section { background: white; padding: 3rem 1.5rem; }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-section h2 { text-align: center; font-size: 1.5rem; color: #333; margin-bottom: 2rem; }
+        .faq-item { border-bottom: 1px solid #e0e0e0; padding: 1.25rem 0; }
+        .faq-question { font-weight: 600; color: #333; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question:hover { color: #27ae60; }
+        .faq-answer { color: #666; margin-top: 0.75rem; display: none; line-height: 1.7; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-toggle { font-size: 1.2rem; color: #27ae60; }
+
+        /* Footer CTA */
+        .footer-cta { background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; padding: 3rem 1.5rem; text-align: center; }
+        .footer-cta h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .footer-cta p { opacity: 0.9; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .footer-cta .btn { display: inline-block; padding: 0.75rem 2rem; background: white; color: #27ae60; text-decoration: none; border-radius: 10px; font-weight: 700; transition: all 0.3s; }
+        .footer-cta .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+
+        /* Footer */
+        footer { background: #2c3e50; color: white; padding: 2rem 1.5rem; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        .footer-links a:hover { color: white; }
+        .footer-copy { font-size: 0.85rem; opacity: 0.7; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .goal-presets { grid-template-columns: repeat(2, 1fr); }
+            .custom-goal { flex-direction: column; }
+            .goal-stats { grid-template-columns: 1fr; }
+            .centers-grid, .tools-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.6rem; }
+            .hero-badges { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo">
+                    <div class="logo-icon">PPC</div>
+                    Plasma Pay Calculator
+                </a>
+                <span class="trust-badge">Updated 2026</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/tools/center-finder">Find Centers</a></li>
+                <li><a href="/calculators/">By State</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/centers/" class="centers-highlight">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/tools/center-finder">Find Centers</a></li>
+                <li><a href="/calculators/">By State</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>FREE Plasma Savings Goal Tracker</h1>
+            <p>Set a savings target and track your plasma donation progress. See exactly how many donations until you reach your goal!</p>
+            <div class="hero-badges">
+                <span class="hero-badge">100% Free</span>
+                <span class="hero-badge">Data Saved Locally</span>
+                <span class="hero-badge">No Account Required</span>
+            </div>
+        </section>
+
+        <!-- Tool Section -->
+        <section class="tool-section">
+            <div class="card">
+                <h2>What are you saving for?</h2>
+                <div class="goal-presets" id="goalPresets"></div>
+                <div class="custom-goal">
+                    <div class="form-group">
+                        <label for="goalAmount">Custom Goal Amount</label>
+                        <div class="input-with-prefix"><span>$</span><input type="number" id="goalAmount" placeholder="Enter amount" min="100" max="50000" onchange="updateGoal()"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="avgDonation">Avg $ Per Donation</label>
+                        <div class="input-with-prefix"><span>$</span><input type="number" id="avgDonation" value="75" min="20" max="200" onchange="updateGoal()"></div>
+                    </div>
+                </div>
+                <div class="progress-section" id="progressSection" style="display: none;">
+                    <div class="progress-header">
+                        <span class="progress-title">Progress to Goal</span>
+                        <span class="progress-percent" id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 0%;"><span class="progress-amount" id="progressAmount">$0</span></div></div>
+                    <div class="goal-stats">
+                        <div class="stat-box"><div class="stat-value" id="remaining">$0</div><div class="stat-label">Remaining</div></div>
+                        <div class="stat-box"><div class="stat-value" id="donationsNeeded">0</div><div class="stat-label">Donations Needed</div></div>
+                        <div class="stat-box"><div class="stat-value" id="weeksLeft">0</div><div class="stat-label">Weeks (at 2/week)</div></div>
+                    </div>
+                </div>
+                <div class="donations-tracker" id="donationsTracker" style="display: none;">
+                    <div class="tracker-header">
+                        <span class="tracker-title">Your Donations</span>
+                        <button class="add-donation-btn" onclick="openModal()">+ Add Donation</button>
+                    </div>
+                    <div class="donation-list" id="donationList"><div class="empty-state">No donations logged yet. Click "Add Donation" to start tracking!</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense Placement -->
+        <div style="max-width: 900px; margin: 0 auto 2rem; padding: 0 1rem;">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3180649272238451" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Centers Section -->
+        <section class="centers-section">
+            <div class="centers-container">
+                <h2>Start Earning at Top Plasma Centers</h2>
+                <p class="subtitle">New donors can earn $700-$1,100 in their first month with these bonuses</p>
+                <div class="centers-grid">
+                    <div class="center-card">
+                        <div class="center-logo">🩸</div>
+                        <div class="center-name">CSL Plasma</div>
+                        <div class="center-bonus">Up to $900 First Month</div>
+                        <div class="center-description">Largest plasma collection company with 300+ US locations. Reliable payments via prepaid card.</div>
+                        <a href="/centers/csl-plasma/" class="center-link">View Details</a>
+                    </div>
+                    <div class="center-card">
+                        <div class="center-logo">💚</div>
+                        <div class="center-name">BioLife Plasma</div>
+                        <div class="center-bonus">Up to $800 First Month</div>
+                        <div class="center-description">Premium facilities with comfortable donation beds. Great app for scheduling and bonuses.</div>
+                        <a href="/centers/biolife/" class="center-link">View Details</a>
+                    </div>
+                    <div class="center-card">
+                        <div class="center-logo">🔬</div>
+                        <div class="center-name">Octapharma</div>
+                        <div class="center-bonus">Up to $850 First Month</div>
+                        <div class="center-description">Fast-growing network with competitive pay rates. Known for shorter wait times.</div>
+                        <a href="/centers/octapharma/" class="center-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Tools -->
+        <section class="related-tools">
+            <div class="related-container">
+                <h2>More Free Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🗺️</div>
+                        <div class="tool-name">Center Finder</div>
+                        <div class="tool-desc">Find the highest-paying plasma centers near you with our interactive map.</div>
+                        <a href="/tools/center-finder" class="tool-link">Find Centers &rarr;</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">📅</div>
+                        <div class="tool-name">Donation Scheduler</div>
+                        <div class="tool-desc">Plan your donations around FDA rules to maximize your monthly earnings.</div>
+                        <a href="/tools/donation-scheduler" class="tool-link">Plan Schedule &rarr;</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">💰</div>
+                        <div class="tool-name">Bonus Calculator</div>
+                        <div class="tool-desc">Calculate the optimal order to use new donor bonuses at multiple centers.</div>
+                        <a href="/tools/bonus-stacking-calculator" class="tool-link">Stack Bonuses &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="faq-container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">How much can I realistically earn from plasma donation? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Most donors earn $50-$100 per donation, with 2 donations per week allowed. That's $400-$800 per month. New donors often earn more due to bonus programs - up to $1,000+ in the first month at some centers.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Is my data saved securely? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Yes! Your donation data is saved locally in your browser using localStorage. We never send your personal donation information to any server. Your data stays on your device and is only accessible to you.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">How often can I donate plasma? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">FDA regulations allow up to 2 plasma donations within a 7-day period, with at least 48 hours between donations. Most donors stick to a twice-weekly schedule (like Monday and Thursday) for maximum earnings.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">What's the best way to reach my savings goal faster? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Maximize earnings by: (1) Donating consistently twice per week, (2) Taking advantage of new donor bonuses at multiple centers, (3) Referring friends for referral bonuses, (4) Watching for promotional bonus periods, and (5) Maintaining good health to avoid deferrals.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Do I need to report plasma income on taxes? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Technically, yes. Plasma compensation is considered taxable income by the IRS. However, most centers don't issue 1099 forms unless you earn over $600. We recommend consulting a tax professional and keeping records of your donations.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <section class="footer-cta">
+            <h2>Ready to Start Earning?</h2>
+            <p>Use our main calculator to see exactly how much you could earn based on your weight, location, and donation frequency.</p>
+            <a href="/" class="btn">Calculate My Earnings &rarr;</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="/">Calculator</a>
+            <a href="/blog/">Blog</a>
+            <a href="/centers/">Centers</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/about.html">About</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+        </div>
+        <div class="footer-copy">&copy; 2026 PlasmaPayCalculator.com - All Rights Reserved</div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="add-modal" id="addModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Log a Donation</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="form-group" style="margin-bottom: 1rem;"><label for="donationDate">Date</label><input type="date" id="donationDate"></div>
+            <div class="form-group" style="margin-bottom: 1rem;"><label for="donationAmount">Amount Earned</label><div class="input-with-prefix"><span>$</span><input type="number" id="donationAmount" placeholder="75" min="1" max="500"></div></div>
+            <div class="form-group"><label for="donationCenter">Center (optional)</label><select id="donationCenter"><option value="">Select center...</option><option value="CSL Plasma">CSL Plasma</option><option value="BioLife">BioLife</option><option value="Octapharma">Octapharma</option><option value="Grifols">Grifols</option><option value="KEDPLASMA">KEDPLASMA</option><option value="BPL Plasma">BPL Plasma</option><option value="Other">Other</option></select></div>
+            <button class="modal-btn" onclick="addDonation()">Add Donation</button>
+        </div>
+    </div>
+
+    <!-- Celebration -->
+    <div class="celebration" id="celebration">
+        <div class="celebration-icon">&#127881;</div>
+        <h2>Goal Reached!</h2>
+        <p>Congratulations! You've reached your savings goal!</p>
+        <button class="modal-btn" onclick="closeCelebration()" style="margin-top: 1.5rem;">Awesome!</button>
+    </div>
+
+    <script>
+        const presets = [
+            { amount: 500, icon: '&#128176;', label: 'Emergency Fund' },
+            { amount: 1000, icon: '&#9992;', label: 'Vacation' },
+            { amount: 2000, icon: '&#128187;', label: 'New Laptop' },
+            { amount: 5000, icon: '&#128663;', label: 'Car Down Payment' }
+        ];
+        let goalAmount = 0;
+        let donations = [];
+        const STORAGE_KEY = 'plasma_savings_tracker';
+
+        function loadData() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                const data = JSON.parse(saved);
+                goalAmount = data.goalAmount || 0;
+                donations = data.donations || [];
+                if (goalAmount > 0) {
+                    document.getElementById('goalAmount').value = goalAmount;
+                    updateGoal();
+                }
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({ goalAmount, donations }));
+        }
+
+        function renderPresets() {
+            const container = document.getElementById('goalPresets');
+            container.textContent = '';
+            presets.forEach(preset => {
+                const btn = document.createElement('button');
+                btn.className = 'preset-btn';
+                btn.dataset.amount = preset.amount;
+                btn.addEventListener('click', () => selectPreset(btn, preset.amount));
+                const iconDiv = document.createElement('div');
+                iconDiv.className = 'preset-icon';
+                iconDiv.innerHTML = preset.icon;
+                const labelDiv = document.createElement('div');
+                labelDiv.className = 'preset-label';
+                labelDiv.textContent = preset.label;
+                const amountDiv = document.createElement('div');
+                amountDiv.className = 'preset-amount';
+                amountDiv.textContent = '$' + preset.amount.toLocaleString();
+                btn.appendChild(iconDiv);
+                btn.appendChild(labelDiv);
+                btn.appendChild(amountDiv);
+                container.appendChild(btn);
+            });
+        }
+
+        function selectPreset(btn, amount) {
+            document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            document.getElementById('goalAmount').value = amount;
+            updateGoal();
+        }
+
+        function updateGoal() {
+            goalAmount = parseInt(document.getElementById('goalAmount').value) || 0;
+            const avgDonation = parseInt(document.getElementById('avgDonation').value) || 75;
+            if (goalAmount <= 0) {
+                document.getElementById('progressSection').style.display = 'none';
+                document.getElementById('donationsTracker').style.display = 'none';
+                return;
+            }
+            document.getElementById('progressSection').style.display = 'block';
+            document.getElementById('donationsTracker').style.display = 'block';
+            const totalEarned = donations.reduce((sum, d) => sum + d.amount, 0);
+            const remaining = Math.max(0, goalAmount - totalEarned);
+            const percent = Math.min(100, (totalEarned / goalAmount) * 100);
+            const donationsNeeded = Math.ceil(remaining / avgDonation);
+            const weeksNeeded = Math.ceil(donationsNeeded / 2);
+            document.getElementById('progressPercent').textContent = percent.toFixed(1) + '%';
+            document.getElementById('progressFill').style.width = Math.max(percent, 8) + '%';
+            document.getElementById('progressAmount').textContent = '$' + totalEarned.toLocaleString();
+            document.getElementById('remaining').textContent = '$' + remaining.toLocaleString();
+            document.getElementById('donationsNeeded').textContent = donationsNeeded;
+            document.getElementById('weeksLeft').textContent = weeksNeeded;
+            document.querySelectorAll('.preset-btn').forEach(btn => {
+                btn.classList.toggle('selected', parseInt(btn.dataset.amount) === goalAmount);
+            });
+            renderDonations();
+            saveData();
+            if (percent >= 100 && donations.length > 0) {
+                document.getElementById('celebration').classList.add('active');
+            }
+        }
+
+        function renderDonations() {
+            const list = document.getElementById('donationList');
+            list.textContent = '';
+            if (donations.length === 0) {
+                const empty = document.createElement('div');
+                empty.className = 'empty-state';
+                empty.textContent = 'No donations logged yet. Click "Add Donation" to start tracking!';
+                list.appendChild(empty);
+                return;
+            }
+            const sorted = [...donations].sort((a, b) => new Date(b.date) - new Date(a.date));
+            sorted.forEach((d) => {
+                const item = document.createElement('div');
+                item.className = 'donation-item';
+                const info = document.createElement('div');
+                info.className = 'donation-info';
+                const dateSpan = document.createElement('span');
+                dateSpan.className = 'donation-date';
+                dateSpan.textContent = formatDate(d.date);
+                const centerSpan = document.createElement('span');
+                centerSpan.className = 'donation-center';
+                centerSpan.textContent = d.center || 'No center';
+                info.appendChild(dateSpan);
+                info.appendChild(centerSpan);
+                const amountSpan = document.createElement('span');
+                amountSpan.className = 'donation-amount';
+                amountSpan.textContent = '+$' + d.amount;
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'delete-btn';
+                deleteBtn.textContent = '×';
+                deleteBtn.addEventListener('click', () => deleteDonation(donations.indexOf(d)));
+                item.appendChild(info);
+                item.appendChild(amountSpan);
+                item.appendChild(deleteBtn);
+                list.appendChild(item);
+            });
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        function openModal() {
+            document.getElementById('donationDate').valueAsDate = new Date();
+            document.getElementById('donationAmount').value = document.getElementById('avgDonation').value;
+            document.getElementById('donationCenter').value = '';
+            document.getElementById('addModal').classList.add('active');
+        }
+
+        function closeModal() { document.getElementById('addModal').classList.remove('active'); }
+
+        function addDonation() {
+            const date = document.getElementById('donationDate').value;
+            const amount = parseInt(document.getElementById('donationAmount').value);
+            const center = document.getElementById('donationCenter').value;
+            if (!date || !amount) { alert('Please enter a date and amount'); return; }
+            donations.push({ date, amount, center });
+            closeModal();
+            updateGoal();
+        }
+
+        function deleteDonation(index) {
+            if (confirm('Remove this donation?')) {
+                donations.splice(index, 1);
+                updateGoal();
+            }
+        }
+
+        function closeCelebration() { document.getElementById('celebration').classList.remove('active'); }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+            const toggle = element.querySelector('.faq-toggle');
+            toggle.textContent = element.classList.contains('active') ? '−' : '+';
+        }
+
+        document.getElementById('addModal').addEventListener('click', (e) => { if (e.target === e.currentTarget) closeModal(); });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPresets();
+            loadData();
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Plasma Savings Goal Tracker",
+        "description": "Set a savings goal and track your plasma donation earnings progress",
+        "url": "https://plasmapaycalculator.com/tools/savings-goal-tracker",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web Browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much can I realistically earn from plasma donation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most donors earn $50-$100 per donation, with 2 donations per week allowed. That's $400-$800 per month. New donors often earn more due to bonus programs - up to $1,000+ in the first month at some centers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often can I donate plasma?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FDA regulations allow up to 2 plasma donations within a 7-day period, with at least 48 hours between donations. Most donors stick to a twice-weekly schedule for maximum earnings."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to report plasma income on taxes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Technically, yes. Plasma compensation is considered taxable income by the IRS. However, most centers don't issue 1099 forms unless you earn over $600. We recommend consulting a tax professional."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

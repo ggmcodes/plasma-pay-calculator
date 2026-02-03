@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-053DRWEQLS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-053DRWEQLS');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/global-fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE Plasma Donation Scheduler 2026: Plan Your Visits &amp; Maximize Earnings</title>
+    <meta name="description" content="Plan your plasma donation schedule around FDA limits. Our free scheduler helps you maximize visits while staying compliant with the 2x per week rule. Track earnings and optimize timing!">
+    <meta name="keywords" content="plasma donation schedule, how often can you donate plasma, plasma donation frequency, FDA plasma donation rules, plasma donation calendar, plasma donation planner">
+    <meta name="theme-color" content="#27ae60">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://plasmapaycalculator.com/tools/donation-scheduler">
+    <meta property="og:title" content="FREE Plasma Donation Scheduler - Plan Your Visits">
+    <meta property="og:description" content="Plan your plasma donation schedule around FDA limits and maximize your earnings with our free visual calendar tool.">
+    <meta property="og:url" content="https://plasmapaycalculator.com/tools/donation-scheduler">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; line-height: 1.6; color: #2c3e50; background: #f8faf9; }
+
+        /* Navigation */
+        nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(39, 174, 96, 0.1); }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: #27ae60; text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+        .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 10px; }
+        .trust-badge { background: rgba(39, 174, 96, 0.1); color: #27ae60; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.7rem; font-weight: 500; margin-left: 0.8rem; }
+        .nav-links { display: flex; list-style: none; gap: 1.2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: #2c3e50; font-weight: 500; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.9rem; transition: all 0.3s; }
+        .nav-links a:hover { color: #27ae60; background: rgba(39, 174, 96, 0.1); }
+        .centers-highlight { background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important; color: white !important; font-weight: 700 !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: #2c3e50; }
+        .mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; background: white; border-bottom: 1px solid #e0e0e0; z-index: 999; padding: 1rem; }
+        .mobile-menu.active { display: block; }
+        .mobile-menu ul { list-style: none; }
+        .mobile-menu li { margin: 0.5rem 0; }
+        .mobile-menu a { display: block; padding: 0.75rem; text-decoration: none; color: #2c3e50; border-radius: 8px; }
+
+        /* Main */
+        main { margin-top: 70px; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%); color: white; padding: 3rem 1.5rem; text-align: center; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .hero p { opacity: 0.9; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .hero-badges { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+        .hero-badge { background: rgba(255,255,255,0.2); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; }
+
+        /* Tool Section */
+        .tool-section { max-width: 1100px; margin: -2rem auto 2rem; padding: 0 1rem; position: relative; z-index: 10; }
+        .scheduler-grid { display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem; }
+        .card { background: white; border-radius: 20px; padding: 1.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .card h2 { font-size: 1.1rem; color: #333; margin-bottom: 1rem; }
+
+        /* Form Elements */
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-weight: 500; margin-bottom: 0.5rem; color: #555; font-size: 0.9rem; }
+        .form-group select, .form-group input { width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; }
+        .form-group select:focus, .form-group input:focus { outline: none; border-color: #1976d2; }
+        .preferred-days { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .day-btn { padding: 0.5rem 0.75rem; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; transition: all 0.3s; font-weight: 500; font-size: 0.85rem; }
+        .day-btn:hover { border-color: #1976d2; }
+        .day-btn.selected { background: #1976d2; border-color: #1976d2; color: white; }
+        .btn { width: 100%; padding: 0.75rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1rem; transition: all 0.3s; background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%); color: white; margin-top: 0.5rem; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3); }
+
+        /* Rules Card */
+        .rules-card { background: #e3f2fd; border-radius: 10px; padding: 1rem; margin-top: 1.5rem; }
+        .rules-card h3 { font-size: 1rem; color: #1976d2; margin-bottom: 0.75rem; }
+        .rule { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.85rem; color: #333; }
+        .rule-icon { color: #1976d2; font-weight: bold; }
+
+        /* Calendar */
+        .calendar-container { overflow: hidden; }
+        .calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .calendar-nav { display: flex; gap: 0.5rem; }
+        .calendar-nav button { padding: 0.5rem 1rem; border: 1px solid #e0e0e0; border-radius: 6px; background: white; cursor: pointer; transition: all 0.3s; font-weight: 500; }
+        .calendar-nav button:hover { border-color: #1976d2; color: #1976d2; }
+        .month-title { font-size: 1.25rem; font-weight: 600; color: #333; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+        .calendar-day-header { text-align: center; font-weight: 600; color: #666; padding: 0.5rem; font-size: 0.8rem; }
+        .calendar-day { aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-size: 0.9rem; }
+        .calendar-day:hover { background: #f0f0f0; }
+        .calendar-day.other-month { color: #ccc; }
+        .calendar-day.today { border: 2px solid #1976d2; }
+        .calendar-day.donation-day { background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; font-weight: 600; }
+        .calendar-day.blocked { background: #ffebee; color: #c62828; cursor: not-allowed; }
+        .day-number { font-weight: 500; }
+        .day-amount { font-size: 0.65rem; opacity: 0.9; }
+
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+        .stat-card { background: #f8f8f8; border-radius: 10px; padding: 1rem; text-align: center; }
+        .stat-value { font-size: 1.5rem; font-weight: 700; color: #1976d2; }
+        .stat-label { font-size: 0.8rem; color: #666; margin-top: 0.25rem; }
+
+        /* Legend */
+        .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #666; }
+        .legend-color { width: 16px; height: 16px; border-radius: 4px; }
+
+        /* Centers Section */
+        .centers-section { background: white; padding: 3rem 1.5rem; }
+        .centers-container { max-width: 1000px; margin: 0 auto; }
+        .centers-section h2 { text-align: center; font-size: 1.5rem; color: #333; margin-bottom: 0.5rem; }
+        .centers-section .subtitle { text-align: center; color: #666; margin-bottom: 2rem; }
+        .centers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .center-card { border: 2px solid #e0e0e0; border-radius: 16px; padding: 1.5rem; text-align: center; transition: all 0.3s; }
+        .center-card:hover { border-color: #27ae60; transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .center-logo { font-size: 2rem; margin-bottom: 0.5rem; }
+        .center-card-name { font-weight: 700; font-size: 1.1rem; color: #333; margin-bottom: 0.25rem; }
+        .center-card-bonus { color: #27ae60; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .center-description { font-size: 0.85rem; color: #666; margin-bottom: 1rem; }
+        .center-link { display: inline-block; padding: 0.5rem 1.5rem; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; }
+
+        /* Related Tools */
+        .related-tools { background: #f8f9fa; padding: 3rem 1.5rem; }
+        .related-container { max-width: 1000px; margin: 0 auto; }
+        .related-tools h2 { text-align: center; font-size: 1.5rem; color: #333; margin-bottom: 2rem; }
+        .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .tool-card { background: white; border-radius: 16px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s; }
+        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .tool-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .tool-name { font-weight: 700; color: #333; margin-bottom: 0.5rem; }
+        .tool-desc { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+        .tool-link { color: #27ae60; font-weight: 600; text-decoration: none; }
+
+        /* FAQ */
+        .faq-section { background: white; padding: 3rem 1.5rem; }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-section h2 { text-align: center; font-size: 1.5rem; color: #333; margin-bottom: 2rem; }
+        .faq-item { border-bottom: 1px solid #e0e0e0; padding: 1.25rem 0; cursor: pointer; }
+        .faq-question { font-weight: 600; color: #333; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question:hover { color: #1976d2; }
+        .faq-answer { color: #666; margin-top: 0.75rem; display: none; line-height: 1.7; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-toggle { font-size: 1.2rem; color: #1976d2; }
+
+        /* Footer CTA */
+        .footer-cta { background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; padding: 3rem 1.5rem; text-align: center; }
+        .footer-cta h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .footer-cta p { opacity: 0.9; margin-bottom: 1.5rem; }
+        .footer-cta .btn-cta { display: inline-block; padding: 0.75rem 2rem; background: white; color: #27ae60; text-decoration: none; border-radius: 10px; font-weight: 700; }
+
+        /* Footer */
+        footer { background: #2c3e50; color: white; padding: 2rem 1.5rem; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        .footer-copy { font-size: 0.85rem; opacity: 0.7; }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .scheduler-grid { grid-template-columns: 1fr; }
+            .centers-grid, .tools-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.6rem; }
+            .calendar-day { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="logo"><div class="logo-icon">PPC</div> Plasma Pay Calculator</a>
+                <span class="trust-badge">Updated 2026</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/tools/center-finder">Find Centers</a></li>
+                <li><a href="/calculators/">By State</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/centers/" class="centers-highlight">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/tools/center-finder">Find Centers</a></li>
+                <li><a href="/calculators/">By State</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/centers/">Centers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>FREE Plasma Donation Scheduler</h1>
+            <p>Plan your donations around FDA rules and maximize your monthly earnings with our visual calendar</p>
+            <div class="hero-badges">
+                <span class="hero-badge">FDA Compliant</span>
+                <span class="hero-badge">Visual Calendar</span>
+                <span class="hero-badge">Earnings Projections</span>
+            </div>
+        </section>
+
+        <section class="tool-section">
+            <div class="scheduler-grid">
+                <div class="card">
+                    <h2>Your Preferences</h2>
+                    <div class="form-group">
+                        <label for="centerSelect">Your Plasma Center</label>
+                        <select id="centerSelect" onchange="updateSchedule()">
+                            <option value="csl">CSL Plasma (~$75/visit)</option>
+                            <option value="biolife">BioLife (~$85/visit)</option>
+                            <option value="octapharma">Octapharma (~$90/visit)</option>
+                            <option value="grifols">Grifols (~$65/visit)</option>
+                            <option value="kedplasma">KEDPLASMA (~$45/visit)</option>
+                            <option value="bpl">BPL Plasma (~$100/visit)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorType">Donor Type</label>
+                        <select id="donorType" onchange="updateSchedule()">
+                            <option value="new">New Donor (bonus rates)</option>
+                            <option value="returning">Returning Donor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Donation Days</label>
+                        <div class="preferred-days" id="preferredDays"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start From</label>
+                        <input type="date" id="startDate" onchange="updateSchedule()">
+                    </div>
+                    <button class="btn" onclick="updateSchedule()">Generate Schedule</button>
+                    <div class="rules-card">
+                        <h3>FDA Donation Rules</h3>
+                        <div class="rule"><span class="rule-icon">&#10003;</span><span>Maximum 2 donations per 7-day period</span></div>
+                        <div class="rule"><span class="rule-icon">&#10003;</span><span>At least 48 hours between donations</span></div>
+                        <div class="rule"><span class="rule-icon">&#10003;</span><span>Donations cannot be on consecutive days</span></div>
+                    </div>
+                </div>
+
+                <div class="card calendar-container">
+                    <div class="calendar-header">
+                        <div class="calendar-nav">
+                            <button onclick="changeMonth(-1)">&lt; Prev</button>
+                            <button onclick="changeMonth(1)">Next &gt;</button>
+                        </div>
+                        <h2 class="month-title" id="monthTitle">January 2026</h2>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                    <div class="legend">
+                        <div class="legend-item"><div class="legend-color" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);"></div><span>Scheduled Donation</span></div>
+                        <div class="legend-item"><div class="legend-color" style="background: #ffebee; border: 1px solid #ef9a9a;"></div><span>48hr Block</span></div>
+                        <div class="legend-item"><div class="legend-color" style="border: 2px solid #1976d2;"></div><span>Today</span></div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card"><div class="stat-value" id="monthlyDonations">0</div><div class="stat-label">Donations This Month</div></div>
+                        <div class="stat-card"><div class="stat-value" id="monthlyEarnings">$0</div><div class="stat-label">Est. Monthly Earnings</div></div>
+                        <div class="stat-card"><div class="stat-value" id="yearlyProjection">$0</div><div class="stat-label">Yearly Projection</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense -->
+        <div style="max-width: 1100px; margin: 0 auto 2rem; padding: 0 1rem;">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3180649272238451" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Centers Section -->
+        <section class="centers-section">
+            <div class="centers-container">
+                <h2>Start Earning at Top Plasma Centers</h2>
+                <p class="subtitle">Compare pay rates and find the best center for your schedule</p>
+                <div class="centers-grid">
+                    <div class="center-card">
+                        <div class="center-logo">🩸</div>
+                        <div class="center-card-name">CSL Plasma</div>
+                        <div class="center-card-bonus">~$75/visit returning</div>
+                        <div class="center-description">300+ locations nationwide. Consistent pay and reliable scheduling app.</div>
+                        <a href="/centers/csl-plasma/" class="center-link">View Details</a>
+                    </div>
+                    <div class="center-card">
+                        <div class="center-logo">💚</div>
+                        <div class="center-card-name">BioLife Plasma</div>
+                        <div class="center-card-bonus">~$85/visit returning</div>
+                        <div class="center-description">Premium facilities with easy scheduling and bonus promotions.</div>
+                        <a href="/centers/biolife/" class="center-link">View Details</a>
+                    </div>
+                    <div class="center-card">
+                        <div class="center-logo">🔬</div>
+                        <div class="center-card-name">Octapharma</div>
+                        <div class="center-card-bonus">~$90/visit returning</div>
+                        <div class="center-description">Fast-growing network with competitive pay and shorter wait times.</div>
+                        <a href="/centers/octapharma/" class="center-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Tools -->
+        <section class="related-tools">
+            <div class="related-container">
+                <h2>More Free Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🗺️</div>
+                        <div class="tool-name">Center Finder</div>
+                        <div class="tool-desc">Find the highest-paying plasma centers near you with our interactive map.</div>
+                        <a href="/tools/center-finder" class="tool-link">Find Centers &rarr;</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">💰</div>
+                        <div class="tool-name">Bonus Calculator</div>
+                        <div class="tool-desc">Calculate the optimal order to use new donor bonuses at multiple centers.</div>
+                        <a href="/tools/bonus-stacking-calculator" class="tool-link">Stack Bonuses &rarr;</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">🎯</div>
+                        <div class="tool-name">Savings Goal Tracker</div>
+                        <div class="tool-desc">Set a savings goal and track your progress toward vacation, bills, or emergency fund.</div>
+                        <a href="/tools/savings-goal-tracker" class="tool-link">Track Goals &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="faq-container">
+                <h2>Donation Schedule FAQ</h2>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">How often can I donate plasma? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">FDA regulations allow up to 2 plasma donations within a 7-day period, with at least 48 hours between donations. This means you can donate a maximum of 104 times per year. Most donors find a twice-weekly schedule (like Monday and Thursday or Tuesday and Friday) works best.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Why do I need 48 hours between donations? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">The 48-hour rule gives your body time to regenerate plasma proteins. While plasma itself regenerates within 24-48 hours, the FDA requires this waiting period to ensure donor safety. Donating too frequently can lead to fatigue, low protein levels, and other health issues.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">What's the best schedule for maximum earnings? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">For maximum earnings, donate twice per week every week. Popular schedules include Monday/Thursday, Tuesday/Friday, or Wednesday/Saturday. The key is consistency - missing donations means losing potential income. Our scheduler helps you visualize the optimal days based on your preferences.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Do new donors earn more than returning donors? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Yes, new donors typically earn significantly more during their first 4-8 weeks due to new donor bonus programs. After completing the bonus period, you become a returning donor with standard rates. This is why many donors use the bonus stacking strategy to maximize earnings.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">What happens if I miss my scheduled donation? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Most centers don't penalize you for missing appointments, but you lose that potential income and may miss out on bonus promotions. Some centers require you to reschedule within the same week to maintain certain bonus tiers. It's best to cancel appointments in advance if you can't make it.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <section class="footer-cta">
+            <h2>Ready to Calculate Your Exact Earnings?</h2>
+            <p>Use our main calculator for personalized earnings based on your weight, location, and donation frequency.</p>
+            <a href="/" class="btn-cta">Calculate My Earnings &rarr;</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/">Calculator</a>
+            <a href="/blog/">Blog</a>
+            <a href="/centers/">Centers</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/about.html">About</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+        </div>
+        <div class="footer-copy">&copy; 2026 PlasmaPayCalculator.com - All Rights Reserved</div>
+    </footer>
+
+    <script>
+        const rates = {
+            csl: { new: [135, 115, 100, 95, 115, 100, 95, 90], returning: 75 },
+            biolife: { new: [120, 100, 90, 85, 100, 90, 85, 80], returning: 85 },
+            octapharma: { new: [130, 110, 95, 90, 110, 95, 90, 85], returning: 90 },
+            grifols: { new: [115, 95, 85, 80, 95, 85, 80, 75], returning: 65 },
+            kedplasma: { new: [125, 105, 90, 85, 105, 90, 85, 80], returning: 45 },
+            bpl: { new: [140, 120, 100, 95, 120, 100, 95, 90], returning: 100 }
+        };
+        const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        let currentDate = new Date();
+        let currentMonth = currentDate.getMonth();
+        let currentYear = currentDate.getFullYear();
+        let scheduledDonations = [];
+        let preferredDays = [1, 4];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('startDate').valueAsDate = new Date();
+            renderDayButtons();
+            updateSchedule();
+        });
+
+        function renderDayButtons() {
+            const container = document.getElementById('preferredDays');
+            container.textContent = '';
+            dayNames.forEach((name, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'day-btn' + (preferredDays.includes(i) ? ' selected' : '');
+                btn.dataset.day = i;
+                btn.textContent = name;
+                btn.addEventListener('click', () => {
+                    btn.classList.toggle('selected');
+                    updatePreferredDays();
+                    updateSchedule();
+                });
+                container.appendChild(btn);
+            });
+        }
+
+        function updatePreferredDays() {
+            preferredDays = Array.from(document.querySelectorAll('.day-btn.selected')).map(btn => parseInt(btn.dataset.day));
+        }
+
+        function changeMonth(delta) {
+            currentMonth += delta;
+            if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+            else if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+            renderCalendar();
+        }
+
+        function updateSchedule() {
+            const startDate = new Date(document.getElementById('startDate').value);
+            const center = document.getElementById('centerSelect').value;
+            const donorType = document.getElementById('donorType').value;
+            scheduledDonations = [];
+            let lastDonation = null;
+            let donationsThisWeek = 0;
+            let weekStart = getWeekStart(startDate);
+            let donationCount = 0;
+
+            for (let d = new Date(startDate); d < new Date(startDate.getTime() + 180 * 24 * 60 * 60 * 1000); d.setDate(d.getDate() + 1)) {
+                if (d >= new Date(weekStart.getTime() + 7 * 24 * 60 * 60 * 1000)) {
+                    weekStart = getWeekStart(d);
+                    donationsThisWeek = 0;
+                }
+                if (!preferredDays.includes(d.getDay())) continue;
+                if (lastDonation && (d - lastDonation) < 48 * 60 * 60 * 1000) continue;
+                if (donationsThisWeek >= 2) continue;
+                let pay = (donorType === 'new' && donationCount < 8) ? rates[center].new[donationCount] : rates[center].returning;
+                scheduledDonations.push({ date: new Date(d), amount: pay });
+                lastDonation = new Date(d);
+                donationsThisWeek++;
+                donationCount++;
+            }
+            renderCalendar();
+            updateStats();
+        }
+
+        function getWeekStart(date) {
+            const d = new Date(date);
+            d.setDate(d.getDate() - d.getDay());
+            d.setHours(0, 0, 0, 0);
+            return d;
+        }
+
+        function renderCalendar() {
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            document.getElementById('monthTitle').textContent = monthNames[currentMonth] + ' ' + currentYear;
+
+            const firstDay = new Date(currentYear, currentMonth, 1);
+            const lastDay = new Date(currentYear, currentMonth + 1, 0);
+            const startDay = firstDay.getDay();
+            const totalDays = lastDay.getDate();
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            const grid = document.getElementById('calendarGrid');
+            grid.textContent = '';
+
+            dayNames.forEach(name => {
+                const header = document.createElement('div');
+                header.className = 'calendar-day-header';
+                header.textContent = name;
+                grid.appendChild(header);
+            });
+
+            const prevMonth = new Date(currentYear, currentMonth, 0);
+            for (let i = startDay - 1; i >= 0; i--) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'calendar-day other-month';
+                dayDiv.textContent = prevMonth.getDate() - i;
+                grid.appendChild(dayDiv);
+            }
+
+            for (let day = 1; day <= totalDays; day++) {
+                const date = new Date(currentYear, currentMonth, day);
+                date.setHours(0, 0, 0, 0);
+                const isToday = date.getTime() === today.getTime();
+                const donation = scheduledDonations.find(d => d.date.getDate() === day && d.date.getMonth() === currentMonth && d.date.getFullYear() === currentYear);
+                const isBlocked = scheduledDonations.some(d => {
+                    const diff = Math.abs(date - d.date);
+                    return diff > 0 && diff < 48 * 60 * 60 * 1000;
+                });
+
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'calendar-day';
+                if (isToday) dayDiv.classList.add('today');
+                if (donation) dayDiv.classList.add('donation-day');
+                else if (isBlocked) dayDiv.classList.add('blocked');
+
+                const numSpan = document.createElement('span');
+                numSpan.className = 'day-number';
+                numSpan.textContent = day;
+                dayDiv.appendChild(numSpan);
+
+                if (donation) {
+                    const amtSpan = document.createElement('span');
+                    amtSpan.className = 'day-amount';
+                    amtSpan.textContent = '$' + donation.amount;
+                    dayDiv.appendChild(amtSpan);
+                }
+                grid.appendChild(dayDiv);
+            }
+
+            const remainingDays = 42 - (startDay + totalDays);
+            for (let i = 1; i <= remainingDays; i++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'calendar-day other-month';
+                dayDiv.textContent = i;
+                grid.appendChild(dayDiv);
+            }
+        }
+
+        function updateStats() {
+            const monthDonations = scheduledDonations.filter(d => d.date.getMonth() === currentMonth && d.date.getFullYear() === currentYear);
+            const monthlyCount = monthDonations.length;
+            const monthlyTotal = monthDonations.reduce((sum, d) => sum + d.amount, 0);
+            const avgMonthly = scheduledDonations.slice(0, 8).reduce((sum, d) => sum + d.amount, 0) / Math.min(scheduledDonations.length / 8, 1) || monthlyTotal;
+            const yearlyProjection = Math.round(avgMonthly * 12);
+
+            document.getElementById('monthlyDonations').textContent = monthlyCount;
+            document.getElementById('monthlyEarnings').textContent = '$' + monthlyTotal.toLocaleString();
+            document.getElementById('yearlyProjection').textContent = '$' + yearlyProjection.toLocaleString();
+        }
+
+        function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+        function toggleFaq(el) {
+            el.classList.toggle('active');
+            el.querySelector('.faq-toggle').textContent = el.classList.contains('active') ? '−' : '+';
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Plasma Donation Scheduler",
+        "description": "Plan your plasma donation schedule around FDA limits and maximize earnings",
+        "url": "https://plasmapaycalculator.com/tools/donation-scheduler",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web Browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How often can I donate plasma?", "acceptedAnswer": {"@type": "Answer", "text": "FDA regulations allow up to 2 plasma donations within a 7-day period, with at least 48 hours between donations. This means you can donate a maximum of 104 times per year."}},
+            {"@type": "Question", "name": "What's the best schedule for maximum earnings?", "acceptedAnswer": {"@type": "Answer", "text": "For maximum earnings, donate twice per week every week. Popular schedules include Monday/Thursday, Tuesday/Friday, or Wednesday/Saturday."}}
+        ]
+    }
+    </script>
+</body>
+</html>

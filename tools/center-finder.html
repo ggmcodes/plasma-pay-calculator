@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-053DRWEQLS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-053DRWEQLS');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/global-fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma Center Finder Near Me 2026: Interactive Map with 2,500+ Locations</title>
+    <meta name="description" content="Find plasma donation centers near you with our interactive map. 2,500+ locations with pay rates, hours, ratings & directions. Locate the highest-paying center now!">
+    <meta name="keywords" content="plasma center near me, plasma donation locations, find plasma center, plasma center map, highest paying plasma near me">
+    <meta name="theme-color" content="#27ae60">
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://plasmapaycalculator.com/tools/center-finder">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Plasma Center Finder - Interactive Map with 2,500+ Locations">
+    <meta property="og:description" content="Find plasma donation centers near you with pay rates, hours, and ratings.">
+    <meta property="og:url" content="https://plasmapaycalculator.com/tools/center-finder">
+    <meta property="og:type" content="website">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8faf9;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        main {
+            margin-top: 70px;
+            min-height: calc(100vh - 70px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .controls {
+            background: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .control-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .control-group select,
+        .control-group input {
+            padding: 0.5rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: border-color 0.3s;
+        }
+
+        .control-group select:focus,
+        .control-group input:focus {
+            outline: none;
+            border-color: #27ae60;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .map-container {
+            flex: 1;
+            display: flex;
+            position: relative;
+            min-height: 500px;
+        }
+
+        #map {
+            flex: 1;
+            z-index: 1;
+        }
+
+        .sidebar {
+            width: 380px;
+            background: white;
+            border-left: 1px solid #e0e0e0;
+            overflow-y: auto;
+            z-index: 2;
+        }
+
+        .sidebar-header {
+            padding: 1rem;
+            background: #f8f8f8;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar-header h3 {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .results-count {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .center-list {
+            list-style: none;
+        }
+
+        .center-card {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .center-card:hover {
+            background: #f8faf9;
+        }
+
+        .center-card.active {
+            background: rgba(39, 174, 96, 0.1);
+            border-left: 3px solid #27ae60;
+        }
+
+        .center-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .center-address {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .center-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .meta-badge {
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .meta-pay {
+            background: #e8f5e9;
+            color: #27ae60;
+        }
+
+        .meta-rating {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .meta-brand {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .meta-distance {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        .loading-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #e0e0e0;
+            border-top-color: #27ae60;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .no-results {
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+        }
+
+        .popup-content h4 {
+            color: #27ae60;
+            margin-bottom: 0.5rem;
+        }
+
+        .popup-content p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+
+        .popup-content .directions-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .popup-content .directions-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .map-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                max-height: 300px;
+                border-left: none;
+                border-top: 1px solid #e0e0e0;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .controls {
+                flex-direction: column;
+            }
+
+            .control-group {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .control-group select,
+            .control-group input {
+                flex: 1;
+            }
+
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        .custom-marker {
+            background: #27ae60;
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .user-marker {
+            background: #e74c3c;
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">P$</span>
+                Plasma Pay Calculator
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/tools/center-finder" class="active">Find Centers</a></li>
+                <li><a href="/calculators/">By State</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Find Plasma Centers Near You</h1>
+            <p>2,500+ locations with pay rates, hours, and ratings</p>
+        </section>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="locationInput">Location:</label>
+                <input type="text" id="locationInput" placeholder="City, State or ZIP">
+            </div>
+            <div class="control-group">
+                <label for="radiusSelect">Radius:</label>
+                <select id="radiusSelect">
+                    <option value="10">10 miles</option>
+                    <option value="25" selected>25 miles</option>
+                    <option value="50">50 miles</option>
+                    <option value="100">100 miles</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="brandFilter">Brand:</label>
+                <select id="brandFilter">
+                    <option value="">All Brands</option>
+                    <option value="CSL Plasma">CSL Plasma</option>
+                    <option value="BioLife">BioLife</option>
+                    <option value="Octapharma">Octapharma</option>
+                    <option value="Grifols">Grifols</option>
+                    <option value="KEDPLASMA">KEDPLASMA</option>
+                    <option value="BPL Plasma">BPL Plasma</option>
+                    <option value="Independent">Independent</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="ratingFilter">Min Rating:</label>
+                <select id="ratingFilter">
+                    <option value="0">Any</option>
+                    <option value="3">3+ Stars</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="4.5">4.5+ Stars</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" onclick="searchLocation()">Search</button>
+            <button class="btn btn-secondary" onclick="useMyLocation()">Use My Location</button>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3>Nearby Centers</h3>
+                    <div class="results-count" id="resultsCount">Loading centers...</div>
+                </div>
+                <ul class="center-list" id="centerList">
+                    <li class="loading">
+                        <div class="loading-spinner"></div>
+                        Loading plasma centers...
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script>
+        // Global state
+        let map;
+        let markers = [];
+        let centers = [];
+        let userMarker = null;
+        let userLocation = null;
+
+
+        // Initialize map
+        function initMap() {
+            map = L.map('map').setView([39.8283, -98.5795], 4);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+        }
+
+        // Escape HTML to prevent XSS - all center data passes through this
+        function escapeHtml(text) {
+            if (text === null || text === undefined) return '';
+            const div = document.createElement('div');
+            div.textContent = String(text);
+            return div.innerHTML;
+        }
+
+        // Load centers data
+        async function loadCenters() {
+            try {
+                const response = await fetch('/data/centers.json');
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+
+                const data = await response.json();
+                centers = data.centers || [];
+                document.getElementById('resultsCount').textContent = centers.length + ' centers in database';
+                showAllCenters();
+
+            } catch (error) {
+                console.error('Error loading centers:', error);
+                document.getElementById('resultsCount').textContent = 'Error loading centers';
+            }
+        }
+
+        // Calculate distance (Haversine formula)
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 3959;
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLon/2) * Math.sin(dLon/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
+        }
+
+        // Show nearby centers
+        function showNearbyCenter(lat, lng) {
+            const radius = parseInt(document.getElementById('radiusSelect').value);
+            const brandFilter = document.getElementById('brandFilter').value;
+            const ratingFilter = parseFloat(document.getElementById('ratingFilter').value);
+
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+
+            if (userMarker) map.removeLayer(userMarker);
+            userMarker = L.circleMarker([lat, lng], {
+                radius: 10, fillColor: '#e74c3c', color: '#fff', weight: 3, opacity: 1, fillOpacity: 1
+            }).addTo(map).bindPopup('<strong>Your Location</strong>');
+
+            let filtered = centers
+                .map(center => ({
+                    ...center,
+                    distance: calculateDistance(lat, lng, center.latitude, center.longitude)
+                }))
+                .filter(center => {
+                    if (center.distance > radius) return false;
+                    if (brandFilter && !center.brand?.toLowerCase().includes(brandFilter.toLowerCase())) return false;
+                    if (ratingFilter && (center.rating || 0) < ratingFilter) return false;
+                    return true;
+                })
+                .sort((a, b) => a.distance - b.distance);
+
+            updateMapAndList(filtered, lat, lng);
+        }
+
+        // Show all centers
+        function showAllCenters() {
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+
+            const brandFilter = document.getElementById('brandFilter').value;
+            const ratingFilter = parseFloat(document.getElementById('ratingFilter').value);
+
+            let filtered = centers.filter(center => {
+                if (brandFilter && !center.brand?.toLowerCase().includes(brandFilter.toLowerCase())) return false;
+                if (ratingFilter && (center.rating || 0) < ratingFilter) return false;
+                return true;
+            });
+
+            const toShow = filtered.slice(0, 100);
+
+            toShow.forEach(center => {
+                if (center.latitude && center.longitude) {
+                    const marker = L.circleMarker([center.latitude, center.longitude], {
+                        radius: 6, fillColor: '#27ae60', color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.8
+                    }).addTo(map);
+                    marker.bindPopup(createPopupContent(center));
+                    markers.push(marker);
+                }
+            });
+
+            document.getElementById('resultsCount').textContent = 'Showing ' + toShow.length + ' of ' + filtered.length + ' centers. Search for location to see nearby.';
+            document.getElementById('centerList').textContent = '';
+            const noResults = document.createElement('li');
+            noResults.className = 'no-results';
+            noResults.textContent = 'Enter a location or use "My Location" to find nearby centers.';
+            document.getElementById('centerList').appendChild(noResults);
+        }
+
+        // Update map and list
+        function updateMapAndList(filtered, lat, lng) {
+            if (filtered.length > 0) {
+                const bounds = L.latLngBounds([[lat, lng]]);
+                filtered.slice(0, 20).forEach(c => bounds.extend([c.latitude, c.longitude]));
+                map.fitBounds(bounds, { padding: [50, 50] });
+            } else {
+                map.setView([lat, lng], 10);
+            }
+
+            filtered.forEach((center) => {
+                if (center.latitude && center.longitude) {
+                    const marker = L.circleMarker([center.latitude, center.longitude], {
+                        radius: 8, fillColor: '#27ae60', color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.8
+                    }).addTo(map);
+                    marker.bindPopup(createPopupContent(center));
+                    marker.centerId = center.id;
+                    markers.push(marker);
+                }
+            });
+
+            const list = document.getElementById('centerList');
+            document.getElementById('resultsCount').textContent = filtered.length + ' centers within radius';
+
+            // Clear list safely
+            while (list.firstChild) {
+                list.removeChild(list.firstChild);
+            }
+
+            if (filtered.length === 0) {
+                const noResults = document.createElement('li');
+                noResults.className = 'no-results';
+                noResults.textContent = 'No centers found. Try expanding your search radius.';
+                list.appendChild(noResults);
+                return;
+            }
+
+            filtered.slice(0, 50).forEach((center) => {
+                const li = document.createElement('li');
+                li.className = 'center-card';
+                li.dataset.id = center.id;
+                li.onclick = () => selectCenter(center.id, center.latitude, center.longitude);
+
+                const nameDiv = document.createElement('div');
+                nameDiv.className = 'center-name';
+                nameDiv.textContent = center.name;
+                li.appendChild(nameDiv);
+
+                const addrDiv = document.createElement('div');
+                addrDiv.className = 'center-address';
+                addrDiv.textContent = center.full_address;
+                li.appendChild(addrDiv);
+
+                const metaDiv = document.createElement('div');
+                metaDiv.className = 'center-meta';
+
+                const payBadge = document.createElement('span');
+                payBadge.className = 'meta-badge meta-pay';
+                payBadge.textContent = center.typical_pay || 'Contact';
+                metaDiv.appendChild(payBadge);
+
+                if (center.rating) {
+                    const ratingBadge = document.createElement('span');
+                    ratingBadge.className = 'meta-badge meta-rating';
+                    ratingBadge.textContent = center.rating + ' ★';
+                    metaDiv.appendChild(ratingBadge);
+                }
+
+                if (center.brand) {
+                    const brandBadge = document.createElement('span');
+                    brandBadge.className = 'meta-badge meta-brand';
+                    brandBadge.textContent = center.brand;
+                    metaDiv.appendChild(brandBadge);
+                }
+
+                const distBadge = document.createElement('span');
+                distBadge.className = 'meta-badge meta-distance';
+                distBadge.textContent = center.distance.toFixed(1) + ' mi';
+                metaDiv.appendChild(distBadge);
+
+                li.appendChild(metaDiv);
+                list.appendChild(li);
+            });
+        }
+
+        // Create popup content safely
+        function createPopupContent(center) {
+            const directionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(center.full_address);
+
+            const container = document.createElement('div');
+            container.className = 'popup-content';
+
+            const h4 = document.createElement('h4');
+            h4.textContent = center.name;
+            container.appendChild(h4);
+
+            const addrP = document.createElement('p');
+            addrP.innerHTML = '<strong>Address:</strong> ' + escapeHtml(center.full_address);
+            container.appendChild(addrP);
+
+            const payP = document.createElement('p');
+            payP.innerHTML = '<strong>Pay:</strong> ' + escapeHtml(center.typical_pay || 'Contact center');
+            container.appendChild(payP);
+
+            if (center.rating) {
+                const ratingP = document.createElement('p');
+                ratingP.innerHTML = '<strong>Rating:</strong> ' + escapeHtml(center.rating) + ' ★ (' + escapeHtml(center.reviews || 0) + ' reviews)';
+                container.appendChild(ratingP);
+            }
+
+            if (center.phone) {
+                const phoneP = document.createElement('p');
+                const phoneLink = document.createElement('a');
+                phoneLink.href = 'tel:' + center.phone;
+                phoneLink.textContent = center.phone;
+                phoneP.innerHTML = '<strong>Phone:</strong> ';
+                phoneP.appendChild(phoneLink);
+                container.appendChild(phoneP);
+            }
+
+            if (center.first_visit_bonus) {
+                const bonusP = document.createElement('p');
+                bonusP.innerHTML = '<strong>First Visit:</strong> ' + escapeHtml(center.first_visit_bonus);
+                container.appendChild(bonusP);
+            }
+
+            const dirLink = document.createElement('a');
+            dirLink.href = directionsUrl;
+            dirLink.target = '_blank';
+            dirLink.className = 'directions-link';
+            dirLink.textContent = 'Get Directions →';
+            container.appendChild(dirLink);
+
+            return container;
+        }
+
+        // Select center from sidebar
+        function selectCenter(id, lat, lng) {
+            document.querySelectorAll('.center-card').forEach(el => el.classList.remove('active'));
+            const selected = document.querySelector('[data-id="' + id + '"]');
+            if (selected) selected.classList.add('active');
+            map.setView([lat, lng], 14);
+            const marker = markers.find(m => m.centerId === id);
+            if (marker) marker.openPopup();
+        }
+
+        // Search by location input
+        async function searchLocation() {
+            const input = document.getElementById('locationInput').value.trim();
+            if (!input) {
+                alert('Please enter a location');
+                return;
+            }
+
+            try {
+                const response = await fetch('https://nominatim.openstreetmap.org/search?format=json&q=' + encodeURIComponent(input) + '&countrycodes=us&limit=1');
+                const results = await response.json();
+
+                if (results.length > 0) {
+                    userLocation = { lat: parseFloat(results[0].lat), lng: parseFloat(results[0].lon) };
+                    showNearbyCenter(userLocation.lat, userLocation.lng);
+                } else {
+                    alert('Location not found. Try a different search term.');
+                }
+            } catch (error) {
+                console.error('Geocoding error:', error);
+                alert('Error searching location. Please try again.');
+            }
+        }
+
+        // Use browser geolocation
+        function useMyLocation() {
+            if (!navigator.geolocation) {
+                alert('Geolocation is not supported by your browser');
+                return;
+            }
+
+            const list = document.getElementById('centerList');
+            while (list.firstChild) list.removeChild(list.firstChild);
+            const loading = document.createElement('li');
+            loading.className = 'loading';
+            loading.innerHTML = '<div class="loading-spinner"></div>Getting your location...';
+            list.appendChild(loading);
+
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+                    showNearbyCenter(userLocation.lat, userLocation.lng);
+                },
+                (error) => {
+                    console.error('Geolocation error:', error);
+                    alert('Unable to get your location. Please enter it manually.');
+                    while (list.firstChild) list.removeChild(list.firstChild);
+                    const noResults = document.createElement('li');
+                    noResults.className = 'no-results';
+                    noResults.textContent = 'Enter a location to find nearby centers.';
+                    list.appendChild(noResults);
+                }
+            );
+        }
+
+        // Filter change handlers
+        document.getElementById('brandFilter').addEventListener('change', () => {
+            if (userLocation) showNearbyCenter(userLocation.lat, userLocation.lng);
+        });
+        document.getElementById('ratingFilter').addEventListener('change', () => {
+            if (userLocation) showNearbyCenter(userLocation.lat, userLocation.lng);
+        });
+        document.getElementById('radiusSelect').addEventListener('change', () => {
+            if (userLocation) showNearbyCenter(userLocation.lat, userLocation.lng);
+        });
+        document.getElementById('locationInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') searchLocation();
+        });
+
+        function toggleMobileMenu() {
+            const links = document.querySelector('.nav-links');
+            links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMap();
+            loadCenters();
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Plasma Center Finder",
+        "description": "Find plasma donation centers near you with pay rates, hours, and ratings",
+        "url": "https://plasmapaycalculator.com/tools/center-finder",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</body>
+</html>
