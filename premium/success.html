@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plasma Donor Pro Toolkit - Your Download Is Ready</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d9488">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --mint: #0d9488;
+        --mint-light: #14b8a6;
+        --coral: #f97316;
+        --coral-dark: #ea580c;
+        --charcoal: #1e293b;
+        --slate: #64748b;
+        --cream: #fefce8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', sans-serif;
+        line-height: 1.6;
+        color: var(--charcoal);
+        background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 50%, #fffbeb 100%);
+    }
+
+    .font-mono { font-family: 'Space Mono', monospace; }
+
+    /* Navigation */
+    nav {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--mint);
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.5rem;
+    }
+
+    .logo {
+        font-family: 'Space Mono', monospace;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--mint);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, var(--mint) 0%, var(--mint-light) 100%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 11px;
+    }
+
+    .trust-badge {
+        background: var(--cream);
+        color: var(--coral);
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        margin-left: 0.8rem;
+        border: 1px solid var(--coral);
+        font-family: 'Space Mono', monospace;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--charcoal);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+    }
+
+    .nav-links a:hover {
+        color: var(--mint);
+        background: rgba(13, 148, 136, 0.1);
+    }
+
+    .centers-highlight {
+        background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%) !important;
+        color: white !important;
+        font-weight: 700 !important;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--charcoal);
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+        border-bottom: 2px solid var(--mint);
+        z-index: 999;
+        padding: 1rem;
+    }
+
+    .mobile-menu.active { display: block; }
+    .mobile-menu ul { list-style: none; }
+    .mobile-menu li { margin: 0.5rem 0; }
+    .mobile-menu a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--charcoal);
+        font-weight: 500;
+        border-radius: 8px;
+    }
+    .mobile-menu a:hover { background: rgba(13, 148, 136, 0.1); color: var(--mint); }
+
+    /* Success Hero */
+    .success-hero {
+        margin-top: 76px;
+        background: linear-gradient(135deg, var(--mint) 0%, var(--mint-light) 50%, #0f766e 100%);
+        color: white;
+        text-align: center;
+        padding: 3rem 1.5rem 2.5rem;
+    }
+
+    .success-icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 40px;
+        border: 3px solid rgba(255,255,255,0.4);
+    }
+
+    .success-hero h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .success-hero p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Main Content */
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Quick Start */
+    .quick-start {
+        background: var(--cream);
+        border: 2px solid var(--coral);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .quick-start h2 {
+        color: var(--coral-dark);
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .quick-start p {
+        color: var(--slate);
+        font-size: 0.95rem;
+    }
+
+    /* Table of Contents */
+    .toc {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 4px 20px rgba(13, 148, 136, 0.08);
+        border: 1px solid rgba(13, 148, 136, 0.15);
+    }
+
+    .toc h2 {
+        font-family: 'Space Mono', monospace;
+        color: var(--mint);
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .toc-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    .toc-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.7rem 1rem;
+        background: #f0fdfa;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--charcoal);
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+        border: 1px solid transparent;
+    }
+
+    .toc-item:hover {
+        border-color: var(--mint);
+        background: white;
+        color: var(--mint);
+    }
+
+    .toc-num {
+        font-family: 'Space Mono', monospace;
+        background: var(--mint);
+        color: white;
+        width: 26px;
+        height: 26px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    /* Section Styling */
+    .toolkit-section {
+        background: white;
+        border-radius: 16px;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 20px rgba(13, 148, 136, 0.08);
+        border: 1px solid rgba(13, 148, 136, 0.1);
+    }
+
+    .section-label {
+        font-family: 'Space Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--mint);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+    }
+
+    .toolkit-section h2 {
+        font-size: 1.6rem;
+        color: var(--charcoal);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .toolkit-section h3 {
+        font-size: 1.2rem;
+        color: var(--mint);
+        margin: 2rem 0 0.8rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(13, 148, 136, 0.1);
+    }
+
+    .toolkit-section h3:first-of-type {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .toolkit-section h4 {
+        font-size: 1rem;
+        color: var(--charcoal);
+        margin: 1.5rem 0 0.5rem;
+    }
+
+    .toolkit-section p {
+        color: #475569;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .toolkit-section ul, .toolkit-section ol {
+        margin: 0.5rem 0 1.2rem 1.5rem;
+        color: #475569;
+    }
+
+    .toolkit-section li {
+        margin-bottom: 0.4rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .toolkit-section li strong {
+        color: var(--charcoal);
+    }
+
+    /* Data Tables */
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.2rem 0;
+        font-size: 0.9rem;
+    }
+
+    .data-table th {
+        background: var(--mint);
+        color: white;
+        padding: 0.7rem 1rem;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child { border-radius: 0 8px 0 0; }
+
+    .data-table td {
+        padding: 0.6rem 1rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .data-table tr:nth-child(even) { background: #f8fafc; }
+    .data-table tr:hover { background: #f0fdfa; }
+
+    .data-table .highlight-row {
+        background: var(--cream) !important;
+        font-weight: 600;
+    }
+
+    /* Tip/Callout Boxes */
+    .tip-box {
+        background: #f0fdfa;
+        border-left: 4px solid var(--mint);
+        padding: 1rem 1.2rem;
+        border-radius: 0 8px 8px 0;
+        margin: 1.2rem 0;
+    }
+
+    .tip-box strong {
+        color: var(--mint);
+    }
+
+    .warning-box {
+        background: #fff7ed;
+        border-left: 4px solid var(--coral);
+        padding: 1rem 1.2rem;
+        border-radius: 0 8px 8px 0;
+        margin: 1.2rem 0;
+    }
+
+    .warning-box strong {
+        color: var(--coral-dark);
+    }
+
+    .money-box {
+        background: var(--cream);
+        border-left: 4px solid #eab308;
+        padding: 1rem 1.2rem;
+        border-radius: 0 8px 8px 0;
+        margin: 1.2rem 0;
+    }
+
+    .money-box strong {
+        color: #a16207;
+    }
+
+    /* Calendar / Planner */
+    .week-plan {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 0.4rem;
+        margin: 1rem 0;
+    }
+
+    .week-day {
+        text-align: center;
+        padding: 0.6rem 0.3rem;
+        border-radius: 8px;
+        font-size: 0.8rem;
+    }
+
+    .week-day .day-label {
+        font-weight: 700;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        margin-bottom: 0.3rem;
+        font-family: 'Space Mono', monospace;
+    }
+
+    .donate-day {
+        background: #dcfce7;
+        border: 1px solid #86efac;
+        color: #166534;
+    }
+
+    .rest-day {
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        color: var(--slate);
+    }
+
+    .prep-day {
+        background: #fef3c7;
+        border: 1px solid #fde68a;
+        color: #92400e;
+    }
+
+    /* Product Cards (Amazon) */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.2rem;
+        margin: 1.5rem 0;
+    }
+
+    .product-card {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.2s;
+    }
+
+    .product-card:hover {
+        border-color: var(--coral);
+        box-shadow: 0 4px 12px rgba(249, 115, 22, 0.1);
+    }
+
+    .product-card .product-emoji {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-card h4 {
+        font-size: 0.95rem;
+        color: var(--charcoal);
+        margin: 0 0 0.3rem;
+    }
+
+    .product-card p {
+        font-size: 0.85rem;
+        color: var(--slate);
+        margin-bottom: 0.8rem;
+    }
+
+    .product-card .product-why {
+        font-size: 0.8rem;
+        color: var(--mint);
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+    }
+
+    .product-link {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+        color: white;
+        padding: 0.5rem 1.2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: transform 0.2s;
+    }
+
+    .product-link:hover { transform: translateY(-1px); }
+
+    /* Checklist */
+    .checklist {
+        list-style: none;
+        margin: 1rem 0;
+        padding: 0;
+    }
+
+    .checklist li {
+        padding: 0.5rem 0 0.5rem 2rem;
+        position: relative;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    .checklist li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.65rem;
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--mint);
+        border-radius: 4px;
+    }
+
+    /* Print Styles */
+    @media print {
+        nav, .mobile-menu, .success-hero, .quick-start, .toc, footer { display: none; }
+        body { background: white; }
+        .toolkit-section { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+        .product-link { color: var(--coral); text-decoration: underline; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .success-hero h1 { font-size: 1.6rem; }
+        .toolkit-section { padding: 1.5rem; }
+        .toc-grid { grid-template-columns: 1fr; }
+        .product-grid { grid-template-columns: 1fr; }
+        .week-plan { grid-template-columns: repeat(4, 1fr); }
+        .data-table { font-size: 0.8rem; }
+        .data-table th, .data-table td { padding: 0.4rem 0.6rem; }
+    }
+
+    /* Bookmark reminder */
+    .bookmark-bar {
+        position: sticky;
+        top: 76px;
+        z-index: 50;
+        background: var(--cream);
+        border-bottom: 1px solid rgba(234, 179, 8, 0.3);
+        padding: 0.5rem 1.5rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #92400e;
+        font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+        background: var(--charcoal);
+        color: white;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        margin-top: 3rem;
+        font-size: 0.85rem;
+    }
+
+    footer a {
+        color: var(--mint-light);
+        text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-container">
+        <div style="display: flex; align-items: center;">
+            <a href="/" class="logo">
+                <div class="logo-icon">PPC</div>
+                Plasma Pay Calculator
+            </a>
+            <div class="trust-badge">PRO TOOLKIT</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/#calculator">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/states">States</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/centers/" class="centers-highlight">Centers</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="/#calculator">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/states">States</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/centers/" class="centers-highlight">Centers</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Success Hero -->
+<div class="success-hero">
+    <div class="success-icon">&#10003;</div>
+    <h1>You're In! Your Pro Toolkit Is Ready</h1>
+    <p>Everything you need to maximize your plasma income, nail your taxes, and earn $2,000+ in your first 90 days.</p>
+</div>
+
+<!-- Bookmark Reminder -->
+<div class="bookmark-bar">
+    Bookmark this page (Ctrl+D / Cmd+D) &mdash; this is your permanent access link. Come back anytime.
+</div>
+
+<!-- Main Content -->
+<main>
+
+<!-- Quick Start -->
+<div class="quick-start">
+    <h2>Quick Start: Your 3 Moves Right Now</h2>
+    <p><strong>1.</strong> Bookmark this page &nbsp;|&nbsp; <strong>2.</strong> Jump to the <a href="#first-90-days" style="color: var(--coral-dark);">First 90 Days Playbook</a> &nbsp;|&nbsp; <strong>3.</strong> Order your <a href="#essentials" style="color: var(--coral-dark);">Starter Kit</a> so it arrives before your first visit</p>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <h2>What's Inside</h2>
+    <div class="toc-grid">
+        <a href="#tracker" class="toc-item"><span class="toc-num">1</span> Donation Tracker &amp; Earnings Log</a>
+        <a href="#bonus-cheat-sheet" class="toc-item"><span class="toc-num">2</span> Bonus Stacking Cheat Sheet</a>
+        <a href="#nutrition" class="toc-item"><span class="toc-num">3</span> Donor Nutrition Plan</a>
+        <a href="#eligibility" class="toc-item"><span class="toc-num">4</span> Eligibility Checklist</a>
+        <a href="#tax-guide" class="toc-item"><span class="toc-num">5</span> Plasma Tax Guide 2026</a>
+        <a href="#deductions" class="toc-item"><span class="toc-num">6</span> Deduction Checklist</a>
+        <a href="#first-90-days" class="toc-item"><span class="toc-num">7</span> First 90 Days Playbook</a>
+        <a href="#essentials" class="toc-item"><span class="toc-num">8</span> Donor Essentials Kits</a>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 1: DONATION TRACKER & EARNINGS LOG   -->
+<!-- ============================================ -->
+<div class="toolkit-section" id="tracker">
+    <div class="section-label">Part 1 &mdash; Plasma Donor Pro Toolkit</div>
+    <h2>Donation Tracker &amp; Earnings Log</h2>
+    <p>Track every visit, every dollar, and every bonus. Print this or copy it into a spreadsheet. Knowing your numbers is the #1 habit of high-earning donors.</p>
+
+    <h3>Monthly Tracking Template</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Center</th>
+                <th>Visit #</th>
+                <th>Base Pay</th>
+                <th>Bonus</th>
+                <th>Total</th>
+                <th>Running Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>___/___</td><td>___________</td><td>1st / 2nd</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>___/___</td><td>___________</td><td>1st / 2nd</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>___/___</td><td>___________</td><td>1st / 2nd</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>___/___</td><td>___________</td><td>1st / 2nd</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>___/___</td><td>___________</td><td>1st / 2nd</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>___/___</td><td>___________</td><td>1st / 2nd</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>___/___</td><td>___________</td><td>1st / 2nd</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>___/___</td><td>___________</td><td>1st / 2nd</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr class="highlight-row"><td colspan="5" style="text-align:right;"><strong>Monthly Total</strong></td><td><strong>$______</strong></td><td><strong>$______</strong></td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>Pro Tip:</strong> Track your 1st vs 2nd donation each week separately. Many centers pay more for the 2nd visit (e.g., CSL Plasma pays $15-25 more on your second weekly donation). Knowing this pattern helps you never accidentally skip the higher-paying visit.
+    </div>
+
+    <h3>Monthly Summary Dashboard</h3>
+    <table class="data-table">
+        <thead>
+            <tr><th>Month</th><th>Visits</th><th>Base Earned</th><th>Bonuses</th><th>Total</th><th>YTD Total</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>January</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>February</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>March</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>April</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>May</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>June</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>July</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>August</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>September</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>October</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>November</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr><td>December</td><td>___</td><td>$______</td><td>$______</td><td>$______</td><td>$______</td></tr>
+            <tr class="highlight-row"><td><strong>Totals</strong></td><td><strong>___</strong></td><td><strong>$______</strong></td><td><strong>$______</strong></td><td><strong>$______</strong></td><td><strong>$______</strong></td></tr>
+        </tbody>
+    </table>
+
+    <div class="money-box">
+        <strong>Why This Matters:</strong> Donors who track their earnings consistently earn 20-30% more per year. When you see the numbers, you stop skipping visits and start timing bonuses. The tracker pays for this entire toolkit many times over.
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 2: BONUS STACKING CHEAT SHEET        -->
+<!-- ============================================ -->
+<div class="toolkit-section" id="bonus-cheat-sheet">
+    <div class="section-label">Part 2 &mdash; Plasma Donor Pro Toolkit</div>
+    <h2>Bonus Stacking Cheat Sheet</h2>
+    <p>New donor bonuses are the single biggest money opportunity in plasma. Most people sign up at one center and leave hundreds on the table. Here's the strategy.</p>
+
+    <h3>New Donor Bonus Comparison (2026)</h3>
+    <table class="data-table">
+        <thead>
+            <tr><th>Center</th><th>New Donor Bonus</th><th>Bonus Period</th><th>Total w/ Base Pay</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>CSL Plasma</strong></td><td>$700 - $1,000</td><td>First 8 donations</td><td>$1,100 - $1,500+</td></tr>
+            <tr><td><strong>BioLife</strong></td><td>$600 - $900</td><td>First 8 donations</td><td>$1,000 - $1,400+</td></tr>
+            <tr><td><strong>Octapharma</strong></td><td>$500 - $800</td><td>First 6-8 donations</td><td>$900 - $1,300+</td></tr>
+            <tr><td><strong>Grifols</strong></td><td>$500 - $700</td><td>First 8 donations</td><td>$850 - $1,200+</td></tr>
+            <tr><td><strong>KEDPLASMA</strong></td><td>$400 - $600</td><td>First 8 donations</td><td>$750 - $1,100+</td></tr>
+            <tr class="highlight-row"><td colspan="3"><strong>Potential Total (All 5 Centers)</strong></td><td><strong>$4,500 - $6,500+</strong></td></tr>
+        </tbody>
+    </table>
+
+    <h3>The Bonus Stacking Strategy</h3>
+    <p>You can legally donate at multiple centers (just not at the same time &mdash; centers check the national donor database). The key is <strong>finishing one center's bonus program before starting the next</strong>.</p>
+
+    <ol>
+        <li><strong>Start with the highest-paying center</strong> near you (usually CSL or BioLife)</li>
+        <li><strong>Complete all 8 bonus donations</strong> within the bonus window (typically 30-45 days)</li>
+        <li><strong>Switch to center #2</strong> and repeat. You're a "new donor" at each new center</li>
+        <li><strong>Continue through 3-5 centers</strong> over 4-6 months</li>
+        <li><strong>After exhausting bonuses</strong>, settle at whichever center has the best regular rates in your area</li>
+    </ol>
+
+    <div class="warning-box">
+        <strong>Important:</strong> Always be honest during screening. All major centers use the National Donor Deferral Registry (NDDR). Never donate at two centers in the same week &mdash; you must follow FDA rules (max 2x/week, 48 hours apart) regardless of which center you visit.
+    </div>
+
+    <h3>Optimal Stacking Order by Region</h3>
+    <table class="data-table">
+        <thead>
+            <tr><th>Month</th><th>Center</th><th>Target Visits</th><th>Expected Earnings</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Month 1</td><td>CSL Plasma</td><td>8 visits</td><td>$800 - $1,200</td></tr>
+            <tr><td>Month 2</td><td>BioLife</td><td>8 visits</td><td>$700 - $1,100</td></tr>
+            <tr><td>Month 3</td><td>Octapharma</td><td>8 visits</td><td>$600 - $1,000</td></tr>
+            <tr><td>Month 4</td><td>Grifols / KEDPLASMA</td><td>8 visits</td><td>$500 - $900</td></tr>
+            <tr class="highlight-row"><td colspan="2"><strong>4-Month Bonus Phase Total</strong></td><td><strong>32 visits</strong></td><td><strong>$2,600 - $4,200</strong></td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>Pro Tip:</strong> Check each center's app and website before starting. Many run seasonal bonus bumps (back-to-school, holidays) that can add $50-$200 on top of the new donor bonus. Time your center switch to catch these.
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 3: DONOR NUTRITION PLAN              -->
+<!-- ============================================ -->
+<div class="toolkit-section" id="nutrition">
+    <div class="section-label">Part 3 &mdash; Plasma Donor Pro Toolkit</div>
+    <h2>Pre &amp; Post Donation Nutrition Plan</h2>
+    <p>What you eat and drink directly affects donation speed, how you feel, and whether you pass the protein/hematocrit screening. Follow this plan to never get deferred for low levels.</p>
+
+    <h3>24 Hours Before Donating</h3>
+    <ul>
+        <li><strong>Hydrate aggressively:</strong> Drink 80-100 oz of water throughout the day (not all at once)</li>
+        <li><strong>High-protein dinner:</strong> Aim for 30-40g of protein (chicken breast, eggs, beans, Greek yogurt)</li>
+        <li><strong>Avoid:</strong> Alcohol, fatty/fried food, excessive caffeine, and salty snacks</li>
+        <li><strong>Iron-rich foods:</strong> Spinach, red meat, lentils, fortified cereal, or an iron supplement</li>
+    </ul>
+
+    <h3>Morning of Donation</h3>
+    <ul>
+        <li><strong>Breakfast (eat 2-3 hours before):</strong> Eggs + whole wheat toast + banana, OR oatmeal with protein powder + berries</li>
+        <li><strong>Drink 16-20 oz water</strong> in the 2 hours before your appointment</li>
+        <li><strong>Avoid:</strong> Coffee on an empty stomach (raises heart rate), energy drinks, sugary cereal</li>
+    </ul>
+
+    <h3>Post-Donation Recovery</h3>
+    <ul>
+        <li><strong>Immediately:</strong> Drink 16 oz water or electrolyte drink. Eat the snack the center provides</li>
+        <li><strong>Within 1 hour:</strong> Eat a protein-rich meal (at least 20g protein)</li>
+        <li><strong>Rest of the day:</strong> Continue hydrating. Avoid heavy exercise for 4-6 hours</li>
+        <li><strong>Iron recovery:</strong> Take an iron supplement with vitamin C (orange juice) to boost absorption</li>
+    </ul>
+
+    <h3>Weekly Meal Prep Template (Donation Days)</h3>
+    <table class="data-table">
+        <thead>
+            <tr><th>Meal</th><th>Option A (Budget)</th><th>Option B (Quick)</th><th>Key Nutrients</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>Breakfast</strong></td><td>3 scrambled eggs, toast, banana</td><td>Protein shake + granola bar</td><td>30g protein, potassium</td></tr>
+            <tr><td><strong>Post-Donation</strong></td><td>Chicken wrap + apple</td><td>Protein bar + trail mix</td><td>25g protein, iron</td></tr>
+            <tr><td><strong>Dinner</strong></td><td>Lentil soup + rice</td><td>Rotisserie chicken + veggies</td><td>35g protein, iron, B12</td></tr>
+            <tr><td><strong>Snacks</strong></td><td>Peanut butter + crackers</td><td>Greek yogurt + nuts</td><td>Protein, healthy fats</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>Pro Tip:</strong> The #1 reason for deferral is low protein or hematocrit. If you've been deferred before, add a daily iron supplement (65mg elemental iron) with vitamin C and increase water intake to 100+ oz on the day before donating. This alone prevents most deferrals.
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 4: ELIGIBILITY CHECKLIST             -->
+<!-- ============================================ -->
+<div class="toolkit-section" id="eligibility">
+    <div class="section-label">Part 4 &mdash; Plasma Donor Pro Toolkit</div>
+    <h2>Eligibility Self-Assessment Checklist</h2>
+    <p>Run through this before your first visit to avoid wasting a trip. If you check all boxes, you're almost certainly eligible.</p>
+
+    <h3>Basic Requirements</h3>
+    <ul class="checklist">
+        <li>I am between 18 and 69 years old</li>
+        <li>I weigh at least 110 pounds (50 kg)</li>
+        <li>I am in generally good health</li>
+        <li>I have a valid government-issued photo ID</li>
+        <li>I have proof of current address (utility bill, bank statement, or mail with name + address)</li>
+        <li>I have a Social Security number or valid ITIN</li>
+    </ul>
+
+    <h3>Health Screening (You Should Pass If...)</h3>
+    <ul class="checklist">
+        <li>My temperature is below 99.5&deg;F</li>
+        <li>My blood pressure is below 180/100</li>
+        <li>My pulse is between 50-100 bpm</li>
+        <li>I have not gotten a tattoo or piercing in the last 3 months (varies by state)</li>
+        <li>I have not had a blood transfusion in the past 12 months</li>
+        <li>I am not currently pregnant or have given birth in the last 6 months</li>
+        <li>I have not traveled to a malaria-risk country in the past 12 months</li>
+    </ul>
+
+    <h3>Common Disqualifiers (Temporary)</h3>
+    <table class="data-table">
+        <thead>
+            <tr><th>Condition</th><th>Deferral Period</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Cold or flu</td><td>Until symptoms resolve</td><td>Come back when fever-free 24hrs</td></tr>
+            <tr><td>Antibiotics</td><td>Until course completed</td><td>Some infections may add time</td></tr>
+            <tr><td>New tattoo/piercing</td><td>3-12 months</td><td>Depends on state regulation</td></tr>
+            <tr><td>Dental work</td><td>24-72 hours</td><td>Simple cleaning is usually OK</td></tr>
+            <tr><td>Vaccination</td><td>24-48 hours (most)</td><td>Some vaccines require longer wait</td></tr>
+            <tr><td>Low protein/iron</td><td>Until levels improve</td><td>See nutrition plan above</td></tr>
+        </tbody>
+    </table>
+
+    <div class="warning-box">
+        <strong>Not Medical Advice:</strong> This checklist covers general requirements. Each center makes its own eligibility decisions. When in doubt, call the center before driving there. Staff are used to these questions.
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 5: PLASMA TAX GUIDE 2026             -->
+<!-- ============================================ -->
+<div class="toolkit-section" id="tax-guide">
+    <div class="section-label">Part 5 &mdash; Plasma Tax Guide 2026</div>
+    <h2>The Complete Plasma Donation Tax Guide</h2>
+    <p>Plasma income <strong>is taxable</strong>. The IRS considers it self-employment income. Here's everything you need to know to stay compliant and keep more of what you earn.</p>
+
+    <h3>How Plasma Income Is Taxed</h3>
+    <ul>
+        <li><strong>Classified as:</strong> Self-employment / other income (not wages)</li>
+        <li><strong>1099-NEC / 1099-MISC:</strong> Centers issue these if you earn $600+ in a calendar year from one center</li>
+        <li><strong>No 1099?</strong> You must still report the income. The IRS doesn't care whether you got a form</li>
+        <li><strong>Tax rate:</strong> Your regular income tax bracket + 15.3% self-employment tax (Social Security + Medicare)</li>
+    </ul>
+
+    <h3>Reporting Step-by-Step</h3>
+    <ol>
+        <li><strong>Collect your 1099s</strong> from each center (usually mailed by January 31)</li>
+        <li><strong>Total up all plasma income</strong> including centers under $600 (use your tracker from Section 1)</li>
+        <li><strong>File Schedule C</strong> (Profit or Loss from Business) or Schedule C-EZ with your 1040</li>
+        <li><strong>File Schedule SE</strong> (Self-Employment Tax) if net earnings exceed $400</li>
+        <li><strong>Deduct eligible expenses</strong> (see deduction checklist below) to reduce taxable income</li>
+    </ol>
+
+    <h3>Tax Bracket Quick Reference (2026)</h3>
+    <table class="data-table">
+        <thead>
+            <tr><th>Annual Plasma Income</th><th>Estimated Tax (Single Filer)</th><th>Effective Rate</th><th>What You Keep</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>$3,000</td><td>$460 - $760</td><td>15-25%</td><td>$2,240 - $2,540</td></tr>
+            <tr><td>$5,000</td><td>$770 - $1,270</td><td>15-25%</td><td>$3,730 - $4,230</td></tr>
+            <tr><td>$7,000</td><td>$1,070 - $1,770</td><td>15-25%</td><td>$5,230 - $5,930</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>Good News:</strong> The self-employment tax sounds scary, but you can deduct half of it on your 1040. Plus, the deductions below can significantly reduce your taxable plasma income.
+    </div>
+
+    <h3>Quarterly Estimated Taxes</h3>
+    <p>If you expect to owe $1,000+ in tax for the year, the IRS wants you to pay quarterly. Here are the 2026 deadlines:</p>
+    <table class="data-table">
+        <thead>
+            <tr><th>Quarter</th><th>Income Period</th><th>Payment Due</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Q1</td><td>Jan 1 - Mar 31</td><td>April 15, 2026</td></tr>
+            <tr><td>Q2</td><td>Apr 1 - May 31</td><td>June 15, 2026</td></tr>
+            <tr><td>Q3</td><td>Jun 1 - Aug 31</td><td>September 15, 2026</td></tr>
+            <tr><td>Q4</td><td>Sep 1 - Dec 31</td><td>January 15, 2027</td></tr>
+        </tbody>
+    </table>
+
+    <div class="money-box">
+        <strong>Save Automatically:</strong> Set aside 20-25% of each plasma payment into a separate savings account. When tax time comes, you'll have the money ready and might even have extra.
+    </div>
+
+    <h3>State-Specific Notes</h3>
+    <p>Most states tax plasma income the same as the federal government. Notable exceptions:</p>
+    <ul>
+        <li><strong>No state income tax:</strong> TX, FL, NV, WA, WY, SD, AK, TN, NH &mdash; you only owe federal taxes</li>
+        <li><strong>Low state tax:</strong> AZ, ND, PA &mdash; flat rates under 4%</li>
+        <li><strong>Higher state tax:</strong> CA, NY, NJ, OR &mdash; factor in an additional 5-10%</li>
+    </ul>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 6: DEDUCTION CHECKLIST               -->
+<!-- ============================================ -->
+<div class="toolkit-section" id="deductions">
+    <div class="section-label">Part 6 &mdash; Plasma Tax Guide 2026</div>
+    <h2>Plasma Donor Deduction Checklist</h2>
+    <p>These are legitimate business expenses you can deduct on Schedule C to lower your taxable plasma income. Track these all year.</p>
+
+    <h3>Mileage &amp; Transportation (Biggest Deduction)</h3>
+    <table class="data-table">
+        <thead>
+            <tr><th>Expense</th><th>2026 Rate / Method</th><th>Example Savings</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>IRS Standard Mileage</td><td>$0.70/mile (estimated 2026)</td><td>20 miles round trip x 8 visits/mo = $112/mo</td></tr>
+            <tr><td>Parking fees</td><td>Actual cost</td><td>Track receipts</td></tr>
+            <tr><td>Tolls</td><td>Actual cost</td><td>Track receipts</td></tr>
+            <tr><td>Public transit fares</td><td>Actual cost</td><td>Keep fare cards/receipts</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>Pro Tip:</strong> Mileage is typically worth $800-$1,400/year in deductions for regular donors. Use a mileage tracking app (MileIQ, Stride, or Everlance) &mdash; start tracking from day one. Many donors forget this and overpay their taxes by hundreds.
+    </div>
+
+    <h3>Full Deduction Checklist</h3>
+    <ul class="checklist">
+        <li><strong>Mileage to/from center</strong> &mdash; $0.70/mile (or actual vehicle expenses)</li>
+        <li><strong>Parking fees &amp; tolls</strong> &mdash; keep all receipts</li>
+        <li><strong>Supplements</strong> &mdash; iron, protein powder, vitamins taken for donation readiness</li>
+        <li><strong>Hydration supplies</strong> &mdash; electrolyte packets, water bottles for donation prep</li>
+        <li><strong>Compression sleeves / bandages</strong> &mdash; post-donation recovery supplies</li>
+        <li><strong>Phone/data (partial)</strong> &mdash; percentage used for center apps, scheduling, tracking</li>
+        <li><strong>Tax prep costs</strong> &mdash; portion of software or CPA fees attributable to plasma income</li>
+        <li><strong>This toolkit</strong> &mdash; educational expenses related to earning plasma income</li>
+    </ul>
+
+    <h3>Sample Schedule C Summary</h3>
+    <table class="data-table">
+        <thead>
+            <tr><th>Line</th><th>Item</th><th>Example Amount</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Line 1</td><td>Gross plasma income</td><td>$5,500</td></tr>
+            <tr><td>Line 9</td><td>Car/truck expenses (mileage)</td><td>-$1,120</td></tr>
+            <tr><td>Line 27</td><td>Other expenses (supplements, supplies)</td><td>-$380</td></tr>
+            <tr class="highlight-row"><td>Line 31</td><td><strong>Net profit (taxable amount)</strong></td><td><strong>$4,000</strong></td></tr>
+        </tbody>
+    </table>
+
+    <div class="money-box">
+        <strong>Bottom Line:</strong> In this example, deductions reduced taxable income by $1,500 &mdash; saving roughly $375-$500 in taxes. That's real money back in your pocket just for tracking what you're already spending.
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 7: FIRST 90 DAYS PLAYBOOK            -->
+<!-- ============================================ -->
+<div class="toolkit-section" id="first-90-days">
+    <div class="section-label">Part 7 &mdash; First 90 Days Playbook</div>
+    <h2>Your First 90 Days: The $2,000+ Roadmap</h2>
+    <p>This is the step-by-step plan to maximize your earnings from day one. Follow it week by week and you'll hit $2,000+ in your first 3 months &mdash; most of it from new donor bonuses.</p>
+
+    <h3>Week 0: Prep Week (Before Your First Visit)</h3>
+    <ul>
+        <li>Pick your first center (use our <a href="/#calculator" style="color: var(--mint);">calculator</a> to compare centers near you)</li>
+        <li>Gather your documents: photo ID, proof of address, Social Security card</li>
+        <li>Download the center's app and complete any pre-registration</li>
+        <li>Start hydrating heavily (80-100 oz/day) and eating high-protein meals</li>
+        <li>Order your <a href="#essentials" style="color: var(--coral);">essentials kit</a> so it arrives before your first visit</li>
+        <li>Look up new donor bonus: check the center's website, app, and search "[Center Name] new donor coupon" for extra promotions</li>
+    </ul>
+
+    <h3>Ideal Weekly Donation Schedule</h3>
+    <div class="week-plan">
+        <div class="week-day prep-day"><div class="day-label">Sun</div>Hydrate &amp; Prep</div>
+        <div class="week-day donate-day"><div class="day-label">Mon</div>Donate #1</div>
+        <div class="week-day rest-day"><div class="day-label">Tue</div>Rest</div>
+        <div class="week-day rest-day"><div class="day-label">Wed</div>Rest</div>
+        <div class="week-day donate-day"><div class="day-label">Thu</div>Donate #2</div>
+        <div class="week-day rest-day"><div class="day-label">Fri</div>Rest</div>
+        <div class="week-day rest-day"><div class="day-label">Sat</div>Rest</div>
+    </div>
+    <p style="font-size: 0.85rem; color: var(--slate); text-align: center; margin-top: 0.5rem;">Monday/Thursday is optimal: maximizes the 48-hour gap while keeping you on schedule for 2x/week.</p>
+
+    <h3>Week-by-Week Plan</h3>
+
+    <h4>Weeks 1-4: Center #1 (Highest-Paying Bonus)</h4>
+    <table class="data-table">
+        <thead>
+            <tr><th>Week</th><th>Visits</th><th>What to Expect</th><th>Est. Earnings</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Week 1</td><td>2</td><td>First visit takes 2-3 hours (physical, paperwork). Second visit ~1 hour.</td><td>$100 - $200</td></tr>
+            <tr><td>Week 2</td><td>2</td><td>Routine visits ~45-75 min. Bonus rates kick in.</td><td>$120 - $250</td></tr>
+            <tr><td>Week 3</td><td>2</td><td>You're a pro now. Hydration game is strong.</td><td>$120 - $250</td></tr>
+            <tr><td>Week 4</td><td>2</td><td>Complete 8th donation. New donor bonus maxed out.</td><td>$150 - $300</td></tr>
+            <tr class="highlight-row"><td colspan="2"><strong>Month 1 Total</strong></td><td><strong>8 visits at Center #1</strong></td><td><strong>$490 - $1,000</strong></td></tr>
+        </tbody>
+    </table>
+
+    <h4>Weeks 5-8: Center #2</h4>
+    <table class="data-table">
+        <thead>
+            <tr><th>Week</th><th>Visits</th><th>What to Expect</th><th>Est. Earnings</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Week 5</td><td>2</td><td>New center, new physical. Bring all docs again.</td><td>$100 - $200</td></tr>
+            <tr><td>Week 6</td><td>2</td><td>Getting comfortable. Different staff, same process.</td><td>$120 - $250</td></tr>
+            <tr><td>Week 7</td><td>2</td><td>Routine visits. Track your bonus tier.</td><td>$120 - $250</td></tr>
+            <tr><td>Week 8</td><td>2</td><td>Complete bonus program at center #2.</td><td>$150 - $300</td></tr>
+            <tr class="highlight-row"><td colspan="2"><strong>Month 2 Total</strong></td><td><strong>8 visits at Center #2</strong></td><td><strong>$490 - $1,000</strong></td></tr>
+        </tbody>
+    </table>
+
+    <h4>Weeks 9-12: Center #3 (or Settle In)</h4>
+    <table class="data-table">
+        <thead>
+            <tr><th>Week</th><th>Visits</th><th>What to Expect</th><th>Est. Earnings</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Week 9</td><td>2</td><td>Start center #3 bonus OR return to best-paying center for regular rates</td><td>$100 - $200</td></tr>
+            <tr><td>Week 10</td><td>2</td><td>Steady routine. You know the game now.</td><td>$120 - $250</td></tr>
+            <tr><td>Week 11</td><td>2</td><td>Look for seasonal/holiday bonus promotions.</td><td>$120 - $250</td></tr>
+            <tr><td>Week 12</td><td>2</td><td>90-day milestone. Review your tracker.</td><td>$120 - $250</td></tr>
+            <tr class="highlight-row"><td colspan="2"><strong>Month 3 Total</strong></td><td><strong>8 visits at Center #3</strong></td><td><strong>$460 - $950</strong></td></tr>
+        </tbody>
+    </table>
+
+    <div class="money-box">
+        <strong>90-Day Grand Total: $1,440 - $2,950+</strong><br>
+        The high end is realistic if you have 2-3 centers nearby and don't miss visits. Even the low end means nearly $500/month in side income from ~4 hours/week of your time.
+    </div>
+
+    <h3>What to Bring Every Visit</h3>
+    <ul>
+        <li>Photo ID (required every time)</li>
+        <li>Water bottle (at least 16 oz, drink before and during)</li>
+        <li>Snack for after (protein bar, trail mix)</li>
+        <li>Phone + charger (you'll be sitting 45-75 minutes)</li>
+        <li>Compression sleeve (for after &mdash; reduces bruising)</li>
+        <li>Light jacket or hoodie (centers are cold)</li>
+    </ul>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 8: DONOR ESSENTIALS KITS             -->
+<!-- ============================================ -->
+<div class="toolkit-section" id="essentials">
+    <div class="section-label">Part 8 &mdash; Recommended Gear</div>
+    <h2>Donor Essentials Kits</h2>
+    <p>These are the exact products experienced donors swear by. Curated into kits based on what you need. Every item earns back its cost in fewer deferrals, faster donations, and better recovery.</p>
+
+    <h3>The Starter Kit &mdash; Get This Before Your First Visit (~$45-55)</h3>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-emoji">&#x1F4AA;</div>
+            <h4>Compression Arm Sleeve</h4>
+            <p>Reduces bruising and speeds recovery after donation. Wear for 2-4 hours post-visit.</p>
+            <div class="product-why">Prevents the visible bruising that makes people quit</div>
+            <a href="https://amzn.to/4jLKgkr" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+        <div class="product-card">
+            <div class="product-emoji">&#x1F4A7;</div>
+            <h4>Electrolyte Packets (36 Pack)</h4>
+            <p>Liquid IV or similar. Mix with water the night before and morning of donation.</p>
+            <div class="product-why">Faster donation + prevents dizziness</div>
+            <a href="https://amzn.to/3WZwPeK" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+        <div class="product-card">
+            <div class="product-emoji">&#x1F48A;</div>
+            <h4>Iron Supplement (Gentle Formula)</h4>
+            <p>Slow-release iron with vitamin C for absorption. Take daily to prevent low-iron deferrals.</p>
+            <div class="product-why">The #1 defense against getting deferred</div>
+            <a href="https://amzn.to/42bcO0j" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+        <div class="product-card">
+            <div class="product-emoji">&#x1F95B;</div>
+            <h4>Protein Powder (Whey/Plant)</h4>
+            <p>Quick 30g protein shake on donation mornings when you don't have time to cook.</p>
+            <div class="product-why">Ensures you pass the protein screening every time</div>
+            <a href="https://amzn.to/4hEkIb2" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+    </div>
+
+    <h3>The Recovery Kit &mdash; For Regular Donors (~$35-50)</h3>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-emoji">&#x1F525;</div>
+            <h4>Heating Pad</h4>
+            <p>Apply to donation arm for 10-15 minutes to reduce soreness and improve circulation.</p>
+            <div class="product-why">Cuts recovery time between donations</div>
+            <a href="https://amzn.to/3EjXfTn" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+        <div class="product-card">
+            <div class="product-emoji">&#x1F9CA;</div>
+            <h4>Insulated Water Bottle (32 oz)</h4>
+            <p>Track your water intake. The markings help you hit 80-100 oz/day consistently.</p>
+            <div class="product-why">Hydration = faster flow = shorter visits</div>
+            <a href="https://amzn.to/3WZwPeK" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+        <div class="product-card">
+            <div class="product-emoji">&#x1F36B;</div>
+            <h4>Protein Bars (Variety Pack)</h4>
+            <p>Keep in your car for immediately after donation. 20g+ protein per bar.</p>
+            <div class="product-why">Instant post-donation fuel when you need it most</div>
+            <a href="https://amzn.to/4hEkIb2" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+    </div>
+
+    <h3>The Tracking Kit &mdash; Stay Organized (~$20-30)</h3>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-emoji">&#x1F4CB;</div>
+            <h4>Planner / Notebook</h4>
+            <p>Dedicated donation planner to track visits, earnings, meals, and water intake.</p>
+            <div class="product-why">Donors who track earn 20-30% more</div>
+            <a href="https://amzn.to/4jJm8qJ" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+        <div class="product-card">
+            <div class="product-emoji">&#x1F4B3;</div>
+            <h4>Receipt / Card Organizer</h4>
+            <p>Keep your 1099s, mileage logs, and deduction receipts in one place for tax time.</p>
+            <div class="product-why">Makes tax season painless</div>
+            <a href="https://amzn.to/3CKyqWr" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+    </div>
+
+    <p style="font-size: 0.8rem; color: var(--slate); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
+        <strong>Disclosure:</strong> As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. This doesn't affect our recommendations &mdash; we only include products we'd use ourselves. Prices may vary.
+    </p>
+</div>
+
+<!-- Final CTA -->
+<div class="toolkit-section" style="background: linear-gradient(135deg, var(--mint) 0%, var(--mint-light) 100%); color: white; text-align: center;">
+    <h2 style="color: white; margin-bottom: 0.5rem;">You're All Set</h2>
+    <p style="color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto 1.5rem;">Bookmark this page, start with the 90-Day Playbook, and come back anytime to reference your tax guide and tracker.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/#calculator" style="background: white; color: var(--mint); padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem;">Open Calculator</a>
+        <a href="/centers/" style="background: rgba(255,255,255,0.2); color: white; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem; border: 2px solid rgba(255,255,255,0.4);">Find Centers Near Me</a>
+    </div>
+    <p style="color: rgba(255,255,255,0.7); font-size: 0.8rem; margin-top: 1.5rem;">Questions? Email <a href="mailto:hello@plasmapaycalculator.com" style="color: white; text-decoration: underline;">hello@plasmapaycalculator.com</a></p>
+</div>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Plasma Pay Calculator. All rights reserved. For personal use only &mdash; do not redistribute.</p>
+    <p style="margin-top: 0.5rem;"><a href="/">Home</a> &nbsp;|&nbsp; <a href="/about">About</a> &nbsp;|&nbsp; <a href="/privacy">Privacy</a> &nbsp;|&nbsp; <a href="/terms">Terms</a></p>
+    <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">Tax information is for educational purposes only and does not constitute professional tax advice. Consult a qualified tax professional for your specific situation.</p>
+</footer>
+
+<script>
+    function toggleMobileMenu() {
+        document.getElementById('mobileMenu').classList.toggle('active');
+    }
+    document.addEventListener('click', function(event) {
+        var menu = document.getElementById('mobileMenu');
+        var btn = document.querySelector('.mobile-menu-btn');
+        if (!menu.contains(event.target) && !btn.contains(event.target)) {
+            menu.classList.remove('active');
+        }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                var offset = 100;
+                var pos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
