@@ -1,31 +1,70 @@
 RewriteEngine On
 
-# Redirect old /state/ URLs to /calculators/
+# ============================================
+# REDIRECT RULES (order matters - most specific first)
+# ============================================
+
+# --- Force non-www (must be early) ---
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# --- Force HTTPS ---
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Fix doubled calculator paths ---
+RewriteRule ^calculators/calculators/(.*)$ /calculators/$1 [R=301,L]
+
+# --- Redirect old /state/ URLs to /calculators/ ---
 RewriteRule ^state/(.*)$ /calculators/$1 [R=301,L]
 
-# Redirect old /es/estado/ URLs to /es/calculators/
+# --- Redirect old /es/estado/ URLs to /es/calculators/ ---
 RewriteRule ^es/estado/(.*)$ /es/calculators/$1 [R=301,L]
 
-# Add .html extension if file exists (handles URLs without .html)
+# --- Strip trailing slashes from blog URLs (files, not dirs) ---
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/(.+)/$ /blog/$1 [R=301,L]
+
+# --- Misc dead URL redirects ---
+RewriteRule ^centers\.html$ /centers/ [R=301,L]
+RewriteRule ^center/csl-downtown-la/?(.*)$ /centers/csl-plasma/ [R=301,L]
+RewriteRule ^center/(.*)$ /centers/ [R=301,L]
+RewriteRule ^metro/?(.*)$ / [R=301,L]
+RewriteRule ^plasma-donation-eligibility-quiz-viral/?$ /blog/plasma-donation-eligibility-requirements-comprehensive-guide-2026.html [R=301,L]
+RewriteRule ^insurance-protection-plasma-donors\.html$ /blog/ [R=301,L]
+
+# --- Return 410 Gone for API/Netlify function URLs ---
+RewriteRule ^\.netlify/functions/api/(.*)$ - [G,L]
+
+# --- 2025 blog posts → 2026 versions (pattern-based) ---
+RewriteCond %{REQUEST_URI} ^/blog/(.+)-2025(.*)$
+RewriteCond %{DOCUMENT_ROOT}/blog/%1-2026%2.html -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/blog/%1-2026.html -f
+RewriteRule ^blog/(.+)-2025(.*)$ /blog/$1-2026$2 [R=301,L]
+
+# --- 2025 root pages → 2026 versions ---
+RewriteCond %{REQUEST_URI} ^/(.+)-2025(.*)$
+RewriteCond %{REQUEST_URI} !^/blog/
+RewriteCond %{DOCUMENT_ROOT}/%1-2026%2.html -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/%1-2026.html -f
+RewriteRule ^(.+)-2025(.*)$ /$1-2026$2 [R=301,L]
+
+# ============================================
+# CONTENT NEGOTIATION
+# ============================================
+
+# --- Add .html extension if file exists (handles URLs without .html) ---
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# Force non-www
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Add trailing slash to directories
+# --- Add trailing slash to directories ---
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [R=301,L]
 
-# Serve index.html for directory requests
+# --- Serve index.html for directory requests ---
 DirectoryIndex index.html
 
 # Security headers
