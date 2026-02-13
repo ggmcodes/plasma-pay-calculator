@@ -84,6 +84,45 @@
         }
     </script>
 
+    <!-- WebSite Schema with SearchAction -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Plasma Pay Calculator",
+        "url": "https://plasmapaycalculator.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://plasmapaycalculator.com/centers/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Plasma Pay Calculator",
+        "url": "https://plasmapaycalculator.com",
+        "logo": "https://plasmapaycalculator.com/images/ppc-logo.png",
+        "description": "Free plasma donation calculator and center directory. Compare pay rates at 2,500+ locations nationwide.",
+        "sameAs": [
+            "https://twitter.com/plasmapaycalc",
+            "https://www.facebook.com/plasmapaycalc"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@plasmapaycalculator.com",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+
     <!-- Enhanced Schema Markup -->
     <script type="application/ld+json">
     {
@@ -128,6 +167,62 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Yes, plasma donation income is taxable and must be reported to the IRS. Centers issue 1099-MISC forms for earnings over $600 annually."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does a plasma donation take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your first visit takes 2-3 hours including medical screening and paperwork. Subsequent visits take 45-90 minutes. Most donors read, watch shows, or browse their phones during the procedure."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the requirements to donate plasma?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You must be 18-69 years old, weigh at least 110 lbs, be in good health, and pass a medical screening. You need a valid photo ID, proof of address, and Social Security number."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is donating plasma safe?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, plasma donation is FDA-regulated and considered safe. Common side effects include mild bruising, temporary fatigue, and lightheadedness. Your body replaces the donated plasma within 24-48 hours."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does plasma donation pay per month?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Regular plasma donors earn $400-$800 per month donating twice weekly. New donors can earn $900-$1,200 in their first month through special bonus promotions at most major centers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between CSL Plasma and BioLife?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CSL Plasma pays $50-$100 per visit with new donor bonuses up to $1,100. BioLife pays $70-$100 per visit with bonuses up to $900. Both are FDA-regulated. CSL has more locations nationwide while BioLife often has newer facilities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do heavier donors get paid more for plasma?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, donors weighing 175+ lbs typically earn $10-$25 more per visit because they can donate a larger volume of plasma. Weight-based pay tiers vary by center."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I donate plasma if I take medication?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most common medications are acceptable, including antidepressants, blood pressure medications, and birth control. Some medications like blood thinners or immunosuppressants may result in deferral. Each center evaluates medications individually."
                 }
             }
         ]
@@ -1762,6 +1857,44 @@
             </div>
         </section>
 
+        <!-- Trending Guides Section -->
+        <section style="padding: 3rem 0;">
+            <h2 style="text-align: center; font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Trending Plasma Donation Guides</h2>
+            <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">The latest research and strategies to maximize your plasma income.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+                <a href="/blog/middle-class-americans-selling-plasma-2026.html" style="display: block; padding: 1.25rem; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; transition: box-shadow 0.2s;">
+                    <span style="display: inline-block; background: #fee2e2; color: #dc2626; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 0.5rem;">TRENDING</span>
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">Why Middle-Class Americans Are Selling Plasma</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">NBC News: $4.7B industry, 200K daily donors</p>
+                </a>
+                <a href="/blog/which-plasma-center-pays-most-money.html" style="display: block; padding: 1.25rem; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; transition: box-shadow 0.2s;">
+                    <span style="display: inline-block; background: #dcfce7; color: #16a34a; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 0.5rem;">PAY RATES</span>
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">Which Plasma Center Pays the Most?</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">Every major chain ranked by pay — winner revealed</p>
+                </a>
+                <a href="/csl-biolife-octapharma-comparison-guide.html" style="display: block; padding: 1.25rem; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; transition: box-shadow 0.2s;">
+                    <span style="display: inline-block; background: #dbeafe; color: #2563eb; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 0.5rem;">COMPARISON</span>
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">CSL vs BioLife vs Octapharma</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">Side-by-side comparison: pay, bonuses, facilities</p>
+                </a>
+                <a href="/plasma-donation-pay-chart-by-state.html" style="display: block; padding: 1.25rem; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; transition: box-shadow 0.2s;">
+                    <span style="display: inline-block; background: #fef3c7; color: #d97706; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 0.5rem;">ALL STATES</span>
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">Plasma Pay Chart by State</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">$50-$100/visit — all 50 states compared</p>
+                </a>
+                <a href="/blog/csl-plasma-pay-rates-2025.html" style="display: block; padding: 1.25rem; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; transition: box-shadow 0.2s;">
+                    <span style="display: inline-block; background: #dcfce7; color: #16a34a; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 0.5rem;">PAY RATES</span>
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">CSL Plasma Pay Rates 2026</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">Exact pay chart by weight + new donor bonuses</p>
+                </a>
+                <a href="/blog/human-plasma-value-price-per-donation-2026.html" style="display: block; padding: 1.25rem; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; transition: box-shadow 0.2s;">
+                    <span style="display: inline-block; background: #f3e8ff; color: #9333ea; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 0.5rem;">ECONOMICS</span>
+                    <h3 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">What Your Plasma Is Actually Worth</h3>
+                    <p style="font-size: 0.85rem; color: #64748b;">$50 donor pay vs $300-$800 wholesale price</p>
+                </a>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="cta-section">
             <h2>Ready to Start Earning?</h2>
@@ -1786,9 +1919,9 @@
                 <h4>Earning Resources</h4>
                 <ul>
                     <li><a href="#calculator">Earnings Calculator</a></li>
-                    <li><a href="/blog/how-much-money-plasma-donation.html">How Much Can You Make?</a></li>
-                    <li><a href="/blog/which-plasma-center-pays-most-2026.html">Which Center Pays Most?</a></li>
-                    <li><a href="/blog/first-time-plasma-donation.html">First Time Donor Guide</a></li>
+                    <li><a href="/blog/how-much-middle-class-family-earn-plasma-2026.html">How Much Can You Make?</a></li>
+                    <li><a href="/blog/which-plasma-center-pays-most-money.html">Which Center Pays Most?</a></li>
+                    <li><a href="/blog/middle-class-americans-selling-plasma-2026.html">Why Americans Are Donating</a></li>
                     <li><a href="/centers/" class="highlight">Find a Center</a></li>
                 </ul>
             </div>
