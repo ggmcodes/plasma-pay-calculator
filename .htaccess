@@ -37,6 +37,29 @@ RewriteRule ^insurance-protection-plasma-donors\.html$ /blog/ [R=301,L]
 RewriteRule ^\.netlify/functions/api/(.*)$ - [G,L]
 
 # --- CANNIBALIZATION FIXES: Content consolidation redirects ---
+
+# Fix 2: CSL 2025 pay rates explicit redirect (was missing)
+RewriteRule ^blog/csl-plasma-pay-rates-2025\.html$ /blog/csl-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^blog/csl-plasma-pay-rates-2025$ /blog/csl-plasma-pay-rates-2026.html [R=301,L]
+
+# Fix 3: "Which Pays Most" cluster consolidation
+RewriteRule ^blog/highest-paying-plasma-centers-by-state-location-guide-2025\.html$ /blog/highest-paying-plasma-centers-by-state-location-guide-2026.html [R=301,L]
+RewriteRule ^blog/highest-paying-plasma-centers-by-state-location-guide-2025$ /blog/highest-paying-plasma-centers-by-state-location-guide-2026.html [R=301,L]
+RewriteRule ^blog/highest-paying-plasma-centers-near-me-2025\.html$ /blog/highest-paying-plasma-centers-near-me.html [R=301,L]
+RewriteRule ^blog/highest-paying-plasma-centers-near-me-2025$ /blog/highest-paying-plasma-centers-near-me.html [R=301,L]
+
+# Fix 4: Eligibility cluster consolidation → canonical medical guide
+RewriteRule ^blog/plasma-donation-eligibility-requirements-comprehensive-guide-2025\.html$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-eligibility-requirements-comprehensive-guide-2025$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-eligibility-requirements-comprehensive-guide-2026\.html$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-eligibility-requirements-comprehensive-guide-2026$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-requirements-2025\.html$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-requirements-2025$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-requirements-2026\.html$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-requirements-2026$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-eligibility-requirements-2026\.html$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+RewriteRule ^blog/plasma-donation-eligibility-requirements-2026$ /blog/complete-medical-eligibility-guide-plasma-donation.html [R=301,L]
+
 # Tier 1A: "Which Plasma Center Pays Most" → money version (canonical)
 RewriteRule ^blog/which-plasma-center-pays-most-2026\.html$ /blog/which-plasma-center-pays-most-money.html [R=301,L]
 RewriteRule ^blog/which-plasma-center-pays-most-2026$ /blog/which-plasma-center-pays-most-money.html [R=301,L]
