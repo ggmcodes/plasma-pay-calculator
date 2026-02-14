@@ -36,6 +36,89 @@ RewriteRule ^insurance-protection-plasma-donors\.html$ /blog/ [R=301,L]
 # --- Return 410 Gone for API/Netlify function URLs ---
 RewriteRule ^\.netlify/functions/api/(.*)$ - [G,L]
 
+# --- CANNIBALIZATION FIXES: Content consolidation redirects ---
+# Tier 1A: "Which Plasma Center Pays Most" → money version (canonical)
+RewriteRule ^blog/which-plasma-center-pays-most-2026\.html$ /blog/which-plasma-center-pays-most-money.html [R=301,L]
+RewriteRule ^blog/which-plasma-center-pays-most-2026$ /blog/which-plasma-center-pays-most-money.html [R=301,L]
+
+# Tier 1B: CSL Plasma Pay Chart pages → CSL Pay Rates (canonical)
+RewriteRule ^csl-plasma-pay-chart-2026\.html$ /blog/csl-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^csl-plasma-pay-chart-2026$ /blog/csl-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^csl-plasma-pay-chart-2025\.html$ /blog/csl-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^csl-plasma-pay-chart-2025$ /blog/csl-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^blog/csl-plasma-pay-chart-2026\.html$ /blog/csl-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^blog/csl-plasma-pay-chart-2026$ /blog/csl-plasma-pay-rates-2026.html [R=301,L]
+
+# Tier 1C: First-time donor pages → ultimate guide (canonical)
+RewriteRule ^blog/first-time-plasma-donor-complete-guide-2026\.html$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+RewriteRule ^blog/first-time-plasma-donor-complete-guide-2026$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+RewriteRule ^blog/best-plasma-center-for-new-donors-2026\.html$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+RewriteRule ^blog/best-plasma-center-for-new-donors-2026$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+RewriteRule ^blog/first-time-plasma-donation-bonus-calculator\.html$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+RewriteRule ^blog/first-time-plasma-donation-bonus-calculator$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+
+# Tier 1D: Affiliate content consolidation → single evergreen page
+RewriteRule ^blog/best-products-plasma-donors-2025\.html$ /blog/best-products-plasma-donors-2026.html [R=301,L]
+RewriteRule ^blog/best-products-plasma-donors\.html$ /blog/best-products-plasma-donors-2026.html [R=301,L]
+
+# Tier 1E: Plasma vs Blood Donation → comparison version (canonical)
+RewriteRule ^blog/plasma-vs-blood-donation-2026\.html$ /blog/plasma-vs-blood-donation-comparison-2026.html [R=301,L]
+RewriteRule ^blog/plasma-vs-blood-donation-2026$ /blog/plasma-vs-blood-donation-comparison-2026.html [R=301,L]
+
+# Tier 1F: College Student Plasma → guide version (canonical)
+RewriteRule ^blog/college-student-plasma-income-optimization-2026\.html$ /blog/college-student-plasma-donation-guide-2026.html [R=301,L]
+RewriteRule ^blog/college-student-plasma-income-optimization-2026$ /blog/college-student-plasma-donation-guide-2026.html [R=301,L]
+
+# --- DUPLICATE CONTENT FIXES: City abbreviation variants ---
+RewriteRule ^blog/plasma-donation-denver-co-2026\.html$ /blog/plasma-donation-denver-2026.html [R=301,L]
+RewriteRule ^blog/plasma-donation-miami-fl-2026\.html$ /blog/plasma-donation-miami-2026.html [R=301,L]
+RewriteRule ^blog/plasma-donation-las-vegas-nv-2026\.html$ /blog/plasma-donation-las-vegas-2026.html [R=301,L]
+RewriteRule ^blog/plasma-donation-colorado-springs-co-2026\.html$ /blog/plasma-donation-colorado-springs-2026.html [R=301,L]
+RewriteRule ^blog/plasma-donation-atlanta-ga-2026\.html$ /blog/plasma-donation-atlanta-2026.html [R=301,L]
+
+# --- DUPLICATE CONTENT FIXES: City multi-page consolidation ---
+RewriteRule ^blog/plasma-donation-houston-centers-pay-2026\.html$ /blog/plasma-donation-houston-2026.html [R=301,L]
+RewriteRule ^blog/best-plasma-center-chicago-illinois\.html$ /blog/best-plasma-centers-chicago-2026.html [R=301,L]
+RewriteRule ^blog/best-plasma-center-los-angeles-california\.html$ /blog/best-plasma-centers-los-angeles-2026.html [R=301,L]
+RewriteRule ^blog/plasma-donation-phoenix-centers-pay-2026\.html$ /blog/plasma-donation-phoenix-2026.html [R=301,L]
+RewriteRule ^blog/plasma-donation-dallas-centers-pay-2026\.html$ /blog/plasma-donation-dallas-2026.html [R=301,L]
+RewriteRule ^blog/plasma-donation-colorado-springs-centers-pay-2026\.html$ /blog/plasma-donation-colorado-springs-2026.html [R=301,L]
+
+# --- DUPLICATE CONTENT FIXES: Reversed comparison pages ---
+RewriteRule ^blog/csl-plasma-vs-biolife-comparison\.html$ /blog/biolife-vs-csl-plasma-2026.html [R=301,L]
+RewriteRule ^blog/csl-plasma-vs-biolife-2026-comparison\.html$ /blog/biolife-vs-csl-plasma-2026.html [R=301,L]
+RewriteRule ^blog/biolife-vs-csl-plasma-comparison\.html$ /blog/biolife-vs-csl-plasma-2026.html [R=301,L]
+RewriteRule ^blog/octapharma-vs-biolife-2026-comparison\.html$ /blog/biolife-vs-octapharma-comparison.html [R=301,L]
+RewriteRule ^blog/grifols-vs-csl-plasma-2026-comparison\.html$ /blog/grifols-vs-csl-plasma-comparison-2026.html [R=301,L]
+
+# --- DUPLICATE CONTENT FIXES: Chart vs Rates per center ---
+RewriteRule ^blog/octapharma-plasma-pay-chart-2026\.html$ /blog/octapharma-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^blog/grifols-plasma-pay-chart-2026\.html$ /blog/grifols-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^blog/kedplasma-pay-chart-2026\.html$ /blog/kedplasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^blog/biolife-plasma-pay-chart-2026\.html$ /blog/biolife-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^blog/biolife-plasma-weight-chart-2026\.html$ /blog/biolife-plasma-pay-rates-2026.html [R=301,L]
+RewriteRule ^blog/plasma-donation-weight-chart-visual-guide-2026\.html$ /blog/plasma-donation-weight-chart-2026.html [R=301,L]
+
+# --- DUPLICATE CONTENT FIXES: Health condition overlaps ---
+RewriteRule ^blog/can-i-donate-plasma-with-diabetes-2026\.html$ /blog/can-you-donate-plasma-with-diabetes-2026.html [R=301,L]
+RewriteRule ^blog/can-you-donate-plasma-with-anxiety-2026\.html$ /blog/anxiety-depression-plasma-donation-guide-2026.html [R=301,L]
+RewriteRule ^blog/can-you-donate-plasma-if-anemic-2026\.html$ /blog/can-you-donate-plasma-with-anemia-2026.html [R=301,L]
+
+# --- DUPLICATE CONTENT FIXES: Referral bonus triplicates ---
+RewriteRule ^blog/plasma-donation-referral-bonus-2026\.html$ /blog/plasma-donation-referral-bonus-guide-2026.html [R=301,L]
+RewriteRule ^blog/plasma-referral-bonus-guide-2026\.html$ /blog/plasma-donation-referral-bonus-guide-2026.html [R=301,L]
+
+# --- DUPLICATE CONTENT FIXES: Misc content overlaps ---
+RewriteRule ^blog/best-time-to-donate-plasma-2026\.html$ /blog/best-times-donate-plasma-2026.html [R=301,L]
+RewriteRule ^blog/best-times-donate-plasma\.html$ /blog/best-times-donate-plasma-2026.html [R=301,L]
+RewriteRule ^blog/how-to-prepare-for-plasma-donation\.html$ /blog/how-to-prepare-for-plasma-donation-2026.html [R=301,L]
+RewriteRule ^blog/what-to-bring-first-plasma-donation\.html$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+RewriteRule ^blog/first-time-plasma-donation-what-to-expect\.html$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+RewriteRule ^blog/first-time-plasma-donation\.html$ /blog/ultimate-first-time-plasma-donor-guide-2026.html [R=301,L]
+
+# --- DUPLICATE CONTENT FIXES: Spanish duplicates ---
+RewriteRule ^es/blog/cuanto-pagan-por-donar-plasma\.html$ /es/blog/cuanto-pagan-por-donar-plasma-2026.html [R=301,L]
+
 # --- 2025 blog posts → 2026 versions (pattern-based) ---
 RewriteCond %{REQUEST_URI} ^/blog/(.+)-2025(.*)$
 RewriteCond %{DOCUMENT_ROOT}/blog/%1-2026%2.html -f [OR]
