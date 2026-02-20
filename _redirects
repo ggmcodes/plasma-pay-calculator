@@ -655,3 +655,33 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 
 # California stub page redirects
 /blog/california-tech-entertainment-plasma-earnings.html /blog/california-plasma-donation-maximize-earnings.html 301
+
+# ===============================================
+# GSC 404 FIXES - February 2026
+# ===============================================
+
+# Missing blog slugs (no .html extension in GSC URL)
+/blog/bruising-plasma-donation-treatment-2026 /blog/plasma-donation-bruising-treatment-guide-2026.html 301
+/blog/bruising-plasma-donation-treatment-2026.html /blog/plasma-donation-bruising-treatment-guide-2026.html 301
+/blog/how-much-do-you-get-for-donating-plasma-in-iowa /blog/how-much-do-you-get-donating-plasma-iowa.html 301
+/blog/donate-plasma-marijuana-weed-thc-2026 /blog/can-you-donate-plasma-marijuana-weed-2026.html 301
+/blog/plasma-donation-taxes-2026 /blog/plasma-donation-tax-guide-2026.html 301
+/blog/csl-plasma-pay-chart-2025-complete-rates-guide /blog/csl-plasma-pay-rates-2026.html 301
+/blog/plasma-donation-referral-bonuses-2025 /blog/plasma-donation-referral-bonus-guide-2026.html 301
+/blog/plasma-donation-referral-bonuses-2025/ /blog/plasma-donation-referral-bonus-guide-2026.html 301
+
+# Blog path pointing to root-level file
+/blog/comprehensive-plasma-tax-guide-2026.html /comprehensive-plasma-tax-guide-2026.html 301
+
+# Double .html extension (scraper/bot generated bad URL)
+/blog/california-tech-vein-health-guide.html.html /blog/california-tech-vein-health-guide.html 301
+
+# Weird crawler paths
+/calculators/blog/ /blog/ 301
+/calculators/blog /blog/ 301
+
+# Missing Spanish pages
+/es/centers/olgam/ /centers/ 301
+/es/centers/olgam /centers/ 301
+/es/calculators/illinois/joliet/ /es/calculators/illinois 301
+/es/calculators/illinois/joliet /es/calculators/illinois 301
