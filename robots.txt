@@ -9,6 +9,10 @@ Allow: /es/blog/
 Allow: /centers/
 Allow: /p/
 
+# Block premium success page and downloads from indexing
+Disallow: /premium/success.html
+Disallow: /downloads/
+
 # Block admin, temp, and utility files
 Disallow: /admin/
 Disallow: /temp/
