@@ -49023,32 +49023,6 @@
       }
     },
     {
-      "id": "fa5ebd29-74e0-4eb9-af65-e360ca037773",
-      "name": "ALS Environmental",
-      "city": "Kelso",
-      "state": "Washington",
-      "postal_code": "98626",
-      "full_address": "1317 13th Ave S, Kelso, WA 98626",
-      "phone": "+1 360-577-7222",
-      "rating": 4.8,
-      "reviews": 12,
-      "typical_pay": "$40-$80",
-      "first_visit_bonus": "Contact center",
-      "brand": "Independent",
-      "latitude": 46.131934099999995,
-      "longitude": -122.903994,
-      "website": "https://www.alsglobal.com/locations/americas/north-america/usa/washington/kelso-environmental",
-      "hours": {
-        "monday": "6:00 AM - 7:00 PM",
-        "tuesday": "6:00 AM - 7:00 PM",
-        "wednesday": "6:00 AM - 7:00 PM",
-        "thursday": "6:00 AM - 7:00 PM",
-        "friday": "6:00 AM - 7:00 PM",
-        "saturday": "7:00 AM - 5:00 PM",
-        "sunday": "8:00 AM - 4:00 PM"
-      }
-    },
-    {
       "id": "c5d831e3-68be-42d6-b1dc-86c87659f39b",
       "name": "Sitka Whalefest",
       "city": "Sitka",
@@ -49090,32 +49064,6 @@
       "latitude": 57.052333,
       "longitude": -135.3160504,
       "website": "http://www.alaskaraptor.org/",
-      "hours": {
-        "monday": "6:00 AM - 7:00 PM",
-        "tuesday": "6:00 AM - 7:00 PM",
-        "wednesday": "6:00 AM - 7:00 PM",
-        "thursday": "6:00 AM - 7:00 PM",
-        "friday": "6:00 AM - 7:00 PM",
-        "saturday": "7:00 AM - 5:00 PM",
-        "sunday": "8:00 AM - 4:00 PM"
-      }
-    },
-    {
-      "id": "992b449f-9c95-4478-b179-3877fe1b61eb",
-      "name": "ALS Environmental",
-      "city": "Simi Valley",
-      "state": "California",
-      "postal_code": "93065",
-      "full_address": "2655 Park Center Dr A, Simi Valley, CA 93065",
-      "phone": "+1 805-526-7161",
-      "rating": 5,
-      "reviews": 7,
-      "typical_pay": "$40-$80",
-      "first_visit_bonus": "Contact center",
-      "brand": "Independent",
-      "latitude": 34.2841464,
-      "longitude": -118.7981324,
-      "website": "https://www.alsglobal.com/en-us",
       "hours": {
         "monday": "6:00 AM - 7:00 PM",
         "tuesday": "6:00 AM - 7:00 PM",
