@@ -16,7 +16,7 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/assets/css/global-fonts.css">
-    <link rel="stylesheet" href="/assets/css/exit-popup.css">
+    <link rel="stylesheet" href="/assets/css/conversion-popup.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plasma Donation Blog 2026: Expert Guides & Tips</title>
     <!-- Breadcrumb Schema -->
@@ -549,6 +549,16 @@
 
         /* Add padding to body to account for fixed nav */
 </style>
+<link rel="stylesheet" href="/assets/css/sticky-banner.css">
+<style>
+  /* Offset fixed nav when sticky banner is present */
+  .sb-banner:not(.sb-hidden) ~ nav,
+  body:has(.sb-banner:not(.sb-hidden)) nav {
+    top: 40px !important;
+    transition: top 0.3s ease;
+  }
+</style>
+<link rel="stylesheet" href="/assets/css/inline-cta.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -2944,7 +2954,36 @@
         });
         </script>
 
-    <!-- Exit Intent Popup -->
-    <script src="/assets/js/exit-popup.js"></script>
+    <script>
+    window.BANNER_CONFIG = {
+      message: 'Plasma Donor Pro Toolkit',
+      highlight: '$19',
+      detail: '13 tools to maximize your earnings',
+      ctaText: 'Get It Now',
+      ctaUrl: 'https://buy.stripe.com/8x23cw4Ng4vxgmn9yw2cg08',
+      bgColor: '#27ae60',
+      textColor: '#ffffff',
+      excludePaths: ['/premium', '/success']
+    };
+    </script>
+    <script src="/assets/js/sticky-banner.js"></script>
+
+    <!-- Conversion Popup -->
+    <script>
+    window.POPUP_CONFIG = {
+      headline: 'Wait \u2014 Special Offer!',
+      product: 'Plasma Donor Pro Toolkit',
+      description: '13 tools to track donations, maximize bonuses & file taxes. Includes center pay rate bible, earnings tracker & 2026 tax guide.',
+      price: '$19',
+      ctaText: 'Get the Pro Toolkit \u2014 $19',
+      ctaUrl: 'https://buy.stripe.com/8x23cw4Ng4vxgmn9yw2cg08',
+      secondaryText: 'No thanks, I\'ll figure it out',
+      accentColor: '#27ae60',
+      excludePaths: ['/premium', '/success']
+    };
+    </script>
+    <script src="/assets/js/conversion-popup.js"></script>
+<script>window.INLINE_CTA_CONFIG={badge:'Pro Toolkit',headline:'Track Every Donation and Maximize Your Earnings',body:'The Pro Toolkit includes an earnings tracker, bonus stacking cheat sheet, center pay rate bible, and complete 2026 tax guide. Everything you need to earn more from every visit.',ctaText:'Get the Pro Toolkit \u2014 $19',ctaUrl:'https://buy.stripe.com/8x23cw4Ng4vxgmn9yw2cg08',secondaryText:'See what\'s included',secondaryUrl:'/premium/',accentColor:'#27ae60',bgFrom:'#ecfdf5',bgTo:'#f0fdf4',borderColor:'#86efac',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms','/disclaimer']};</script>
+<script src="/assets/js/inline-cta.js"></script>
 </body>
 </html>
