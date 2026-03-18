@@ -639,15 +639,44 @@
 
             <div class="contact-form">
                 <h2>Get In Touch</h2>
-                <div style="text-align: center; padding: 2rem;">
-                    <p style="font-size: 1.2rem; margin-bottom: 1rem; color: #2c3e50;">Have questions about plasma donation earnings or our calculator?</p>
-                    <p style="font-size: 1.4rem; font-weight: 600; color: #27ae60; margin-bottom: 1rem;">
-                        📧 <a href="mailto:hello@plasmapaycalculator.com" style="color: #27ae60; text-decoration: none;">hello@plasmapaycalculator.com</a>
-                    </p>
-                    <p style="color: #7f8c8d; font-size: 0.9rem;">
-                        We respond to all inquiries within 24-48 hours
-                    </p>
-                </div>
+                <form action="https://formsubmit.co/hello@cozyriverstudios.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Plasma Pay Calculator Contact">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_next" value="https://plasmapaycalculator.com/contact?success=true">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="General Question">General Question</option>
+                            <option value="Rate Information">Rate Information</option>
+                            <option value="Report an Error">Report an Error</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <p style="text-align: center; color: #7f8c8d; font-size: 0.9rem; margin-top: 1rem;">
+                    We respond to all inquiries within 24-48 hours
+                </p>
             </div>
 
             <div class="faq-section">
@@ -670,7 +699,7 @@
 
                 <div class="faq-item">
                     <div class="faq-question">Q: How can I report incorrect pay rate information?</div>
-                    <div class="faq-answer">A: Please email us at rates@plasmapaycalculator.com with the center name, location, and the correct pay rate information. Include any supporting documentation if available.</div>
+                    <div class="faq-answer">A: Please use the contact form above and select "Report an Error" as the subject. Include the center name, location, and the correct pay rate information along with any supporting documentation if available.</div>
                 </div>
 
                 <div class="faq-item">
@@ -735,6 +764,20 @@
                 mobileMenu.classList.remove('active');
             }
         });
+
+        // Success message check
+        if (window.location.search.includes('success=true')) {
+            var form = document.querySelector('.contact-form form');
+            if (form) {
+                var successDiv = document.createElement('div');
+                successDiv.style.cssText = 'background: rgba(39, 174, 96, 0.1); border: 2px solid #27ae60; color: #27ae60; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; text-align: center; font-size: 1.1rem;';
+                var strong = document.createElement('strong');
+                strong.textContent = 'Thank you!';
+                successDiv.appendChild(strong);
+                successDiv.appendChild(document.createTextNode(' Your message has been sent. We\'ll get back to you within 24-48 hours.'));
+                form.parentNode.insertBefore(successDiv, form);
+            }
+        }
     </script>
 
 <script>window.INLINE_CTA_CONFIG={badge:'Pro Toolkit',headline:'Track Every Donation and Maximize Your Earnings',body:'The Pro Toolkit includes an earnings tracker, bonus stacking cheat sheet, center pay rate bible, and complete 2026 tax guide. Everything you need to earn more from every visit.',ctaText:'Get the Pro Toolkit \u2014 $19',ctaUrl:'https://buy.stripe.com/8x23cw4Ng4vxgmn9yw2cg08',secondaryText:'See what\'s included',secondaryUrl:'/premium/',accentColor:'#27ae60',bgFrom:'#ecfdf5',bgTo:'#f0fdf4',borderColor:'#86efac',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms','/disclaimer']};</script>
