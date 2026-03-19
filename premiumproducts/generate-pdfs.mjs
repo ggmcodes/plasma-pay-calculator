@@ -22,6 +22,9 @@ const STYLE = `
   .check { color: #0d9488; font-weight: bold; }
   .footer { margin-top: 40px; padding-top: 16px; border-top: 2px solid #e2e8f0; font-size: 11px; color: #94a3b8; text-align: center; }
   p { font-size: 14px; }
+  a.aff { color: #0d9488; font-weight: 600; text-decoration: none; }
+  a.aff:hover { text-decoration: underline; }
+  .affiliate-disclosure { font-size: 10px; color: #94a3b8; margin-top: 20px; padding-top: 10px; border-top: 1px solid #e2e8f0; }
 `;
 
 const pdfs = [
@@ -34,8 +37,8 @@ const pdfs = [
 <li><strong>Research centers</strong> within 30 miles &mdash; compare BioLife, CSL, Grifols, Octapharma</li>
 <li><strong>Check new donor bonuses</strong> &mdash; most offer $700-$1,000 for first month</li>
 <li><strong>Get your documents ready:</strong> Valid photo ID, proof of address, Social Security card</li>
-<li><strong>Hydrate aggressively</strong> for 3 days before &mdash; 80+ oz water daily</li>
-<li><strong>Eat iron-rich foods</strong> &mdash; red meat, spinach, beans, fortified cereal</li>
+<li><strong>Hydrate aggressively</strong> for 3 days before &mdash; 80+ oz water daily with <a class="aff" href="https://www.amazon.com/s?k=Liquid+IV+Hydration+Multiplier&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">electrolyte packets</a></li>
+<li><strong>Eat iron-rich foods</strong> &mdash; red meat, spinach, beans, fortified cereal. Start an <a class="aff" href="https://www.amazon.com/s?k=Nature+Made+Iron+65mg+supplement&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">iron supplement</a></li>
 <li><strong>Download the center's app</strong> &mdash; BioLife, CSL, etc. for scheduling</li>
 </ul>
 
@@ -87,12 +90,13 @@ const pdfs = [
 <h2>What to Bring Every Visit</h2>
 <ul>
 <li>Photo ID (must match center records)</li>
-<li>Water bottle (32 oz minimum)</li>
-<li>High-protein snack for after</li>
+<li><a class="aff" href="https://www.amazon.com/s?k=water+bottle+with+time+marker+32+oz&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Water bottle with time markers</a> (32 oz minimum)</li>
+<li>High-protein snack for after &mdash; <a class="aff" href="https://www.amazon.com/s?k=protein+bars+variety+pack+20g&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">protein bars</a></li>
 <li>Phone with charger or headphones</li>
 <li>Warm layers (donation rooms are cold)</li>
 <li>Stress ball (helps speed up donation)</li>
 </ul>
+<div class="affiliate-disclosure">As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. Recommendations are independent and prices may vary.</div>
 <div class="footer">PlasmaPayCalculator.com &mdash; Plasma Donor Pro Toolkit</div>`
   },
   {
@@ -160,8 +164,8 @@ const pdfs = [
 <div class="brand">Plasma Pay Calculator &mdash; plasmapaycalculator.com</div>
 <h2>24 Hours Before Donating</h2>
 <ul>
-<li><strong>Drink 80+ oz of water</strong> &mdash; hydration is the #1 factor for fast donations</li>
-<li><strong>Eat 60-80g protein</strong> &mdash; chicken, eggs, fish, beans, or protein shake</li>
+<li><strong>Drink 80+ oz of water</strong> &mdash; hydration is the #1 factor for fast donations. Add <a class="aff" href="https://www.amazon.com/s?k=Liquid+IV+Hydration+Multiplier&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Liquid I.V. Hydration Multiplier</a> for faster absorption</li>
+<li><strong>Eat 60-80g protein</strong> &mdash; chicken, eggs, fish, beans, or <a class="aff" href="https://www.amazon.com/s?k=Optimum+Nutrition+Gold+Standard+Whey+Protein&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">protein shake</a></li>
 <li><strong>Iron-rich dinner:</strong> Red meat or spinach + vitamin C (helps iron absorption)</li>
 <li><strong>Avoid:</strong> Alcohol, fatty foods, excessive caffeine, high-sodium meals</li>
 <li><strong>Avoid:</strong> NSAIDs (ibuprofen, aspirin) &mdash; can affect platelet function</li>
@@ -171,18 +175,18 @@ const pdfs = [
 <ul>
 <li><strong>16-20 oz water</strong> first thing when you wake up</li>
 <li><strong>High-protein breakfast:</strong> Eggs + toast, oatmeal + peanut butter, Greek yogurt</li>
-<li><strong>Iron supplement</strong> with vitamin C (orange juice) if you tend to have low levels</li>
+<li><strong><a class="aff" href="https://www.amazon.com/s?k=Nature+Made+Iron+65mg+supplement&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Iron supplement</a></strong> with vitamin C (orange juice) if you tend to have low levels</li>
 <li><strong>Light cardio</strong> (10-min walk) to get blood flowing</li>
 <li><strong>Another 16 oz water</strong> 30 minutes before your appointment</li>
 </ul>
 
 <h2>Post-Donation Recovery</h2>
 <ul>
-<li><strong>Drink 32+ oz water</strong> in the first 2 hours after donating</li>
-<li><strong>Eat within 30 minutes:</strong> Protein bar, sandwich, or the center's free snacks</li>
-<li><strong>Recovery meal:</strong> Chicken, rice, vegetables &mdash; balanced protein + carbs</li>
+<li><strong>Drink 32+ oz water</strong> in the first 2 hours after donating &mdash; use <a class="aff" href="https://www.amazon.com/s?k=electrolyte+powder+packets+variety+pack&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">electrolyte powder packets</a> for faster recovery</li>
+<li><strong>Eat within 30 minutes:</strong> <a class="aff" href="https://www.amazon.com/s?k=protein+bars+variety+pack+20g&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Protein bar</a>, sandwich, or the center's free snacks</li>
+<li><strong>Recovery meal:</strong> Chicken, rice, vegetables &mdash; balanced protein + carbs. Use <a class="aff" href="https://www.amazon.com/s?k=meal+prep+containers+BPA+free&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">meal prep containers</a> to batch-cook</li>
 <li><strong>Rest:</strong> No heavy lifting or intense exercise for 4-6 hours</li>
-<li><strong>Take iron supplement</strong> with dinner (vitamin C helps absorption)</li>
+<li><strong>Take <a class="aff" href="https://www.amazon.com/s?k=Nature+Made+Iron+65mg+supplement&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">iron supplement</a></strong> with dinner (vitamin C helps absorption)</li>
 </ul>
 
 <h2>Weekly Meal Prep Template (Donation Days)</h2>
@@ -206,7 +210,8 @@ const pdfs = [
 <tr><td>Dark chocolate (1 oz)</td><td>3.4 mg</td><td>Healthy snack option</td></tr>
 </table>
 
-<div class="tip"><strong>Pro Tip:</strong> The #1 reason donors get deferred is low hematocrit/iron levels. Consistent hydration and iron-rich meals prevent 90% of deferrals.</div>
+<div class="tip"><strong>Pro Tip:</strong> The #1 reason donors get deferred is low hematocrit/iron levels. Consistent hydration and <a class="aff" href="https://www.amazon.com/s?k=Nature+Made+Iron+65mg+supplement&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">iron-rich meals + supplements</a> prevent 90% of deferrals.</div>
+<div class="affiliate-disclosure">As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. Recommendations are independent and prices may vary.</div>
 <div class="footer">PlasmaPayCalculator.com &mdash; Plasma Donor Pro Toolkit</div>`
   },
   {
@@ -258,7 +263,8 @@ const pdfs = [
 <li><strong>High tax states:</strong> CA (up to 13.3%), NY (up to 10.9%), NJ (up to 10.75%)</li>
 </ul>
 
-<div class="tip"><strong>Pro Tip:</strong> If you earn $3,000/year from plasma and drive 2,000 miles to centers, your mileage deduction alone ($1,400) cuts your taxable income nearly in half.</div>
+<div class="tip"><strong>Pro Tip:</strong> If you earn $3,000/year from plasma and drive 2,000 miles to centers, your mileage deduction alone ($1,400) cuts your taxable income nearly in half. Keep a <a class="aff" href="https://www.amazon.com/s?k=mileage+log+book+for+taxes&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">mileage log book</a> in your car and store tax documents in a <a class="aff" href="https://www.amazon.com/s?k=fireproof+document+bag+waterproof&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">fireproof document bag</a>.</div>
+<div class="affiliate-disclosure">As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. Recommendations are independent and prices may vary.</div>
 <div class="footer">PlasmaPayCalculator.com &mdash; Plasma Donor Pro Toolkit</div>`
   },
   {
@@ -281,14 +287,14 @@ const pdfs = [
 <tr><td>&#9744;</td><td>Mileage to/from center</td><td>Transportation</td><td>Use IRS standard rate</td></tr>
 <tr><td>&#9744;</td><td>Parking fees at center</td><td>Transportation</td><td>Keep receipts</td></tr>
 <tr><td>&#9744;</td><td>Tolls on route to center</td><td>Transportation</td><td>E-ZPass records work</td></tr>
-<tr><td>&#9744;</td><td>Iron supplements</td><td>Health</td><td>Required for eligibility</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=Nature+Made+Iron+65mg+supplement&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Iron supplements</a></td><td>Health</td><td>Required for eligibility</td></tr>
 <tr><td>&#9744;</td><td>Vitamin C supplements</td><td>Health</td><td>Aids iron absorption</td></tr>
 <tr><td>&#9744;</td><td>B12 supplements</td><td>Health</td><td>Recovery support</td></tr>
-<tr><td>&#9744;</td><td>Protein supplements/shakes</td><td>Health</td><td>Pre/post donation</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=Optimum+Nutrition+Gold+Standard+Whey+Protein&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Protein supplements/shakes</a></td><td>Health</td><td>Pre/post donation</td></tr>
 <tr><td>&#9744;</td><td>Pre-donation meals</td><td>Health</td><td>Directly related to donation</td></tr>
-<tr><td>&#9744;</td><td>Water bottles/hydration</td><td>Supplies</td><td>Business necessity</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=water+bottle+with+time+marker+32+oz&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Water bottles/hydration</a></td><td>Supplies</td><td>Business necessity</td></tr>
 <tr><td>&#9744;</td><td>Vein care cream/supplies</td><td>Medical</td><td>Arm care products</td></tr>
-<tr><td>&#9744;</td><td>Bandages, compression wraps</td><td>Medical</td><td>Post-donation care</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=compression+arm+sleeve+for+blood+donation&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Bandages, compression wraps</a></td><td>Medical</td><td>Post-donation care</td></tr>
 <tr><td>&#9744;</td><td>Warm clothing for center</td><td>Supplies</td><td>If bought specifically</td></tr>
 <tr><td>&#9744;</td><td>Phone usage (scheduling %)</td><td>Administrative</td><td>Business % of phone bill</td></tr>
 <tr><td>&#9744;</td><td>Tax preparation fees</td><td>Administrative</td><td>Plasma-related portion</td></tr>
@@ -306,6 +312,7 @@ const pdfs = [
 <tr><td>Line 31</td><td><strong>Net Profit</strong></td><td><strong>$2,700</strong></td></tr>
 </table>
 <p>In this example, deductions saved you <strong>$2,100 off your taxable income</strong>, which at a 12% tax rate saves <strong>$252+ in federal taxes</strong>.</p>
+<div class="affiliate-disclosure">As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. Recommendations are independent and prices may vary.</div>
 <div class="footer">PlasmaPayCalculator.com &mdash; Plasma Donor Pro Toolkit</div>`
   },
   {
@@ -378,10 +385,10 @@ const pdfs = [
 <h2>How to Move Up a Tier (Safely)</h2>
 <ul>
 <li><strong>If you're 145-149 lbs:</strong> Gaining 1-5 lbs moves you to Tier 2 (+$1,000/year)</li>
-<li><strong>Healthy weight gain:</strong> Increase protein intake, add strength training</li>
+<li><strong>Healthy weight gain:</strong> Increase protein intake with <a class="aff" href="https://www.amazon.com/s?k=Optimum+Nutrition+Gold+Standard+Whey+Protein&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">whey protein</a>, add strength training</li>
 <li><strong>Weigh-in tips:</strong> Wear heavier clothes, hydrate well (water adds weight)</li>
 <li><strong>Don't:</strong> Unhealthily gain weight just for plasma pay &mdash; focus on muscle</li>
-<li><strong>Track:</strong> Know your weight before each visit to stay in the optimal tier</li>
+<li><strong>Track:</strong> Use a <a class="aff" href="https://www.amazon.com/s?k=digital+food+scale+kitchen&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">food scale</a> to track nutrition and know your weight before each visit to stay in the optimal tier</li>
 </ul>
 
 <h2>Weight Tier Strategy by Center</h2>
@@ -394,6 +401,7 @@ const pdfs = [
 </table>
 
 <div class="tip"><strong>Pro Tip:</strong> If you're right at a tier boundary, weighing in with shoes and a hoodie can add 2-3 lbs. Over 100 visits/year, that's an extra $1,000+.</div>
+<div class="affiliate-disclosure">As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. Recommendations are independent and prices may vary.</div>
 <div class="footer">PlasmaPayCalculator.com &mdash; Plasma Donor Pro Toolkit</div>`
   },
   {
@@ -406,7 +414,7 @@ const pdfs = [
 <p><strong>Threshold:</strong> Hematocrit must be 38%+ (women) or 39%+ (men)</p>
 <h3>Recovery Plan (3-7 days):</h3>
 <ul>
-<li>Take iron supplement (65mg elemental iron) with vitamin C daily</li>
+<li>Take <a class="aff" href="https://www.amazon.com/s?k=Nature+Made+Iron+65mg+supplement&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">iron supplement (65mg elemental iron)</a> with vitamin C daily</li>
 <li>Eat iron-rich foods: red meat, spinach, fortified cereal, lentils</li>
 <li>Avoid calcium, coffee, and tea within 2 hours of iron supplement</li>
 <li>Cook in cast iron cookware (leaches iron into food)</li>
@@ -416,7 +424,7 @@ const pdfs = [
 <h2>Low Protein (Total Protein < 6.0 g/dL)</h2>
 <h3>Recovery Plan (3-5 days):</h3>
 <ul>
-<li>Increase protein to 80-100g/day (chicken, eggs, fish, whey protein)</li>
+<li>Increase protein to 80-100g/day (chicken, eggs, fish, <a class="aff" href="https://www.amazon.com/s?k=Optimum+Nutrition+Gold+Standard+Whey+Protein&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">whey protein</a>)</li>
 <li>Eat protein with every meal and snack</li>
 <li>Avoid alcohol (depletes protein levels)</li>
 <li>Stay hydrated but don't over-hydrate (dilutes protein levels)</li>
@@ -463,7 +471,8 @@ const pdfs = [
 <tr><td>Travel</td><td>Varies</td><td>Check center's travel policy</td></tr>
 </table>
 
-<div class="tip"><strong>Pro Tip:</strong> Every deferral costs you $50-75 in lost income. Consistent iron supplementation and hydration prevent the vast majority of deferrals.</div>
+<div class="tip"><strong>Pro Tip:</strong> Every deferral costs you $50-75 in lost income. Consistent <a class="aff" href="https://www.amazon.com/s?k=Nature+Made+Iron+65mg+supplement&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">iron supplementation</a> and <a class="aff" href="https://www.amazon.com/s?k=Liquid+IV+Hydration+Multiplier&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">hydration</a> prevent the vast majority of deferrals.</div>
+<div class="affiliate-disclosure">As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. Recommendations are independent and prices may vary.</div>
 <div class="footer">PlasmaPayCalculator.com &mdash; Plasma Donor Pro Toolkit</div>`
   },
   {
@@ -490,7 +499,7 @@ const pdfs = [
 <li><strong>Choose the center with the biggest new donor bonus</strong> (CSL often pays $100+ for first visit)</li>
 <li><strong>Bring all documents:</strong> Photo ID, proof of address, Social Security card</li>
 <li><strong>Arrive early:</strong> First visit takes 2-3 hours (includes physical and screening)</li>
-<li><strong>Hydrate heavily</strong> the day before &mdash; faster donation = faster payment</li>
+<li><strong>Hydrate heavily</strong> the day before with <a class="aff" href="https://www.amazon.com/s?k=electrolyte+powder+packets+variety+pack&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">electrolyte packets</a> &mdash; faster donation = faster payment</li>
 </ul>
 
 <h2>Same-Day Payment Centers</h2>
@@ -512,6 +521,7 @@ const pdfs = [
 </ul>
 
 <div class="tip"><strong>Pro Tip:</strong> Your first 30 days are the highest-earning period because of new donor bonuses. Take advantage of every promotion available.</div>
+<div class="affiliate-disclosure">As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. Recommendations are independent and prices may vary.</div>
 <div class="footer">PlasmaPayCalculator.com &mdash; Plasma Donor Pro Toolkit</div>`
   },
   {
@@ -521,10 +531,10 @@ const pdfs = [
 <h2>The Starter Kit &mdash; Before Your First Visit (~$45-55)</h2>
 <table>
 <tr><th>&#10003;</th><th>Item</th><th>Why</th><th>Est. Cost</th></tr>
-<tr><td>&#9744;</td><td>32 oz water bottle</td><td>Stay hydrated before/during/after</td><td>$10-15</td></tr>
-<tr><td>&#9744;</td><td>Iron supplement (65mg)</td><td>Prevent low iron deferrals</td><td>$8-12</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=water+bottle+with+time+marker+32+oz&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">32 oz water bottle with time markers</a></td><td>Stay hydrated before/during/after</td><td>$10-15</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=Nature+Made+Iron+65mg+supplement&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Iron supplement (65mg)</a></td><td>Prevent low iron deferrals</td><td>$8-12</td></tr>
 <tr><td>&#9744;</td><td>Vitamin C supplement</td><td>Boosts iron absorption</td><td>$5-8</td></tr>
-<tr><td>&#9744;</td><td>Protein bars (box)</td><td>Pre/post donation nutrition</td><td>$12-18</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=protein+bars+variety+pack+20g&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Protein bars (box)</a></td><td>Pre/post donation nutrition</td><td>$12-18</td></tr>
 <tr><td>&#9744;</td><td>Stress ball / grip ball</td><td>Speeds up donation 20-30%</td><td>$3-5</td></tr>
 <tr><td>&#9744;</td><td>Phone charger (portable)</td><td>Entertainment during 45-60 min donation</td><td>$10-15</td></tr>
 </table>
@@ -533,22 +543,23 @@ const pdfs = [
 <table>
 <tr><th>&#10003;</th><th>Item</th><th>Why</th><th>Est. Cost</th></tr>
 <tr><td>&#9744;</td><td>Arnica gel or cream</td><td>Reduces bruising at needle site</td><td>$8-12</td></tr>
-<tr><td>&#9744;</td><td>Self-adhesive bandage wrap</td><td>Better than center bandages</td><td>$5-8</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=compression+arm+sleeve+for+blood+donation&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Compression arm sleeve</a></td><td>Reduces bruising, speeds recovery</td><td>$5-8</td></tr>
 <tr><td>&#9744;</td><td>Vitamin B12 supplement</td><td>Supports red blood cell production</td><td>$6-10</td></tr>
-<tr><td>&#9744;</td><td>Electrolyte packets</td><td>Faster hydration recovery</td><td>$10-15</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=Liquid+IV+Hydration+Multiplier&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Electrolyte packets (Liquid I.V.)</a></td><td>Faster hydration recovery</td><td>$10-15</td></tr>
 <tr><td>&#9744;</td><td>Heating pad</td><td>Warms veins before donation (faster flow)</td><td>$8-12</td></tr>
 </table>
 
 <h2>The Tracking Kit &mdash; Stay Organized (~$20-30)</h2>
 <table>
 <tr><th>&#10003;</th><th>Item</th><th>Why</th><th>Est. Cost</th></tr>
-<tr><td>&#9744;</td><td>Small notebook / mileage log</td><td>Track visits and deductions</td><td>$3-5</td></tr>
-<tr><td>&#9744;</td><td>Folder for tax documents</td><td>Keep 1099s and receipts organized</td><td>$2-3</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=mileage+log+book+for+taxes&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Mileage log book</a></td><td>Track visits and deductions</td><td>$3-5</td></tr>
+<tr><td>&#9744;</td><td><a class="aff" href="https://www.amazon.com/s?k=tax+organizer+folder+with+pockets&tag=plasma0f-20" target="_blank" rel="noopener noreferrer sponsored">Tax organizer folder</a></td><td>Keep 1099s and receipts organized</td><td>$2-3</td></tr>
 <tr><td>&#9744;</td><td>Donation Tracker Spreadsheet</td><td>Digital tracking (included in toolkit)</td><td>Included</td></tr>
 <tr><td>&#9744;</td><td>Mileage tracking app</td><td>Automate mileage deduction tracking</td><td>Free-$5/mo</td></tr>
 </table>
 
 <div class="tip"><strong>Pro Tip:</strong> The stress ball alone can cut your donation time from 60 to 40 minutes. That's 20 hours saved per year for regular donors.</div>
+<div class="affiliate-disclosure">As an Amazon Associate, Plasma Pay Calculator earns from qualifying purchases. Recommendations are independent and prices may vary.</div>
 <div class="footer">PlasmaPayCalculator.com &mdash; Plasma Donor Pro Toolkit</div>`
   },
   {
