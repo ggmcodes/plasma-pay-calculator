@@ -575,6 +575,18 @@
         .form-hint.coral { color: var(--coral); }
         .form-hint.slate { color: var(--slate); }
 
+        .field-error {
+            border-color: #ef4444 !important;
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1) !important;
+        }
+
+        .error-message {
+            font-size: 0.8rem;
+            color: #ef4444;
+            margin-top: 0.25rem;
+            font-weight: 600;
+        }
+
         .calculate-btn {
             width: 100%;
             padding: 1.25rem 2rem;
@@ -1084,22 +1096,54 @@
         }
 
         .faq-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-
-        .faq-item h3 {
-            color: var(--mint);
             margin-bottom: 0.75rem;
-            font-size: 1.1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
-        .faq-item p {
+        .faq-item[open] {
+            border-color: var(--mint);
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.1);
+        }
+
+        .faq-item summary {
+            padding: 1.25rem 1.5rem;
+            font-weight: 600;
+            color: var(--mint);
+            font-size: 1.05rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--mint);
+            flex-shrink: 0;
+            margin-left: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .faq-item[open] summary::after {
+            content: '\2212';
+        }
+
+        .faq-item summary:hover {
+            background: rgba(13, 148, 136, 0.04);
+        }
+
+        .faq-item .faq-answer {
+            padding: 0 1.5rem 1.25rem;
             color: var(--slate);
             line-height: 1.7;
         }
@@ -1256,10 +1300,17 @@
         /* Floating CTA */
         .floating-cta {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1000;
             display: none;
+            margin-bottom: 0.5rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .floating-cta.hidden {
+            display: none !important;
         }
 
         .floating-cta button {
@@ -1273,6 +1324,7 @@
             box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
             animation: pulse 2s infinite;
             font-family: inherit;
+            white-space: nowrap;
         }
 
         @keyframes pulse {
@@ -1422,17 +1474,56 @@
                             <label for="state">Your State</label>
                             <select id="state" required>
                                 <option value="">Select your state</option>
+                                <option value="AL">Alabama (base rates)</option>
+                                <option value="AK">Alaska (+5% rates)</option>
+                                <option value="AZ">Arizona (+3% rates)</option>
+                                <option value="AR">Arkansas (base rates)</option>
                                 <option value="CA">California (+15% rates)</option>
-                                <option value="NY">New York (+12% rates)</option>
-                                <option value="TX">Texas (+8% rates)</option>
+                                <option value="CO">Colorado (+6% rates)</option>
+                                <option value="CT">Connecticut (+10% rates)</option>
+                                <option value="DE">Delaware (+4% rates)</option>
                                 <option value="FL">Florida (+5% rates)</option>
-                                <option value="IL">Illinois (+10% rates)</option>
-                                <option value="PA">Pennsylvania (+7% rates)</option>
-                                <option value="OH">Ohio (base rates)</option>
                                 <option value="GA">Georgia (+3% rates)</option>
-                                <option value="NC">North Carolina (+2% rates)</option>
+                                <option value="HI">Hawaii (+12% rates)</option>
+                                <option value="ID">Idaho (base rates)</option>
+                                <option value="IL">Illinois (+10% rates)</option>
+                                <option value="IN">Indiana (+2% rates)</option>
+                                <option value="IA">Iowa (base rates)</option>
+                                <option value="KS">Kansas (base rates)</option>
+                                <option value="KY">Kentucky (base rates)</option>
+                                <option value="LA">Louisiana (+2% rates)</option>
+                                <option value="ME">Maine (+3% rates)</option>
+                                <option value="MD">Maryland (+8% rates)</option>
+                                <option value="MA">Massachusetts (+12% rates)</option>
                                 <option value="MI">Michigan (+5% rates)</option>
-                                <option value="other">Other State (base rates)</option>
+                                <option value="MN">Minnesota (+5% rates)</option>
+                                <option value="MS">Mississippi (base rates)</option>
+                                <option value="MO">Missouri (+2% rates)</option>
+                                <option value="MT">Montana (base rates)</option>
+                                <option value="NE">Nebraska (base rates)</option>
+                                <option value="NV">Nevada (+5% rates)</option>
+                                <option value="NH">New Hampshire (+5% rates)</option>
+                                <option value="NJ">New Jersey (+10% rates)</option>
+                                <option value="NM">New Mexico (+2% rates)</option>
+                                <option value="NY">New York (+12% rates)</option>
+                                <option value="NC">North Carolina (+2% rates)</option>
+                                <option value="ND">North Dakota (base rates)</option>
+                                <option value="OH">Ohio (base rates)</option>
+                                <option value="OK">Oklahoma (base rates)</option>
+                                <option value="OR">Oregon (+6% rates)</option>
+                                <option value="PA">Pennsylvania (+7% rates)</option>
+                                <option value="RI">Rhode Island (+5% rates)</option>
+                                <option value="SC">South Carolina (+2% rates)</option>
+                                <option value="SD">South Dakota (base rates)</option>
+                                <option value="TN">Tennessee (+2% rates)</option>
+                                <option value="TX">Texas (+8% rates)</option>
+                                <option value="UT">Utah (+3% rates)</option>
+                                <option value="VT">Vermont (+5% rates)</option>
+                                <option value="VA">Virginia (+6% rates)</option>
+                                <option value="WA">Washington (+8% rates)</option>
+                                <option value="WV">West Virginia (base rates)</option>
+                                <option value="WI">Wisconsin (+3% rates)</option>
+                                <option value="WY">Wyoming (base rates)</option>
                             </select>
                             <div class="form-hint">Higher cost-of-living = higher pay!</div>
                         </div>
@@ -1850,25 +1941,60 @@
             <div class="faq-card">
                 <h2>Frequently Asked Questions</h2>
 
-                <div class="faq-item">
-                    <h3>How much can I earn donating plasma in 2026?</h3>
-                    <p>New donors can earn $50-120 per visit with first-time bonuses reaching $900-1,200 in the first month. Regular donors typically earn $500-700 monthly donating twice weekly. Rates vary by center, location, and weight category.</p>
-                </div>
+                <details class="faq-item" open>
+                    <summary>How much can I earn donating plasma in 2026?</summary>
+                    <p class="faq-answer">New donors can earn $50-120 per visit with first-time bonuses reaching $900-1,200 in the first month. Regular donors typically earn $500-700 monthly donating twice weekly. Rates vary by center, location, and weight category.</p>
+                </details>
 
-                <div class="faq-item">
-                    <h3>Which plasma centers pay the highest rates?</h3>
-                    <p>CSL Plasma, BioLife, and Octapharma Plasma typically offer the highest rates nationwide. CSL Plasma averages $60-100 per visit, BioLife offers $50-90, and new donor bonuses can reach $900+ in major cities.</p>
-                </div>
+                <details class="faq-item">
+                    <summary>Which plasma centers pay the highest rates?</summary>
+                    <p class="faq-answer">CSL Plasma, BioLife, and Octapharma Plasma typically offer the highest rates nationwide. CSL Plasma averages $60-100 per visit, BioLife offers $50-90, and new donor bonuses can reach $900+ in major cities.</p>
+                </details>
 
-                <div class="faq-item">
-                    <h3>How often can I donate plasma for maximum earnings?</h3>
-                    <p>FDA regulations allow plasma donation twice per week with at least 48 hours between donations. This means you can donate up to 8-9 times per month, maximizing your monthly earnings to $500-700 for regular donors.</p>
-                </div>
+                <details class="faq-item">
+                    <summary>How often can I donate plasma for maximum earnings?</summary>
+                    <p class="faq-answer">FDA regulations allow plasma donation twice per week with at least 48 hours between donations. This means you can donate up to 8-9 times per month, maximizing your monthly earnings to $500-700 for regular donors.</p>
+                </details>
 
-                <div class="faq-item">
-                    <h3>Are plasma donation earnings taxable income?</h3>
-                    <p>Yes, plasma donation income is taxable and must be reported to the IRS. Centers issue 1099-MISC forms for earnings over $600 annually. Track your donations and related expenses for tax purposes.</p>
-                </div>
+                <details class="faq-item">
+                    <summary>Are plasma donation earnings taxable income?</summary>
+                    <p class="faq-answer">Yes, plasma donation income is taxable and must be reported to the IRS. Centers issue 1099-MISC forms for earnings over $600 annually. Track your donations and related expenses for tax purposes.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How long does a plasma donation take?</summary>
+                    <p class="faq-answer">Your first visit takes 2-3 hours including medical screening and paperwork. Subsequent visits take 45-90 minutes. Most donors read, watch shows, or browse their phones during the procedure.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What are the requirements to donate plasma?</summary>
+                    <p class="faq-answer">You must be 18-69 years old, weigh at least 110 lbs, be in good health, and pass a medical screening. You need a valid photo ID, proof of address, and Social Security number.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Is donating plasma safe?</summary>
+                    <p class="faq-answer">Yes, plasma donation is FDA-regulated and considered safe. Common side effects include mild bruising, temporary fatigue, and lightheadedness. Your body replaces the donated plasma within 24-48 hours.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How much does plasma donation pay per month?</summary>
+                    <p class="faq-answer">Regular plasma donors earn $400-$800 per month donating twice weekly. New donors can earn $900-$1,200 in their first month through special bonus promotions at most major centers.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What is the difference between CSL Plasma and BioLife?</summary>
+                    <p class="faq-answer">CSL Plasma pays $50-$100 per visit with new donor bonuses up to $1,100. BioLife pays $70-$100 per visit with bonuses up to $900. Both are FDA-regulated. CSL has more locations nationwide while BioLife often has newer facilities.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Do heavier donors get paid more for plasma?</summary>
+                    <p class="faq-answer">Yes, donors weighing 175+ lbs typically earn $10-$25 more per visit because they can donate a larger volume of plasma. Weight-based pay tiers vary by center.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Can I donate plasma if I take medication?</summary>
+                    <p class="faq-answer">Most common medications are acceptable, including antidepressants, blood pressure medications, and birth control. Some medications like blood thinners or immunosuppressants may result in deferral. Each center evaluates medications individually.</p>
+                </details>
             </div>
         </section>
 
@@ -2027,7 +2153,18 @@
         other: { new: { week1: 110, week2: 90, week3: 80, week4: 75 }, returning: { first: 20, second: 40 }, lapsed: { week1: 90, week2: 80, week3: 75, week4: 70 } }
     };
 
-    const stateMultipliers = { 'CA': 1.15, 'NY': 1.12, 'IL': 1.10, 'TX': 1.08, 'PA': 1.07, 'FL': 1.05, 'MI': 1.05, 'GA': 1.03, 'NC': 1.02, 'OH': 1.00, 'other': 1.00 };
+    const stateMultipliers = {
+        'AL': 1.00, 'AK': 1.05, 'AZ': 1.03, 'AR': 1.00, 'CA': 1.15,
+        'CO': 1.06, 'CT': 1.10, 'DE': 1.04, 'FL': 1.05, 'GA': 1.03,
+        'HI': 1.12, 'ID': 1.00, 'IL': 1.10, 'IN': 1.02, 'IA': 1.00,
+        'KS': 1.00, 'KY': 1.00, 'LA': 1.02, 'ME': 1.03, 'MD': 1.08,
+        'MA': 1.12, 'MI': 1.05, 'MN': 1.05, 'MS': 1.00, 'MO': 1.02,
+        'MT': 1.00, 'NE': 1.00, 'NV': 1.05, 'NH': 1.05, 'NJ': 1.10,
+        'NM': 1.02, 'NY': 1.12, 'NC': 1.02, 'ND': 1.00, 'OH': 1.00,
+        'OK': 1.00, 'OR': 1.06, 'PA': 1.07, 'RI': 1.05, 'SC': 1.02,
+        'SD': 1.00, 'TN': 1.02, 'TX': 1.08, 'UT': 1.03, 'VT': 1.05,
+        'VA': 1.06, 'WA': 1.08, 'WV': 1.00, 'WI': 1.03, 'WY': 1.00
+    };
 
     function getWeightMultiplier(weightRange) {
         return { '110-149': 1.0, '150-174': 1.1, '175-200': 1.2, '200+': 1.25 }[weightRange] || 1.0;
@@ -2037,7 +2174,28 @@
         return { '0': 0, '1': 75, '2': 150, '3': 225, '4': 300 }[referrals] || 0;
     }
 
+    function clearErrors() {
+        document.querySelectorAll('.field-error').forEach(function(el) {
+            el.classList.remove('field-error');
+        });
+        document.querySelectorAll('.error-message').forEach(function(el) {
+            el.remove();
+        });
+    }
+
+    function showError(fieldId, message) {
+        var field = document.getElementById(fieldId);
+        if (!field) return;
+        field.classList.add('field-error');
+        var errorEl = document.createElement('div');
+        errorEl.className = 'error-message';
+        errorEl.textContent = message;
+        field.parentNode.appendChild(errorEl);
+    }
+
     function calculateEarnings() {
+        clearErrors();
+
         const donorType = document.getElementById('donorType').value;
         const weightRange = document.getElementById('weight').value;
         const center = document.getElementById('center').value || 'average';
@@ -2048,10 +2206,12 @@
         const gasPrice = parseFloat(document.getElementById('gasPrice').value) || 3.50;
         const referrals = document.getElementById('referrals').value;
 
-        if (!donorType || !weightRange || !state || !frequency) {
-            alert('Please fill in all required fields');
-            return;
-        }
+        var hasErrors = false;
+        if (!donorType) { showError('donorType', 'Please select your donor type'); hasErrors = true; }
+        if (!weightRange) { showError('weight', 'Please select your weight range'); hasErrors = true; }
+        if (!state) { showError('state', 'Please select your state'); hasErrors = true; }
+        if (!frequency) { showError('frequency', 'Please select donation frequency'); hasErrors = true; }
+        if (hasErrors) return;
 
         const rates = paymentRates[center];
         const weightMult = getWeightMultiplier(weightRange);
@@ -2114,6 +2274,12 @@
 
         document.getElementById('results').classList.add('show');
         document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+
+        // Dismiss floating CTA after first calculation
+        var floatingCTA = document.getElementById('floatingCTA');
+        if (floatingCTA) {
+            floatingCTA.classList.add('hidden');
+        }
     }
 
     // Quiz functionality
@@ -2174,9 +2340,10 @@
         }
     }
 
-    // Show floating CTA on scroll (mobile only)
+    // Show floating CTA on scroll (mobile only), but not after calculation
     window.addEventListener('scroll', function() {
         var floatingCTA = document.getElementById('floatingCTA');
+        if (floatingCTA.classList.contains('hidden')) return;
         if (window.scrollY > 500) {
             floatingCTA.style.display = 'block';
         } else {
