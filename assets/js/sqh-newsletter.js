@@ -22,6 +22,8 @@
     iframe.src = BEEHIIV_SRC;
     iframe.className = 'beehiiv-embed';
     iframe.setAttribute('data-test-id', 'beehiiv-embed');
+    iframe.setAttribute('width', '429');
+    iframe.setAttribute('height', '230');
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('scrolling', 'no');
     iframe.style.cssText = 'width:429px;height:230px;margin:0;border-radius:0px!important;background-color:transparent;box-shadow:0 0 #0000;max-width:100%;border:none;';
