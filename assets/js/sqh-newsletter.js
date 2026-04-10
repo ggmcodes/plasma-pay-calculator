@@ -191,7 +191,7 @@
   function init() {
     injectFooterCTA();
     injectInlineCTA();
-    setTimeout(injectStickyBar, 5000);
+    injectStickyBar();
   }
 
   if (document.readyState === 'loading') {
