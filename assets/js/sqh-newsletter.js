@@ -188,10 +188,17 @@
   // ============================================
   // INIT
   // ============================================
+  function isHomepage() {
+    var p = window.location.pathname;
+    return p === '/' || p === '/index.html';
+  }
+
   function init() {
-    injectFooterCTA();
+    if (!isHomepage()) {
+      injectFooterCTA();
+      injectStickyBar();
+    }
     injectInlineCTA();
-    injectStickyBar();
   }
 
   if (document.readyState === 'loading') {
