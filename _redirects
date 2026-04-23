@@ -204,6 +204,105 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 # Spanish index.html page; redirecting them to /centers, /health, /process
 # overrode the Spanish content with English.
 
+# Spanish localized path aliases (nav links use Spanish words that don't
+# resolve to real dirs; route to the existing English or es/ equivalent).
+/es/centros/ /es/centers/ 301
+/es/centros/* /es/centers/:splat 301
+/es/tools/ /tools/ 301
+/es/tools/* /tools/:splat 301
+/es/herramientas/ /tools/ 301
+/es/herramientas/* /tools/:splat 301
+/es/premium/ /premium/ 301
+/es/premium/* /premium/:splat 301
+/es/calculadora/ /es/calculators/california/ 301
+/es/calculadora/* /es/calculators/california/ 301
+/es/favicon.svg /favicon.svg 301
+
+# Blog post renames (links point to outdated or never-created slugs)
+/blog/plasma-donation-taxes-2026.html /blog/plasma-donation-tax-guide-2026.html 301
+/blog/plasma-donation-taxes-2026 /blog/plasma-donation-tax-guide-2026.html 301
+/blog/plasma-donation-taxes-1099-guide-2026.html /blog/plasma-donation-taxes-guide-2026.html 301
+/blog/plasma-donation-side-effects-health-impacts-2026.html /blog/plasma-donation-side-effects-2026.html 301
+/blog/plasma-donation-side-effects-risks-2026.html /blog/plasma-donation-side-effects-2026.html 301
+/blog/plasma-donation-side-effects-guide-2026.html /blog/plasma-donation-side-effects-2026.html 301
+/blog/plasma-donation-side-effects-safety-guide.html /blog/plasma-donation-side-effects.html 301
+/blog/plasma-donation-nutrition-guide-2026.html /blog/plasma-donation-nutrition-diet-optimization-2026.html 301
+/blog/best-plasma-centers-2026.html /blog/best-plasma-centers-2026-ranked.html 301
+/blog/best-products-plasma-donors-2025 /blog/best-products-plasma-donors-2026.html 301
+/blog/best-products-plasma-donors-2025.html /blog/best-products-plasma-donors-2026.html 301
+/blog/what-to-eat-before-donating-plasma /blog/what-to-eat-before-donating-plasma-2026.html 301
+/blog/can-you-donate-plasma-with-diabetes-complete-guide /blog/can-you-donate-plasma-with-diabetes-2026.html 301
+/blog/can-you-donate-plasma-with-high-blood-pressure /blog/can-you-donate-plasma-with-high-blood-pressure-2026.html 301
+/blog/can-you-donate-plasma-with-anxiety-disorder-2026 /blog/can-you-donate-plasma-with-anxiety-2026.html 301
+/blog/plasma-donation-eligibility-requirements-complete-guide.html /blog/complete-medical-eligibility-guide-plasma-donation.html 301
+/blog/plasma-donation-recovery-tips-complete-guide-2025 /blog/plasma-donation-recovery-tips-complete-guide-2026.html 301
+
+# Spanish blog post renames
+/es/blog/primera-donacion-plasma-que-esperar-2026 /es/blog/primera-vez-donando-plasma-paso-a-paso-2026.html 301
+/es/blog/primera-donacion-plasma-que-esperar-2026.html /es/blog/primera-vez-donando-plasma-paso-a-paso-2026.html 301
+/es/blog/como-evitar-diferimiento-plasma-2026 /es/blog/diferimiento-donar-plasma-razones-2026.html 301
+/es/blog/como-evitar-diferimiento-plasma-2026.html /es/blog/diferimiento-donar-plasma-razones-2026.html 301
+/es/blog/preparacion-dia-antes-donar-plasma-2026 /es/blog/como-prepararse-primera-donacion-plasma-2026.html 301
+/es/blog/preparacion-dia-antes-donar-plasma-2026.html /es/blog/como-prepararse-primera-donacion-plasma-2026.html 301
+/es/blog/csl-plasma-tarifas-2026.html /es/blog/csl-plasma-cuanto-pagan-tarifas-2026.html 301
+
+# Remaining blog renames (high-confidence fuzzy matches)
+/blog/autoimmune-disease-plasma-donation-complete-guide /blog/autoimmune-disease-plasma-donation-guide-2026.html 301
+/blog/autoimmune-disease-plasma-donation-guide /blog/autoimmune-disease-plasma-donation-guide-2026.html 301
+/blog/biolife-plasma-pay-chart /blog/biolife-plasma-pay-chart-2026.html 301
+/blog/can-you-donate-plasma-on-antibiotics-full-guide /blog/can-you-donate-plasma-on-antibiotics-2026.html 301
+/blog/can-you-donate-plasma-on-biologics-complete-guide /blog/can-you-donate-plasma-on-antibiotics-2026.html 301
+/blog/can-you-donate-plasma-while-pregnant-postpartum /blog/can-you-donate-plasma-while-pregnant-2026.html 301
+/blog/can-you-donate-plasma-with-anxiety-bipolar-guide /blog/can-you-donate-plasma-with-anxiety-2026.html 301
+/blog/how-much-do-you-get-for-plasma-2026 /blog/how-much-do-you-get-paid-for-plasma-2026.html 301
+/blog/plasma-donation-side-effects-prevention-2026 /blog/plasma-donation-side-effects-2026.html 301
+/blog/plasma-donation-health-screening-complete-guide /blog/plasma-donation-health-screening-guide.html 301
+/blog/plasma-donation-health-screening-process /blog/plasma-donation-health-screening-guide.html 301
+/blog/plasma-donation-health-screening-what-to-expect /blog/plasma-donation-health-screening-guide.html 301
+/blog/mental-health-medications-plasma-donation /blog/plasma-donation-and-mental-health-complete-guide-2026.html 301
+/blog/mental-health-medications-plasma-donation-guide /blog/plasma-donation-and-mental-health-complete-guide-2026.html 301
+/blog/pain-medications-plasma-donation-eligibility /blog/medications-plasma-donation-guide-2026.html 301
+/blog/prescription-medications-plasma-donation-guide /blog/medications-plasma-donation-guide-2026.html 301
+/blog/stimulant-medications-plasma-donation-guide /blog/medications-plasma-donation-guide-2026.html 301
+
+# Fallback for remaining unmapped blog posts → blog index
+/blog/avoid-plasma-donation-deferral-reasons-2026 /blog/ 301
+/blog/best-plasma-centers-highest-pay-2026 /blog/best-plasma-centers-2026-ranked.html 301
+/blog/can-you-donate-plasma-after-accident-injury /blog/ 301
+/blog/can-you-donate-plasma-with-chronic-fatigue-syndrome /blog/ 301
+/blog/digestive-disorders-plasma-donation-eligibility /blog/ 301
+/blog/maximize-plasma-donation-earnings-2026 /blog/maximize-plasma-earnings.html 301
+/blog/plasma-donation-after-surgery-complete-guide /blog/ 301
+/blog/plasma-donation-anxiety-tips-2026 /blog/anxiety-depression-plasma-donation-guide-2026.html 301
+/blog/plasma-donation-pay-chart-by-state /plasma-donation-pay-chart-by-state.html 301
+
+# Spanish blog renames
+/es/blog/biolife-plasma-tarifas-2026.html /blog/biolife-plasma-pay-rates-2026.html 301
+/es/blog/condiciones-medicas-descalifican-plasma.html /es/blog/que-descalifica-donar-plasma-2026.html 301
+/es/blog/donar-plasma-con-autoinmunidad-2026.html /es/blog/donar-plasma-con-enfermedad-autoinmune-2026.html 301
+/es/blog/donar-plasma-con-diabetes-2026.html /es/blog/donar-plasma-con-insulina-diabetes-2026.html 301
+/es/blog/donar-plasma-con-medicamentos-neurologicos-2026.html /es/blog/donar-plasma-con-antibioticos-2026.html 301
+/es/blog/donar-plasma-tatuajes-2026 /es/blog/donar-plasma-tatuajes-reglas-2026.html 301
+/es/blog/efectos-secundarios-donacion-plasma-2026 /es/blog/efectos-secundarios-donar-plasma-2026.html 301
+/es/blog/efectos-secundarios-donacion-plasma.html /es/blog/efectos-secundarios-donar-plasma-2026.html 301
+/es/blog/efectos-secundarios-donar-plasma.html /es/blog/efectos-secundarios-donar-plasma-2026.html 301
+/es/blog/maximizar-ganancias-plasma-2026 /es/blog/ 301
+/es/blog/medicamentos-descalifican-plasma-2026 /es/blog/que-descalifica-donar-plasma-2026.html 301
+/es/blog/medicamentos-que-descalifican-plasma-2026 /es/blog/que-descalifica-donar-plasma-2026.html 301
+/es/blog/mejores-centros-plasma-pagan-mas /es/blog/mejores-centros-plasma-california.html 301
+/es/blog/mejores-centros-plasma-pagan-mas.html /es/blog/mejores-centros-plasma-california.html 301
+/es/blog/nutricion-donantes-plasma-2026.html /es/blog/ 301
+/es/blog/octapharma-plasma-cuanto-pagan-2026.html /es/blog/octapharma-cuanto-pagan-tarifas-2026.html 301
+/es/blog/requisitos-donar-plasma-2026.html /es/blog/requisitos-donacion-plasma.html 301
+
+# Spanish localized root pages
+/es/privacidad.html /es/privacy.html 301
+/es/terminos.html /es/terms.html 301
+/es/requisitos-peso-pago-maximo.html /weight-requirements-maximum-pay-guide.html 301
+
+# Spanish city-level calculator URLs that were never built → English equivalents
+/es/calculators/*/*/ /calculators/:splat 301
+
 # Spanish health redirects
 /es/health/side-effects/ /health/side-effects 301
 
