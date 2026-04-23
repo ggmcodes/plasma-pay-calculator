@@ -22,10 +22,9 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 # New wildcard rules from .htaccess
 /center/csl-downtown-la/* /centers/csl-plasma/ 301
 /metro/* / 301
-# Additional wildcard rules for city-level and Spanish calculator paths
-/calculators/*/*/ /calculators/:splat 301
-/es/calculators/*/ /es/calculators/:splat 301
-/es/calculators/*/*/ /es/calculators/:splat 301
+# Note: trailing-slash-stripping wildcards on real directories were removed —
+# they caused redirect loops against the host's directory index handling
+# (301 strips slash → host 308 re-adds slash → loop).
 
 # New static redirects from .htaccess
 /centers.html /centers/ 301
@@ -125,8 +124,8 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 
 ## Spanish City Pages
 
-# Calculator trailing slash redirects (remove trailing slash)
-/calculators/*/ /calculators/:splat 301
+# Removed: /calculators/*/ → /calculators/:splat caused infinite redirect
+# loops on every state calculator (strip slash, host re-adds, repeat).
 
 # Blog post .html redirects (remove .html)
 /blog/*.html /blog/:splat 301
@@ -145,19 +144,14 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 
 # Redirect missing individual pages
 /calculator.html / 301
-/calculators/ /calculators 301
 /calculator/ / 301
 /frederick-md-plasma-donation.html /calculators/maryland/frederick 301
 /how-much-do-you-get-for-donating-plasma.html /how-much-money-can-you-make-donating-plasma.html 301
 /lowell-ma-plasma-donation.html /calculators/massachusetts/lowell 301
 /iowa-plasma-donation-earnings.html /calculators/iowa 301
 
-# Health directory redirects
-/health/requirements/ /plasma-donation-requirements-2025.html 301
-/health/nutrition/ /blog/plasma-donation-health-tips.html 301
-/health/safety/ /plasma-donation-side-effects-safety-guide.html 301
-/health/frequency/ /blog/can-you-donate-plasma-twice-a-week.html 301
-/health/screening/ /blog/complete-medical-eligibility-guide-plasma-donation.html 301
+# Health directory redirects — removed. Each /health/<topic>/ has its own
+# index.html, so overriding them with 301s killed real content.
 
 # Spanish blog post redirects - redirect to English versions since Spanish posts don't exist
 /es/blog/can-you-donate-plasma-twice-a-week.html /blog/can-you-donate-plasma-twice-a-week.html 301
@@ -206,15 +200,15 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /es/centers/octapharma/ /centers/octapharma 301
 /es/centers/grifols/ /centers/grifols 301
 /es/centers/csl-plasma/ /centers/csl-plasma 301
-/es/centers/ /centers 301
+# Removed: /es/centers/, /es/health/, /es/process/ — each has a real
+# Spanish index.html page; redirecting them to /centers, /health, /process
+# overrode the Spanish content with English.
 
 # Spanish health redirects
 /es/health/side-effects/ /health/side-effects 301
-/es/health/ /health 301
 
 # Spanish page redirects
 /es/calculators/ /calculators 301
-/es/process/ /process 301
 /es/plasma-donation-requirements-2025.html /plasma-donation-requirements-2025.html 301
 /es/first-time-plasma-donation-bonus.html /first-time-plasma-donation-bonus.html 301
 /es/states.html /states.html 301
@@ -286,7 +280,8 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 # Root level page redirects
 /plasma-donation-requirements-2025/ /plasma-donation-requirements-2025 301
 /how-much-money-can-you-make-donating-plasma/ /how-much-money-can-you-make-donating-plasma 301
-/states/ /states 301
+# Removed: /states/ → /states — /states/ serves states/index.html; this
+# rule stripped the slash which the host then re-added, looping.
 
 # Tools directory
 /tools/eligibility-checker/ /tools/eligibility-checker 301
@@ -297,11 +292,8 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /es/blog/consejos-donacion-plasma-principiantes/ /es/blog/consejos-donacion-plasma-principiantes 301
 /es/terms/ /es/terms 301
 
-# Spanish page trailing slash fixes
-/es/ /es 301
-
-# California specific blog post pattern
-/blog/california/ /blog/ 301
+# Removed: /es/ → /es and /blog/california/ → /blog/ — both targeted
+# real directories with index.html and caused loops or clobbered content.
 
 # SPECIFIC 404 ERROR FIXES FROM GSC
 # ==================================
