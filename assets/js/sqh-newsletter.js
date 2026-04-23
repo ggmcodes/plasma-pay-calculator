@@ -198,7 +198,7 @@
       injectFooterCTA();
       injectStickyBar();
     }
-    injectInlineCTA();
+    // Mid-content inline CTA disabled globally — keeping footer CTA + sticky bar only.
   }
 
   if (document.readyState === 'loading') {

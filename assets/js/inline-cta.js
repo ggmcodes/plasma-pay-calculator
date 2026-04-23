@@ -111,7 +111,16 @@
       }
     }
 
-    // Last fallback: append to main content area
+    // Reliable fallback: place immediately before the footer so the CTA
+    // never renders below it, regardless of DOM structure (e.g. pages where
+    // <main> is unclosed and wraps the footer).
+    var footer = document.querySelector('footer');
+    if (footer && footer.parentNode) {
+      footer.parentNode.insertBefore(cta, footer);
+      return;
+    }
+
+    // Last resort: append to main content area
     var main = document.querySelector('main') || document.querySelector('.main-content') || document.querySelector('#content');
     if (main) {
       main.appendChild(cta);

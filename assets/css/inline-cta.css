@@ -94,3 +94,13 @@
     font-size: 0.875rem;
   }
 }
+
+/* Constrain orphan FAQ items inside the Donor Success Tips band.
+   Some city pages have FAQ items as direct section children without a max-width wrapper,
+   which lets them stretch to full viewport width. */
+section.py-8.bg-blue-50 > .bg-white.rounded-lg.p-6 {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.75rem;
+}
