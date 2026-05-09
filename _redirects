@@ -776,3 +776,7 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /es/centers/olgam /centers/ 301
 /es/calculators/illinois/joliet/ /es/calculators/illinois 301
 /es/calculators/illinois/joliet /es/calculators/illinois 301
+
+# Affiliate / referral short URLs (Rakuten $50 — expires 2026-06-30)
+/rakuten https://www.rakuten.com/r/4PJYY4?eeid=44971&utm_source=plasmapaycalculator&utm_medium=short-url&utm_campaign=rakuten50 302
+/50 https://www.rakuten.com/r/4PJYY4?eeid=44971&utm_source=plasmapaycalculator&utm_medium=short-url&utm_campaign=rakuten50 302
