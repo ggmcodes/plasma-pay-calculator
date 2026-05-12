@@ -220,7 +220,7 @@
     var link = document.createElement('link');
     link.id = 'hetalSponsorCss';
     link.rel = 'stylesheet';
-    link.href = ASSET_BASE + 'sponsor.css';
+    link.href = ASSET_BASE + 'sponsor.css?v=3';
     document.head.appendChild(link);
   }
 

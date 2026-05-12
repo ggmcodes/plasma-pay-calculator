@@ -2,6 +2,18 @@
 /* Hetal Retail sponsor styles — Campaign: hetal_retail_trial_2026_05 */
 /* Killswitch: delete /assets/sponsors/hetal-retail/ folder + script include */
 
+/* === DISABLE EXISTING SITE STICKY HEADERS WHILE SPONSOR RUNS === */
+/* The Hetal sticky claims top:0 — neutralize any other sticky/fixed top nav so they don't overlap or fight for the viewport edge */
+body.hr-sticky-padded header.sticky,
+body.hr-sticky-padded header.fixed,
+body.hr-sticky-padded nav.sticky,
+body.hr-sticky-padded nav.fixed,
+body.hr-sticky-padded > header,
+body.hr-sticky-padded > nav {
+  position: static !important;
+  top: auto !important;
+}
+
 :root {
   --hr-primary: #26417b;
   --hr-primary-dark: #1d335f;
