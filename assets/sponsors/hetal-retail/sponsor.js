@@ -125,7 +125,7 @@
     a.rel = 'noopener sponsored';
     a.className = 'hr-sticky-link';
 
-    a.appendChild(img(ASSET_BASE + 'logo.svg', 'Hetal Retail', 'hr-sticky-logo'));
+    a.appendChild(img(ASSET_BASE + 'logo.png', 'Hetal Retail', 'hr-sticky-logo'));
     a.appendChild(el('span', { className: 'hr-sticky-badge', text: 'Get Paid to Shop' }));
     a.appendChild(el('span', { className: 'hr-sticky-headline', text: 'Record the aisles we list. It’s that easy.' }));
 
@@ -171,7 +171,7 @@
 
     var sponsorLine = el('div', { className: 'hr-city-hero-sponsor' });
     sponsorLine.appendChild(document.createTextNode('SPONSORED • '));
-    sponsorLine.appendChild(img(ASSET_BASE + 'logo.svg', 'Hetal Retail'));
+    sponsorLine.appendChild(img(ASSET_BASE + 'logo.png', 'Hetal Retail'));
     copy.appendChild(sponsorLine);
 
     copy.appendChild(el('div', { className: 'hr-city-hero-badge', text: 'Get Paid to Shop' }));
