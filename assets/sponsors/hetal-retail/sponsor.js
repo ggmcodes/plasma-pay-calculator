@@ -202,16 +202,14 @@
 
     var hero = createCityHero(city);
 
-    var anchor = document.querySelector('.calculator-container, #calculator, main h1, main, .container h1, body > h1');
-    if (anchor && anchor.parentNode) {
-      anchor.parentNode.insertBefore(hero, anchor);
+    // Insert immediately after the sticky banner so the hero sits at the
+    // absolute top of body content — robust against pages with malformed
+    // HTML where SEO sections live outside <main>.
+    var sticky = document.getElementById('hetalStickyBanner');
+    if (sticky && sticky.parentNode) {
+      sticky.parentNode.insertBefore(hero, sticky.nextSibling);
     } else {
-      var firstSection = document.querySelector('main, section, .container');
-      if (firstSection && firstSection.parentNode) {
-        firstSection.parentNode.insertBefore(hero, firstSection);
-      } else {
-        document.body.appendChild(hero);
-      }
+      document.body.insertBefore(hero, document.body.firstChild);
     }
   }
 
@@ -220,7 +218,7 @@
     var link = document.createElement('link');
     link.id = 'hetalSponsorCss';
     link.rel = 'stylesheet';
-    link.href = ASSET_BASE + 'sponsor.css?v=4';
+    link.href = ASSET_BASE + 'sponsor.css?v=5';
     document.head.appendChild(link);
   }
 
