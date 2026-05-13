@@ -202,12 +202,14 @@
 
     var hero = createCityHero(city);
 
-    // Insert immediately after the sticky banner so the hero sits at the
-    // absolute top of body content — robust against pages with malformed
-    // HTML where SEO sections live outside <main>.
+    // Final desired order on plasma city pages: sticky → site nav → Hetal hero → page content.
+    // Site nav is repositioned in repositionPlasmaNav() to sit right after sticky,
+    // so on plasma we anchor the hero to the nav. Elsewhere we anchor to the sticky.
+    var nav = document.querySelector('body > nav');
     var sticky = document.getElementById('hetalStickyBanner');
-    if (sticky && sticky.parentNode) {
-      sticky.parentNode.insertBefore(hero, sticky.nextSibling);
+    var anchor = (SITE === 'plasma' && nav) ? nav : sticky;
+    if (anchor && anchor.parentNode) {
+      anchor.parentNode.insertBefore(hero, anchor.nextSibling);
     } else {
       document.body.insertBefore(hero, document.body.firstChild);
     }
@@ -242,8 +244,10 @@
   function init() {
     injectStyles();
     injectSticky();
-    injectCityHero();
+    // Order matters on plasma: move nav into top position BEFORE the hero, so the
+    // hero anchors against the nav and ends up below it. Result: sticky → nav → hero.
     repositionPlasmaNav();
+    injectCityHero();
   }
 
   if (document.readyState === 'loading') {
