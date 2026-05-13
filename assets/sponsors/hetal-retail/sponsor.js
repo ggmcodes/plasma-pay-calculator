@@ -218,14 +218,32 @@
     var link = document.createElement('link');
     link.id = 'hetalSponsorCss';
     link.rel = 'stylesheet';
-    link.href = ASSET_BASE + 'sponsor.css?v=5';
+    link.href = ASSET_BASE + 'sponsor.css?v=6';
     document.head.appendChild(link);
+  }
+
+  function repositionPlasmaNav() {
+    // Plasma's homepage nav is `<body><nav>...</nav>`, but plasma city pages
+    // have malformed HTML where SEO sections render before the nav. CSS
+    // position:static makes the nav fall to the bottom on those pages.
+    // Move the nav back to the top in DOM order, right after the Hetal sticky
+    // (and city hero if present), so navigation stays accessible and looks
+    // intentional regardless of page structure.
+    if (SITE !== 'plasma') return;
+    var nav = document.querySelector('body > nav');
+    if (!nav) return;
+    var sticky = document.getElementById('hetalStickyBanner');
+    var hero = document.getElementById('hetalCityHero');
+    var anchor = hero || sticky;
+    if (!anchor || !anchor.parentNode) return;
+    anchor.parentNode.insertBefore(nav, anchor.nextSibling);
   }
 
   function init() {
     injectStyles();
     injectSticky();
     injectCityHero();
+    repositionPlasmaNav();
   }
 
   if (document.readyState === 'loading') {
