@@ -14,6 +14,16 @@ body.hr-sticky-padded > nav {
   top: auto !important;
 }
 
+/* === HIDE COMPETING PROMOTIONS DURING TRIAL === */
+/* Hetal is exclusive top-of-page placement during the 30-day trial. */
+/* Hide Rakuten promo elements so they don't compete for attention. */
+/* Killswitch removes body.hr-sticky-padded → Rakuten returns automatically. */
+body.hr-sticky-padded #rakuten-promo-banner,
+body.hr-sticky-padded #rakuten-promo-card,
+body.hr-sticky-padded #rakuten-promo-pill {
+  display: none !important;
+}
+
 :root {
   --hr-primary: #26417b;
   --hr-primary-dark: #1d335f;
