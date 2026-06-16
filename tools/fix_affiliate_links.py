@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import os as _os, sys as _sys
+if _os.environ.get("ALLOW_LEGACY_SEARCH_LINKS") != "1":
+    _sys.stderr.write("RETIRED 2026-06-16: this generator emits Amazon /s?k= search links, which convert poorly. Use the CreatorsAPI tool at ~/Projects/creatorsapi-tool for real /dp links + product photos. Set ALLOW_LEGACY_SEARCH_LINKS=1 to override intentionally.\n")
+    _sys.exit(1)
 """Replace dead Amazon /s?k= search links with real /dp/ASIN product links.
 
 Tier 1 (this script): in-place URL swap. Every search link whose query maps to a

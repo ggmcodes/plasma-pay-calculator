@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import os as _os, sys as _sys
+if _os.environ.get("ALLOW_LEGACY_SEARCH_LINKS") != "1":
+    _sys.stderr.write("RETIRED 2026-06-16: this generator emits Amazon /s?k= search links, which convert poorly. Use the CreatorsAPI tool at ~/Projects/creatorsapi-tool for real /dp links + product photos. Set ALLOW_LEGACY_SEARCH_LINKS=1 to override intentionally.\n")
+    _sys.exit(1)
 """Generate Round 3 Financial/Center Batch 2: 4 pages covering SS retirement, tax deductions, new centers, and wait times."""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

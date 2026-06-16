@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+if (process.env.ALLOW_LEGACY_SEARCH_LINKS !== "1") {
+  console.error("RETIRED 2026-06-16: emits Amazon /s?k= search links. Use ~/Projects/creatorsapi-tool for real /dp links. Set ALLOW_LEGACY_SEARCH_LINKS=1 to override.");
+  process.exit(1);
+}
 
 /**
  * Injects contextual affiliate product sections into pages that don't have them.
