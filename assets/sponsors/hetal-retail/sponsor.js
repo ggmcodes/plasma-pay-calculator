@@ -15,6 +15,14 @@
 (function () {
   'use strict';
 
+  /* ============================================================
+   * HETAL KILLSWITCH — paused 2026-06-25 (trial ended, awaiting renewal).
+   * TO RE-ENABLE ON RENEWAL: change the next line to `var HETAL_ENABLED = true;`
+   * That is the only change needed. Markers, assets, and HTML includes are untouched.
+   * ============================================================ */
+  var HETAL_ENABLED = false;
+  if (!HETAL_ENABLED) { return; }
+
   var CAMPAIGN = 'hetal_retail_trial_2026_05';
   var BASE_URL = 'https://hetalretail.onelink.me/sfUI/f8wk75ms';
   var ASSET_BASE = '/assets/sponsors/hetal-retail/';
