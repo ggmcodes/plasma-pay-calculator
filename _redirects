@@ -44,6 +44,16 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /blog/csl-plasma-pay-chart-2026 /csl-plasma-pay-chart-2026 301
 /blog/csl-plasma-pay-chart-2026.html /csl-plasma-pay-chart-2026 301
 
+# 2026-06-29 Consolidate 4 competing "biolife vs csl" comparison pages into one.
+# They split ~1,174 impressions across pos 7-25 and earned 1 total click (cannibalization).
+# Keep /blog/biolife-vs-csl-plasma-comparison (richest content, 20 internal links); 301 the rest.
+/blog/biolife-vs-csl-plasma-2026 /blog/biolife-vs-csl-plasma-comparison 301
+/blog/biolife-vs-csl-plasma-2026.html /blog/biolife-vs-csl-plasma-comparison 301
+/blog/biolife-vs-csl-plasma-comparison-2026 /blog/biolife-vs-csl-plasma-comparison 301
+/blog/biolife-vs-csl-plasma-comparison-2026.html /blog/biolife-vs-csl-plasma-comparison 301
+/blog/csl-plasma-vs-biolife-2026-comparison /blog/biolife-vs-csl-plasma-comparison 301
+/blog/csl-plasma-vs-biolife-2026-comparison.html /blog/biolife-vs-csl-plasma-comparison 301
+
 # New static redirects from .htaccess
 /centers.html /centers/ 301
 /plasma-donation-eligibility-quiz-viral /blog/plasma-donation-eligibility-requirements-comprehensive-guide-2026.html 301

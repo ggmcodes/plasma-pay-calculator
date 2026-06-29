@@ -41,12 +41,16 @@ Each brand should have exactly **one** pay-chart authority page. Every other "pa
 - CSL collapsed from 3 competing pages → root `/csl-plasma-pay-chart-2026` (the URL holding 233 internal links). Canonicals + 301s added.
 - 301'd all brand `*-pay-rates-2026` pages → their `*-pay-chart-2026` winner (biolife, grifols, kedplasma, octapharma, csl). GSC-verified these had **zero unique winning queries** — they only ranked for "pay chart" terms the winner owns better, so consolidation is pure upside.
 
-**Live cannibalization backlog (next):**
-| Query | Competing pages | Action |
+**Cannibalization backlog — worked 2026-06-29:**
+| Cluster | Finding | Resolution |
 |---|---|---|
-| `octapharma plasma pay chart 2026` | `/centers/octapharma/` (pos 10.2) vs `/blog/octapharma-plasma-pay-chart-2026` (pos 10.3) | Differentiate: retitle the centers page to location intent ("Octapharma Locations Near You"); keep the blog page as the pay-chart authority. Internal-link blog→centers, not competing. |
-| `csl plasma weight chart 2026` | `/blog/csl-plasma-weight-chart-2026` (pos 2.1) vs `/blog/plasma-donation-weight-chart-visual-guide-2026` (pos 9.1) | Canonical the generic visual-guide → the CSL weight chart for CSL terms, or de-target its title. |
-| `biolife vs csl` (4 pages!) | `biolife-vs-csl-plasma-2026`, `biolife-vs-csl-plasma-comparison`, `biolife-vs-csl-plasma-comparison-2026`, `csl-plasma-vs-biolife-2026-comparison` | Pick one, 301 the other three into it. Same audit for every `X-vs-Y` brand pair. |
+| `biolife vs csl` (4 pages) | Split ~1,174 imp across pos 7–25, **1 total click** — textbook cannibalization | **DONE.** 301'd 3 losers → `/blog/biolife-vs-csl-plasma-comparison` (2,446w, 20 internal links = the authority). |
+| `octapharma` centers vs blog | NOT a dup — different intents. `/centers/octapharma/` **wins** (50 clk, title already "Pay Rates & Locations") vs blog pay-chart (19 clk) | **Leave alone.** Differentiating the centers page away from "pay" would cost its 50 clicks. Monitor only. |
+| `csl weight chart` | `/blog/csl-plasma-weight-chart-2026` already **wins** CSL terms (pos 2.1); the generic visual-guide has its own non-CSL queries (1,863 imp) | **Leave alone.** A 301 would destroy the generic page's unique value; the overlap is already won by the right page. |
+
+**Lesson:** not every "duplicate" is cannibalization. Before consolidating, confirm in GSC that the loser has **zero unique winning queries** and that the pages share intent. Different-intent overlap (locations vs pay) is differentiated, not redirected.
+
+**Next `X-vs-Y` audits:** run the same check on every brand-comparison pair (grifols-vs-csl, octapharma-vs-biolife, etc.) — many have 2–3 near-duplicate variants.
 
 **Rule going forward:** before publishing any new brand page, grep existing pages for the target query. If one exists, **refresh it, don't add a sibling.**
 
