@@ -26,12 +26,30 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 # they caused redirect loops against the host's directory index handling
 # (301 strips slash → host 308 re-adds slash → loop).
 
+# 2026-06-29 Hard consolidation of brand pay-chart cannibalization.
+# Each pay-rates page ranked ONLY for "<brand> pay chart" terms its pay-chart sibling
+# already owns better (GSC verified, zero unique winning queries). Canonicals weren't
+# holding, so 301 the duplicates into the single winner per brand to merge the signals.
+/blog/biolife-plasma-pay-rates-2026 /blog/biolife-plasma-pay-chart-2026 301
+/blog/biolife-plasma-pay-rates-2026.html /blog/biolife-plasma-pay-chart-2026 301
+/blog/grifols-plasma-pay-rates-2026 /blog/grifols-plasma-pay-chart-2026 301
+/blog/grifols-plasma-pay-rates-2026.html /blog/grifols-plasma-pay-chart-2026 301
+/blog/kedplasma-pay-rates-2026 /blog/kedplasma-pay-chart-2026 301
+/blog/kedplasma-pay-rates-2026.html /blog/kedplasma-pay-chart-2026 301
+/blog/octapharma-plasma-pay-rates-2026 /blog/octapharma-plasma-pay-chart-2026 301
+/blog/octapharma-plasma-pay-rates-2026.html /blog/octapharma-plasma-pay-chart-2026 301
+# CSL: collapse all three competing pages into the root authority URL (233 internal links)
+/blog/csl-plasma-pay-rates-2026 /csl-plasma-pay-chart-2026 301
+/blog/csl-plasma-pay-rates-2026.html /csl-plasma-pay-chart-2026 301
+/blog/csl-plasma-pay-chart-2026 /csl-plasma-pay-chart-2026 301
+/blog/csl-plasma-pay-chart-2026.html /csl-plasma-pay-chart-2026 301
+
 # New static redirects from .htaccess
 /centers.html /centers/ 301
 /plasma-donation-eligibility-quiz-viral /blog/plasma-donation-eligibility-requirements-comprehensive-guide-2026.html 301
 /insurance-protection-plasma-donors.html /blog/ 301
-/blog/csl-plasma-pay-rates-2025.html /blog/csl-plasma-pay-rates-2026.html 301
-/blog/csl-plasma-pay-rates-2025 /blog/csl-plasma-pay-rates-2026.html 301
+/blog/csl-plasma-pay-rates-2025.html /csl-plasma-pay-chart-2026 301
+/blog/csl-plasma-pay-rates-2025 /csl-plasma-pay-chart-2026 301
 /blog/highest-paying-plasma-centers-by-state-location-guide-2025.html /blog/highest-paying-plasma-centers-by-state-location-guide-2026.html 301
 /blog/highest-paying-plasma-centers-by-state-location-guide-2025 /blog/highest-paying-plasma-centers-by-state-location-guide-2026.html 301
 /blog/highest-paying-plasma-centers-near-me-2025.html /blog/highest-paying-plasma-centers-near-me.html 301
