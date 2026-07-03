@@ -1,35 +1,13 @@
-# Redirect from old domain to new domain
 https://bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
 https://www.bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
 http://bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
 http://www.bestplasmacenters.com/* https://plasmapaycalculator.com/:splat 301!
-
-# Force HTTPS and remove www
 https://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 http://www.plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
-
-# Ensure canonical URLs for main pages
 /index.html / 301
-# URL Structure Canonicalization Redirects
-
-# Force HTTPS and non-www
-
-# ===============================================
-# NEW RULES FROM .HTACCESS - Added February 2026
-# ===============================================
-
-# New wildcard rules from .htaccess
 /center/csl-downtown-la/* /centers/csl-plasma/ 301
 /metro/* / 301
-# Note: trailing-slash-stripping wildcards on real directories were removed —
-# they caused redirect loops against the host's directory index handling
-# (301 strips slash → host 308 re-adds slash → loop).
-
-# 2026-06-29 Hard consolidation of brand pay-chart cannibalization.
-# Each pay-rates page ranked ONLY for "<brand> pay chart" terms its pay-chart sibling
-# already owns better (GSC verified, zero unique winning queries). Canonicals weren't
-# holding, so 301 the duplicates into the single winner per brand to merge the signals.
 /blog/biolife-plasma-pay-rates-2026 /blog/biolife-plasma-pay-chart-2026 301
 /blog/biolife-plasma-pay-rates-2026.html /blog/biolife-plasma-pay-chart-2026 301
 /blog/grifols-plasma-pay-rates-2026 /blog/grifols-plasma-pay-chart-2026 301
@@ -38,23 +16,16 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /blog/kedplasma-pay-rates-2026.html /blog/kedplasma-pay-chart-2026 301
 /blog/octapharma-plasma-pay-rates-2026 /blog/octapharma-plasma-pay-chart-2026 301
 /blog/octapharma-plasma-pay-rates-2026.html /blog/octapharma-plasma-pay-chart-2026 301
-# CSL: collapse all three competing pages into the root authority URL (233 internal links)
 /blog/csl-plasma-pay-rates-2026 /csl-plasma-pay-chart-2026 301
 /blog/csl-plasma-pay-rates-2026.html /csl-plasma-pay-chart-2026 301
 /blog/csl-plasma-pay-chart-2026 /csl-plasma-pay-chart-2026 301
 /blog/csl-plasma-pay-chart-2026.html /csl-plasma-pay-chart-2026 301
-
-# 2026-06-29 Consolidate 4 competing "biolife vs csl" comparison pages into one.
-# They split ~1,174 impressions across pos 7-25 and earned 1 total click (cannibalization).
-# Keep /blog/biolife-vs-csl-plasma-comparison (richest content, 20 internal links); 301 the rest.
 /blog/biolife-vs-csl-plasma-2026 /blog/biolife-vs-csl-plasma-comparison 301
 /blog/biolife-vs-csl-plasma-2026.html /blog/biolife-vs-csl-plasma-comparison 301
 /blog/biolife-vs-csl-plasma-comparison-2026 /blog/biolife-vs-csl-plasma-comparison 301
 /blog/biolife-vs-csl-plasma-comparison-2026.html /blog/biolife-vs-csl-plasma-comparison 301
 /blog/csl-plasma-vs-biolife-2026-comparison /blog/biolife-vs-csl-plasma-comparison 301
 /blog/csl-plasma-vs-biolife-2026-comparison.html /blog/biolife-vs-csl-plasma-comparison 301
-
-# New static redirects from .htaccess
 /centers.html /centers/ 301
 /plasma-donation-eligibility-quiz-viral /blog/plasma-donation-eligibility-requirements-comprehensive-guide-2026.html 301
 /insurance-protection-plasma-donors.html /blog/ 301
@@ -132,50 +103,16 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /es/index /es/index.html 301
 /blog/california-tech-entertainment-plasma-earnings /blog/california-tech-entertainment-plasma-earnings.html 301
 /blog/california-tech-1099-forms /blog/california-tech-1099-forms.html 301
-
-# ===============================================
-# SPECIFIC CALCULATOR REDIRECTS
-# Generated to prevent redirect chains
-# ===============================================
-
-## English State Pages
-
-## English City Pages
-
-## Spanish State Pages
-
-## Spanish City Pages
-
-# Removed: /calculators/*/ → /calculators/:splat caused infinite redirect
-# loops on every state calculator (strip slash, host re-adds, repeat).
-
-# Blog post .html redirects (remove .html)
 /blog/*.html /blog/:splat 301
-
-# Specific blog post redirects mentioned in GSC
 /blog/plasma-center-comparison.html /blog/plasma-center-comparison 301
 /blog/maximize-plasma-earnings.html /blog/maximize-plasma-earnings 301
-
-# Root page .html redirects
 /plasma-donation-requirements-2025.html /plasma-donation-requirements-2025 301
-
-# Ensure clean URLs for common variations
-
-# Fix 404 errors identified by Bing scan
-# Redirect missing state pages to relevant calculators
-
-# Redirect missing individual pages
 /calculator.html / 301
 /calculator/ / 301
 /frederick-md-plasma-donation.html /calculators/maryland/frederick 301
 /how-much-do-you-get-for-donating-plasma.html /how-much-money-can-you-make-donating-plasma.html 301
 /lowell-ma-plasma-donation.html /calculators/massachusetts/lowell 301
 /iowa-plasma-donation-earnings.html /calculators/iowa 301
-
-# Health directory redirects — removed. Each /health/<topic>/ has its own
-# index.html, so overriding them with 301s killed real content.
-
-# Spanish blog post redirects - redirect to English versions since Spanish posts don't exist
 /es/blog/can-you-donate-plasma-twice-a-week.html /blog/can-you-donate-plasma-twice-a-week.html 301
 /es/blog/which-plasma-center-pays-most-money.html /blog/which-plasma-center-pays-most-money.html 301
 /es/blog/plasma-center-comparison.html /blog/plasma-center-comparison.html 301
@@ -216,18 +153,10 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /es/blog/highest-paying-plasma-centers-near-me.html /blog/highest-paying-plasma-centers-near-me.html 301
 /es/blog/state-by-state-plasma-donation-laws-regulations-2025.html /blog/state-by-state-plasma-donation-laws-regulations-2025.html 301
 /es/blog/csl-plasma-pay-rates-2025.html /blog/csl-plasma-pay-rates-2025.html 301
-
-# Spanish center redirects
 /es/centers/biolife/ /centers/biolife 301
 /es/centers/octapharma/ /centers/octapharma 301
 /es/centers/grifols/ /centers/grifols 301
 /es/centers/csl-plasma/ /centers/csl-plasma 301
-# Removed: /es/centers/, /es/health/, /es/process/ — each has a real
-# Spanish index.html page; redirecting them to /centers, /health, /process
-# overrode the Spanish content with English.
-
-# Spanish localized path aliases (nav links use Spanish words that don't
-# resolve to real dirs; route to the existing English or es/ equivalent).
 /es/centros/ /es/centers/ 301
 /es/centros/* /es/centers/:splat 301
 /es/tools/ /tools/ 301
@@ -239,8 +168,6 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /es/calculadora/ /es/calculators/california/ 301
 /es/calculadora/* /es/calculators/california/ 301
 /es/favicon.svg /favicon.svg 301
-
-# Blog post renames (links point to outdated or never-created slugs)
 /blog/plasma-donation-taxes-2026.html /blog/plasma-donation-tax-guide-2026.html 301
 /blog/plasma-donation-taxes-2026 /blog/plasma-donation-tax-guide-2026.html 301
 /blog/plasma-donation-taxes-1099-guide-2026.html /blog/plasma-donation-taxes-guide-2026.html 301
@@ -251,15 +178,12 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /blog/plasma-donation-nutrition-guide-2026.html /blog/plasma-donation-nutrition-diet-optimization-2026.html 301
 /blog/best-plasma-centers-2026.html /blog/best-plasma-centers-2026-ranked.html 301
 /blog/best-products-plasma-donors-2025 /blog/best-products-plasma-donors-2026.html 301
-/blog/best-products-plasma-donors-2025.html /blog/best-products-plasma-donors-2026.html 301
 /blog/what-to-eat-before-donating-plasma /blog/what-to-eat-before-donating-plasma-2026.html 301
 /blog/can-you-donate-plasma-with-diabetes-complete-guide /blog/can-you-donate-plasma-with-diabetes-2026.html 301
 /blog/can-you-donate-plasma-with-high-blood-pressure /blog/can-you-donate-plasma-with-high-blood-pressure-2026.html 301
 /blog/can-you-donate-plasma-with-anxiety-disorder-2026 /blog/can-you-donate-plasma-with-anxiety-2026.html 301
 /blog/plasma-donation-eligibility-requirements-complete-guide.html /blog/complete-medical-eligibility-guide-plasma-donation.html 301
 /blog/plasma-donation-recovery-tips-complete-guide-2025 /blog/plasma-donation-recovery-tips-complete-guide-2026.html 301
-
-# Spanish blog post renames
 /es/blog/primera-donacion-plasma-que-esperar-2026 /es/blog/primera-vez-donando-plasma-paso-a-paso-2026.html 301
 /es/blog/primera-donacion-plasma-que-esperar-2026.html /es/blog/primera-vez-donando-plasma-paso-a-paso-2026.html 301
 /es/blog/como-evitar-diferimiento-plasma-2026 /es/blog/diferimiento-donar-plasma-razones-2026.html 301
@@ -267,8 +191,6 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /es/blog/preparacion-dia-antes-donar-plasma-2026 /es/blog/como-prepararse-primera-donacion-plasma-2026.html 301
 /es/blog/preparacion-dia-antes-donar-plasma-2026.html /es/blog/como-prepararse-primera-donacion-plasma-2026.html 301
 /es/blog/csl-plasma-tarifas-2026.html /es/blog/csl-plasma-cuanto-pagan-tarifas-2026.html 301
-
-# Remaining blog renames (high-confidence fuzzy matches)
 /blog/autoimmune-disease-plasma-donation-complete-guide /blog/autoimmune-disease-plasma-donation-guide-2026.html 301
 /blog/autoimmune-disease-plasma-donation-guide /blog/autoimmune-disease-plasma-donation-guide-2026.html 301
 /blog/can-you-donate-plasma-on-antibiotics-full-guide /blog/can-you-donate-plasma-on-antibiotics-2026.html 301
@@ -285,8 +207,6 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /blog/pain-medications-plasma-donation-eligibility /blog/medications-plasma-donation-guide-2026.html 301
 /blog/prescription-medications-plasma-donation-guide /blog/medications-plasma-donation-guide-2026.html 301
 /blog/stimulant-medications-plasma-donation-guide /blog/medications-plasma-donation-guide-2026.html 301
-
-# Fallback for remaining unmapped blog posts → blog index
 /blog/avoid-plasma-donation-deferral-reasons-2026 /blog/ 301
 /blog/best-plasma-centers-highest-pay-2026 /blog/best-plasma-centers-2026-ranked.html 301
 /blog/can-you-donate-plasma-after-accident-injury /blog/ 301
@@ -296,8 +216,6 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /blog/plasma-donation-after-surgery-complete-guide /blog/ 301
 /blog/plasma-donation-anxiety-tips-2026 /blog/anxiety-depression-plasma-donation-guide-2026.html 301
 /blog/plasma-donation-pay-chart-by-state /plasma-donation-pay-chart-by-state.html 301
-
-# Spanish blog renames
 /es/blog/biolife-plasma-tarifas-2026.html /blog/biolife-plasma-pay-rates-2026.html 301
 /es/blog/condiciones-medicas-descalifican-plasma.html /es/blog/que-descalifica-donar-plasma-2026.html 301
 /es/blog/donar-plasma-con-autoinmunidad-2026.html /es/blog/donar-plasma-con-enfermedad-autoinmune-2026.html 301
@@ -315,19 +233,11 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /es/blog/nutricion-donantes-plasma-2026.html /es/blog/ 301
 /es/blog/octapharma-plasma-cuanto-pagan-2026.html /es/blog/octapharma-cuanto-pagan-tarifas-2026.html 301
 /es/blog/requisitos-donar-plasma-2026.html /es/blog/requisitos-donacion-plasma.html 301
-
-# Spanish localized root pages
 /es/privacidad.html /es/privacy.html 301
 /es/terminos.html /es/terms.html 301
 /es/requisitos-peso-pago-maximo.html /weight-requirements-maximum-pay-guide.html 301
-
-# Spanish city-level calculator URLs that were never built → English equivalents
 /es/calculators/*/*/ /calculators/:splat 301
-
-# Spanish health redirects
 /es/health/side-effects/ /health/side-effects 301
-
-# Spanish page redirects
 /es/calculators/ /calculators 301
 /es/plasma-donation-requirements-2025.html /plasma-donation-requirements-2025.html 301
 /es/first-time-plasma-donation-bonus.html /first-time-plasma-donation-bonus.html 301
@@ -340,85 +250,42 @@ http://plasmapaycalculator.com/* https://plasmapaycalculator.com/:splat 301!
 /es/how-much-can-you-make-week-donating-plasma.html /how-much-can-you-make-week-donating-plasma.html 301
 /es/csl-plasma-tax-calculator.html /csl-plasma-tax-calculator.html 301
 /es/best-side-hustle-2025.html /best-side-hustle-2025.html 301
-
-# Additional missing blog posts
 /es/blog/plasma-donation-scam-detector-calculator.html /blog/plasma-donation-scam-detector-calculator.html 301
 /es/blog/first-time-plasma-donation-bonus-calculator.html /blog/first-time-plasma-donation-bonus-calculator.html 301
 /es/blog/plasma-donation-blood-money-difference.html /blog/plasma-donation-blood-money-difference.html 301
 /es/blog/plasma-donation-health-benefits-calculator.html /blog/plasma-donation-health-benefits-calculator.html 301
 /es/blog/plasma-donation-schedule-money-maximizer.html /blog/plasma-donation-schedule-money-maximizer.html 301
 /blog/plasma-donation-taxes-calculator.html /blog/plasma-donation-taxes.html 301
-
-# Replace meta refresh redirects with proper 301 redirects
 /blog/california-tech-irs-plasma-tracking.html /blog/does-irs-track-plasma-donations.html 301
 /blog/california-tech-1099-forms.html /blog/do-you-get-1099-plasma-donation.html 301
 /blog/california-tech-entertainment-plasma-earnings.html /blog/california-plasma-donation-los-angeles-san-diego.html 301
 /blog/california-tech-social-security-benefits.html /blog/do-plasma-centers-report-social-security.html 301
-
-# COMPREHENSIVE GSC REDIRECT FIXES
-# =====================================
-
-# 1. COMPREHENSIVE .HTML REMOVAL RULES
-# Remove .html from all calculator pages (English)
 /calculators/*.html /calculators/:splat 301
 /calculators/*/*.html /calculators/:splat 301
 /calculators/*/*/*.html /calculators/:splat 301
-
-# Remove .html from all Spanish calculator pages
 /es/calculators/*.html /es/calculators/:splat 301
 /es/calculators/*/*.html /es/calculators/:splat 301
 /es/calculators/*/*/*.html /es/calculators/:splat 301
-
-# 2. COMPREHENSIVE STATE-TO-CALCULATOR REDIRECTS
-# English state redirects (all patterns)
 /state/* /calculators/:splat 301
-
-# Spanish state redirects (all patterns)
 /es/estado/* /es/calculators/:splat 301
-
-# 3. BLOG TRAILING SLASH FIXES
-# Remove trailing slashes from blog posts
 /blog/*/ /blog/:splat 301
-
-# 4. ROOT PAGE REDIRECTS
 /terms /terms.html 301
 /about /about.html 301
 /contact /contact.html 301
 /privacy /privacy.html 301
 /faq /faq.html 301
-
-# 5. WWW SUBDOMAIN FIXES (additional patterns)
 https://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
-
-# 6. SPECIFIC GSC ERROR REDIRECTS
-# Blog post specific redirects
 /blog/california-tech-entertainment-plasma-earnings/ /blog/california-plasma-donation-los-angeles-san-diego 301
 /blog/california-tech-vein-health-guide/ /blog/how-to-increase-vein-size-plasma-donation 301
 /blog/best-plasma-centers-by-state-2025.html/ /blog/best-plasma-centers-by-state-2025 301
-
-# Root level page redirects
 /plasma-donation-requirements-2025/ /plasma-donation-requirements-2025 301
 /how-much-money-can-you-make-donating-plasma/ /how-much-money-can-you-make-donating-plasma 301
-# Removed: /states/ → /states — /states/ serves states/index.html; this
-# rule stripped the slash which the host then re-added, looping.
-
-# Tools directory
 /tools/eligibility-checker/ /tools/eligibility-checker 301
-
-# Spanish blog redirects
 /es/blog/cuanto-dinero-puedes-ganar-donando-plasma/ /es/blog/cuanto-dinero-puedes-ganar-donando-plasma 301
 /es/blog/requisitos-donacion-plasma/ /es/blog/requisitos-donacion-plasma 301
 /es/blog/consejos-donacion-plasma-principiantes/ /es/blog/consejos-donacion-plasma-principiantes 301
 /es/terms/ /es/terms 301
-
-# Removed: /es/ → /es and /blog/california/ → /blog/ — both targeted
-# real directories with index.html and caused loops or clobbered content.
-
-# SPECIFIC 404 ERROR FIXES FROM GSC
-# ==================================
-
-# Missing California blog posts (redirect to existing ones or main blog)
 /blog/california/california-plasma-donation-fresno.html /blog/california/california-plasma-donation-los-angeles-san-diego.html 301
 /blog/california/california-plasma-donation-recovery-tips.html /blog/california/california-plasma-donation-side-effects-safety.html 301
 /blog/california/california-plasma-donation-myths-debunked.html /blog/california/california-plasma-donation-requirements-eligibility.html 301
@@ -433,16 +300,12 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /blog/california/california-cities.html /california-cities.html 301
 /blog/california/california-plasma-donation-budget-planning.html /blog/california/california-plasma-donation-maximize-earnings.html 301
 /blog/california/california-plasma-donation-earnings-calculator.html /blog/california/california-plasma-donation-maximize-earnings.html 301
-
-# Missing Spanish blog posts
 /blog/mejores-centros-plasma-california/ /blog/california/plasma-center-comparison.html 301
 /blog/requisitos-donacion-plasma/ /blog/california/plasma-donation-requirements.html 301
 /blog/mejores-horarios-donar-plasma/ /blog/california/plasma-donation-schedule.html 301
 /blog/cual-centro-plasma-paga-mas-dinero/ /blog/california/plasma-center-comparison.html 301
 /blog/biolife-vs-csl-plasma-comparacion/ /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html 301
 /blog/guia-completa-donacion-plasma/ /blog/california/ultimate-plasma-donation-guide.html 301
-
-# Wrong calculator directory names (missing state suffixes)
 /calculators/missouri/columbia/ /calculators/missouri/columbia-mo/ 301
 /calculators/missouri/springfield/ /calculators/missouri/springfield-mo/ 301
 /calculators/iowa/iowa-city/ /calculators/iowa/iowa-city-ia/ 301
@@ -453,27 +316,10 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /calculators/hawaii/kailua/ /calculators/hawaii/kailua-kona/ 301
 /calculators/oregon/salem/ /calculators/oregon/salem-or/ 301
 /calculators/south-dakota/watertown/ /calculators/south-dakota/watertown-sd/ 301
-
-# Double calculator path fix
 /calculators/calculators/vermont/ /calculators/vermont/ 301
-
-# Tools redirects
 /tools/all-plasma-centers-comparison.html /centers/ 301
 /tools/all-plasma-centers-comparison/ /centers/ 301
-
-# State page redirects (missing .html files)
-
-# Spanish calculator directory redirect
 /es/calculators/ /calculators/ 301
-
-# Spanish blog post that doesn't exist
-
-# SPECIFIC GSC ERROR URL REDIRECTS
-# =================================
-
-# Calculator trailing slash variations
-
-# State directory without .html
 /calculators/wisconsin /calculators/wisconsin/index 301
 /calculators/north-dakota /calculators/north-dakota/index 301
 /calculators/montana /calculators/montana/index 301
@@ -489,8 +335,6 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /calculators/south-carolina /calculators/south-carolina/index 301
 /calculators/connecticut /calculators/connecticut/index 301
 /calculators/virginia /calculators/virginia/index 301
-
-# Specific city calculator redirects without .html
 /calculators/west-virginia/huntington /calculators/west-virginia/huntington/index 301
 /calculators/illinois/naperville /calculators/illinois/naperville/index 301
 /calculators/colorado/colorado-springs /calculators/colorado/colorado-springs/index 301
@@ -562,8 +406,6 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /calculators/arizona/tucson /calculators/arizona/tucson/index 301
 /calculators/michigan/warren /calculators/michigan/warren/index 301
 /calculators/vermont/essex /calculators/vermont/essex/index 301
-
-# Additional calculator city redirects
 /calculators/maryland/bowie /calculators/maryland/bowie/index 301
 /calculators/tennessee/knoxville /calculators/tennessee/knoxville/index 301
 /calculators/utah/salt-lake-city /calculators/utah/salt-lake-city/index 301
@@ -614,8 +456,6 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /calculators/massachusetts/worcester /calculators/massachusetts/worcester/index 301
 /calculators/massachusetts/boston /calculators/massachusetts/boston/index 301
 /calculators/indiana/gary /calculators/indiana/gary/index 301
-
-# Missing state directories
 /calculators/texas /calculators/texas/index 301
 /calculators/california /calculators/california/index 301
 /calculators/florida /calculators/florida/index 301
@@ -650,8 +490,6 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /calculators/vermont /calculators/vermont/index 301
 /calculators/wyoming /calculators/wyoming/index 301
 /calculators/district-of-columbia /calculators/district-of-columbia/index 301
-
-# State page redirects (.html variations)
 /calculators/texas.html /calculators/texas/index 301
 /calculators/wisconsin.html /calculators/wisconsin/index 301
 /calculators/north-dakota.html /calculators/north-dakota/index 301
@@ -664,57 +502,31 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /calculators/connecticut.html /calculators/connecticut/index 301
 /calculators/hawaii.html /calculators/hawaii/index 301
 /calculators/alabama.html /calculators/alabama/index 301
-
-# ============================================================
-# ADDITIONAL GSC ERROR FIXES - October 2025
-# Added: 2025-10-15 - New crawl errors from GSC
-# ============================================================
-
-# Blog posts at root that should be in /blog/ (not covered by existing wildcards)
 /plasma-vs-everything-2025-shocking-comparison/ /blog/plasma-vs-everything-2025-shocking-comparison.html 301
 /shocking-irs-tracks-plasma-income-2025 /blog/shocking-irs-tracks-plasma-income-2025.html 301
 /plasma-donation-eligibility-quiz-viral /blog/plasma-donation-eligibility-quiz-viral.html 301
 /one-weird-trick-400-month-2025.html /blog/one-weird-trick-400-month-2025.html 301
 /one-weird-trick-400-month-2025 /blog/one-weird-trick-400-month-2025.html 301
-
-# Missing blog post - redirect to similar content
 /plasma-donation-myths-vs-facts-debunked-2025.html /blog/plasma-donation-complete-beginners-guide.html 301
 /plasma-donation-myths-vs-facts-debunked-2025 /blog/plasma-donation-complete-beginners-guide.html 301
 /blog/plasma-donation-myths-vs-facts-debunked-2025.html /blog/plasma-donation-complete-beginners-guide.html 301
-
-# Calculator pages that need trailing slashes  
 /calculators/virginia/richmond /calculators/virginia/richmond/ 301
-
-
-# Blog post variations
 /blog/biolife-vs-csl-plasma-comparison-2025/ /blog/biolife-vs-csl-plasma-comparison.html 301
 /blog/biolife-vs-csl-plasma-comparison-2025 /blog/biolife-vs-csl-plasma-comparison.html 301
 /blog/ganar-1000-donando-plasma/ /blog/can-you-make-1000-month-donating-plasma.html 301
 /blog/ganar-1000-donando-plasma /blog/can-you-make-1000-month-donating-plasma.html 301
-
-# KEDPlasma specific (redirect to highest-paying centers)
 /blog/kedplasma-pay-chart-2025.html /blog/highest-paying-plasma-centers-2025.html 301
 /blog/kedplasma-pay-chart-2025 /blog/highest-paying-plasma-centers-2025.html 301
-
-# ===============================================
-# GSC 404 ERROR FIXES - December 2025
-# ===============================================
-
-# Blog post filename variations (missing "2025" suffix or different names)
 /blog/how-much-money-can-you-make-donating-plasma.html /blog/how-much-money-can-you-make-donating-plasma-2025.html 301
 /blog/how-much-money-can-you-make-donating-plasma /blog/how-much-money-can-you-make-donating-plasma-2025.html 301
 /blog/biolife-plasma-pay-chart-2025.html /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html 301
 /blog/biolife-plasma-pay-chart-2025 /blog/biolife-vs-csl-plasma-pay-chart-comparison-2025.html 301
-
-# Non-existent blog posts - redirect to similar content
 /blog/plasma-donation-disqualifications-complete-list-2025.html /plasma-donation-requirements-2025.html 301
 /blog/plasma-donation-disqualifications-complete-list-2025/ /plasma-donation-requirements-2025.html 301
 /blog/plasma-donation-disqualifications-complete-list-2025 /plasma-donation-requirements-2025.html 301
 /blog/grifols-plasma-pay-calculator-2025.html /tools/octapharma-vs-grifols-calculator.html 301
 /blog/grifols-plasma-pay-calculator-2025/ /tools/octapharma-vs-grifols-calculator.html 301
 /blog/grifols-plasma-pay-calculator-2025 /tools/octapharma-vs-grifols-calculator.html 301
-
-# Blog post trailing slash and URL variations
 /blog/maximize-plasma-donation-earnings-2025/ /maximize-plasma-donation-earnings-guide.html 301
 /blog/maximize-plasma-donation-earnings-2025 /maximize-plasma-donation-earnings-guide.html 301
 /blog/plasma-donation-process-explained-2025 /blog/plasma-donation-process-step-by-step.html 301
@@ -729,18 +541,9 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /blog/plasma-vs-blood-donation-guide-2025/ /blog/plasma-donation-blood-money-difference.html 301
 /blog/plasma-vs-blood-donation-guide-2025 /blog/plasma-donation-blood-money-difference.html 301
 /blog/kedplasma-pay-chart-2025/ /blog/highest-paying-plasma-centers-2025.html 301
-
-# Singular /center/ to plural /centers/ redirect (fix for app.js bug)
 /center/* /centers/ 301
-
-# Duplicate calculators path fix
 /calculators/calculators/texas/ /calculators/texas 301
 /calculators/calculators/* /calculators/:splat 301
-
-# Legacy state path redirects (if not already covered by existing rules)
-
-
-# Redirects for deleted Spanish blog pages (consolidated to English versions)
 /blog/biolife-vs-csl-plasma-comparacion.html /blog/biolife-vs-csl-plasma-comparison.html 301
 /blog/bonos-promociones-donacion-plasma.html /blog/plasma-donation-bonuses-promotions.html 301
 /blog/consejos-donacion-plasma-principiantes.html /blog/plasma-donation-tips-beginners.html 301
@@ -752,8 +555,6 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /blog/mejores-centros-plasma-california.html /blog/california-plasma-donation-los-angeles-san-diego.html 301
 /blog/mejores-horarios-donar-plasma.html /blog/best-times-donate-plasma.html 301
 /blog/requisitos-donacion-plasma.html /blog/plasma-donation-requirements.html 301
-
-# Redirects for deleted/renamed blog pages
 /blog/comprehensive-plasma-tax-guide-2025.html /blog/plasma-donation-tax-guide-2025.html 301
 /blog/highest-paying-plasma-centers-2025.html /blog/highest-paying-plasma-centers-near-me.html 301
 /blog/plasma-donation-requirements-2025.html /blog/plasma-donation-requirements.html 301
@@ -762,45 +563,24 @@ http://www.plasmapaycalculator.com/ https://plasmapaycalculator.com/ 301!
 /blog/emergency-money-plasma-donation-broke.html /blog/emergency-plasma-donation-cash-crisis-guide-2025.html 301
 /blog/lost-job-plasma-donation-survival-guide.html /blog/best-side-hustles-unemployed-2025.html 301
 /comprehensive-plasma-tax-guide-2025.html /blog/plasma-donation-tax-guide-2025.html 301
-
-# California stub page redirects
 /blog/california-tech-entertainment-plasma-earnings.html /blog/california-plasma-donation-maximize-earnings.html 301
-
-# ===============================================
-# GSC 404 FIXES - February 2026
-# ===============================================
-
-# Missing blog slugs (no .html extension in GSC URL)
 /blog/bruising-plasma-donation-treatment-2026 /blog/plasma-donation-bruising-treatment-guide-2026.html 301
 /blog/bruising-plasma-donation-treatment-2026.html /blog/plasma-donation-bruising-treatment-guide-2026.html 301
 /blog/how-much-do-you-get-for-donating-plasma-in-iowa /blog/how-much-do-you-get-donating-plasma-iowa.html 301
 /blog/donate-plasma-marijuana-weed-thc-2026 /blog/can-you-donate-plasma-marijuana-weed-2026.html 301
-/blog/plasma-donation-taxes-2026 /blog/plasma-donation-tax-guide-2026.html 301
 /blog/csl-plasma-pay-chart-2025-complete-rates-guide /blog/csl-plasma-pay-rates-2026.html 301
 /blog/plasma-donation-referral-bonuses-2025 /blog/plasma-donation-referral-bonus-guide-2026.html 301
 /blog/plasma-donation-referral-bonuses-2025/ /blog/plasma-donation-referral-bonus-guide-2026.html 301
-
-# Blog path pointing to root-level file
 /blog/comprehensive-plasma-tax-guide-2026.html /comprehensive-plasma-tax-guide-2026.html 301
-
-# Double .html extension (scraper/bot generated bad URL)
 /blog/california-tech-vein-health-guide.html.html /blog/california-tech-vein-health-guide.html 301
-
-# Weird crawler paths
 /calculators/blog/ /blog/ 301
 /calculators/blog /blog/ 301
-
-# Missing Spanish pages
 /es/centers/olgam/ /centers/ 301
 /es/centers/olgam /centers/ 301
 /es/calculators/illinois/joliet/ /es/calculators/illinois 301
 /es/calculators/illinois/joliet /es/calculators/illinois 301
-
-# Affiliate / referral short URLs (Rakuten $50 — expires 2026-06-30)
 /rakuten https://www.rakuten.com/r/4PJYY4?eeid=44971&utm_source=plasmapaycalculator&utm_medium=short-url&utm_campaign=rakuten50 302
 /50 https://www.rakuten.com/r/4PJYY4?eeid=44971&utm_source=plasmapaycalculator&utm_medium=short-url&utm_campaign=rakuten50 302
-
-# 2026-07-02 link audit: dead blog URLs -> closest existing page
 /blog/best-first-time-plasma-donation-tips-2026.html /blog/plasma-donation-first-time-tips-2026 301
 /blog/best-first-time-plasma-donation-tips-2026 /blog/plasma-donation-first-time-tips-2026 301
 /blog/1099-income-tax-deductions-2026.html /blog/plasma-income-tax-deductions-guide-2026 301
