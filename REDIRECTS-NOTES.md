@@ -128,3 +128,13 @@
 # Missing Spanish pages
 # Affiliate / referral short URLs (Rakuten $50 — expires 2026-06-30)
 # 2026-07-02 link audit: dead blog URLs -> closest existing page
+
+## 2026-07-02 link audit findings (Claude)
+- Cloudflare Pages hard limits: _redirects max 64KB, 2,000 static + 100 dynamic rules.
+- CRITICAL GOTCHA: a mid-pattern splat source (e.g. `/blog/*.html`) is invalid and Pages
+  silently stops parsing there — every rule after it is dead. A `/blog/*.html /blog/:splat`
+  rule at ~line 106 had disabled ~85% of this file (588 rules) for months.
+- .html -> clean-URL rules are unnecessary: Pages 308-normalizes automatically when the asset exists.
+- Absolute-URL sources (https://domain/*) are Netlify syntax, no-ops on Pages; use zone-level
+  Bulk Redirects for cross-domain (bestplasmacenters.com).
+- All 686 rules verified 2026-07-02: loop-free, every final target serves content.
