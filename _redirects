@@ -1,4 +1,6 @@
 # MAX 64KB. Splats only as trailing /* (mid-pattern like /blog/*.html ABORTS parsing of ALL later rules). See REDIRECTS-NOTES.md
+# Mediavine Journey ads.txt — kept at TOP so it is never dropped by the rule cap. Switched from AdSense (Jul 2026).
+/ads.txt  https://adstxt.journeymv.com/sites/b6b2f555-d0e1-49ee-9249-57f4dc4fe84f/ads.txt  301
 /center/csl-downtown-la/* /centers/csl-plasma/ 301
 /metro/* / 301
 /es/centros/* /es/centers/:splat 301
