@@ -27,16 +27,16 @@
         ad: 'Anuncio',
         msg: 'Gana dinero extra en tus días libres:',
         brand: 'FreeCash',
-        detail: 'te paga por probar apps y responder encuestas',
-        cta: 'Pruébalo gratis',
+        detail: 'te paga en efectivo por probar apps y responder encuestas',
+        cta: 'Gana dinero ahora',
         sub: 'plasma_banner_es'
       }
     : {
         ad: 'Ad',
         msg: 'Off-day from donating?',
         brand: 'FreeCash',
-        detail: 'pays cash for trying apps & taking surveys',
-        cta: 'Try it free',
+        detail: 'pays real cash for trying apps & taking surveys',
+        cta: 'Earn money now',
         sub: 'plasma_banner'
       };
 
