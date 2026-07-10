@@ -12,24 +12,42 @@
   function init() {
     var block = document.getElementById('result-capture');
     var results = document.getElementById('results');
-    if (!block || !results) return;
+    if (!block) return;
 
     var source = block.getAttribute('data-source') || 'plasmapaycalculator.com (result)';
+    var utmContent = block.getAttribute('data-utm-content') || '';
 
     function reveal() {
       block.hidden = false;
     }
 
-    if (results.classList.contains('show')) {
-      reveal();
-    } else {
-      var observer = new MutationObserver(function () {
-        if (results.classList.contains('show')) {
-          reveal();
-          observer.disconnect();
-        }
-      });
-      observer.observe(results, { attributes: true, attributeFilter: ['class'] });
+    if (results) {
+      // Main calculators reveal #results with .show; programmatic state
+      // calculators reveal it by removing .hidden.
+      var startedHidden = results.classList.contains('hidden');
+      if (results.classList.contains('show')) {
+        reveal();
+      } else {
+        var observer = new MutationObserver(function () {
+          if (
+            results.classList.contains('show') ||
+            (startedHidden && !results.classList.contains('hidden'))
+          ) {
+            reveal();
+            observer.disconnect();
+          }
+        });
+        observer.observe(results, { attributes: true, attributeFilter: ['class'] });
+      }
+    }
+
+    // Programmatic pages without a hidden #results update an always-visible
+    // panel from an inline onclick handler: reveal on that click instead.
+    var calcButtons = document.querySelectorAll(
+      '[onclick^="calculateEarnings"], [onclick^="calculateCityEarnings"]'
+    );
+    for (var i = 0; i < calcButtons.length; i++) {
+      calcButtons[i].addEventListener('click', reveal);
     }
 
     var form = block.querySelector('form');
@@ -42,11 +60,12 @@
       var email = emailInput ? emailInput.value.trim() : '';
 
       if ((!honeypot || !honeypot.value) && email) {
-        window.open(
-          MAGIC + '?email=' + encodeURIComponent(email) +
-          '&utm_source=plasmapaycalculator&utm_medium=result_block',
-          '_blank'
-        );
+        var url = MAGIC + '?email=' + encodeURIComponent(email) +
+          '&utm_source=plasmapaycalculator&utm_medium=result_block';
+        if (utmContent) {
+          url += '&utm_content=' + encodeURIComponent(utmContent);
+        }
+        window.open(url, '_blank');
         if (window.gtag) {
           gtag('event', 'email_capture', { method: 'result_block', source: source });
         }
