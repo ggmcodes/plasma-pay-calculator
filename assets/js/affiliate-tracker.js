@@ -10,7 +10,7 @@
  *   - Amazon links (amazon.* / amzn.to)
  *   - MaxBounty links (afflat3c*.com / mb0*.com) and ANY link tagged with
  *     data-affiliate-network (e.g. data-affiliate-network="maxbounty"
- *     data-offer-id="26175").
+ *     data-offer-id="31078").
  *
  * In GA4 Admin -> Events, mark `affiliate_click` as a Key Event for conversions.
  */

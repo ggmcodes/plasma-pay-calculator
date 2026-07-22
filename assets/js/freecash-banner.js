@@ -1,5 +1,5 @@
 /**
- * FreeCash slim banner bar - MaxBounty offer 26175
+ * Surveoo slim banner bar - MaxBounty offer 31078
  * Replaces the expired Rakuten $50 promo slot (ended 2026-06-30).
  *
  * Deliberately low-key: single thin bar, clearly labeled "Ad",
@@ -18,7 +18,7 @@
   var DISMISS_TTL_MS = 7 * 24 * 60 * 60 * 1000;
   var EXCLUDE_PATHS = ['/premium', '/success', '/privacy', '/terms', '/contact'];
 
-  var BASE_URL = 'https://afflat3c1.com/trk/lnk/30D695DC-75C6-40FA-82F7-BDD4AA37AB19/?o=26175&c=918277&a=798537&k=BD659ED31F81AA8AFE27C3C57320D24E&l=27558';
+  var BASE_URL = 'https://afflat3c2.com/trk/lnk/30D695DC-75C6-40FA-82F7-BDD4AA37AB19/?o=31078&c=918277&a=798537&k=2DB34ACB9DEC3CABBD0FBA55039DEC62&l=36077';
 
   var isSpanish = window.location.pathname.indexOf('/es/') === 0;
 
@@ -26,16 +26,16 @@
     ? {
         ad: 'Anuncio',
         msg: 'Gana dinero extra en tus días libres:',
-        brand: 'FreeCash',
-        detail: 'te paga en efectivo por probar apps y responder encuestas (solo nuevos usuarios)',
+        brand: 'Surveoo',
+        detail: 'te paga en efectivo y tarjetas de regalo por encuestas pagadas (solo nuevos usuarios)',
         cta: 'Gana dinero ahora',
         sub: 'plasma_banner_es'
       }
     : {
         ad: 'Ad',
         msg: 'Off-day from donating?',
-        brand: 'FreeCash',
-        detail: 'pays real cash for trying apps & taking surveys (new users only)',
+        brand: 'Surveoo',
+        detail: 'pays cash & gift cards for quick paid surveys (new users only)',
         cta: 'Earn money now',
         sub: 'plasma_banner'
       };
@@ -101,8 +101,8 @@
     link.target = '_blank';
     link.rel = 'nofollow noopener sponsored';
     link.setAttribute('data-affiliate-network', 'maxbounty');
-    link.setAttribute('data-offer-id', '26175');
-    link.setAttribute('data-link-text', 'FreeCash Banner');
+    link.setAttribute('data-offer-id', '31078');
+    link.setAttribute('data-link-text', 'Surveoo Banner');
 
     var text = document.createElement('span');
     text.className = 'fc-text';
